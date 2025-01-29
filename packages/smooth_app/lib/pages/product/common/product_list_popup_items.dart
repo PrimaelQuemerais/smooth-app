@@ -298,33 +298,36 @@ class ProductListPopupImport extends ProductListPopupItem {
     required final LocalDatabase localDatabase,
     required final BuildContext context,
   }) async {
-    FilePicker.platform.pickFiles(
+    final FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: <String>['csv'],
-    ).then((final FilePickerResult? result) {
-      if (result == null) {
-        return;
-      }
-      final File file = File(result.files.single.path!);
-      final String content = file.readAsStringSync();
-      final List<String> lines = content.split('\n');
-      final List<String> barcodes = <String>[];
-      for (final String line in lines) {
-        final List<String> parts = line.split(';');
-        if (parts.length < 3) {
-          continue;
-        }
-        final String barcode = parts[0].replaceAll('"', '');
-        barcodes.add(barcode);
-      }
-      DaoProductList(localDatabase).bulkSet(
-        productList,
-        barcodes,
-        include: true,
-      );
-    });
+    );
 
-    return null;
+    if (result == null) {
+      return null;
+    }
+
+    final File file = File(result.files.single.path!);
+    final String content = file.readAsStringSync();
+    final List<String> lines = content.split('\n');
+    final List<String> barcodes = <String>[];
+
+    for (final String line in lines) {
+      final List<String> parts = line.split(';');
+      if (parts.length < 3) {
+        continue;
+      }
+      final String barcode = parts[0].replaceAll('"', '');
+      barcodes.add(barcode);
+    }
+
+    await DaoProductList(localDatabase).bulkSet(
+      productList,
+      barcodes,
+      include: true,
+    );
+
+    return productList;
   }
 }
 

@@ -15,6 +15,7 @@ import 'package:smooth_app/generic_lib/dialogs/smooth_alert_dialog.dart';
 import 'package:smooth_app/helpers/analytics_helper.dart';
 import 'package:smooth_app/helpers/temp_product_list_share_helper.dart';
 import 'package:smooth_app/pages/product/common/product_query_page_helper.dart';
+import 'package:smooth_app/pages/product/common/product_refresher.dart';
 import 'package:smooth_app/pages/product_list_user_dialog_helper.dart';
 import 'package:smooth_app/widgets/smooth_menu_button.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -32,6 +33,8 @@ enum ProductListPopupMenuEntry {
 
 /// Popup menu items for the product list page.
 abstract class ProductListPopupItem {
+  static const String EXPORT_SEPARATOR = ';';
+
   /// Title of the popup menu item.
   String getTitle(final AppLocalizations appLocalizations);
 
@@ -247,16 +250,19 @@ class ProductListPopupExport extends ProductListPopupItem {
       productList,
       AppLocalizations.of(context),
     );
-    final String fileName =
-        "${listName.replaceAll(' ', '-').toLowerCase()}_${DateTime.now().millisecondsSinceEpoch}.csv";
-    final StringBuffer csv = StringBuffer('Barcode,Name,Brand\n');
+    final String fileName = _buildFileName(listName);
+    final StringBuffer csv = StringBuffer(
+        'Barcode${ProductListPopupItem.EXPORT_SEPARATOR}Name${ProductListPopupItem.EXPORT_SEPARATOR}Brand\n');
 
     for (final String barcode in productList.barcodes) {
       final Product? product = await DaoProduct(localDatabase).get(barcode);
       if (product != null) {
-        final String name = (product.productName ?? '').replaceAll(';', '');
-        final String brand = (product.brands ?? '').replaceAll(';', '');
-        csv.write('"$barcode";"$name";"$brand"\n');
+        final String name = (product.productName ?? '')
+            .replaceAll(ProductListPopupItem.EXPORT_SEPARATOR, '');
+        final String brand = (product.brands ?? '')
+            .replaceAll(ProductListPopupItem.EXPORT_SEPARATOR, '');
+        csv.write(
+            '"$barcode"${ProductListPopupItem.EXPORT_SEPARATOR}"$name"${ProductListPopupItem.EXPORT_SEPARATOR}"$brand"\n');
       }
     }
 
@@ -274,6 +280,14 @@ class ProductListPopupExport extends ProductListPopupItem {
     );
 
     return null;
+  }
+
+  String _buildFileName(String listName) {
+    final String name = listName.replaceAll(' ', '-').toLowerCase();
+    final String timestamp =
+        DateTime.now().toIso8601String().replaceAll(':', '_').split('.').first;
+
+    return '$name-$timestamp.csv';
   }
 }
 
@@ -309,6 +323,7 @@ class ProductListPopupImport extends ProductListPopupItem {
 
     final File file = File(result.files.single.path!);
     final String content = file.readAsStringSync();
+
     final List<String> lines = content.split('\n');
     final List<String> barcodes = <String>[];
 
@@ -321,9 +336,17 @@ class ProductListPopupImport extends ProductListPopupItem {
       barcodes.add(barcode);
     }
 
+    final List<String> existingBarcodes =
+        await ProductRefresher().silentFetchAndRefreshListWithFeedback(
+              barcodes: barcodes,
+              localDatabase: localDatabase,
+              productType: ProductType.food,
+            ) ??
+            <String>[];
+
     await DaoProductList(localDatabase).bulkSet(
       productList,
-      barcodes,
+      existingBarcodes,
       include: true,
     );
 

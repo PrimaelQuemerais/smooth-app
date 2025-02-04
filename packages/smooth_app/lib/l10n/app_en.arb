@@ -1489,6 +1489,10 @@
     "@edit_product_pending_operations_banner_message": {
         "description": "When a product has pending edits (being sent to the server), there is a message on the edit page. Please keep the ** syntax to make the text bold."
     },
+    "edit_product_pending_operations_banner_short_message": "Your edits are being **sent in the background** (or later in case of error).",
+    "@edit_product_pending_operations_banner_short_message": {
+        "description": "When a product has pending edits (being sent to the server), there is a message on the edit page. Please keep the ** syntax to make the text bold."
+    },
     "edit_product_label_short": "Edit",
     "@edit_product_label_short": {
         "description": "Edit product button short label (only the verb)"
@@ -3355,6 +3359,14 @@
     "@language_selector_title": {
         "description": "Label written as the title of the dialog to select the user language"
     },
+    "language_selector_section_selected": "Selected languages",
+    "@language_selector_title": {
+        "description": "Label to highlight the selected languages"
+    },
+    "language_selector_section_frequently_used": "Frequently used",
+    "@language_selector_title": {
+        "description": "Label to highlight the frequently used languages"
+    },
     "action_delete_list": "Delete",
     "@action_delete_list": {
         "description": "Delete a list action in a menu"
@@ -3821,5 +3833,69 @@
     "product_list_import": "Import",
     "@product_list_import": {
         "description": "Product list popup menu item to import a list"
+    "product_footer_action_barcode": "View barcode",
+    "@product_footer_action_barcode": {
+        "description": "Action to see the barcode of a product"
+    },
+    "product_footer_action_barcode_short": "Barcode",
+    "@product_footer_action_barcode_short": {
+        "description": "Action to see the barcode of a product (short text)"
+    },
+    "product_footer_action_open_website": "Open website",
+    "@product_footer_action_open_website": {
+        "description": "Action to see to open the OxF website of the given product"
+    },
+    "product_footer_action_report": "Report",
+    "@product_footer_action_report": {
+        "description": "Action to see to report a product"
+    },
+    "product_footer_action_contributor_guide": "Help",
+    "@product_footer_action_contributor_guide": {
+        "description": "Action to open the contributor's guide. If you are in a non-English language, please translate this sentence instead: \"Help (EN)\""
+    },
+    "product_footer_action_data_quality_tags": "Data quality",
+    "@product_footer_action_data_quality_tags": {
+        "description": "Action to view data quality warnings"
+    },
+    "all_search_prices_top_product_title": "Products with the most prices",
+    "@all_search_prices_top_product_title": {
+      "description": "Top price products: list tile title"
+    },
+    "prices_products_list_length_many_pages": "Top {pageSize} products (total: {total})",
+    "@prices_products_list_length_many_pages": {
+      "description": "Number of products for one-page result",
+      "placeholders": {
+        "pageSize": {
+          "type": "int"
+        },
+        "total": {
+          "type": "int"
+        }
+      }
+    },
+    "product_page_tab_for_me": "For me",
+    "@product_page_tab_for_me": {
+        "description": "Label of the for me tab on the product page"
+    },
+    "product_page_tab_website": "Website",
+    "@product_page_tab_website": {
+        "description": "Label of the website tab on the product page"
+    },
+    "product_page_tab_prices": "Prices",
+    "@product_page_tab_prices": {
+        "description": "Label of the prices tab on the product page"
+    },
+    "product_page_tab_folksonomy": "Folksonomy",
+    "@product_page_tab_folksonomy": {
+        "description": "Label of the folksonomy tab on the product page"
+    },
+    "product_page_reorder_tabs": "Reorder tabs",
+    "@product_page_reorder_tabs": {
+        "description": "Used for reorder tabs button and bottom sheet"
+    },
+    "dev_preferences_use_product_tabs_title": "Use tabs",
+    "@dev_preferences_use_product_tabs_title": {
+        "description": "Title for the preference to use tabs on the product page"
     }
+  }
 }

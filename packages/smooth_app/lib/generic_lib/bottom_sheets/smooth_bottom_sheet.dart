@@ -6,6 +6,7 @@ import 'package:smooth_app/generic_lib/bottom_sheets/smooth_draggable_bottom_she
 import 'package:smooth_app/generic_lib/design_constants.dart';
 import 'package:smooth_app/helpers/color_extension.dart';
 import 'package:smooth_app/helpers/haptic_feedback_helper.dart';
+import 'package:smooth_app/pages/product/product_page/header/reorder_bottom_sheet.dart';
 import 'package:smooth_app/resources/app_icons.dart' as icons;
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
@@ -54,9 +55,13 @@ Future<T?> showSmoothModalSheetForTextField<T>({
   required BuildContext context,
   required SmoothModalSheetHeader header,
   required WidgetBuilder bodyBuilder,
+  double? minHeight,
+  double? maxHeight,
 }) {
   return showSmoothModalSheet<T>(
     context: context,
+    minHeight: minHeight,
+    maxHeight: maxHeight,
     builder: (BuildContext context) => SizedBox(
       width: double.infinity,
       child: ClipRRect(
@@ -273,6 +278,27 @@ Future<T?> showSmoothAlertModalSheet<T>({
   );
 }
 
+void showSmoothReorderBottomSheet<T>(
+  BuildContext context, {
+  required List<T> items,
+  required ValueChanged<List<T>> onReorder,
+  ValueChanged<T>? onVisibilityToggle,
+  required LabelBuilder<T> labelBuilder,
+  required String title,
+}) {
+  showSmoothModalSheet(
+    context: context,
+    minHeight: 0.6,
+    builder: (_) => ReorderBottomSheet<T>(
+      items: items,
+      onReorder: onReorder,
+      onVisibilityToggle: onVisibilityToggle,
+      labelBuilder: labelBuilder,
+      title: title,
+    ),
+  );
+}
+
 class _SmoothListOfChoicesEndArrow extends StatelessWidget {
   const _SmoothListOfChoicesEndArrow();
 
@@ -453,8 +479,9 @@ class SmoothModalSheetHeader extends StatelessWidget implements SizeWidget {
 
     return switch (type) {
       SmoothModalSheetType.error => ERROR_COLOR,
-      SmoothModalSheetType.info =>
-        context.extension<SmoothColorsThemeExtension>().primaryDark,
+      SmoothModalSheetType.info => context.lightTheme()
+          ? context.extension<SmoothColorsThemeExtension>().primaryBlack
+          : Colors.black,
     };
   }
 

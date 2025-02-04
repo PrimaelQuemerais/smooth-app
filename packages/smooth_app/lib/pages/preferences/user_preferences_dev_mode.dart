@@ -46,6 +46,7 @@ class UserPreferencesDevMode extends AbstractUserPreferences {
   static const String userPreferencesFolksonomyHost = '__folksonomyHost';
   static const String userPreferencesFlagEditIngredients = '__editIngredients';
   static const String userPreferencesFlagHideFolksonomy = '__hideFolksonomy';
+  static const String userPreferencesFlagUseProductTabs = '__useProductTabs';
   static const String userPreferencesFlagBoostedComparison =
       '__boostedComparison';
   static const String userPreferencesEnumScanMode = '__scanMode';
@@ -265,6 +266,9 @@ class UserPreferencesDevMode extends AbstractUserPreferences {
                 .getPostUri(path: '')
                 .toString(),
           ),
+          visibleWhen: (BuildContext context) {
+            return userPreferences.getFlag(userPreferencesFlagProd) == false;
+          },
           onTap: () async => _changeTestEnvDomain(),
         ),
         const UserPreferencesItemSection(
@@ -381,6 +385,18 @@ class UserPreferencesDevMode extends AbstractUserPreferences {
           onChanged: (bool value) async {
             await userPreferences.setFlag(
               userPreferencesFlagHideFolksonomy,
+              value,
+            );
+            _showSuccessMessage();
+          },
+        ),
+        UserPreferencesItemSwitch(
+          title: appLocalizations.dev_preferences_use_product_tabs_title,
+          value: userPreferences.getFlag(userPreferencesFlagUseProductTabs) ??
+              false,
+          onChanged: (bool value) async {
+            await userPreferences.setFlag(
+              userPreferencesFlagUseProductTabs,
               value,
             );
             _showSuccessMessage();

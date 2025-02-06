@@ -3833,6 +3833,7 @@
     "product_list_import": "Import",
     "@product_list_import": {
         "description": "Product list popup menu item to import a list"
+    },
     "product_footer_action_barcode": "View barcode",
     "@product_footer_action_barcode": {
         "description": "Action to see the barcode of a product"
@@ -3897,5 +3898,4 @@
     "@dev_preferences_use_product_tabs_title": {
         "description": "Title for the preference to use tabs on the product page"
     }
-  }
 }

@@ -444,6 +444,7 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
   ) {
     final SmoothColorsThemeExtension extension =
         context.extension<SmoothColorsThemeExtension>();
+    final AppLocalizations localizations = AppLocalizations.of(context);
 
     return GestureDetector(
       onTap: () async {
@@ -459,11 +460,11 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
             success
                 ? SmoothFloatingSnackbar.positive(
                     context: context,
-                    text: 'Extraction succesful',
+                    text: localizations.nutrition_facts_extract_succesful,
                   )
                 : SmoothFloatingSnackbar.error(
                     context: context,
-                    text: 'Failed to extract nutrients from picture',
+                    text: localizations.nutrition_facts_extract_failed,
                   ),
           );
         }
@@ -476,7 +477,7 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              'Extract nutrients from picture',
+              localizations.nutrition_facts_extract_action,
               style: TextStyle(
                 color: extension.secondaryLight,
               ),

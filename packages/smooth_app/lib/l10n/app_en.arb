@@ -4107,5 +4107,17 @@
                 "type": "int"
             }
         }
+    },
+    "nutrition_facts_extract_action": "Extract nutrients from picture",
+    "@nutrition_facts_extract_action": {
+        "description": "Description of the action to extract nutrients from a picture"
+    },
+    "nutrition_facts_extract_succesful": "Extraction succesful",
+    "@nutrition_facts_extract_succesful": {
+        "description": "Message to indicate that the extraction of nutrients from a picture was succesful"
+    },
+    "nutrition_facts_extract_failed": "Failed to extract nutrients from picture",
+    "@nutrition_facts_extract_failed": {
+        "description": "Message to indicate that the extraction of nutrients from a picture failed"
     }
 }

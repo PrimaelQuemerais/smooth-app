@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -84,6 +86,12 @@ class _NutrientRowState extends State<NutrientRow>
       color = _getColor(extension);
     }
 
+    final RobotoffNutrientEntity? robotoffNutrientEntity =
+        widget.nutritionContainer.robotoffNutrientExtraction?.getNutrientEntity(
+      widget.orderedNutrient.nutrient!,
+      PerSize.oneHundredGrams,
+    );
+
     return ColoredBox(
       color: color,
       child: Padding(
@@ -97,14 +105,49 @@ class _NutrientRowState extends State<NutrientRow>
           children: <Widget>[
             Expanded(
               flex: 6,
-              child: KeyedSubtree(
-                key: Key('$key-value'),
-                child: _NutrientValueCell(
-                  widget.decimalNumberFormat,
-                  widget.orderedNutrient,
-                  widget.position,
-                  widget.isLast,
-                ),
+              child: Column(
+                children: <Widget>[
+                  KeyedSubtree(
+                    key: Key('$key-value'),
+                    child: _NutrientValueCell(
+                      widget.decimalNumberFormat,
+                      widget.orderedNutrient,
+                      widget.position,
+                      widget.isLast,
+                    ),
+                  ),
+                  if (robotoffNutrientEntity?.value != null)
+                    Container(
+                      margin: const EdgeInsetsDirectional.only(
+                        end: MEDIUM_SPACE,
+                        bottom: SMALL_SPACE,
+                      ),
+                      padding: const EdgeInsetsDirectional.symmetric(
+                        horizontal: MEDIUM_SPACE,
+                        vertical: VERY_SMALL_SPACE,
+                      ),
+                      decoration: BoxDecoration(
+                        color: extension.success.withAlpha(100),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            robotoffNutrientEntity!.value!,
+                            style: TextStyle(
+                              color: extension.success,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.add),
+                          ),
+                        ],
+                      ),
+                    )
+                ],
               ),
             ),
             Expanded(

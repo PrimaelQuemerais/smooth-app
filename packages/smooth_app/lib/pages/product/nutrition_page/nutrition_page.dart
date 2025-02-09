@@ -30,6 +30,7 @@ import 'package:smooth_app/pages/product/simple_input_number_field.dart';
 import 'package:smooth_app/pages/text_field_helper.dart';
 import 'package:smooth_app/query/product_query.dart';
 import 'package:smooth_app/resources/app_icons.dart';
+import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
 import 'package:smooth_app/themes/theme_provider.dart';
 import 'package:smooth_app/widgets/smooth_explanation_banner.dart';
@@ -156,6 +157,7 @@ class _NutritionPageLoadedState extends State<NutritionPageLoaded>
                     child: _NutritionPageBody(
                       servingController: _servingController,
                       formKey: _formKey,
+                      product: upToDateProduct,
                     ),
                   ),
                 ],
@@ -281,10 +283,12 @@ class _NutritionPageBody extends StatefulWidget {
   const _NutritionPageBody({
     required this.formKey,
     required this.servingController,
+    required this.product,
   });
 
   final GlobalKey<FormState> formKey;
   final TextEditingControllerWithHistory servingController;
+  final Product product;
 
   @override
   State<_NutritionPageBody> createState() => _NutritionPageBodyState();
@@ -348,6 +352,7 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
     final AppLocalizations appLocalizations = AppLocalizations.of(context);
     final List<Widget> widgets = <Widget>[
       const NutritionServingSwitch(),
+      _extractNutrientsButton(context, nutritionContainer),
     ];
 
     final Iterable<OrderedNutrient> displayableNutrients =
@@ -431,6 +436,59 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
         contentPadding: EdgeInsets.zero,
         child: Column(
           children: widgets,
+        ),
+      ),
+    );
+  }
+
+  Widget _extractNutrientsButton(
+    BuildContext context,
+    NutritionContainerHelper nutritionContainer,
+  ) {
+    final SmoothColorsThemeExtension extension =
+        context.extension<SmoothColorsThemeExtension>();
+
+    return GestureDetector(
+      onTap: () async {
+        if (widget.product.barcode == null) {
+          return;
+        }
+
+        final bool success =
+            await nutritionContainer.fetchRobotoffExtraction(widget.product);
+
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            success
+                ? SmoothFloatingSnackbar.positive(
+                    context: context,
+                    text: 'Extraction succesful',
+                  )
+                : SmoothFloatingSnackbar.error(
+                    context: context,
+                    text: 'Failed to extract nutrients from picture',
+                  ),
+          );
+        }
+      },
+      child: Container(
+        padding: const EdgeInsets.all(8.0),
+        color: extension.secondaryNormal.withAlpha(60),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              'Extract nutrients from picture',
+              style: TextStyle(
+                color: extension.secondaryLight,
+              ),
+            ),
+            Icon(
+              Icons.star,
+              color: extension.secondaryLight,
+            ),
+          ],
         ),
       ),
     );

@@ -74,6 +74,41 @@ class NutritionContainerHelper extends ChangeNotifier {
     notifyListeners();
   }
 
+  bool _loadingRobotoffExtraction = false;
+
+  bool get loadingRobotoffExtraction => _loadingRobotoffExtraction;
+
+  RobotoffNutrientExtractionResult? _robotoffNutrientExtraction;
+
+  RobotoffNutrientExtractionResult? get robotoffNutrientExtraction =>
+      _robotoffNutrientExtraction;
+
+  // Fetch the robotoff extraction for the product, return true if the extraction was successful
+  Future<bool> fetchRobotoffExtraction(final Product product) async {
+    if (product.barcode == null) {
+      return false;
+    }
+
+    _loadingRobotoffExtraction = true;
+    notifyListeners();
+
+    final RobotoffNutrientExtractionResult extractionResult =
+        await RobotoffAPIClient.getNutrientExtraction(product.barcode!);
+
+    if (extractionResult.status != 'found') {
+      return false;
+    }
+
+    _robotoffNutrientExtraction = extractionResult;
+    _loadingRobotoffExtraction = false;
+    notifyListeners();
+
+    // When using Robotoff extraction we force the perSize to 100g
+    perSize = PerSize.oneHundredGrams;
+
+    return true;
+  }
+
   /// Returns the not interesting nutrients, for a "Please add me!" list.
   Iterable<OrderedNutrient> getLeftoverNutrients() => _nutrients.where(
         (final OrderedNutrient element) => _isNotRelevant(element),

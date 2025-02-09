@@ -90,23 +90,25 @@ class NutritionContainerHelper extends ChangeNotifier {
     }
 
     _loadingRobotoffExtraction = true;
+    _robotoffNutrientExtraction = null;
     notifyListeners();
 
     final RobotoffNutrientExtractionResult extractionResult =
         await RobotoffAPIClient.getNutrientExtraction(product.barcode!);
 
-    if (extractionResult.status != 'found') {
-      return false;
+    final bool extractionSuccessful = extractionResult.status == 'found';
+
+    if (extractionSuccessful) {
+      _robotoffNutrientExtraction = extractionResult;
+
+      // When using Robotoff extraction we force the perSize to 100g
+      perSize = PerSize.oneHundredGrams;
     }
 
-    _robotoffNutrientExtraction = extractionResult;
     _loadingRobotoffExtraction = false;
     notifyListeners();
 
-    // When using Robotoff extraction we force the perSize to 100g
-    perSize = PerSize.oneHundredGrams;
-
-    return true;
+    return extractionSuccessful;
   }
 
   /// Returns the not interesting nutrients, for a "Please add me!" list.
@@ -203,6 +205,10 @@ class NutritionContainerHelper extends ChangeNotifier {
     if (init) {
       _initialUnits[nutrient] = unit;
     }
+  }
+
+  void setNutrientUnit(final Nutrient nutrient, final Unit unit) {
+    _setUnit(nutrient, unit, init: false);
   }
 
   /// To be used when an [OrderedNutrient] is added to the input list

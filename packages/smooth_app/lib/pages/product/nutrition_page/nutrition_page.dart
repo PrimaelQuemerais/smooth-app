@@ -28,6 +28,7 @@ import 'package:smooth_app/pages/product/nutrition_page/widgets/nutrition_servin
 import 'package:smooth_app/pages/product/simple_input_number_field.dart';
 import 'package:smooth_app/pages/text_field_helper.dart';
 import 'package:smooth_app/query/product_query.dart';
+import 'package:smooth_app/resources/app_icons.dart' as icons;
 import 'package:smooth_app/resources/app_icons.dart';
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
@@ -352,7 +353,8 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
     final AppLocalizations appLocalizations = AppLocalizations.of(context);
     final List<Widget> widgets = <Widget>[
       const NutritionServingSwitch(),
-      _extractNutrientsButton(context, nutritionContainer),
+      if (nutritionContainer.robotoffNutrientExtraction == null)
+        _extractNutrientsButton(context, nutritionContainer),
     ];
 
     final Iterable<OrderedNutrient> displayableNutrients =
@@ -467,7 +469,7 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
         }
       },
       child: Container(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(MEDIUM_SPACE),
         color: extension.secondaryNormal.withAlpha(60),
         child: Row(
           mainAxisSize: MainAxisSize.max,
@@ -479,10 +481,20 @@ class _NutritionPageBodyState extends State<_NutritionPageBody> {
                 color: extension.secondaryLight,
               ),
             ),
-            Icon(
-              Icons.star,
-              color: extension.secondaryLight,
-            ),
+            if (nutritionContainer.loadingRobotoffExtraction)
+              SizedBox.square(
+                dimension: 20.0,
+                child: CircularProgressIndicator(
+                  color: extension.secondaryLight,
+                ),
+              )
+            else
+              ExcludeSemantics(
+                child: icons.Sparkles(
+                  color: extension.secondaryLight,
+                  size: 18.0,
+                ),
+              ),
           ],
         ),
       ),

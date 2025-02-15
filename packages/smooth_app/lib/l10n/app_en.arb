@@ -4088,69 +4088,49 @@
     "@product_footer_action_data_quality_tags": {
         "description": "Action to view data quality warnings"
     },
-  "all_search_prices_top_product_title": "Products with the most prices",
-  "@all_search_prices_top_product_title": {
-    "description": "Top price products: list tile title"
-  },
-  "prices_products_list_length_many_pages": "Top {pageSize} products (total: {total})",
-  "@prices_products_list_length_many_pages": {
-    "description": "Number of products for one-page result",
-    "placeholders": {
-      "pageSize": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "app_review_title": "Are you enjoying this app?",
-  "@app_review_title": {
-    "description": "Title for the app review card in the tagline"
-  },
-  "app_review_low": "Could do better",
-  "@app_review_low": {
-    "description": "Item in the app review card with the lowest rating"
-  },
-  "app_review_medium": "Not bad",
-  "@app_review_medium": {
-    "description": "Item in the app review card with an average rating"
-  },
-  "app_review_high": "I love it!",
-  "@app_review_high": {
-    "description": "Item in the app review card with the highest rating"
-  },
-  "app_review_feedback_modal_title": "Help us improve our application",
-  "@app_review_feedback_modal_title": {
-    "description": "Title of the modal sheet displayed when the user has not selected the highest value"
-  },
-  "app_review_feedback_modal_content": "If you have a few minutes, could you answer this form so that **we can improve in future updates**:",
-  "@app_review_feedback_modal_content": {
-    "description": "Content of the modal sheet displayed when the user has not selected the highest value"
-  },
-  "app_review_feedback_modal_open_form": "Answer the form",
-  "@app_review_feedback_modal_open_form": {
-    "description": "Answer the form button"
-  },
-  "app_review_feedback_modal_later": "Ask me later",
-  "@app_review_feedback_modal_later": {
-    "description": "Ask me later button"
-  }
-    "all_search_prices_top_product_title": "Products with the most prices",
-    "@all_search_prices_top_product_title": {
-        "description": "Top price products: list tile title"
-    },
     "prices_products_list_length_many_pages": "Top {pageSize} products (total: {total})",
     "@prices_products_list_length_many_pages": {
         "description": "Number of products for one-page result",
         "placeholders": {
-            "pageSize": {
-                "type": "int"
-            },
-            "total": {
-                "type": "int"
-            }
+        "pageSize": {
+            "type": "int"
+        },
+        "total": {
+            "type": "int"
         }
+        }
+    },
+    "app_review_title": "Are you enjoying this app?",
+    "@app_review_title": {
+        "description": "Title for the app review card in the tagline"
+    },
+    "app_review_low": "Could do better",
+    "@app_review_low": {
+        "description": "Item in the app review card with the lowest rating"
+    },
+    "app_review_medium": "Not bad",
+    "@app_review_medium": {
+        "description": "Item in the app review card with an average rating"
+    },
+    "app_review_high": "I love it!",
+    "@app_review_high": {
+        "description": "Item in the app review card with the highest rating"
+    },
+    "app_review_feedback_modal_title": "Help us improve our application",
+    "@app_review_feedback_modal_title": {
+        "description": "Title of the modal sheet displayed when the user has not selected the highest value"
+    },
+    "app_review_feedback_modal_content": "If you have a few minutes, could you answer this form so that **we can improve in future updates**:",
+    "@app_review_feedback_modal_content": {
+        "description": "Content of the modal sheet displayed when the user has not selected the highest value"
+    },
+    "app_review_feedback_modal_open_form": "Answer the form",
+    "@app_review_feedback_modal_open_form": {
+        "description": "Answer the form button"
+    },
+    "app_review_feedback_modal_later": "Ask me later",
+    "@app_review_feedback_modal_later": {
+        "description": "Ask me later button"
     },
     "nutrition_facts_extract_new": "NEW: You can automatically extract the nutrients from the picture!",
     "@nutrition_facts_extract_new": {

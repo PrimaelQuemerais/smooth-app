@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
 import 'package:openfoodfacts/openfoodfacts.dart';
+import 'package:smooth_app/helpers/analytics_helper.dart';
 
 /// Nutrition data, for nutrient order and conversions.
 class NutritionContainerHelper extends ChangeNotifier {
@@ -83,6 +84,11 @@ class NutritionContainerHelper extends ChangeNotifier {
   RobotoffNutrientExtractionResult? get robotoffNutrientExtraction =>
       _robotoffNutrientExtraction;
 
+  int? _robotoffNutrientNewRecommendationCount;
+
+  int? get robotoffNutrientNewRecommendationCount =>
+      _robotoffNutrientNewRecommendationCount;
+
   // Fetch the robotoff extraction for the product, return true if the extraction was successful
   Future<bool> fetchRobotoffExtraction(final Product product) async {
     if (product.barcode == null) {
@@ -99,10 +105,31 @@ class NutritionContainerHelper extends ChangeNotifier {
     final bool extractionSuccessful = extractionResult.status == 'found';
 
     if (extractionSuccessful) {
-      _robotoffNutrientExtraction = extractionResult;
-
-      // When using Robotoff extraction we force the perSize to 100g
+      // When using Robotoff extraction we enforce the perSize to 100g
       perSize = PerSize.oneHundredGrams;
+
+      _robotoffNutrientNewRecommendationCount = 0;
+
+      for (final OrderedNutrient orderedNutrient in _nutrients) {
+        final Nutrient nutrient = getNutrient(orderedNutrient)!;
+        final RobotoffNutrientEntity? robotoffNutrientEntity =
+            extractionResult.getNutrientEntity(nutrient, perSize);
+        if (robotoffNutrientEntity != null) {
+          final double? value =
+              double.tryParse(robotoffNutrientEntity.value ?? '');
+          if (value != null && value != getValue(nutrient)) {
+            _robotoffNutrientNewRecommendationCount =
+                _robotoffNutrientNewRecommendationCount! + 1;
+          }
+        }
+      }
+
+      AnalyticsHelper.trackEvent(
+        AnalyticsEvent.robotoffNutritionExtracted,
+        eventValue: _robotoffNutrientNewRecommendationCount,
+      );
+
+      _robotoffNutrientExtraction = extractionResult;
     }
 
     _loadingRobotoffExtraction = false;

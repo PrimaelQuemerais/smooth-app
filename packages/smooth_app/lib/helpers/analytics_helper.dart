@@ -147,6 +147,10 @@ enum AnalyticsEvent {
   hungerGameOpened(
     tag: 'hunger game opened',
     category: AnalyticsCategory.hungerGame,
+  ),
+  robotoffNutritionExtracted(
+    tag: 'robotoff nutrition extracted',
+    category: AnalyticsCategory.robotoff,
   );
 
   const AnalyticsEvent({required this.tag, required this.category});

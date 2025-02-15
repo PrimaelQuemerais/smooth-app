@@ -153,7 +153,7 @@ class _NutrientRowState extends State<NutrientRow>
                 ),
                 decoration: BoxDecoration(
                   color: extension.successBackground,
-                  borderRadius: ROUNDED_BORDER_RADIUS,
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,

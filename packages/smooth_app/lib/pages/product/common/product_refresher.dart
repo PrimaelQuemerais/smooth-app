@@ -257,7 +257,7 @@ class ProductRefresher {
       return searchResult.products!
           .where((Product p) => p.barcode != null && p.barcode!.isNotEmpty)
           .map((Product p) => p.barcode!)
-          .toList();
+          .toList(growable: false);
     } catch (e) {
       Logs.e('Refresh from server error', ex: e);
       return null;

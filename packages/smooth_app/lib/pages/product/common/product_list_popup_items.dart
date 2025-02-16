@@ -14,8 +14,8 @@ import 'package:smooth_app/database/local_database.dart';
 import 'package:smooth_app/generic_lib/dialogs/smooth_alert_dialog.dart';
 import 'package:smooth_app/helpers/analytics_helper.dart';
 import 'package:smooth_app/helpers/temp_product_list_share_helper.dart';
+import 'package:smooth_app/pages/product/common/product_list_helper.dart';
 import 'package:smooth_app/pages/product/common/product_query_page_helper.dart';
-import 'package:smooth_app/pages/product/common/product_refresher.dart';
 import 'package:smooth_app/pages/product_list_user_dialog_helper.dart';
 import 'package:smooth_app/widgets/smooth_menu_button.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -33,8 +33,6 @@ enum ProductListPopupMenuEntry {
 
 /// Popup menu items for the product list page.
 abstract class ProductListPopupItem {
-  static const String EXPORT_SEPARATOR = ';';
-
   /// Title of the popup menu item.
   String getTitle(final AppLocalizations appLocalizations);
 
@@ -251,26 +249,15 @@ class ProductListPopupExport extends ProductListPopupItem {
       AppLocalizations.of(context),
     );
     final String fileName = _buildFileName(listName);
-    final StringBuffer csv = StringBuffer(
-        'Barcode${ProductListPopupItem.EXPORT_SEPARATOR}Name${ProductListPopupItem.EXPORT_SEPARATOR}Brand\n');
 
-    for (final String barcode in productList.barcodes) {
-      final Product? product = await DaoProduct(localDatabase).get(barcode);
-      if (product != null) {
-        final String name = (product.productName ?? '')
-            .replaceAll(ProductListPopupItem.EXPORT_SEPARATOR, '');
-        final String brand = (product.brands ?? '')
-            .replaceAll(ProductListPopupItem.EXPORT_SEPARATOR, '');
-        csv.write(
-            '"$barcode"${ProductListPopupItem.EXPORT_SEPARATOR}"$name"${ProductListPopupItem.EXPORT_SEPARATOR}"$brand"\n');
-      }
-    }
+    final String csv =
+        await ProductListHelper.exportList(productList, localDatabase);
 
     unawaited(
       Share.shareXFiles(
         <XFile>[
           XFile.fromData(
-            utf8.encode(csv.toString()),
+            utf8.encode(csv),
             name: '$fileName.csv',
             mimeType: 'text/csv',
           ),
@@ -321,33 +308,10 @@ class ProductListPopupImport extends ProductListPopupItem {
       return null;
     }
 
-    final File file = File(result.files.single.path!);
-    final String content = file.readAsStringSync();
-
-    final List<String> lines = content.split('\n');
-    final List<String> barcodes = <String>[];
-
-    for (final String line in lines) {
-      final List<String> parts = line.split(';');
-      if (parts.length < 3) {
-        continue;
-      }
-      final String barcode = parts[0].replaceAll('"', '');
-      barcodes.add(barcode);
-    }
-
-    final List<String> existingBarcodes =
-        await ProductRefresher().silentFetchAndRefreshListWithFeedback(
-              barcodes: barcodes,
-              localDatabase: localDatabase,
-              productType: ProductType.food,
-            ) ??
-            <String>[];
-
-    await DaoProductList(localDatabase).bulkSet(
+    await ProductListHelper.importList(
+      File(result.files.single.path!),
       productList,
-      existingBarcodes,
-      include: true,
+      localDatabase,
     );
 
     return productList;

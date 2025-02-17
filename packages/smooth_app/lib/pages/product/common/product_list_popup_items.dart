@@ -250,8 +250,10 @@ class ProductListPopupExport extends ProductListPopupItem {
     );
     final String fileName = _buildFileName(listName);
 
-    final String csv =
-        await ProductListHelper.exportList(productList, localDatabase);
+    final String csv = await ProductListHelper(
+      list: productList,
+      localDatabase: localDatabase,
+    ).exportBarcodesToString();
 
     unawaited(
       Share.shareXFiles(
@@ -308,11 +310,10 @@ class ProductListPopupImport extends ProductListPopupItem {
       return null;
     }
 
-    await ProductListHelper.importList(
-      File(result.files.single.path!),
-      productList,
-      localDatabase,
-    );
+    await ProductListHelper(
+      list: productList,
+      localDatabase: localDatabase,
+    ).importFileToList(File(result.files.single.path!));
 
     return productList;
   }

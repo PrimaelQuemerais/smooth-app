@@ -43,7 +43,8 @@ class SimpleInputWidget extends StatefulWidget {
   State<SimpleInputWidget> createState() => _SimpleInputWidgetState();
 }
 
-class _SimpleInputWidgetState extends State<SimpleInputWidget> {
+class _SimpleInputWidgetState extends State<SimpleInputWidget>
+    with AutomaticKeepAliveClientMixin {
   late final FocusNode _focusNode;
 
   /// In order to add new items to the top of the list, we have our custom copy
@@ -77,6 +78,7 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     final AppLocalizations appLocalizations = AppLocalizations.of(context);
     final SmoothColorsThemeExtension extension =
         context.extension<SmoothColorsThemeExtension>();
@@ -498,6 +500,9 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget> {
       SmoothHapticFeedback.lightNotification();
     }
   }
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void dispose() {

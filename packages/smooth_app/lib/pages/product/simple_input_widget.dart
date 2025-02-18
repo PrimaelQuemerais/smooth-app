@@ -199,13 +199,13 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget>
                 color: extension.successBackground,
                 borderRadius: ANGULAR_BORDER_RADIUS,
               ),
-              child: const Row(
+              child: Row(
                 children: [
-                  Icon(Icons.check_circle_rounded),
-                  SizedBox(width: MEDIUM_SPACE),
+                  const Icon(Icons.check_circle_rounded),
+                  const SizedBox(width: MEDIUM_SPACE),
                   Text(
-                    'Question answered!',
-                    style: TextStyle(
+                    appLocalizations.product_edit_robotoff_question_answered,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -286,7 +286,7 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget>
     );
   }
 
-  void _answerQuestion(
+  Future<void> _answerQuestion(
     RobotoffQuestion question,
     InsightAnnotation annotation,
   ) async {

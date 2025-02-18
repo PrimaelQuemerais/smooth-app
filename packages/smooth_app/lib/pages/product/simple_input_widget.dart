@@ -11,7 +11,6 @@ import 'package:smooth_app/generic_lib/widgets/smooth_card.dart';
 import 'package:smooth_app/generic_lib/widgets/smooth_snackbar.dart';
 import 'package:smooth_app/helpers/collections_helper.dart';
 import 'package:smooth_app/helpers/haptic_feedback_helper.dart';
-import 'package:smooth_app/helpers/robotoff_question_helper.dart';
 import 'package:smooth_app/pages/hunger_games/question_image_full_page.dart';
 import 'package:smooth_app/pages/product/owner_field_info.dart';
 import 'package:smooth_app/pages/product/simple_input_page_helpers.dart';
@@ -200,7 +199,7 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget>
                 borderRadius: ANGULAR_BORDER_RADIUS,
               ),
               child: Row(
-                children: [
+                children: <Widget>[
                   const Icon(Icons.check_circle_rounded),
                   const SizedBox(width: MEDIUM_SPACE),
                   Text(

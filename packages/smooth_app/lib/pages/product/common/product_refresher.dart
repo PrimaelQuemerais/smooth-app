@@ -105,17 +105,7 @@ class ProductRefresher {
   /// Fetches the products from the server and refreshes the local database.
   ///
   /// Silent version.
-  Future<void> silentFetchAndRefreshList({
-    required final List<String> barcodes,
-    required final LocalDatabase localDatabase,
-    required final ProductType productType,
-  }) async =>
-      _fetchAndRefreshList(localDatabase, barcodes, productType);
-
-  /// Fetches the products from the server, refreshes the local database.
-  /// And returns a list of barcodes for which a product was found.
-  /// Silent version.
-  Future<List<String>?> silentFetchAndRefreshListWithFeedback({
+  Future<List<String>?> silentFetchAndRefreshList({
     required final List<String> barcodes,
     required final LocalDatabase localDatabase,
     required final ProductType productType,

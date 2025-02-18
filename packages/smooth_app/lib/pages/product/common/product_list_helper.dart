@@ -33,8 +33,7 @@ class ProductListHelper {
 
     final List<String> validBarcodes = list.barcodes.where(
       (String barcode) {
-        return (barcode.length == 8 || barcode.length == 13) &&
-            int.tryParse(barcode) != null;
+        return isBarcodeValid(barcode);
       },
     ).toList();
 
@@ -62,7 +61,7 @@ class ProductListHelper {
   Future<List<String>> importBarcodes(List<String> barcodes) async {
     // TODOhow should we handle different product types?
     final List<String> existingBarcodes =
-        await ProductRefresher().silentFetchAndRefreshListWithFeedback(
+        await ProductRefresher().silentFetchAndRefreshList(
               barcodes: barcodes,
               localDatabase: localDatabase,
               productType: ProductType.food,
@@ -93,5 +92,10 @@ class ProductListHelper {
     }
 
     return barcodes;
+  }
+
+  static bool isBarcodeValid(String barcode) {
+    return (barcode.length == 8 || barcode.length == 13) &&
+        int.tryParse(barcode) != null;
   }
 }

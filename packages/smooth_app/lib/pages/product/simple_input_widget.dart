@@ -179,7 +179,7 @@ class _SimpleInputWidgetState extends State<SimpleInputWidget>
     );
 
     return Column(
-      children: [
+      children: <Widget>[
         SmoothCardWithRoundedHeader(
           leading: widget.helper.getIcon(),
           title: widget.helper.getTitle(appLocalizations),

@@ -84,11 +84,6 @@ class NutritionContainerHelper extends ChangeNotifier {
   RobotoffNutrientExtractionResult? get robotoffNutrientExtraction =>
       _robotoffNutrientExtraction;
 
-  int? _robotoffNutrientNewRecommendationCount;
-
-  int? get robotoffNutrientNewRecommendationCount =>
-      _robotoffNutrientNewRecommendationCount;
-
   // Fetch the robotoff extraction for the product, return true if the extraction was successful
   Future<bool> fetchRobotoffExtraction(final Product product) async {
     if (product.barcode == null) {
@@ -108,26 +103,18 @@ class NutritionContainerHelper extends ChangeNotifier {
       // When using Robotoff extraction we enforce the perSize to 100g
       perSize = PerSize.oneHundredGrams;
 
-      _robotoffNutrientNewRecommendationCount = 0;
-
       for (final OrderedNutrient orderedNutrient in _nutrients) {
         final Nutrient nutrient = getNutrient(orderedNutrient)!;
         final RobotoffNutrientEntity? robotoffNutrientEntity =
             extractionResult.getNutrientEntity(nutrient, perSize);
         if (robotoffNutrientEntity != null) {
-          final double? value =
-              double.tryParse(robotoffNutrientEntity.value ?? '');
-          if (value != null && value != getValue(nutrient)) {
-            _robotoffNutrientNewRecommendationCount =
-                _robotoffNutrientNewRecommendationCount! + 1;
-          }
+          AnalyticsHelper.trackRobotoffExtraction(
+            AnalyticsRobotoffEvents.robotoffNutritionExtracted,
+            nutrient,
+            product,
+          );
         }
       }
-
-      AnalyticsHelper.trackEvent(
-        AnalyticsEvent.robotoffNutritionExtracted,
-        eventValue: _robotoffNutrientNewRecommendationCount,
-      );
 
       _robotoffNutrientExtraction = extractionResult;
     }

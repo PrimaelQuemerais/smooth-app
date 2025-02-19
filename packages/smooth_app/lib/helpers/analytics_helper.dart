@@ -160,16 +160,28 @@ enum AnalyticsEvent {
   appRatingNotSatisfied(
     tag: 'not satisfied',
     category: AnalyticsCategory.appRating,
-  ),
-  robotoffNutritionExtracted(
-    tag: 'robotoff nutrition extracted',
-    category: AnalyticsCategory.robotoff,
   );
 
   const AnalyticsEvent({required this.tag, required this.category});
 
   final String tag;
   final AnalyticsCategory category;
+}
+
+enum AnalyticsRobotoffEvents {
+  robotoffNutritionExtracted(
+    name: 'robotoff nutrition extracted',
+  ),
+  robotoffNutritionInsightAccepted(
+    name: 'robotoff nutrition insight accepted',
+  ),
+  robotoffNutritionInsightRejected(
+    name: 'robotoff nutrition insight rejected',
+  );
+
+  const AnalyticsRobotoffEvents({required this.name});
+
+  final String name;
 }
 
 enum AnalyticsEditEvents {
@@ -379,6 +391,19 @@ class AnalyticsHelper {
       dimensions: dimensions,
     );
   }
+
+  static void trackRobotoffExtraction(
+    AnalyticsRobotoffEvents event,
+    Nutrient nutrient,
+    Product product,
+  ) =>
+      trackCustomEvent(
+        event.name,
+        AnalyticsCategory.robotoff.tag,
+        action: nutrient.name,
+        barcode: product.barcode,
+        productType: product.productType ?? ProductType.food,
+      );
 
   static void trackProductEdit(
     AnalyticsEditEvents editEventName,

@@ -6,6 +6,7 @@ import 'package:openfoodfacts/openfoodfacts.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_app/generic_lib/design_constants.dart';
 import 'package:smooth_app/generic_lib/duration_constants.dart';
+import 'package:smooth_app/helpers/analytics_helper.dart';
 import 'package:smooth_app/helpers/collections_helper.dart';
 import 'package:smooth_app/helpers/text_input_formatters_helper.dart';
 import 'package:smooth_app/pages/product/nutrition_page/nutrition_page.dart';
@@ -181,11 +182,18 @@ class _NutrientRowState extends State<NutrientRow>
 
                           // This is temporary, waiting for the update of openfoodfacts-dart
                           final Unit? unit = UnitHelper.stringToUnit(
-                              robotoffNutrientEntity.unit);
+                            robotoffNutrientEntity.unit,
+                          );
                           if (unit != null) {
                             widget.nutritionContainer.setNutrientUnit(
                               widget.orderedNutrient.nutrient!,
                               unit,
+                            );
+                            AnalyticsHelper.trackRobotoffExtraction(
+                              AnalyticsRobotoffEvents
+                                  .robotoffNutritionInsightAccepted,
+                              widget.orderedNutrient.nutrient!,
+                              context.read<Product>(),
                             );
                           }
                         },

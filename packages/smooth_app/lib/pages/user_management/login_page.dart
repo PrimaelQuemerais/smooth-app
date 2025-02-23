@@ -104,6 +104,7 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
               alignment: Alignment.topCenter,
               width: double.infinity,
               padding: EdgeInsetsDirectional.only(
+                top: size.height * 0.05,
                 start: size.width * 0.15,
                 end: size.width * 0.15,
                 bottom: size.width * 0.05,
@@ -117,16 +118,26 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                     children: <Widget>[
                       SvgPicture.asset(
                         'assets/preferences/login.svg',
-                        height: MediaQuery.sizeOf(context).height * .15,
+                        height: MediaQuery.sizeOf(context).height * .1,
                         package: AppHelper.APP_PACKAGE,
                       ),
+                      const SizedBox(
+                        height: LARGE_SPACE * 2,
+                      ),
                       Text(
-                        appLocalizations.sign_in_text,
+                        appLocalizations.sign_in_title,
                         textAlign: TextAlign.center,
                         style: theme.textTheme.displayLarge?.copyWith(
                           fontSize: VERY_LARGE_SPACE,
                           fontWeight: FontWeight.w700,
                         ),
+                      ),
+                      const SizedBox(
+                        height: MEDIUM_SPACE,
+                      ),
+                      Text(
+                        appLocalizations.sign_in_text,
+                        textAlign: TextAlign.center,
                       ),
 
                       const SizedBox(
@@ -175,7 +186,7 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                       ),
 
                       const SizedBox(
-                        height: LARGE_SPACE * 2,
+                        height: LARGE_SPACE,
                       ),
 
                       //Password
@@ -205,6 +216,43 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                           }
                         },
                       ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          //Forgot password
+                          TextButton(
+                            style: ButtonStyle(
+                              padding: WidgetStateProperty.all<EdgeInsets>(
+                                const EdgeInsets.symmetric(
+                                  vertical: BALANCED_SPACE,
+                                  horizontal: VERY_LARGE_SPACE,
+                                ),
+                              ),
+                              shape: WidgetStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                const RoundedRectangleBorder(
+                                  borderRadius: CIRCULAR_BORDER_RADIUS,
+                                ),
+                              ),
+                            ),
+                            onPressed: () async => Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                builder: (BuildContext context) =>
+                                    const ForgotPasswordPage(),
+                              ),
+                            ),
+                            child: Text(
+                              appLocalizations.forgot_password,
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                fontSize: 18.0,
+                                color: theme.colorScheme.primary,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
 
                       const SizedBox(
                         height: LARGE_SPACE * 2,
@@ -218,8 +266,10 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                           onPressed: () => _login(context),
                           style: ButtonStyle(
                             minimumSize: WidgetStateProperty.all<Size>(
-                              Size(size.width * 0.5,
-                                  theme.buttonTheme.height + 10),
+                              Size(
+                                size.width * 0.5,
+                                theme.buttonTheme.height * 1.5,
+                              ),
                             ),
                             shape:
                                 WidgetStateProperty.all<RoundedRectangleBorder>(
@@ -239,43 +289,7 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                         ),
 
                       const SizedBox(
-                        height: LARGE_SPACE * 2,
-                      ),
-
-                      //Forgot password
-                      TextButton(
-                        style: ButtonStyle(
-                          padding: WidgetStateProperty.all<EdgeInsets>(
-                            const EdgeInsets.symmetric(
-                              vertical: BALANCED_SPACE,
-                              horizontal: VERY_LARGE_SPACE,
-                            ),
-                          ),
-                          shape:
-                              WidgetStateProperty.all<RoundedRectangleBorder>(
-                            const RoundedRectangleBorder(
-                              borderRadius: CIRCULAR_BORDER_RADIUS,
-                            ),
-                          ),
-                        ),
-                        onPressed: () async => Navigator.push(
-                          context,
-                          MaterialPageRoute<void>(
-                            builder: (BuildContext context) =>
-                                const ForgotPasswordPage(),
-                          ),
-                        ),
-                        child: Text(
-                          appLocalizations.forgot_password,
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            fontSize: 18.0,
-                            color: theme.colorScheme.primary,
-                          ),
-                        ),
-                      ),
-
-                      const SizedBox(
-                        height: LARGE_SPACE * 2,
+                        height: LARGE_SPACE,
                       ),
 
                       //Open register page
@@ -302,10 +316,15 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                           style: ButtonStyle(
                             side: WidgetStateProperty.all<BorderSide>(
                               BorderSide(
-                                  color: theme.colorScheme.primary, width: 2.0),
+                                color: theme.colorScheme.primary,
+                                width: 2.0,
+                              ),
                             ),
                             minimumSize: WidgetStateProperty.all<Size>(
-                              Size(size.width * 0.5, theme.buttonTheme.height),
+                              Size(
+                                size.width * 0.5,
+                                theme.buttonTheme.height,
+                              ),
                             ),
                             shape:
                                 WidgetStateProperty.all<RoundedRectangleBorder>(
@@ -315,8 +334,9 @@ class _LoginPageState extends State<LoginPage> with TraceableClientMixin {
                             ),
                           ),
                           child: Padding(
-                            padding:
-                                const EdgeInsetsDirectional.only(bottom: 2.0),
+                            padding: const EdgeInsetsDirectional.only(
+                              bottom: 2.0,
+                            ),
                             child: Text(
                               appLocalizations.create_account,
                               style: theme.textTheme.bodyMedium?.copyWith(

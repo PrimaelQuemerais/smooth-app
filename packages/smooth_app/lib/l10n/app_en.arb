@@ -155,6 +155,7 @@
     },
     "server_error_open_new_issue": "No server response! You may open an issue with the following link.",
     "@user_management": {},
+    "sign_in_title": "Join Open Food Facts",
     "sign_in_text": "Sign in to your Open Food Facts account to save your contributions",
     "incorrect_credentials": "Incorrect username or password.",
     "password_lost_incorrect_credentials": "This email or username doesn't exist. Please check your credentials.",
@@ -4135,5 +4136,9 @@
   "app_review_feedback_modal_later": "Ask me later",
   "@app_review_feedback_modal_later": {
     "description": "Ask me later button"
+  },
+  "product_edit_robotoff_question_answered": "Question answered!",
+  "@product_edit_robotoff_question_answered": {
+    "description": "Message displayed when a question from the Robotoff is answered"
   }
 }

@@ -4140,5 +4140,33 @@
   "product_edit_robotoff_question_answered": "Question answered!",
   "@product_edit_robotoff_question_answered": {
     "description": "Message displayed when a question from the Robotoff is answered"
+  },
+  "authentication_bottom_sheet_header": "What?!?\nYou haven't joined yet?",
+  "@authentication_bottom_sheet_header": {
+    "description": "Header of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_title": "By creating your Open Food Facts account you are joining a community of tens of thousand collaborators?",
+  "@authentication_bottom_sheet_title": {
+    "description": "Title of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_title_addition": "You will then be able to :",
+  "@authentication_bottom_sheet_title_addition": {
+    "description": "Text right under the title of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_first_chip": "Add and modify products",
+  "@authentication_bottom_sheet_first_chip": {
+    "description": "The first chip of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_second_chip": "Add prices",
+  "@authentication_bottom_sheet_second_chip": {
+    "description": "The second chip of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_third_chip": "Participate in our events",
+  "@authentication_bottom_sheet_third_chip": {
+    "description": "The third chip of the authentication bottom sheet"
+  },
+  "authentication_bottom_sheet_subtitle": "And all this for free!\n(And most importantly, while respecting your privacy)",
+  "@authentication_bottom_sheet_subtitle": {
+    "description": "Subtitle of the authentication bottom sheet"
   }
 }

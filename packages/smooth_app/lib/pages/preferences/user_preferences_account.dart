@@ -17,6 +17,7 @@ import 'package:smooth_app/pages/preferences/user_preferences_item.dart';
 import 'package:smooth_app/pages/preferences/user_preferences_list_tile.dart';
 import 'package:smooth_app/pages/preferences/user_preferences_page.dart';
 import 'package:smooth_app/pages/product/common/product_query_page_helper.dart';
+import 'package:smooth_app/pages/user_management/authentication_bottom_sheet.dart';
 import 'package:smooth_app/pages/user_management/login_page.dart';
 import 'package:smooth_app/query/paged_product_query.dart';
 import 'package:smooth_app/query/paged_to_be_completed_product_query.dart';
@@ -107,19 +108,13 @@ class UserPreferencesAccount extends AbstractUserPreferences {
             color: theme.colorScheme.onPrimary,
           ),
         ),
-        onPressed: () async => _goToLoginPage(),
+        onPressed: () => _goToLoginPage(),
       ),
     );
   }
 
-  Future<void> _goToLoginPage() async => Navigator.of(
-        context,
-        rootNavigator: true,
-      ).push<dynamic>(
-        MaterialPageRoute<dynamic>(
-          builder: (BuildContext context) => const LoginPage(),
-        ),
-      );
+  Future<void> _goToLoginPage() async =>
+      AuthenticationBottomSheet(context).show();
 
   @override
   List<UserPreferencesItem> getChildren() {

@@ -34,10 +34,10 @@ packages:
     dependency: "direct main"
     description:
       name: app_settings
-      sha256: "09bc7fe0313a507087bec1a3baf555f0576e816a760cbb31813a88890a09d9e5"
+      sha256: "476df1d85cec143c3d27dd1c7451629a59c0c5ccf70a0adcbfa92a0a2d928705"
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.1"
+    version: "5.2.0"
   app_store_apple_store:
     dependency: "direct main"
     description:
@@ -1844,10 +1844,10 @@ packages:
     dependency: "direct main"
     description:
       name: webview_flutter_android
-      sha256: "3d535126f7244871542b2f0b0fcf94629c9a14883250461f9abe1a6644c1c379"
+      sha256: "512c26ccc5b8a571fd5d13ec994b7509f142ff6faf85835e243dde3538fdc713"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.0"
+    version: "4.3.2"
   webview_flutter_platform_interface:
     dependency: transitive
     description:

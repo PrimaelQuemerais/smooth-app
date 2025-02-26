@@ -4066,6 +4066,14 @@
       }
     }
   },
+  "product_list_export": "Export",
+  "@product_list_export": {
+    "description": "Product list popup menu item to export the list"
+  },
+  "product_list_import": "Import",
+  "@product_list_import": {
+    "description": "Product list popup menu item to import a list"
+  },
   "product_footer_action_barcode": "View barcode",
   "@product_footer_action_barcode": {
     "description": "Action to see the barcode of a product"

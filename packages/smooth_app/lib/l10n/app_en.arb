@@ -3599,11 +3599,11 @@
     "description": "Label written as the title of the dialog to select the user language"
   },
   "language_selector_section_selected": "Selected languages",
-  "@language_selector_title": {
+  "@language_selector_section_selected": {
     "description": "Label to highlight the selected languages"
   },
   "language_selector_section_frequently_used": "Frequently used",
-  "@language_selector_title": {
+  "@language_selector_section_frequently_used": {
     "description": "Label to highlight the frequently used languages"
   },
   "action_delete_list": "Delete",
@@ -4065,6 +4065,14 @@
       }
     }
   },
+  "product_list_export": "Export",
+  "@product_list_export": {
+    "description": "Product list popup menu item to export the list"
+  },
+  "product_list_import": "Import",
+  "@product_list_import": {
+    "description": "Product list popup menu item to import a list"
+  },
   "product_footer_action_barcode": "View barcode",
   "@product_footer_action_barcode": {
     "description": "Action to see the barcode of a product"
@@ -4113,10 +4121,6 @@
   "@dev_preferences_use_product_tabs_title": {
     "description": "Title for the preference to use tabs on the product page"
   },
-  "all_search_prices_top_product_title": "Products with the most prices",
-  "@all_search_prices_top_product_title": {
-    "description": "Top price products: list tile title"
-  },
   "prices_products_list_length_many_pages": "Top {pageSize} products (total: {total})",
   "@prices_products_list_length_many_pages": {
     "description": "Number of products for one-page result",
@@ -4160,5 +4164,21 @@
   "app_review_feedback_modal_later": "Ask me later",
   "@app_review_feedback_modal_later": {
     "description": "Ask me later button"
+  },
+  "nutrition_facts_extract_new": "NEW: You can automatically extract the nutrients from the picture!",
+  "@nutrition_facts_extract_new": {
+      "description": "Message to indicate that user can now extract of nutrients from a picture"
+  },
+  "nutrition_facts_extract_button_text": "Extract now",
+  "@nutrition_facts_extract_button_text": {
+      "description": "Button to extraction of nutrients from a picture"
+  },
+  "nutrition_facts_extract_succesful": "Extraction succesful",
+  "@nutrition_facts_extract_succesful": {
+      "description": "Message to indicate that the extraction of nutrients from a picture was succesful"
+  },
+  "nutrition_facts_extract_failed": "Failed to extract nutrients from picture",
+  "@nutrition_facts_extract_failed": {
+      "description": "Message to indicate that the extraction of nutrients from a picture failed"
   }
 }

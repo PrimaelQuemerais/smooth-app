@@ -9,7 +9,11 @@ import 'package:smooth_app/knowledge_panel/knowledge_panels_builder.dart';
 import 'package:smooth_app/pages/folksonomy/folksonomy_card.dart';
 import 'package:smooth_app/pages/preferences/user_preferences_dev_mode.dart';
 import 'package:smooth_app/pages/prices/prices_card.dart';
+import 'package:smooth_app/pages/product/product_page/raw_data/product_raw_data_page.dart';
 import 'package:smooth_app/pages/product/website_card.dart';
+import 'package:smooth_app/themes/smooth_theme.dart';
+import 'package:smooth_app/themes/smooth_theme_colors.dart';
+import 'package:smooth_app/themes/theme_provider.dart';
 import 'package:smooth_app/widgets/smooth_tabbar.dart';
 
 class ProductPageTab {
@@ -35,20 +39,78 @@ class ProductPageTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final SmoothColorsThemeExtension theme =
+        context.extension<SmoothColorsThemeExtension>();
+    final bool lightTheme = context.lightTheme();
+
     return SliverPersistentHeader(
       delegate: _TabBarDelegate(
         PreferredSize(
-            preferredSize: const Size.fromHeight(SmoothTabBar.TAB_BAR_HEIGHT),
-            child: SmoothTabBar<ProductPageTab>(
-              tabController: tabController,
-              items: tabs.map((ProductPageTab tab) {
-                return SmoothTabBarItem<ProductPageTab>(
-                  label: tab.labelBuilder(context),
-                  value: tab,
-                );
-              }).toList(growable: false),
-              onTabChanged: (_) {},
-            )),
+          preferredSize: const Size.fromHeight(SmoothTabBar.TAB_BAR_HEIGHT),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                SmoothTabBar<ProductPageTab>(
+                  tabController: tabController,
+                  items: tabs.map((ProductPageTab tab) {
+                    return SmoothTabBarItem<ProductPageTab>(
+                      label: tab.labelBuilder(context),
+                      value: tab,
+                    );
+                  }).toList(growable: false),
+                  onTabChanged: (_) {},
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        width: 1.0,
+                        color: lightTheme
+                            ? theme.primaryBlack
+                            : theme.primaryNormal,
+                      ),
+                    ),
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      showSmoothReorderBottomSheet<ProductPageTab>(
+                        context,
+                        items: tabs.map((ProductPageTab tab) {
+                          return tab;
+                        }).toList(growable: false),
+                        onReorder: (List<ProductPageTab> reorderedItems) {
+                          context.read<UserPreferences>().setProductPageTabs(
+                                  reorderedItems.map((ProductPageTab tab) {
+                                return tab.id;
+                              }).toList(growable: false));
+                          tabs
+                            ..clear()
+                            ..addAll(reorderedItems);
+                        },
+                        labelBuilder: (
+                          BuildContext context,
+                          ProductPageTab item,
+                          int index,
+                        ) {
+                          return Text(
+                            item.labelBuilder(context),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          );
+                        },
+                        title: AppLocalizations.of(context)
+                            .product_page_reorder_tabs,
+                      );
+                    },
+                    icon: const Icon(Icons.edit),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
       pinned: true,
     );
@@ -125,44 +187,9 @@ class ProductPageTabBar extends StatelessWidget {
         id: 'for_me',
         labelBuilder: (BuildContext context) =>
             AppLocalizations.of(context).product_page_tab_for_me,
-        builder: (BuildContext context, __) => Row(
+        builder: (BuildContext context, __) => const Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SmoothSimpleButton(
-              onPressed: () {
-                showSmoothReorderBottomSheet<ProductPageTab>(
-                  context,
-                  items: tabs.map((ProductPageTab tab) {
-                    return tab;
-                  }).toList(growable: false),
-                  onReorder: (List<ProductPageTab> reorderedItems) {
-                    context.read<UserPreferences>().setProductPageTabs(
-                            reorderedItems.map((ProductPageTab tab) {
-                          return tab.id;
-                        }).toList(growable: false));
-                    tabs
-                      ..clear()
-                      ..addAll(reorderedItems);
-                  },
-                  labelBuilder: (
-                    BuildContext context,
-                    ProductPageTab item,
-                    int index,
-                  ) {
-                    return Text(
-                      item.labelBuilder(context),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    );
-                  },
-                  title: AppLocalizations.of(context).product_page_reorder_tabs,
-                );
-              },
-              child:
-                  Text(AppLocalizations.of(context).product_page_reorder_tabs),
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
     );
@@ -210,6 +237,14 @@ class ProductPageTabBar extends StatelessWidget {
         ),
       );
     }
+
+    tabs.add(
+      ProductPageTab(
+          id: 'raw_data',
+          labelBuilder: (BuildContext context) =>
+              AppLocalizations.of(context).product_page_tab_raw_data,
+          builder: (_, Product product) => ProductRawDataPage(product)),
+    );
 
     return tabs;
   }

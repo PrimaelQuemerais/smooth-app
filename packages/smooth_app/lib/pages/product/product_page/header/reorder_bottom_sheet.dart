@@ -5,6 +5,7 @@ import 'package:smooth_app/generic_lib/design_constants.dart';
 import 'package:smooth_app/resources/app_icons.dart' as icons;
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
+import 'package:smooth_app/themes/theme_provider.dart';
 
 typedef LabelBuilder<T> = Widget Function(
   BuildContext context,
@@ -33,6 +34,8 @@ class ReorderBottomSheet<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     final SmoothColorsThemeExtension theme =
         context.extension<SmoothColorsThemeExtension>();
+    final ThemeData themeData = Theme.of(context);
+    final bool lightTheme = context.lightTheme();
 
     return ChangeNotifierProvider<_ReorderBottomSheetProvider<T>>(
       create: (_) => _ReorderBottomSheetProvider<T>(_items),
@@ -87,9 +90,13 @@ class ReorderBottomSheet<T> extends StatelessWidget {
                               padding:
                                   const EdgeInsetsDirectional.all(MEDIUM_SPACE),
                               decoration: BoxDecoration(
-                                color: item.visible
-                                    ? theme.primaryMedium
-                                    : theme.primaryLight,
+                                color: lightTheme
+                                    ? (item.visible
+                                        ? theme.primaryMedium
+                                        : theme.primaryLight)
+                                    : (item.visible
+                                        ? theme.primaryDark
+                                        : theme.primarySemiDark),
                                 borderRadius: ROUNDED_BORDER_RADIUS,
                               ),
                               child: Row(
@@ -98,13 +105,17 @@ class ReorderBottomSheet<T> extends StatelessWidget {
                                     Container(
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: theme.primarySemiDark,
+                                        color: lightTheme
+                                            ? theme.primarySemiDark
+                                            : theme.primaryLight,
                                       ),
                                       child: IconButton(
                                         visualDensity: VisualDensity.compact,
                                         iconSize: 16.0,
-                                        icon: const icons.Eye.visible(
-                                          color: Colors.white,
+                                        icon: icons.Eye.visible(
+                                          color: lightTheme
+                                              ? Colors.white
+                                              : Colors.black,
                                         ),
                                         onPressed: () =>
                                             onVisibilityToggle?.call(item.data),
@@ -116,7 +127,9 @@ class ReorderBottomSheet<T> extends StatelessWidget {
                                   const Spacer(),
                                   Icon(
                                     Icons.drag_handle,
-                                    color: theme.primaryDark,
+                                    color: lightTheme
+                                        ? theme.primaryDark
+                                        : theme.primaryLight,
                                   ),
                                 ],
                               ),

@@ -4182,5 +4182,9 @@
   "nutrition_facts_extract_failed": "Failed to extract nutrients from picture",
   "@nutrition_facts_extract_failed": {
     "description": "Message to indicate that the extraction of nutrients from a picture failed"
+  },
+  "product_page_tab_raw_data": "Raw data",
+  "@product_page_tab_raw_data": {
+      "description": "Label of the raw data tab on the product page"
   }
 }

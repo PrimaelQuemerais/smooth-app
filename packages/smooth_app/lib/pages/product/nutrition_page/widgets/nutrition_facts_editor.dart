@@ -96,6 +96,21 @@ class _NutrientRowState extends State<NutrientRow>
       PerSize.oneHundredGrams,
     );
 
+    String? extractionValue = robotoffNutrientEntity?.text;
+
+    // We need to make sure we the value is formatted properly
+    // We also ignore text extractions such as "traces" until the API is ready
+    if (extractionValue != null) {
+      extractionValue = DecimalSeparatorRewriter(
+        widget.decimalNumberFormat,
+      ).replaceSeparator(
+        extractionValue,
+      );
+
+      final num? extractionValueNum = double.tryParse(extractionValue);
+      extractionValue = extractionValueNum?.toString();
+    }
+
     return ColoredBox(
       color: color,
       child: Padding(
@@ -143,8 +158,8 @@ class _NutrientRowState extends State<NutrientRow>
                 ),
               ],
             ),
-            if (robotoffNutrientEntity?.value != null &&
-                robotoffNutrientEntity!.value! != controller.text)
+            if ( // robotoffNutrientEntity != null &&
+                extractionValue != null && extractionValue != controller.text)
               Container(
                 margin: const EdgeInsetsDirectional.only(
                   bottom: SMALL_SPACE,
@@ -167,7 +182,7 @@ class _NutrientRowState extends State<NutrientRow>
                       ),
                     ),
                     Text(
-                      robotoffNutrientEntity.text!,
+                      extractionValue,
                       style: TextStyle(
                         color: extension.success,
                         fontWeight: FontWeight.bold,
@@ -178,8 +193,8 @@ class _NutrientRowState extends State<NutrientRow>
                           .edit_product_form_item_add_suggestion,
                       child: IconButton(
                         onPressed: () {
-                          controller.text = robotoffNutrientEntity.value!;
-                          final Unit? unit = robotoffNutrientEntity.unit;
+                          controller.text = extractionValue!;
+                          final Unit? unit = robotoffNutrientEntity?.unit;
                           if (unit != null) {
                             widget.nutritionContainer.setNutrientUnit(
                               widget.orderedNutrient.nutrient!,
@@ -307,7 +322,8 @@ class _NutrientValueCell extends StatelessWidget {
                         inputFormatters: <TextInputFormatter>[
                           FilteringTextInputFormatter.allow(
                             SimpleInputNumberField.getNumberRegExp(
-                                decimal: true),
+                              decimal: true,
+                            ),
                           ),
                           DecimalSeparatorRewriter(decimalNumberFormat),
                         ],

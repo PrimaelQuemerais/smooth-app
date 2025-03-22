@@ -96,19 +96,15 @@ class _NutrientRowState extends State<NutrientRow>
       PerSize.oneHundredGrams,
     );
 
-    String? extractionValue = robotoffNutrientEntity?.text;
+    String? extractionValue = robotoffNutrientEntity?.value;
 
     // We need to make sure we the value is formatted properly
     // We also ignore text extractions such as "traces" until the API is ready
     if (extractionValue != null) {
-      extractionValue = DecimalSeparatorRewriter(
-        widget.decimalNumberFormat,
-      ).replaceSeparator(
-        extractionValue,
-      );
-
-      final num? extractionValueNum = double.tryParse(extractionValue);
-      extractionValue = extractionValueNum?.toString();
+      final num? extractionValueNum = NumberFormat().tryParse(extractionValue);
+      if (extractionValueNum == null) {
+        extractionValue = extractionValueNum.toString();
+      }
     }
 
     return ColoredBox(

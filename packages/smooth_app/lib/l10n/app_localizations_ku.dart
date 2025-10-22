@@ -9,6 +9,9 @@ class AppLocalizationsKu extends AppLocalizations {
   AppLocalizationsKu([String locale = 'ku']) : super(locale);
 
   @override
+  String get app_name => 'Rastiyên Xwarinê yên Vekirî';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsKu extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsKu extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Kategoriyek rasttir hilbijêre';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Taybetmendî tune ne';
+
+  @override
+  String get product_tags_explanation =>
+      'Bi zêdekirina taybetmendî (kilît/nirx) li berhemekê, hûn alîkariya dewlemendkirina wê dikin.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Hesabê min jê bibe';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Bigihîjin taybetmendiyên ceribandinî û amûrên pêşveçûnê';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsKu extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Li ser malpera Open Prices vekin';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get prices_list_add_new_price => 'Bihayekî nû yê\nlê zêde bike';
 
   @override
+  String get prices_list_empty_title => 'Hîn biha tune! (Hîn biha tune!)';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bibin yekem kesê ku yekê lê zêde dike:\nBi şopandina **raporekê** an jî **etîketa bihayê**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Dikana nenas';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Hemû nirxên vê berhemê bibînin';
 
   @override
   String get prices_entry_menu_open_proof => 'Delîlê bibîne';
@@ -2729,9 +2750,24 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title =>
+      'Hîn beşdarvan tune! (Heta niha beşdar tune!)';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Bibin yekem ku bihayek lê zêde bikin!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Hîn firoşgeh tune!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Bibin yekem ku bihayek lê zêde bikin!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2836,7 +2872,17 @@ class AppLocalizationsKu extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Hîn delîl tune! (Hîn delîl tune!)';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Bi zêdekirina wêneyekî **wergir** an jî **etîketeke bihayê** dest pê bike!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2915,13 +2961,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Dane';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2933,6 +2973,17 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Zimanê sepanê ji nû ve saz bike';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Kartan lê zêde bike';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Di navbera prices.openfoodfacts.org (PROD) û hawîrdora ceribandinê de biguhere';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2976,6 +3027,11 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3977,32 +4033,32 @@ class AppLocalizationsKu extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Kesk-Pûana A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Kesk-Xala B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Kesk-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Kesk-Xala D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Kesk-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Xala Kesk a Nenas';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Kesk-Pûan nayê sepandin';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Xwarinên pir-pêvajoyî - komên NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4099,9 +4155,6 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Re';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4209,11 +4262,279 @@ class AppLocalizationsKu extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'Xala Kesk çi ye?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score logoyek e ku armanc dike we di derbarê **bandora xwarinê li ser jîngehê** de agahdar bike.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Koda rengan ji keskê tarî (**A+**) ji bo hilberên **kêmtirîn bandorker** heta sorê tarî (**F**) ji bo hilberên **herî bandorker** diguhere.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logoyên Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Bingeh: Nirxandina Çerxa Jiyanê (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Nirxandineke zanistî ya kategoriyên xwarinê';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Ji bo her kategoriya hilberê, bi karanîna daneyên ji databasa jîngehê ya Agribalyse (ku ji hêla ADEME û INRAE ve hatî çêkirin) puanek **benchmark** tê destnîşankirin.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analîza çerxa jiyanê** rêbazeke nirxandinê ya standardkirî ye ji bo pêkanîna nirxandineke jîngehê ya pir-qonaxî û pir-pîvanî.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Ew dipîve:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 gavên hilberînê';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 nîşaneyên bandora jîngehê';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Guherîna avhewayê / şopa karbonê';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Kêmbûna qata ozonê';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Tîrêjên îyonîze';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Welat';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Bikaranîna av û enerjiyê';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Qirêjiya hewayê';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Ava deryayî û şirîn (perçe, asîdkirin, ewtrofîkirin)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Kêmbûna çavkaniyan.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonus û cezayan';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Ji bo xelatkirina berhemên çêtir di nav kategoriyekê de, em li gorî çend pîvanan bonus û cezayan bicîh tînin:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Li gorî eslê malzemeyan bonusek tê dayîn. Ev bonus bandora li ser veguhastinê û her weha polîtîkaya jîngehê ya welatê her hilberîner li ber çavan digire.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Ji bo hesabkirina rast a Pûana Kesk, pêdivî bi agahdariyên ku ne hewce ye li ser pakêtê werin diyarkirin (wek mînak jêderk û rêjeya rast a her malzemeyê) an jî kêm caran bi awayekî bikêrhatî peyda bibin (wek mînak navnîşek hemî pêkhateyên pakêtê bi celebên rastîn ên plastîkên hatine bikar anîn).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Nirxên navînî têne bikar anîn dema ku ev agahî hîn peyda nebin, lê em niha bang li her kesî dikin ku alîkariya me bikin ku em vê agahiyê berhev bikin ku dê ji bo Green-Score lê di heman demê de ji bo gelek karanînên din jî pir bikêr be.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Welatî çawa dikarin alîkariyê bikin';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Hemû welatî dikarin ji bo berhevkirin û rêkxistina agahiyên li ser berheman an jî agahiyên ku ji wan têne derxistin, wek mînak agahiyên li ser pakêtan, alîkariya me bikin: Mission Emballages: envantereke hevkar a berfireh a pakêtan ji bo hemû berhemên xwarinê (bi Fransî)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Çawa hilberîner dikarin bibin alîkar';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Hilberîner dikarin agahiyên xwe rasterast bi rêya platforma me ya belaş ji bo hilberîneran ji me re bişînin.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Kîjan berhem ji bo gerstêrkê çêtir e?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Ew dikare dijwar be ku meriv bibêje';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Hilbijartina xwarina domdar yek ji tiştên herî bi bandor e ku em dikarin ji bo avhewayê bikin, ji ber ku **sîstema me ya xwarinê ya gerdûnî berpirsiyarê zêdetirî çaryeka hemî emisyonên gazên serayê ye**.\n(Çavkanî: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Tu xwedî hêz î!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Mizgîniya baş ew e ku ev rêyek bihêz dide me ku em guhertinê biafirînin.\n**Her yek ji me her sal nêzîkî 1,000 xwarinan dixwe**. Ev 1,000 derfet in ji bo **hilbijartina paşerojek çêtir ji bo gerstêrkê**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Alîkarî dike ku berpirsiyar be û biryar bide';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Hilbijartina xwarina domdar dikare tevlihev xuya bike. Etîket tevlihev in û agahî pir caran wenda ne. Pûana Kesk ji bo hêsankirina wê hat afirandin, û ji bo hilberên xwarinê rêjeyek jîngehê ya **zelal**, **zanist-bingeha**, û **şefaf** dide we, tam li cihê ku hûn hewce ne: dema ku hûn dikirin.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Şefafî';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Berevajî etîketên taybet, hesabkirina Green-Score **bi tevahî vekirî** ye û dikare ji hêla **her kesî** ve were verast kirin.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Ultra-proseskirin çi ye?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Grûpên NOVA we di derbarê asta hilberandina xwarinê de agahdar dikin.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Dabeşkirina NOVA rê dide dabeşkirina xwarinan di nav **4 koman** de li gorî **pileya hilberîna wan a pîşesaziyê** (xwarinên kêm-pêvajoyî an ne-pêvajoyî, malzemeyên kulîneriyê, xwarinên pêvajoyî, xwarinên pir-pêvajoyî).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logoyên NOVA';
+
+  @override
+  String get guide_nova_groups_title => '4 komên NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      '4 komên NOVA hene, ya pirsgirêkdar Koma 4 - Xwarinên Ultra-pêvajoyî ye.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Xwarinên kêm pêvajokirî an ne pêvajokirî';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Xwarinên nepêvajoyî (an xwezayî) beşên xwarinê yên nebatan (tov, fêkî, pel, qurm, reh) an jî heywanan (masûlke, rûvî, hêk, şîr), û her weha fungî, alg û av in, piştî ku ji xwezayê têne veqetandin.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Malzemeyên kulîner ên pêvajoyî, wek rûn, rûn, şekir û xwê, made ne ku ji xwarinên Koma 1 an jî ji xwezayê bi rêya pêvajoyên wekî pêlkirin, rafinandin, hûrkirin, hûrkirin û zuwakirinê têne wergirtin.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Xwarinên pêvajokirî, wek sebzeyên şûşeyî, masiyên konservekirî, fêkiyên di şerbetê de, penîr û nanên teze hatine çêkirin, bi piranî bi zêdekirina xwê, rûn, şekir, an madeyên din ji Koma 2 li xwarinên Koma 1 têne çêkirin. Pêvajo rêbazên cûrbecûr ên parastin an pijandinê, û di rewşa nan û penîr de, fermentasyona bê alkol vedihewîne. Piraniya xwarinên pêvajokirî du an sê malzemeyan hene û wekî guhertoyên guhertî yên xwarinên Koma 1 têne nas kirin. Ew dikarin bi serê xwe an jî, bi gelemperî, bi xwarinên din re werin xwarin.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Xwarinên pir-pêvajoyî, wek vexwarinên nerm, xwarinên şîrîn an şor ên pakêtkirî, berhemên goşt ên ji nû ve hatine çêkirin, û xwarinên cemidî yên pêşwext amadekirî, ne tenê xwarinên guhertî ne, lê formulasyonên ku bi piranî an bi tevahî ji madeyên ji xwarin û lêzêdekirinê hatine çêkirin in, û xwarina Koma 1-ê ya bêkêmasî pir kêm e an tune ye. Malzemeyên di van formulasyonan de bi gelemperî yên ku di xwarinên pêvajoyî de jî têne dîtin, wek şekir, rûn, rûn, an xwê, dihewîne. Lêbelê, berhemên pir-pêvajoyî çavkaniyên din ên enerjî û xurekan jî dihewînin ku bi gelemperî di amadekariyên xwarinçêkirinê de nayên bikar anîn. Hin ji van rasterast ji xwarinan têne derxistin, wek kazeîn, laktoz, whey û gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Pirsgirêkên bi ultra-proseskirinê re';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Pêvajoyek zêde ya pêkhateyên xwarinê';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Gelek ji wan ji pêvajoya bêtir a pêkhateyên xwarinê tên wergirtin, wek rûnên hîdrojenkirî an jî interesterîfkirî, proteînên hîdrolîzkirî, îzolekirina proteîna soyayê, maltodekstrîn, şekirê berevajî, û şerbeta ceh a bi fruktoza bilind.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Zêdekerên ku ji ewlehiya xwarinê ya saf wêdetir diçin';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ji lêzêdekerên di xwarinên pir-pêvajoyî de hin madeyên ku di xwarinên pêvajoyî de jî têne bikar anîn hene, wek parêzker, antîoksîdan û stabîlîzator. Çînên lêzêdekerên ku tenê di hilberên pir-pêvajoyî de têne dîtin, ewên ku ji bo teqlîdkirin an baştirkirina taybetmendiyên hestî yên xwarinan an jî ji bo veşartina aliyên ne xweş ên hilbera dawîn têne bikar anîn in. Van lêzêdekeran boyax û rengên din, stabîlîzatorên rengan; tehmxweşker, zêdekerên tehmxweşker, şîrînkerên bê şekir; û alîkarên pêvajoyê yên wekî ajanên karbonkirin, hişkkirin, qelewkirin û dijî-qelewkirinê, ajanên rakirina kefê, dijî-kokbûn û şûştinê, emulsîfier, veqetandek û şilker hene.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Pêvajoyên ku hûn nekarin li malê bikin';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Ji bo tevlihevkirina malzemeyan bi gelemperî gelek rêze pêvajoyan têne bikar anîn û hilbera dawîn (ji ber vê yekê \'pir-pêvajoyî\') tê afirandin. Pêvajoyan çend pêvajoyên bêyî hevberên navxweyî vedihewîne, wekî hîdrojenasyon û hîdrolîzasyon, derxistin û qalibkirin, û pêş-pêvajoyîkirina ji bo sorkirinê.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Aliyên nêçîrvan û darayî yên ultra-proseskirinê';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Armanca giştî ya ultra-proseskirinê ew e ku berhemên xwarinê yên bi marqe, hêsan (mayînde, amade ne ji bo vexwarinê), balkêş (pir xweş) û pir qezenckar (malzemeyên erzan) biafirînin ku ji bo cîhê hemû komên xwarinên din hatine çêkirin. Berhemên xwarinê yên ultra-proseskirî bi gelemperî bi rengek balkêş têne pakêt kirin û bi giranî têne bazar kirin.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4526,6 +4847,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Bihayek berdest tune';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Bibin yekem ku beşdar bibin!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4564,7 +4892,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Derxistin berdewam dike…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Derxistin serkeftî bû';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4695,6 +5026,505 @@ class AppLocalizationsKu extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Tercîhên bihayên xwe birêve bibin';
+
+  @override
+  String get preferences_card_project => 'Projeya Rastiyên Xwarinê yên Vekirî';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Statîstîkên min';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Wergerîne, amûrên me baştir bike…';
+
+  @override
+  String get preferences_connect_title => 'Bihevgirêdan';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Têkilî bi me re bikin, an jî li ser medyaya civakî bişopînin';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Ji bo agahdarkirina bi mîlyonan xerîdaran li çaraliyê cîhanê, alîkariya me bikin';
+
+  @override
+  String get preferences_card_help => 'Alîkarî û Piştgirî';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Bersivên pirsên xwe bistînin';
+
+  @override
+  String get logged_out => 'Derketî';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Spas ji bo ku hûn yek ji endamên me ne!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Hemû statîstîkan bibîne';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Li $provider ji bo \"$keyword\" bigere';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Li mîhengekê bigere (mînak Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Gihîştin: Emojiyan nîşan bide';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Gihîştin: Rengan jê bibe';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'Li_ser';
+
+  @override
+  String get preferences_legal_information_title => 'Agahiyên yasayî';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Mercên Bikaranînê, Siyaseta Nepenîtiyê, û hwd.';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Rastîyên Xwarinê yên Vekirî (Open Food Facts) databeseke berhemên xwarinê ye ku **ji hêla her kesî ve, ji bo her kesî** hatiye çêkirin.\nHûn dikarin wê bikar bînin da ku hilbijartinên xwarinê yên çêtir bikin, û ji ber ku ew **daneya vekirî** ye, her kes dikare **wê ji bo her armancê ji nû ve bikar bîne**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Lîsans';
+
+  @override
+  String get preferences_about_app_title => 'Derbarê sepanê de';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Agahiyên teknîkî, agahdariya pêşdebiran, û hêj bêtir';
+
+  @override
+  String get preferences_card_information => 'Agahî';
+
+  @override
+  String get preferences_version_number_title => 'Hejmara guhertoyê';
+
+  @override
+  String get preferences_scanner_title => 'Skaner';
+
+  @override
+  String get preferences_app_store => 'Dikana sepanan';
+
+  @override
+  String get preferences_app_system_settings => 'Mîhengên sîstemê';
+
+  @override
+  String get preferences_source_code => 'Bigihîje koda çavkaniyê';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Û dest bi bandorkirina li ser mîlyonan bike';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Serişte';
+
+  @override
+  String get tips_discover_nutriscore => 'Nutri-Score-a nû kifş bikin';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Li ser malpera Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Hesabê min birêve bibe';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Hesabê xwe birêve bibe';
+
+  @override
+  String get preferences_change_password_title => 'Şîfreya min biguherîne';
+
+  @override
+  String get preferences_danger_zone => 'Herêma xetereyê';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Hemû beşdariyên te wê winda bibin';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Mîhengên sepanê';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Rêbazek pir ceribandinî ji bo şopandina hilberan negirêdayî';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Hemû berheman ji serverê nûve bike';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Ji kerema xwe heya ku bi tevahî ne hewce be, ji vê yekê dûr bisekinin';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Moda Demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Kartan li skanerê zêde bikin';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      '3 berhemên nimûne li skanerê zêde dike';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Pêşkêşvanê Folksonomiyê';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Mêvandar: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Ceribandinên gihîştinê';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Hilbijartina pir-berheman ji bo bihayên';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panelên zanînê yên ku ji hêla bikarhêner ve hatine rêzkirin';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Gihîştina demkî bo lêgerîna cihê';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Berawirdkirina mil bi mil ji bo 2 an 3 hilberan';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importkirina lîsteya berheman';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Pûan û rêbaz';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Bibînin ka Nutri-Score çawa tê hesibandin';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Guhertinên sereke yên di metodolojiyê de kifş bikin';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Rastiyên Xwarinê yên Vekirî Vedîtin';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Pirsên Pir tên Pirsîn - Pirsên Pir tên Pirsîn';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Rêxistina Nehikûmî ya Rastiyên Xwarinê ya Vekirî';
+
+  @override
+  String get preferences_about_information_title => 'Agahî';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Nûvekirinên civakê bistînin';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Bi nûçeyên sepanê û civakê re di nav têkiliyê de bimînin';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Bi beşdarbûna yek ji bûyerên me yên virtual beşdar bibin';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Bloga Rastiyên Xwarinê yên Vekirî';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Nûçeyên herî dawî bistînin, gava ku ew diqewimin';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Ji civakê alîkariyê werbigire';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Ji bo baştirkirina sepanê alîkariya me bikin';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Agahiyên debugkirinê ji me re bişînin';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'E-nameyek bi agahdariya berfireh a çareserkirina çewtiyan ji me re bişînin';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Derbarê sepanê de nirxandinên xwe ji me re bişînin';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Alîkariya şekildana pêşeroja sepanê bikin';
+
+  @override
+  String get preferences_connect_survey_title => 'Anketa sepanê bigirin';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Ji me re bibin alîkar ku em fêm bikin ka divê em çi ava bikin';
+
+  @override
+  String get preferences_connect_professionals_title => 'Pispor';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Bi tevahî belaş e, daneyên rast ji bo 500 sepanan û bi mîlyonan xerîdaran peyda dike. Xizmeta xweser, lihevhatî ye bi PIM an pelên hesabê (XLSX) yên we re.';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Ji bo destpêkirinê têkilî daynin';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Hemû materyalên pêwîst ji bo raporê peyda bikin';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Ji bo lêpirsînên çapemeniyê an jî ji bo ku hûn di derbarê raporê de agahdar bikin bi me re têkilî daynin';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Bibe xwebexşek çalak';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Pêşveçûn, Ragihandin, Sêwirandin… her cure xebata dilxwazî an pisporî bi xêr hatî ye!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Hin ji gelek awayên ku hûn dikarin beşdar bibin kifş bikin';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Pêşxistina sepanên mobîl';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Fêr bibe ka meriv çawa beşdarî pêşkeftina nermalavê dibe';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Avakirinên rojane yên nearam, taybetmendiyên nû';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Civaka xwe ya herêmî mezin bikin';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Alîkarî bi wergerên nermalavê, naverokê, analîza pêkhateyan re';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Me ji bo alîkariya te şabloneke biçûk amade kiriye :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Gavên hêsan ji bo zêdekirina şefafiyeta xwarinê li welatê we';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Tevlî tîma kalîteya daneyan bibin';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Ji bo ku hûn daneyên xwe temam û rast bikin, beşdarî hewldana me bibin';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Berhemên zêdekirî';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Berhemên nû yên ku min li Open Food Facts zêde kirin';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Berhemên ku ez hewce dikim ku temam bikim';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Hemû berhemên netemam';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Bihayên min, delîlên min…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Berhemên ku hûn dikarin ji we re bibin alîkar ku hûn wan temam bikin';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ji bo hesabkirina Nutri-Score û Green-Score li welatê we alîkarî bikin';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Bihayên ku min beşdarî kirine';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Etîketên bihayê û fatûreyan';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Wêneyên fatûreyên xwe bigirin û barkodên têkildar bişopînin';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Li firoşgehekê wêneyên bihayan bigirin';
+
+  @override
+  String get preferences_prices_newest_title => 'Bihayên herî nû';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Bihayên herî dawî yên ji hêla civaka Buhayên Vekirî ve hatine zêdekirin';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Beşdarên bi bihayên herî zêde';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metrîkên Bihayê Vekirî';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Pêşveçûna projeyê bişopînin';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Rêbazên beşdarbûnê';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Bi alîkariya AI, bihayên ku ji hêla we an yên din ve hatine zêdekirin piştrast bikin';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Zû gelek wergirtin an wêneyên refan ji rola kameraya xwe zêde bikin';
+
+  @override
+  String get preferences_prices_challenges_title => 'Pêşbaziyên mehane';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Ji bo berhevkirina bihayan beşdarî lêgerînên tematîk ên mehane bibin';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Agahiyên dilsoziya xwe ji nû ve bistînin';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Fêr bibe ka meriv çawa daneyên xwe daxwaz dike';
+
+  @override
+  String get preferences_page_customize_app_title => 'Sepanê kesane bike';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Beşdarî projeyê bibin';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Rêbazên hêsan ji bo alîkariya Rastiyên Xwarinê yên Vekirî';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Rêbazên xaldanê, alîkarî û bêtir li ser projeyê';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Pêşniyarê qebûl bike';
 
   @override
@@ -4739,4 +5569,102 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Rastkirin bi ser neket, delîl nehatin wergirtin';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ji $total delîlan';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ji $total beşdaran';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ji $total cihan';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count cih';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Ji kerema xwe sepanê ji nû ve bidin destpêkirin da ku guhertinan bicîh bînin.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Navrûya grafîkî';
+
+  @override
+  String get preferences_app_settings_media_title => 'Medya';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratuarên Agahiyên Xwarinê yên Vekirî';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Rastiyên Xwarinê yên Vekirî bînin zimanê xwe';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Li guhertoya alpha ya sepanê qeyd bikin';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Daneyên Beşdarî û Berheman';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Folksonomiyê nîşan nede';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Li ser ${created}zêdekirî';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

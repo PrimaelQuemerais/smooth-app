@@ -9,6 +9,9 @@ class AppLocalizationsNo extends AppLocalizations {
   AppLocalizationsNo([String locale = 'no']) : super(locale);
 
   @override
+  String get app_name => 'Åpne matfakta';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsNo extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsNo extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Velg en mer presis kategori';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsNo extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Ingen eiendommer';
+
+  @override
+  String get product_tags_explanation =>
+      'Ved å legge til egenskaper (nøkkel/verdi) til et produkt, bidrar du til å berike det.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Slett kontoen min';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Få tilgang til eksperimentelle funksjoner og utviklingsverktøy';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsNo extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Åpne på nettsiden for åpne priser';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsNo extends AppLocalizations {
   String get prices_list_add_new_price => 'Legg til en\nny pris';
 
   @override
+  String get prices_list_empty_title => 'Ingen pris ennå!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bli den første til å legge til en:\nVed å skanne en **kvittering** eller en **prislapp**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Ukjent butikk';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Se alle priser for dette produktet';
 
   @override
   String get prices_entry_menu_open_proof => 'Se bevis';
@@ -2728,9 +2749,23 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Ingen bidragsyter ennå!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Vær den første til å legge til en pris!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ingen butikk ennå!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Vær den første til å legge til en pris!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2870,17 @@ class AppLocalizationsNo extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Ingen bevis ennå!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Start med å legge til et bilde av en **kvittering** eller en **prislapp**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2959,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2971,16 @@ class AppLocalizationsNo extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Tilbakestill appspråk';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Legg til kort';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Bytt mellom prices.openfoodfacts.org (PROD) og testmiljø';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3024,11 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4030,32 @@ class AppLocalizationsNo extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Grønn poengsum A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Grønn poengsum B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Grønn-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Grønn-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Grønn-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Ukjent grønn poengsum';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Grønn score gjelder ikke';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Ultrabearbeidet mat - NOVA-grupper';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4152,6 @@ class AppLocalizationsNo extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Del';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4259,279 @@ class AppLocalizationsNo extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Hva er den grønne poengsummen?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score er en logo som har som mål å informere deg om **miljøpåvirkningen av mat**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Fargekoden varierer fra mørkegrønn (**A+**) for de **minst effektive** produktene til mørkerød (**F**) for de **mest effektive** produktene.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score-logoene';
+
+  @override
+  String get guide_greenscore_lca_title => 'Kjernen: Livssyklusanalyse (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'En vitenskapelig evaluering av matkategorier';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'For hver produktkategori etableres en **benchmark**-score ved hjelp av data fra miljødatabasen Agribalyse (utviklet av ADEME og INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Livssyklusanalyse** er en standardisert vurderingsmetode for å gjennomføre en flertrinns og flerkriteriebasert miljøvurdering.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Den måler:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 produksjonstrinn';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Prosessering';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Emballasje';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Fordeling';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Forbruk';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 indikatorer for miljøpåvirkning';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Klimaendringer/karbonavtrykk';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Nedbryting av ozonlaget';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ioniserende stråling';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Jord';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Vann- og energiforbruk';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Luftforurensning';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Marint og ferskvann (partikler, forsuring, eutrofiering)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Uttømming av ressurser.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonuser og straffer';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'For å belønne bedre produkter innenfor en kategori, bruker vi deretter bonuser og straffer basert på flere kriterier:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Ingrediensopprinnelse';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Det gis en bonus basert på ingrediensenes opprinnelse. Denne bonusen tar hensyn til transportpåvirkningen og miljøpolitikken i hver produsents land.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Emballasje';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'For å beregne Green-Score nøyaktig er det nødvendig med informasjon som ikke nødvendigvis er spesifisert på emballasjen (som opprinnelse og den nøyaktige prosentandelen av hver ingrediens), eller som sjelden er tilgjengelig i brukbar form (som en liste over alle komponentene i emballasjen med de nøyaktige plasttypene som brukes).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Gjennomsnittsverdier brukes når denne informasjonen ikke er tilgjengelig ennå, men vi oppfordrer nå alle til å hjelpe oss med å samle inn denne informasjonen, som vil være svært nyttig for Green-Score, men også for mange andre bruksområder.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Hvordan innbyggere kan hjelpe';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Alle borgere kan hjelpe oss med å samle og strukturere informasjonen som finnes på produkter eller som kan utledes fra dem, for eksempel informasjon om emballasje: Mission Emballages: en storstilt samarbeidende inventarisering av emballasje for alle matvarer (på fransk)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Hvordan produsenter kan hjelpe';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Produsenter kan sende oss informasjonen sin direkte via vår gratis plattform for produsenter.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Hvilket produkt er best for planeten?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Det kan være vanskelig å si';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Å velge bærekraftig mat er noe av det viktigste vi kan gjøre for klimaet, ettersom **vårt globale matsystem er ansvarlig for over en fjerdedel av alle klimagassutslipp**.\n(Kilde: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Du har makten!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Den gode nyheten er at dette gir oss en effektiv måte å skape forandring på.\n**Hver av oss spiser rundt 1000 måltider hvert år**. Det er 1000 muligheter til å **velge en bedre fremtid for planeten**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Hjelper å være ansvarlig og bestemme';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Å velge bærekraftig mat kan føles komplisert. Etiketter er forvirrende, og informasjon mangler ofte. Green-Score ble laget for å gjøre det enkelt, og gir deg en **tydelig**, **vitenskapsbasert** og **transparent** miljøvurdering for matvarer, akkurat der du trenger den: mens du handler.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Åpenhet';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'I motsetning til proprietære etiketter er Green-Score-beregningen **helt åpen** og kan **verifiseres av hvem som helst**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Hva er ultraprosessering?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA-gruppene informerer deg om nivået av matforedling.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA-klassifiseringen tillater kategorisering av matvarer i **fire grupper** basert på deres **grad av industriell bearbeiding** (minimalt bearbeidet eller ubearbeidet mat, kulinariske ingredienser, bearbeidet mat, ultrabearbeidet mat).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA-logoene';
+
+  @override
+  String get guide_nova_groups_title => 'De 4 NOVA-gruppene';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Det er fire NOVA-grupper, den problematiske er gruppe 4 – ultraprosessert mat.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Minimalt bearbeidet eller ubearbeidet mat';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ubearbeidet (eller naturlig) mat er de spiselige delene av planter (frø, frukt, blader, stilker, røtter) eller dyr (muskler, innmat, egg, melk), samt sopp, alger og vann, etter å ha blitt separert fra naturen.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Bearbeidede kulinariske ingredienser, som oljer, smør, sukker og salt, er stoffer som er utvunnet fra matvarer i gruppe 1 eller fra naturen gjennom prosesser som inkluderer pressing, raffinering, kverning, fresing og tørking.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Bearbeidet mat, som flaskegrønnsaker, hermetisk fisk, frukt i sirup, oster og ferskt brød, lages hovedsakelig ved å tilsette salt, olje, sukker eller andre stoffer fra gruppe 2 til gruppe 1-matvarer. Prosesser inkluderer ulike konserverings- eller tilberedningsmetoder, og når det gjelder brød og ost, alkoholfri gjæring. De fleste bearbeidede matvarer har to eller tre ingredienser og er gjenkjennelige som modifiserte versjoner av gruppe 1-matvarer. De kan spises alene eller, mer vanlig, i kombinasjon med annen mat.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ultrabearbeidet mat, som brus, søte eller salte snacks i emballasjen, rekonstituerte kjøttprodukter og ferdiglagde frosne retter, er ikke bare modifisert mat, men formuleringer laget hovedsakelig eller utelukkende av stoffer utvunnet fra matvarer og tilsetningsstoffer, med lite eller ingen intakt Gruppe 1-mat. Ingredienser i disse formuleringene inkluderer vanligvis de som også finnes i bearbeidet mat, som sukker, oljer, fett eller salt. Ultrabearbeidede produkter inneholder imidlertid også andre energikilder og næringsstoffer som vanligvis ikke brukes i matlagingsprodukter. Noen av disse er direkte utvunnet fra matvarer, som kasein, laktose, myse og gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Problemene med ultraprosessering';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ekstrem bearbeiding av matingredienser';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Mange er avledet fra videre bearbeiding av matbestanddeler, som hydrogenerte eller interesterifiserte oljer, hydrolyserte proteiner, soyaproteinisolat, maltodekstrin, invertsukker og maissirup med høyt fruktoseinnhold.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Tilsetningsstoffer som går utover ren mattrygghet';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Tilsetningsstoffer i ultrabearbeidet mat inkluderer noen som også brukes i bearbeidet mat, for eksempel konserveringsmidler, antioksidanter og stabilisatorer. Klasser av tilsetningsstoffer som bare finnes i ultrabearbeidede produkter inkluderer de som brukes til å imitere eller forbedre de sensoriske egenskapene til matvarer eller for å skjule usmakelige aspekter ved sluttproduktet. Disse tilsetningsstoffene inkluderer fargestoffer og andre farger, fargestabilisatorer; smakstilsetninger, smaksforsterkere, ikke-sukkerholdige søtningsmidler; og prosesseringshjelpemidler som kullsyre-, fasthets-, fyllstoff- og antifylstoffmidler, skumdempende, antiklumpe- og glaseringsmidler, emulgatorer, sekvestreringsmidler og fuktighetsbevarende midler.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Behandling du ikke kan gjøre hjemme';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'En rekke prosesssekvenser brukes for å kombinere de vanligvis mange ingrediensene og for å lage sluttproduktet (derav «ultraprosessert»). Prosessene inkluderer flere uten innenlandske ekvivalenter, som hydrogenering og hydrolysering, ekstrudering og støping, og forbehandling for steking.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'De rovlystne og økonomiske aspektene ved ultraprosessering';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Det overordnede formålet med ultraprosessering er å skape merkevareprodukter som er praktiske (holdbare, klare til konsum), attraktive (hyper-velsmakende) og svært lønnsomme (lavkostingredienser) og er utformet for å erstatte alle andre matvaregrupper. Ultraprosesserte matvarer pakkes vanligvis attraktivt og markedsføres intensivt.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4844,12 @@ class AppLocalizationsNo extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ingen pris tilgjengelig';
+
+  @override
+  String get prices_products_empty_explanation => 'Bli den første til å bidra!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4888,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Uttrekking pågår…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Uttrekkingen var vellykket';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5022,499 @@ class AppLocalizationsNo extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Administrer prisinnstillingene dine';
+
+  @override
+  String get preferences_card_project => 'Åpne matfakta-prosjektet';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Min statistikk';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Oversett, forbedre verktøyene våre…';
+
+  @override
+  String get preferences_connect_title => 'Koble til';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Ta kontakt, eller følg oss på sosiale medier';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Hjelp oss med å informere millioner av forbrukere over hele verden';
+
+  @override
+  String get preferences_card_help => 'Hjelp og støtte';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Få svar på spørsmålene dine';
+
+  @override
+  String get logged_out => 'Logget ut';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Takk for at du er et av medlemmene våre!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Se all statistikk';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Søk $provider etter \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Søk etter en innstilling (f.eks. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Tilgjengelighet: Vis emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Tilgjengelighet: Fjern farger';
+
+  @override
+  String get preferences_app_settings_products => 'Produkter';
+
+  @override
+  String get preferences_card_about => 'Om';
+
+  @override
+  String get preferences_legal_information_title => 'Juridisk informasjon';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Bruksvilkår, personvernregler og mer';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts er en database med matvarer **laget av alle, for alle**.\nDu kan bruke den til å ta bedre matvalg, og siden den er **åpne data**, kan hvem som helst **gjenbruke den til ethvert formål**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Lisenser';
+
+  @override
+  String get preferences_about_app_title => 'Om appen';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Teknisk informasjon, utviklerinformasjon og mer';
+
+  @override
+  String get preferences_card_information => 'Informasjon';
+
+  @override
+  String get preferences_version_number_title => 'Versjonsnummer';
+
+  @override
+  String get preferences_scanner_title => 'Skanner';
+
+  @override
+  String get preferences_app_store => 'Appbutikk';
+
+  @override
+  String get preferences_app_system_settings => 'Systeminnstillinger';
+
+  @override
+  String get preferences_source_code => 'Få tilgang til kildekoden';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Og begynn å gjøre en forskjell for millioner';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Tips';
+
+  @override
+  String get tips_discover_nutriscore => 'Oppdag den nye Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'På nettsiden til Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Administrer kontoen min';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Administrer kontoen din';
+
+  @override
+  String get preferences_change_password_title => 'Endre passordet mitt';
+
+  @override
+  String get preferences_danger_zone => 'Faresone';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Alle bidragene dine vil gå tapt';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Appinnstillinger';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'En veldig eksperimentell måte å skanne produkter offline på';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Oppdater alle produkter fra serveren';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Vennligst unngå å gjøre det med mindre det er absolutt nødvendig';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demomodus';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Legg til kort i skanneren';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Legger til 3 prøveprodukter i skanneren';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'Folksonomy-vert';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Vert: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Tilgjengelighetseksperimenter';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Utvalg av flere produkter for å få de beste prisene';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Brukerbestilte kunnskapspaneler';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Midlertidig tilgang til stedssøk';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Side-ved-side-sammenligning for 2 eller 3 produkter';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Import av produktliste';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Poengsummer og metoder';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Oppdag hvordan Nutri-Score beregnes';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Oppdag de viktigste endringene i metodikken';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Oppdag åpne matfakta';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Ofte stilte spørsmål';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'NGO-en Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Informasjon';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Få oppdateringer fra fellesskapet';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Hold deg oppdatert med nyheter fra appen og lokalsamfunnet';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Bli involvert ved å delta på et av våre virtuelle arrangementer';
+
+  @override
+  String get preferences_connect_blog_title => 'Bloggen Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Få de siste nyhetene, etter hvert som de skjer';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Få hjelp fra lokalsamfunnet';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Hjelp oss med å forbedre appen';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Send oss feilsøkingsinformasjon';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Send oss en e-post med detaljert feilsøkingsinformasjon';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Send oss tilbakemelding om appen';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Hjelp med å forme fremtiden til appen';
+
+  @override
+  String get preferences_connect_survey_title => 'Ta appundersøkelsen';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Hjelp oss å forstå hva vi bør bygge videre på';
+
+  @override
+  String get preferences_connect_professionals_title => 'Fagfolk';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Helt gratis, sikrer nøyaktige data for 500 apper og millioner av forbrukere. Selvbetjening, kompatibel med PIM eller regneark (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Ta kontakt for å komme i gang';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Få alt materialet du trenger til rapporten din';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Ta kontakt for pressespørsmål eller for å gi oss beskjed om rapporten din';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Bli en aktiv frivillig';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Utvikling, kommunikasjon, design… all form for frivillig arbeid eller ekspertise er velkommen!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Oppdag noen av de mange måtene du kan bidra på';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'Mobilapputvikling';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Lær hvordan du kan bidra til programvareutvikling';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Daglige ustabile bygg, helt nye funksjoner';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Utvikle lokalsamfunnet ditt';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Hjelp med oversettelser av programvare, innhold og ingrediensanalyser';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Vi har laget en liten mal som kan hjelpe deg :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Enkle trinn for å øke åpenheten om mat i landet ditt';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Bli med i datakvalitetsteamet';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Bli med på arbeidet vårt for å sikre at databasen er fullstendig og nøyaktig';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Lagte produkter';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nye produkter jeg har lagt til i Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produkter jeg må fullføre';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Alle ufullstendige produkter';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Mine priser, mine bevis…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produkter du kan hjelpe med å fullføre';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Hjelp med å beregne Nutri-Score og Green-Score i landet ditt';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Priser jeg bidro med';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Prislapper og kvitteringer';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Ta bilder av kvitteringene dine og skann tilhørende strekkoder';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Ta bilder av priser i en butikk';
+
+  @override
+  String get preferences_prices_newest_title => 'Nyeste priser';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Siste priser lagt til av Open Prices-fellesskapet';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Bidragsytere med høyest pris';
+
+  @override
+  String get preferences_prices_metrics_title => 'Åpen prisberegning';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Følg prosjektets utvikling';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Måter å bidra på';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Bekreft priser lagt til av deg selv eller andre, ved hjelp av AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Legg raskt til mange kvitteringer eller bilder av hyller fra kamerarullen din';
+
+  @override
+  String get preferences_prices_challenges_title => 'Månedlige utfordringer';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Delta i månedlige tematiske oppdrag for å samle inn premier';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Få tilbake lojalitetsdataene dine';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Lær hvordan du kan be om dataene dine';
+
+  @override
+  String get preferences_page_customize_app_title => 'Tilpass appen';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Bidra til prosjektet';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Enkle måter å hjelpe på Åpne matfakta';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Poengmetoder, hjelp og mer om prosjektet';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Godta forslaget';
 
   @override
@@ -4738,4 +5559,102 @@ class AppLocalizationsNo extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Autentisering mislyktes, kan ikke hente bevis';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count av $total bevis';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count av $total bidragsytere';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count av $total steder';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count steder';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Start appen på nytt for å bruke endringene.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Grafisk grensesnitt';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Åpne matfakta-laboratorier';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Få åpne matfakta på språket ditt';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Registrer deg i alfaversjonen av appen';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Bidrag og produktdata';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Ikke vis folkesonomi';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Lagt til $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

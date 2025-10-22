@@ -9,16 +9,15 @@ import 'package:smooth_app/l10n/app_localizations.dart';
 import 'package:smooth_app/pages/locations/osm_location.dart';
 import 'package:smooth_app/pages/locations/search_location_helper.dart';
 import 'package:smooth_app/pages/locations/search_location_preloaded_item.dart';
-import 'package:smooth_app/pages/prices/price_button.dart';
 import 'package:smooth_app/pages/prices/price_model.dart';
 import 'package:smooth_app/pages/search/search_page.dart';
+import 'package:smooth_app/resources/app_icons.dart' as icons;
 
 /// Card that displays the location for price adding.
 class PriceLocationCard extends StatelessWidget {
   const PriceLocationCard({required this.onLocationChanged});
 
-  final Function(OsmLocation? oldLocation, OsmLocation location)
-  onLocationChanged;
+  final Function(OsmLocation location) onLocationChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class PriceLocationCard extends StatelessWidget {
 
     return SmoothCardWithRoundedHeader(
       title: appLocalizations.prices_location_subtitle,
-      leading: const Icon(Icons.shopping_cart),
+      leading: const icons.Shopping.cart(),
       contentPadding: const EdgeInsetsDirectional.symmetric(
         horizontal: SMALL_SPACE,
         vertical: MEDIUM_SPACE,
@@ -39,9 +38,8 @@ class PriceLocationCard extends StatelessWidget {
             : location.getTitle() ??
                   location.getSubtitle() ??
                   location.getLatLng().toString(),
-        leadingIcon: location == null
-            ? const Icon(Icons.shopping_cart)
-            : const Icon(PriceButton.locationIconData),
+        leadingIcon: const icons.Location(),
+        trailingIcon: const icons.Chevron.right(size: 10.0),
         onPressed: model.proof != null
             ? null
             : () async {
@@ -49,7 +47,13 @@ class PriceLocationCard extends StatelessWidget {
                     .read<LocalDatabase>();
                 final List<SearchLocationPreloadedItem> preloadedList =
                     <SearchLocationPreloadedItem>[];
-                for (final OsmLocation osmLocation in model.locations!) {
+                final List<OsmLocation> locations = await DaoOsmLocation(
+                  localDatabase,
+                ).getAll();
+                if (!context.mounted) {
+                  return;
+                }
+                for (final OsmLocation osmLocation in locations) {
                   preloadedList.add(
                     SearchLocationPreloadedItem(osmLocation, popFirst: false),
                   );
@@ -72,11 +76,8 @@ class PriceLocationCard extends StatelessWidget {
                   localDatabase,
                 );
                 await daoOsmLocation.put(osmLocation);
-                final List<OsmLocation> newOsmLocations = await daoOsmLocation
-                    .getAll();
-                model.locations = newOsmLocations;
 
-                onLocationChanged.call(location, model.location!);
+                onLocationChanged.call(osmLocation);
               },
       ),
     );

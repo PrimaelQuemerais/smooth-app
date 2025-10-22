@@ -9,6 +9,9 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
+  String get app_name => 'Open Food તથ્યો';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsGu extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsGu extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'વધુ ચોક્કસ શ્રેણી પસંદ કરો';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'કોઈ મિલકતો નથી';
+
+  @override
+  String get product_tags_explanation =>
+      'ઉત્પાદનમાં ગુણધર્મો (કી/મૂલ્ય) ઉમેરીને, તમે તેને સમૃદ્ધ બનાવવામાં મદદ કરો છો.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'મારું એકાઉન્ટ કાઢી નાખો';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'પ્રાયોગિક સુવિધાઓ અને વિકાસ સાધનોને ઍક્સેસ કરો';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsGu extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'ઓપન પ્રાઈસ વેબસાઇટ પર ખોલો';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2642,6 +2656,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get prices_list_add_new_price => '\nનવી કિંમત ઉમેરો';
 
   @override
+  String get prices_list_empty_title => 'હજુ સુધી કોઈ કિંમત નથી!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'એક ઉમેરનારા સૌપ્રથમ બનો:\n**રસીદ** અથવા **કિંમત ટેગ** સ્કેન કરીને!';
+
+  @override
   String get prices_entry_shop_not_found => 'અજાણ્યો સ્ટોર';
 
   @override
@@ -2651,7 +2672,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'આ ઉત્પાદનની બધી કિંમતો જુઓ';
 
   @override
   String get prices_entry_menu_open_proof => 'સાબિતી જુઓ';
@@ -2730,9 +2751,22 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'હજુ સુધી કોઈ યોગદાન આપનાર નથી!';
+
+  @override
+  String get prices_users_empty_explanation => 'કિંમત ઉમેરનારા સૌ પ્રથમ બનો!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'હજુ સુધી કોઈ દુકાન નથી!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'કિંમત ઉમેરનારા સૌ પ્રથમ બનો!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2871,17 @@ class AppLocalizationsGu extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'હજુ સુધી કોઈ પુરાવો નથી!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '**રસીદ** અથવા **કિંમત ટેગ** નો ફોટો ઉમેરીને શરૂઆત કરો!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2916,13 +2960,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'માહિતી';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2934,6 +2972,16 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'એપ્લિકેશન ભાષા રીસેટ કરો';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'કાર્ડ ઉમેરો';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'prices.openfoodfacts.org (PROD) અને ટેસ્ટ env વચ્ચે સ્વિચ કરો';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2977,6 +3025,11 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3978,32 +4031,32 @@ class AppLocalizationsGu extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'ગ્રીન-સ્કોર A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'લીલો-સ્કોર B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'ગ્રીન-સ્કોર સી';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'ગ્રીન-સ્કોર ડી';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'ગ્રીન-સ્કોર ઇ';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'અજાણ્યો લીલો-સ્કોર';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'ગ્રીન-સ્કોર લાગુ પડતો નથી';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'અલ્ટ્રા-પ્રોસેસ્ડ ફૂડ્સ - NOVA ગ્રુપ્સ';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4100,9 +4153,6 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4210,11 +4260,278 @@ class AppLocalizationsGu extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'ગ્રીન સ્કોર શું છે?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'ગ્રીન-સ્કોર એ એક લોગો છે જેનો ઉદ્દેશ્ય તમને **ખોરાકની પર્યાવરણીય અસર** વિશે માહિતી આપવાનો છે.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      '**ઓછામાં ઓછી અસર કરતી** પ્રોડક્ટ્સ માટે રંગ કોડ ઘેરા લીલા (**A+**) થી **સૌથી વધુ અસર કરતી** પ્રોડક્ટ્સ માટે ઘેરા લાલ (**F**) સુધી બદલાય છે.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'ગ્રીન-સ્કોર લોગો';
+
+  @override
+  String get guide_greenscore_lca_title => 'મુખ્ય: જીવન ચક્ર મૂલ્યાંકન (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'ખાદ્ય શ્રેણીઓનું વૈજ્ઞાનિક મૂલ્યાંકન';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'દરેક ઉત્પાદન શ્રેણી માટે, એગ્રીબેલિઝ પર્યાવરણીય ડેટાબેઝ (ADEME અને INRAE દ્વારા ડિઝાઇન કરાયેલ) માંથી ડેટાનો ઉપયોગ કરીને **બેન્ચમાર્ક** સ્કોર સ્થાપિત કરવામાં આવે છે.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**જીવન ચક્ર વિશ્લેષણ** એ બહુ-તબક્કા અને બહુ-માપદંડ પર્યાવરણીય મૂલ્યાંકન હાથ ધરવા માટે એક પ્રમાણિત મૂલ્યાંકન પદ્ધતિ છે.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**તે માપે છે:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 ઉત્પાદન પગલાં';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '૧૪ પર્યાવરણીય અસર સૂચકાંકો';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'આબોહવા પરિવર્તન/કાર્બન ફૂટપ્રિન્ટ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'ઓઝોન સ્તરનું અવક્ષય';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'આયનાઇઝિંગ રેડિયેશન';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'દેશ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'પાણી અને ઉર્જાનો ઉપયોગ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'હવાનું પ્રદૂષણ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'દરિયાઈ અને મીઠા પાણી (કણો, એસિડિફિકેશન, યુટ્રોફિકેશન)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'સંસાધનોનો ઘટાડો.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'બોનસ અને દંડ';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'શ્રેણીમાં વધુ સારા ઉત્પાદનોને પુરસ્કાર આપવા માટે, અમે પછી ઘણા માપદંડોના આધારે બોનસ અને દંડ લાગુ કરીએ છીએ:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'ઘટકોના મૂળના આધારે બોનસ આપવામાં આવે છે. આ બોનસ પરિવહન પરની અસર અને દરેક ઉત્પાદકના દેશની પર્યાવરણીય નીતિને ધ્યાનમાં લે છે.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'ગ્રીન-સ્કોરની સચોટ ગણતરી કરવા માટે, એવી માહિતી હોવી જરૂરી છે જે પેકેજિંગ પર સ્પષ્ટ ન હોય (જેમ કે દરેક ઘટકનું મૂળ અને ચોક્કસ ટકાવારી) અથવા જે ભાગ્યે જ ઉપયોગી સ્વરૂપમાં ઉપલબ્ધ હોય (જેમ કે પેકેજિંગના તમામ ઘટકોની સૂચિ જેમાં ચોક્કસ પ્રકારના પ્લાસ્ટિકનો ઉપયોગ થાય છે).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'જ્યારે આ માહિતી હજુ ઉપલબ્ધ ન હોય ત્યારે સરેરાશ મૂલ્યોનો ઉપયોગ કરવામાં આવે છે, પરંતુ હવે અમે દરેકને આ માહિતી એકત્રિત કરવામાં મદદ કરવા હાકલ કરી રહ્યા છીએ જે ગ્રીન-સ્કોર માટે ખૂબ જ ઉપયોગી થશે પરંતુ અન્ય ઘણા ઉપયોગો માટે પણ ઉપયોગી થશે.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'નાગરિકો કેવી રીતે મદદ કરી શકે છે';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'બધા નાગરિકો અમને ઉત્પાદનો પર હાજર માહિતી એકત્રિત કરવામાં અને તેનું માળખું બનાવવામાં મદદ કરી શકે છે અથવા જે તેમાંથી મેળવી શકાય છે, જેમ કે પેકેજિંગ પરની માહિતી: મિશન એમ્બેલાજેસ: બધા ખાદ્ય ઉત્પાદનો માટે પેકેજિંગની મોટા પાયે સહયોગી ઇન્વેન્ટરી (ફ્રેન્ચમાં)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'ઉત્પાદકો કેવી રીતે મદદ કરી શકે છે';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'ઉત્પાદકો ઉત્પાદકો માટેના અમારા મફત પ્લેટફોર્મ દ્વારા તેમની માહિતી સીધી મોકલી શકે છે.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'ગ્રહ માટે કયું ઉત્પાદન વધુ સારું છે?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'તે કહેવું મુશ્કેલ હોઈ શકે છે';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'ટકાઉ ખોરાક પસંદ કરવો એ આબોહવા માટે આપણે કરી શકીએ તેવી સૌથી શક્તિશાળી બાબતોમાંની એક છે, કારણ કે **આપણી વૈશ્વિક ખાદ્ય વ્યવસ્થા કુલ ગ્રીનહાઉસ ગેસ ઉત્સર્જનના એક ચતુર્થાંશથી વધુ માટે જવાબદાર છે**.\n(સ્ત્રોત: પૂર અને નેમેસેક, વિજ્ઞાન, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'તમારી પાસે શક્તિ છે!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'સારા સમાચાર એ છે કે આ આપણને પરિવર્તન લાવવાની એક શક્તિશાળી રીત આપે છે.\n**આપણે દરેક વ્યક્તિ દર વર્ષે લગભગ 1,000 ભોજન ખાઈએ છીએ**. આ ગ્રહ માટે વધુ સારું ભવિષ્ય પસંદ કરવાની **1,000 તકો છે**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'જવાબદાર બનવા અને નિર્ણય લેવામાં મદદ કરે છે';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'ટકાઉ ખોરાક પસંદ કરવાનું જટિલ લાગી શકે છે. લેબલ્સ ગૂંચવણભર્યા હોય છે અને ઘણીવાર માહિતી ખૂટે છે. ગ્રીન-સ્કોર તેને સરળ બનાવવા માટે બનાવવામાં આવ્યો હતો, જે તમને ખાદ્ય ઉત્પાદનો માટે **સ્પષ્ટ**, **વિજ્ઞાન-આધારિત** અને **પારદર્શક** પર્યાવરણીય રેટિંગ આપે છે, જ્યાં તમને તેની જરૂર હોય ત્યાં: જ્યારે તમે ખરીદી કરો છો.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'પારદર્શિતા';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'માલિકીના લેબલોથી વિપરીત, ગ્રીન-સ્કોર ગણતરી **સંપૂર્ણપણે ખુલ્લી** છે** અને તેને **કોઈપણ વ્યક્તિ દ્વારા ચકાસી શકાય છે**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'અલ્ટ્રા-પ્રોસેસિંગ શું છે?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA જૂથો તમને ફૂડ પ્રોસેસિંગના સ્તર વિશે માહિતી આપે છે.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA વર્ગીકરણ ખોરાકને તેમના **ઔદ્યોગિક પ્રક્રિયાની ડિગ્રી** (ઓછામાં ઓછા પ્રોસેસ્ડ અથવા અનપ્રોસેસ્ડ ફૂડ, રાંધણ ઘટકો, પ્રોસેસ્ડ ફૂડ, અલ્ટ્રા-પ્રોસેસ્ડ ફૂડ) ના આધારે **4 જૂથોમાં** વર્ગીકૃત કરવાની મંજૂરી આપે છે.';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA લોગો';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA જૂથો';
+
+  @override
+  String get guide_nova_groups_intro =>
+      '4 NOVA જૂથો છે, જેમાં સમસ્યારૂપ જૂથ 4 છે - અલ્ટ્રા-પ્રોસેસ્ડ ખોરાક.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'ઓછામાં ઓછા પ્રોસેસ્ડ અથવા અનપ્રોસેસ્ડ ખોરાક';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'કુદરતથી અલગ થયા પછી, બિન-પ્રક્રિયા કરાયેલ (અથવા કુદરતી) ખોરાક એ છોડ (બીજ, ફળો, પાંદડા, દાંડી, મૂળ) અથવા પ્રાણીઓ (સ્નાયુ, ઓફલ, ઇંડા, દૂધ), તેમજ ફૂગ, શેવાળ અને પાણીના ખાદ્ય ભાગો છે.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'તેલ, માખણ, ખાંડ અને મીઠું જેવા પ્રોસેસ્ડ રાંધણ ઘટકો, જૂથ 1 ના ખોરાકમાંથી અથવા કુદરતમાંથી દબાવવા, શુદ્ધિકરણ, પીસવા, પીસવા અને સૂકવવા જેવી પ્રક્રિયાઓ દ્વારા મેળવવામાં આવતા પદાર્થો છે.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'પ્રોસેસ્ડ ફૂડ, જેમ કે બોટલ્ડ શાકભાજી, ડબ્બાબંધ માછલી, ચાસણીમાં ફળો, ચીઝ અને તાજી બનાવેલી બ્રેડ, મુખ્યત્વે ગ્રુપ 2 ના ગ્રુપ 1 ખોરાકમાં મીઠું, તેલ, ખાંડ અથવા અન્ય પદાર્થો ઉમેરીને બનાવવામાં આવે છે. પ્રક્રિયાઓમાં વિવિધ જાળવણી અથવા રસોઈ પદ્ધતિઓનો સમાવેશ થાય છે, અને બ્રેડ અને ચીઝના કિસ્સામાં, બિન-આલ્કોહોલિક આથો. મોટાભાગના પ્રોસેસ્ડ ફૂડમાં બે કે ત્રણ ઘટકો હોય છે અને તે ગ્રુપ 1 ખોરાકના સંશોધિત સંસ્કરણો તરીકે ઓળખી શકાય છે. તે તેમના પોતાના પર અથવા, વધુ સામાન્ય રીતે, અન્ય ખોરાક સાથે સંયોજનમાં ખાઈ શકાય છે.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'અલ્ટ્રા-પ્રોસેસ્ડ ખોરાક, જેમ કે સોફ્ટ ડ્રિંક્સ, મીઠા અથવા સ્વાદિષ્ટ પેકેજ્ડ નાસ્તા, પુનર્ગઠિત માંસ ઉત્પાદનો અને પહેલાથી તૈયાર ફ્રોઝન ડીશ, ફક્ત સુધારેલા ખોરાક નથી પરંતુ મોટાભાગે અથવા સંપૂર્ણપણે ખોરાક અને ઉમેરણોમાંથી મેળવેલા પદાર્થોમાંથી બનાવેલા ફોર્મ્યુલેશન છે, જેમાં ગ્રુપ 1 ખોરાકનો કોઈ અકબંધ ઉપયોગ થતો નથી. આ ફોર્મ્યુલેશનમાં ઘટકોમાં સામાન્ય રીતે પ્રોસેસ્ડ ખોરાકમાં જોવા મળતા ખોરાકનો સમાવેશ થાય છે, જેમ કે ખાંડ, તેલ, ચરબી અથવા મીઠું. જો કે, અલ્ટ્રા-પ્રોસેસ્ડ ઉત્પાદનોમાં ઊર્જા અને પોષક તત્વોના અન્ય સ્ત્રોતો પણ હોય છે જેનો સામાન્ય રીતે રાંધણ તૈયારીઓમાં ઉપયોગ થતો નથી. આમાંથી કેટલાક સીધા ખોરાકમાંથી કાઢવામાં આવે છે, જેમ કે કેસીન, લેક્ટોઝ, છાશ અને ગ્લુટેન.';
+
+  @override
+  String get guide_nova_explanations_title => 'અલ્ટ્રા-પ્રોસેસિંગ સાથે સમસ્યાઓ';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'ખાદ્ય ઘટકોની આત્યંતિક પ્રક્રિયા';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'ઘણા ખોરાકના ઘટકોની વધુ પ્રક્રિયામાંથી મેળવવામાં આવે છે, જેમ કે હાઇડ્રોજનેટેડ અથવા ઇન્ટરેસ્ટેરિફાઇડ તેલ, હાઇડ્રોલાઇઝ્ડ પ્રોટીન, સોયા પ્રોટીન આઇસોલેટ, માલ્ટોડેક્સ્ટ્રિન, ઇન્વર્ટ સુગર અને હાઇ-ફ્રુક્ટોઝ કોર્ન સીરપ.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'શુદ્ધ ખાદ્ય સલામતીથી આગળ વધતા ઉમેરણો';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'અલ્ટ્રા-પ્રોસેસ્ડ ફૂડમાં રહેલા ઉમેરણોમાં એવા ઉમેરણોનો સમાવેશ થાય છે જેનો ઉપયોગ પ્રોસેસ્ડ ફૂડમાં પણ થાય છે, જેમ કે પ્રિઝર્વેટિવ્સ, એન્ટીઑકિસડન્ટ્સ અને સ્ટેબિલાઇઝર્સ. ફક્ત અલ્ટ્રા-પ્રોસેસ્ડ પ્રોડક્ટ્સમાં જોવા મળતા ઉમેરણોના વર્ગોમાં ખોરાકના સંવેદનાત્મક ગુણોનું અનુકરણ કરવા અથવા વધારવા અથવા અંતિમ ઉત્પાદનના અપ્રિય પાસાઓને છુપાવવા માટે ઉપયોગમાં લેવાતા ઉમેરણોનો સમાવેશ થાય છે. આ ઉમેરણોમાં રંગો અને અન્ય રંગો, રંગ સ્ટેબિલાઇઝર્સ; સ્વાદ, સ્વાદ વધારનારા, ખાંડ ન નાખનારા મીઠાશ; અને કાર્બોનેટિંગ, ફર્મિંગ, બલ્કિંગ અને એન્ટિ-બલ્કિંગ એજન્ટ્સ, ડી-ફોમિંગ, એન્ટિ-કેકિંગ અને ગ્લેઝિંગ એજન્ટ્સ, ઇમલ્સિફાયર, સિક્વેસ્ટન્ટ્સ અને હ્યુમેક્ટન્ટ્સ જેવા પ્રોસેસિંગ એઇડ્સનો સમાવેશ થાય છે.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'ઘરે ન કરી શકાય તેવી પ્રક્રિયા';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'સામાન્ય રીતે ઘણા ઘટકોને ભેગા કરવા અને અંતિમ ઉત્પાદન બનાવવા માટે (તેથી \'અલ્ટ્રા-પ્રોસેસ્ડ\') પ્રક્રિયાઓના સમૂહનો ઉપયોગ થાય છે. આ પ્રક્રિયાઓમાં ઘણી બધી પ્રક્રિયાઓનો સમાવેશ થાય છે જેમાં કોઈ સ્થાનિક સમકક્ષ નથી, જેમ કે હાઇડ્રોજનેશન અને હાઇડ્રોલાઇઝેશન, એક્સટ્રુઝન અને મોલ્ડિંગ, અને ફ્રાઈંગ માટે પ્રી-પ્રોસેસિંગ.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'અલ્ટ્રા-પ્રોસેસિંગના શિકારી અને નાણાકીય પાસાં';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'અલ્ટ્રા-પ્રોસેસિંગનો એકંદર હેતુ બ્રાન્ડેડ, અનુકૂળ (ટકાઉ, વપરાશ માટે તૈયાર), આકર્ષક (અતિ-સ્વાદિષ્ટ) અને અત્યંત નફાકારક (ઓછી કિંમતના ઘટકો) ખાદ્ય ઉત્પાદનો બનાવવાનો છે જે અન્ય તમામ ખાદ્ય જૂથોને સ્થાનાંતરિત કરવા માટે રચાયેલ છે. અલ્ટ્રા-પ્રોસેસ્ડ ખાદ્ય ઉત્પાદનો સામાન્ય રીતે આકર્ષક રીતે પેક કરવામાં આવે છે અને સઘન રીતે માર્કેટિંગ કરવામાં આવે છે.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4527,6 +4844,12 @@ class AppLocalizationsGu extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'કોઈ કિંમત ઉપલબ્ધ નથી';
+
+  @override
+  String get prices_products_empty_explanation => 'યોગદાન આપનારા સૌ પ્રથમ બનો!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4565,7 +4888,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'નિષ્કર્ષણ ચાલુ છે…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'નિષ્કર્ષણ સફળ થયું';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4696,6 +5022,498 @@ class AppLocalizationsGu extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'તમારી કિંમત પસંદગીઓનું સંચાલન કરો';
+
+  @override
+  String get preferences_card_project => 'ઓપન ફૂડ ફેક્ટ્સ પ્રોજેક્ટ';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My Contributions';
+
+  @override
+  String get preferences_my_stats_title => 'મારા આંકડા';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'અનુવાદ કરો, અમારા સાધનોમાં સુધારો કરો…';
+
+  @override
+  String get preferences_connect_title => 'જોડાવા';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'સંપર્ક કરો, અથવા સોશિયલ મીડિયા પર અમને ફોલો કરો';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'વિશ્વભરના લાખો ગ્રાહકોને જાણ કરવામાં અમારી સહાય કરો';
+
+  @override
+  String get preferences_card_help => 'મદદ અને સપોર્ટ';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'તમારા પ્રશ્નોના જવાબો મેળવો';
+
+  @override
+  String get logged_out => 'લૉગ આઉટ થયા';
+
+  @override
+  String get preferences_app_bar_message =>
+      'અમારા સભ્યોમાંના એક હોવા બદલ આભાર!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'બધા આંકડા જુઓ';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '\"$keyword\" માટે $provider શોધો';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'સેટિંગ શોધો (દા.ત. ન્યુટ્રી-સ્કોર)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'ઍક્સેસિબિલિટી: ઇમોજી બતાવો';
+
+  @override
+  String get preferences_accessibility_remove_colors => 'સુલભતા: રંગો દૂર કરો';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'કાનૂની માહિતી';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'ઉપયોગની શરતો, ગોપનીયતા નીતિ, અને વધુ';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'ઓપન ફૂડ ફેક્ટ્સ એ ફૂડ પ્રોડક્ટ્સનો ડેટાબેઝ છે જે **દરેક વ્યક્તિ દ્વારા, દરેક માટે** બનાવવામાં આવે છે.\nતમે તેનો ઉપયોગ વધુ સારી ખોરાક પસંદગીઓ કરવા માટે કરી શકો છો, અને કારણ કે તે **ખુલ્લો ડેટા** છે, કોઈપણ **કોઈપણ હેતુ માટે તેનો ફરીથી ઉપયોગ** કરી શકે છે.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'લાઇસન્સ';
+
+  @override
+  String get preferences_about_app_title => 'એપ્લિકેશન વિશે';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'ટેકનિકલ માહિતી, વિકાસકર્તા માહિતી, અને વધુ';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'સંસ્કરણ નંબર';
+
+  @override
+  String get preferences_scanner_title => 'સ્કેનર';
+
+  @override
+  String get preferences_app_store => 'એપ સ્ટોર';
+
+  @override
+  String get preferences_app_system_settings => 'સિસ્ટમ સેટિંગ્સ';
+
+  @override
+  String get preferences_source_code => 'સોર્સ કોડ ઍક્સેસ કરો';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'અને લાખો લોકો પર અસર કરવાનું શરૂ કરો';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'ટિપ્સ';
+
+  @override
+  String get tips_discover_nutriscore => 'નવા ન્યુટ્રી-સ્કોર શોધો';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'ઓપન ફૂડ ફેક્ટ્સ વેબસાઇટ પર';
+
+  @override
+  String get preferences_manage_account_title => 'મારું એકાઉન્ટ મેનેજ કરો';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'તમારા એકાઉન્ટનું સંચાલન કરો';
+
+  @override
+  String get preferences_change_password_title => 'મારો પાસવર્ડ બદલો';
+
+  @override
+  String get preferences_danger_zone => 'જોખમ ક્ષેત્ર';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'તમારા બધા યોગદાન ગુમ થઈ જશે';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'એપ્લિકેશન સેટિંગ્સ';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'ઉત્પાદનોને ઑફલાઇન સ્કેન કરવાની ખૂબ જ પ્રાયોગિક રીત';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'સર્વરમાંથી બધા ઉત્પાદનોને રિફ્રેશ કરો';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'કૃપા કરીને એકદમ જરૂરી ન હોય ત્યાં સુધી આવું કરવાનું ટાળો.';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'ડેમો મોડ';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'સ્કેનરમાં કાર્ડ ઉમેરો';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'સ્કેનરમાં 3 નમૂના ઉત્પાદનો ઉમેરે છે';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'ફોક્સોનોમી હોસ્ટ';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'યજમાન: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'સુલભતા પ્રયોગો';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'કિંમતો માટે બહુવિધ ઉત્પાદનોની પસંદગી';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'વપરાશકર્તાએ ઓર્ડર કરેલા જ્ઞાન પેનલ';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'સ્થાન શોધ માટે કામચલાઉ ઍક્સેસ';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 અથવા 3 ઉત્પાદનો માટે બાજુ બાજુ સરખામણી';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'ઉત્પાદન સૂચિ આયાત';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'સ્કોર્સ અને પદ્ધતિઓ';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'ન્યુટ્રી-સ્કોરની ગણતરી કેવી રીતે થાય છે તે શોધો';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'પદ્ધતિમાં મુખ્ય ફેરફારો શોધો';
+
+  @override
+  String get preferences_faq_discover_project_title => 'પ્રોજેક્ટ શોધો';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Open Food તથ્યો શોધો.';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'વારંવાર પૂછાતા પ્રશ્નો - વારંવાર પૂછાતા પ્રશ્નો';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'ધ ઓપન ફૂડ ફેક્ટ્સ એનજીઓ';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'સમુદાય અપડેટ્સ મેળવો';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'એપ્લિકેશન અને સમુદાયના સમાચારોથી વાકેફ રહો';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'અમારા વર્ચ્યુઅલ ઇવેન્ટ્સમાં ભાગ લઈને સામેલ થાઓ';
+
+  @override
+  String get preferences_connect_blog_title => 'ધ ઓપન ફૂડ ફેક્ટ્સ બ્લોગ';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'નવીનતમ સમાચાર મેળવો, જેમ જેમ તે બને છે';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'સમુદાય પાસેથી મદદ મેળવો';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'એપ્લિકેશનને બહેતર બનાવવામાં અમારી સહાય કરો';
+
+  @override
+  String get preferences_connect_debug_info_title => 'અમને ડિબગ માહિતી મોકલો';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'વિગતવાર ડિબગીંગ માહિતી સાથે અમને એક ઇમેઇલ મોકલો.';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'અમને એપ્લિકેશન વિશે પ્રતિસાદ મોકલો';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'એપ્લિકેશનના ભવિષ્યને આકાર આપવામાં સહાય કરો';
+
+  @override
+  String get preferences_connect_survey_title => 'એપ્લિકેશન સર્વેમાં ભાગ લો';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'આપણે આગળ શું બનાવવું જોઈએ તે સમજવામાં અમારી સહાય કરો';
+
+  @override
+  String get preferences_connect_professionals_title => 'વ્યાવસાયિકો';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'સંપૂર્ણપણે મફત, 500 એપ્લિકેશનો અને લાખો ગ્રાહકો માટે સચોટ ડેટા સુનિશ્ચિત કરે છે. સ્વ-સેવા, તમારા PIM અથવા સ્પ્રેડશીટ્સ (XLSX) સાથે સુસંગત.';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'શરૂઆત કરવા માટે સંપર્ક કરો';
+
+  @override
+  String get preferences_connect_press_title => 'દબાવો';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'તમારા રિપોર્ટ માટે જરૂરી બધી સામગ્રી મેળવો';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'પ્રેસ પૂછપરછ માટે અથવા તમારા અહેવાલ વિશે અમને જણાવવા માટે સંપર્ક કરો.';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'સક્રિય સ્વયંસેવક બનો';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'વિકાસ, સંદેશાવ્યવહાર, ડિઝાઇન… કોઈપણ પ્રકારની સ્વયંસેવા અથવા કુશળતાનું સ્વાગત છે!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'તમે યોગદાન આપી શકો તેવી ઘણી રીતોમાંથી કેટલીક શોધો';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'મોબાઇલ એપ્લિકેશન વિકાસ';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'સોફ્ટવેર ડેવલપમેન્ટમાં યોગદાન કેવી રીતે આપવું તે જાણો';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'દૈનિક અસ્થિર બિલ્ડ્સ, તદ્દન નવી સુવિધાઓ';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'તમારા સ્થાનિક સમુદાયનો વિકાસ કરો';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'સોફ્ટવેર, સામગ્રી, ઘટકો વિશ્લેષણ અનુવાદોમાં મદદ';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'અમે તમને મદદ કરવા માટે એક નાનું ટેમ્પલેટ તૈયાર કર્યું છે :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'તમારા દેશમાં ખાદ્ય પારદર્શિતા વધારવા માટેના સરળ પગલાં';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'ડેટા ગુણવત્તા ટીમમાં જોડાઓ';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'ડેટાબેઝ સંપૂર્ણ અને સચોટ છે તેની ખાતરી કરવા માટે અમારા પ્રયાસમાં જોડાઓ.';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'ઉમેરેલા ઉત્પાદનો';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'ઓપન ફૂડ ફેક્ટ્સમાં મેં ઉમેરેલા નવા ઉત્પાદનો';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'મારે પૂર્ણ કરવાની જરૂર છે તે ઉત્પાદનો';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'બધા અપૂર્ણ ઉત્પાદનો';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'મારી કિંમતો, મારા પુરાવા…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'તમે પૂર્ણ કરવામાં મદદ કરી શકો તેવા ઉત્પાદનો';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'તમારા દેશમાં ન્યુટ્રી-સ્કોર અને ગ્રીન-સ્કોરની ગણતરી કરવામાં મદદ કરો';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'મેં ફાળો આપેલા ભાવો';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'કિંમત ટૅગ્સ અને રસીદો';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'તમારી રસીદોના ફોટા લો અને સંકળાયેલા બારકોડ સ્કેન કરો';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'દુકાનમાં કિંમતોના ફોટા લો';
+
+  @override
+  String get preferences_prices_newest_title => 'નવીનતમ કિંમતો';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'ઓપન પ્રાઈસ સમુદાય દ્વારા ઉમેરવામાં આવેલી નવીનતમ કિંમતો';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'સૌથી વધુ કિંમતો ધરાવતા ફાળો આપનારાઓ';
+
+  @override
+  String get preferences_prices_metrics_title => 'ઓપન પ્રાઇસ મેટ્રિક્સ';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'પ્રોજેક્ટના ઉત્ક્રાંતિને અનુસરો';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'યોગદાન આપવાની રીતો';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'AI ની મદદથી, તમે અથવા અન્ય લોકો દ્વારા ઉમેરવામાં આવેલી કિંમતોની પુષ્ટિ કરો.';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'તમારા કેમેરા રોલમાંથી શેલ્ફની ઘણી રસીદો અથવા ફોટા ઝડપથી ઉમેરો';
+
+  @override
+  String get preferences_prices_challenges_title => 'માસિક પડકારો';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'કિંમતો એકત્રિત કરવા માટે માસિક થીમેટિક ક્વેસ્ટ્સમાં ભાગ લો';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'તમારા લોયલ્ટી ડેટાનો ફરીથી દાવો કરો';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'તમારા ડેટાની વિનંતી કેવી રીતે કરવી તે જાણો';
+
+  @override
+  String get preferences_page_customize_app_title => 'એપ્લિકેશનને કસ્ટમાઇઝ કરો';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'પ્રોજેક્ટમાં યોગદાન આપો';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'ખોરાકની હકીકતો ખોલવામાં મદદ કરવાની સરળ રીતો';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'પ્રોજેક્ટ વિશે સ્કોર પદ્ધતિઓ, મદદ અને વધુ';
+
+  @override
   String get product_edit_robotoff_positive_button => 'સૂચન સ્વીકારો';
 
   @override
@@ -4739,4 +5557,102 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'પ્રમાણીકરણ નિષ્ફળ ગયું, પુરાવા મેળવી શક્યા નહીં.';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count $total પુરાવાઓમાંથી';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count $total યોગદાનકર્તાઓમાંથી';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count $total સ્થાનોમાંથી';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count સ્થાનો';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'ફેરફારો લાગુ કરવા માટે કૃપા કરીને એપ્લિકેશનને ફરીથી શરૂ કરો.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'ગ્રાફિકલ ઇન્ટરફેસ';
+
+  @override
+  String get preferences_app_settings_media_title => 'મીડિયા';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'ફૂડ ફેક્ટ્સ લેબ્સ ખોલો';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'તમારી ભાષામાં ખુલ્લા ખોરાકના તથ્યો લાવો';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'એપ્લિકેશનના આલ્ફા સંસ્કરણમાં નોંધણી કરો';
+
+  @override
+  String get preferences_dev_mode_section_data => 'યોગદાન અને ઉત્પાદન ડેટા';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'ફોક્સોનોમી બતાવશો નહીં';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '$createdપર ઉમેર્યું';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

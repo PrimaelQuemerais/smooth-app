@@ -9,6 +9,9 @@ class AppLocalizationsMy extends AppLocalizations {
   AppLocalizationsMy([String locale = 'my']) : super(locale);
 
   @override
+  String get app_name => 'အစားအသောက် အချက်အလက်များကို ဖွင့်ပါ။';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsMy extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'ပိုမိုတိကျသောအမျိုးအစားကိုရွေးချယ်ပါ။';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'သတ္တိမရှိပါ။';
+
+  @override
+  String get product_tags_explanation =>
+      'ကုန်ပစ္စည်းတစ်ခုသို့ ဂုဏ်သတ္တိများ (သော့/တန်ဖိုး) ပေါင်းထည့်ခြင်းဖြင့်၊ ၎င်းကို ကြွယ်ဝအောင် ကူညီပေးပါသည်။';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'ကျွန်ုပ်၏အကောင့်ကိုဖျက်ပါ။';
 
   @override
   String get user_profile => 'Account';
@@ -2359,6 +2366,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'စမ်းသပ်မှုအင်္ဂါရပ်များနှင့် ဖွံ့ဖြိုးတိုးတက်ရေးကိရိယာများကို ဝင်ရောက်ကြည့်ရှုပါ။';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2505,6 +2516,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Open Prices ဝဘ်ဆိုဒ်တွင် ဖွင့်ပါ။';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2644,6 +2658,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prices_list_add_new_price => '\nစျေးနှုန်းအသစ်တစ်ခု ထည့်ပါ။';
 
   @override
+  String get prices_list_empty_title => 'စျေးနှုန်းမရှိသေးပါ။';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'တစ်ခုထည့်ရန် ပထမဆုံးဖြစ်လာပါ-\n**ပြေစာ** သို့မဟုတ် **စျေးနှုန်းသတ်မှတ်**ကို စကင်န်ဖတ်ခြင်းဖြင့်။';
+
+  @override
   String get prices_entry_shop_not_found => 'အမည်မသိ စတိုးဆိုင်';
 
   @override
@@ -2653,7 +2674,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'ဤထုတ်ကုန်အတွက် ဈေးနှုန်းအားလုံးကို ကြည့်ပါ။';
 
   @override
   String get prices_entry_menu_open_proof => 'သက်သေကိုကြည့်ပါ။';
@@ -2734,9 +2755,23 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'ပံ့ပိုးကူညီသူမရှိသေးပါ။';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'စျေးနှုန်းထည့်ရန် ပထမဆုံးဖြစ်ပါ။';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'ဆိုင်မရှိသေးပါ။';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'စျေးနှုန်းထည့်ရန် ပထမဆုံးဖြစ်ပါ။';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2841,7 +2876,17 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'သက်သေမရှိသေးပါ။';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '**ပြေစာ** သို့မဟုတ် **စျေးနှုန်းသတ်မှတ်** ၏ ဓာတ်ပုံတစ်ပုံကို ပေါင်းထည့်ခြင်းဖြင့် စတင်ပါ။';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2920,13 +2965,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2938,6 +2977,17 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'အက်ပ်ဘာသာစကားကို ပြန်လည်သတ်မှတ်ပါ။';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'ကတ်များထည့်ပါ။';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'price.openfoodfacts.org (PROD) နှင့် test env အကြား ပြောင်းပါ။';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2981,6 +3031,11 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3982,32 +4037,33 @@ class AppLocalizationsMy extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'အစိမ်းအမှတ် B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'အစိမ်းရောင်ရမှတ် C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'အစိမ်းအမှတ် D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'အမည်မသိ အစိမ်းရောင်-ရမှတ်';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score သည် မသက်ဆိုင်ပါ။';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'လွန်ကဲစွာ ပြုပြင်ထားသော အစားအစာများ - NOVA အုပ်စုများ';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4104,9 +4160,6 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get guide_share_label => 'ေဝမွ်မည္';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4214,11 +4267,282 @@ class AppLocalizationsMy extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'Green Score ကဘာလဲ။';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score သည် **အစားအစာ၏ပတ်ဝန်းကျင်ဆိုင်ရာအကျိုးသက်ရောက်မှု** အကြောင်း သင့်အား အသိပေးရန် ရည်ရွယ်သည့် လိုဂိုတစ်ခုဖြစ်သည်။';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      '**အကျိုးသက်ရောက်မှုအရှိဆုံး ** ထုတ်ကုန်များအတွက် **အကျိုးသက်ရောက်မှုအနည်းဆုံး** ထုတ်ကုန်များအတွက် အစိမ်းရင့်ရောင် (**A+**) မှ အရောင်ကုဒ်သည် အနီရောင် (**F**) အထိ ကွဲပြားပါသည်။';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score လိုဂိုများ';
+
+  @override
+  String get guide_greenscore_lca_title => 'အဓိက- ဘဝသံသရာ အကဲဖြတ်ခြင်း (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'အစားအသောက် အမျိုးအစားများကို သိပ္ပံနည်းကျ အကဲဖြတ်ခြင်း။';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'ထုတ်ကုန်အမျိုးအစားတစ်ခုစီအတွက်၊ Agribalyse ပတ်ဝန်းကျင်ဒေတာဘေ့စ် (ADEME နှင့် INRAE မှ ဒီဇိုင်းထုတ်သည်) မှ ဒေတာကို အသုံးပြု၍ **စံသတ်မှတ်ချက်** ရမှတ်ကို သတ်မှတ်သည်။';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**ဘဝစက်ဝန်းခွဲခြမ်းစိတ်ဖြာခြင်း** သည် အဆင့်များစွာနှင့် စံသတ်မှတ်ချက်များစွာရှိသော ပတ်ဝန်းကျင်ဆိုင်ရာ အကဲဖြတ်မှုကို ဆောင်ရွက်ရန်အတွက် စံပြုအကဲဖြတ်သည့်နည်းလမ်းတစ်ခုဖြစ်သည်။';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**တိုင်းတာသည်**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => 'ထုတ်လုပ်မှု အဆင့် ၆';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      'သဘာဝပတ်ဝန်းကျင် ထိခိုက်မှု ညွှန်းကိန်း ၁၄';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'ရာသီဥတုပြောင်းလဲမှု/ကာဗွန်ခြေရာ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'အိုဇုန်းလွှာ ကျဆင်းခြင်း။';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'အိုင်းယွန်းဓါတ်ရောင်ခြည်';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'မြေ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'ရေနှင့်စွမ်းအင်အသုံးပြုမှု';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'လေထုညစ်ညမ်းမှု';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'အဏ္ဏဝါနှင့် ရေချို (အမှုန်အမွှားများ၊ အက်ဆစ်ဓာတ်ပြုခြင်း၊ eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'အရင်းအမြစ်များ ကုန်ဆုံးခြင်း။';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'ဘောနပ်စ်များနှင့် ပြစ်ဒဏ်များ';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'အမျိုးအစားတစ်ခုအတွင်း ပိုမိုကောင်းမွန်သော ထုတ်ကုန်များကို ဆုချရန်၊ စံသတ်မှတ်ချက်များစွာအပေါ် အခြေခံ၍ ဘောနပ်စ်များနှင့် ပြစ်ဒဏ်များကို အသုံးပြုသည်-';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'ပါဝင်ပစ္စည်းများ၏ မူလအစပေါ်မူတည်၍ ဘောနပ်စ်ချီးမြှင့်ပါသည်။ ဤအပိုဆုသည် သယ်ယူပို့ဆောင်ရေးအပေါ် အကျိုးသက်ရောက်မှုနှင့် ထုတ်လုပ်သူတိုင်း၏ နိုင်ငံတစ်ခုစီ၏ သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ မူဝါဒကိုလည်း ထည့်သွင်းစဉ်းစားပါသည်။';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Green-Score ကို တိကျစွာ တွက်ချက်ရန်၊ ထုပ်ပိုးမှုတွင် သေချာပေါက် သတ်မှတ်ထားခြင်း မရှိဘဲ (ဥပမာ- ပါဝင်ပစ္စည်း တစ်ခုစီ၏ ရာခိုင်နှုန်း အတိအကျ ကဲ့သို့) သို့မဟုတ် အသုံးပြုနိုင်သော ပုံစံဖြင့် ရရှိခဲသော (ဥပမာ- တိကျသော ပလတ်စတစ် အမျိုးအစားများနှင့် ထုပ်ပိုးမှု၏ အစိတ်အပိုင်းအားလုံး စာရင်းကဲ့သို့) အချက်အလက်များ ရှိရန် လိုအပ်ပါသည်။';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'ဤအချက်အလက်ကို မရရှိနိုင်သေးချိန်တွင် ပျမ်းမျှတန်ဖိုးများကို အသုံးပြုထားသော်လည်း Green-Score အတွက်သာမက အခြားအသုံးပြုမှုများစွာအတွက်ပါ အလွန်အသုံးဝင်မည့် ဤအချက်အလက်များကို စုဆောင်းရာတွင် ကူညီပေးရန် လူတိုင်းကို ကျွန်ုပ်တို့ တောင်းဆိုထားပါသည်။';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'နိုင်ငံသားတွေ ဘယ်လိုကူညီနိုင်မလဲ။';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'ထုပ်ပိုးမှုဆိုင်ရာ အချက်အလက်ကဲ့သို့သော ထုတ်ကုန်များတွင်ပါရှိသော သို့မဟုတ် ၎င်းတို့ထံမှ နုတ်ယူနိုင်သော အချက်အလက်များကို စုဆောင်းပြီး ဖွဲ့စည်းတည်ဆောက်ရန် ကူညီပေးနိုင်သည်- Mission Emballages- အစားအသောက်ထုတ်ကုန်အားလုံးအတွက် ထုပ်ပိုးမှုဆိုင်ရာ ကြီးမားသော ပူးပေါင်းပါဝင်မှုစာရင်း (ပြင်သစ်ဘာသာဖြင့်)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'ထုတ်လုပ်သူတွေက ဘယ်လိုကူညီနိုင်မလဲ။';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'ထုတ်လုပ်သူသည် ထုတ်လုပ်သူများအတွက် ကျွန်ုပ်တို့၏ အခမဲ့ပလပ်ဖောင်းမှတစ်ဆင့် ၎င်းတို့၏ အချက်အလက်များကို ကျွန်ုပ်တို့ထံ တိုက်ရိုက်ပေးပို့နိုင်ပါသည်။';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'ကမ္ဘာမြေအတွက် ဘယ်ထုတ်ကုန်က ပိုကောင်းလဲ။';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'ပြောရခက်နိုင်ပါတယ်။';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      '**ကျွန်ုပ်တို့၏ ကမ္ဘာ့စားနပ်ရိက္ခာစနစ်သည် ဖန်လုံအိမ်ဓာတ်ငွေ့ထုတ်လွှတ်မှုအားလုံး၏ လေးပုံတစ်ပုံကျော်အတွက် တာဝန်ရှိသောကြောင့် ရေရှည်တည်တံ့သောအစားအစာကို ရွေးချယ်ခြင်းသည် ရာသီဥတုအတွက် အစွမ်းထက်ဆုံးအရာတစ်ခုဖြစ်သည်။\n(အရင်းအမြစ်- Poore & Nemecek၊ သိပ္ပံ၊ 2018)။';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'မင်းမှာ ပါဝါရှိတယ်။';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'သတင်းကောင်းမှာ ဤအရာသည် ကျွန်ုပ်တို့အား အပြောင်းအလဲကို ဖန်တီးရန် အစွမ်းထက်သော နည်းလမ်းကို ပေးစွမ်းနိုင်သောကြောင့် ဖြစ်သည်။\n**ကျွန်ုပ်တို့တစ်ဦးစီသည် တစ်နှစ်လျှင် အစားအစာ 1,000 ခန့်စားသည်**။ ဒါက **ကမ္ဘာမြေအတွက် ပိုကောင်းတဲ့ အနာဂတ်ကို ရွေးချယ်ဖို့** အခွင့်အရေး 1,000 ပါ။';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'တာဝန်ယူဆုံးဖြတ်ပေးသည်။';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'ရေရှည်တည်တံ့သောအစားအစာကိုရွေးချယ်ခြင်းသည်ရှုပ်ထွေးခံစားရနိုင်သည်။ အညွှန်းများသည် ရှုပ်ထွေးနေပြီး အချက်အလက် မကြာခဏ ပျောက်ဆုံးနေပါသည်။ Green-Score သည် အစားအသောက်ထုတ်ကုန်များအတွက် **ရှင်းလင်းသော**၊ **သိပ္ပံအခြေခံ** နှင့် **အကြည်** ပတ်ဝန်းကျင်အဆင့်သတ်မှတ်ခြင်းတို့ကို ပေးစွမ်းနိုင်စေရန် ရိုးရှင်းစေရန် ဖန်တီးထားပါသည်- သင်စျေးဝယ်နေစဉ်။';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'ပွင့်လင်းမြင်သာမှု';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'မူပိုင်အညွှန်းများနှင့်မတူဘဲ၊ Green-Score တွက်ချက်မှုသည် **လုံးဝဖွင့်ထားသည်** ဖြစ်ပြီး မည်သူမဆို **စစ်ဆေးနိုင်ပါသည်။**';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      'လွန်ကဲစွာ လုပ်ဆောင်ခြင်းဆိုသည်မှာ အဘယ်နည်း။';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA အဖွဲ့များသည် အစားအသောက် စီမံဆောင်ရွက်ပေးသည့် အဆင့်အကြောင်း အသိပေးသည်။';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA အမျိုးအစားခွဲခြားမှုသည် ၎င်းတို့၏ **စက်မှုလုပ်ငန်းအဆင့်** ပေါ်မူတည်၍ အစားအစာများကို **အုပ်စု(၄)စု**တွင် အမျိုးအစားခွဲနိုင်စေခြင်း” (အနည်းနှင့်အများ ပြုပြင်မွမ်းမံထားသော သို့မဟုတ် မပြုပြင်ရသေးသော အစားအစာများ၊ အချက်အပြုတ်ပါဝင်ပစ္စည်းများ၊ ပြုပြင်ထားသော အစားအစာများ၊ လွန်ကဲစွာ ပြုပြင်ထားသော အစားအစာများ)။';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA အမှတ်တံဆိပ်များ';
+
+  @override
+  String get guide_nova_groups_title => 'NOVA အဖွဲ့ ၄ ဖွဲ့';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'NOVA အုပ်စု 4 ခု ရှိပြီး ပြဿနာ တစ်ခုမှာ အုပ်စု 4 - လွန်ကဲစွာ ပြုပြင်ထားသော အစားအစာများ ဖြစ်သည်။';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'အနည်းဆုံး ပြုပြင်ထားသော သို့မဟုတ် မပြုပြင်ရသေးသော အစားအစာများ';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'ပြုပြင်မွမ်းမံထားသော (သို့မဟုတ်) သဘာဝအစားအစာများသည် အပင်များ (အစေ့၊ အသီး၊ အရွက်၊ ပင်စည်၊ အမြစ်) သို့မဟုတ် တိရစ္ဆာန်များ (ကြွက်သား၊ ဥ၊ နို့) အပြင် မှို၊ ရေညှိနှင့် ရေတို့ကို သဘာဝနှင့် ခွဲထုတ်ပြီးနောက် စားသုံးနိုင်သော အစိတ်အပိုင်းများဖြစ်သည်။';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'ဆီများ၊ ထောပတ်၊ သကြားနှင့် ဆားကဲ့သို့ ပြုပြင်ထားသော ပါဝင်ပစ္စည်းများသည် အုပ်စု 1 အစားအစာများမှ သို့မဟုတ် သဘာဝမှရရှိသော အရာများဖြစ်ပြီး နှိပ်ခြင်း၊ သန့်စင်ခြင်း၊ ကြိတ်ခြင်း၊ ကြိတ်ခြင်းနှင့် အခြောက်ခံခြင်းတို့ပါဝင်သည့် လုပ်ငန်းစဉ်များဖြစ်သည်။';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'အသီးအရွက်များ၊ ငါးသေတ္တာများ၊ ဖျော်ရည်များ၊ ဒိန်ခဲများနှင့် လတ်လတ်ဆတ်ဆတ်လုပ်ထားသော ပေါင်မုန့်များကဲ့သို့သော ပြုပြင်ပြီးသားအစားအစာများကို အုပ်စု 2 မှ အုပ်စု 1 အစားအစာများသို့ ဆား၊ ဆီ၊ သကြား သို့မဟုတ် အခြားအရာများကို ထည့်ခြင်းဖြင့် အဓိကပြုလုပ်သည်။ လုပ်ငန်းစဉ်များတွင် ထိန်းသိမ်းခြင်း သို့မဟုတ် ချက်ပြုတ်နည်းအမျိုးမျိုးနှင့် ပေါင်မုန့်နှင့် ဒိန်ခဲကိစ္စတွင် အရက်မသောက်ဘဲ အချဉ်ဖောက်ခြင်း ပါဝင်သည်။ ပြုပြင်ပြီးသား အစားအစာအများစုတွင် ပါဝင်ပစ္စည်းများ နှစ်ခု သို့မဟုတ် သုံးခုပါရှိပြီး အုပ်စု 1 အစားအစာများ၏ ပြုပြင်ထားသောဗားရှင်းများအဖြစ် အသိအမှတ်ပြုနိုင်ပါသည်။ ၎င်းတို့ကို ၎င်းတို့ကိုယ်တိုင် သို့မဟုတ် အခြားအစားအစာများနှင့် တွဲစားနိုင်သည်။';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'အချိုရည်များ၊ ချိုမြိန်သော သို့မဟုတ် အရသာရှိသော ထုပ်ပိုးထားသော သရေစာများ၊ ပြန်လည်ဖွဲ့စည်းထားသော အသားထွက်ပစ္စည်းများ၊ နှင့် ကြိုတင်ပြင်ဆင်ထားသော အေးခဲထားသော ဟင်းလျာများကဲ့သို့သော အထူးပြုပြင်ထားသော အစားအစာများသည် မွမ်းမံထားသော အစားအစာများသာမက အုပ်စု 1 အစားအစာများမှရရှိသော ဓာတုပစ္စည်းများနှင့် ဖြည့်စွက်ပစ္စည်းများမှရရှိသော အစားအစာများနှင့် ဖြည့်စွက်ပစ္စည်းများမှ အများစု သို့မဟုတ် လုံးလုံးဖြင့် ပြုလုပ်ထားသော ဖော်မြူလာများဖြစ်သည်။ ဤဖော်မြူလာများတွင် ပါဝင်ပစ္စည်းများမှာ သကြား၊ ဆီများ၊ အဆီများ သို့မဟုတ် ဆားကဲ့သို့သော ပြုပြင်ပြီးသား အစားအစာများတွင်လည်း တွေ့ရှိရသည်။ သို့ရာတွင်၊ လွန်ကဲစွာ ပြုပြင်ထားသော ထုတ်ကုန်များတွင် ပုံမှန်အားဖြင့် အချက်အပြုတ်ပြင်ဆင်ရာတွင် အသုံးမပြုသော စွမ်းအင်နှင့် အာဟာရဓာတ်များ ပါဝင်ပါသည်။ ၎င်းတို့ထဲမှ အချို့ကို casein၊ lactose၊ whey နှင့် gluten ကဲ့သို့သော အစားအစာများမှ တိုက်ရိုက်ထုတ်ယူသည်။';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'ultra-processing နှင့် ပြဿနာများ';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'အစားအသောက် ပါဝင်ပစ္စည်းများကို လွန်ကဲစွာ စီမံဆောင်ရွက်ခြင်း';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'အများအပြားသည် ဟိုက်ဒရိုဂျင်ဖြင့်ပြုလုပ်ထားသော သို့မဟုတ် စိတ်ဝင်စားဖွယ်အဆီများ၊ ဟိုက်ဒရိုဂျင်ပရိုတင်းများ၊ ပဲပိစပ်ပရိုတင်းအထီးကျန်၊ maltodextrin၊ ပြောင်းပြန်သကြားနှင့် fructose မြင့်မားသောပြောင်းဖူးရည်ကဲ့သို့သော အစားအစာပါဝင်ပစ္စည်းများ၏ နောက်ထပ်လုပ်ဆောင်မှုမှ ဆင်းသက်လာခြင်းဖြစ်သည်။';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'သန့်စင်သောအစားအစာဘေးကင်းရေးထက်ကျော်လွန်သော additives များ';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'လွန်လွန်ကဲကဲ ပြုပြင်ထားသော အစားအစာများတွင် ဖြည့်စွက်စာများတွင် ကြာရှည်ခံခြင်း၊ antioxidants နှင့် stabilizers ကဲ့သို့သော ပြုပြင်ထားသော အစားအစာများတွင်လည်း အသုံးပြုသည့် အချို့ပါဝင်သည်။ လွန်လွန်ကဲကဲ ပြုပြင်ထားသော ထုတ်ကုန်များတွင်သာ တွေ့ရသော ဖြည့်စွက်ပစ္စည်းများ အမျိုးအစားများတွင် အစားအစာများ၏ အာရုံခံအရည်အသွေးများကို အတုယူရန် သို့မဟုတ် မြှင့်တင်ရန် သို့မဟုတ် နောက်ဆုံးထုတ်ကုန်၏ အရသာမရှိသော အသွင်အပြင်များကို ဖုံးကွယ်ရန် အသုံးပြုသည့် ပစ္စည်းများ ပါဝင်ပါသည်။ အဆိုပါ ဖြည့်စွက်ပစ္စည်းများတွင် ဆိုးဆေးနှင့် အခြားအရောင်များ၊ အရသာများ ၊ အရသာမြှင့်တင်ပေးသော ၊ သကြားမဟုတ်သော အချိုဓာတ်များ ၊ ကာဗွန်ထုတ်ခြင်း၊ တင်းရင်းခြင်း၊ ထူထပ်ခြင်းနှင့် ထူထပ်ခြင်းများကို ဆန့်ကျင်ခြင်း၊ အမြှုပ်ထွက်ခြင်း၊ မုန့်ဖုတ်ခြင်း နှင့် အကာအကာများ၊ emulsifiers၊ sequestrants နှင့် humectants ကဲ့သို့သော စီမံဆောင်ရွက်ပေးသည့် အကူအညီများ။';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'အိမ်မှာလုပ်လို့မရတဲ့ စီမံဆောင်ရွက်မှု';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'အများအားဖြင့် ပါဝင်ပစ္စည်းများ အများအပြားကို ပေါင်းစပ်ပြီး နောက်ဆုံးထုတ်ကုန်ကို ဖန်တီးရန် (ထို့ကြောင့် \'လွန်ကဲစွာ စီမံဆောင်ရွက်သည်\') လုပ်ငန်းစဉ်များ၏ ဆက်တိုက်များပြားသော လုပ်ငန်းစဉ်များကို အသုံးပြုပါသည်။ လုပ်ငန်းစဉ်များတွင် ဟိုက်ဒရိုဂျင်နှင့် ဟိုက်ဒရိုဂျင် ထုတ်ပေးခြင်း၊ ထုတ်ယူခြင်းနှင့် ပုံသွင်းခြင်းနှင့် ကြော်ခြင်းအတွက် ကြိုတင်လုပ်ဆောင်ခြင်းကဲ့သို့သော ပြည်တွင်း ညီမျှမှုမရှိသော လုပ်ငန်းစဉ်များစွာ ပါဝင်ပါသည်။';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'လွန်ကဲစွာ လုပ်ဆောင်ခြင်း၏ အာဏာရှင်ဆန်မှုနှင့် ငွေကြေးဆိုင်ရာ ကဏ္ဍများ';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'လွန်ကဲစွာ စီမံဆောင်ရွက်ပေးခြင်း၏ အလုံးစုံရည်ရွယ်ချက်မှာ အခြားအစားအစာအုပ်စုအားလုံးကို ရွှေ့ပြောင်းရန် ဒီဇိုင်းထုတ်ထားသော အမှတ်တံဆိပ်ပါသော၊ အဆင်ပြေသော (တာရှည်ခံ၊ စားသုံးရန်အသင့်)၊ ဆွဲဆောင်မှု (hyper-palatable) နှင့် အလွန်အမြတ်အစွန်းရနိုင်သော (ကုန်ကျစရိတ်သက်သာသော ပါဝင်ပစ္စည်းများ) အစားအသောက်ထုတ်ကုန်များကို ဖန်တီးရန်ဖြစ်သည်။ လွန်လွန်ကဲကဲ ပြုပြင်ထားသော အစားအသောက်ထုတ်ကုန်များကို အများအားဖြင့် ဆွဲဆောင်မှုရှိရှိ ထုပ်ပိုးပြီး စျေးကွက်တွင် အလေးအနက်ထားကြသည်။';
 
   @override
   String get preview_badge => 'Preview';
@@ -4531,6 +4855,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'စျေးနှုန်းမရရှိနိုင်ပါ။';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'ပထမဆုံး ပါဝင်ကူညီသူဖြစ်ပါစေ။';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4569,7 +4900,11 @@ class AppLocalizationsMy extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'ထုတ်ယူနေဆဲ…';
+
+  @override
+  String get nutrition_facts_extract_successful =>
+      'ထုတ်ယူခြင်း အောင်မြင်ပါသည်။';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4700,6 +5035,509 @@ class AppLocalizationsMy extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'သင့်စျေးနှုန်းများကို စိတ်ကြိုက်စီမံပါ။';
+
+  @override
+  String get preferences_card_project => 'Open Food Facts ပရောဂျက်';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'ငါ့စာရင်းဇယား';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'ဘာသာပြန်ပါ၊ ကျွန်ုပ်တို့၏ကိရိယာများ…ကို တိုးတက်အောင်လုပ်ပါ။';
+
+  @override
+  String get preferences_connect_title => 'ချိတ်ဆက်ပါ။';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'ဆက်သွယ်ပါ၊ သို့မဟုတ် ဆိုရှယ်မီဒီယာပေါ်တွင် ကျွန်ုပ်တို့ကို လိုက်ကြည့်ပါ။';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'ကမ္ဘာတစ်ဝှမ်းရှိ သန်းနှင့်ချီသော သုံးစွဲသူများအား အသိပေးရန် ကျွန်ုပ်တို့အား ကူညီပေးပါ။';
+
+  @override
+  String get preferences_card_help => 'အကူအညီ & ပံ့ပိုးမှု';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'သင့်မေးခွန်းများအတွက် အဖြေများရယူပါ။';
+
+  @override
+  String get logged_out => 'ထွက်သွားပြီ';
+
+  @override
+  String get preferences_app_bar_message =>
+      'ကျွန်ုပ်တို့၏အဖွဲ့ဝင်တစ်ဦးဖြစ်သည့်အတွက် ကျေးဇူးတင်ပါသည်။';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'စာရင်းအင်းများအားလုံးကို ကြည့်ပါ။';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '\"$keyword\" အတွက် $provider ကို ရှာပါ';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'ဆက်တင်တစ်ခုကို ရှာပါ (ဥပမာ- Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'အသုံးပြုနိုင်မှု- အီမိုဂျီကို ပြပါ။';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'အသုံးပြုနိုင်မှု- အရောင်များကို ဖယ်ရှားပါ။';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'အကြောင်း';
+
+  @override
+  String get preferences_legal_information_title => 'ဥပဒေအချက်အလက်';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'အသုံးပြုမှုစည်းမျဉ်းများ၊ ကိုယ်ရေးကိုယ်တာမူဝါဒနှင့် အခြားအရာများ';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts သည် လူတိုင်းအတွက်၊ လူတိုင်းအတွက် ဖန်တီးထားသော အစားအသောက်ဒေတာဘေ့စ်တစ်ခုဖြစ်သည်။\nပိုမိုကောင်းမွန်သော အစားအသောက်ရွေးချယ်မှုများပြုလုပ်ရန် ၎င်းကို သင်အသုံးပြုနိုင်ပြီး ၎င်းသည် **open data**ဖြစ်သောကြောင့် မည်သူမဆို ၎င်းကို မည်သည့်ရည်ရွယ်ချက်အတွက်မဆို **ပြန်လည်အသုံးပြုနိုင်ပါသည်။';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'လိုင်စင်များ';
+
+  @override
+  String get preferences_about_app_title => 'အက်ပ်အကြောင်း';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'နည်းပညာဆိုင်ရာ အချက်အလက်၊ ဆော့ဖ်ဝဲရေးသားသူ အချက်အလက်နှင့် အခြားအရာများ';
+
+  @override
+  String get preferences_card_information => 'အချက်အလက်များ';
+
+  @override
+  String get preferences_version_number_title => 'ဗားရှင်းနံပါတ်';
+
+  @override
+  String get preferences_scanner_title => 'စကင်နာ';
+
+  @override
+  String get preferences_app_store => 'အက်ပ်စတိုး';
+
+  @override
+  String get preferences_app_system_settings => 'စနစ်ဆက်တင်များ';
+
+  @override
+  String get preferences_source_code => 'အရင်းအမြစ်ကုဒ်ကို ဝင်ရောက်ကြည့်ရှုပါ။';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'သန်းပေါင်းများစွာအတွက် အကျိုးသက်ရောက်မှုကို စတင်လိုက်ပါ။';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'အကြံပြုချက်များ';
+
+  @override
+  String get tips_discover_nutriscore => 'Nutri-Score အသစ်ကို ရှာဖွေပါ။';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Open Food Facts ဝဘ်ဆိုဒ်တွင်';
+
+  @override
+  String get preferences_manage_account_title => 'ကျွန်ုပ်၏အကောင့်ကိုစီမံပါ။';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'သင့်အကောင့်ကို စီမံခန့်ခွဲပါ။';
+
+  @override
+  String get preferences_change_password_title =>
+      'ကျွန်ုပ်၏ စကားဝှက်ကို ပြောင်းပါ။';
+
+  @override
+  String get preferences_danger_zone => 'အန္တရာယ်ဇုန်';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'သင်၏ ပံ့ပိုးမှုများ အားလုံးကို ဆုံးရှုံးပါမည်။';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'အက်ပ်ဆက်တင်များ';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'ထုတ်ကုန်များကို အော့ဖ်လိုင်းစကင်န်လုပ်ရန် အလွန်စမ်းသပ်နည်း';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'ဆာဗာမှ ထုတ်ကုန်အားလုံးကို ပြန်လည်စတင်ပါ။';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'ကျေးဇူးပြု၍ လုံးဝမလိုအပ်ဘဲ ရှောင်ကြဉ်ပါ။';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'ဒီမိုမုဒ်';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'စကင်နာသို့ ကတ်များထည့်ပါ။';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'စကင်နာသို့ နမူနာထုတ်ကုန် 3 ခုကို ထည့်ပါ။';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Folksonomy အိမ်ရှင်';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'အိမ်ရှင်- $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'သုံးစွဲနိုင်မှု စမ်းသပ်မှုများ';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'စျေးနှုန်းများအတွက် ကုန်ပစ္စည်းမျိုးစုံကို ရွေးချယ်ခြင်း။';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'အသုံးပြုသူမှ အသိပညာအကန့်များကို မှာယူထားသည်။';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'တည်နေရာရှာဖွေမှုသို့ ယာယီဝင်ရောက်ခွင့်';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'ထုတ်ကုန် 2 သို့မဟုတ် 3 အတွက် ဘေးချင်းယှဉ် နှိုင်းယှဉ်ခြင်း။';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'သွင်းကုန်စာရင်း';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'ရမှတ်များနှင့် နည်းစနစ်များ';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Nutri-Score ကို မည်သို့တွက်ချက်ထားသည်ကို ရှာဖွေပါ။';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'နည်းစနစ်၏ အဓိကပြောင်းလဲမှုများကို ရှာဖွေပါ။';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Open Food Facts ကို ရှာဖွေပါ။';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - အမေးများသောမေးခွန်းများ';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Open Food Facts NGO ၊';
+
+  @override
+  String get preferences_about_information_title => 'အချက်အလက်များ';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'အသိုင်းအဝိုင်းအပ်ဒိတ်များကို ရယူပါ။';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'အက်ပ်နှင့် ကွန်မြူနတီသတင်းများဖြင့် ကွင်းဆက်နေပါ။';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'ကျွန်ုပ်တို့၏ ပကတိဖြစ်ရပ်များထဲမှ တစ်ခုကို တက်ရောက်ခြင်းဖြင့် ပါဝင်လိုက်ပါ။';
+
+  @override
+  String get preferences_connect_blog_title => 'Open Food Facts ဘလော့ဂ်';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'နောက်ဆုံးရသတင်းများကို ရယူပါ။';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'အသိုင်းအဝိုင်းထံမှအကူအညီရယူပါ။';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'အက်ပ်ကို တိုးတက်အောင် ကူညီပေးပါ။';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'အမှားရှာပြင်အချက်အလက်ကို ကျွန်ုပ်တို့ထံ ပေးပို့ပါ။';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'အသေးစိတ် အမှားရှာပြင်ခြင်း အချက်အလက်နှင့်အတူ ကျွန်ုပ်တို့ထံ အီးမေးလ်တစ်စောင် ပေးပို့ပါ။';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'အက်ပ်အကြောင်း တုံ့ပြန်ချက်ပေးပို့ပါ။';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'အက်ပ်၏ အနာဂတ်ကို ပုံဖော်ရာတွင် ကူညီပါ။';
+
+  @override
+  String get preferences_connect_survey_title => 'အက်ပ်စစ်တမ်းကို ယူပါ။';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'ရှေ့ဆက်တည်ဆောက်သင့်သည်များကို နားလည်ကူညီပေးပါ။';
+
+  @override
+  String get preferences_connect_professionals_title => 'အတတ်ပညာရှင်များ';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'လုံးဝအခမဲ့၊ အက်ပ် 500 နှင့် သုံးစွဲသူ သန်းပေါင်းများစွာအတွက် တိကျသောဒေတာကို အာမခံပါသည်။ ကိုယ်ပိုင်ဝန်ဆောင်မှု၊ သင်၏ PIM သို့မဟုတ် စာရင်းဇယားများ (XLSX) နှင့် တွဲဖက်အသုံးပြုနိုင်သည်';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'စတင်ရန် ဆက်သွယ်လိုက်ပါ။';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'သင့်အစီရင်ခံစာအတွက် သင်လိုအပ်သော ပစ္စည်းအားလုံးကို ရယူပါ။';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'စာနယ်ဇင်း စုံစမ်းမေးမြန်းမှုများအတွက် ဆက်သွယ်ရန် သို့မဟုတ် သင့်အစီရင်ခံစာနှင့် ပတ်သက်၍ ကျွန်ုပ်တို့အား အသိပေးပါ။';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'တက်ကြွသောစေတနာ့ဝန်ထမ်းဖြစ်လာပါ။';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'ဖွံ့ဖြိုးတိုးတက်မှု၊ ဆက်သွယ်ရေး၊ ဒီဇိုင်း… မည်သည့်စေတနာ့ဝန်ထမ်း သို့မဟုတ် ကျွမ်းကျင်မှုမျိုးကိုမဆို ကြိုဆိုပါသည်။';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'သင်ပါဝင်ကူညီနိုင်သည့် နည်းလမ်းများစွာထဲမှ အချို့ကို ရှာဖွေပါ။';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'မိုဘိုင်းအက်ပ်ဖွံ့ဖြိုးတိုးတက်မှု';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'ဆော့ဖ်ဝဲလ်ဖွံ့ဖြိုးတိုးတက်မှုတွင် အထောက်အကူဖြစ်စေရန် မည်သို့လုပ်ဆောင်ရမည်ကို လေ့လာပါ။';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'နေ့စဉ်မတည်မငြိမ်တည်ဆောက်မှုများ၊ ဝန်ဆောင်မှုအသစ်စက်စက်';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'သင်၏ဒေသခံအသိုင်းအဝိုင်းကို ကြီးထွားစေပါ။';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'ဆော့ဖ်ဝဲလ်၊ အကြောင်းအရာများ၊ ပါဝင်ပစ္စည်း ခွဲခြမ်းစိတ်ဖြာ ဘာသာပြန်ဆိုမှုများဖြင့် ကူညီပါ။';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'မင်းကိုကူညီဖို့ နမူနာပုံစံလေးတစ်ခု ပြင်ဆင်ထားပါတယ် :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'သင့်နိုင်ငံတွင် စားနပ်ရိက္ခာပွင့်လင်းမြင်သာမှုကို မြှင့်တင်ရန် ရိုးရှင်းသောအဆင့်များ';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'ဒေတာအရည်အသွေးအဖွဲ့တွင် ပါဝင်ပါ။';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'ဒေတာဘေ့စ်သည် ပြီးပြည့်စုံပြီး တိကျသေချာစေရန် ကျွန်ုပ်တို့၏ကြိုးပမ်းအားထုတ်မှုတွင် ပါဝင်ပါ။';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'ထုတ်ကုန်များထည့်ထားသည်။';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Open Food Facts တွင် ကျွန်ုပ်ထည့်ထားသော ထုတ်ကုန်အသစ်များ';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'ပြီးပြည့်စုံရန် လိုအပ်သော ထုတ်ကုန်များ';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'မပြည့်စုံသောထုတ်ကုန်အားလုံး';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'ငါ့စျေးနှုန်း၊ ငါ့သက်သေ…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'ပြီးပြည့်စုံအောင် ကူညီပေးနိုင်တဲ့ ထုတ်ကုန်တွေ';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'သင့်နိုင်ငံရှိ Nutri-Score နှင့် Green-Score ကို တွက်ချက်ကူညီပေးပါ။';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'ကျွန်တော် ထည့်ဝင်ထားတဲ့ ဈေးနှုန်းများ';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'စျေးနှုန်းတံဆိပ်များနှင့် ပြေစာများ';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'သင့်ပြေစာများကို ဓာတ်ပုံရိုက်ပြီး ဆက်စပ်ဘားကုဒ်များကို စကင်န်ဖတ်ပါ။';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'ဆိုင်တစ်ဆိုင်တွင် ဈေးနှုန်းများကို ဓာတ်ပုံရိုက်ပါ။';
+
+  @override
+  String get preferences_prices_newest_title => 'နောက်ဆုံးပေါ်စျေးနှုန်းများ';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Open Prices အသိုင်းအဝိုင်းမှ နောက်ဆုံးစျေးနှုန်းများကို ထည့်သွင်းထားသည်။';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'စျေးနှုန်းအများဆုံးပါဝင်သူများ';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'စျေးနှုန်းတိုင်းတာမှုများကို ဖွင့်ပါ။';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'ပရောဂျက်၏ ဆင့်ကဲဖြစ်စဉ်ကို လိုက်နာပါ။';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'အကျိုးပြုနည်းများ';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'AI ၏အကူအညီဖြင့် သင်ကိုယ်တိုင် သို့မဟုတ် အခြားသူများ ထည့်ထားသည့်စျေးနှုန်းများကို အတည်ပြုပါ။';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'သင့်ကင်မရာလိပ်မှ စင်ပေါ်ရှိ ပြေစာများ သို့မဟုတ် ဓာတ်ပုံများစွာကို အမြန်ထည့်ပါ။';
+
+  @override
+  String get preferences_prices_challenges_title => 'လစဉ်စိန်ခေါ်မှုများ';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'စျေးနှုန်းများစုဆောင်းရန် လစဉ်အကြောင်းအရာအလိုက် စူးစမ်းမှုများတွင် ပါဝင်ပါ။';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'သင်၏သစ္စာစောင့်သိမှုဒေတာကို ပြန်လည်ရယူပါ။';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'သင့်ဒေတာကို မည်သို့တောင်းဆိုရမည်ကို လေ့လာပါ။';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'အက်ပ်ကို စိတ်ကြိုက်လုပ်ပါ။';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'ပရောဂျက်အတွက် ပါဝင်ကူညီပါ။';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Food Facts ကိုဖွင့်ရန် ရိုးရှင်းသောနည်းလမ်းများ';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'နည်းစနစ်များ၊ အကူအညီနှင့် ပရောဂျက်အကြောင်း နောက်ထပ် ရမှတ်များ';
+
+  @override
   String get product_edit_robotoff_positive_button => 'အကြံပြုချက်ကို လက်ခံပါ။';
 
   @override
@@ -4745,4 +5583,103 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'အထောက်အထားစိစစ်ခြင်း မအောင်မြင်ပါ၊ အထောက်အထားများကို ထုတ်ယူ၍မရပါ။';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ၏ $total အထောက်အထားများ';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ၏ $total ပံ့ပိုးသူများ';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ၏ $total တည်နေရာများ';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count တည်နေရာများ';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'အပြောင်းအလဲများကို အသုံးပြုရန် အက်ပ်ကို ပြန်လည်စတင်ပါ။';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'ဂရပ်ဖစ် အင်တာဖေ့စ်';
+
+  @override
+  String get preferences_app_settings_media_title => 'မီဒီယာ';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Food Facts Labs ကိုဖွင့်ပါ။';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Open Food Facts ကို သင့်ဘာသာစကားသို့ ယူဆောင်လာပါ။';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'အက်ပ်၏ အယ်လ်ဖာဗားရှင်းတွင် စာရင်းသွင်းပါ။';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'ပံ့ပိုးမှုများနှင့် ထုတ်ကုန်ဒေတာ';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Folksonomy ကို မပြပါနှင့်';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '$createdတွင် ထည့်သွင်းခဲ့သည်။';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

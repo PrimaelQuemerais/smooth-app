@@ -9,6 +9,9 @@ class AppLocalizationsLt extends AppLocalizations {
   AppLocalizationsLt([String locale = 'lt']) : super(locale);
 
   @override
+  String get app_name => 'Atviri maisto faktai';
+
+  @override
   String get sep => '';
 
   @override
@@ -328,10 +331,6 @@ class AppLocalizationsLt extends AppLocalizations {
   String get sign_up_page_terms_text => 'naudojimo ir įnašo sąlygomis';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-lt.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -459,9 +458,6 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -607,7 +603,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Iš naujo įkeltas su naujomis nuostatomis';
 
   @override
-  String get profile_navbar_label => 'Profilis';
+  String get profile_navbar_label => 'Bendruomenė';
 
   @override
   String get scan_navbar_label => 'Skenuoti';
@@ -1000,6 +996,10 @@ class AppLocalizationsLt extends AppLocalizations {
       'Pridėkite trūkstamą produkto kategoriją';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Pasirinkite tikslesnę kategoriją';
+
+  @override
   String get score_add_missing_product_countries =>
       'Pridėti trūkstamas produktų šalis';
 
@@ -1288,6 +1288,13 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'Jokių produkto savybių nerasta. Savybes galima naudoti produktams išsamiau ir lankstesčiau aprašyti.';
+
+  @override
+  String get product_tags_empty => 'Nėra savybių';
+
+  @override
+  String get product_tags_explanation =>
+      'Pridėdami prie produkto savybių (raktą / vertę), padedate jį pagerinti.';
 
   @override
   String get add_tag => 'Pridėti savybę';
@@ -1715,7 +1722,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get account_delete => 'Ištrinti paskyrą';
 
   @override
-  String get account_deletion_subject => 'Naikinti mano paskyrą';
+  String get account_delete_title => 'Ištrinti mano paskyrą';
 
   @override
   String get user_profile => 'Paskyra';
@@ -2393,6 +2400,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get dev_preferences_screen_title => 'Kurėjo režimas';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Pasiekite eksperimentines funkcijas ir kūrimo įrankius';
+
+  @override
   String get dev_preferences_reset_onboarding_title =>
       'Iš naujo paleiskite onboarding\'ą';
 
@@ -2541,6 +2552,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Atidaryti svetainėje „Open Prices“';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2679,6 +2693,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get prices_list_add_new_price => 'Pridėti\nnaują kainą';
 
   @override
+  String get prices_list_empty_title => 'Kainos dar nėra!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Būkite pirmas, kuris pridės:\nNuskaitydami **kvitą** arba **kainos etiketę**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Nežinoma parduotuvė';
 
   @override
@@ -2688,7 +2709,7 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Peržiūrėti visas šio produkto kainas';
 
   @override
   String get prices_entry_menu_open_proof => 'Peržiūrėti įrodymą';
@@ -2768,9 +2789,22 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Kol kas nėra bendraautorių!';
+
+  @override
+  String get prices_users_empty_explanation => 'Būkite pirmas, pridėjęs kainą!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Parduotuvės dar nėra!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Būkite pirmas, pridėjęs kainą!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2877,7 +2911,17 @@ class AppLocalizationsLt extends AppLocalizations {
   String get prices_proof_subtitle => 'Įrodymai';
 
   @override
+  String get prices_proof_empty_title => 'Dar nėra įrodymų!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Pradėkite pridėdami **kvito** arba **kainos etiketės** nuotrauką!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Čekis';
@@ -2955,14 +2999,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Duomenys';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title =>
-      'Neįtraukti folksonomijos';
 
   @override
   String get dev_mode_hide_environmental_score_title =>
@@ -2975,6 +3012,17 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Nustatyti programėlės kalbą iš naujo';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Pridėti kortelių';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Perjungti tarp prices.openfoodfacts.org (PROD) ir bandomosios aplinkos';
 
   @override
   String get search_history_item_edit_tooltip =>
@@ -3020,6 +3068,11 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -4034,31 +4087,33 @@ class AppLocalizationsLt extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Žalias balas A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Žalias balas B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Žalias balas C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Žalias balas D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Žalias balas E';
 
   @override
-  String get environmental_score_unknown => 'Nežinomas „Green Score“';
+  String get environmental_score_unknown_new => 'Nežinomas žaliasis balas';
 
   @override
-  String get environmental_score_not_applicable => '„Green Score“ netaikomas';
+  String get environmental_score_not_applicable_new =>
+      'Žaliasis balas netaikomas';
 
   @override
-  String get nova_group_generic => 'Ultraapdorojimas – NOVA grupės';
+  String get nova_group_generic_new =>
+      'Ultraperdirbti maisto produktai – NOVA grupės';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4155,9 +4210,6 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Dalintis';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4265,11 +4317,280 @@ class AppLocalizationsLt extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Kas yra žaliasis balas?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      '„Green-Score“ – tai logotipas, kuriuo siekiama informuoti jus apie **maisto poveikį aplinkai**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Spalvos kodas svyruoja nuo tamsiai žalios (**A+**), skirtos **mažiausiai poveikį darantiems** produktams, iki tamsiai raudonos (**F**), skirtos **didžiausią poveikį darantiems** produktams.';
+
+  @override
+  String get guide_greenscore_logos_caption => '„Green-Score“ logotipai';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Esmė: gyvavimo ciklo vertinimas (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Mokslinis maisto kategorijų vertinimas';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Kiekvienai produktų kategorijai nustatomas **lyginamasis** balas, naudojant „Agribalyse“ aplinkosaugos duomenų bazės (sukurtos ADEME ir INRAE) duomenis.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Gyvavimo ciklo analizė** yra standartizuotas vertinimo metodas, skirtas atlikti daugiapakopį ir daugiakriterį poveikio aplinkai vertinimą.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Išmatavimai:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 gamybos etapai';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Žemdirbystė';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Apdorojama';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Pakuotė';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportas';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Skirstyti';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Vartojimas';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 poveikio aplinkai rodiklių';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Klimato kaita / anglies pėdsakas';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Ozono sluoksnio nykimas';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Jonizuojančioji spinduliuotė';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Žemė';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'Vandens ir energijos naudojimas';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Oro tarša';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Jūros ir gėlo vandens (dalelės, rūgštėjimas, eutrofikacija)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Išteklių išeikvojimas.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Premijos ir baudos';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Norėdami apdovanoti geresnius produktus tam tikroje kategorijoje, taikome premijas ir nuobaudas pagal kelis kriterijus:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Sudedamųjų dalių kilmė';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Premija skiriama atsižvelgiant į ingredientų kilmę. Ši premija skiriama atsižvelgiant į poveikį transportui ir kiekvieno gamintojo šalies aplinkosaugos politiką.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Pakuotė';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Norint tiksliai apskaičiuoti „Green-Score“, būtina turėti informaciją, kuri nebūtinai nurodyta ant pakuotės (pvz., kiekvieno ingrediento kilmė ir tiksli procentinė dalis) arba kuri retai prieinama naudotina forma (pvz., visų pakuotės komponentų sąrašas su tiksliais panaudotų plastikų tipais).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Vidutinės vertės naudojamos, kai šios informacijos dar nėra, tačiau dabar raginame visus padėti mums rinkti šią informaciją, kuri bus labai naudinga ne tik „Green-Score“ sistemai, bet ir daugeliui kitų tikslų.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Kaip piliečiai gali padėti';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Visi piliečiai gali padėti mums rinkti ir susisteminti informaciją, esančią ant produktų arba kurią galima iš jų išvesti, pavyzdžiui, informaciją apie pakuotes: „Mission Emballages“: didelio masto bendradarbiaujant sudarytas visų maisto produktų pakuočių inventorius (prancūzų k.).';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Kaip gamintojai gali padėti';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Gamintojai gali siųsti mums savo informaciją tiesiogiai per mūsų nemokamą platformą gamintojams.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Kuris produktas geresnis planetai?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Gali būti sunku pasakyti';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Tvaraus maisto pasirinkimas yra vienas iš svarbiausių dalykų, kuriuos galime padaryti dėl klimato, nes **mūsų pasaulinė maisto sistema yra atsakinga už daugiau nei ketvirtadalį visų šiltnamio efektą sukeliančių dujų emisijų**.\n(Šaltinis: Poore ir Nemecek, „Science“, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Tu turi galią!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Geros žinios yra tai, kad tai suteikia mums galingą būdą kurti pokyčius.\n**Kiekvienas iš mūsų kasmet suvalgome apie 1000 patiekalų**. Tai 1000 galimybių **pasirinkti geresnę planetos ateitį**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Padeda būti atsakingam ir priimti sprendimus';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Tvaraus maisto pasirinkimas gali atrodyti sudėtingas. Etiketės gali būti painios, o informacijos dažnai trūksta. „Green-Score“ buvo sukurtas tam, kad viskas būtų paprasta ir suteiktų jums **aiškų**, **mokslu pagrįstą** ir **skaidrų** maisto produktų aplinkosauginį įvertinimą būtent ten, kur jums jo reikia: apsiperkant.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Skaidrumas';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Kitaip nei patentuotų etikečių atveju, „Green-Score“ skaičiavimas yra **visiškai atviras** ir jį gali **patvirtinti bet kas**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Kas yra ultraprocessing?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA grupės informuoja jus apie maisto perdirbimo lygį.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA klasifikacija leidžia suskirstyti maisto produktus į **4 grupes** pagal jų **pramoninio apdorojimo laipsnį** (minimaliai perdirbti arba neperdirbti maisto produktai, kulinariniai ingredientai, perdirbti maisto produktai, ultraperdirbti maisto produktai).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA logotipai';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA grupės';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Yra 4 NOVA grupės, problemiškiausia yra 4 grupė – itin perdirbti maisto produktai.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Minimaliai perdirbti arba neperdirbti maisto produktai';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Neapdorotas (arba natūralus) maistas yra valgomosios augalų (sėklos, vaisiai, lapai, stiebai, šaknys) arba gyvūnų (raumenys, subproduktai, kiaušiniai, pienas), taip pat grybų, dumblių ir vandens dalys, atskirtos nuo gamtos.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Perdirbti kulinariniai ingredientai, tokie kaip aliejai, sviestas, cukrus ir druska, yra medžiagos, gautos iš 1 grupės maisto produktų arba iš gamtos taikant tokius procesus kaip presavimas, rafinavimas, malimas, malimas ir džiovinimas.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Perdirbti maisto produktai, pavyzdžiui, konservuotos daržovės, konservuota žuvis, vaisiai sirupe, sūriai ir šviežiai iškeptos duonos, daugiausia gaminami pridedant druskos, aliejaus, cukraus ar kitų medžiagų iš 2–1 grupės maisto produktų. Procesai apima įvairius konservavimo ar virimo metodus, o duonos ir sūrio atveju – nealkoholinę fermentaciją. Dauguma perdirbtų maisto produktų turi du ar tris ingredientus ir yra atpažįstami kaip modifikuotos 1 grupės maisto produktų versijos. Juos galima valgyti vienus arba, dažniau, kartu su kitais maisto produktais.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ultraperdirbti maisto produktai, tokie kaip gaivieji gėrimai, saldūs arba pikantiški supakuoti užkandžiai, atkurti mėsos produktai ir iš anksto paruošti šaldyti patiekalai, yra ne tik modifikuotas maistas, bet ir mišiniai, pagaminti daugiausia arba visiškai iš medžiagų, gautų iš maisto produktų ir priedų, kuriuose yra mažai arba visai nėra nepažeisto 1 grupės maisto. Šių mišinių ingredientai paprastai apima ir perdirbtuose maisto produktuose esančias medžiagas, tokias kaip cukrus, aliejai, riebalai ar druska. Tačiau ultraperdirbtuose produktuose taip pat yra kitų energijos ir maistinių medžiagų šaltinių, kurie paprastai nenaudojami kulinarijoje. Kai kurie iš jų yra tiesiogiai išgaunami iš maisto produktų, pavyzdžiui, kazeinas, laktozė, išrūgos ir glitimas.';
+
+  @override
+  String get guide_nova_explanations_title => 'Ultraprocesoriaus problemos';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ekstremalus maisto ingredientų apdorojimas';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Daugelis jų gaunami toliau perdirbant maisto sudedamąsias dalis, pavyzdžiui, hidrinti arba interesterifikuoti aliejai, hidrolizuoti baltymai, sojų baltymų izoliatas, maltodekstrinas, invertuotas cukrus ir didelės fruktozės kukurūzų sirupas.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Priedai, kurie neapsiriboja vien tik maisto sauga';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ultraperdirbtuose maisto produktuose esantys priedai apima ir tuos, kurie taip pat naudojami perdirbtuose maisto produktuose, pavyzdžiui, konservantus, antioksidantus ir stabilizatorius. Priedų, randamų tik ultraperdirbtuose produktuose, klasės apima tuos, kurie naudojami maisto produktų juslinėms savybėms imituoti arba sustiprinti arba galutinio produkto neskanumui paslėpti. Šie priedai apima dažiklius ir kitus dažiklius, spalvų stabilizatorius; kvapiąsias medžiagas, skonio stipriklius, necukrinius saldiklius; ir pagalbines perdirbimo medžiagas, tokias kaip gazavimo, standinimo, užpildai ir tūrį mažinančios medžiagos, putojimo mažinimo, lipnumą reguliuojančios ir glazūravimo medžiagos, emulsikliai, kompleksonai ir drėgmę išlaikančios medžiagos.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Apdorojimas, kurio negalite atlikti namuose';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Įprastai daugeliui ingredientų sujungti ir galutiniam produktui (todėl ir vadinamam „ultra apdorotu“) sukurti naudojama daugybė procesų sekų. Šie procesai apima kelis, neturinčius atitikmenų namuose, pavyzdžiui, hidrinimą ir hidrolizę, ekstruziją ir liejimą, taip pat išankstinis apdorojimas kepimui.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Plėšrieji ir finansiniai itin didelio apdorojimo aspektai';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Bendras ultraperdirbimo tikslas – kurti firminius, patogius (patvarius, paruoštus vartoti), patrauklius (itin skanius) ir labai pelningus (su pigiais ingredientais) maisto produktus, skirtus išstumti visas kitas maisto grupes. Ultraperdirbti maisto produktai paprastai yra patraukliai supakuoti ir intensyviai parduodami.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4588,6 +4909,12 @@ class AppLocalizationsLt extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Kaina nežinoma';
+
+  @override
+  String get prices_products_empty_explanation => 'Būkite pirmas, prisidėjęs!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Geriausi $pageSize produktai (iš viso: $total)';
   }
@@ -4627,7 +4954,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Gauti dabar';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Ištraukimas sėkmingas';
+  String get nutrition_facts_extract_in_progress => 'Vykdomas išgavimas…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Ištraukimas sėkmingas';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4759,6 +5089,505 @@ class AppLocalizationsLt extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Įrodymai';
 
   @override
+  String get preferences_card_general => 'Bendra';
+
+  @override
+  String get preferences_prices_title => 'Kainos';
+
+  @override
+  String get preferences_prices_subtitle => 'Tvarkykite savo kainų nuostatas';
+
+  @override
+  String get preferences_card_project => 'Atvirų maisto faktų projektas';
+
+  @override
+  String get preferences_contribute_title => 'Prisidėti';
+
+  @override
+  String get preferences_my_contributions_title => 'Mano indėlis';
+
+  @override
+  String get preferences_my_stats_title => 'Mano statistika';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Verskite, tobulinkite savo įrankius…';
+
+  @override
+  String get preferences_connect_title => 'Prisijungti';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Susisiekite arba sekite mus socialiniuose tinkluose';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Padėkite mums informuoti milijonus vartotojų visame pasaulyje';
+
+  @override
+  String get preferences_card_help => 'Pagalba ir palaikymas';
+
+  @override
+  String get preferences_faq_title => 'DUK';
+
+  @override
+  String get preferences_faq_subtitle => 'Gaukite atsakymus į savo klausimus';
+
+  @override
+  String get logged_out => 'Atsijungęs';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Ačiū, kad esate vienas iš mūsų narių!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Produktai modifikuoti';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Pridėtos kainos';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Žr. visą statistiką';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Ieškoti $provider pagal „$keyword“';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Ieškoti nustatymo (pvz., „Nutri-Score“)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Pritaikymas neįgaliesiems: rodyti jaustukus';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Pritaikymas neįgaliesiems: pašalinti spalvas';
+
+  @override
+  String get preferences_app_settings_products => 'Produktai';
+
+  @override
+  String get preferences_card_about => 'Apie';
+
+  @override
+  String get preferences_legal_information_title => 'Teisinė informacija';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Naudojimo sąlygos, privatumo politika ir kita';
+
+  @override
+  String get preferences_terms_of_use => 'Naudojimo sąlygos';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      '„Open Food Facts“ yra maisto produktų duomenų bazė, **sukurta visų, skirta visiems**.\nJą galite naudoti norėdami priimti geresnius sprendimus dėl maisto produktų, o kadangi tai yra **atviri duomenys**, kiekvienas gali **ją pakartotinai naudoti bet kokiam tikslui**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privatumo politika';
+
+  @override
+  String get preferences_licenses => 'Licencijos';
+
+  @override
+  String get preferences_about_app_title => 'Apie programėlę';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Techninė informacija, kūrėjo informacija ir kita';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Versijos numeris';
+
+  @override
+  String get preferences_scanner_title => 'Skaitytuvas';
+
+  @override
+  String get preferences_app_store => 'Programėlių parduotuvė';
+
+  @override
+  String get preferences_app_system_settings => 'Sistemos nustatymai';
+
+  @override
+  String get preferences_source_code => 'Prieiga prie šaltinio kodo';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Ir pradėkite daryti įtaką milijonams';
+
+  @override
+  String get preferences_add_prices => 'Pridėti kainas';
+
+  @override
+  String get preferences_complete_products =>
+      'Pilnai užbaik redaguoti produktus';
+
+  @override
+  String get preferences_tips => 'Patarimai';
+
+  @override
+  String get tips_discover_nutriscore => 'Atraskite naująjį „Nutri-Score“';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Atvirų maisto faktų svetainėje';
+
+  @override
+  String get preferences_manage_account_title => 'Tvarkyti mano paskyrą';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Tvarkykite savo paskyrą';
+
+  @override
+  String get preferences_change_password_title => 'Keisti slaptažodį';
+
+  @override
+  String get preferences_danger_zone => 'Pavojinga zona';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Visi jūsų įnašai bus prarasti';
+
+  @override
+  String get preferences_contributions_title => 'Prisidėjo';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Programėlės nustatymai';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Labai eksperimentinis būdas nuskaityti produktus neprisijungus';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Atnaujinti visus produktus iš serverio';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Prašome to nedaryti, nebent tai absoliučiai būtina';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demonstracinis režimas';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Pridėti korteles prie skaitytuvo';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Prideda prie skaitytuvo 3 produktų pavyzdžius';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Folksonomy šeimininkas';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Pagrindinis kompiuteris: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Prieinamumo eksperimentai';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Kelių produktų pasirinkimas pagal kainas';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Vartotojo išdėstytos žinių panelės';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Laikina prieiga prie vietos paieškos';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 arba 3 produktų palyginimas greta';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Produktų sąrašo importavimas';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Rezultatai ir metodologijos';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Sužinokite, kaip apskaičiuojamas „Nutri-Score“';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Sužinokite apie pagrindinius metodologijos pakeitimus';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Apie projektą';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Atraskite atvirus faktus apie maistą';
+
+  @override
+  String get preferences_faq_faq_title => 'DUK – Dažnai užduodami klausimai';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Atvirų maisto faktų nevyriausybinė organizacija';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Gaukite bendruomenės naujienas';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Būkite informuoti apie programėlės ir bendruomenės naujienas';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Prisijunkite prie mūsų virtualių renginių';
+
+  @override
+  String get preferences_connect_blog_title => '„Open Food Facts“ tinklaraštis';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Gaukite naujausias naujienas, kai tik jos įvyks';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Gaukite pagalbos iš bendruomenės';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Padėkite mums tobulinti programėlę';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Atsiųskite mums derinimo informaciją';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Atsiųskite mums el. laišką su išsamia derinimo informacija';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Atsiųskite mums atsiliepimą apie programėlę';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Padėkite formuoti programėlės ateitį';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Dalyvaukite programėlės apklausoje';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Padėkite mums suprasti, ką turėtume kurti toliau';
+
+  @override
+  String get preferences_connect_professionals_title => 'Profesionalai';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Visiškai nemokama, užtikrina tikslius duomenis 500 programėlių ir milijonams vartotojų. Savitarnos funkcija, suderinama su jūsų PIM arba skaičiuoklėmis (XLSX).';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Susisiekite, kad pradėtumėte';
+
+  @override
+  String get preferences_connect_press_title => 'Spauda';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Gaukite visą medžiagą, kurios jums reikia ataskaitai';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Susisiekite su mumis dėl spaudos klausimų arba norėdami pranešti mums apie savo ataskaitą';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Tapkite aktyviu savanoriu';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Kūrimas, komunikacija, dizainas… bet kokia savanorystė ar patirtis yra laukiami!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Atraskite keletą iš daugelio būdų, kaip galite prisidėti';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Mobiliųjų programėlių kūrimas';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Sužinokite, kaip prisidėti prie programinės įrangos kūrimo';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Kasdienės nestabilios versijos, visiškai naujos funkcijos';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Plėskite savo vietos bendruomenę';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Pagalba su programinės įrangos, turinio, ingredientų analizės vertimais';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Paruošėme nedidelį šabloną, kuris jums padės :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Paprasti žingsniai, kaip padidinti maisto skaidrumą jūsų šalyje';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Duomenų kokybė';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Prisijunkite prie duomenų kokybės komandos';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Prisijunkite prie mūsų pastangų užtikrinti, kad duomenų bazė būtų išsami ir tiksli';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Pridėti produktai';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nauji produktai, kuriuos pridėjau prie „Open Food Facts“';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produktai, kuriuos man reikia užbaigti';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Visi nebaigti produktai';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Kainos';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'Mano kainos';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Mano kainos, mano įrodymai…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produktai, kuriuos galite padėti užbaigti';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Padėkite apskaičiuoti „Nutri-Score“ ir „Green-Score“ jūsų šalyje';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Kainos, kurias aš pateikiau';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Kainų etiketės ir kvitai';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Nufotografuokite savo kvitus ir nuskaitykite susijusius brūkšninius kodus';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Nufotografuokite kainas parduotuvėje';
+
+  @override
+  String get preferences_prices_newest_title => 'Naujausios kainos';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Naujausios kainos, kurias pridėjo „Open Prices“ bendruomenė';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Prisidėjusieji, kurių kainos yra didžiausios';
+
+  @override
+  String get preferences_prices_metrics_title => 'Atidaryti kainos metriką';
+
+  @override
+  String get preferences_prices_metrics_subtitle => 'Sekite projekto eigą';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Būdai prisidėti';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Patvirtinkite savo ar kitų pridėtas kainas, pasitelkdami dirbtinį intelektą';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Greitai pridėkite daug kvitų ar lentynų nuotraukų iš savo fotoaparato ritinio';
+
+  @override
+  String get preferences_prices_challenges_title => 'Mėnesio iššūkiai';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Dalyvaukite mėnesinėse teminėse užduotyse, kad surinktumėte prizus';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Atgaukite savo lojalumo duomenis';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Sužinokite, kaip pateikti užklausą dėl savo duomenų';
+
+  @override
+  String get preferences_page_customize_app_title => 'Programėlės tinkinimas';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Prisidėti prie projekto';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Paprasti būdai padėti „Open Food Facts“ svetainėje';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Vertinimo metodikos, pagalba ir kita informacija apie projektą';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Priimti pasiūlymą';
 
   @override
@@ -4803,4 +5632,102 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Autentifikavimas nepavyko, negalima gauti įrodymų';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count iš $total įrodymų';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count įrodymai (-ų)';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count iš $total bendraautorių';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count bendraautoriai (-ių)';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count iš $total vietų';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count vietų';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Kad pakeitimai įsigaliotų, paleiskite programėlę iš naujo.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Grafinė sąsaja';
+
+  @override
+  String get preferences_app_settings_media_title => 'Žiniasklaida';
+
+  @override
+  String get preferences_about_app_development_title => 'Programavimas';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Atviros maisto faktų laboratorijos';
+
+  @override
+  String get preferences_root_account_title => 'Paskyra';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Atviri maisto faktai jūsų kalba';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Registruokitės programėlės alfa versijai';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Įnašai ir produkto duomenys';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Nerodyti folksonomijos';
+
+  @override
+  String get preferences_account_title => 'Paskyra';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Pridėta $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

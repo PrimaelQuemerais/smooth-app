@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_app/pages/history_page.dart';
 import 'package:smooth_app/pages/page_manager.dart';
-import 'package:smooth_app/pages/preferences/user_preferences_page.dart';
+import 'package:smooth_app/pages/preferences_v2/preferences_page.dart';
 import 'package:smooth_app/pages/scan/scan_page.dart';
 
 class TabNavigator extends StatelessWidget {
@@ -12,19 +12,11 @@ class TabNavigator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget child;
-
-    switch (tabItem) {
-      case BottomNavigationTab.Profile:
-        child = const UserPreferencesPage();
-        break;
-      case BottomNavigationTab.List:
-        child = const HistoryPage();
-        break;
-      case BottomNavigationTab.Scan:
-        child = const ScanPage();
-        break;
-    }
+    final Widget child = switch (tabItem) {
+      BottomNavigationTab.Profile => PreferencesPage(),
+      BottomNavigationTab.List => const HistoryPage(),
+      BottomNavigationTab.Scan => const ScanPage(),
+    };
 
     return Navigator(
       key: navigatorKey,

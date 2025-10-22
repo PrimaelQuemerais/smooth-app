@@ -19,6 +19,7 @@ import 'package:smooth_app/pages/prices/price_model.dart';
 import 'package:smooth_app/pages/prices/price_proof_card.dart';
 import 'package:smooth_app/pages/product/common/product_refresher.dart';
 import 'package:smooth_app/pages/product/may_exit_page_helper.dart';
+import 'package:smooth_app/resources/app_icons.dart' as icons;
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
 import 'package:smooth_app/themes/theme_provider.dart';
@@ -35,8 +36,8 @@ class ProductPriceAddPage extends StatefulWidget {
 
   static Future<void> showProductPage({
     required final BuildContext context,
-    final PriceMetaProduct? product,
     required final ProofType proofType,
+    final PriceMetaProduct? product,
   }) async {
     if (!await ProductRefresher().checkIfLoggedIn(
       context,
@@ -49,10 +50,6 @@ class ProductPriceAddPage extends StatefulWidget {
     }
 
     final PriceAddHelper priceAddHelper = PriceAddHelper(context);
-    final List<OsmLocation> osmLocations = await priceAddHelper.getLocations();
-    if (!context.mounted) {
-      return;
-    }
 
     final Currency currency = priceAddHelper.getCurrency();
 
@@ -63,7 +60,6 @@ class ProductPriceAddPage extends StatefulWidget {
         builder: (BuildContext context) => ProductPriceAddPage(
           PriceModel(
             proofType: proofType,
-            locations: osmLocations,
             initialProduct: product,
             currency: currency,
             multipleProducts: multipleProducts,
@@ -117,7 +113,7 @@ class _ProductPriceAddPageState extends State<ProductPriceAddPage>
                   subTitle: _generateSubtitle(appLocalizations),
                   actions: <Widget>[
                     IconButton(
-                      icon: const Icon(Icons.info),
+                      icon: const icons.Info(),
                       onPressed: () async => PriceAddHelper(
                         context,
                       ).doesAcceptWarning(justInfo: true),
@@ -139,11 +135,10 @@ class _ProductPriceAddPageState extends State<ProductPriceAddPage>
                       const PriceDateCard(),
                       const SizedBox(height: LARGE_SPACE),
                       PriceLocationCard(
-                        onLocationChanged:
-                            (OsmLocation? oldLocation, OsmLocation location) =>
-                                PriceAddHelper(
-                                  context,
-                                ).updateCurrency(oldLocation, location, model),
+                        onLocationChanged: (OsmLocation location) =>
+                            PriceAddHelper(
+                              context,
+                            ).updateCurrency(location, model),
                       ),
                       const SizedBox(height: LARGE_SPACE),
                       const PriceCurrencyCard(),

@@ -9,6 +9,9 @@ class AppLocalizationsSv extends AppLocalizations {
   AppLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
+  String get app_name => 'Öppna matfakta';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsSv extends AppLocalizations {
   String get sign_up_page_terms_text => 'användarvillkor och bidrag';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://se.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -449,9 +448,6 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donera till Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Registrera dig i intern alfaversion';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -596,7 +592,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Laddades om med dina nya inställningar';
 
   @override
-  String get profile_navbar_label => 'Profil';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Skanna';
@@ -787,7 +783,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'We are unable to process the image locally, before sending it to our server. Please try again later or contact-us if the issue persists.';
 
   @override
-  String get crop_page_action_retake => 'Retake a photo';
+  String get crop_page_action_retake => 'Ta om ett foto';
 
   @override
   String get crop_page_too_small_image_title => 'Bilden är för liten!';
@@ -981,6 +977,10 @@ class AppLocalizationsSv extends AppLocalizations {
       'Lägg till saknad produktkategori';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Välj en mer exakt kategori';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1031,13 +1031,13 @@ class AppLocalizationsSv extends AppLocalizations {
       'Sometimes nutrition facts are **not specified on the packaging** or on a document given with the product. In this case, and only in this case, you can set the value to **NO**.';
 
   @override
-  String get nutrition_page_serving_type_label => 'Nutritional values:';
+  String get nutrition_page_serving_type_label => 'Näringsvärden:';
 
   @override
   String get nutrition_page_per_100g => 'per 100g';
 
   @override
-  String get nutrition_page_per_100g_100ml => 'per 100g/ml';
+  String get nutrition_page_per_100g_100ml => 'per 100 g/ml';
 
   @override
   String get nutrition_page_per_serving => 'per portion';
@@ -1250,7 +1250,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get could_not_refresh => 'Kunde inte uppdatera produkt';
 
   @override
-  String get product_internet_error_modal_title => 'An error has occurred!';
+  String get product_internet_error_modal_title => 'Ett fel har uppstått!';
 
   @override
   String product_internet_error_modal_message(String error) {
@@ -1265,13 +1265,20 @@ class AppLocalizationsSv extends AppLocalizations {
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
 
   @override
+  String get product_tags_empty => 'Inga fastigheter';
+
+  @override
+  String get product_tags_explanation =>
+      'Genom att lägga till egenskaper (nyckel/värde) till en produkt bidrar du till att berika den.';
+
+  @override
   String get add_tag => 'Add property';
 
   @override
   String get add_tags => 'Lägg till egenskaper';
 
   @override
-  String get add_edit_tags => 'Add or edit properties';
+  String get add_edit_tags => 'Lägg till eller redigera egenskaper';
 
   @override
   String get edit_tag => 'Redigera egenskap';
@@ -1690,7 +1697,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get account_delete => 'Radera konto';
 
   @override
-  String get account_deletion_subject => 'Radera mitt konto';
+  String get account_delete_title => 'Ta bort mitt konto';
 
   @override
   String get user_profile => 'Konto';
@@ -1813,7 +1820,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get edit_product_pending_operations_banner_title =>
-      'Uploading your edits…';
+      'Laddar upp dina redigeringar…';
 
   @override
   String get edit_product_pending_operations_banner_message =>
@@ -1988,7 +1995,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get edit_product_form_item_origins_explanation_good_examples_1 =>
-      'Beef from Argentina';
+      'Nötkött från Argentina';
 
   @override
   String get edit_product_form_item_origins_explanation_good_examples_2 =>
@@ -2195,7 +2202,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get edit_product_ingredients_list_title => 'Lista över ingredienser';
 
   @override
-  String get edit_product_packaging_photo_title => 'Packaging photo';
+  String get edit_product_packaging_photo_title => 'Förpackningsfoto';
 
   @override
   String get edit_product_packaging_list_title => 'Packaging list';
@@ -2312,7 +2319,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get user_list_popup_clear => 'Rensa din historik';
 
   @override
-  String get user_list_popup_rename => 'Rename';
+  String get user_list_popup_rename => 'Byt namn';
 
   @override
   String get user_list_name_hint => 'Min lista';
@@ -2368,6 +2375,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get dev_preferences_screen_title => 'DEV-läge';
+
+  @override
+  String get dev_preferences_screen_subtitle =>
+      'Få tillgång till experimentella funktioner och utvecklingsverktyg';
 
   @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
@@ -2432,7 +2443,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get dev_preferences_button_negative => 'Annulera';
 
   @override
-  String get dev_preferences_migration_title => 'Data migration from V1';
+  String get dev_preferences_migration_title => 'Datamigrering från V1';
 
   @override
   String dev_preferences_migration_subtitle(String status) {
@@ -2464,11 +2475,11 @@ class AppLocalizationsSv extends AppLocalizations {
       'Will clear history and put 3 products in there';
 
   @override
-  String get dev_preferences_news_custom_url_title => 'Custom URL for news';
+  String get dev_preferences_news_custom_url_title =>
+      'Anpassad URL för nyheter';
 
   @override
-  String get dev_preferences_news_custom_url_subtitle =>
-      'URL of the JSON file:';
+  String get dev_preferences_news_custom_url_subtitle => 'URL till JSON-filen:';
 
   @override
   String get dev_preferences_news_custom_url_empty_value => 'Not set';
@@ -2485,7 +2496,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get product_type_label_food => 'Mat';
 
   @override
-  String get product_type_label_beauty => 'Personal care';
+  String get product_type_label_beauty => 'Personlig vård';
 
   @override
   String get product_type_label_pet_food => 'Djurmat';
@@ -2515,6 +2526,9 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get prices_app_button => 'Gå till Priser-appen';
+
+  @override
+  String get prices_website_button => 'Öppna på webbplatsen för öppna priser';
 
   @override
   String get prices_bulk_proof_upload_select =>
@@ -2622,7 +2636,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prices_per_kilogram => 'Pris per kilogram';
 
   @override
-  String get prices_per_unit => 'Price per unit';
+  String get prices_per_unit => 'Pris per enhet';
 
   @override
   String get prices_per_kilogram_short => ' / kg';
@@ -2655,6 +2669,13 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prices_list_add_new_price => 'Lägg till ett nytt pris\n';
 
   @override
+  String get prices_list_empty_title => 'Inget pris än!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bli först med att lägga till en:\nGenom att skanna ett **kvitto** eller en **prislapp**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Okänd butik';
 
   @override
@@ -2664,7 +2685,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Se alla priser för den här produkten';
 
   @override
   String get prices_entry_menu_open_proof => 'Se bevis';
@@ -2743,9 +2764,23 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Ingen bidragsgivare än!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Var först med att lägga till ett pris!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ingen butik än!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Var först med att lägga till ett pris!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2850,7 +2885,17 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
-  String get prices_proof_find => 'Select a proof';
+  String get prices_proof_empty_title => 'Inga bevis än!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Börja med att lägga till ett foto på ett **kvitto** eller en **prislapp**!';
+
+  @override
+  String get prices_proof_find => 'Välj ett bevis';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Kvitto';
@@ -2929,14 +2974,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get dev_mode_section_ui => 'Användargränssnitt';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features =>
       'Experimentella funktioner';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2948,6 +2987,16 @@ class AppLocalizationsSv extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Återställ appens språk';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Lägg till kort';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Växla mellan prices.openfoodfacts.org (PROD) och testmiljön';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2993,6 +3042,11 @@ class AppLocalizationsSv extends AppLocalizations {
   String get user_search_proof_title => 'My proof';
 
   @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
+
+  @override
   String user_any_search_prices_title(String user) {
     return 'Bidragsgivarpriser: $user';
   }
@@ -3017,7 +3071,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prices_challenges_page => 'Utmaningar';
 
   @override
-  String get prices_multiple_proof_addition_system => 'Add Multiple Proofs';
+  String get prices_multiple_proof_addition_system => 'Lägg till flera bevis';
 
   @override
   String get all_search_prices_top_location_single_title => 'Priser i en butik';
@@ -3050,7 +3104,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get signup_page_terms_of_use_line2 => 'användarvillkor och bidrag';
 
   @override
-  String get analytics_consent_image_semantic_label => 'Analytics icon';
+  String get analytics_consent_image_semantic_label => 'Analytics-ikon';
 
   @override
   String knowledge_panel_page_loading_error(Object? error) {
@@ -3267,7 +3321,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get add_basic_details_product_quantity_help_good_examples_2 =>
-      '**6** (for 6 eggs)';
+      '**6** (för 6 ägg)';
 
   @override
   String get add_basic_details_product_quantity_help_good_examples_3 =>
@@ -3458,7 +3512,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Keep the nutrition facts table expanded';
 
   @override
-  String get expand_ingredients => 'Expand ingredients';
+  String get expand_ingredients => 'Expandera ingredienser';
 
   @override
   String get expand_ingredients_body => 'Keep the ingredients panel expanded';
@@ -3668,7 +3722,7 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
-  String get edit_packagings_element_field_units => 'Number of units';
+  String get edit_packagings_element_field_units => 'Antal enheter';
 
   @override
   String get edit_packagings_element_hint_units =>
@@ -3695,7 +3749,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get edit_packagings_element_example_material => 'Glas';
 
   @override
-  String get edit_packagings_element_field_recycling => 'Recycling instruction';
+  String get edit_packagings_element_field_recycling =>
+      'Återvinningsinstruktion';
 
   @override
   String get edit_packagings_element_hint_recycling =>
@@ -3914,7 +3969,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get loading => 'Laddar…';
 
   @override
-  String get know_more => 'Know More';
+  String get know_more => 'Lär dig mer';
 
   @override
   String get offline_data_desc => 'Click to know more about offline data';
@@ -3995,32 +4050,33 @@ class AppLocalizationsSv extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Grön poäng A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Grönpoäng B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Grönpoäng C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Grönpoäng D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Grön-poäng E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Okänd Green-Score';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score är inte tillämpligt';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ultraprocessade livsmedel - NOVA-grupper';
 
   @override
   String get nova_group_1 => 'NOVA Grupp 1';
@@ -4035,7 +4091,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get nova_group_4 => 'NOVA Grupp 4';
 
   @override
-  String get nova_group_unknown => 'Unknown NOVA Group';
+  String get nova_group_unknown => 'Okänd NOVA-grupp';
 
   @override
   String get nutrition_facts => 'Näringsnivåer';
@@ -4117,9 +4173,6 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Dela';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4228,11 +4281,280 @@ class AppLocalizationsSv extends AppLocalizations {
       'För tillverkarna är visning av Nutri-Score **fortsatt valfri**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Vad är den gröna poängen?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score är en logotyp som syftar till att informera dig om **matens miljöpåverkan**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Färgkoden varierar från mörkgrön (**A+**) för de **minst påverkande** produkterna till mörkröd (**F**) för de **mest påverkande** produkterna.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score-logotyperna';
+
+  @override
+  String get guide_greenscore_lca_title => 'Kärnan: Livscykelanalys (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'En vetenskaplig utvärdering av livsmedelskategorier';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'För varje produktkategori fastställs ett **riktmärke**-resultat med hjälp av data från miljödatabasen Agribalyse (utformad av ADEME och INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Livscykelanalys** är en standardiserad bedömningsmetod för att genomföra en miljöbedömning i flera steg och med flera kriterier.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Den mäter:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 produktionssteg';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Jordbruk';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Bearbetar';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Förpackning';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transport';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Konsumtion';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 indikatorer för miljöpåverkan';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Klimatförändringar/koldioxidavtryck';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Utarmning av ozonskiktet';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Joniserande strålning';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Landa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Vatten- och energianvändning';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Luftföroreningar';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Marint och sötvatten (partiklar, försurning, övergödning)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Utarmning av resurser.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonusar och straffavgifter';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'För att belöna bättre produkter inom en kategori tillämpar vi sedan bonusar och påföljder baserat på flera kriterier:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title => 'Produktionssätt';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Ingredients ursprung';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'En bonus utdelas baserat på ingrediensernas ursprung. Denna bonus tar hänsyn till transportpåverkan och även miljöpolicyn i varje producents land.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Utrotningshotade arter';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Förpackning';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'En straffavgift beräknas för att ta hänsyn till förpackningens cirkularitet (användning av återvunnen råvara och återvinningsbarhet) och överpackning.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'För att korrekt beräkna Green-Score är det nödvändigt att ha information som inte nödvändigtvis anges på förpackningen (såsom ursprung och exakt procentandel av varje ingrediens) eller som sällan är tillgänglig i användbar form (såsom en lista över alla komponenter i förpackningen med exakt vilka typer av plast som används).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Medelvärden används när denna information ännu inte är tillgänglig, men vi uppmanar nu alla att hjälpa oss att samla in denna information som kommer att vara mycket användbar för Green-Score men även för många andra användningsområden.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Hur medborgare kan hjälpa till';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Alla medborgare kan hjälpa oss att samla in och strukturera den information som finns på produkter eller som kan härledas från dem, såsom information om förpackningar: Mission Emballages: en storskalig gemensam inventering av förpackningar för alla livsmedelsprodukter (på franska)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Hur tillverkare kan hjälpa till';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Tillverkare kan skicka sin information direkt till oss via vår kostnadsfria plattform för producenter.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Vilken produkt är bäst för planeten?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Det kan vara svårt att säga';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Att välja hållbar mat är en av de mest kraftfulla sakerna vi kan göra för klimatet, eftersom **vårt globala livsmedelssystem står för över en fjärdedel av alla utsläpp av växthusgaser**.\n(Källa: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Du har makten!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Den goda nyheten är att detta ger oss ett kraftfullt sätt att skapa förändring.\n**Var och en av oss äter cirka 1 000 måltider varje år**. Det är 1 000 möjligheter att **välja en bättre framtid för planeten**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Hjälper att ta ansvar och bestämma';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Att välja hållbar mat kan kännas komplicerat. Etiketter är förvirrande och information saknas ofta. Green-Score skapades för att göra det enkelt och ger dig en **tydlig**, **vetenskapsbaserad** och **transparent** miljöklassificering för livsmedelsprodukter, precis där du behöver den: när du handlar.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Genomskinlighet';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Till skillnad från proprietära etiketter är Green-Score-beräkningen **helt öppen** och kan **verifieras av vem som helst**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Vad är ultraprocessing?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA-grupperna informerar dig om graden av livsmedelsbearbetning.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA-klassificeringen möjliggör kategorisering av livsmedel i **fyra grupper** baserat på deras **grad av industriell bearbetning** (minimalt bearbetade eller obearbetade livsmedel, kulinariska ingredienser, bearbetade livsmedel, ultrabearbetade livsmedel).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA-logotyperna';
+
+  @override
+  String get guide_nova_groups_title => 'De 4 NOVA-grupperna';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Det finns fyra NOVA-grupper, varav den problematiska är Grupp 4 - Ultraprocessade livsmedel.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Minimalt bearbetade eller obearbetade livsmedel';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Obearbetade (eller naturliga) livsmedel är de ätbara delarna av växter (frön, frukter, blad, stjälkar, rötter) eller djur (muskler, slaktbiprodukter, ägg, mjölk), samt svampar, alger och vatten, efter att de separerats från naturen.';
+
+  @override
+  String get guide_nova_groups_arg2_title =>
+      'Bearbetade kulinariska ingredienser';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Bearbetade kulinariska ingredienser, såsom oljor, smör, socker och salt, är ämnen som härrör från livsmedel i grupp 1 eller från naturen genom processer som inkluderar pressning, raffinering, malning, fräsning och torkning.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Halvfabrikat';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Bearbetade livsmedel, såsom flaskgrönsaker, konserverad fisk, frukt i sockerlag, ostar och nybakat bröd, tillverkas huvudsakligen genom att tillsätta salt, olja, socker eller andra ämnen från grupp 2 till grupp 1-livsmedel. Processerna inkluderar olika konserverings- eller tillagningsmetoder, och när det gäller bröd och ost, alkoholfri jäsning. De flesta bearbetade livsmedel har två eller tre ingredienser och är igenkännbara som modifierade versioner av grupp 1-livsmedel. De kan ätas som de är eller, vanligare, i kombination med andra livsmedel.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ultrabearbetade livsmedel, såsom läsk, söta eller salta förpackade snacks, rekonstituerade köttprodukter och färdigfrysta rätter, är inte bara modifierade livsmedel utan formuleringar som till största delen eller helt och hållet tillverkas av ämnen som härrör från livsmedel och tillsatser, med lite eller ingen intakt grupp 1-livsmedel. Ingredienser i dessa formuleringar inkluderar vanligtvis de som också finns i bearbetade livsmedel, såsom sockerarter, oljor, fetter eller salt. Ultrabearbetade produkter innehåller dock också andra energikällor och näringsämnen som vanligtvis inte används i kulinariska beredningar. Några av dessa utvinns direkt från livsmedel, såsom kasein, laktos, vassle och gluten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Problemen med ultrabearbetning';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Extrem bearbetning av livsmedelsingredienser';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Många härrör från vidare bearbetning av livsmedelsbeståndsdelar, såsom hydrerade eller interesterifierade oljor, hydrolyserade proteiner, sojaproteinisolat, maltodextrin, invertsocker och majssirap med hög fruktoshalt.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Tillsatser som går utöver ren livsmedelssäkerhet';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Tillsatser i ultrabearbetade livsmedel inkluderar vissa som också används i bearbetade livsmedel, såsom konserveringsmedel, antioxidanter och stabiliseringsmedel. Klasser av tillsatser som endast finns i ultrabearbetade produkter inkluderar de som används för att imitera eller förbättra livsmedels sensoriska egenskaper eller för att dölja obehagliga aspekter av slutprodukten. Dessa tillsatser inkluderar färgämnen och andra färger, färgstabilisatorer; aromer, smakförstärkare, sötningsmedel utan socker; och processhjälpmedel såsom kolsyrare, fasthetsgivande, bulkmedel och anti-bulkmedel, skumdämpande, klumpförebyggande och glaseringsmedel, emulgeringsmedel, sekvestreringsmedel och fuktighetsbevarande medel.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Bearbetning du inte kan göra hemma';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'En mängd olika processsekvenser används för att kombinera de vanligtvis många ingredienserna och skapa slutprodukten (därav \"ultraprocessad\"). Processerna inkluderar flera utan inhemska motsvarigheter, såsom hydrogenering och hydrolys, extrudering och gjutning, samt förbehandling för stekning.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'De rovgiriga och ekonomiska aspekterna av ultrabearbetning';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Det övergripande syftet med ultraprocessning är att skapa märkesvaror som är bekväma (hållbara, färdiga att konsumeras), attraktiva (hypervälsmakande) och mycket lönsamma (billiga ingredienser) livsmedelsprodukter, utformade för att ersätta alla andra livsmedelsgrupper. Ultraprocessade livsmedelsprodukter är vanligtvis attraktivt förpackade och marknadsförs intensivt.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4361,7 +4683,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get product_page_pending_operations_banner_title =>
-      'Uploading your edits…';
+      'Laddar upp dina redigeringar…';
 
   @override
   String get product_page_pending_operations_banner_message =>
@@ -4449,7 +4771,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get photo_field_ingredients => 'Foto på ingredienser';
 
   @override
-  String get photo_field_nutrition => 'Nutrition photo';
+  String get photo_field_nutrition => 'Näringsfoto';
 
   @override
   String get photo_field_packaging => 'Foto på förpackningsinformation';
@@ -4509,10 +4831,10 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
-  String get product_list_export => 'Export';
+  String get product_list_export => 'Exportera';
 
   @override
-  String get product_list_import => 'Import';
+  String get product_list_import => 'Importera';
 
   @override
   String get product_footer_action_barcode => 'Visa streckkod';
@@ -4524,7 +4846,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get product_footer_action_open_website => 'Öppna webbplats';
 
   @override
-  String get product_footer_action_report => 'Report';
+  String get product_footer_action_report => 'Rapportera';
 
   @override
   String get product_footer_action_contributor_guide => 'Hjälp';
@@ -4543,6 +4865,12 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get product_page_tab_folksonomy => 'Folksonomi';
+
+  @override
+  String get prices_products_empty_title => 'Inget pris tillgängligt';
+
+  @override
+  String get prices_products_empty_explanation => 'Bli först med att bidra!';
 
   @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
@@ -4583,7 +4911,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extraktion pågår…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Extraheringen lyckades';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4608,7 +4939,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get prices_stats_locations_section => 'Platser';
 
   @override
-  String get prices_stats_proofs_section => 'Proofs';
+  String get prices_stats_proofs_section => 'Bevis';
 
   @override
   String get prices_stats_contributors_section => 'Bidragsgivare';
@@ -4714,6 +5045,498 @@ class AppLocalizationsSv extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'Allmänt';
+
+  @override
+  String get preferences_prices_title => 'Priser';
+
+  @override
+  String get preferences_prices_subtitle => 'Hantera dina prisinställningar';
+
+  @override
+  String get preferences_card_project => 'Projektet Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Bidra';
+
+  @override
+  String get preferences_my_contributions_title => 'Mina bidrag';
+
+  @override
+  String get preferences_my_stats_title => 'Min statistik';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Översätt, förbättra våra verktyg…';
+
+  @override
+  String get preferences_connect_title => 'Ansluta';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Hör av dig, eller följ oss på sociala medier';
+
+  @override
+  String get preferences_support_title => 'Donera';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Hjälp oss att informera miljontals konsumenter runt om i världen';
+
+  @override
+  String get preferences_card_help => 'Hjälp och support';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Få svar på dina frågor';
+
+  @override
+  String get logged_out => 'Utloggad';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Tack för att du är en av våra medlemmar!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Produkter ändrade';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Priser tillagda';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Se all statistik';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Sök $provider efter \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Sök efter en inställning (t.ex. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Tillgänglighet: Visa emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Tillgänglighet: Ta bort färger';
+
+  @override
+  String get preferences_app_settings_products => 'Produkter';
+
+  @override
+  String get preferences_card_about => 'Om';
+
+  @override
+  String get preferences_legal_information_title => 'Juridisk information';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Användarvillkor, integritetspolicy och mer';
+
+  @override
+  String get preferences_terms_of_use => 'Användningsvillkor';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts är en databas med livsmedelsprodukter **skapad av alla, för alla**.\nDu kan använda den för att göra bättre matval, och eftersom det är **öppen data** kan vem som helst **återanvända den för vilket syfte som helst**.';
+
+  @override
+  String get preferences_privacy_policy => 'Integritetspolicy';
+
+  @override
+  String get preferences_licenses => 'Licenser';
+
+  @override
+  String get preferences_about_app_title => 'Om appen';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Teknisk information, utvecklarinformation och mer';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Versionsnummer';
+
+  @override
+  String get preferences_scanner_title => 'Scanner';
+
+  @override
+  String get preferences_app_store => 'Appbutik';
+
+  @override
+  String get preferences_app_system_settings => 'Systeminställningar';
+
+  @override
+  String get preferences_source_code => 'Åtkomst till källkoden';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Och börja göra skillnad för miljontals';
+
+  @override
+  String get preferences_add_prices => 'Lägg till priser';
+
+  @override
+  String get preferences_complete_products => 'Berätta för världen';
+
+  @override
+  String get preferences_tips => 'Tips';
+
+  @override
+  String get tips_discover_nutriscore => 'Upptäck den nya Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'På webbplatsen Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Hantera mitt konto';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Hantera ditt konto';
+
+  @override
+  String get preferences_change_password_title => 'Ändra mitt lösenord';
+
+  @override
+  String get preferences_danger_zone => 'Riskzon';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Alla dina bidrag kommer att gå förlorade';
+
+  @override
+  String get preferences_contributions_title => 'Bidrag';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Appinställningar';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Mycket experimentellt sätt att skanna produkter offline';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Uppdatera alla produkter från servern';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Undvik att göra det om det inte är absolut nödvändigt';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demoläge';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Lägg till kort i skannern';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Lägger till 3 provprodukter i skannern';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'Folksonomy-värd';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Värd: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Tillgänglighetsexperiment';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Flerproduktsval för priser';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Användarbeställda kunskapspaneler';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Tillfällig åtkomst till platssökning';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Jämförelse sida vid sida för 2 eller 3 produkter';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Import av produktlista';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Poäng och metoder';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Upptäck hur Nutri-Score beräknas';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Upptäck de viktigaste förändringarna i metodiken';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Upptäck projektet';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Upptäck öppna matfakta';
+
+  @override
+  String get preferences_faq_faq_title => 'Vanliga frågor - Vanliga frågor';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'NGO:n Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Få uppdateringar från communityn';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Håll dig uppdaterad med app- och communitynyheter';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Engagera dig genom att delta i ett av våra virtuella evenemang';
+
+  @override
+  String get preferences_connect_blog_title => 'Bloggen Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Få de senaste nyheterna, allt eftersom de händer';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Få hjälp från samhället';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Hjälp oss att förbättra appen';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Skicka felsökningsinformation till oss';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Skicka oss ett e-postmeddelande med detaljerad felsökningsinformation';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Skicka oss feedback om appen';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Hjälp till att forma appens framtid';
+
+  @override
+  String get preferences_connect_survey_title => 'Delta i appundersökningen';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Hjälp oss att förstå vad vi ska bygga härnäst';
+
+  @override
+  String get preferences_connect_professionals_title => 'yrkesverksamma';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Helt gratis, garanterar korrekt data för 500 appar och miljontals konsumenter. Självbetjäning, kompatibel med ditt PIM eller kalkylblad (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Kontakta oss för att komma igång';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Få allt material du behöver till din rapport';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Kontakta oss för pressförfrågningar eller för att berätta om din rapport';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Bli en aktiv volontär';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Utveckling, kommunikation, design… alla former av volontärarbete eller expertis är välkomna!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Upptäck några av de många sätt du kan bidra på';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Utveckling av mobilappar';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Lär dig hur du kan bidra till mjukvaruutveckling';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Dagliga instabila byggen, helt nya funktioner';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Utveckla ditt lokala samhälle';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Hjälp med översättningar av programvara, innehåll och ingrediensanalyser';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Vi har förberett en liten mall som kan hjälpa dig :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Enkla steg för att öka livsmedelstransparensen i ditt land';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Datakvalitet';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Gå med i datakvalitetsteamet';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Hjälp oss att säkerställa att databasen är komplett och korrekt';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Tillagda produkter';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nya produkter jag har lagt till i Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produkter jag behöver slutföra';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Alla ofullständiga produkter';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Priser';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'Mina priser';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Mina priser, mina bevis…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produkter du kan hjälpa till att slutföra';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Hjälp till att beräkna Nutri-Score och Green-Score i ditt land';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Priser jag bidrog med';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Prislappar och kvitton';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Ta foton av dina kvitton och skanna tillhörande streckkoder';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Ta bilder på priserna i en butik';
+
+  @override
+  String get preferences_prices_newest_title => 'Senaste priserna';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Senaste priserna tillagda av Open Prices-communityn';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Bidragsgivare med högst priser';
+
+  @override
+  String get preferences_prices_metrics_title => 'Mätvärden för öppna priser';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Följ projektets utveckling';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Sätt att bidra';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Bekräfta priser som lagts till av dig själv eller andra, med hjälp av AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Lägg snabbt till många kvitton eller foton på hyllor från din kamerarulle';
+
+  @override
+  String get preferences_prices_challenges_title => 'Månatliga utmaningar';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Delta i månatliga tematiska uppdrag för att samla priser';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Återta din lojalitetsdata';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Läs hur du begär dina uppgifter';
+
+  @override
+  String get preferences_page_customize_app_title => 'Anpassa appen';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Bidra till projektet';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Enkla sätt att hjälpa till Öppna matfakta';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Poängsättningsmetoder, hjälp och mer om projektet';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Acceptera förslaget';
 
   @override
@@ -4758,4 +5581,102 @@ class AppLocalizationsSv extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Autentisering misslyckades, det gick inte att hämta bevis';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count av $total bevis';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count bevis';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count av $total bidragsgivare';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count av $total platser';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count platser';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Starta om appen för att tillämpa ändringarna.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Grafiskt gränssnitt';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Utveckling';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Öppna matfaktalabb';
+
+  @override
+  String get preferences_root_account_title => 'Konto';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Få Open Food Facts till ditt språk';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Registrera dig för alfaversionen av appen';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Bidrag och produktdata';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Visa inte folksonomi';
+
+  @override
+  String get preferences_account_title => 'Konto';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Tillagd den $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

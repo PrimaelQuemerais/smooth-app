@@ -9,6 +9,9 @@ class AppLocalizationsCv extends AppLocalizations {
   AppLocalizationsCv([String locale = 'cv']) : super(locale);
 
   @override
+  String get app_name => 'Уҫӑ апат-ҫимӗҫ факчӗсем';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsCv extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsCv extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsCv extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Тӗрӗсрех категори суйласа илӗр';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsCv extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Харпӑрлӑх ҫук';
+
+  @override
+  String get product_tags_explanation =>
+      'Продукта хӑйне евӗрлӗхсем (ключ/значени) хушса эсир ӑна пуянлатма пулӑшатӑр.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Манӑн аккаунта пӗтерӗр';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsCv extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Эксперименталлӑ функцисемпе тата аталану хатӗрӗсемпе усӑ курӑр';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsCv extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Уҫӑ хаксен сайтӗнче уҫӑр';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsCv extends AppLocalizations {
   String get prices_list_add_new_price => '\nҫӗнӗ хак хушӑр';
 
   @override
+  String get prices_list_empty_title => 'Хак ҫук-ха!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Пӗрре чи малтан хушӑр:\n**квитанци** е **хак паллине** сканерласа!';
+
+  @override
   String get prices_entry_shop_not_found => 'Паллӑ мар магазин';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Ҫак таварӑн пур хакне те пӑхӑр';
 
   @override
   String get prices_entry_menu_open_proof => 'Доказательствӑна пӑхӑр';
@@ -2728,9 +2749,21 @@ class AppLocalizationsCv extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Хальлӗхе хутшӑнакан ҫук-ха!';
+
+  @override
+  String get prices_users_empty_explanation => 'Хака чи малтан хушӑр!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Лавкка ҫук-ха!';
+
+  @override
+  String get prices_locations_empty_explanation => 'Хака чи малтан хушӑр!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2868,17 @@ class AppLocalizationsCv extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Хальлӗхе ҫирӗплетӳ ҫук-ха!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '**квитанци** е **хак палли** сӑнӳкерчӗкне хушса пуҫлӑр!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2957,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2969,17 @@ class AppLocalizationsCv extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Приложени чӗлхине ҫӗнӗрен ларт';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Карточкӑсем хушӑр';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'prices.openfoodfacts.org (PROD) тата test env хушшинче куҫӑр';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3023,11 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4029,32 @@ class AppLocalizationsCv extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Грин-Скор А';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Грин-Скор В';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Грин-Скор';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Грин-Скор D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Грин-Скор Е';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Паллӑ мар симӗс-балл';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new => 'Green-Score юрӑхсӑр';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ультра-процессланӑ апат-ҫимӗҫ - NOVA ушкӑнӗсем';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4151,6 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4258,279 @@ class AppLocalizationsCv extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'Симӗс балл мӗн вӑл?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score — логотип, вӑл сире **апат-ҫимӗҫ тавралӑха мӗнле витӗм кӳни** ҫинчен пӗлтерме тӑрӑшать.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Тӗс кодӗ **чи сахал витӗмлӗ** продуктсемшӗн тӗксӗм симӗсрен (**A+**) пуҫласа **чи витӗмлӗ** продуктсемшӗн тӗксӗм хӗрлӗ (**F**) таран улшӑнать.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score логотипӗсем';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Тӗп шухӑшӗ: пурнӑҫ циклне хак пани (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Апат-ҫимӗҫ категорийӗсене наука тӗлӗшӗнчен хак пани';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Кашни продукт категорийӗ валли Agribalyse тавралӑх базинчи (ADEME тата INRAE хатӗрленӗ) даннӑйсемпе усӑ курса **бенчмарк** баллне палӑртаҫҫӗ.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Пурнӑҫ циклӗн анализӗ** — нумай тапхӑрлӑ тата нумай критериллӗ тавралӑх хаклавне туса пымалли стандартизациленӗ хаклав меслечӗ.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Вӑл виҫет:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 производство тапхӑрӗ';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 тавралӑха витӗм кӳрекен кӑтартусем';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Климат улшӑнӑвӗ/углерод йӗрӗ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Озон сийӗ чакни';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ионизацилекен радиаци';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Çӗр';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'Шывпа тата энергипе усӑ курасси';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Сывлӑша вараласси';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Тинӗс тата тӑварсӑр шыв (пайӑркасем, йӳҫекленӳ, эвтрофикаци)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Ресурссем пӗтни.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Премисемпе штрафсем';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Пӗр-пӗр категорире лайӑхрах продукцие хавхалантарма эпир унтан темиҫе критери тӑрӑх премисемпе штрафсем паратпӑр:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ингредиентсем ӑҫтан тухнине кура бонус параҫҫӗ. Ку преми транспорт ҫине мӗнле витӗм кӳнине тата кашни производитель ҫӗршывӗн экологи политикине шута илет.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Green-Score тӗрӗс шутласа кӑларма упаковкӑра палӑртман информаци (сӑмахран, кашни ингредиентӑн ӑҫтан тухни тата унӑн тӗрӗс процентӗ) е усӑ курма юрӑхлӑ формӑра сайра тӗл пулакан (сӑмахран, упаковкӑн мӗнпур компоненчӗсен списокӗпе усӑ курнӑ пластикӑн тӗрӗс тӗсӗсем) пулмалла.';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Вӑтам хаксемпе ҫак информаци ҫук чухне усӑ кураҫҫӗ, анчах эпир халӗ пурне те ҫак информацие пухма пулӑшма чӗнетпӗр, вӑл Green-Score валли те, ытти нумай ӗҫре те питӗ усӑллӑ пулӗ.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Граждансем мӗнле пулӑшма пултараҫҫӗ';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Пур граждансем те пире продукци ҫинчен е унран пӗлме пултаракан информацие пухма тата йӗркелеме пулӑшма пултараҫҫӗ, сӑмахран, упаковка ҫинчен калакан информацие: Mission Emballages: пур апат-ҫимӗҫ продукчӗсен упаковкасен пысӑк масштаблӑ пӗрлехи инвентаризацийӗ (французла)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Производительсем мӗнле пулӑшма пултараҫҫӗ';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Производительсем хӑйсен информацине пире тӳрех пирӗн производительсем валли тунӑ тӳлевсӗр платформа урлӑ ярса пама пултараҫҫӗ.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Планетӑшӑн хӑш продукт лайӑхрах?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Ӑна калама йывӑр пулма пултарать';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Ҫирӗп апат-ҫимӗҫе суйласа илни — эпир климатшӑн тума пултаракан чи хӑватлӑ ӗҫсенчен пӗри, мӗншӗн тесен **пирӗн тӗнчери апат-ҫимӗҫ тытӑмӗ мӗнпур парник газӗсен тӑваттӑмӗш пайӗшӗн яваплӑ**.\n(Ҫӑлкуҫӗ: Пур тата Немечек, Наука, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Сирӗн влаҫ пур!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Ырӑ хыпар вӑл — ҫакӑ пире улшӑнусем тума хӑватлӑ май парать.\n**Пирӗнтен кашниех кашни ҫул 1000 яхӑн апат ҫиет**. Ку вӑл — **планета валли лайӑхрах пуласлӑх суйласа илме** 1000 май!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Яваплӑ пулма тата йышӑну тума пулӑшать';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Ҫирӗп апат-ҫимӗҫ суйласа илесси кӑткӑс пек туйӑнма пултарать. Ярлыксем пӑтраштараҫҫӗ, информаци час-часах ҫук. Green-Score ҫакна ансатлатма тунӑ, вӑл сире апат-ҫимӗҫ продукчӗсемшӗн **уҫӑмлӑ**, **наука никӗсӗ ҫинче никӗсленнӗ** тата **уҫӑмлӑ** экологи рейтингне парать, шӑпах сире кирлӗ ҫӗрте: эсир суту-илӳ тунӑ вӑхӑтра.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Уҫӑмлӑх';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Проприетарлӑ ярлыксенчен уйрӑлса тӑракан Green-Score шутлавӗ **пӗтӗмпех уҫӑ** тата ӑна **кирек кам та тӗрӗслеме пултарать**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Мӗн вӑл ультрапроцессинг?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA ушкӑнӗсем сире апат-ҫимӗҫе тирпейлессин шайӗ ҫинчен пӗлтереҫҫӗ.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA классификацийӗ апат-ҫимӗҫе **4 ушкӑна** уйӑрма май парать, ӑна вӗсен **промышленноҫри тирпейленӗвӗн шайӗ** тӑрӑх (сахал тирпейленӗ е тирпейлемен апат-ҫимӗҫ, кулинари ингредиенчӗсем, тирпейленӗ апат-ҫимӗҫ, ытлашши тирпейленӗ апат-ҫимӗҫ).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA логотипӗсем';
+
+  @override
+  String get guide_nova_groups_title => 'NOVA ушкӑнӗ';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'NOVA ушкӑнӗ 4, вӗсенчен йывӑрри — 4-мӗш ушкӑн — питӗ тирпейленӗ апат-ҫимӗҫ.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Сахал тирпейленӗ е тирпейлемен апат-ҫимӗҫ';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Тирпейлемен (е ҫутҫанталӑк) апат — ӳсентӑрансен (вӑрлӑх, ҫимӗҫ, ҫулҫӑ, туна, тымар) е чӗрчунсен (мышца, пыршӑлӑх, ҫӑмарта, сӗт), ҫавӑн пекех ҫутҫанталӑкран уйӑрнӑ хыҫҫӑн кӑмпа, шыв курӑкӗ тата шыв ҫиме юрӑхлӑ пайӗсем.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Тирпейленӗ кулинари ингредиенчӗсем, сӑмахран, ҫу, ҫу, сахӑр тата тӑвар, — 1-мӗш ушкӑнри апат-ҫимӗҫрен е ҫутҫанталӑкран илсе тухнӑ япаласем, вӗсен шутне пресласа, тасатса, авӑртса, авӑртса тата типӗтсе хатӗрлеҫҫӗ.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Тирпейленӗ апат-ҫимӗҫе, сӑмахран, бутылкӑри пахча ҫимӗҫе, консервӑланӑ пулӑна, сироппа ҫимӗҫе, сырсене тата тин ҫеҫ пӗҫернӗ ҫӑкӑрсене, тӗпрен илсен, тӑвар, ҫу, сахӑр е 2-мӗш ушкӑнри апат-ҫимӗҫе 1-мӗш ушкӑнри ытти япаласем хушса хатӗрлеҫҫӗ. Процесссем шутне тӗрлӗ упрамалли е пӗҫермелли меслетсем кӗреҫҫӗ, ҫӑкӑрпа сыр тӗслӗхӗнче вара алкогольсӗр йӳҫӗтесси. Ытларах тирпейленӗ апат-ҫимӗҫре икӗ е виҫӗ япала пур, вӗсене 1-мӗш ушкӑнри апат-ҫимӗҫӗн улӑштарнӑ варианчӗсем тесе шутлама пулать. Вӗсене хӑйсем тӗллӗн е, ытларах чухне, ытти апат-ҫимӗҫпе пӗрле ҫиме пулать.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ҫав тери тирпейленӗ апат-ҫимӗҫ, сӑмахран, газсӑр ӗҫмелли япаласем, тутлӑ е тутлӑ ҫӑкӑр-тӑвар, ҫӗнӗрен хатӗрленӗ аш-какай продукчӗсем тата малтанах хатӗрленӗ шӑнтнӑ апат-ҫимӗҫ, вӗсем ахаль модификациленӗ апат-ҫимӗҫ кӑна мар, ытларах е пӗтӗмпех апат-ҫимӗҫрен тата хушмалли япаласенчен хатӗрленӗ формулӑсем, 1-мӗш ушкӑнри апат-ҫимӗҫ ҫирӗп мар е пачах та ҫук. Ҫак препаратсенчи ингредиентсем хушшинче ытларах чухне тирпейленӗ апат-ҫимӗҫре те пулаканнисем, сӑмахран, сахӑр, ҫу, ҫу е тӑвар пур. Анчах та ҫав тери тирпейленӗ продукцире ытти энерги ҫӑлкуҫӗсем те пур, вӗсене кулинари хатӗрӗсенче ытларах усӑ курмаҫҫӗ. Вӗсенчен хӑшӗ-пӗрисене тӳрремӗнех апат-ҫимӗҫрен кӑлараҫҫӗ, сӑмахран, казеинран, лактозӑран, йӳҫекрен тата клейковинаран.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ультра-обработкӑпа ҫыхӑннӑ ыйтусем';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Апат-ҫимӗҫ хатӗрӗсене питӗ хытӑ тирпейлесси';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Нумайӑшӗ апат-ҫимӗҫ компоненчӗсене малалла тирпейлесе хатӗрленӗ хыҫҫӑн пулаҫҫӗ, сӑмахран, гидрированнӑй е интерестеризациленӗ ҫусем, гидролизланӑ белоксем, соя белокӗн изолячӗ, мальтодекстрин, инвертлӑ сахӑр тата пысӑк фруктозӑллӑ кукуруза сиропӗ.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Таса апат-ҫимӗҫ хӑрушсӑрлӑхӗнчен тухакан хушмалли япаласем';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ультра-тирпейленӗ апат-ҫимӗҫри хушмалли япаласем шутне тирпейленӗ апат-ҫимӗҫре те усӑ кураканнисем кӗреҫҫӗ, сӑмахран, консервантсем, антиоксидантсем тата стабилизаторсем. Ультра-тирпейленӗ продукцире кӑна тӗл пулакан хушмалли япаласен класӗсем шутне апат-ҫимӗҫӗн туйӑм пахалӑхне евӗрлеме е лайӑхлатма е юлашки продуктӑн тутлӑ мар енӗсене пытарма усӑ кураканнисем кӗреҫҫӗ. Ҫак хушӑмсем шутне сӑрӑсем тата ытти тӗссем, тӗс стабилизаторӗсем кӗреҫҫӗ; тутӑ кӗртекен япаласем, тутӑ ҫирӗплетекен япаласем, сахӑрсӑр тутлӑлантаракан япаласем; тата тирпейлеме пулӑшакан хатӗрсем, сӑмахран, карбонизацилекен, ҫирӗплетекен, ҫыпӑҫтаракан тата ҫыпӑҫтаракан хатӗрсем, кӑпӑклантаракан, ҫыпӑҫтаракан тата ҫыпӑҫтаракан хатӗрсем, эмульгаторсем, секвестрантсем тата нӳрлетекен япаласем.';
+
+  @override
+  String get guide_nova_explanations_arg3_title => 'Килте тума май ҫук ӗҫ';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Ытларах чухне нумай ингредиентсене пӗрлештерме тата юлашки продукта (ҫавӑнпа та «ультра-процессланӑ») тума нумай процесс йӗркипе усӑ кураҫҫӗ. Процесссен шутне килти эквиваленчӗсем ҫуккисем кӗреҫҫӗ, сӑмахран, гидрогенизаци тата гидролиз, экструзи тата формӑсем, ӑшалама малтанах тирпейлесси.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ультрапроцессин ҫӑткӑнлӑх тата финанс енӗсем';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ультра-тирпейлессин пӗтӗмӗшле тӗллевӗ — ытти апат-ҫимӗҫ ушкӑнӗсене улӑштарма хатӗрленӗ брендлӑ, меллӗ (тӗрӗс, ҫиме хатӗр), илӗртӳллӗ (питӗ тутлӑ) тата пысӑк тупӑшлӑ (йӳнӗ ингредиентсем) апат-ҫимӗҫ продукчӗсем туса кӑларасси. Ультра-тирпейленӗ апат-ҫимӗҫ продукцийӗсене ытларах чухне илӗртӳллӗн пуҫтараҫҫӗ тата вӗсене хӗрӳллӗн сутаҫҫӗ.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4843,12 @@ class AppLocalizationsCv extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Хак ҫук';
+
+  @override
+  String get prices_products_empty_explanation => 'Чи малтан тӳпе хывӑр!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4887,10 @@ class AppLocalizationsCv extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Экстракци пырать…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Экстракци ӑнӑҫлӑ';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5021,502 @@ class AppLocalizationsCv extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Хаксен кӑмӑлне йӗркелесе пырӑр';
+
+  @override
+  String get preferences_card_project => '«Уҫӑ апат-ҫимӗҫ факчӗсем» проект';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Манӑн статистика';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Куҫарӑр, пирӗн хатӗрсене лайӑхлатӑр…';
+
+  @override
+  String get preferences_connect_title => 'Çыхӑнтар';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Ҫыхӑнӑр е социаллӑ сетьсенче пире сӑнаса тӑрӑр';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Тӗнчери миллионшар потребительсене пӗлтерме пулӑшӑр';
+
+  @override
+  String get preferences_card_help => 'Пулӑшу тата пулӑшу';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Ыйтусем ҫине хурав илӗр';
+
+  @override
+  String get logged_out => 'Тухнӑ';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Тавтапуҫ сире пирӗн членсенчен пӗри пулнӑшӑн!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Пур статистикӑна та пӑхӑр';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '$provider шыраса \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Настройкӑна шыраса тупӑр (тӗслӗхрен, Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Ҫитме май пурри: эмодзи кӑтарт';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Ҫитме май пурри: Тӗссене кӑларса пӑрахӑр';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Юридици информацийӗ';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Усӑ курмалли условисем, вӑрттӑнлӑх политики тата ытти те';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts — апат-ҫимӗҫ продукчӗсен базине **пурте тунӑ, пурте валли**.\nЭсир унпа апат-ҫимӗҫе лайӑхрах суйласа илме усӑ курма пултаратӑр, вӑл **уҫӑ даннӑйсем** пулнӑ май ӑна кирек кам та **кирек мӗнле тӗллевпе те тепӗр хут усӑ курма пултарать**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Лицензисем';
+
+  @override
+  String get preferences_about_app_title => 'Приложени ҫинчен';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Техника информацийӗ, разработчик информацийӗ тата ытти те';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Верси номерӗ';
+
+  @override
+  String get preferences_scanner_title => 'Сканер';
+
+  @override
+  String get preferences_app_store => 'Приложени магазинӗ';
+
+  @override
+  String get preferences_app_system_settings => 'Система настройкисем';
+
+  @override
+  String get preferences_source_code => 'Ҫӑлкуҫ кодне кӗрӗр';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Миллионшар ҫынна витӗм кӳме пуҫлӑр';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Усӑллӑ канашсем';
+
+  @override
+  String get tips_discover_nutriscore => 'Ҫӗнӗ Nutri-Score уҫӑр';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Уҫӑ апат-ҫимӗҫ факчӗсен сайтӗнче';
+
+  @override
+  String get preferences_manage_account_title => 'Манӑн аккаунта тытса пырӑр';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'Хӑвӑрӑн аккаунта тытса пырӑр';
+
+  @override
+  String get preferences_change_password_title => 'Манӑн пароле улӑштар';
+
+  @override
+  String get preferences_danger_zone => 'Хӑрушлӑх зони';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Сирӗн мӗнпур тӳпе ҫухалать';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Приложени настройкисем';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Продукцие офлайн мелӗпе сканерламалли питӗ экспериментлӑ меслет';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Сервертан пур продукта та ҫӗнетӗр';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Питӗ кирлӗ мар пулсан, ҫакна тума ан тӑрӑшӑр';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Демо-режим';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Сканер ҫине карттӑсем хушӑр';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Сканер ҫине 3 тӗслӗх продукчӗ хушать';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Фольксономи ертсе пыраканӗ';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Ертсе пыракан: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Ҫывӑхлӑх эксперименчӗсем';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Хаксем тӑрӑх нумай продукт суйласа илни';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Пулӑшакан заказ панӑ пӗлӳ панелӗсем';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Вырӑн шыравӗ патне вӑхӑтлӑх ирӗк';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'е 3 продукт валли юнашар танлаштарни';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Тавар списокне импорт';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Баллсем тата методологисем';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Nutri-Score мӗнле шутланине пӗлӗр';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Методикӑри тӗп улшӑнусене пӗлӗр';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Уҫӑ апат-ҫимӗҫ ҫинчен калакан фактсене уҫӑр';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - час-часах ыйтакан ыйтусем';
+
+  @override
+  String get preferences_faq_off_ngo_title => '«Уҫӑ апат-ҫимӗҫ факчӗсем» НПО';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Сообщество ҫӗнӗлӗхӗсене илӗр';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Приложени тата сообщество хыпарӗсемпе ҫыхӑнса тӑрӑр';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Пирӗн виртуаллӑ мероприятисенчен пӗрне хутшӑнса хутшӑнӑр';
+
+  @override
+  String get preferences_connect_blog_title => 'Уҫӑ апат-ҫимӗҫ факчӗсен блогӗ';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Юлашки хыпарсене пӗлӗр, вӗсем мӗнле пулса пыраҫҫӗ';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Обществӑран пулӑшу илӗр';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Приложение лайӑхлатма пулӑшӑр';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Отладка информацине ярса парӑр';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Пирӗн пата электронлӑ ҫыру ярса парӑр, унта отладка ҫинчен тӗплӗнрех пӗлме пулать';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Приложени пирки пире хӑвӑрӑн шухӑшӑрсене ярса парӑр';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Приложени пуласлӑхне йӗркелеме пулӑшӑр';
+
+  @override
+  String get preferences_connect_survey_title => 'Приложени ыйтӑмне хутшӑнӑр';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Малалла мӗн тумаллине ӑнланма пулӑшӑр';
+
+  @override
+  String get preferences_connect_professionals_title => 'Профессионалсем';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Пӗтӗмпех тӳлевсӗр, 500 приложени тата миллионшар потребитель валли тӗрӗс даннӑйсем парать. Хӑй тӗллӗн ӗҫлекен, сирӗн PIM е таблицӑсемпе (XLSX) килӗшсе тӑрать';
+
+  @override
+  String get preferences_connect_pro_email_subtitle => 'Пуҫлама ҫыхӑнӑр';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Хӑвӑрӑн отчет валли кирлӗ мӗнпур материала илӗр';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Пресс-ыйтусем пирки е хӑвӑрӑн докладӑр ҫинчен пире пӗлтерме ҫыхӑнӑр';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Хастар волонтер пулса тӑрӑр';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Аталантару, Ҫыхӑну, Дизайн… кирек мӗнле волонтер ӗҫне те е ӑсталӑха та хапӑл туса йышӑнатпӑр!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Хӑвӑр пулӑшма пултаракан нумай майсенчен хӑшне-пӗрне тупӑр';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Мобильлӗ приложени хатӗрлесси';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Программӑсем хатӗрлеме мӗнле пулӑшмаллине пӗлӗр';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Кулленхи ҫирӗп мар стройкӑсем, ҫӗнӗ функцисем';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Хӑвӑрӑн вырӑнти обществӑна ӳстерӗр';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Программӑпа, содержанипе, ингредиентсен анализӗн куҫарӑвӗсемпе пулӑшу';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Эпир сире пулӑшма пӗчӗк шаблон хатӗрлерӗмӗр :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Сирӗн ҫӗршывра апат-ҫимӗҫ уҫӑмлӑхне ӳстермелли ансат утӑмсем';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Даннӑйсен пахалӑхӗн ушкӑнне кӗрӗр';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'База тулли те тӗрӗс пултӑр тесе пирӗн ӗҫе хутшӑнӑр';
+
+  @override
+  String get preferences_contributions_products_added_title => 'Хушнӑ продукци';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Ҫӗнӗ продуктсем эпӗ Open Food Facts ҫине хушрӑм';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Эпӗ туса пӗтермелле продуктсем';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Пур тулли мар продукци';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Манӑн хаксем, манӑн доказательствӑсем…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Эсир пулӑшма пултаракан продуктсем';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Хӑвӑр ҫӗршывра Nutri-Score тата Green-Score шутласа кӑларма пулӑшӑр';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Эпӗ панӑ хаксем';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Хак паллисем тата квитанцисем';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Квитанцисене сӑн ӳкерсе илӗр те вӗсемпе ҫыхӑннӑ штрих-кодсене сканерлӑр';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Лавккари хаксене сӑн ӳкерсе илӗр';
+
+  @override
+  String get preferences_prices_newest_title => 'Чи ҫӗнӗ хаксем';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Уҫӑ хаксен сообществи хушнӑ юлашки хаксем';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Чи нумай хакпа хутшӑнакансем';
+
+  @override
+  String get preferences_prices_metrics_title => 'Уҫӑ хак кӑтартӑвӗсем';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Проект аталанӑвне сӑнаса тӑрӑр';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Тӳпе хывмалли майсем';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Хӑвӑр е ыттисем хушнӑ хаксене ИИ пулӑшнипе ҫирӗплетӗр';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Хӑвӑрӑн фотоаппарат рулонӗнчен нумай квитанци е ҫӳлӗксен сӑнӳкерчӗкӗсене хӑвӑрт хушӑр';
+
+  @override
+  String get preferences_prices_challenges_title => 'Уйӑхсеренхи задачӑсем';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Хаксене пухма уйӑхсерен пулакан тематика квестӗсене хутшӑнӑр';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Хӑвӑрӑн шанчӑклӑх даннӑйӗсене каялла илӗр';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Хӑвӑрӑн даннӑйсене мӗнле ыйтмаллине пӗлӗр';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'Приложенине персонализацилӗр';
+
+  @override
+  String get preferences_page_contribute_project_title => 'Проекта пулӑшӑр';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Апат-ҫимӗҫ ҫинчен калакан фактсене уҫма пулӑшмалли ансат меслетсем';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Балл меслечӗсем, пулӑшу тата проект ҫинчен ытти те';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Сӗнӗве йышӑнӑр';
 
   @override
@@ -4738,4 +5561,103 @@ class AppLocalizationsCv extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Аутентификаци ӑнӑҫсӑр пулчӗ, ҫирӗплетӳсем илме май килмерӗ';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count $total доказательствӑсенчен';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count $total хутшӑнакансен';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count $total вырӑнӗсенчен';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count вырӑнсем';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Улшӑнусене пурнӑҫа кӗртме приложенине тепӗр хут пуҫлӑр.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Графика интерфейсӗ';
+
+  @override
+  String get preferences_app_settings_media_title => 'Медиа';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Уҫӑ апат-ҫимӗҫ факчӗсен лабораторийӗ';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Хӑвӑрӑн чӗлхене уҫӑ апат-ҫимӗҫ факчӗсене илсе килӗр';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Приложенин альфа-версине ҫырӑнӑр';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Тӳпе тата продукт даннӑйӗсем';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Фолксономие ан кӑтартӑр';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '$createdҫинче хушнӑ';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

@@ -9,6 +9,9 @@ class AppLocalizationsBm extends AppLocalizations {
   AppLocalizationsBm([String locale = 'bm']) : super(locale);
 
   @override
+  String get app_name => 'Dumuni Tiɲɛniw Dabɔ';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsBm extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsBm extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'A’ ye kulu dɔ sugandi min ka surun kosɛbɛ';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsBm extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Nafolo tɛ yen';
+
+  @override
+  String get product_tags_explanation =>
+      'Ni i ye nafolo (kili/nafa) fara fɛn dɔ kan, i bɛ dɛmɛ don k’a nafa bonya.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'N ka jatebɔsɛbɛn bɔ yen';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Aw bɛ se ka kɔrɔbɔli kɛcogoyaw ni yiriwali baarakɛminɛnw sɔrɔ';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,9 @@ class AppLocalizationsBm extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Da wuli Open Prices siti kan';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get prices_list_add_new_price => 'Aw bɛ\nsɔngɔ kura fara a kan';
 
   @override
+  String get prices_list_empty_title => 'Sɔngɔ tɛ yen fɔlɔ!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Aw ka kɛ mɔgɔ fɔlɔ ye ka kelen fara a kan:\nNi aw ye **resipi** walima **sɔngɔ sɛbɛn** skan!';
+
+  @override
   String get prices_entry_shop_not_found => 'Magasin dɔnbali';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Aw ye nin fura in sɔngɔ bɛɛ lajɛ';
 
   @override
   String get prices_entry_menu_open_proof => 'Dalilu lajɛ';
@@ -2730,9 +2751,23 @@ class AppLocalizationsBm extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Donan si ma kɛ fɔlɔ!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Aw ka kɛ mɔgɔ fɔlɔ ye ka sɔngɔ dɔ fara a kan!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Butigi si tɛ yen fɔlɔ!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Aw ka kɛ mɔgɔ fɔlɔ ye ka sɔngɔ dɔ fara a kan!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2838,7 +2873,17 @@ class AppLocalizationsBm extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Dalilu si ma sɔrɔ fɔlɔ!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'A daminɛ ni **resipi** foto dɔ farali ye walima **sɔngɔ sɛbɛn**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2917,13 +2962,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2935,6 +2974,16 @@ class AppLocalizationsBm extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Reset app kan';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Kartiw fara a kan';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Aw bɛ wuli ka wuli prices.openfoodfacts.org (PROD) ni test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2978,6 +3027,11 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3979,32 +4033,33 @@ class AppLocalizationsBm extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A. Bamako, Mali';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B. Bamako, Mali';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C. Bamako, Mali';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D. Bamako, Mali';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E. Bamako, Mali';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Green-Score dɔnbali';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score tɛ baara kɛ ni a ye';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Dumuni minnu dilannen don kosɛbɛ - NOVA kuluw';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4101,9 +4156,6 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4211,11 +4263,281 @@ class AppLocalizationsBm extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Score Vert ye mun ye?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score ye logo ye min laɲini ye ka aw kunnafoni **dumuni bɛ se ka nɔ min bila sigida la**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Kulɛri cogoya bɛ danfara ka bɔ jɛman dibi la (**A+**) la **fɛn minnu tɛ nɔ bila kosɛbɛ** la ka taa a bila bilen dibi la (**F**) la **fɛnw na minnu bɛ nɔ bila kosɛbɛ**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'A ye Green-Score logow ye';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'A kunba ye : Ɲɛnamaya taabolo jateminɛ (LCA) .';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Dumuni suguyaw jateminɛ dɔnniya siratigɛ la';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Fɛn dilannen suguya kelen-kelen bɛɛ kama, **benchmark** jate bɛ sigi senkan ni kunnafoniw ye minnu bɔra Agribalyse sigida kunnafonidilan na (ADEME ni INRAE ye minnu dabɔ).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Ɲɛnamaya taabolo sɛgɛsɛgɛli** ye jateminɛ kɛcogo ye min bɛ kɛ ka sigida jateminɛ kɛcogo caman ni sariya caman kɛ.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**A bɛ suman:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 sɛnɛcogo taabolo';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 sigida laminiko gɛlɛya jiralanw';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Waati jiginni/karɔbɔli senna';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Ozɔni (Ozone) hakɛ dɔgɔyali';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 =>
+      'Radiation ionize (radiation ionize) ye';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Duguma';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Ji & fanga baaracogo';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Fiɲɛ nɔgɔli';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Kɔgɔji & jisuma (particules, acidification, eutrophication) .';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Nafolo dɔgɔyali.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonus & pénalités (jalakiw) ye';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Walasa ka fɛn ɲumanw sara kulu dɔ kɔnɔ, o kɔfɛ, an bɛ bonus & penalties (bonus & penalties) kɛ ka da sariya damadɔ kan:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Bonus bɛ di ka da a fɛnw bɔyɔrɔ kan. Nin bonyali in bɛ jateminɛ kɛ nɔ min bɛ sɔrɔ bolifɛnw na ani fana sɛnɛfɛn dilannikɛla kelen-kelen bɛɛ ka jamana ka sigidako politiki.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Walasa ka Green-Score jate tigitigi, a ka kan ka kunnafoniw sɔrɔ minnu ma fɔ kosɛbɛ foroko kan (i n’a fɔ a bɔyɔrɔ ani a kɛcogo kelen-kelen bɛɛ kɛmɛsarada la tigitigi) walima minnu man teli ka sɔrɔ cogo la min bɛ se ka baara kɛ (i n’a fɔ foroko kɔnɔfɛnw bɛɛ lisɛli ni plastiki suguya tigitigiw ye minnu bɛ kɛ).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Nafa hakɛ danmadɔw bɛ baara kɛ ni nin kunnafoniw ma sɔrɔ fɔlɔ, nka an bɛ wele bila sisan bɛɛ ma u k’an dɛmɛ ka nin kunnafoniw lajɛ min nafa bɛna bonya kosɛbɛ Green-Score la nka nafa caman wɛrɛw fana na.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Jamanadenw bɛ se ka dɛmɛ don cogo min na';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Jamanaden bɛɛ bɛ se k’an dɛmɛ ka kunnafoniw lajɛ ani k’u labɛn, kunnafoniw minnu bɛ sɔrɔ fɛnw kan walima minnu bɛ se ka bɔ u la, i n’a fɔ kunnafoniw minnu bɛ sɔrɔ pakew kan: Mission Emballages: a large-scale collaborative inventory of packaging for all food products (in French)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Dilanbagaw bɛ se ka dɛmɛ don cogo min na';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Dilanbagaw bɛ se k’u ka kunnafoniw ci an ma k’a ɲɛsin an ka feerekɛyɔrɔ gansan ma min bɛ kɛ fɛn dilannikɛlaw ye.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Fɛn jumɛn ka fisa dugukolo ma?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'A bɛ se ka gɛlɛya k’a fɔ';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Dumuni sabatili sugandili ye fɛn barikama dɔ ye an bɛ se ka min kɛ waati cogoya la, bawo **an ka diɲɛ dumuniko siratigɛ la, o bɛ gaziw bɔlenw bɛɛ tilancɛ ni kɔ bɔ**.\n(Sɔrɔyɔrɔ: Poore & Nemecek, Dɔnniya, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Se b\'i la dɛ!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Kibaru duman ye ko o bɛ fɛɛrɛ barikama di an ma walasa ka fɛn caman wuli.\n**An kelen-kelen bɛɛ bɛ dumuni 1000 ɲɔgɔn dun san o san**. O ye sababu 1000 ye ka **siniɲɛsigi ɲuman sugandi dugukolo in ye**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'A bɛ dɛmɛ don ka kɛ kunkanbaaraw ye ani ka ko latigɛ';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Dumuni sabatili sugandili bɛ se ka kɛ i n’a fɔ a ka gɛlɛn. Labeliw bɛ mɔgɔ hakili ɲagami ani kunnafoniw tɛ sɔrɔ tuma caman na. Green-Score dabɔra walasa k’a nɔgɔya, ka sigida jateminɛ jɛlen di i ma, **science-based**, ani **transparent** dumunifɛnw na, i mago bɛ yɔrɔ min na yɛrɛ: k’i to sanni kɛ.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Kɛnɛyako';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'A tɛ i n’a fɔ labeli propriétaires, Green-Score jatebɔ ye **da wuli pewu** wa a bɛ se ka **sɛgɛsɛgɛ mɔgɔ bɛɛ fɛ**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Ultra-processing ye mun ye?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA kuluw b’aw kunnafoni dumuniko hakɛ kan.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA ka danfara bɛ sira di dumuniw tilatilali ma ka kɛ **kulu 4** ye ka da u ka **sɛnɛfɛnw dilanni hakɛ kan** (dumuni minnu dilannen don dɔɔnin dɔɔnin walima minnu ma dila, dumunifɛnw, dumuni dilannenw, dumuni minnu dilannen don kosɛbɛ).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA ka logow ye';
+
+  @override
+  String get guide_nova_groups_title => 'NOVA kulu 4 minnu bɛ yen';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'NOVA kulu 4 bɛ yen, gɛlɛya min bɛ yen, o ye kulu 4 ye - Dumuni minnu dilannen don kosɛbɛ.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Dumuni minnu dilannen don dɔɔnin dɔɔnin walima minnu ma labɛn';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Dumuni minnu ma labɛn (walima minnu bɛ sɔrɔ u yɛrɛ la) ye jiriw yɔrɔ duntaw ye (kisɛw, jiridenw, furabuluw, jirisunw, jirisunw) walima baganw (fasa, kɔnɔbara, kɔnɔw, nɔnɔ), ka fara ɲɛgɛnw, jirisunw, ani ji kan, u faralen kɔ ɲɔgɔn kan ka bɔ fɛnɲɛnamaw la.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Tobilikɛminɛn minnu dilannen don, i n’a fɔ tulu, tulu, sukaro ani kɔgɔ, olu ye fɛnw ye minnu bɛ bɔ kulu 1 dumuniw na walima minnu bɛ bɔ fɛnɲɛnamaw la, fɛɛrɛw fɛ minnu bɛ kɛ ka u digidigi, ka u saniya, ka u sɔgɔ, ka u sɔgɔ ani ka u ja.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Dumuni dilannenw, i n’a fɔ nakɔfɛnw buteli kɔnɔ, jɛgɛ bidon kɔnɔ, jiriden minnu bɛ siro la, foromaziw, ani buru dilannen kuraw, olu bɛ dilan fɔlɔ ni kɔgɔ, tulu, sukaro walima fɛn wɛrɛw farali ye minnu bɛ bɔ kulu 2 la ka taa kulu 1 ka dumuniw na. Taabolo minnu bɛ Kɛ olu ye maracogo walima tobilikɛcogo suguya caman ye, ani buru ni foromazi ta la, dɔlɔ tɛ min na. Dumuni dilannen fanba bɛ kɛ ni fɛn fila walima saba ye, wa u bɛ dɔn ko kulu 1 dumuniw cogoya caman sɛmɛntiyalen don. U bɛ se ka dun u yɛrɛ ma walima a ka ca a la, u ni dumuni wɛrɛw faralen ɲɔgɔn kan.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Dumuni minnu dilannen don kosɛbɛ, i n’a fɔ minfɛn gazimaw, dumuni misɛnninw pakew kɔnɔ minnu ka di walima minnu ka di, sogofɛnw minnu dilannen don kokura, ani dumuni minnu dilannen don ka kɔn u ɲɛ, olu tɛ dumuni caman ye minnu dilannen don ni fɛn caman ye walima u bɛɛ ye fɛnw ye minnu bɛ bɔ dumuniw ni faralifɛnw na, ni kulu 1 ka dumuni caman tɛ walima minnu tɛ tiɲɛ. A ka ca a la, fɛn minnu bɛ nin furakɛcogo ninnu na, olu dɔw bɛ sɔrɔ dumuni dilannenw fana na, i n’a fɔ sukaro, tulu, tulu walima kɔgɔ. Nka, fanga ni balofɛn wɛrɛw fana bɛ sɔrɔ fɛn dilannenw na minnu tɛ kɛ ka caya dumunikɛminɛnw na. Olu dɔw bɛ bɔ dumuniw na k’a ɲɛsin u ma, i n’a fɔ kazeyin, lactose, whey ani gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Gɛlɛya minnu bɛ ultra-processing la';
+
+  @override
+  String get guide_nova_explanations_arg1_title => 'Dumunifɛnw dilanni kojugu';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'U caman bɛ sɔrɔ dumunifɛnw dilanni na ka taa a fɛ, i n’a fɔ tulu minnu bɛ ni hidrɔzɛni ye walima tulu minnu bɛ kɛ ni fɛnɲɛnamafagalan ye, farikolojɔli dumuniw, soja farikolojɔli dumuniw, maltodextrin, sukaro invert, ani ɲɔ siro min falen don fruktose caman na.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Fura minnu bɛ fara dumuni saniyalenw lakanani kan';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Fɛn minnu bɛ fara dumuniw kan minnu dilannen don kosɛbɛ, olu dɔw ye dɔw ye minnu bɛ kɛ fana dumuni dilannenw na, i n’a fɔ fɛnw minnu bɛ u tanga, farikolo tangalanw ani fɛnw sabatili. Fura suguya minnu bɛ sɔrɔ fɛnw na minnu dilannen don kosɛbɛ, olu dɔw ye minnu bɛ kɛ ka dumuniw dusukunnataw ladege walima ka u bonya walima ka fɛn laban yɔrɔ minnu man di, olu dogo. O faralifɛnw ye kalali ni kulɛri wɛrɛw ye, kulɛri sabatilifɛnw; dajiw, dajiw, dumuni duman minnu tɛ sukaro ye; ani baarakɛcogo dɛmɛnanw i n’a fɔ karɔbɔni, firimi, bulking ani bulking kɛlɛli, de-foaming, anti-caking ani glazing agents, emulsifiers, sequestrants, ani humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Processing i tɛ se ka min kɛ so kɔnɔ';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Taabolo caman bɛ kɛ ka tugu ɲɔgɔn kɔ walasa ka fɛn caman fara ɲɔgɔn kan a ka c’a la ani ka fɛn laban dilan (o de kama ‘a bɛ kɛ kosɛbɛ’). O kɛcogo dɔw ye damadɔ ye minnu tɛ sokɔnɔna bɔɲɔgɔnko ye, i n’a fɔ hidrɔzɛni ni jibɔ, bɔli ni fɛn dilanni, ani ka kɔn ka baara kɛ walasa ka tobi.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ultra-processing ka predatory ni wariko fanw';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ultra-processing kun bɛɛ ye ka dumunifɛnw dilan minnu tɔgɔ sɛbɛnnen don, minnu bɛ se ka mɛn, minnu bɛ mɛn, minnu bɛ se ka dun, minnu bɛ mɔgɔ ɲɛnajɛ (min ka di kosɛbɛ) ani minnu nafa ka bon kosɛbɛ (fɛn minnu musaka ka dɔgɔ) minnu dabɔra ka dumuni kulu tɔw bɛɛ bɔ u nɔ na. A ka c’a la, dumunifɛnw minnu dilannen don ni ultra-processed ye, olu bɛ kɛ pake kɔnɔ cogo la min bɛ mɔgɔ ɲɛnajɛ, wa u bɛ feere kosɛbɛ.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4528,6 +4850,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Sɔngɔ si tɛ sɔrɔ';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Aw ka kɛ mɔgɔ fɔlɔ ye ka bolomafara di!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4566,7 +4895,11 @@ class AppLocalizationsBm extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extraction bɛ sen na…';
+
+  @override
+  String get nutrition_facts_extract_successful =>
+      'Extraction (bɔli) ye ɲɛtaa sɔrɔ';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4697,6 +5030,505 @@ class AppLocalizationsBm extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Aw ye aw ka sɔngɔw diyabɔcogo ɲɛnabɔ';
+
+  @override
+  String get preferences_card_project =>
+      'Porozɛ min tɔgɔ ye ko Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'N ka jatebɔw';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Bamanankan baara, an ka baarakɛminɛnw ɲɛ ka taa a fɛ…';
+
+  @override
+  String get preferences_connect_title => 'Ka kɔnɛkite';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Aw ye aw bolo da, walima Aw ye tugu an kɔ sosiyete siwiliw kan';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Aw k’an dɛmɛ ka kunnafoni di feerekɛla miliyɔn caman ma diɲɛ kɔnɔ';
+
+  @override
+  String get preferences_card_help => 'Dɛmɛ & Dɛmɛ';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Aw ye jaabiw sɔrɔ aw ka ɲininkaliw la';
+
+  @override
+  String get logged_out => 'A bɔra ka bɔ';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Aw ni ce aw ka kɛ an ka tɔndenw dɔ ye!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Aw ye statiw bɛɛ lajɛ';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '$provider ɲini \"$keyword\" .';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Aw ye sigida dɔ ɲini (misali la Nutri-Score) .';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Sɔrɔcogo: Emoji jira';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Sɔrɔcogo: Aw bɛ kulɛriw bɔ';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Sariya kunnafoniw';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Baarakɛcogo sariyaw, mɔgɔ dogolenw sariyaw ani fɛn wɛrɛw';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts ye dumunifɛnw kunnafonidilan ye **min dilannen don bɛɛ fɛ, bɛɛ ye**.\nAw bɛ se ka baara kɛ n’a ye walasa ka dumuni sugandili ɲumanw kɛ, wa ikomi a ye **daɲɛ dafalenw** ye, mɔgɔ bɛɛ bɛ se ka **segin ka baara kɛ n’a ye kun o kun**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Lasegin-ka-bɔnyew';
+
+  @override
+  String get preferences_about_app_title => 'Application in ko la';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Fɛɛrɛ kunnafoniw, baarakɛlaw ka kunnafoniw, ani fɛn wɛrɛw';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Version nimɔrɔ';
+
+  @override
+  String get preferences_scanner_title => 'Scanner (Skanɛrɛ) ye';
+
+  @override
+  String get preferences_app_store => 'Application magasin';
+
+  @override
+  String get preferences_app_system_settings => 'Sistɛmu sigicogo';
+
+  @override
+  String get preferences_source_code => 'Aw bɛ se ka source code sɔrɔ';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Ani k’a daminɛ ka nɔ bila mɔgɔ miliyɔn caman na';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Laadilikanw';
+
+  @override
+  String get tips_discover_nutriscore => 'Aw ye Nutri-Score kura sɔrɔ';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Open Food Facts ka siti kan';
+
+  @override
+  String get preferences_manage_account_title => 'N ka jatebɔsɛbɛn ɲɛnabɔ';
+
+  @override
+  String get preferences_manage_account_tooltip => 'I ka jatebɔsɛbɛn ɲɛnabɔ';
+
+  @override
+  String get preferences_change_password_title => 'N ka tɔgɔlasɛbɛn Changer';
+
+  @override
+  String get preferences_danger_zone => 'Farati bɛ yɔrɔ min na';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Aw ka bolomafaraw bɛɛ bɛna tunun';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Application (Application) ka labɛnw';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Fɛɛrɛ min bɛ kɛ k’a lajɛ kosɛbɛ walasa ka fɛnw sɛgɛsɛgɛ ni ɛntɛrinɛti tɛ';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Fɛnw bɛɛ lajɛlen kura ye ka bɔ sèrwɛri la';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Aw ye aw yɛrɛ tanga o kɛli ma fo ni a mago bɛ a la kosɛbɛ';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demo cogoya';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Aw bɛ kartiw fara skanɛrɛ kan';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'A bɛ misali fɛn 3 fara skanɛrɛ kan';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Folksonomy jatigikɛ';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Jatigikɛ: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Sɔrɔcogo kɔlɔsiliw';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Fɛn caman sugandili sɔngɔw kama';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Baarakɛla ye dɔnniya pannew yamaruya';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Waati dɔɔnin sɔrɔli yɔrɔ ɲinini na';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Kɛrɛfɛla sumalen don fɛn 2 walima 3 la';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Fɛn dilannenw lisi import';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Score & fɛɛrɛw';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Nutri-Score jatebɔcogo dɔn';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Yɛlɛmaba minnu kɛra fɛɛrɛ in na, olu dɔn';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Dumuni Dabɔlenw Tiɲɛw Sɔrɔ';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'FAQ - Ɲininkali minnu bɛ kɛ tuma caman na';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'ONG min bɛ dumuni dafalenw kofɔ';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Aw ye sigida kunnafoniw sɔrɔ';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'To loop kɔnɔ ni app ani sigida kibaruyaw ye';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Aw ye aw sen don a la ni aw taara an ka ko kɛlen dɔ la min bɛ kɛ virtuel (virtuel) la';
+
+  @override
+  String get preferences_connect_blog_title => 'Dumuni dafalenw ka bulɔgu';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Kibaruyaw labanw sɔrɔ, i n’a fɔ u bɛ kɛ cogo min na';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Aw ye dɛmɛ ɲini sigidamɔgɔw fɛ';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'An dɛmɛ ka appli (application) ɲɛ ka taa a fɛ';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Aw ye debug kunnafoniw ci an ma';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Aw ye bataki ci an ma ni debugging kunnafoni caman ye';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Aw ye hakilinaw ci an ma appli in kan';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Dɛmɛ ka appli ka siniɲɛsigi labɛn';
+
+  @override
+  String get preferences_connect_survey_title => 'Aw ye app ka sɛgɛsɛgɛli kɛ';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'An ka kan ka min jɔ o kɔfɛ, i k’an dɛmɛ k’o faamu';
+
+  @override
+  String get preferences_connect_professionals_title => 'Baarakɛlaw';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Totally free, a bɛ data tigitigiw sabati apps 500 & consumer miliyɔn caman ye. Yɛrɛlabaara, min bɛ bɛn i ka PIM walima i ka jatebɔsɛbɛnw (XLSX) ma .';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Aw ye ɲɔgɔn sɔrɔ walasa ka baara daminɛ';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'I mago bɛ fɛn minnu na i ka rapɔɔri kama, olu bɛɛ sɔrɔ';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Aw ye ɲɔgɔn sɔrɔ walasa ka kunnafonidilaw ka ɲininkaliw kɛ walima k’a fɔ an ye aw ka kunnafoni kan';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'I ka kɛ baarakɛla timinandiyalen ye';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Yiriwali, Kumaɲɔgɔnya, Dilan… ŋaniyajira walima dɔnniya suguya o suguya bɛ sɔn!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'I bɛ se ka dɛmɛ don cogo caman minnu na, i k’olu dɔw ɲini';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'Mobile app yiriwali';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'A ɲini ka dɛmɛ don cogo min na porogaramuw dilanni na';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Don o don jɔli sabatibaliw, fɛn kuraw';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Aw ye aw ka sigida sigida yiriwa';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Dɛmɛ ni porogaramuw ye, kɔnɔkow, fɛnw sɛgɛsɛgɛli bamanankan bamanankan na';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'An ye template fitinin dɔ labɛn walasa k\'aw dɛmɛ :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Fɛn nɔgɔman minnu bɛ kɛ walasa ka dumuniko jɛlen yiriwa i ka jamana kɔnɔ';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Aw ka fara donanw jogoɲumanya jɛkulu kan';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Aw ka fara an ka cɛsiri kan walasa kunnafonidilan ka dafa ani ka kɛ tiɲɛ ye';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Fɛn minnu bɛ fara a kan';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'N ye fɛn kuraw fara Open Food Facts kan';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Fɛn minnu dilannen don n ka kan ka olu dafa';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Fɛn minnu tɛ dafa, olu bɛɛ';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Ne ka sɔngɔw, ne ka daliluw…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Fɛn minnu bɛ se ka dɛmɛ don ka olu dafa';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Aw ye dɛmɛ don ka Nutri-Score & Green-Score jatebɔ aw ka jamana kɔnɔ';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'N ye sɔngɔ minnu di';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Sɔngɔ sɛbɛnw ni resipiw';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Aw ye aw ka resipiw fotow ta ani ka barɔdi minnu bɛ tali kɛ o la, aw ka olu sɛgɛsɛgɛ';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Aw ye sɔngɔw fotow ta butiki dɔ kɔnɔ';
+
+  @override
+  String get preferences_prices_newest_title => 'Sɔngɔ kurabaw';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Sɔngɔ labanw farala ɲɔgɔn kan Open Prices jɛkulu fɛ';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Bololabaarakɛlaw minnu ka sɔngɔ ka ca';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'Open Price metrics (Sɔngɔ jateminɛw).';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Aw ye tugu poroze in jiginni na';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Fɛɛrɛ minnu bɛ se ka kɛ walasa ka dɛmɛ don';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Aw ye sɔngɔ minnu farala aw yɛrɛ fɛ walima mɔgɔ wɛrɛw fɛ, aw bɛ olu dafa, ni AI ka dɛmɛ ye';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Aw bɛ teliya ka resipi caman walima etajɛriw fotow fara aw ka kamera sɛbɛnfura kan';
+
+  @override
+  String get preferences_prices_challenges_title => 'Kalo o kalo gɛlɛyaw';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Aw ye aw sen don kalo o kalo barokun ɲininiw na walasa ka sɔngɔw lajɛ';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Aw ye aw ka kantigiya kunnafoniw sɔrɔ kokura';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Aw ye aw ka kunnafoniw ɲinicogo dɔn';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'I ka porogramu kɛ ka kɛɲɛ ni i yɛrɛ sago ye';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Aw ka dɛmɛ don o baara la';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Fɛɛrɛ nɔgɔman minnu bɛ se ka dɛmɛ don Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Fɛɛrɛw jatebɔ, dɛmɛ, ani fɛn wɛrɛw poroze kan';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Sɔn hakilina ma';
 
   @override
@@ -4739,4 +5571,103 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get prices_proof_error => 'Tiɲɛni ma ɲɛ, a ma se ka daliluw sɔrɔ';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ka $total daliluw';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ka $total dɛmɛbagaw';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ka $total yɔrɔw';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count yɔrɔw';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Aw ye porogramu daminɛ kokura walisa ka yɛlɛmaniw waleya.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Jateblaw ka ɲɛfɔli';
+
+  @override
+  String get preferences_app_settings_media_title => 'Kunnafonidila';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Dumunifɛnw tiɲɛni laboratuwaraw da wuli';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Aw ka na ni Dumuni Dabɔlenw Tiɲɛw ye aw ka kan na';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'I tɔgɔ sɛbɛn appli ka alfa version kɔnɔ';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Bolomafaraw & Fɛn dilannenw kunnafoniw';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Aw kana Folksonomy jira';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'A farala ${created}kan';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

@@ -9,6 +9,9 @@ class AppLocalizationsCy extends AppLocalizations {
   AppLocalizationsCy([String locale = 'cy']) : super(locale);
 
   @override
+  String get app_name => 'Ffeithiau Bwyd Agored';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsCy extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsCy extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Dewiswch gategori mwy manwl gywir';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsCy extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Dim eiddo';
+
+  @override
+  String get product_tags_explanation =>
+      'Drwy ychwanegu priodweddau (allwedd/gwerth) at gynnyrch, rydych chi\'n helpu i\'w gyfoethogi.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Dileu fy nghyfrif';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Mynediad i nodweddion arbrofol ac offer datblygu';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsCy extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Agor ar wefan Prisiau Agored';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get prices_list_add_new_price => 'Ychwanegu pris newydd\n';
 
   @override
+  String get prices_list_empty_title => 'Dim pris eto!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Byddwch y cyntaf i ychwanegu un:\nDrwy sganio **derbynneb** neu **dag pris**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Siop anhysbys';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Gweld yr holl brisiau ar gyfer y cynnyrch hwn';
 
   @override
   String get prices_entry_menu_open_proof => 'Gweld prawf';
@@ -2728,9 +2749,23 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Dim cyfrannwr eto!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Byddwch y cyntaf i ychwanegu pris!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Dim siop eto!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Byddwch y cyntaf i ychwanegu pris!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2836,7 +2871,17 @@ class AppLocalizationsCy extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Dim prawf eto!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Dechreuwch trwy ychwanegu llun o **dderbynneb** neu **dag pris**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2915,13 +2960,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2933,6 +2972,16 @@ class AppLocalizationsCy extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Ailosod iaith yr ap';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ychwanegu cardiau';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Newid rhwng prices.openfoodfacts.org (PROD) ac amgylchedd prawf';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2976,6 +3025,11 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3977,32 +4031,33 @@ class AppLocalizationsCy extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Sgôr Gwyrdd A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Sgôr Gwyrdd B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Sgôr Gwyrdd C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Sgôr Gwyrdd D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Sgôr Gwyrdd E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Sgôr Gwyrdd Anhysbys';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Nid yw Sgôr Gwyrdd yn berthnasol';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Bwydydd wedi\'u prosesu\'n uwch - grwpiau NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4099,9 +4154,6 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4209,11 +4261,281 @@ class AppLocalizationsCy extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Beth yw\'r Sgôr Werdd?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Mae\'r Sgôr Werdd yn logo sy\'n ceisio rhoi gwybod i chi am **effaith amgylcheddol bwyd**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Mae\'r cod lliw yn amrywio o wyrdd tywyll (**A+**) ar gyfer y cynhyrchion **sydd â\'r effaith leiaf** i goch tywyll (**F**) ar gyfer y cynhyrchion **sydd â\'r effaith fwyaf**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logos y Sgôr Gwyrdd';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Y craidd: Asesiad cylch bywyd (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Gwerthusiad gwyddonol o gategorïau bwyd';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Ar gyfer pob categori cynnyrch, sefydlir sgôr **meincnod** gan ddefnyddio data o gronfa ddata amgylcheddol Agribalyse (a ddyluniwyd gan ADEME ac INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      'Mae **dadansoddiad cylch bywyd** yn ddull asesu safonol ar gyfer cynnal asesiad amgylcheddol aml-gam ac aml-feini prawf.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Mae\'n mesur:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 cham cynhyrchu';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 dangosydd effaith amgylcheddol';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Newid hinsawdd/ôl troed carbon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Gwanhau\'r haen osôn';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ymbelydredd ïoneiddio';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tir';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Defnydd dŵr ac ynni';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Llygredd aer';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Dŵr môr a dŵr croyw (gronynnau, asideiddio, ewtroffeiddio)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Diffyg adnoddau.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonysau a chosbau';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'I wobrwyo cynhyrchion gwell o fewn categori, yna rydym yn rhoi bonysau a chosbau yn seiliedig ar sawl maen prawf:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Dyfernir bonws yn seiliedig ar darddiad y cynhwysion. Mae\'r bonws hwn yn ystyried yr effaith ar gludiant a hefyd polisi amgylcheddol gwlad pob cynhyrchydd.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Er mwyn cyfrifo\'r Sgôr Werdd yn gywir, mae angen cael gwybodaeth nad yw o reidrwydd wedi\'i nodi ar y pecynnu (megis tarddiad a chanran union pob cynhwysyn) neu sydd anaml ar gael mewn ffurf ddefnyddiadwy (megis rhestr o holl gydrannau\'r pecynnu gyda\'r union fathau o blastigion a ddefnyddir).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Defnyddir gwerthoedd cyfartalog pan nad yw\'r wybodaeth hon ar gael eto, ond rydym nawr yn galw ar bawb i\'n helpu i gasglu\'r wybodaeth hon a fydd yn ddefnyddiol iawn ar gyfer y Sgôr Werdd ond hefyd ar gyfer llawer o ddefnyddiau eraill.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Sut gall dinasyddion helpu';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Gall pob dinesydd ein helpu i gasglu a strwythuro\'r wybodaeth sydd ar gael ar gynhyrchion neu y gellir ei chasglu ohonynt, fel gwybodaeth ar becynnu: Mission Emballages: rhestr eiddo gydweithredol ar raddfa fawr o becynnu ar gyfer pob cynnyrch bwyd (yn Ffrangeg)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Sut gall gweithgynhyrchwyr helpu';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Gall gweithgynhyrchwyr anfon eu gwybodaeth atom yn uniongyrchol drwy ein platfform am ddim i gynhyrchwyr.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Pa gynnyrch sy\'n well i\'r blaned?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Gall fod yn anodd dweud';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Mae dewis bwyd cynaliadwy yn un o\'r pethau mwyaf pwerus y gallwn ei wneud dros yr hinsawdd, gan fod **ein system fwyd fyd-eang yn gyfrifol am dros chwarter o\'r holl allyriadau nwyon tŷ gwydr**.\n(Ffynhonnell: Poore a Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'Mae gennych chi\'r pŵer!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Y newyddion da yw bod hyn yn rhoi ffordd bwerus inni greu newid.\n**Mae pob un ohonom yn bwyta tua 1,000 o brydau bob blwyddyn**. Dyna 1,000 o gyfleoedd i **ddewis dyfodol gwell i\'r blaned**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Yn helpu i fod yn gyfrifol a phenderfynu';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Gall dewis bwyd cynaliadwy deimlo\'n gymhleth. Mae labeli\'n ddryslyd ac mae gwybodaeth yn aml ar goll. Crëwyd y Sgôr Werdd i\'w gwneud yn syml, gan roi sgôr amgylcheddol **glir**, **seiliedig ar wyddoniaeth**, a **thryloyw** i chi ar gyfer cynhyrchion bwyd, yn union lle mae ei angen arnoch: wrth i chi siopa.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Tryloywder';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Yn wahanol i labeli perchnogol, mae cyfrifiad y Sgôr Werdd yn **hollol agored** a gellir ei **wirio gan unrhyw un**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Beth yw uwch-brosesu?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Mae grwpiau NOVA yn rhoi gwybod i chi am lefel prosesu bwyd.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Mae dosbarthiad NOVA yn caniatáu categoreiddio bwydydd yn **4 grŵp** yn seiliedig ar eu **gradd o brosesu diwydiannol** (bwydydd sydd wedi\'u prosesu\'n lleiaf neu heb eu prosesu, cynhwysion coginio, bwydydd wedi\'u prosesu, bwydydd sydd wedi\'u prosesu\'n ormodol).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logos NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Y 4 grŵp NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Mae 4 grŵp NOVA, a\'r un problemus yw Grŵp 4 - Bwydydd wedi\'u prosesu\'n ormodol.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Bwydydd sydd wedi\'u prosesu\'n lleiaf neu heb eu prosesu';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Bwydydd heb eu prosesu (neu naturiol) yw rhannau bwytadwy o blanhigion (hadau, ffrwythau, dail, coesynnau, gwreiddiau) neu anifeiliaid (cyhyrau, offal, wyau, llaeth), yn ogystal â ffyngau, algâu a dŵr, ar ôl cael eu gwahanu oddi wrth natur.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Mae cynhwysion coginio wedi\'u prosesu, fel olewau, menyn, siwgr a halen, yn sylweddau sy\'n deillio o fwydydd Grŵp 1 neu o natur trwy brosesau sy\'n cynnwys gwasgu, mireinio, malu, melino a sychu.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Mae bwydydd wedi\'u prosesu, fel llysiau mewn poteli, pysgod tun, ffrwythau mewn surop, cawsiau, a bara ffres, yn cael eu gwneud yn bennaf trwy ychwanegu halen, olew, siwgr, neu sylweddau eraill o fwydydd Grŵp 2 i fwydydd Grŵp 1. Mae prosesau\'n cynnwys amrywiol ddulliau cadw neu goginio, ac yn achos bara a chaws, eplesu di-alcohol. Mae gan y rhan fwyaf o fwydydd wedi\'u prosesu ddau neu dri chynhwysyn ac maent yn adnabyddadwy fel fersiynau wedi\'u haddasu o fwydydd Grŵp 1. Gellir eu bwyta ar eu pen eu hunain neu, yn fwy cyffredin, mewn cyfuniad â bwydydd eraill.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Nid bwydydd wedi\'u prosesu\'n ormodol, fel diodydd meddal, byrbrydau melys neu sawrus wedi\'u pecynnu, cynhyrchion cig wedi\'u hailgyfansoddi, a seigiau wedi\'u rhewi wedi\'u paratoi ymlaen llaw, yn fwydydd wedi\'u haddasu yn unig ond yn fformwleiddiadau a wneir yn bennaf neu\'n gyfan gwbl o sylweddau sy\'n deillio o fwydydd ac ychwanegion, gyda fawr ddim bwyd Grŵp 1 cyfan. Mae cynhwysion yn y fformwleiddiadau hyn fel arfer yn cynnwys y rhai a geir hefyd mewn bwydydd wedi\'u prosesu, fel siwgrau, olewau, brasterau neu halen. Fodd bynnag, mae cynhyrchion wedi\'u prosesu\'n ormodol hefyd yn cynnwys ffynonellau eraill o ynni a maetholion nad ydynt fel arfer yn cael eu defnyddio mewn paratoadau coginio. Mae rhai o\'r rhain yn cael eu tynnu\'n uniongyrchol o fwydydd, fel casein, lactos, maidd a glwten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Y problemau gyda phrosesu uwch';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Prosesu eithafol o gynhwysion bwyd';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Mae llawer yn deillio o brosesu ymhellach o gydrannau bwyd, fel olewau hydrogenedig neu rhyng-esteriedig, proteinau wedi\'u hydrolyze, ynysu protein soi, maltodextrin, siwgr gwrthdro, a surop corn ffrwctos uchel.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Ychwanegion sy\'n mynd y tu hwnt i ddiogelwch bwyd pur';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Mae ychwanegion mewn bwydydd wedi\'u prosesu\'n ormodol yn cynnwys rhai a ddefnyddir hefyd mewn bwydydd wedi\'u prosesu, fel cadwolion, gwrthocsidyddion, a sefydlogwyr. Mae dosbarthiadau o ychwanegion a geir mewn cynhyrchion wedi\'u prosesu\'n ormodol yn unig yn cynnwys y rhai a ddefnyddir i efelychu neu wella rhinweddau synhwyraidd bwydydd neu i guddio agweddau annymunol y cynnyrch terfynol. Mae\'r ychwanegion hyn yn cynnwys llifynnau a lliwiau eraill, sefydlogwyr lliw; blasau, gwellawyr blas, melysyddion di-siwgr; a chymhorthion prosesu fel asiantau carboneiddio, cadarnhau, swmpio a gwrth-swmpio, asiantau dad-ewynnu, gwrth-geulo a gwydro, emwlsyddion, atafaelwyr, a lleithyddion.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Prosesu na allwch ei wneud gartref';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Defnyddir llu o ddilyniannau o brosesau i gyfuno\'r cynhwysion sydd fel arfer yn niferus ac i greu\'r cynnyrch terfynol (felly \'wedi\'i brosesu\'n uwch\'). Mae\'r prosesau\'n cynnwys sawl un heb unrhyw gyfwerth domestig, megis hydrogeniad a hydrolysiad, allwthio a mowldio, a rhagbrosesu ar gyfer ffrio.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Agweddau ysglyfaethus ac ariannol prosesu uwch-reolaidd';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Pwrpas cyffredinol prosesu uwch-dechnolegol yw creu cynhyrchion bwyd brand, cyfleus (gwydn, parod i\'w bwyta), deniadol (hyper-flasus) a hynod broffidiol (cynhwysion cost isel) sydd wedi\'u cynllunio i ddisodli pob grŵp bwyd arall. Fel arfer, mae cynhyrchion bwyd wedi\'u prosesu\'n uwch-dechnolegol yn cael eu pecynnu\'n ddeniadol a\'u marchnata\'n ddwys.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4526,6 +4848,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Dim pris ar gael';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Byddwch y cyntaf i gyfrannu!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4564,7 +4893,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Echdynnu ar y gweill…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Echdynnu llwyddiannus';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4695,6 +5027,500 @@ class AppLocalizationsCy extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Rheoli eich dewisiadau prisiau';
+
+  @override
+  String get preferences_card_project => 'Prosiect Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Fy ystadegau';
+
+  @override
+  String get preferences_contribute_subtitle => 'Cyfieithu, gwella ein hoffer…';
+
+  @override
+  String get preferences_connect_title => 'Cysylltu';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Cysylltwch, neu dilynwch ni ar y cyfryngau cymdeithasol';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Helpwch ni i hysbysu miliynau o ddefnyddwyr ledled y byd';
+
+  @override
+  String get preferences_card_help => 'Cymorth a Chefnogaeth';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Cael atebion i\'ch cwestiynau';
+
+  @override
+  String get logged_out => 'Wedi allgofnodi';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Diolch am fod yn un o\'n haelodau!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Gweld yr holl ystadegau';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Chwiliwch $provider am \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Chwiliwch am leoliad (e.e. Sgôr Maeth)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Hygyrchedd: Dangos emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Hygyrchedd: Dileu lliwiau';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Gwybodaeth gyfreithiol';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Telerau defnyddio, polisi preifatrwydd, a mwy';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Cronfa ddata cynhyrchion bwyd yw Open Food Facts **a grëwyd gan bawb, i bawb**.\nGallwch ei defnyddio i wneud dewisiadau bwyd gwell, ac oherwydd ei fod yn **ddata agored**, gall unrhyw un **ei ailddefnyddio at unrhyw ddiben**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Trwyddedau';
+
+  @override
+  String get preferences_about_app_title => 'Ynglŷn â\'r ap';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Gwybodaeth dechnegol, gwybodaeth am ddatblygwyr, a mwy';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Rhif fersiwn';
+
+  @override
+  String get preferences_scanner_title => 'Sganiwr';
+
+  @override
+  String get preferences_app_store => 'Siop apiau';
+
+  @override
+  String get preferences_app_system_settings => 'Gosodiadau system';
+
+  @override
+  String get preferences_source_code => 'Mynediad i\'r cod ffynhonnell';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'A dechrau gwneud effaith ar filiynau';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Awgrymiadau';
+
+  @override
+  String get tips_discover_nutriscore => 'Darganfyddwch y Sgôr Maeth newydd';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Ar wefan Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_manage_account_title => 'Rheoli fy nghyfrif';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Rheoli eich cyfrif';
+
+  @override
+  String get preferences_change_password_title => 'Newid fy nghyfrinair';
+
+  @override
+  String get preferences_danger_zone => 'Parth perygl';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Bydd eich holl gyfraniadau\'n cael eu colli';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Gosodiadau ap';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Ffordd arbrofol iawn o sganio cynhyrchion all-lein';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Adnewyddu pob cynnyrch o\'r gweinydd';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Osgowch wneud hynny oni bai bod hynny\'n gwbl angenrheidiol';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modd demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ychwanegu cardiau at y sganiwr';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Yn ychwanegu 3 chynnyrch sampl at y sganiwr';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Gwesteiwr Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Gwesteiwr: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Arbrofion hygyrchedd';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Dewis aml-gynhyrchion ar gyfer prisiau';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Paneli gwybodaeth a archebwyd gan ddefnyddwyr';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Mynediad dros dro i chwilio am leoliad';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Cymhariaeth ochr yn ochr ar gyfer 2 neu 3 chynnyrch';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Mewnforio rhestr cynnyrch';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Sgorau a methodolegau';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Darganfyddwch sut mae\'r Nutri-Score yn cael ei gyfrifo';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Darganfyddwch y prif newidiadau i\'r fethodoleg';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Darganfyddwch Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Cwestiynau Cyffredin - Cwestiynau Cyffredin';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Y NGO Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Cael diweddariadau cymunedol';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Cadwch mewn cysylltiad â newyddion yr ap a\'r gymuned';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Cymerwch ran drwy fynychu un o\'n digwyddiadau rhithwir';
+
+  @override
+  String get preferences_connect_blog_title => 'Blog Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Cael y newyddion diweddaraf, wrth iddyn nhw ddigwydd';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Cael cymorth gan y gymuned';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Helpwch ni i wella\'r ap';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Anfonwch wybodaeth dadfygio atom';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Anfonwch e-bost atom gyda gwybodaeth ddadfygio fanwl';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Anfonwch adborth atom am yr ap';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Helpu i lunio dyfodol yr ap';
+
+  @override
+  String get preferences_connect_survey_title => 'Cymerwch yr arolwg ap';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Helpwch ni i ddeall beth ddylem ni ei adeiladu nesaf';
+
+  @override
+  String get preferences_connect_professionals_title =>
+      'Gweithwyr Proffesiynol';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Yn hollol rhad ac am ddim, yn sicrhau data cywir ar gyfer 500 o apiau a miliynau o ddefnyddwyr. Hunanwasanaeth, yn gydnaws â\'ch PIM neu daenlenni (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle => 'Cysylltwch i ddechrau';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Cael yr holl ddeunydd sydd ei angen arnoch ar gyfer eich adroddiad';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Cysylltwch ag ymholiadau’r wasg neu i roi gwybod i ni am eich adroddiad';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Dewch yn wirfoddolwr gweithredol';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Datblygu, Cyfathrebu, Dylunio… mae croeso i unrhyw fath o wirfoddoli neu arbenigedd!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Darganfyddwch rai o\'r nifer o ffyrdd y gallwch gyfrannu';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Datblygu apiau symudol';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Dysgwch sut i gyfrannu at ddatblygu meddalwedd';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Adeiladau ansefydlog dyddiol, nodweddion newydd sbon';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Tyfwch eich cymuned leol';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Cymorth gyda meddalwedd, cynnwys, cyfieithiadau dadansoddi cynhwysion';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Rydyn ni wedi paratoi templed bach i\'ch helpu chi :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Camau syml i gynyddu tryloywder bwyd yn eich gwlad';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Ymunwch â\'r tîm ansawdd data';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Ymunwch â\'n hymdrech i sicrhau bod y gronfa ddata yn gyflawn ac yn gywir';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Cynhyrchion wedi\'u hychwanegu';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Cynhyrchion newydd a ychwanegais at Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Cynhyrchion y mae angen i mi eu cwblhau';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Pob cynnyrch anghyflawn';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Fy mhrisiau, fy mhrawf…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Cynhyrchion y gallwch chi helpu i\'w cwblhau';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Helpu i gyfrifo\'r Nutri-Score a\'r Green-Score yn eich gwlad';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Prisiau a gyfrannais';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Tagiau pris a derbynebau';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Tynnwch luniau o\'ch derbynebau a sganiwch y codau bar cysylltiedig';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Tynnwch luniau o brisiau mewn siop';
+
+  @override
+  String get preferences_prices_newest_title => 'Prisiau diweddaraf';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Prisiau diweddaraf wedi\'u hychwanegu gan y gymuned Prisiau Agored';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Cyfranwyr gyda\'r prisiau mwyaf';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metrigau Pris Agored';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Dilynwch esblygiad y prosiect';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Ffyrdd o gyfrannu';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Cadarnhewch brisiau a ychwanegwyd gennych chi\'ch hun neu eraill, gyda chymorth AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Ychwanegwch lawer o dderbynebau neu luniau o silffoedd o\'ch rholyn camera yn gyflym';
+
+  @override
+  String get preferences_prices_challenges_title => 'Heriau misol';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Cymerwch ran mewn chwiliadau thematig misol i gasglu prisiau';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Adfer eich data teyrngarwch';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Dysgwch sut i ofyn am eich data';
+
+  @override
+  String get preferences_page_customize_app_title => 'Addasu\'r ap';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Cyfrannwch at y prosiect';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Ffyrdd syml o helpu Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Methodolegau sgorio, cymorth, a mwy am y prosiect';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Derbyn yr awgrym';
 
   @override
@@ -4738,4 +5564,102 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get prices_proof_error => 'Methodd y dilysu, ni ellid nôl profion';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count o $total prawf';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count o $total cyfranwyr';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count o $total lleoliad';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return 'lleoliadau $count';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Ailgychwynwch yr ap i gymhwyso\'r newidiadau.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Rhyngwyneb graffigol';
+
+  @override
+  String get preferences_app_settings_media_title => 'Cyfryngau';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Labordai Ffeithiau Bwyd Agored';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Dewch â Ffeithiau Bwyd Agored i\'ch iaith';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Cofrestrwch ar gyfer fersiwn alffa\'r ap';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Cyfraniadau a data cynnyrch';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Peidiwch â dangos Sonomeg Gwerin';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ychwanegwyd ar $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

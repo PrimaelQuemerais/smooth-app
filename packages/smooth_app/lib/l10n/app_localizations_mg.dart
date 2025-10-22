@@ -9,6 +9,9 @@ class AppLocalizationsMg extends AppLocalizations {
   AppLocalizationsMg([String locale = 'mg']) : super(locale);
 
   @override
+  String get app_name => 'Open Food Facts';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsMg extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsMg extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Misafo';
@@ -978,6 +974,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Misafidiana sokajy mazava kokoa';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Tsy misy fananana';
+
+  @override
+  String get product_tags_explanation =>
+      'Amin\'ny fampidirana fananana (fanalahidy / sanda) amin\'ny vokatra iray dia manampy amin\'ny fanatsarana azy ianao.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Fafao ny kaontiko';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Midira amin\'ny endri-javatra andrana sy fitaovana fampandrosoana';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,9 @@ class AppLocalizationsMg extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Sokafy amin\'ny tranokala Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2643,6 +2657,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get prices_list_add_new_price => 'Manampia vidiny vaovao\n';
 
   @override
+  String get prices_list_empty_title => 'Mbola tsy misy vidiny!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Aoka ianao ho voalohany hanampy iray:\nAmin\'ny alalan\'ny fitarafana **roisa** na **mariky ny vidiny**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Fivarotana tsy fantatra';
 
   @override
@@ -2652,7 +2673,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Jereo ny vidiny rehetra amin\'ity vokatra ity';
 
   @override
   String get prices_entry_menu_open_proof => 'Jereo ny porofo';
@@ -2732,9 +2753,23 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Tsy mbola misy mpandray anjara!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Aoka ianao ho voalohany hametraka vidiny!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Tsy mbola misy fivarotana!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Aoka ianao ho voalohany hametraka vidiny!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2839,7 +2874,17 @@ class AppLocalizationsMg extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Tsy mbola misy porofo!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Atombohy amin\'ny asio sarin\'ny **roisa** na **mari-bidy**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2918,13 +2963,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Firaketana';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2936,6 +2975,17 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Avereno ny fiteny fampiharana';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ampio karatra';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Mifindra eo amin\'ny prices.openfoodfacts.org (PROD) sy ny test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2979,6 +3029,11 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3980,32 +4035,32 @@ class AppLocalizationsMg extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Green-Score tsy fantatra';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score dia tsy azo ampiharina';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Sakafo tena voahodina - vondrona NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4102,9 +4157,6 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4212,11 +4264,283 @@ class AppLocalizationsMg extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Inona ny Green Score?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Ny Green-Score dia logo izay mikendry ny hampahafantatra anao ny **fiantraikany amin\'ny tontolo iainana**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Ny kaody loko dia miovaova manomboka amin\'ny maitso maizina (**A+**) ho an\'ny vokatra **tsy misy fiatraikany** ka hatramin\'ny mena maizina (**F**) ho an\'ny vokatra **miantraika indrindra**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Ny logos Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Ny fototra: fanombanana ny tsingerin\'ny fiainana (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Fanombanana ara-tsiansa ny sokajy sakafo';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Ho an\'ny sokajy vokatra tsirairay dia misy isa **marika** apetraka amin\'ny alalan\'ny angona avy amin\'ny angona momba ny tontolo iainana Agribalyse (naorin\'i ADEME sy INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Ny famakafakana ny tsingerin\'ny fiainana** dia fomba fanombanana manara-penitra amin\'ny fanatanterahana ny fanombanana ara-tontolo iainana misy dingana maro sy fepetra maro.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Mandrefy:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 dingana famokarana';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Fonosana';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 famantarana ny fiantraikany amin\'ny tontolo iainana';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Fiovan\'ny toetr\'andro/dian\'ny karbôna';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Fanimbana sosona ozon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Taratra ionizing';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tany';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Fampiasana rano sy angovo';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Fandotoana ny rivotra';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Rano an-dranomasina sy madio (partikely, acidification, eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 =>
+      'Fanimbana ny loharanon-karena.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonus sy sazy';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Mba hanomezana valisoa vokatra tsara kokoa ao anatin\'ny sokajy iray, dia mampihatra tambiny sy sazy mifototra amin\'ny fepetra maromaro izahay:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ny bonus dia omena arakaraka ny niandohan\'ny akora. Ity bonus ity dia mirakitra ny fiantraikan\'ny fitaterana ary koa ny politika momba ny tontolo iainana any amin\'ny firenena mpamokatra tsirairay.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Fonosana';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Mba hanaovana kajy marina ny Green-Score, dia ilaina ny manana fampahalalana izay tsy voatery voafaritra ao amin\'ny fonosana (toy ny fiaviana sy ny isan-jaton\'ny akora tsirairay) na izay tsy dia misy amin\'ny endrika azo ampiasaina (toy ny lisitry ny singa rehetra amin\'ny fonosana miaraka amin\'ireo karazana plastika ampiasaina).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Ny soatoavina antonony dia ampiasaina rehefa tsy mbola misy ity fampahalalana ity, saingy miantso ny rehetra izahay ankehitriny mba hanampy anay hanangona ity fampahalalana ity izay tena ilaina ho an\'ny Green-Score fa koa ho an\'ny fampiasana maro hafa.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Ahoana no ahafahan\'ny olom-pirenena manampy';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Ny olom-pirenena rehetra dia afaka manampy antsika hanangona sy handrafetana ny vaovao misy eo amin\'ny vokatra na azo tsoahina avy amin\'izy ireo, toy ny fampahalalana momba ny fonosana: Mission Emballages: firaketana fiaraha-miasa lehibe momba ny fonosana ho an\'ny vokatra sakafo rehetra (amin\'ny teny frantsay)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Ahoana no ahafahan\'ny mpanamboatra manampy';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Ny mpanamboatra dia afaka mandefa mivantana ny mombamomba azy amin\'ny alàlan\'ny sehatra maimaim-poana ho an\'ny mpamokatra.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Inona no vokatra tsara kokoa ho an\'ny planeta?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Mety ho sarotra ny milaza izany';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Ny fisafidianana sakafo maharitra dia iray amin\'ireo zavatra matanjaka indrindra azontsika atao ho an\'ny toetr\'andro, satria **ny rafitra ara-tsakafo eran-tany no tompon\'andraikitra amin\'ny ampahefatry ny entona mandatsa-dranomaso rehetra**.\n(Loharano: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Anao ny hery!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Ny vaovao tsara dia manome antsika fomba mahery vaika hamoronana fiovana izany.\n**Mihinana 1 000 eo ho eo isan-taona ny tsirairay avy amintsika**. Izany dia fahafahana 1,000 ** hisafidianana hoavy tsara kokoa ho an\'ny planeta**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Manampy mba ho tompon\'andraikitra sy hanapa-kevitra';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Mety ho sarotra ny fisafidianana sakafo maharitra. Misafotofoto ny etikety ary matetika tsy ampy ny vaovao. Ny Green-Score dia noforonina mba hanamora izany, manome anao ny ** mazava**, ** mifototra amin\'ny siansa**, ary ** mangarahara** naoty momba ny tontolo iainana ho an\'ny vokatra sakafo, eo amin\'ny toerana ilanao azy: rehefa miantsena ianao.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'mangarahara';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Tsy toy ny etikety tompon\'andraikitra, ny kajy Green-Score dia ** misokatra tanteraka** ary azo **hamarinin\'ny olona**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      'Inona no atao hoe ultra-processing?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Ny vondrona NOVA dia mampahafantatra anao ny haavon\'ny fanodinana sakafo.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Ny fanasokajiana ny NOVA dia mamela ny fanasokajiana ny sakafo ho **vondrona 4** araka ny **ny ambaratongan\'ny fanodinana indostrialy** (sakafo voahodina kely indrindra na tsy voahodina, akora nahandro, sakafo voahodina, sakafo faran\'izay voahodina).';
+
+  @override
+  String get guide_nova_logos_caption => 'Ny logos NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Ireo vondrona 4 NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Misy vondrona NOVA 4, ny olana dia ny vondrona 4 - sakafo ultra-processed.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Sakafo voahodina kely na tsy voahodina';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ny sakafo tsy voahodina (na voajanahary) dia ny ampahany azo hanina amin\'ny zavamaniry (voa, voankazo, raviny, taho, fakany) na biby (hozatra, atiny, atody, ronono), ary koa holatra, ahidrano, ary rano, rehefa tafasaraka amin\'ny natiora.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ny akora hohanina voahodina, toy ny menaka, dibera, siramamy, ary sira, dia akora azo avy amin\'ny sakafo Vondrona 1 na avy amin\'ny natiora amin\'ny alalan\'ny dingana izay ahitana fanerena, fanadiovana, fitotoana, fitotoana ary fanamainana.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ny sakafo voahodina, toy ny legioma anaty tavoahangy, trondro am-bifotsy, voankazo ao anaty sirop, fromazy, ary mofo vao vita, dia atao amin\'ny fanampiana sira, menaka, siramamy, na zavatra hafa avy amin\'ny vondrona 2 ka hatramin\'ny sakafo Vondrona 1. Ny dingana dia ahitana fomba fitehirizana na fandrahoan-tsakafo isan-karazany, ary amin\'ny resaka mofo sy fromazy, fermentation tsy misy alikaola. Ny ankamaroan\'ny sakafo voahodina dia misy akora roa na telo ary azo fantarina ho dika novaina amin\'ny sakafo Vondrona 1. Azo hanina samirery izy ireo na, matetika kokoa, miaraka amin\'ny sakafo hafa.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ny sakafo faran\'izay voahodina, toy ny zava-pisotro malefaka, tsakitsaky mamy na mamy, vokatra avy amin\'ny hena amboarina, ary lovia mangatsiaka efa voaomana mialoha, dia tsy sakafo novaina fotsiny fa fandrafetana vita amin\'ny ankapobeny na tanteraka avy amin\'ny akora azo avy amin\'ny sakafo sy ny fanampin-tsakafo, miaraka amin\'ny sakafon\'ny Vondrona 1 kely. Ny akora ao anatin\'ireo fandrafetana ireo matetika dia ahitana izay hita ao amin\'ny sakafo voahodina, toy ny siramamy, menaka, tavy, na sira. Na izany aza, ny vokatra vita amin\'ny ultra-processed dia misy loharanom-angovo sy otrikaina hafa tsy ampiasaina amin\'ny fikarakarana sakafo. Ny sasany amin\'izy ireo dia nalaina mivantana avy amin\'ny sakafo, toy ny casein, lactose, whey, ary gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ny olana amin\'ny ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Fikarakarana tafahoatra ny akora sakafo';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Maro no azo avy amin\'ny fanodinana bebe kokoa ny singa ara-tsakafo, toy ny menaka hydrogenated na mahaliana, proteinina hydrolyzed, soja proteinina mitoka-monina, maltodextrin, siramamy invert, ary sirop katsaka be fructose.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Fanampiny izay mihoatra ny fiarovana ara-tsakafo madio';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ny additives amin\'ny sakafo vita amin\'ny ultra-processed dia misy ny sasany izay ampiasaina amin\'ny sakafo voahodina, toy ny preservatives, antioxidants, ary stabilizers. Ny kilasin\'ny additives tsy hita afa-tsy amin\'ny vokatra vita amin\'ny ultra-processed dia ahitana ireo ampiasaina hanahaka na hanatsara ny toetran\'ny sakafo na hanafenana ireo endrika tsy mahafinaritra amin\'ny vokatra farany. Ireo additives ireo dia ahitana loko sy loko hafa, stabilizers loko; tsiro, fanampin-tsakafo, tsy misy siramamy; ary fitaovana fanodinana toy ny karbônina, fanamafisana, fanamafisam-peo ary anti-bulking agents, de-foaming, anti-caking sy glazing agents, emulsifiers, sequestrants ary humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Ny fanodinana tsy azonao atao ao an-trano';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Betsaka ny filaharan\'ny dingana ampiasaina mba hanambatra ireo akora maro mazàna sy hamoronana ny vokatra farany (noho izany dia \'voahodina be\'). Ny dingana dia misy maromaro tsy misy mitovy amin\'ny an-trano, toy ny hydrogenation sy hydrolysation, extrusion sy moulding, ary ny fanodinana mialoha ho an\'ny endasina.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ny lafiny miremby sy ara-bola amin\'ny fanodinana ultra';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ny tanjona ankapoben\'ny fanodinana ultra dia ny hamorona vokatra sakafo misy marika, mety (maharitra, vonona hohanina), mahasarika (hiper-mahafinaritra) ary tena mahazo tombony (engaron\'ny vidiny mora) natao hamindrana ireo vondrona sakafo hafa rehetra. Ny vokatra sakafo vita amin\'ny fomba faran\'izay bitika dia mazàna nofonosina amin\'ny fomba mahasarika sy amidin\'ny tsena.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4529,6 +4853,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Tsy misy vidiny';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Aoka ianao ho voalohany handray anjara!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4567,7 +4898,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Mitohy ny fitrandrahana…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Tafita ny fitrandrahana';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4698,6 +5032,504 @@ class AppLocalizationsMg extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Tantano ny safidinao amin\'ny vidiny';
+
+  @override
+  String get preferences_card_project => 'Ny tetikasa Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Ny antontan\'isako';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Adikao, hatsarao ny fitaovantsika…';
+
+  @override
+  String get preferences_connect_title => 'Connect';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Manatona, na Araho izahay amin\'ny media sosialy';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Ampio izahay hampahafantatra mpanjifa an-tapitrisany eran-tany';
+
+  @override
+  String get preferences_card_help => 'Fanampiana & Fanohanana';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Mahazoa valin\'ny fanontanianao';
+
+  @override
+  String get logged_out => 'Nivoaka';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Misaotra anao amin\'ny maha-mpikambana anay!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Jereo ny antontan\'isa rehetra';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Karohy $provider ny \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Mitadiava toerana (oh: Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Accessibility: Asehoy ny emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Accessibility: Esory ny loko';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Fampahalalana ara-dalàna';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Fepetra fampiasana, politika momba ny fiainana manokana, sy ny maro hafa';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts dia angon-drakitra momba ny vokatra sakafo **natao ho an\'ny rehetra, ho an\'ny rehetra**.\nAzonao atao ny mampiasa azy io mba hanaovana safidy sakafo tsara kokoa, ary satria izy io dia **angona misokatra**, na iza na iza dia afaka **mampiasa azy indray amin\'ny tanjona rehetra**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'fahazoan-dalana';
+
+  @override
+  String get preferences_about_app_title => 'Momba ny app';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Fampahalalana ara-teknika, fampahalalana momba ny mpamorona ary maro hafa';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Laharana dikan-teny';
+
+  @override
+  String get preferences_scanner_title => 'Scanner';
+
+  @override
+  String get preferences_app_store => 'App store';
+
+  @override
+  String get preferences_app_system_settings => 'Fikirana rafitra';
+
+  @override
+  String get preferences_source_code => 'Midira amin\'ny kaody loharano';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Ary manomboka miantraika amin\'ny olona an-tapitrisany';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'SOSO-KEVITRA';
+
+  @override
+  String get tips_discover_nutriscore => 'Fantaro ny Nutri-Score vaovao';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Ao amin\'ny tranokala Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Tantano ny kaontiko';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Tantano ny kaontinao';
+
+  @override
+  String get preferences_change_password_title => 'Ovay ny tenimiafinao';
+
+  @override
+  String get preferences_danger_zone => 'Faritra mampidi-doza';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Ho very avokoa ny fandraisanao anjara';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Fikirana fampiharana';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Fomba tena andrana hijerena vokatra ivelan\'ny aterineto';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Havaozy ny vokatra rehetra avy amin\'ny mpizara';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Aza adino ny manao izany raha tsy hoe tena ilaina';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demo mode';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ampio karatra amin\'ny scanner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Manampy vokatra santionany 3 amin\'ny scanner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Folksonomy mpampiantrano';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'mpampiantrano: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Andrana fahafahana miditra';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Fifantenana vokatra marobe amin\'ny vidiny';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Ny tontolon\'ny fahalalana nodidian\'ny mpampiasa';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Fidirana vonjimaika amin\'ny fikarohana toerana';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Ampitahao amin\'ny vokatra 2 na 3';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Import lisitry ny vokatra';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Scores & methodologies';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Fantaro ny fomba kajy ny Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Fantaro ireo fiovana lehibe amin\'ny fomba fiasa';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Fantaro ny tetikasa';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Fantaro ny zava-misy momba ny sakafo misokatra';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Fanontaniana matetika';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Ny ONG Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Mahazoa vaovao momba ny fiaraha-monina';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Mijanòna hatrany amin\'ny fampiharana sy ny vaovaon\'ny vondrom-piarahamonina';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Mandraisa anjara amin\'ny fanatrehana ny iray amin\'ireo hetsika virtoaly';
+
+  @override
+  String get preferences_connect_blog_title => 'Ny bilaogy Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Raiso ny vaovao farany, araka izay mitranga';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Mangataha fanampiana avy amin\'ny fiaraha-monina';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Ampio izahay hanatsara ny fampiharana';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Alefaso anay ny fampahalalana debug';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Alefaso mailaka izahay miaraka amin\'ny fampahalalana momba ny debugging amin\'ny antsipiriany';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Alefaso anay ny hevitra momba ny fampiharana';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Ampio hamolavola ny hoavin\'ny fampiharana';
+
+  @override
+  String get preferences_connect_survey_title => 'Raiso ny fanadihadiana app';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Ampio izahay hahatakatra izay tokony hamboarinay manaraka';
+
+  @override
+  String get preferences_connect_professionals_title => 'matihanina';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Maimaimpoana tanteraka, miantoka angon-drakitra marina ho an\'ny fampiharana 500 & mpanjifa an-tapitrisany. Fanompoan-tena, mifanaraka amin\'ny PIM na takelakao (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Mifandraisa amin\'ny fanombohana';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Raiso ny fitaovana rehetra ilainao amin\'ny tatitrao';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Mifandraisa amin\'ny mpanao gazety na ampahafantaro anay ny tatitrao';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Lasa mpilatsaka an-tsitrapo mavitrika';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Fampandrosoana, Fifandraisana, Famolavolana… izay karazana asa an-tsitrapo na fahaiza-manao dia raisina an-tsitrapo!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Fantaro ny sasany amin\'ireo fomba maro ahafahanao mandray anjara';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Fampandrosoana fampiharana finday';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Ianaro ny fomba fandraisana anjara amin\'ny fampivoarana rindrambaiko';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Fanorenana tsy miorina isan\'andro, endri-javatra vaovao';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Ampitomboy ny fiaraha-monina misy anao';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Fanampiana amin\'ny rindrankajy, atiny, fandikana analyse ingredient';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Nanomana modely kely izahay hanampy anao :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Dingana tsotra hampitomboana ny mangarahara ara-tsakafo ao amin\'ny firenenao';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Midira ao amin\'ny ekipa kalitao data';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Miaraha miasa aminay mba hahazoana antoka fa feno sy marina ny angon-drakitra';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Nampiana vokatra';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Vokatra vaovao nampiako tao amin\'ny Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Ny vokatra mila vitako';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Ny vokatra tsy feno rehetra';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Ny vidiny, ny porofoko…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Ny vokatra azonao ampiana mba hamitana';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ampio kajy ny Nutri-Score & Green-Score ao amin\'ny firenenao';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Vidiny nomeko';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Vidiny sy tapakila';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Makà sarin\'ny rosiao ary diniho ny kaody tsipika mifandraika amin\'izany';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Makà sarin\'ny vidiny amina fivarotana iray';
+
+  @override
+  String get preferences_prices_newest_title => 'Vidiny vaovao';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Vidy farany nampidirin\'ny vondrom-piarahamonina Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Mpandray anjara manana vidiny be indrindra';
+
+  @override
+  String get preferences_prices_metrics_title => 'Open Price metrika';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Araho ny fivoaran\'ny tetikasa';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Fomba fandraisana anjara';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Hamafiso ny vidiny ampianao na olon-kafa, miaraka amin\'ny fanampian\'ny AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Manampia rosia na sarin\'ny talantalana maro avy amin\'ny horonan-tsaryo';
+
+  @override
+  String get preferences_prices_challenges_title => 'Fanamby isam-bolana';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Mandraisa anjara amin\'ny fikatsahana lohahevitra isam-bolana hanangonana vidiny';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Avereno indray ny angona momba ny tsy fivadihanao';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Ianaro ny fomba fangatahana ny angonao';
+
+  @override
+  String get preferences_page_customize_app_title => 'Amboary ny fampiharana';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Mandraisa anjara amin\'ny tetikasa';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Fomba tsotra hanampiana ny Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodolojia, fanampiana, ary bebe kokoa momba ny tetikasa';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Ekeo ny soso-kevitra';
 
   @override
@@ -4742,4 +5574,103 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Tsy nahomby ny fanamarinana, tsy afaka naka porofo';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count amin\'ny $total porofo';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count amin\'ny $total mpandray anjara';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count amin\'ny $total toerana';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count toerana';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Avereno azafady ny fampiharana hampihatra ireo fanovana.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interface grafika';
+
+  @override
+  String get preferences_app_settings_media_title => 'haino aman-jery';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Open Food Facts Labs';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Mitondrà Open Food Facts amin\'ny fiteninao';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Misoratra anarana amin\'ny dika alpha amin\'ny fampiharana';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Fandraisana anjara & angona vokatra';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Aza mampiseho Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Nampiana $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

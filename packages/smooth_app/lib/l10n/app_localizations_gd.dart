@@ -9,6 +9,9 @@ class AppLocalizationsGd extends AppLocalizations {
   AppLocalizationsGd([String locale = 'gd']) : super(locale);
 
   @override
+  String get app_name => 'Fiosrachadh Biadh Fosgailte';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsGd extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsGd extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Tagh roinn nas mionaidiche';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsGd extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Gun thogalaichean';
+
+  @override
+  String get product_tags_explanation =>
+      'Le bhith a’ cur feartan (iuchair/luach) ri toradh, bidh thu ga neartachadh.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Sguab às mo chunntas';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Faigh cothrom air feartan deuchainneach agus innealan leasachaidh';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsGd extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Fosgailte air làrach-lìn Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2643,6 +2657,13 @@ class AppLocalizationsGd extends AppLocalizations {
   String get prices_list_add_new_price => 'Cuir prìs ùr\nris';
 
   @override
+  String get prices_list_empty_title => 'Gun phrìs fhathast!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bi mar a’ chiad fhear a chuireas fear ris:\nLe bhith a’ sganadh **cuidhteas** no **tag prìse**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Bùth neo-aithnichte';
 
   @override
@@ -2652,7 +2673,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Seall a h-uile prìs airson an toraidh seo';
 
   @override
   String get prices_entry_menu_open_proof => 'Seall dearbhadh';
@@ -2731,9 +2752,23 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Gun neach-taic fhathast!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Bi mar a’ chiad fhear a chuireas prìs ris!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Gun bhùth fhathast!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Bi mar a’ chiad fhear a chuireas prìs ris!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2838,7 +2873,17 @@ class AppLocalizationsGd extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Gun dearbhadh fhathast!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Tòisich le bhith a’ cur dealbh de **chuidhteas** no **tag prìse** ris!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2917,13 +2962,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2935,6 +2974,17 @@ class AppLocalizationsGd extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Ath-shuidhich cànan an aplacaid';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Cuir cairtean ris';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Gluais eadar prices.openfoodfacts.org (PROD) agus àrainneachd deuchainn';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2978,6 +3028,11 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3979,32 +4034,33 @@ class AppLocalizationsGd extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Sgòr Uaine A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Sgòr Uaine B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Sgòr Uaine C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Sgòr Uaine D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Sgòr Uaine E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Sgòr Uaine Neo-aithnichte';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Chan eil Sgòr Uaine iomchaidh';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Biadhan air an giullachd gu mòr - buidhnean NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4101,9 +4157,6 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4211,11 +4264,283 @@ class AppLocalizationsGd extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Dè a th’ anns an Sgòr Uaine?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      '’S e suaicheantas a th’ anns an Sgòr Uaine a tha ag amas air fiosrachadh a thoirt dhut mu **bhuaidh àrainneachdail bìdh**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Tha an còd dath ag atharrachadh bho uaine dorcha (**A+**) airson na toraidhean **leis an ìre as lugha buaidh** gu dearg dorcha (**F**) airson na toraidhean **leis an ìre as motha buaidh**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Suaicheantasan an Sgòr Uaine';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'A’ chridhe: Measadh cearcall-beatha (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Measadh saidheansail air roinnean bìdh';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Airson gach roinn thoraidhean, thèid sgòr **coimeas** a stèidheachadh a’ cleachdadh dàta bhon stòr-dàta àrainneachdail Agribalyse (air a dhealbhadh le ADEME agus INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '’S e dòigh-obrach àbhaisteach a th’ ann an **mion-sgrùdadh cearcall-beatha** airson measadh àrainneachdail ioma-ìre agus ioma-shlat-tomhais a dhèanamh.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Tha e a’ tomhas:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 ceumannan cinneasachaidh';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 comharran buaidh àrainneachdail';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Atharrachadh clìomaid/lorg carboin';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Crìonadh sreath òson';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Rèididheachd ianachaidh';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tìr';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Cleachdadh uisge is lùtha';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Truailleadh adhair';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Uisge mara is uisge ùr (mìrean, searbhachadh, eutrofachadh)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Crìonadh ghoireasan.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bònasan is peanasan';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Gus duaisean a thoirt do thoraidhean nas fheàrr taobh a-staigh roinn, bidh sinn an uairsin a’ cur bònasan is peanasan an sàs stèidhichte air grunn shlatan-tomhais:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Thèid bònas a thoirt seachad a rèir tùs nan tàthchuid. Bidh am bònas seo a’ toirt aire don bhuaidh a th’ aig còmhdhail agus cuideachd do phoileasaidh àrainneachdail dùthaich gach riochdaire.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Gus an Sgòr Uaine obrachadh a-mach gu ceart, feumar fiosrachadh a bhith agad nach eil air a shònrachadh air a’ phacaid (leithid tùs agus an dearbh cheudad de gach tàthchuid) no nach eil ri fhaighinn ach ainneamh ann an cruth a ghabhas cleachdadh (leithid liosta de na pàirtean uile den phacaid leis na seòrsaichean plastaig a chaidh a chleachdadh).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Bithear a’ cleachdadh luachan cuibheasach nuair nach eil am fiosrachadh seo ri fhaighinn fhathast, ach tha sinn a-nis ag iarraidh air a h-uile duine ar cuideachadh le bhith a’ cruinneachadh an fhiosrachaidh seo a bhios glè fheumail airson an Sgòr Uaine ach cuideachd airson mòran chleachdaidhean eile.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Mar as urrainn do shaoranaich cuideachadh';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Faodaidh a h-uile saoranach ar cuideachadh le bhith a’ cruinneachadh agus a’ structaradh an fhiosrachaidh a tha an làthair air toraidhean no a ghabhas a thoirt a-mach bhuapa, leithid fiosrachadh air pacaigeadh: Mission Emballages: clàr-stuth co-obrachail mòr-sgèile de phacaigeadh airson a h-uile toradh bìdh (ann am Fraingis)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Mar as urrainn do luchd-saothrachaidh cuideachadh';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Faodaidh luchd-saothrachaidh am fiosrachadh aca a chuir thugainn gu dìreach tron àrd-ùrlar an-asgaidh againn do luchd-dèanaimh.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Dè an toradh a tha nas fheàrr airson a’ phlanaid?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Faodaidh e bhith duilich innse';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      '’S e taghadh biadh seasmhach aon de na rudan as cumhachdaiche as urrainn dhuinn a dhèanamh airson na gnàth-shìde, leis gu bheil **an siostam bìdh cruinneil againn an urra ri còrr is cairteal de na sgaoilidhean gasa taigh-glainne uile**.\n(Stòr: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'Tha an cumhachd agad!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Is e an deagh naidheachd gu bheil seo a’ toirt dhuinn dòigh chumhachdach air atharrachadh a chruthachadh.\n**Bidh gach aon againn ag ithe timcheall air 1,000 biadh gach bliadhna**. Sin 1,000 cothrom airson **àm ri teachd nas fheàrr a thaghadh airson a’ phlanaid**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'A’ cuideachadh le bhith cunntachail agus a’ co-dhùnadh';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Faodaidh taghadh biadh seasmhach a bhith a’ faireachdainn iom-fhillte. Tha bileagan troimh-chèile agus gu tric chan eil fiosrachadh ann. Chaidh an Sgòr Uaine a chruthachadh gus a dhèanamh sìmplidh, a’ toirt dhut rangachadh àrainneachdail **soilleir**, **stèidhichte air saidheans**, agus **follaiseach** airson toraidhean bìdh, dìreach far a bheil feum agad air: fhad ‘s a tha thu a’ ceannach.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Follaiseachd';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Eu-coltach ri bileagan seilbhe, tha àireamhachadh an Sgòr Uaine **gu tur fosgailte** agus faodar a **dhearbhachadh le duine sam bith**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      'Dè a th’ ann an ultra-phròiseasadh?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Bidh buidhnean NOVA ag innse dhut mu ìre giollachd bìdh.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Leigidh seòrsachadh NOVA le biadhan a bhith air an seòrsachadh ann an **4 buidhnean** stèidhichte air an **ìre de ghiullachd gnìomhachais** (biadhan air an giullachd gu ìre bheag no gun phròiseasadh, grìtheidean còcaireachd, biadhan air an giullachd, biadhan air an giullachd gu mòr).';
+
+  @override
+  String get guide_nova_logos_caption => 'Suaicheantasan NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Na 4 buidhnean NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Tha 4 buidhnean NOVA ann, agus is e am buidheann trioblaideach Buidheann 4 - Biadhan air an giullachd gu mòr.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Biadhan air an giullachd gu ìre bheag no gun phròiseasadh';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Is e biadhan neo-phròiseasaichte (no nàdarra) na pàirtean a ghabhas ithe de lusan (sìol, measan, duilleagan, gasan, freumhaichean) no bheathaichean (fèithean, sgeadachaidhean, uighean, bainne), a bharrachd air fungasan, algaich, agus uisge, às deidh dhaibh a bhith air an sgaradh bhon nàdar.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Tha grìtheidean còcaireachd giullaichte, leithid olan, ìm, siùcar agus salann, nan stuthan a tha air an toirt bho bhiadhan Buidheann 1 no bhon nàdar tro phròiseasan a tha a’ toirt a-steach brùthadh, grinneachadh, bleith, muilneachadh agus tiormachadh.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Bidh biadhan giullaichte, leithid glasraich ann am botail, iasg ann an tionaichean, measan ann an siorup, càiseagan, agus aran ùr-dhèanta, air an dèanamh sa mhòr-chuid le bhith a’ cur salann, ola, siùcar, no stuthan eile bho Bhuidheann 2 gu biadhan Buidheann 1. Tha pròiseasan a’ toirt a-steach diofar dhòighean glèidhteachais no còcaireachd, agus a thaobh aran is càise, coipeadh gun deoch làidir. Tha dà no trì tàthchuid anns a’ mhòr-chuid de bhiadhan giullaichte agus tha iad aithnichte mar dhreachan atharraichte de bhiadhan Buidheann 1. Faodar an ithe leotha fhèin no, nas trice, ann an co-bhonn ri biadhan eile.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Chan e dìreach biadhan atharraichte a th’ ann am biadhan air an giullachd gu mòr, leithid deochan bog, greimean-bìdh pacaichte milis no blasta, toraidhean feòla ath-chruthaichte, agus soithichean reòta ro-ullaichte, ach foirmlean air an dèanamh sa mhòr-chuid no gu tur bho stuthan a tha air an toirt bho bhiadhan agus stuthan cur-ris, le glè bheag de bhiadh Buidheann 1 slàn. Mar as trice bidh grìtheidean anns na foirmlean sin a’ toirt a-steach an fheadhainn a lorgar ann am biadhan giullaichte cuideachd, leithid siùcaran, olan, geir no salann. Ach, tha stòran lùtha agus beathachaidh eile ann an toraidhean air an giullachd gu mòr nach eilear a’ cleachdadh mar as trice ann an ullachaidhean còcaireachd. Tha cuid dhiubh sin air an toirt a-mach gu dìreach bho bhiadhan, leithid casein, lactos, meadhg-bhìdh, agus gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Na duilgheadasan le ultra-phròiseasadh';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Giullachd anabarrach de ghrìtheidean bìdh';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Tha mòran dhiubh air an toirt bho bhith a’ giullachd phàirtean bìdh a bharrachd, leithid olan hydrogenated no interesterified, pròtainean hydrolyzed, pròtain soy air a sgaradh, maltodextrin, siùcar inverted, agus siorup arbhair àrd-fructose.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Stuthan a bharrachd a tha a’ dol nas fhaide na sàbhailteachd bìdh fìor-ghlan';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Am measg nan stuthan cur-ris ann am biadhan air an giullachd gu mòr tha cuid a thathas a’ cleachdadh ann am biadhan air an giullachd cuideachd, leithid stuthan-gleidhidh, stuthan-dìona antioxidants, agus stabilizers. Am measg nan clasaichean de stuthan cur-ris a lorgar ann am bathar air an giullachd gu mòr a-mhàin tha an fheadhainn a thathas a’ cleachdadh gus feartan mothachaidh biadhan ath-aithris no a neartachadh no gus taobhan mì-thlachdmhor den toradh deireannach fhalach. Tha na stuthan cur-ris sin a’ toirt a-steach dathan agus dathan eile, stabilizers dath; blasan, luchd-àrdachaidh blas, milsearan neo-shiùcair; agus taicean giullachd leithid riochdairean carbonating, daingneachaidh, bulking agus anti-bulking, riochdairean dì-fhoaming, anti-caking agus glazing, emulsifiers, sequestrants, agus humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Giullachd nach urrainn dhut a dhèanamh aig an taigh';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Bithear a’ cleachdadh iomadh sreath de phròiseasan gus na grìtheidean, a bhios mar as trice mòran, a chur còmhla agus an toradh deireannach a chruthachadh (mar sin ‘air a phròiseasadh gu mòr’). Tha grunn phròiseasan anns na pròiseasan aig nach eil co-ionannachdan dachaigheil, leithid hydrogenation agus hydrolysation, eas-tharraing agus molltair, agus ro-phròiseasadh airson friogais.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Na taobhan creachaidh is ionmhais a tha an lùib ultra-phròiseasadh';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Is e prìomh adhbhar giollachd-bhìdh toraidhean bìdh branndaichte, goireasach (maireannach, deiseil airson ithe), tarraingeach (ro-bhlasta) agus air leth prothaideach (tàthchuid aig prìs ìseal) a chruthachadh, air an dealbhadh gus a h-uile buidheann bìdh eile a chuir às. Mar as trice bidh toraidhean bìdh air an giollachd-bhìdh air am pacadh ann an dòigh tharraingeach agus air am margaidheachd gu dian.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4528,6 +4853,13 @@ class AppLocalizationsGd extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Chan eil prìs ri fhaighinn';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Bi mar a’ chiad fhear a chuireas ris!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4566,7 +4898,11 @@ class AppLocalizationsGd extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Às-tharraing ga dhèanamh…';
+
+  @override
+  String get nutrition_facts_extract_successful =>
+      'Shoirbhich leis an às-tharraing';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4697,6 +5033,512 @@ class AppLocalizationsGd extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Stiùirich na roghainnean prìsean agad';
+
+  @override
+  String get preferences_card_project =>
+      'Pròiseact Fiosrachadh Bidhe Fosgailte';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Mo staitistig';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Eadar-theangaich, leasaich na h-innealan againn…';
+
+  @override
+  String get preferences_connect_title => 'Ceangail';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Cuir fios thugainn, no lean sinn air na meadhanan sòisealta';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Cuidich sinn gus fiosrachadh a thoirt do mhilleanan de luchd-cleachdaidh air feadh an t-saoghail';
+
+  @override
+  String get preferences_card_help => 'Cobhair & Taic';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Faigh freagairtean do na ceistean agad';
+
+  @override
+  String get logged_out => 'Air logadh a-mach';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Tapadh leibh airson a bhith nad aon de na buill againn!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Seall a h-uile staitistig';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Lorg $provider airson \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Lorg suidheachadh (m.e. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Ruigsinneachd: Seall emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Ruigsinneachd: Thoir air falbh dathan';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Fiosrachadh laghail';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Teirmichean cleachdaidh, poileasaidh prìobhaideachd, agus barrachd';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      '’S e stòr-dàta thoraidhean bìdh a th’ ann an Open Food Facts **air a dhèanamh le a h-uile duine, airson a h-uile duine**.\nFaodaidh tu a chleachdadh gus roghainnean bìdh nas fheàrr a dhèanamh, agus leis gur e **dàta fosgailte** a th’ ann, faodaidh duine sam bith **ath-chleachdadh airson adhbhar sam bith**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Ceadan';
+
+  @override
+  String get preferences_about_app_title => 'Mu dheidhinn an aplacaid';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Fiosrachadh teicnigeach, fiosrachadh luchd-leasachaidh, agus barrachd';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Àireamh an tionndaidh';
+
+  @override
+  String get preferences_scanner_title => 'Sganair';
+
+  @override
+  String get preferences_app_store => 'Bùth aplacaidean';
+
+  @override
+  String get preferences_app_system_settings => 'Roghainnean an t-siostaim';
+
+  @override
+  String get preferences_source_code => 'Faigh cothrom air a’ chòd thùsail';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Agus tòisich a’ toirt buaidh air milleanan';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Molaidhean';
+
+  @override
+  String get tips_discover_nutriscore => 'Faigh a-mach an Nutri-Score ùr';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Air làrach-lìn Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Stiùirich mo chunntas';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Stiùirich do chunntas';
+
+  @override
+  String get preferences_change_password_title =>
+      'Atharraich am facal-faire agam';
+
+  @override
+  String get preferences_danger_zone => 'Sòn cunnart';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Thèid na tabhartasan agad uile a chall';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Roghainnean an aplacaid';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Dòigh gu math deuchainneach airson toraidhean a sganadh far-loidhne';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Ùraich a h-uile toradh bhon fhrithealaiche';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Feuch an seachain thu sin a dhèanamh mura h-eil feum air';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modh taisbeanaidh';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Cuir cairtean ris an sganair';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Cuir 3 toraidhean sampall ris an sganair';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Neach-aoigheachd Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Aoigh: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Deuchainnean ruigsinneachd';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Taghadh ioma-thoraidhean airson prìsean';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Pannalan eòlais air an òrdachadh leis an neach-cleachdaidh';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Cothrom sealach air rannsachadh àite';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Coimeas taobh ri taobh airson 2 no 3 toraidhean';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Ion-phortadh liosta thoraidhean';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Sgòran & modhan-obrach';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Faigh a-mach mar a thèid an Nutri-Score obrachadh a-mach';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Faigh a-mach na prìomh atharrachaidhean air an dòigh-obrach';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Faigh a-mach Fiosrachadh mu Bhiadh Fosgailte';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Ceistean Bitheanta - Ceistean Bitheanta';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'NGO Fiosrachadh Biadh Fosgailte';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Faigh ùrachaidhean coimhearsnachd';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Fuirich fiosrachail leis an aplacaid agus naidheachdan coimhearsnachd';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Gabh pàirt le bhith an làthair aig aon de na tachartasan brìgheil againn';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Am blog Fiosrachadh Biadh Fosgailte';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Faigh na naidheachdan as ùire, cho luath ‘s a thachras iad';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Faigh cobhair bhon choimhearsnachd';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Cuidich sinn le bhith a’ leasachadh an aplacaid';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Cuir fiosrachadh dì-bhugachaidh thugainn';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Cuir post-d thugainn le fiosrachadh mionaideach mu dhì-bhugachadh';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Cuir fios-air-ais thugainn mun aplacaid';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Cuidich le bhith a’ cumadh àm ri teachd an aplacaid';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Gabh an sgrùdadh air an aplacaid';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Cuidich sinn le bhith a’ tuigsinn dè bu chòir dhuinn a thogail an ath rud';
+
+  @override
+  String get preferences_connect_professionals_title => 'Proifeiseantaich';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Gu tur an-asgaidh, a’ dèanamh cinnteach à dàta ceart airson 500 aplacaid & milleanan de luchd-cleachdaidh. Fèin-sheirbheis, co-chòrdail ris a’ PIM no na duilleagan-clèithe agad (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Cuir fios thugainn gus tòiseachadh';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Faigh a h-uile stuth a dh’ fheumas tu airson an aithisg agad';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Cuir fios thugainn airson ceistean bhon phreas no gus innse dhuinn mun aithisg agad';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Bi nad shaor-thoileach gnìomhach';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Leasachadh, Conaltradh, Dealbhadh… tha fàilte air seòrsa sam bith de obair shaor-thoileach no eòlas!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Faigh a-mach cuid de na iomadh dòigh anns an urrainn dhut tabhartas a thoirt seachad';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Leasachadh aplacaidean gluasadach';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Ionnsaich mar a chuireas tu ri leasachadh bathar-bog';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Togalaichean neo-sheasmhach làitheil, feartan ùra';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Fàs do choimhearsnachd ionadail';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Cobhair le bathar-bog, susbaint, eadar-theangachaidhean mion-sgrùdaidh tàthchuid';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Tha sinn air beagan teamplaid ullachadh gus do chuideachadh :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Ceumannan sìmplidh gus follaiseachd bìdh a leasachadh anns an dùthaich agad';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Thig còmhla ris an sgioba càileachd dàta';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Thig còmhla rinn gus dèanamh cinnteach gu bheil an stòr-dàta coileanta agus ceart';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Toraidhean a bharrachd';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Toraidhean ùra a chuir mi ri Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Toraidhean a dh’ fheumas mi a chrìochnachadh';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'A h-uile toradh neo-choileanta';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Mo phrìsean, mo dhearbhadh…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Toraidhean as urrainn dhut cuideachadh le bhith gan crìochnachadh';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Cuidich le bhith ag obrachadh a-mach an Nutri-Score & Green-Score anns an dùthaich agad';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prìsean a chuir mi ris';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Tagaichean prìsean agus cuidhteasan';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Gabh dealbhan de na cuidhteasan agad agus sgan na còdan-barra co-cheangailte riutha';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Tog dealbhan de phrìsean ann am bùth';
+
+  @override
+  String get preferences_prices_newest_title => 'Prìsean as ùire';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Na prìsean as ùire air an cur ris leis a’ choimhearsnachd Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Luchd-tabhartais leis na prìsean as àirde';
+
+  @override
+  String get preferences_prices_metrics_title => 'Meatairean Prìs Fosgailte';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Lean mean-fhàs a’ phròiseict';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Dòighean air tabhartas a thoirt seachad';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Dearbhaich prìsean a chuir thu fhèin no daoine eile ris, le cuideachadh bho AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Cuir mòran cuidhteasan no dealbhan de sgeilpichean bhon rolla camara agad ris gu sgiobalta';
+
+  @override
+  String get preferences_prices_challenges_title => 'Dùbhlain mhìosail';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Gabh pàirt ann an quests cuspaireil mìosail gus prìsean a chruinneachadh';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Faigh air ais an dàta dìlseachd agad';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Ionnsaich mar a dh\'iarras tu an dàta agad';
+
+  @override
+  String get preferences_page_customize_app_title => 'Gnàthaich an aplacaid';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Cuir ris a’ phròiseact';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Dòighean sìmplidh airson cuideachadh le Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Modhan-obrach sgòraidh, cobhair, agus barrachd mun phròiseact';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Gabh ris a\' mholadh';
 
   @override
@@ -4741,4 +5583,102 @@ class AppLocalizationsGd extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Dh’fhàillig dearbhadh, cha ghabh dearbhaidhean fhaighinn';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count de $total dearbhaidhean';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count de $total luchd-taic';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count de $total àiteachan';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return 'àiteachan $count';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Ath-thòisich an aplacaid gus na h-atharrachaidhean a chur an sàs.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Eadar-aghaidh grafaigeach';
+
+  @override
+  String get preferences_app_settings_media_title => 'Meadhanan';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Obair-lannan Fiosrachaidh Bidhe Fosgailte';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Thoir Fiosrachadh Biadh Fosgailte don chànan agad';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Clàraich airson an dreach alpha den aplacaid';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Tabhartasan & Dàta toraidh';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Na seall Folkonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Air a chur ris air $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

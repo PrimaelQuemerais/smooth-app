@@ -9,6 +9,9 @@ class AppLocalizationsRo extends AppLocalizations {
   AppLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
+  String get app_name => 'Informații despre alimente deschise';
+
+  @override
   String get sep => '';
 
   @override
@@ -328,10 +331,6 @@ class AppLocalizationsRo extends AppLocalizations {
   String get sign_up_page_terms_text => 'termeni de utilizare și contribuție';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-ro.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -458,9 +457,6 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donează pentru Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -605,7 +601,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get reloaded_with_new_preferences => 'Reîncărcat cu noile preferințe';
 
   @override
-  String get profile_navbar_label => 'Profil';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scanează';
@@ -997,6 +993,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get score_add_missing_product_category => 'Selectați o categorie';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Selectați o categorie mai precisă';
+
+  @override
   String get score_add_missing_product_countries =>
       'Adăugați țările care lipsesc';
 
@@ -1284,6 +1284,13 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Nicio proprietate';
+
+  @override
+  String get product_tags_explanation =>
+      'Prin adăugarea de proprietăți (cheie/valoare) unui produs, contribuiți la îmbogățirea acestuia.';
 
   @override
   String get add_tag => 'Add property';
@@ -1720,7 +1727,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get account_delete => 'Ștergere cont';
 
   @override
-  String get account_deletion_subject => 'Șterge contul meu';
+  String get account_delete_title => 'Ștergeți contul meu';
 
   @override
   String get user_profile => 'Cont';
@@ -2397,6 +2404,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dev_preferences_screen_title => 'Modul dezvoltare';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Accesați funcții experimentale și instrumente de dezvoltare';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Reporniți integrarea';
 
   @override
@@ -2544,6 +2555,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Deschideți pe site-ul Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2682,6 +2696,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get prices_list_add_new_price => 'Adăugați un preț nou\n';
 
   @override
+  String get prices_list_empty_title => 'Încă nu există preț!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Fii primul care adaugă unul:\nScanând o **chitanță** sau o **etichetă de preț**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Magazin necunoscut';
 
   @override
@@ -2691,7 +2712,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Vezi toate prețurile pentru acest produs';
 
   @override
   String get prices_entry_menu_open_proof => 'Vizualizați dovada';
@@ -2770,9 +2791,23 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Niciun contribuitor încă!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Fii primul care adaugă un preț!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Încă nu există magazin!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Fii primul care adaugă un preț!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2877,7 +2912,17 @@ class AppLocalizationsRo extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Încă nicio dovadă!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Începeți prin a adăuga o fotografie a unei **bonuri** sau a unei **etichete de preț**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2956,13 +3001,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Date';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2974,6 +3013,16 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Resetați limba aplicației';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Adăugați carduri';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Comutare între prices.openfoodfacts.org (PROD) și mediul de testare';
 
   @override
   String get search_history_item_edit_tooltip =>
@@ -3019,6 +3068,11 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -4034,32 +4088,32 @@ class AppLocalizationsRo extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Scor Ecologic';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Scor verde necunoscut';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Scorul verde nu este aplicabil';
 
   @override
-  String get nova_group_generic => 'Ultra-procesare - grupuri NOVA';
+  String get nova_group_generic_new => 'Alimente ultraprocesate - grupuri NOVA';
 
   @override
   String get nova_group_1 => 'Grupa 1 NOVA';
@@ -4156,9 +4210,6 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Distribuiți';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4266,11 +4317,281 @@ class AppLocalizationsRo extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Scor Ecologic';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Ce este Scorul Verde?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score este un logo care își propune să vă informeze despre **impactul alimentelor asupra mediului**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Codul de culori variază de la verde închis (**A+**) pentru produsele cu **cel mai mic impact** la roșu închis (**F**) pentru produsele cu **cel mai mare impact**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logourile Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Nucleul: Evaluarea ciclului de viață (ACV)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'O evaluare științifică a categoriilor de alimente';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Pentru fiecare categorie de produse, se stabilește un scor **de referință** folosind date din baza de date de mediu Agribalyse (concepută de ADEME și INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analiza ciclului de viață** este o metodă standardizată de evaluare pentru efectuarea unei evaluări de mediu în mai multe etape și mai multe criterii.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => 'Măsoară:';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 etape de producție';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agricultură';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Prelucrare';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Ambalare';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transport';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribuție';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumul';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 indicatori de impact asupra mediului';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Schimbările climatice/amprenta de carbon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Epuizarea stratului de ozon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radiații ionizante';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Teren';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Consumul de apă și energie';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Poluarea aerului';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Apă marină și dulce (particule, acidificare, eutrofizare)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Epuizarea resurselor.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonusuri și penalizări';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Pentru a recompensa produsele mai bune dintr-o anumită categorie, aplicăm bonusuri și penalizări pe baza mai multor criterii:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mod de producție';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'Se acordă un bonus produselor care au o etichetă oficială, o etichetă sau o certificare care garantează beneficii pentru mediu (ecologic, comerț echitabil, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Originea ingredientelor';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Se acordă un bonus în funcție de originea ingredientelor. Acest bonus ia în considerare impactul asupra transportului și, de asemenea, politica de mediu a țării fiecărui producător.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Specii amenințate';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'Se aplică o penalizare pentru produsele care conțin ingrediente care au un impact negativ semnificativ asupra biodiversității și ecosistemelor, cum ar fi uleiul de palmier, a cărui producție este responsabilă de defrișările masive.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Ambalare';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'Se calculează o sancțiune care să ia în considerare recircularea ambalajelor (utilizarea materiilor prime reciclate și posibilitatea de reciclare) și supraambalarea.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'O necesitate sporită de transparență pentru o mai bună măsurare și reducere a impactului asupra mediului';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Pentru a calcula cu exactitate Green-Score, este necesar să existe informații care nu sunt neapărat specificate pe ambalaj (cum ar fi originea și procentul exact al fiecărui ingredient) sau care sunt rareori disponibile într-o formă utilizabilă (cum ar fi o listă a tuturor componentelor ambalajului cu tipurile precise de materiale plastice utilizate).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Valorile medii sunt utilizate atunci când aceste informații nu sunt încă disponibile, dar acum facem apel la toată lumea să ne ajute să colectăm aceste informații, care vor fi foarte utile pentru Green-Score, dar și pentru multe alte utilizări.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Cum pot cetățenii să ajute';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Toți cetățenii ne pot ajuta să colectăm și să structurăm informațiile prezente pe produse sau care pot fi deduse din acestea, cum ar fi informațiile despre ambalaje: Misiunea Emballages: un inventar colaborativ la scară largă al ambalajelor pentru toate produsele alimentare (în franceză)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Cum pot ajuta producătorii';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Producătorii ne pot trimite informațiile lor direct prin intermediul platformei noastre gratuite pentru producători.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ce produs este mai bun pentru planetă?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Poate fi greu de spus';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Alegerea alimentelor sustenabile este unul dintre cele mai importante lucruri pe care le putem face pentru climă, deoarece **sistemul nostru alimentar global este responsabil pentru peste un sfert din totalul emisiilor de gaze cu efect de seră**.\n(Sursa: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Tu ai puterea!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Vestea bună este că acest lucru ne oferă o modalitate puternică de a crea schimbare.\n**Fiecare dintre noi mănâncă în jur de 1.000 de mese în fiecare an**. Asta înseamnă 1.000 de oportunități de a **alege un viitor mai bun pentru planetă**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Ajută la a fi responsabil și la a lua decizii';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Alegerea alimentelor sustenabile poate părea complexă. Etichetele sunt confuze, iar informațiile lipsesc adesea. Scorul Verde a fost creat pentru a simplifica lucrurile, oferindu-vă un rating ecologic **clar**, **bazat pe informații științifice** și **transparent** pentru produsele alimentare, exact acolo unde aveți nevoie de el: atunci când faceți cumpărături.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Transparenţă';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Spre deosebire de etichetele proprietare, calculul Green-Score este **complet deschis** și poate fi **verificat de oricine**.';
+
+  @override
+  String get guide_nova_title => 'Alimente ultraprocesate';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Ce este ultra-procesarea?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Grupurile NOVA vă informează despre nivelul de procesare a alimentelor.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Clasificarea NOVA permite clasificarea alimentelor în **4 grupe** în funcție de **gradul lor de procesare industrială** (alimente minim procesate sau neprocesate, ingrediente culinare, alimente procesate, alimente ultra-procesate).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logourile NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Cele 4 grupuri NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Există 4 grupuri NOVA, cea problematică fiind Grupa 4 - Alimente ultraprocesate.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Alimente minimal procesate sau neprocesate';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Alimentele neprocesate (sau naturale) sunt părțile comestibile ale plantelor (semințe, fructe, frunze, tulpini, rădăcini) sau animalelor (mușchi, organe, ouă, lapte), precum și ciupercile, algele și apa, după ce au fost separate din natură.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Ingrediente culinare prelucrate';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ingredientele culinare procesate, cum ar fi uleiurile, untul, zahărul și sarea, sunt substanțe derivate din alimente din grupa 1 sau din natură prin procese care includ presarea, rafinarea, măcinarea, măcinarea și uscarea.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Hrană procesată';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Alimentele procesate, cum ar fi legumele îmbuteliate, peștele conservat, fructele în sirop, brânzeturile și pâinea proaspăt preparată, sunt obținute în principal prin adăugarea de sare, ulei, zahăr sau alte substanțe din Grupa 2 la alimentele din Grupa 1. Procesele includ diverse metode de conservare sau gătire, iar în cazul pâinii și brânzeturilor, fermentarea nealcoolică. Majoritatea alimentelor procesate au două sau trei ingrediente și sunt recunoscute ca versiuni modificate ale alimentelor din Grupa 1. Acestea pot fi consumate ca atare sau, mai frecvent, în combinație cu alte alimente.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Alimente ultraprocesate';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Alimentele ultraprocesate, cum ar fi băuturile răcoritoare, gustările dulci sau sărate ambalate, produsele din carne reconstituite și mâncărurile congelate pre-preparate, nu sunt doar alimente modificate, ci formulări realizate în mare parte sau în întregime din substanțe derivate din alimente și aditivi, cu puține sau deloc alimente intacte din Grupa 1. Ingredientele din aceste formulări includ de obicei cele care se găsesc și în alimentele procesate, cum ar fi zaharurile, uleiurile, grăsimile sau sarea. Cu toate acestea, produsele ultraprocesate conțin și alte surse de energie și nutrienți care nu sunt utilizate de obicei în preparatele culinare. Unele dintre acestea sunt extrase direct din alimente, cum ar fi cazeina, lactoza, zerul și glutenul.';
+
+  @override
+  String get guide_nova_explanations_title => 'Problemele cu ultra-procesarea';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Prelucrarea extremă a ingredientelor alimentare';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Multe sunt derivate din procesarea ulterioară a constituenților alimentari, cum ar fi uleiurile hidrogenate sau interesterificate, proteinele hidrolizate, izolatul proteic din soia, maltodextrina, zahărul invertit și siropul de porumb cu conținut ridicat de fructoză.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Aditivi care depășesc simpla siguranță alimentară';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Aditivii din alimentele ultraprocesate includ unii care sunt utilizați și în alimentele procesate, cum ar fi conservanții, antioxidanții și stabilizatorii. Clasele de aditivi care se găsesc doar în produsele ultraprocesate includ pe cei utilizați pentru a imita sau a îmbunătăți calitățile senzoriale ale alimentelor sau pentru a deghiza aspectele neplăcute ale produsului final. Acești aditivi includ coloranți și alte culori, stabilizatori de culoare; arome, potențiatori de aromă, îndulcitori fără zahăr; și adjuvanți tehnologici, cum ar fi agenți de carbonatare, de întărire, de volumizare și anti-volumizare, agenți de dezumflare, antiaglomeranți și de glazurare, emulgatori, sechestranți și umectanți.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Prelucrare pe care nu o poți face acasă';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'O multitudine de secvențe de procese sunt utilizate pentru a combina ingredientele, de obicei numeroase, și pentru a crea produsul final (de unde și „ultra-procesat”). Printre procese se numără câteva fără echivalente interne, cum ar fi hidrogenarea și hidroliza, extrudarea și turnarea în matriță, precum și pre-procesarea pentru prăjire.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Aspectele prădătoare și financiare ale ultra-procesării';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Scopul general al ultra-procesării este de a crea produse alimentare de marcă, convenabile (durabile, gata de consum), atractive (hiper-palatabile) și extrem de profitabile (ingrediente cu costuri reduse), concepute pentru a înlocui toate celelalte grupe de alimente. Produsele alimentare ultra-procesate sunt de obicei ambalate atractiv și comercializate intensiv.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4583,6 +4904,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Niciun preț disponibil';
+
+  @override
+  String get prices_products_empty_explanation => 'Fii primul care contribuie!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4621,7 +4948,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extracție în curs…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Extracția a reușit';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4752,6 +5082,509 @@ class AppLocalizationsRo extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Gestionați-vă preferințele de preț';
+
+  @override
+  String get preferences_card_project => 'Proiectul Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribuiți';
+
+  @override
+  String get preferences_my_contributions_title => 'Contribuțiile mele';
+
+  @override
+  String get preferences_my_stats_title => 'Statisticile mele';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Traduceți, îmbunătățiți instrumentele noastre…';
+
+  @override
+  String get preferences_connect_title => 'Conectează-te';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Contactați-ne sau urmăriți-ne pe rețelele de socializare';
+
+  @override
+  String get preferences_support_title => 'Faceți o donație';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Ajutați-ne să informăm milioane de consumatori din întreaga lume';
+
+  @override
+  String get preferences_card_help => 'Ajutor și asistență';
+
+  @override
+  String get preferences_faq_title => 'Întrebări frecvente';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Obțineți răspunsuri la întrebările dvs.';
+
+  @override
+  String get logged_out => 'Deconectat/ă';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Îți mulțumim că ești unul dintre membrii noștri!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Produse modificate';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Vezi toate statisticile';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Caută $provider după „$keyword”';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Căutați o setare (de exemplu, Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Accesibilitate: Afișați emoji-uri';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Accesibilitate: Eliminați culorile';
+
+  @override
+  String get preferences_app_settings_products => 'Produse';
+
+  @override
+  String get preferences_card_about => 'Despre';
+
+  @override
+  String get preferences_legal_information_title => 'Informații juridice';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Termeni de utilizare, politică de confidențialitate și multe altele';
+
+  @override
+  String get preferences_terms_of_use => 'Condiții de utilizare';
+
+  @override
+  String get preferences_legal_mentions => 'Mențiuni legale';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts este o bază de date cu produse alimentare **creată de toată lumea, pentru toată lumea**.\nO puteți folosi pentru a face alegeri alimentare mai bune și, deoarece sunt **date deschise**, oricine o poate **reutiliza în orice scop**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licențe';
+
+  @override
+  String get preferences_about_app_title => 'Despre aplicație';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Informații tehnice, informații pentru dezvoltatori și multe altele';
+
+  @override
+  String get preferences_card_information => 'Informaţii';
+
+  @override
+  String get preferences_version_number_title => 'Numărul versiunii';
+
+  @override
+  String get preferences_scanner_title => 'Scaner';
+
+  @override
+  String get preferences_app_store => 'Magazin de aplicații';
+
+  @override
+  String get preferences_app_system_settings => 'Setări de sistem';
+
+  @override
+  String get preferences_source_code => 'Accesați codul sursă';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Și începe să ai un impact pentru milioane de oameni';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Produse complete';
+
+  @override
+  String get preferences_tips => 'Sfaturi';
+
+  @override
+  String get tips_discover_nutriscore => 'Descoperă noul Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Pe site-ul Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Gestionează contul meu';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Gestionează-ți contul';
+
+  @override
+  String get preferences_change_password_title => 'Schimbă-mi parola';
+
+  @override
+  String get preferences_danger_zone => 'Zonă periculoasă';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Toate contribuțiile tale vor fi pierdute';
+
+  @override
+  String get preferences_contributions_title => 'Contribuții';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Setările aplicației';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Metodă foarte experimentală de scanare a produselor offline';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Reîmprospătați toate produsele de pe server';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Vă rugăm să evitați să faceți asta decât dacă este absolut necesar';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mod demonstrativ';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Adăugați carduri la scaner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Adaugă 3 produse eșantion la scaner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Gazdă de folcsonomie';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Gazdă: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Experimente de accesibilitate';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Selecție multi-produse pentru prețuri';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panouri de cunoștințe ordonate de utilizatori';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Acces temporar la căutarea locației';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Comparație alăturată pentru 2 sau 3 produse';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importul listei de produse';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Scoruri și metodologii';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Descoperă cum se calculează Nutri-Score-ul';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Descoperiți principalele modificări ale metodologiei';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Descoperiți proiectul';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Descoperiți informații despre alimentele deschise';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Întrebări frecvente - Întrebări frecvente';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'ONG-ul Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Informaţii';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Primește actualizări din comunitate';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Rămâi la curent cu noutățile din aplicație și din comunitate';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Implică-te participând la unul dintre evenimentele noastre virtuale';
+
+  @override
+  String get preferences_connect_blog_title => 'Blogul Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Primiți cele mai recente știri, pe măsură ce apar';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Obțineți ajutor din partea comunității';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Ajutați-ne să îmbunătățim aplicația';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Trimiteți-ne informații de depanare';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Trimiteți-ne un e-mail cu informații detaliate despre depanare';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Trimiteți-ne feedback despre aplicație';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Ajută la modelarea viitorului aplicației';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Completează sondajul despre aplicație';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Ajută-ne să înțelegem ce ar trebui să construim în continuare';
+
+  @override
+  String get preferences_connect_professionals_title => 'Profesioniști';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Total gratuit, asigură date precise pentru 500 de aplicații și milioane de consumatori. Autoservire, compatibil cu PIM-ul sau foile de calcul (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Contactați-ne pentru a începe';
+
+  @override
+  String get preferences_connect_press_title => 'Presa';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Obțineți toate materialele de care aveți nevoie pentru raportul dvs.';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Contactați-ne pentru solicitări de presă sau pentru a ne informa despre raportul dumneavoastră.';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Devino voluntar activ';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Dezvoltare, Comunicare, Design… orice fel de voluntariat sau expertiză este binevenită!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Descoperă câteva dintre numeroasele modalități prin care poți contribui';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Dezvoltarea de aplicații mobile';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Învață cum să contribui la dezvoltarea de software';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Versiuni instabile zilnice, funcții complet noi';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Dezvoltă-ți comunitatea locală';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Ajutor cu traduceri de software, conținut, analize de ingrediente';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Am pregătit un mic șablon care să te ajute :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Pași simpli pentru a crește transparența alimentară în țara dumneavoastră';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Alătură-te echipei de calitate a datelor';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Alăturați-vă efortului nostru pentru a ne asigura că baza de date este completă și exactă';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Produse adăugate';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Produse noi pe care le-am adăugat la Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produse pe care trebuie să le finalizez';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Toate produsele incomplete';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Prețurile mele, dovezile mele…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produse pe care le puteți ajuta să le finalizați';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ajută la calcularea Nutri-Score și Green-Score în țara ta';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prețuri pe care le-am contribuit';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Etichete de preț și chitanțe';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Faceți fotografii ale chitanțelor și scanați codurile de bare asociate';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Faceți fotografii cu prețurile dintr-un magazin';
+
+  @override
+  String get preferences_prices_newest_title => 'Cele mai noi prețuri';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Ultimele prețuri adăugate de comunitatea Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Contribuitorii cu cele mai multe prețuri';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'Metrici ale prețului de deschidere';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Urmărește evoluția proiectului';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Modalități de a contribui';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Confirmați prețurile adăugate de dvs. sau de alții, cu ajutorul inteligenței artificiale';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Adăugați rapid mai multe chitanțe sau fotografii cu rafturi din albumul foto';
+
+  @override
+  String get preferences_prices_challenges_title => 'Provocări lunare';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Participă la misiuni tematice lunare pentru a colecta prețuri';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Recuperează-ți datele de fidelitate';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Află cum să-ți soliciti datele';
+
+  @override
+  String get preferences_page_customize_app_title => 'Personalizați aplicația';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Contribuie la proiect';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Modalități simple de a ajuta la Open Food Informations';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodologii de scorare, ajutor și multe altele despre proiect';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Acceptă sugestia';
 
   @override
@@ -4796,4 +5629,103 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Autentificarea a eșuat, imposibil de preluat dovezile';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count din $total dovezi';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count din $total contribuitori';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count din $total locații';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count locații';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Vă rugăm să reporniți aplicația pentru a aplica modificările.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfață grafică';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Dezvoltare';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratoare Deschise de Informații Alimentare';
+
+  @override
+  String get preferences_root_account_title => 'Cont';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Adu informații despre alimentele deschise în limba ta';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Înscrie-te în versiunea alfa a aplicației';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Contribuții și date despre produse';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Nu afișați folcsonomia';
+
+  @override
+  String get preferences_account_title => 'Cont';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Adăugat la $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

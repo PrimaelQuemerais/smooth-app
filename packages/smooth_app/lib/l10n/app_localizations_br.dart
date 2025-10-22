@@ -9,6 +9,9 @@ class AppLocalizationsBr extends AppLocalizations {
   AppLocalizationsBr([String locale = 'br']) : super(locale);
 
   @override
+  String get app_name => 'Digor eo ar fedoù diwar-benn ar boued';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsBr extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsBr extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Skanañ';
@@ -979,6 +975,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Dibabit ur rummad resisoc\'h';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1261,6 +1261,13 @@ class AppLocalizationsBr extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Perc\'henniezh ebet';
+
+  @override
+  String get product_tags_explanation =>
+      'Dre ouzhpennañ perzhioù (alc\'hwez/gwerzh) d\'ur produ e sikourit da binvidikaat anezhañ.';
 
   @override
   String get add_tag => 'Add property';
@@ -1687,7 +1694,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Dilemel ma c\'hont';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Mont e darempred gant arc\'hwelioù arnodel ha binvioù diorren';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,9 @@ class AppLocalizationsBr extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Digor war lec\'hienn Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2642,6 +2656,13 @@ class AppLocalizationsBr extends AppLocalizations {
   String get prices_list_add_new_price => 'Ouzhpennañ ur priz nevez\n';
 
   @override
+  String get prices_list_empty_title => 'Priz ebet c\'hoazh !';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bezit ar c\'hentañ da ouzhpennañ unan :\nEn ur skaniñ ur **resi** pe ur **tikedenn priz** !';
+
+  @override
   String get prices_entry_shop_not_found => 'Stal dianav';
 
   @override
@@ -2651,7 +2672,7 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Gwelet an holl brizioù evit ar produ-mañ';
 
   @override
   String get prices_entry_menu_open_proof => 'Gwelet ar brouenn';
@@ -2730,9 +2751,23 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Kenlabourer ebet c\'hoazh !';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Bezit ar c\'hentañ da ouzhpennañ ur priz !';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Stal ebet c\'hoazh !';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Bezit ar c\'hentañ da ouzhpennañ ur priz !';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2872,17 @@ class AppLocalizationsBr extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Prouenn ebet c\'hoazh !';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Kregiñ gant ouzhpennañ ul luc\'hskeudenn eus ur **resevet** pe ur **tikedenn priz** !';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2916,13 +2961,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Roadennoù';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2934,6 +2973,17 @@ class AppLocalizationsBr extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Adderaouekaat yezh an arload';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ouzhpennañ kartennoù';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Tremen etre prices.openfoodfacts.org (PROD) hag env test';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2977,6 +3027,11 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3978,32 +4033,33 @@ class AppLocalizationsBr extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Glas-Skor A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Glas-Skor B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Glas-Skor C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Glas-Skor D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Glas-Skor E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Glas-Skor dianav';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'N\'eo ket arveret ar skor glas';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Boued dreist-treuzfurmet - strolladoù NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4100,9 +4156,6 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Rannañ';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4210,11 +4263,282 @@ class AppLocalizationsBr extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Petra eo ar skor glas ?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Ur logo eo ar Green-Score hag a glask kelaouiñ ac\'hanoc\'h diwar-benn **efedoù ar boued war an endro**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Kemmañ a ra ar c\'hod liv eus ar glas teñval (**A+**) evit ar produioù **nebeutañ o efed** betek ar ruz teñval (**F**) evit ar produioù **ar muiañ a efed**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logoioù ar Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Ar c\'hreiz : Priziañ ar c\'helc\'hiad buhez (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Ur priziadenn skiantel eus ar rummadoù boued';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Evit pep rummad produ e vez staliet ur skor **benchmark** dre implijout roadennoù eus diaz roadennoù an endro Agribalyse (savet gant ADEME hag INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analizañ ar c\'helc\'hiad buhez** zo un doare priziañ skoueriekaet evit kas da benn ur priziadenn endroel liespazenn ha lieskriterioù.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Muzuliañ a ra :**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 pazenn produiñ';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Enpakañ';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 diskouezer efed war an endro';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Emdroadur an hin/roud karbon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Digresk ar gwiskad ozon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Skinadur ionizañ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Douar';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'Implij an dour hag an energiezh';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Saotradur an aer |';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Dour mor ha dous (rannigoù, asidifikadur, eutrofikadur)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Digresk ar binvioù.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Prizioù ha kastizoù';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Evit gounit produioù gwelloc\'h e-barzh ur rummad e lakaomp neuze prizioù ha kastizoù diazezet war meur a dalvoudegezh :';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Orin an aozennoù';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ur bonus a vez roet diwar orin ar c\'hementadoù. Gant ar bonus-mañ e vez kemeret e kont an efedoù war an treuzdougen hag ivez politikerezh an endro bro pep produer.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Enpakañ';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Evit jediñ ar Green-Score en un doare reizh eo ret kaout titouroù ha n\'int ket spisaet dre ret war ar pakad (evel orin ha dregantad resis pep elfenn) pe a vez kavet ral a wech e stumm implijus (evel ur roll eus holl elfennoù ar pakad gant ar seurt plastikoù resis implijet).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Arveret e vez talvoudoù keitat pa n\'eo ket hegerz an titouroù-mañ c\'hoazh, met goulenn a reomp bremañ digant an holl sikour ac\'hanomp da zastum an titouroù-se a vo talvoudus-kenañ evit ar Green-Score met ivez evit meur a implij all.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Penaos e c\'hall ar geodedourien sikour';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'An holl geodedourien a c’hell sikour ac’hanomp da zastum ha da frammañ an titouroù a zo war ar produioù pe a c’heller tennañ diwarno, evel titouroù diwar-benn an endalc’hadoù : Mission Emballages : un inventaire collaboratif à grand échelle des emballages pour tous les produits alimentaires (e galleg)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Penaos e c\'hall ar c\'henderc\'herien sikour';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Ar c\'henderc\'herien a c\'hell kas deomp o titouroù war-eeun dre hor leurenn digoust evit ar broduerien.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Peseurt produ a zo gwelloc\'h evit ar blanedenn ?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Diaes e c\'hell bezañ da lavarout';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Dibab boued padus zo unan eus an traoù pouezusañ a c\'hellomp ober evit an hin, rak **hor reizhiad boued hollek a zo karget eus ouzhpenn ur c\'hard eus an holl gazoù efed ti-gwer a vez skarzhet**.\n(Mammenn : Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'Ar galloud hoc\'h eus !';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Ar c\'heloù mat eo e ro deomp un doare galloudus da grouiñ ar cheñchamant.\n**Pep hini ac\'hanomp a zebr war-dro 1 000 pred bep bloaz**. Setu 1000 digarez evit **dibab un dazont gwelloc\'h evit ar blanedenn** !';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Sikour a ra da vezañ karget ha da zivizout';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Dibab boued padus a c\'hell bezañ kemplezh. Dister eo an tikedennoù ha mankout a ra an titouroù alies. Krouet eo bet ar Green-Score evit ma vefe aesoc\'h, o reiñ deoc\'h ur feur endro **sklaer**, **diazezet war ar skiantoù** ha **treuzwelus** evit ar produioù boued, e-lec\'h m\'ho peus ezhomm anezhañ : e-pad ma prenit.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Treuzwelusterezh';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Er c\'hontrol d\'an tikedennoù perc\'hennet, ar jediñ Green-Score a zo **digor penn-da-benn** ha gallout a ra bezañ **gwiriekaet gant piv bennak**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Petra eo an ultra-treuzfurmiñ ?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Ar strolladoù NOVA a ginnig deoc\'h al live treuzfurmiñ boued.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Gant ar renkadur NOVA e c\'haller renkañ ar bouedoù e **4 strollad** diouzh o ** live treuzfurmadur greantel** (bouedoù treuzfurmet pe nann-treuzfurmet, elfennoù keginañ, boued treuzfurmet, boued dreist-treuzfurmet).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logoioù NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Ar 4 strollad NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Pevar strollad NOVA zo, an hini diaesañ eo ar strollad 4 - boued treuzfurmet dreist-holl.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Boued treuzfurmet nebeut pe hep treuzfurmet';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ar boued nann-treuzfurmet (pe naturel) a zo lodennoù debret ar plant (hadoù, frouezh, delioù, kefoù, gwrizioù) pe loened (kigennoù, boued, vioù, laezh), hag ivez ar c\'hoñkour, an algae, hag an dour, goude bezañ bet dispartiet diouzh an natur.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Elfennoù keginañ treuzfurmet, evel an eoul, an amann, ar sukr hag an holen, a zo danvezioù tennet eus bouedoù ar strollad 1 pe eus an natur dre argerzhioù a ya d\'ober ar gwaskañ, ar puraat, ar malañ, ar moullañ hag ar sec\'hañ.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ar boued treuzfurmet, evel al legumaj e boutailhoù, ar pesked en ur c\'hontener, ar frouezh e sirop, ar fourmaj hag ar baraoù nevez-fardet, a vez graet dreist-holl dre ouzhpennañ holen, eoul, sukr pe danvezioù all eus ar boued eus ar strollad 2 d\'ar boued eus ar strollad 1. En argerzhioù e kaver meur a zoare da virout pe da boazhañ, hag evit ar baraoù hag ar fourmaj, ar goadur hep alkool. An darn vrasañ eus ar bouedoù treuzfurmet a zo daou pe dri elfenn enno hag anavezet e vezont evel stummoù kemmet eus bouedoù ar strollad 1. Debriñ a c\'haller anezho o-unan pe, peurliesañ, asambles gant bouedoù all.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ar bouedoù treuzfurmet dreist-holl, evel an evajoù dous, ar boued-koad dous pe sall, ar produioù kig adkempennet, hag ar bouedoù skornet rakprenet, n\'int ket bouedoù kemmet hepken met stummoù savet dreist-holl pe a-bezh diwar danvezioù tennet eus bouedoù ha danvezioù ouzhpenn, gant nebeut pe tamm boued ebet eus ar strollad 1. Elfennoù ar stummoù-se a vez kavet ivez e boued treuzfurmet, evel sukroù, eoul, greun pe holen. Koulskoude, ar produioù dreist-treuzfurmet a zo ivez enno fontoù energiezh ha bouedoù all na vezont ket implijet peurliesañ evit ar c\'heginañ. Lod anezho a vez tennet war-eeun eus bouedoù, evel ar c\'hazein, al laktoz, ar gwinieg hag ar gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ar gudennoù gant an ultra-tretañ';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Treuzfurmiñ dreistordinal ar boued';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Kalz anezho a zeu eus ar c\'henderc\'hañ elfennoù boued, evel eouloù hidrogenet pe interesterifiet, proteinoù hidrolizet, digenvez protein soja, maltodekstrin, sukr treuzfurmet ha sirop maiz uhel-fruktoz.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Ouzhpennadennoù a ya en tu all d\'ar surentez boued glan';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ouzhpennadennoù er boued treuzfurmet a zo lod a vez implijet ivez er boued treuzfurmet, evel gwarezourien, enepoksidantoù ha stabilaerien. Ar rummadoù ouzhpennadennoù a gaver er produioù treuzfurmet hepken a zo ar re a vez implijet evit heuliañ pe gwellaat perzhioù skiantel ar bouedoù pe evit kuzhat perzhioù dic\'hoantaus ar produ diwezhañ. En o zouez emañ livioù ha livioù all, stabilaerien livioù ; blaz, kreñvaerien blaz, sukr hep sukr ; ha skoazelloù evit ar c\'henderc\'hañ evel ar c\'harbonatañ, ar c\'hreñvaat, ar c\'hementad hag an enep-c\'hwezhañ, an dic\'hwezhañ, an enep-c\'hrouiñ hag ar glazur, an emulsifieroù, ar sec\'herien hag an humectantoù.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Tretañ n\'haller ket ober en ti';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Ur bern heuliadoù argerzhioù a vez implijet evit kendeuziñ an elfennoù niverus peurliesañ ha krouiñ ar produ diwezhañ (setu \'treuzfurmet\'). En o zouez emañ meur a argerzh hep kevatal ebet, evel an hidrogenadur hag an hidrolizadur, an estrusiñ hag ar moullañ, hag ar rak-treuzfurmiñ evit ar fritañ.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'An elfennoù preizher hag arc\'hantel eus an ultra-treuzfurmiñ';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Pal hollek an ultra-treuzfurmiñ eo krouiñ produioù boued merket, aes (padus, prest da zebriñ), dedennus (tre-blev) ha gounezus-kenañ (elfennoù izel) savet evit dilec\'hiañ an holl strolladoù boued all. Ar produioù boued ultra-treuzfurmet a vez paket en un doare dedennus ha marc\'hataet kalz peurliesañ.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4527,6 +4851,13 @@ class AppLocalizationsBr extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Priz ebet';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Bezit ar re gentañ o kemer perzh !';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4565,7 +4896,11 @@ class AppLocalizationsBr extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress =>
+      'An eztennañ o vont war-raok…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Deuet eo an tennañ da benn';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4696,6 +5031,503 @@ class AppLocalizationsBr extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Merañ ho tibaboù prizioù';
+
+  @override
+  String get preferences_card_project => 'Ar raktres Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Kenoberiañ';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Ma stadegoù';
+
+  @override
+  String get preferences_contribute_subtitle => 'Troiñ, gwellaat hon ostilhoù…';
+
+  @override
+  String get preferences_connect_title => 'Kevreañ';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Kit e darempred ganeomp, pe heuliit ac\'hanomp war ar mediaoù sokial';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Sikour ac\'hanomp da gelaouiñ milionoù a implijerien dre ar bed';
+
+  @override
+  String get preferences_card_help => 'Skoazell ha Skoazell';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Kaout respontoù d\'ho koulennoù';
+
+  @override
+  String get logged_out => 'Digevreet';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Trugarez da vezañ unan eus hon izili !';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Gwelet an holl stadegoù';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Klask $provider \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Klask un arventenn (da sk. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Mont e darempred : Diskouez an emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Aesaat : Dilemel al livioù';
+
+  @override
+  String get preferences_app_settings_products => 'Produioù';
+
+  @override
+  String get preferences_card_about => 'A-zivout';
+
+  @override
+  String get preferences_legal_information_title => 'Titouroù lezennel';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Termenoù implij, politikerezh prevezded, hag all';
+
+  @override
+  String get preferences_terms_of_use => 'Termenoù Implij';
+
+  @override
+  String get preferences_legal_mentions => 'Titouroù lezennel';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts zo un diaz roadennoù produioù boued **savet gant pep hini, evit pep hini**.\nGallout a rit implijout anezhañ evit dibab boued gwelloc\'h, ha dre ma\'z eo **roadennoù digor** e c\'hall pep hini **adimplij anezhañ evit ne vern petra**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Aotreoù';
+
+  @override
+  String get preferences_about_app_title => 'Diwar-benn an arload';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Titouroù teknikel, titouroù diwar-benn an diorroerien, ha muioc\'h c\'hoazh';
+
+  @override
+  String get preferences_card_information => 'Titouroù';
+
+  @override
+  String get preferences_version_number_title => 'Niverenn stumm';
+
+  @override
+  String get preferences_scanner_title => 'Skaner';
+
+  @override
+  String get preferences_app_store => 'Stal arloadoù';
+
+  @override
+  String get preferences_app_system_settings => 'Arventennoù ar reizhiad';
+
+  @override
+  String get preferences_source_code => 'Mont d\'ar c\'hod orin';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Ha kregiñ da ober un efed war milionoù a dud';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Kuzulioù';
+
+  @override
+  String get tips_discover_nutriscore => 'Dizoloit ar Nutri-Score nevez';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'War lec\'hienn Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Merañ ma c\'hont';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Merañ ho kont';
+
+  @override
+  String get preferences_change_password_title => 'Cheñchit ma ger-tremen';
+
+  @override
+  String get preferences_danger_zone => 'Takad dañjerus';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Kollet e vo ho holl skoazelloù';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Arventennoù an arload';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Un doare arnodel-kenañ da skaniñ ar produioù ezlinenn';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Freskaat an holl broduioù diwar ar servijer';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Mar plij, chomit hep ober kement-se nemet pa vez ret-holl';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mod demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ouzhpennañ kartennoù d\'ar skanner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Ouzhpennañ a ra 3 skouer produ d\'ar skanner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Aozer folksonomiezh';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Ostiz : $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Arnodoù war an aesaat';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Dibab liesprodu evit ar prizioù';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panelloù gouiziegezh urzhiet gant an implijer';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Mont da glask lec\'hiadur evit ur pennadig';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Keñveriañ skoaz-ouzh-skoaz evit 2 pe 3 produ';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Enporzhiañ roll ar produioù';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Skoroù ha doareoù';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Dizoloit penaos e vez jedet ar Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Dizoloit ar c\'hemmoù pennañ er metodologiezh';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Dizoleiñ ar raktres';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Dizoloit fedoù diwar-benn ar boued digor';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Goulennoù alies';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'An ONG Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Titouroù';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Kaout titouroù diwar-benn ar gumuniezh';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Chomit war evezh gant keleier an arloadoù hag ar gumuniezh';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Kemer perzh en ur gemer perzh en unan eus hon abadennoù niverel';
+
+  @override
+  String get preferences_connect_blog_title => 'Ar blog Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Kemer ar c\'heloù diwezhañ, evel ma c\'hoarvezont';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Goulenn sikour digant ar gumuniezh';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Sikour ac\'hanomp da wellaat an arload';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Kasit deomp titouroù diwar-benn an difaziañ';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Kasit deomp ur postel gant titouroù resis diwar-benn an difaziañ';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Kasit evezhiadennoù deomp diwar-benn an arload';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Sikour da stummañ dazont an arload';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Kemer perzh en enklask war an arload';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Sikour ac\'hanomp da gompren ar pezh a rankomp sevel da c\'houde';
+
+  @override
+  String get preferences_connect_professionals_title => 'Micherourien';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Digoust penn-da-benn, gwarantiñ a ra roadennoù reizh evit 500 arload ha milionoù a implijerien. Emservij, kempoell gant ho PIM pe ho follennoù jediñ (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Kit e darempred ganeomp evit kregiñ';
+
+  @override
+  String get preferences_connect_press_title => 'Kazetennerien';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Kaout an holl dafar a rankit kaout evit ho danevell';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Kit e darempred ganeomp evit goulennoù digant ar gazetennerien pe evit kelaouiñ ac\'hanomp diwar-benn ho danevell';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Dont da vezañ ur youl vat oberiant';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Diorren, Kemennadenn, Tresañ… degemeret e vez kement seurt labour a-youl vat pe arbennigouriezh !';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Dizoloit lod eus an doareoù niverus ma c\'hallit kemer perzh';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Diorren arloadoù hezoug';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Deskiñ penaos kemer perzh e sevel meziantoù';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Savadurioù distabil pemdeziek, perzhioù nevez-flamm';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Kreskiñ ho kumuniezh lec\'hel';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Sikour gant ar meziantoù, an endalc\'hadoù, an troidigezhioù dielfennañ elfennoù';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Prientet hon eus ur patrom bihan evit sikour ac\'hanoc\'h :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Pazennoù simpl evit kreskiñ an treuzwelusterezh boued en ho bro';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Kemer perzh e skipailh kalite ar roadennoù';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Kemer perzh en hor striv evit ma vo klok ha reizh an diaz roadennoù';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Produioù ouzhpennet';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Produioù nevez am eus ouzhpennet da Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produioù am eus ezhomm da echuiñ';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'An holl broduioù diglok';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Ma prizioù, ma prouennoù…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produioù a c\'hallit sikour da gas da benn';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Sikour da jediñ ar Skor Nutri hag ar Skor Glas en ho bro';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prizioù am eus kinniget';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Tikedennoù prizioù ha resevoù';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Tennañ luc\'hskeudennoù eus ho teuliadoù ha skannañ ar c\'hodoù barrennoù stag outo';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Tennañ luc\'hskeudennoù eus ar prizioù en ur stal';
+
+  @override
+  String get preferences_prices_newest_title => 'Prizioù nevesañ';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Prizioù diwezhañ ouzhpennet gant ar gumuniezh Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Kenlabourerien gant ar muiañ a brizioù';
+
+  @override
+  String get preferences_prices_metrics_title => 'Meizadoù priz digor';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Heuliañ emdroadur ar raktres';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Doareoù da gemer perzh';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Kadarnaat ar prizioù ouzhpennet ganeoc\'h pe gant tud all, gant skoazell an IA';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Ouzhpennit buan meur a ziviz pe luc\'hskeudennoù eus ar stalieroù eus ho roll kamera';
+
+  @override
+  String get preferences_prices_challenges_title => 'Taolioù-arnod miziek';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Kemer perzh e klaskoù temoù bep miz evit dastum ar prizioù';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Adtapout ho roadennoù fealded';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Deskit penaos goulenn ho roadennoù';
+
+  @override
+  String get preferences_page_customize_app_title => 'Personelaat an arload';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Kemer perzh er raktres';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Doareoù simpl da sikour Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Doareoù priziañ, skoazell, ha muioc\'h c\'hoazh diwar-benn ar raktres';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Degemer ar c\'hinnig';
 
   @override
@@ -4740,4 +5572,103 @@ class AppLocalizationsBr extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'C\'hwitet en deus an gwiriekaat, n\'haller ket adtapout ar brouennoù';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count eus $total prouennoù';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count eus $total kenlabourerien';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count eus $total lec\'hiadurioù';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count lec\'hiadurioù';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Adloc\'hit an arload evit lakaat ar c\'hemmoù da dalvezout.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Etrefas grafek';
+
+  @override
+  String get preferences_app_settings_media_title => 'Mediaoù';
+
+  @override
+  String get preferences_about_app_development_title => 'Diorren';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Labouradegoù digor war ar fedoù boued';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Degas fedoù boued digor d\'ho yezh';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'En em enskrivit e stumm alfa an arload';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Roadennoù ar c\'hinnigoù hag ar produ';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Arabat diskouez ar Folksonomiezh';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ouzhpennet d\'an $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

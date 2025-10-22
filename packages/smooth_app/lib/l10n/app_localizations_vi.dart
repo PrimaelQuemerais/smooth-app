@@ -9,6 +9,9 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
+  String get app_name => 'Mở sự thật về thực phẩm';
+
+  @override
   String get sep => '';
 
   @override
@@ -323,10 +326,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sign_up_page_terms_text => 'điều khoản sử dụng và đóng góp';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -454,9 +453,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -600,7 +596,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get reloaded_with_new_preferences => 'Đã tải lại với các tùy chọn mới';
 
   @override
-  String get profile_navbar_label => 'Hồ sơ';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Quét';
@@ -987,6 +983,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Thêm danh mục sản phẩm bị thiếu';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Chọn một danh mục chính xác hơn';
+
+  @override
   String get score_add_missing_product_countries =>
       'Thêm quốc gia sản phẩm bị thiếu';
 
@@ -1271,6 +1271,13 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Không có thuộc tính';
+
+  @override
+  String get product_tags_explanation =>
+      'Bằng cách thêm thuộc tính (khóa/giá trị) vào sản phẩm, bạn giúp làm phong phú thêm sản phẩm đó.';
 
   @override
   String get add_tag => 'Add property';
@@ -1698,7 +1705,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get account_delete => 'Xoá tài khoản';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Xóa tài khoản của tôi';
 
   @override
   String get user_profile => 'Tài khoản';
@@ -2370,6 +2377,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dev_preferences_screen_title => 'Chế độ DEV';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Truy cập các tính năng thử nghiệm và công cụ phát triển';
+
+  @override
   String get dev_preferences_reset_onboarding_title =>
       'Bắt đầu lại phần giới thiệu';
 
@@ -2518,6 +2529,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Mở trên trang web Giá mở';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2656,6 +2670,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prices_list_add_new_price => 'Thêm giá mới\n';
 
   @override
+  String get prices_list_empty_title => 'Chưa có giá!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Hãy là người đầu tiên thêm một:\nBằng cách quét **biên lai** hoặc **nhãn giá**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Cửa hàng không xác định';
 
   @override
@@ -2665,7 +2686,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Xem tất cả giá cho sản phẩm này';
 
   @override
   String get prices_entry_menu_open_proof => 'Xem bằng chứng';
@@ -2744,9 +2765,23 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Chưa có người đóng góp nào!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Hãy là người đầu tiên thêm giá!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Chưa có cửa hàng nào!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Hãy là người đầu tiên thêm giá!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2851,7 +2886,17 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Chưa có bằng chứng!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Bắt đầu bằng cách thêm ảnh **biên lai** hoặc **nhãn giá**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2930,13 +2975,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Dữ liệu';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2948,6 +2987,16 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Đặt lại ngôn ngữ ứng dụng';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Thêm thẻ';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Chuyển đổi giữa prices.openfoodfacts.org (PROD) và môi trường thử nghiệm';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2992,6 +3041,11 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -4000,32 +4054,33 @@ class AppLocalizationsVi extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Điểm sinh thái';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Điểm xanh A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Điểm xanh B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Điểm xanh C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Điểm xanh lá cây D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Điểm xanh E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Điểm xanh không xác định';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Điểm xanh không áp dụng';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Thực phẩm siêu chế biến - Tập đoàn NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4122,9 +4177,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Chia sẻ';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4232,11 +4284,279 @@ class AppLocalizationsVi extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Điểm sinh thái';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'Điểm xanh là gì?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score là một logo có mục đích cung cấp thông tin cho bạn về **tác động của thực phẩm đến môi trường**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Mã màu thay đổi từ màu xanh lá cây đậm (**A+**) cho các sản phẩm **ít tác động nhất** đến màu đỏ đậm (**F**) cho các sản phẩm **có tác động lớn nhất**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logo Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title => 'Cốt lõi: Đánh giá vòng đời (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Đánh giá khoa học về các loại thực phẩm';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Đối với mỗi danh mục sản phẩm, điểm chuẩn **được thiết lập bằng cách sử dụng dữ liệu từ cơ sở dữ liệu môi trường Agribalyse (do ADEME và INRAE thiết kế).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Phân tích vòng đời** là phương pháp đánh giá chuẩn hóa để thực hiện đánh giá môi trường nhiều giai đoạn và nhiều tiêu chí.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Nó đo:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 bước sản xuất';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Nông nghiệp';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Đang xử lý';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Bao bì';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Vận chuyển';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Phân phối';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Tiêu thụ';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 chỉ số tác động môi trường';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Biến đổi khí hậu/dấu chân carbon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Sự suy giảm tầng ôzôn';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Bức xạ ion hóa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Đất';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Sử dụng nước và năng lượng';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ô nhiễm không khí';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Nước biển và nước ngọt (các hạt, axit hóa, phú dưỡng)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Sự cạn kiệt tài nguyên.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Tiền thưởng và tiền phạt';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Để thưởng cho những sản phẩm tốt hơn trong một danh mục, chúng tôi sẽ áp dụng tiền thưởng và hình phạt dựa trên một số tiêu chí:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Phương thức sản xuất';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'Điểm cộng được thêm cho các sản phẩm có nhãn chính thức, nhãn hoặc chứng nhận đảm bảo lợi ích môi trường (hữu cơ, thương mại công bằng, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Nguồn gốc của các thành phần';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Tiền thưởng được trao dựa trên nguồn gốc của nguyên liệu. Khoản tiền thưởng này có tính đến tác động đến vận chuyển và chính sách môi trường của từng quốc gia sản xuất.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Những loài có nguy có bị tuyệt chủng';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'Một hình phạt được đưa ra đối với các sản phẩm có chứa các thành phần có tác động tiêu cực đáng kể đến đa dạng sinh học và hệ sinh thái, chẳng hạn như dầu cọ, việc sản xuất dầu cọ là nguyên nhân gây ra nạn phá rừng lớn.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Bao bì';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'Hình phạt được tính để tính đến tính tuần hoàn của bao bì (sử dụng nguyên liệu thô tái chế và khả năng tái chế) và đóng gói quá mức.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'Nhu cầu về sự minh bạch ngày càng tăng để có thể đo lường tốt hơn và giảm tác động môi trường';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Để tính toán chính xác Điểm Xanh, cần phải có thông tin không nhất thiết phải ghi trên bao bì (chẳng hạn như nguồn gốc và tỷ lệ phần trăm chính xác của từng thành phần) hoặc hiếm khi có sẵn ở dạng có thể sử dụng (chẳng hạn như danh sách tất cả các thành phần của bao bì với các loại nhựa chính xác được sử dụng).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Giá trị trung bình được sử dụng khi thông tin này chưa có sẵn, nhưng hiện chúng tôi đang kêu gọi mọi người giúp chúng tôi thu thập thông tin này, điều này sẽ rất hữu ích cho Green-Score cũng như nhiều mục đích sử dụng khác.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Người dân có thể giúp đỡ như thế nào';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Mọi công dân có thể giúp chúng tôi thu thập và cấu trúc thông tin có trên sản phẩm hoặc có thể suy ra từ chúng, chẳng hạn như thông tin về bao bì: Mission Emballages: một kho lưu trữ bao bì hợp tác quy mô lớn cho tất cả các sản phẩm thực phẩm (bằng tiếng Pháp)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Các nhà sản xuất có thể giúp đỡ như thế nào';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Các nhà sản xuất có thể gửi thông tin trực tiếp cho chúng tôi thông qua nền tảng miễn phí dành cho nhà sản xuất.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Sản phẩm nào tốt hơn cho hành tinh?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title => 'Có thể khó để nói';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Lựa chọn thực phẩm bền vững là một trong những điều mạnh mẽ nhất mà chúng ta có thể làm cho khí hậu, vì **hệ thống thực phẩm toàn cầu của chúng ta chịu trách nhiệm cho hơn một phần tư lượng khí thải nhà kính**.\n(Nguồn: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Bạn có sức mạnh!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Tin tốt là điều này mang đến cho chúng ta một cách thức mạnh mẽ để tạo ra sự thay đổi.\n**Mỗi người chúng ta ăn khoảng 1.000 bữa ăn mỗi năm**. Đó là 1.000 cơ hội để **chọn một tương lai tốt đẹp hơn cho hành tinh**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Giúp có trách nhiệm và quyết định';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Việc lựa chọn thực phẩm bền vững có thể khá phức tạp. Nhãn mác dễ gây nhầm lẫn và thông tin thường bị thiếu. Điểm Xanh được tạo ra để đơn giản hóa việc này, cung cấp cho bạn xếp hạng môi trường **rõ ràng**, **dựa trên khoa học** và **minh bạch** cho các sản phẩm thực phẩm, ngay tại nơi bạn cần: khi bạn mua sắm.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Tính minh bạch';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Không giống như các nhãn hiệu độc quyền, phép tính Điểm Xanh **hoàn toàn mở** và có thể được **xác minh bởi bất kỳ ai**.';
+
+  @override
+  String get guide_nova_title => 'Thức ăn siêu chế biến';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Siêu xử lý là gì?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Nhóm NOVA cung cấp cho bạn thông tin về mức độ chế biến thực phẩm.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Phân loại NOVA cho phép phân loại thực phẩm thành **4 nhóm** dựa trên **mức độ chế biến công nghiệp** (thực phẩm chế biến tối thiểu hoặc chưa chế biến, nguyên liệu nấu ăn, thực phẩm chế biến, thực phẩm siêu chế biến).';
+
+  @override
+  String get guide_nova_logos_caption => 'Các logo NOVA';
+
+  @override
+  String get guide_nova_groups_title => '4 nhóm NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Có 4 nhóm NOVA, nhóm có vấn đề là Nhóm 4 - Thực phẩm siêu chế biến.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Thực phẩm chế biến tối thiểu hoặc chưa chế biến';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Thực phẩm chưa qua chế biến (hay tự nhiên) là những phần ăn được của thực vật (hạt, quả, lá, thân, rễ) hoặc động vật (cơ, nội tạng, trứng, sữa), cũng như nấm, tảo và nước, sau khi được tách ra khỏi thiên nhiên.';
+
+  @override
+  String get guide_nova_groups_arg2_title =>
+      'Các thành phần ẩm thực đã qua chế biến';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Các thành phần ẩm thực đã qua chế biến, chẳng hạn như dầu, bơ, đường và muối, là những chất có nguồn gốc từ thực phẩm Nhóm 1 hoặc từ thiên nhiên thông qua các quá trình bao gồm ép, tinh chế, nghiền, xay và sấy khô.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Thực phẩm đã qua chế biến';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Thực phẩm chế biến, chẳng hạn như rau đóng chai, cá đóng hộp, trái cây ngâm siro, pho mát và bánh mì tươi, chủ yếu được chế biến bằng cách thêm muối, dầu, đường hoặc các chất khác từ thực phẩm Nhóm 2 vào thực phẩm Nhóm 1. Các quy trình bao gồm nhiều phương pháp bảo quản hoặc chế biến khác nhau, và trong trường hợp bánh mì và pho mát, là lên men không cồn. Hầu hết thực phẩm chế biến đều có hai hoặc ba thành phần và được nhận biết là phiên bản biến thể của thực phẩm Nhóm 1. Chúng có thể được ăn riêng hoặc phổ biến hơn là kết hợp với các thực phẩm khác.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Thức ăn siêu chế biến';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Thực phẩm siêu chế biến, chẳng hạn như nước ngọt, đồ ăn nhẹ đóng gói ngọt hoặc mặn, các sản phẩm thịt tái chế và các món ăn đông lạnh chế biến sẵn, không chỉ đơn thuần là thực phẩm biến đổi gen mà còn là các công thức được chế biến chủ yếu hoặc hoàn toàn từ các chất có nguồn gốc từ thực phẩm và phụ gia, với rất ít hoặc không có thực phẩm Nhóm 1 nguyên vẹn. Các thành phần trong các công thức này thường bao gồm các thành phần cũng có trong thực phẩm chế biến, chẳng hạn như đường, dầu, chất béo hoặc muối. Tuy nhiên, các sản phẩm siêu chế biến cũng chứa các nguồn năng lượng và chất dinh dưỡng khác thường không được sử dụng trong chế biến ẩm thực. Một số trong số này được chiết xuất trực tiếp từ thực phẩm, chẳng hạn như casein, lactose, whey và gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Các vấn đề với quá trình xử lý siêu việt';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Xử lý cực độ các thành phần thực phẩm';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Nhiều loại có nguồn gốc từ quá trình chế biến thêm các thành phần thực phẩm, chẳng hạn như dầu hydro hóa hoặc dầu este hóa, protein thủy phân, protein đậu nành cô lập, maltodextrin, đường nghịch chuyển và xi-rô ngô có hàm lượng fructose cao.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Phụ gia vượt xa tiêu chuẩn an toàn thực phẩm thuần túy';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Phụ gia trong thực phẩm siêu chế biến bao gồm một số loại cũng được sử dụng trong thực phẩm chế biến, chẳng hạn như chất bảo quản, chất chống oxy hóa và chất ổn định. Các loại phụ gia chỉ có trong sản phẩm siêu chế biến bao gồm những loại được sử dụng để mô phỏng hoặc tăng cường chất lượng cảm quan của thực phẩm hoặc để che giấu những đặc tính không ngon miệng của sản phẩm cuối cùng. Các phụ gia này bao gồm thuốc nhuộm và các loại màu khác, chất ổn định màu; hương liệu, chất tăng cường hương vị, chất tạo ngọt không đường; và các chất hỗ trợ chế biến như chất tạo ga, chất làm săn chắc, chất tạo khối và chất chống tạo khối, chất phá bọt, chất chống vón cục và chất tạo bóng, chất nhũ hóa, chất tạo phức kim loại và chất giữ ẩm.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Xử lý bạn không thể làm ở nhà';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Hàng loạt chuỗi quy trình được sử dụng để kết hợp các thành phần thường rất đa dạng và tạo ra sản phẩm cuối cùng (do đó được gọi là \"siêu chế biến\"). Các quy trình này bao gồm một số quy trình không có sản phẩm tương đương trong nước, chẳng hạn như hydro hóa và thủy phân, đùn và đúc khuôn, và sơ chế để chiên.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Các khía cạnh săn mồi và tài chính của quá trình siêu chế biến';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Mục đích chung của siêu chế biến là tạo ra các sản phẩm thực phẩm có thương hiệu, tiện lợi (bền, dễ tiêu thụ), hấp dẫn (siêu ngon miệng) và có lợi nhuận cao (nguyên liệu giá rẻ) được thiết kế để thay thế tất cả các nhóm thực phẩm khác. Các sản phẩm thực phẩm siêu chế biến thường được đóng gói hấp dẫn và tiếp thị rầm rộ.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4550,6 +4870,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Không có giá nào có sẵn';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Hãy là người đầu tiên đóng góp!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4588,7 +4915,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Đang trích xuất…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Trích xuất thành công';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4719,6 +5049,500 @@ class AppLocalizationsVi extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'Chung';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Quản lý tùy chọn giá của bạn';
+
+  @override
+  String get preferences_card_project => 'Dự án Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Góp phần';
+
+  @override
+  String get preferences_my_contributions_title => 'Đóng góp của tôi';
+
+  @override
+  String get preferences_my_stats_title => 'Thống kê của tôi';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Dịch, cải thiện công cụ của chúng tôi…';
+
+  @override
+  String get preferences_connect_title => 'Kết nối';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Liên hệ hoặc theo dõi chúng tôi trên mạng xã hội';
+
+  @override
+  String get preferences_support_title => 'Quyên góp';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Hãy giúp chúng tôi thông tin đến hàng triệu người tiêu dùng trên toàn thế giới';
+
+  @override
+  String get preferences_card_help => 'Trợ giúp & Hỗ trợ';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Nhận câu trả lời cho câu hỏi của bạn';
+
+  @override
+  String get logged_out => 'Đã đăng xuất';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Cảm ơn bạn đã là thành viên của chúng tôi!';
+
+  @override
+  String get preferences_app_bar_products_modified =>
+      'Các sản phẩm đã được sửa đổi';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Xem tất cả số liệu thống kê';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Tìm kiếm $provider cho \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Tìm kiếm cài đặt (ví dụ: Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Khả năng truy cập: Hiển thị biểu tượng cảm xúc';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Khả năng truy cập: Xóa màu';
+
+  @override
+  String get preferences_app_settings_products => 'Sản phẩm';
+
+  @override
+  String get preferences_card_about => 'Giới thiệu';
+
+  @override
+  String get preferences_legal_information_title => 'Thông tin pháp lý';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Điều khoản sử dụng, chính sách bảo mật và nhiều hơn nữa';
+
+  @override
+  String get preferences_terms_of_use => 'Điều khoản sử dụng';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts là cơ sở dữ liệu về sản phẩm thực phẩm **do mọi người tạo ra, dành cho mọi người**.\nBạn có thể sử dụng cơ sở dữ liệu này để đưa ra những lựa chọn thực phẩm tốt hơn và vì đây là **dữ liệu mở** nên bất kỳ ai cũng có thể **tái sử dụng cho bất kỳ mục đích nào**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Giấy phép';
+
+  @override
+  String get preferences_about_app_title => 'Giới thiệu về ứng dụng';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Thông tin kỹ thuật, thông tin dành cho nhà phát triển và nhiều thông tin khác';
+
+  @override
+  String get preferences_card_information => 'Thông tin';
+
+  @override
+  String get preferences_version_number_title => 'Số phiên bản';
+
+  @override
+  String get preferences_scanner_title => 'Máy quét';
+
+  @override
+  String get preferences_app_store => 'Cửa hàng ứng dụng';
+
+  @override
+  String get preferences_app_system_settings => 'Cài đặt hệ thống';
+
+  @override
+  String get preferences_source_code => 'Truy cập mã nguồn';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Và bắt đầu tạo ra tác động cho hàng triệu người';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Nói với toàn thế giới';
+
+  @override
+  String get preferences_tips => 'Mẹo';
+
+  @override
+  String get tips_discover_nutriscore => 'Khám phá Nutri-Score mới';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Trên trang web Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Quản lý tài khoản của tôi';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Quản lý tài khoản của bạn';
+
+  @override
+  String get preferences_change_password_title => 'Thay đổi mật khẩu của tôi';
+
+  @override
+  String get preferences_danger_zone => 'Khu vực nguy hiểm';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Mọi đóng góp của bạn sẽ bị mất';
+
+  @override
+  String get preferences_contributions_title => 'Đóng góp';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Cài đặt ứng dụng';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Cách thử nghiệm để quét sản phẩm ngoại tuyến';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Làm mới tất cả sản phẩm từ máy chủ';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Xin vui lòng tránh làm điều đó trừ khi thực sự cần thiết';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Chế độ demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Thêm thẻ vào máy quét';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Thêm 3 sản phẩm mẫu vào máy quét';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Người dẫn chương trình Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Máy chủ: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Thí nghiệm về khả năng tiếp cận';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Lựa chọn nhiều sản phẩm cho giá cả';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Bảng kiến thức do người dùng đặt hàng';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Truy cập tạm thời vào tìm kiếm vị trí';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'So sánh cạnh nhau cho 2 hoặc 3 sản phẩm';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Nhập danh sách sản phẩm';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Điểm số và phương pháp luận';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Khám phá cách tính điểm Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Khám phá những thay đổi chính về phương pháp luận';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Khám phá những dự án';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Khám phá sự thật về thực phẩm mở';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Những câu hỏi thường gặp';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Tổ chức phi chính phủ Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Thông tin';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Nhận thông tin cập nhật từ cộng đồng';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Cập nhật tin tức về ứng dụng và cộng đồng';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Tham gia bằng cách tham dự một trong các sự kiện trực tuyến của chúng tôi';
+
+  @override
+  String get preferences_connect_blog_title => 'Blog Sự thật về Thực phẩm Mở';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Nhận tin tức mới nhất khi chúng xảy ra';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Nhận sự giúp đỡ từ cộng đồng';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Hãy giúp chúng tôi cải thiện ứng dụng';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Gửi cho chúng tôi thông tin gỡ lỗi';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Gửi cho chúng tôi một email với thông tin gỡ lỗi chi tiết';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Gửi cho chúng tôi phản hồi về ứng dụng';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Giúp định hình tương lai của ứng dụng';
+
+  @override
+  String get preferences_connect_survey_title => 'Tham gia khảo sát ứng dụng';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Giúp chúng tôi hiểu những gì chúng tôi nên xây dựng tiếp theo';
+
+  @override
+  String get preferences_connect_professionals_title => 'Chuyên gia';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Hoàn toàn miễn phí, đảm bảo dữ liệu chính xác cho 500 ứng dụng và hàng triệu người dùng. Tự phục vụ, tương thích với PIM hoặc bảng tính (XLSX) của bạn';
+
+  @override
+  String get preferences_connect_pro_email_subtitle => 'Liên hệ để bắt đầu';
+
+  @override
+  String get preferences_connect_press_title => 'Báo chí';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Nhận tất cả tài liệu bạn cần cho báo cáo của mình';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Liên hệ để được báo chí hỏi thăm hoặc cho chúng tôi biết về báo cáo của bạn';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Trở thành một tình nguyện viên tích cực';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Phát triển, Truyền thông, Thiết kế… mọi hình thức tình nguyện hoặc chuyên môn đều được hoan nghênh!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Khám phá một số cách bạn có thể đóng góp';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Phát triển ứng dụng di động';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Tìm hiểu cách đóng góp vào quá trình phát triển phần mềm';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Bản dựng không ổn định hàng ngày, các tính năng hoàn toàn mới';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Phát triển cộng đồng địa phương của bạn';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Hỗ trợ dịch thuật phần mềm, nội dung, phân tích thành phần';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Chúng tôi đã chuẩn bị một mẫu nhỏ để giúp bạn :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Các bước đơn giản để tăng cường tính minh bạch về thực phẩm ở quốc gia của bạn';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Tham gia nhóm chất lượng dữ liệu';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Hãy tham gia cùng chúng tôi để đảm bảo cơ sở dữ liệu được hoàn thiện và chính xác';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Sản phẩm đã thêm';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Sản phẩm mới tôi đã thêm vào Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Sản phẩm tôi cần hoàn thành';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Tất cả các sản phẩm chưa hoàn thành';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Giá của tôi, bằng chứng của tôi…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Sản phẩm bạn có thể giúp hoàn thành';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Giúp tính toán Điểm Nutri-Score & Điểm Green-Score ở quốc gia của bạn';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Giá tôi đã đóng góp';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Thẻ giá và biên lai';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Chụp ảnh biên lai của bạn và quét mã vạch liên quan';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Chụp ảnh giá cả trong cửa hàng';
+
+  @override
+  String get preferences_prices_newest_title => 'Giá mới nhất';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Giá mới nhất được cộng đồng Open Prices thêm vào';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Những người đóng góp nhiều giá nhất';
+
+  @override
+  String get preferences_prices_metrics_title => 'Số liệu giá mở';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Theo dõi sự phát triển của dự án';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Các cách đóng góp';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Xác nhận giá do bạn hoặc người khác thêm vào, với sự trợ giúp của AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Nhanh chóng thêm nhiều biên lai hoặc ảnh kệ từ cuộn camera của bạn';
+
+  @override
+  String get preferences_prices_challenges_title => 'Thử thách hàng tháng';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Tham gia các nhiệm vụ theo chủ đề hàng tháng để thu thập giá';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Lấy lại dữ liệu lòng trung thành của bạn';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Tìm hiểu cách yêu cầu dữ liệu của bạn';
+
+  @override
+  String get preferences_page_customize_app_title => 'Tùy chỉnh ứng dụng';
+
+  @override
+  String get preferences_page_contribute_project_title => 'Đóng góp cho dự án';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Những cách đơn giản để giúp Mở Thực phẩm';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Phương pháp tính điểm, trợ giúp và nhiều thông tin khác về dự án';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Chấp nhận đề xuất';
 
   @override
@@ -4762,4 +5586,102 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Xác thực không thành công, không thể lấy bằng chứng';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count trong số $total bản chứng minh';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count trong số $total người đóng góp';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count trong số $total địa điểm';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count địa điểm';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Vui lòng khởi động lại ứng dụng để áp dụng những thay đổi.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Giao diện đồ họa';
+
+  @override
+  String get preferences_app_settings_media_title => 'Phương tiện truyền thông';
+
+  @override
+  String get preferences_about_app_development_title => 'Phát triển';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Phòng thí nghiệm thông tin thực phẩm mở';
+
+  @override
+  String get preferences_root_account_title => 'Tài khoản';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Mang Thông tin Thực phẩm Mở sang ngôn ngữ của bạn';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Đăng ký phiên bản alpha của ứng dụng';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Đóng góp & Dữ liệu sản phẩm';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Không hiển thị Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Tài khoản';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Đã thêm vào $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

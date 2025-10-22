@@ -9,6 +9,9 @@ class AppLocalizationsLa extends AppLocalizations {
   AppLocalizationsLa([String locale = 'la']) : super(locale);
 
   @override
+  String get app_name => 'Facta Cibi Aperti';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsLa extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsLa extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Categoriam accuratiorem elige';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsLa extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Nullae proprietates';
+
+  @override
+  String get product_tags_explanation =>
+      'Proprietates (clavis/valoris) producto addendo, illud locupletare adiuvas.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Rationem meam delere';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Aditus ad facultates experimentales et instrumenta progressionis';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'Aperi in situ interretiali Pretiorum Apertorum';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2655,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get prices_list_add_new_price => 'Adde novum pretium\n';
 
   @override
+  String get prices_list_empty_title => 'Nullum pretium adhuc!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Primus unum adde:\n**approbationem** vel **pretium** perlustrando!';
+
+  @override
   String get prices_entry_shop_not_found => 'Taberna ignota';
 
   @override
@@ -2649,7 +2671,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Vide omnia pretia huius producti';
 
   @override
   String get prices_entry_menu_open_proof => 'Vide probationem';
@@ -2728,9 +2750,21 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Nullus adhuc contributor!';
+
+  @override
+  String get prices_users_empty_explanation => 'Primus pretium adde!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Nulla taberna adhuc!';
+
+  @override
+  String get prices_locations_empty_explanation => 'Primus pretium adde!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2869,17 @@ class AppLocalizationsLa extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Nulla adhuc probatio!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Initium fac addendo imaginem **accepti** vel **pretii**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2958,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2970,17 @@ class AppLocalizationsLa extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Linguam applicationis restituere';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Chartas adde';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Inter prices.openfoodfacts.org (PROD) et ambitum probationis commuta.';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3024,11 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4030,32 @@ class AppLocalizationsLa extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Viridis-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Punctum Viride Ignotum';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Punctum Viride non applicabile est.';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Cibi ultra-processi - greges NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4152,6 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4259,282 @@ class AppLocalizationsLa extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Quid est Punctum Viridis?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Insigne \"Green-Score\" est quod te de **impactu ciborum in ambientem** certiorem facere propositum habet.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Color variat a viridi obscuro (**A+**) pro rebus **minime impactantibus** ad rubrum obscurum (**F**) pro rebus **maxime impactantibus**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Insignia Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Nucleus: Aestimatio cycli vitae (ACV)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Aestimatio scientifica categoriarum ciborum';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Pro singulis categoriis productorum, mensura **benchmark** constituitur utens datis ex indice datorum de rebus environmentalibus Agribalyse (ab ADEME et INRAE designato).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analysis cycli vitae** est methodus aestimationis normata ad perficiendam aestimationem environmentalem multi-stadialem et multi-criterialem.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Metitur:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => 'Sex gradus productionis';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      'Quattuordecim indices impactus environmentalis';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Mutatio climatis/vestigium carbonis';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Depletio strati ozoni';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radiatio ionizans';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Terra';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Usus aquae et energiae';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Pollutio aeris';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Aqua marina et dulcis (particulae, acidificatio, eutrophicatio)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Depletio opum.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Praemia et poenae';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Ut meliora producta intra categoriam praemientur, deinde praemia et poenas secundum plura criteria adhibemus:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Praemium secundum originem ingredientium tribuitur. Hoc praemium et effectum in transportationem et etiam rationem rerum naturalium cuiusque patriae productoris considerat.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Ad accurate Viridis Punctum computandum, necesse est habere informationem quae non necessario in involucro specificatur (velut origo et exacta proportio cuiusque ingredientis) vel quae raro in forma utili praesto est (velut index omnium partium involucri cum generibus precisis plasticarum adhibitarum).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Valores medii adhibentur cum hae informationes nondum praesto sunt, sed nunc omnes ad auxilium nostrum in colligendis his informationibus, quae non solum non solum pro Green-Score sed etiam pro multis aliis usibus perutilis erit, rogamus.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Quomodo cives adiuvare possint';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Omnes cives nobis auxilium ferre possunt ad informationem, quae in productis adest vel ex eis deduci potest, colligendam et ordinandam: Mission Emballages: inventarium collaborativum amplum involucrorum omnium productorum alimentariorum (Francogallice).';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Quomodo fabri adiuvare possunt';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Fabricatores nobis suas informationes directe per suggestum nostrum gratuitum fabricatoribus destinatum mittere possunt.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Quod productum planetae melius est?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Difficile potest esse dicere';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Eligere cibum sustinendum est una ex potentissimis rebus quas pro climate facere possumus, cum **systema nostrum cibarium globale plus quam quartam partem omnium emissionum gasorum tepidariorum efficiat**.\n(Fons: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'Potestatem habes! (or) Tibi est potestas!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Bona nuntia sunt haec: hoc nobis viam potentem praebet ad mutationem efficiendam.\n**Unusquisque nostrum circiter mille cibos quotannis consumit**. Mille enim occasiones sunt ad **meliorem futurum pro planeta eligendum**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Adiuvat ad responsabilem agendum et decernendum';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Eligendo cibum sustentabilem difficile videri potest. Etiquettae confusae sunt et informationes saepe desunt. Punctum Viride creatum est ut rem simplicem reddat, tibi aestimationem environmentalem **claram**, **scientificam**, et **perspicuam** pro cibis praebens, ubi eam desideras: dum emis.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Perspicuitas';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Dissimilis notis propriis, computatio Green-Score **omnino aperta** est et ab quolibet **verificari** potest.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Quid est ultra-processus?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Greges NOVA te de gradu confectionis ciborum certiorem faciunt.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Classificatio NOVA permittit divisionem ciborum in **quattuor greges** secundum **gradum processus industrialis** (cibi minimaliter processus vel non processus, ingredientia culinaria, cibi processus, cibi ultra-processi).';
+
+  @override
+  String get guide_nova_logos_caption => 'Insignia NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Quattuor greges NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Quattuor greges NOVA sunt, quorum problematicus est Grex IV - Cibi ultra-processi.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Cibi minimaliter confecti vel non confecti';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Cibi non confecti (seu naturalia) sunt partes edules plantarum (semina, fructus, folia, caules, radices) vel animalium (musculi, viscera, ova, lac), necnon fungi, algae et aqua, postquam a natura separata sunt.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ingredientia culinaria processa, ut olea, butyrum, saccharum et sal, sunt substantiae ex cibis Gregis 1 vel ex natura derivatae per processus qui prelum, purificationem, trituram, et exsiccationem includunt.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Cibi confecti, ut olera in ampullis condita, pisces in vasis conservati, fructus in syrupo, casei, et panes recens confecti, imprimis fiunt addendo salem, oleum, saccharum, vel alias substantias e Grege 2 ad cibos Gregis 1. Processus includunt varias methodos conservationis vel coctionis, et in casu panum et caseorum, fermentationem non alcoholicam. Plerique cibi confecti duo vel tria ingredientia habent et agnoscuntur ut versiones modificatae ciborum Gregis 1. Per se vel, saepius, in combinatione cum aliis cibis edi possunt.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Cibi ultra-confecti, ut potiones non alcoholicae, dulcia vel salsa cibaria involucris, carnes reconstitutae, et fercula congelata prae-parata, non solum cibi modificati sunt, sed formulae plerumque vel omnino ex substantiis derivatis ex cibis et additivis factae, cum parvo vel nullo cibo integro Gregis 1. Ingredientia in his formulis plerumque includunt ea quae etiam in cibis confectis inveniuntur, ut saccharum, olea, adipes, vel sal. Attamen, producta ultra-confecta etiam alias fontes energiae et nutrimentorum continent quae non typice in praeparationibus culinariis adhibentur. Quaedam ex his directe ex cibis extrahuntur, ut caseinum, lactosum, serum lactis, et gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Difficultates cum ultra-processu';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Processus extremus ingredientium cibariorum';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Multa ex ulteriore processu constituentium cibi derivantur, ut olea hydrogenata vel interesterificata, proteina hydrolyzata, proteinum soiae isolato, maltodextrinum, saccharum inversum, et syrupum frumenti alto fructoso.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Additiva quae ultra puram salutem cibariam progrediuntur';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Inter additiva in cibis ultra-processis sunt quaedam quae etiam in cibis processis adhibentur, ut conservantia, antioxidantia, et stabilimenta. Inter genera additivorum quae tantum in productis ultra-processis inveniuntur sunt ea quae ad imitandas vel augendas qualitates sensorias ciborum vel ad occultandas partes insuaves producti finalis adhibentur. Haec additiva includunt tincturas et alios colores, stabilimenta coloris; sapores, amplificatores saporis, dulcificantia non saccharo; et adiuvantia processus, ut agentes carbonantes, firmantes, voluminantes et anti-volumenantes, agentes de-spumantes, anti-coagulantes et vitreantes, emulsores, sequestrantes, et humectantes.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Processus quem domi facere non potes';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Multitudo serierum processuum adhibetur ad ingredientia, quae plerumque multa sunt, coniungenda et ad productum finale creandum (hinc \'ultra-processum\'). Inter processus sunt plures sine aequivalentibus domesticis, ut hydrogenatio et hydrolysatio, extrusio et formatio, et prae-processus ad frigendum.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Aspectus rapaces et pecuniarii ultra-processus';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Propositum generale ultra-processus est creare cibos nobiles, commodos (durabiles, ad consumendum paratos), attractivos (hyper-sapidos) et valde lucrativos (ingredientibus vilis) destinatos ad omnes alias genera ciborum substituenda. Cibi ultra-processi plerumque attractive involucris involuuntur et intensive venduntur.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4847,12 @@ class AppLocalizationsLa extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Nullum pretium praesto est.';
+
+  @override
+  String get prices_products_empty_explanation => 'Primus contribue!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4891,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extractio in progressu…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Extractio prospera';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5025,508 @@ class AppLocalizationsLa extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Pretia tua modera';
+
+  @override
+  String get preferences_card_project =>
+      'Proiectum \"Open Food Facts\" (vel \"Facta Cibi Aperti\")';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Statisticae meae';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Vertere, instrumenta nostra emendare…';
+
+  @override
+  String get preferences_connect_title => 'Coniunge';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Contacta nos, vel sequere nos in instrumentis socialibus.';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Adiuva nos informare milliones clientium toto orbe terrarum.';
+
+  @override
+  String get preferences_card_help => 'Auxilium et Subsidium';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Accipe responsa ad quaestiones tuas';
+
+  @override
+  String get logged_out => 'Exitus';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Gratias tibi ago quod unus ex sodalibus nostris es!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Vide omnes statisticas';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Quaerere $provider \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Quaerere optionem (e.g. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Accessibilitas: Emoji monstra';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Accessibilitas: Colores remove.';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Notitiae legales';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Conditiones usus, praecepta secreti, et plura';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      '\"Open Food Facts\" est index productorum cibariorum **ab omnibus, omnibus factus**.\nEo uti potes ad meliores electiones ciborum faciendas, et cum **data aperta** sint, quilibet eo **ad quemvis usum iterum uti potest**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licentiae';
+
+  @override
+  String get preferences_about_app_title => 'De applicatione';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Notitiae technicae, notitiae fabricatoris, et plura';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Numerus versionis';
+
+  @override
+  String get preferences_scanner_title => 'Scrutator';
+
+  @override
+  String get preferences_app_store => 'Taberna applicationum';
+
+  @override
+  String get preferences_app_system_settings => 'Configurationes systematis';
+
+  @override
+  String get preferences_source_code => 'Ad codicem fontem accedere';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Et incipe effectum facere pro millionibus';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Consilia';
+
+  @override
+  String get tips_discover_nutriscore => 'Novum Nutri-Score inveni.';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'In situ interretiali \"Open Food Facts\"';
+
+  @override
+  String get preferences_manage_account_title => 'Rationem meam administrare';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Rationem tuam administra';
+
+  @override
+  String get preferences_change_password_title => 'Mutare tesseram meam';
+
+  @override
+  String get preferences_danger_zone => 'Zona periculosa';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Omnes contributiones tuae peribunt.';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Optiones applicationis';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Modus valde experimentalis ad res sine interrete inspiciendas';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Omnia producta e servo renova';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Quaeso, vita id nisi omnino necesse est.';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modus demonstrationis';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Chartas ad scrutatorem addere';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Tria exempla productorum scrutatori addit.';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Hospes folksonomiae';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Hospes: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Experimenta accessibilitatis';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Selectio plurium productorum pro pretiis';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Tabulae scientiae ordinatae ab usoribus';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Aditus temporarius ad inquisitionem loci';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Comparatio iuxta se duorum vel trium productorum';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importatio indicis productorum';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Puncta et methodologiae';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Disce quomodo Nutri-Score computatur';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Mutationes principales methodologiae inveni.';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Facta de Cibo Aperto Invenite';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Quaestiones Frequentes - Quaestiones Frequentes';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Consociatio Non-Governativa de Cibis Apertis Factis (vel Notitiae Ciborum Apertae)';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Accipe nuntios communitatis';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Nuntiis applicationis et communitatis certior esto.';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Participa participando unum ex eventibus nostris virtualibus';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Diarium de rebus cibariis apertis';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Accipe nuntios novissimos, ubi fiunt';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Auxilium a communitate pete';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Adiuva nos ad applicationem emendandam';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Mitte nobis informationes debug';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Mitte nobis epistulam electronicam cum informationibus accuratis de depuratione.';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Mitte nobis sententiam de applicatione';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Adiuva ad formandum futurum applicationis';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Inquisitionem applicationis suscipe';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Adiuva nos intellegere quid deinde aedificare debeamus';
+
+  @override
+  String get preferences_connect_professionals_title => 'Periti';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Omnino gratuitum, accurata data pro quingentis applicationibus et milionibus clientium praestat. Autoservitium, cum PIM vel tabulis computatoriis (XLSX) congruens.';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Contactum fac ut incipias.';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Omnem materiam quam ad relationem tuam requiris accipe';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Contactum fac si quaestionibus diurnariis uti vel si de relatione tua nos certiores facias.';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Voluntarius activus fias';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Progressus, Communicatio, Designatio… omne genus voluntariatus vel peritiae gratum est!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Detege aliquas ex multis modis quibus contribuere potes';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Elaboratio applicationum mobilium';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Disce quomodo ad evolutionem programmatum conferre possis.';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Aedificationes instabiles quotidianae, functiones novae omnino';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Communitatem localem tuam auge';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Auxilium cum programmatibus, contentis, et interpretationibus analyticis ingredientium.';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Exemplar parvum ad te adiuvandum paravimus :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Gradus simplices ad perspicuitatem ciborum in patria tua augendam';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Turmae qualitatis datorum intersis';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Nostro conatui adhaere ut basis datorum completa et accurata sit.';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Producta addita';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nova producta quae ad \"Open Food Facts\" addidi';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Producta quae mihi perficienda sunt';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Omnia producta imperfecta';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Pretia mea, probationes meae…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Producta quibus adiuvare potes perficienda';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Adiuva ad computandum Nutri-Score et Green-Score in patria tua.';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Pretia quae a me contuli';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Pretia et acceptilationes';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Imagines acceptorum tuorum cape et codices lineares conexos lege.';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Pretia in taberna photographare';
+
+  @override
+  String get preferences_prices_newest_title => 'Pretia novissima';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Pretia recentissima a communitate Pretiorum Apertorum addita';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Contributores cum plurimis pretiis';
+
+  @override
+  String get preferences_prices_metrics_title => 'Mensurae Pretii Aperiendi';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Evolutionem incepti sequere';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Modi contribuendi';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Pretia a te ipso vel ab aliis addita, ope intellegentiae artificialis, confirma.';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Celeriter multas acceptilationes vel imagines pluteorum ex fasciculo photographico tuo adde.';
+
+  @override
+  String get preferences_prices_challenges_title => 'Provocationes menstruae';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Inquisitionibus thematicis menstruis participa ut pretia colligas.';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Data fidelitatis tuae recupera';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Disce quomodo notitias tuas petere possis.';
+
+  @override
+  String get preferences_page_customize_app_title => 'Applicationem accommoda';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Contribue ad inceptum';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Modi simplices ad adiuvandum Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Methodologiae notarum, auxilium, et plura de incepto';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Accipe suggestionem';
 
   @override
@@ -4737,4 +5570,103 @@ class AppLocalizationsLa extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Authenticatio defecit, probationes petere non potuerunt.';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ex $total probationibus';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ex $total contributoribus';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ex $total locis';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return 'Loca $count';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Quaeso, applicationem denuo incipe ut mutationes adhibeantur.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfacies graphica';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratoria Aperta Factorum Ciborum';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Affer Facta Cibaria Aperta in Linguam Tuam';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'In versionem alpha applicationis inscribe.';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Contributiones et notitiae de producto';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Folksonomiam noli ostendere.';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Additum in $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

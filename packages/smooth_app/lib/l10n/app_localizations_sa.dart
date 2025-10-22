@@ -9,6 +9,9 @@ class AppLocalizationsSa extends AppLocalizations {
   AppLocalizationsSa([String locale = 'sa']) : super(locale);
 
   @override
+  String get app_name => 'मुक्त खाद्य तथ्य';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsSa extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsSa extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsSa extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'अधिकं सटीकं वर्गं चिनुत';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsSa extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'न गुणाः';
+
+  @override
+  String get product_tags_explanation =>
+      'उत्पादे गुणाः (कुंजी/मूल्यं) योजयित्वा भवन्तः तस्य समृद्धीकरणे सहायतां कुर्वन्ति ।';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'मम खातं विलोपयतु';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsSa extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'प्रयोगात्मकविशेषताः विकाससाधनं च प्राप्नुवन्तु';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsSa extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Open Prices इति जालपुटे उद्घाटयन्तु';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsSa extends AppLocalizations {
   String get prices_list_add_new_price => 'एकं\nनवीनं मूल्यं योजयन्तु';
 
   @override
+  String get prices_list_empty_title => 'अद्यापि मूल्यं नास्ति!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'एकं योजयितुं प्रथमः भवतु:\n**रसीद** अथवा **मूल्य टैग** स्कैन् कृत्वा!';
+
+  @override
   String get prices_entry_shop_not_found => 'अज्ञात भण्डार';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'अस्य उत्पादस्य सर्वाणि मूल्यानि पश्यन्तु';
 
   @override
   String get prices_entry_menu_open_proof => 'प्रमाणं पश्यन्तु';
@@ -2727,9 +2748,22 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'अद्यापि कोऽपि योगदानदाता नास्ति!';
+
+  @override
+  String get prices_users_empty_explanation => 'मूल्यं योजयितुं प्रथमः भवतु!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'अद्यापि कोऽपि दुकानः नास्ति!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'मूल्यं योजयितुं प्रथमः भवतु!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2868,17 @@ class AppLocalizationsSa extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'अद्यापि प्रमाणं नास्ति!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '**रसीदस्य** अथवा **मूल्यचिह्नस्य** फोटो योजयित्वा आरभत!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2913,13 +2957,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2969,17 @@ class AppLocalizationsSa extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'एप् भाषा पुनः सेट् कुर्वन्तु';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'कार्ड्स् योजयन्तु';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'prices.openfoodfacts.org (PROD) इत्यस्य मध्ये स्विच् कुर्वन्तु तथा च test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3023,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4029,33 @@ class AppLocalizationsSa extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'हरित-अङ्क A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'हरित-अङ्क B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'हरित-अङ्क C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'हरित-अङ्क D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'हरित-स्कोर ई';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'अज्ञात ग्रीन-स्कोर';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'ग्रीन-स्कोर न प्रयोज्यम्';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'अति-संसाधित खाद्यपदार्थाः - NOVA समूहाः';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4152,6 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4259,279 @@ class AppLocalizationsSa extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'हरित-अङ्कः किम् ?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'ग्रीन-स्कोरः एकः लोगो अस्ति यस्य उद्देश्यं **खाद्यस्य पर्यावरणीयप्रभावस्य** विषये भवन्तं सूचयितुं भवति।';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'वर्णसङ्केतः **अत्यन्तं प्रभावशालिनः** उत्पादानाम् कृते गहरे हरितवर्णात् (**A+**) तः **अधिकतमप्रभावशालिनः** उत्पादानाम् कृते गहरे रक्तवर्णीयः (**F**) यावत् भिद्यते ।';
+
+  @override
+  String get guide_greenscore_logos_caption => 'ग्रीन-स्कोर-चिह्नानि';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'मूलम् : जीवनचक्रस्य मूल्याङ्कनम् (LCA) .';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'खाद्यवर्गाणां वैज्ञानिकं मूल्याङ्कनम्';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'प्रत्येकस्य उत्पादवर्गस्य कृते Agribalyse पर्यावरणीयदत्तांशकोशस्य (ADEME तथा INRAE द्वारा परिकल्पितस्य) आँकडानां उपयोगेन **बेन्चमार्क** स्कोरः स्थापितः भवति ।';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**जीवनचक्रविश्लेषणम्** बहुचरणीयं बहुमापदण्डं च पर्यावरणमूल्यांकनं कर्तुं मानकीकृतमूल्यांकनपद्धतिः अस्ति।';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**इदं मापयति:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '६ उत्पादनपदार्थाः';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '१४ पर्यावरणप्रभावसूचकाः';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'जलवायुपरिवर्तनम्/कार्बनपदचिह्नम्';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'ओजोनस्तरस्य क्षयः';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'आयनीकरण विकिरण';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'भूः';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'जल & ऊर्जा उपयोग';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'वायुप्रदूषणम्';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'समुद्री एवं ताजा जल (कण, अम्लीकरण, यूट्रोफिकेशन)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'संसाधनानाम् क्षयः ।';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'बोनस एवं दण्ड';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'एकस्य वर्गस्य अन्तः उत्तम-उत्पादानाम् पुरस्काराय, ततः वयं अनेक-मापदण्डानाम् आधारेण बोनस-दण्डान् प्रयोजयामः:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'अवयवानां उत्पत्तिम् आधारीकृत्य बोनसः प्रदत्तः भवति । अस्मिन् बोनस् परिवहनस्य प्रभावं अपि च प्रत्येकस्य उत्पादकस्य देशस्य पर्यावरणनीतिं गृह्णाति ।';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'ग्रीन-स्कोरस्य सटीकगणनायाः कृते एतादृशी सूचना आवश्यकी भवति, या पैकेजिंग् इत्यत्र अनिवार्यतया निर्दिष्टा न भवति (यथा प्रत्येकस्य घटकस्य उत्पत्तिः सटीकप्रतिशतता च) अथवा या उपयोगयोग्यरूपेण दुर्लभतया उपलब्धा भवति (यथा प्रयुक्तानां प्लास्टिकानां सटीकप्रकारस्य सह पैकेजिंग् इत्यस्य सर्वेषां घटकानां सूची)';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'यदा एषा सूचना अद्यापि उपलब्धा नास्ति तदा औसतमूल्यानां उपयोगः भवति, परन्तु वयम् अधुना सर्वेभ्यः आह्वानं कुर्मः यत् एतां सूचनां संग्रहीतुं साहाय्यं कुर्वन्तु यत् ग्रीन-स्कोरस्य कृते अतीव उपयोगी भविष्यति परन्तु अन्येषां बहूनां उपयोगानां कृते अपि।';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'नागरिकाः कथं साहाय्यं कर्तुं शक्नुवन्ति';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'सर्वे नागरिकाः अस्माकं सहायतां कर्तुं शक्नुवन्ति यत् उत्पादेषु वर्तमानाः अथवा तेभ्यः निष्कर्षः निकासितुं शक्यन्ते, यथा पैकेजिंग् विषये सूचना: Mission Emballages: सर्वेषां खाद्यपदार्थानाम् पैकेजिंगस्य बृहत्-परिमाणस्य सहकारिणी-सूची (फ्रेञ्चभाषायां)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'निर्मातारः कथं साहाय्यं कर्तुं शक्नुवन्ति';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'निर्मातारः उत्पादकानां कृते अस्माकं निःशुल्कमञ्चद्वारा प्रत्यक्षतया स्वसूचनाः अस्मान् प्रेषयितुं शक्नुवन्ति।';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'ग्रहस्य कृते कः उत्पादः श्रेष्ठः ?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'कठिनं वक्तुं शक्यते';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'स्थायिभोजनस्य चयनं जलवायुस्य कृते वयं कर्तुं शक्नुमः इति एकं शक्तिशाली कार्यम् अस्ति, यतः **अस्माकं वैश्विकखाद्यव्यवस्था सर्वेषां ग्रीनहाउस-वायु-उत्सर्जनस्य चतुर्थांशाधिकस्य उत्तरदायी अस्ति** |.\n(स्रोत: Poore & Nemecek, विज्ञान, 2018)।';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'भवतः शक्तिः अस्ति !';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'सुसमाचारः अस्ति यत् एतेन परिवर्तनस्य निर्माणस्य एकः शक्तिशाली मार्गः प्राप्यते।\n**अस्माकं प्रत्येकं प्रतिवर्षं प्रायः १,००० भोजनं खादति**। तत् **ग्रहस्य कृते उत्तमं भविष्यं चयनं कर्तुं** १,००० अवसराः!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'उत्तरदायी भवितुं निर्णयं च कर्तुं साहाय्यं करोति';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'स्थायिभोजनस्य चयनं जटिलं अनुभवितुं शक्नोति। लेबल् भ्रान्तिकारकं भवति, सूचना च प्रायः अभावः भवति । ग्रीन-स्कोर इत्यस्य निर्माणं सरलं कर्तुं कृतम्, यत् भवन्तं खाद्यपदार्थानाम् कृते **स्पष्टं**, **विज्ञान-आधारितं**, **पारदर्शकं** च पर्यावरण-रेटिंग् ददाति, यत्र भवतः आवश्यकता अस्ति: यदा भवन्तः शॉपिङ् कुर्वन्ति।';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'पारदर्शिता';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'स्वामित्वलेबलस्य विपरीतम्, Green-Score गणना **पूर्णतया उद्घाटिता** अस्ति तथा च **केनापि सत्यापितुं शक्यते** ।';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'अति-प्रक्रियाकरणं किम् ?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'नोवा-समूहाः भवन्तं खाद्यप्रसंस्करणस्य स्तरस्य विषये सूचयन्ति ।';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA वर्गीकरणेन खाद्यपदार्थानाम् **औद्योगिकप्रसंस्करणस्य डिग्री** (न्यूनतमरूपेण संसाधितानि अथवा अप्रसंस्कृतानि खाद्यानि, पाकसामग्री, संसाधितानि खाद्यानि, अति-संसाधितानि खाद्यानि) आधारेण **4 समूहेषु** वर्गीकरणस्य अनुमतिः अस्ति';
+
+  @override
+  String get guide_nova_logos_caption => 'नोवा-चिह्नानि';
+
+  @override
+  String get guide_nova_groups_title => '४ नोवा समूहाः';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'अत्र ४ नोवा-समूहाः सन्ति, समस्याप्रदः समूहः ४ - अल्ट्रा-प्रोसेस्ड् खाद्यानि ।';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'न्यूनतमरूपेण संसाधितानि अथवा असंसाधितानि आहारपदार्थानि';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'अप्रसंस्कृतानि (प्राकृतिकानि वा) आहाराः वनस्पतयः (बीजानि, फलानि, पत्राणि, काण्डानि, मूलं) वा पशूनां (स्नायुः, आन्तरिकाः, अण्डानि, दुग्धं) खाद्यभागाः, तथैव कवकाः, शैवालाः, जलं च प्रकृत्याः पृथक् कृत्वा भवन्ति';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'संसाधिताः पाकसामग्रीः, यथा तैलं, घृतं, शर्करा, लवणं च, समूह 1 खाद्यपदार्थेभ्यः अथवा प्रकृत्याः प्रक्रियाणां माध्यमेन प्राप्ताः पदार्थाः सन्ति, येषु दबावः, परिष्कारः, पीसः, पिष्टः, शोषणं च अन्तर्भवति';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'संसाधितानि आहारपदार्थानि, यथा शीशीकृतानि शाकानि, डिब्बाबंदमत्स्यानि, सिरपमध्ये फलानि, पनीरं, नवनिर्मितानि रोटिकानि च मुख्यतया समूह 2 तः समूह 1 खाद्यपदार्थेषु लवणं, तैलं, शर्करा, अन्यद्रव्याणि वा योजयित्वा निर्मिताः भवन्ति प्रक्रियासु विविधाः संरक्षणविधयः पाकविधयः वा, रोटिकानां, पनीरस्य च सन्दर्भे अमद्ययुक्तं किण्वनं च अन्तर्भवति । अधिकांशतः संसाधितभोजनेषु द्वौ वा त्रीणि वा घटकानि सन्ति, ते च समूह 1 खाद्यानां परिवर्तितसंस्करणरूपेण ज्ञातुं शक्यन्ते । स्वयमेव वा अधिकतया अन्यैः आहारैः सह वा खादितुं शक्यन्ते ।';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'अति-संसाधितानि खाद्यानि, यथा शीतलपेयानि, मधुराणि वा स्वादिष्टानि वा पैकेज्ड् स्नैक्स, पुनर्गठितमांसपदार्थाः, पूर्वनिर्मितानि जमेन व्यञ्जनानि च, केवलं परिवर्तितानि आहारपदार्थानि न अपितु अधिकतया वा पूर्णतया वा खाद्यपदार्थैः, योजकैः च प्राप्तैः पदार्थैः निर्मिताः सूत्राणि सन्ति, यत्र समूहः १ अन्नं अल्पं वा न वा अक्षुण्णं भवति एतेषु सूत्रेषु प्रायः शर्करा, तैलं, मेदः, लवणं वा इत्यादिषु संसाधितभोजनेषु अपि दृश्यन्ते । परन्तु अति-संसाधित-उत्पादानाम् अन्ये ऊर्जा-स्रोताः अपि सन्ति, पोषक-द्रव्याणि च सन्ति, येषां उपयोगः सामान्यतया पाककलायां न भवति । एतेषु केचन प्रत्यक्षतया कैसिन्, लैक्टोज, मृदा, लसः इत्यादिभ्यः आहारपदार्थेभ्यः निष्कासिताः भवन्ति ।';
+
+  @override
+  String get guide_nova_explanations_title => 'अति-प्रक्रियाकरणस्य समस्याः';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'आहारसामग्रीणां अत्यन्तं प्रसंस्करणम्';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'अनेकाः खाद्यघटकानाम् अग्रे प्रसंस्करणात् उत्पद्यन्ते, यथा हाइड्रोजनयुक्तानि अथवा ब्याजयुक्तानि तैलानि, जलविघटनितप्रोटीनानि, सोयाप्रोटीनपृथक्करणं, माल्टोडेक्स्ट्रिन्, इन्वर्टशर्करा, उच्च-फ्रुक्टोज-मक्का-सिरप् च';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'शुद्धाहारसुरक्षायाः परं गच्छन्ति ये योजकाः';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'अति-संसाधित-आहारेषु योजकाः केचन सन्ति येषां उपयोगः संसाधित-आहारेषु अपि भवति, यथा संरक्षकाः, एण्टीऑक्सिडेण्ट्, स्थिरीकरणं च । केवलं अति-संसाधित-उत्पादेषु दृश्यमानानां योजकवर्गेषु खाद्यानां संवेदीगुणानां अनुकरणाय वा वर्धनाय वा अन्तिम-उत्पादस्य अस्वादहीन-पक्षेषु वेषं स्थापयितुं वा प्रयुक्ताः योजकाः सन्ति एतेषु योजकानाम् अन्तर्भवति रञ्जकाः अन्ये च वर्णाः, वर्णस्थिरीकरणकर्तारः; स्वादाः, स्वादवर्धकाः, अशर्करा मधुरकारकाः; तथा कार्बोनेशन, फर्मिंग, बल्किंग् तथा एण्टी-बल्किंग एजेण्ट्, डि-फोमिंग, एण्टी-केकिंग तथा ग्लेज़िंग एजेण्ट्, पायसीकारी, सिक्वेस्ट्रेण्ट्, ह्यूमेक्टेण्ट् इत्यादीनि प्रसंस्करणसहायकाः।';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'प्रसंस्करणं भवन्तः गृहे कर्तुं न शक्नुवन्ति';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'सामान्यतया अनेकानाम् अवयवानां संयोजनाय अन्तिम-उत्पादस्य (अतः \'अति-संसाधित\') निर्माणार्थं प्रक्रियाणां क्रमानां बहुलतायाः उपयोगः भवति । प्रक्रियासु अनेकाः सन्ति येषां घरेलुसमतुल्यता नास्ति, यथा जलवायुकरणं जलविपाकं च, निष्कासनं, ढालनं च, भर्जनार्थं पूर्वप्रक्रियाकरणं च';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'अति-प्रक्रियाकरणस्य शिकारी-वित्तीय-पक्षाः';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'अति-प्रक्रियाकरणस्य समग्रं उद्देश्यं अन्येषां सर्वेषां खाद्यसमूहानां विस्थापनार्थं डिजाइनं कृत्वा ब्राण्ड्-कृतं, सुविधाजनकं (स्थायित्वं, उपभोगार्थं सज्जं), आकर्षकं (अति-स्वादयुक्तं) अत्यन्तं लाभप्रदं (कम-लाभयुक्तं घटकं) च खाद्यपदार्थानां निर्माणं भवति अल्ट्रा-प्रोसेस्ड् खाद्यपदार्थाः प्रायः आकर्षकरूपेण पैकेज्ड् भवन्ति, गहनतया च विपणनं कुर्वन्ति ।';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4844,12 @@ class AppLocalizationsSa extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'मूल्यं उपलब्धं नास्ति';
+
+  @override
+  String get prices_products_empty_explanation => 'योगदानं दातुं प्रथमः भवतु!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4888,10 @@ class AppLocalizationsSa extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'निष्कर्षण प्रचलति…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'निष्कर्षणं सफलम्';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5022,504 @@ class AppLocalizationsSa extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'स्वस्य मूल्यप्राथमिकतानां प्रबन्धनं कुर्वन्तु';
+
+  @override
+  String get preferences_card_project => 'मुक्तभोजनतथ्यपरियोजना';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'मम सांख्यिकी';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'अनुवादं कुर्वन्तु, अस्माकं साधनानि सुधारयन्तु…';
+
+  @override
+  String get preferences_connect_title => 'संयुज्';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'हस्तं प्रसारयन्तु, अथवा सामाजिकमाध्यमेषु अस्मान् अनुसरणं कुर्वन्तु';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'विश्वस्य कोटिकोटि उपभोक्तृभ्यः सूचनां दातुं अस्मान् साहाय्यं कुर्वन्तु';
+
+  @override
+  String get preferences_card_help => 'सहायता एवं समर्थन';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'भवतः प्रश्नानाम् उत्तराणि प्राप्नुवन्तु';
+
+  @override
+  String get logged_out => 'लॉग आउट् कृतवान्';
+
+  @override
+  String get preferences_app_bar_message =>
+      'अस्माकं सदस्येषु अन्यतमः इति धन्यवादः!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'सर्वाणि आँकडानि पश्यन्तु';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '\"$keyword\" इति $provider इति अन्वेषणं कुर्वन्तु ।';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'सेटिंग् अन्वेष्टुम् (उदा. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'सुलभता : इमोजी दर्शयतु';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'सुलभता : वर्णाः निष्कासयन्तु';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'कानूनी सूचना';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'उपयोगस्य नियमाः, गोपनीयतानीतिः, इत्यादीनि च';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts इति खाद्यपदार्थानाम् एकः आँकडाधारः **सर्वैः निर्मितः, सर्वेषां कृते**।\nभवान् तस्य उपयोगं उत्तमं खाद्यविकल्पं कर्तुं शक्नोति, तथा च यतः एतत् **मुक्तदत्तांश** अस्ति, अतः कोऽपि **किमपि प्रयोजनार्थं पुनः उपयोगं कर्तुं शक्नोति**।';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'अनुज्ञापत्राणि';
+
+  @override
+  String get preferences_about_app_title => 'एप् विषये';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'तकनीकीसूचना, विकासकस्य सूचना, इत्यादीनि च';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'संस्करणसङ्ख्या';
+
+  @override
+  String get preferences_scanner_title => 'स्कैनर';
+
+  @override
+  String get preferences_app_store => 'एप् स्टोर';
+
+  @override
+  String get preferences_app_system_settings => 'सिस्टम् सेटिंग्स्';
+
+  @override
+  String get preferences_source_code => 'स्रोतसङ्केतं प्राप्नुवन्तु';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'तथा कोटिजनानाम् कृते प्रभावं कर्तुं आरभत';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'संकेता';
+
+  @override
+  String get tips_discover_nutriscore =>
+      'नवीनं Nutri-Score इति अन्वेषणं कुर्वन्तु';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Open Food Facts इति जालपुटे';
+
+  @override
+  String get preferences_manage_account_title => 'मम खातं प्रबन्धयतु';
+
+  @override
+  String get preferences_manage_account_tooltip => 'स्वस्य खातं प्रबन्धयन्तु';
+
+  @override
+  String get preferences_change_password_title => 'मम गुप्तशब्दं परिवर्तयन्तु';
+
+  @override
+  String get preferences_danger_zone => 'खतरा क्षेत्र';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'भवतः सर्वाणि योगदानानि नष्टानि भविष्यन्ति';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'एप् सेटिंग्स्';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'उत्पादानाम् अफलाइन स्कैनिङ्गस्य अतीव प्रयोगात्मकः उपायः';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'सर्वरतः सर्वाणि उत्पादानि ताजगीकृत्य स्थापयन्तु';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'कृपया तत् कर्तुं परिहरन्तु यावत् अत्यन्तं आवश्यकं न भवति';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'डेमो मोड';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'स्कैनर् मध्ये कार्ड्स् योजयन्तु';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'स्कैनरे ३ नमूनाउत्पादाः योजयति';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'लोकस्वरशास्त्र यजमान';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'यजमानः $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'सुलभता प्रयोगाः';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'मूल्यानां कृते बहु-उत्पादचयनम्';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'उपयोक्त्रेण ज्ञानपटलानि आदेशितानि';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'स्थानसन्धानस्य अस्थायी प्रवेशः';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '२ वा ३ उत्पादानाम् कृते पार्श्वे पार्श्वे तुलना';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'उत्पादसूची आयातम्';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'स्कोर एवं पद्धतियाँ';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Nutri-Score इत्यस्य गणना कथं भवति इति अन्वेष्टुम्';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'पद्धत्या मुख्यपरिवर्तनानि अन्वेषयन्तु';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'खुले खाद्यतथ्यस्य आविष्कारं कुर्वन्तु';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - बहुधा पृष्टाः प्रश्नाः';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'द ओपन फूड फैक्ट्स एनजीओ';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'समुदायस्य अद्यतनं प्राप्नुवन्तु';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'एप् तथा सामुदायिकवार्ता सह लूप् मध्ये तिष्ठन्तु';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'अस्माकं एकस्मिन् आभासीकार्यक्रमे भागं गृहीत्वा सम्मिलिताः भवन्तु';
+
+  @override
+  String get preferences_connect_blog_title => 'The Open Food Facts इति ब्लोग्';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'नवीनतमवार्ताः प्राप्नुवन्तु, यथा भवन्ति';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'समुदायतः सहायतां प्राप्नुवन्तु';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'एप् सुधारयितुम् अस्मान् साहाय्यं कुर्वन्तु';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'अस्मान् त्रुटिनिवारणसूचना प्रेषयन्तु';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'विस्तृतं त्रुटिनिवारणसूचना सह अस्मान् ईमेल प्रेषयन्तु';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'एप् विषये प्रतिक्रियाः अस्मान् प्रेषयन्तु';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'एप्लिकेशनस्य भविष्यं स्वरूपयितुं सहायतां कुर्वन्तु';
+
+  @override
+  String get preferences_connect_survey_title => 'एप् सर्वेक्षणं गृह्यताम्';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'अग्रे किं निर्मातव्यम् इति अवगन्तुं अस्मान् साहाय्यं कुर्वन्तु';
+
+  @override
+  String get preferences_connect_professionals_title => 'व्यावसायिक';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'सर्वथा निःशुल्कं, 500 एप्स & कोटिकोटि उपभोक्तृणां कृते सटीकदत्तांशं सुनिश्चितं करोति। स्वसेवा, भवतः PIM अथवा स्प्रेडशीट् (XLSX) सह सङ्गतम्';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'आरम्भं कर्तुं सम्पर्कं कुर्वन्तु';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'भवतः प्रतिवेदनस्य कृते आवश्यकं सर्वं सामग्रीं प्राप्नुवन्तु';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'प्रेस-प्रश्नार्थं वा भवतः प्रतिवेदनस्य विषये अस्मान् ज्ञापयितुं वा सम्पर्कं कुर्वन्तु';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'सक्रियः स्वयंसेवकः भवतु';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'विकास, संचार, डिजाइन… किसी भी प्रकार के स्वयंसेवा या विशेषज्ञता का स्वागत है!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'भवन्तः योगदानं दातुं शक्नुवन्ति अनेकेषु उपायासु केचन उपायाः अन्वेषयन्तु';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'मोबाईल एप्लिकेशन विकास';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'सॉफ्टवेयरविकासे कथं योगदानं दातुं शक्यते इति ज्ञातव्यम्';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'दैनिकं अस्थिरनिर्माणं, नूतनानि विशेषतानि';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'स्वस्थानीयसमुदायं वर्धयन्तु';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'सॉफ्टवेयर, सामग्री, घटकविश्लेषण अनुवादेषु सहायतां कुर्वन्तु';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'भवतः सहायार्थं वयं किञ्चित् टेम्पलेट् सज्जीकृतवन्तः :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'भवतः देशे खाद्यपारदर्शितायाः वर्धनार्थं सरलपदार्थाः';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'दत्तांशगुणवत्तादले सम्मिलिताः भवन्तु';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'दत्तांशकोशः सम्पूर्णः समीचीनः च इति सुनिश्चित्य अस्माकं प्रयासे सम्मिलिताः भवन्तु';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'उत्पादाः योजिताः';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'मया Open Food Facts इत्यत्र नवीनाः उत्पादाः योजिताः';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'उत्पादाः मया पूर्णाः कर्तव्याः';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'सर्वे अपूर्णाः उत्पादाः';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'मम मूल्यानि, मम प्रमाणानि…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'उत्पादाः भवन्तः पूर्णं कर्तुं साहाय्यं कर्तुं शक्नुवन्ति';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'स्वदेशे Nutri-Score & Green-Score इत्यस्य गणनायां सहायतां कुर्वन्तु';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'मूल्यानि मया योगदानं दत्तम्';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'मूल्यचिह्नानि रसीदानि च';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'स्वस्य रसीदानां छायाचित्रं गृहीत्वा तत्सम्बद्धानां बारकोड् स्कैन् कुर्वन्तु';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'एकस्मिन् दुकाने मूल्यानां छायाचित्रं गृह्यताम्';
+
+  @override
+  String get preferences_prices_newest_title => 'नवीनतममूल्यानि';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Open Prices समुदायेन योजिताः नवीनतमाः मूल्याः';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'अधिकतममूल्यानि युक्ताः योगदातारः';
+
+  @override
+  String get preferences_prices_metrics_title => 'मूल्यमापनं उद्घाटयतु';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'परियोजनायाः विकासस्य अनुसरणं कुर्वन्तु';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'योगदानस्य उपायाः';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'स्वयमेव वा अन्यैः वा योजितमूल्यानां पुष्टिं कुर्वन्तु, एआइ इत्यस्य साहाय्येन';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'शीघ्रं स्वस्य कॅमेरा-रोलतः अनेकानि रसीदानि अथवा अलमारयः फोटो योजयन्तु';
+
+  @override
+  String get preferences_prices_challenges_title => 'मासिकं आव्हानं';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'मूल्यानि संग्रहीतुं मासिकविषयगत-अन्वेषणेषु भागं गृह्णन्तु';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'स्वस्य निष्ठादत्तांशं पुनः प्राप्नुवन्तु';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'भवतः दत्तांशं कथं अनुरोधयितुं शक्यते इति ज्ञातव्यम्';
+
+  @override
+  String get preferences_page_customize_app_title => 'एप् अनुकूलितं कुर्वन्तु';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'परियोजनायां योगदानं ददातु';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Open Food Facts इत्यस्य सहायतायाः सरलाः उपायाः';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'परियोजनायाः विषये पद्धतिः, सहायता, इत्यादीनि च स्कोरं कुर्वन्तु';
+
+  @override
   String get product_edit_robotoff_positive_button => 'सुझावं स्वीकुरुत';
 
   @override
@@ -4737,4 +5564,102 @@ class AppLocalizationsSa extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'प्रमाणीकरणं विफलम्, प्रमाणानि आनेतुं असमर्थम्';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count के $total प्रमाणों के';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$total योगदानकर्ताओं के $count';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$total स्थानों के $count';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count स्थानों';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'परिवर्तनं प्रयोक्तुं कृपया एप् पुनः आरभत।';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'चित्रात्मकं अन्तरफलकं';
+
+  @override
+  String get preferences_app_settings_media_title => 'मीडिया';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'खाद्यतथ्यप्रयोगशालाः उद्घाटयन्तु';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Open Food Facts इत्येतत् स्वभाषायां आनयन्तु';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'एप् इत्यस्य अल्फा संस्करणे नामाङ्कनं कुर्वन्तु';
+
+  @override
+  String get preferences_dev_mode_section_data => 'योगदान एवं उत्पाद डेटा';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'लोकपदं न दर्शयतु';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '$createdदिनाङ्के योजितम्';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

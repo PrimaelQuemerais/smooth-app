@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:smooth_app/generic_lib/duration_constants.dart';
 import 'package:smooth_app/generic_lib/widgets/smooth_back_button.dart';
 import 'package:smooth_app/l10n/app_localizations.dart';
+import 'package:smooth_app/themes/smooth_theme.dart';
+import 'package:smooth_app/themes/smooth_theme_colors.dart';
+import 'package:smooth_app/themes/theme_provider.dart';
 
 /// A custom [AppBar] with an action mode.
 /// If [action mode] is true, please provide at least an [actionModeTitle].
@@ -13,6 +17,7 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actionModeSubTitle,
     this.title,
     this.subTitle,
+    this.animateActionMode = false,
     this.actionModeActions,
     this.actions,
     this.flexibleSpace,
@@ -63,6 +68,7 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? actionModeSubTitle;
   final List<Widget>? actions;
   final List<Widget>? actionModeActions;
+  final bool animateActionMode;
   final Widget? flexibleSpace;
   final PreferredSizeWidget? bottom;
   final double elevation;
@@ -113,13 +119,25 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
       );
     }
 
+    if (animateActionMode == false) {
+      return child;
+    }
+
+    child = KeyedSubtree(
+      key: Key(
+        actionMode
+            ? 'app_bar_am_${actionMode.hashCode}'
+            : 'app_bar_${title.hashCode}',
+      ),
+      child: child,
+    );
+
     return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 100),
+      duration: SmoothAnimationsDuration.medium,
+      switchInCurve: Curves.easeOutQuad,
+      switchOutCurve: Curves.easeInQuart,
       transitionBuilder: (Widget child, Animation<double> animation) {
-        return FadeTransition(
-          opacity: Tween<double>(begin: 0.0, end: 1.0).animate(animation),
-          child: child,
-        );
+        return FadeTransition(opacity: animation, child: child);
       },
       child: child,
     );
@@ -136,6 +154,9 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidget = const SmoothBackButton();
     }
 
+    final SmoothColorsThemeExtension extension = context
+        .extension<SmoothColorsThemeExtension>();
+
     return AppBar(
       leading: leadingWidget,
       automaticallyImplyLeading: automaticallyImplyLeading,
@@ -144,7 +165,7 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
               title: title!,
               subTitle: subTitle,
               titleTextStyle: titleTextStyle,
-              color: foregroundColor,
+              color: foregroundColor ?? Colors.white,
             )
           : null,
       actions: actions,
@@ -154,10 +175,12 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
       notificationPredicate:
           notificationPredicate ?? defaultScrollNotificationPredicate,
       shadowColor: shadowColor,
-      surfaceTintColor:
-          backgroundColor ?? Theme.of(context).appBarTheme.backgroundColor,
-      backgroundColor: backgroundColor,
-      foregroundColor: foregroundColor,
+      backgroundColor:
+          backgroundColor ??
+          (context.lightTheme()
+              ? extension.primaryBlack
+              : extension.primaryUltraBlack),
+      foregroundColor: foregroundColor ?? Colors.white,
       iconTheme: iconTheme,
       actionsIconTheme: actionsIconTheme,
       primary: primary,
@@ -176,49 +199,57 @@ class SmoothAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  Widget _createActionModeAppBar(BuildContext context) => IconTheme(
-    data: IconThemeData(color: PopupMenuTheme.of(context).color),
-    child: AppBar(
-      leading: _ActionModeCloseButton(
-        tooltip: AppLocalizations.of(context).cancel,
-        onPressed: () {
-          onLeaveActionMode?.call();
-        },
+  Widget _createActionModeAppBar(BuildContext context) {
+    final SmoothColorsThemeExtension extension = context
+        .extension<SmoothColorsThemeExtension>();
+
+    return IconTheme(
+      data: IconThemeData(
+        color: PopupMenuTheme.of(context).color ?? Colors.white,
       ),
-      automaticallyImplyLeading: false,
-      title: actionModeTitle != null
-          ? _AppBarTitle(
-              title: actionModeTitle!,
-              titleTextStyle: titleTextStyle,
-              subTitle: actionModeSubTitle,
-              ignoreSemanticsForSubtitle: ignoreSemanticsForSubtitle,
-            )
-          : null,
-      actions: actionModeActions,
-      flexibleSpace: flexibleSpace,
-      bottom: bottom,
-      scrolledUnderElevation: scrolledUnderElevation,
-      shadowColor: shadowColor,
-      surfaceTintColor:
-          backgroundColor ?? Theme.of(context).appBarTheme.backgroundColor,
-      backgroundColor: backgroundColor,
-      foregroundColor: foregroundColor,
-      iconTheme: iconTheme,
-      actionsIconTheme: actionsIconTheme,
-      primary: primary,
-      centerTitle: centerTitle,
-      excludeHeaderSemantics: excludeHeaderSemantics,
-      titleSpacing: titleSpacing,
-      shape: shape,
-      toolbarOpacity: toolbarOpacity,
-      bottomOpacity: bottomOpacity,
-      toolbarHeight: toolbarHeight,
-      leadingWidth: leadingWidth,
-      toolbarTextStyle: toolbarTextStyle,
-      titleTextStyle: titleTextStyle,
-      systemOverlayStyle: systemOverlayStyle,
-    ),
-  );
+      child: AppBar(
+        leading: _ActionModeCloseButton(
+          tooltip: AppLocalizations.of(context).cancel,
+          onPressed: () {
+            onLeaveActionMode?.call();
+          },
+        ),
+        automaticallyImplyLeading: false,
+        title: actionModeTitle != null
+            ? _AppBarTitle(
+                title: actionModeTitle!,
+                titleTextStyle: titleTextStyle,
+                subTitle: actionModeSubTitle,
+                color: foregroundColor ?? Colors.white,
+                ignoreSemanticsForSubtitle: ignoreSemanticsForSubtitle,
+              )
+            : null,
+        actions: actionModeActions,
+        flexibleSpace: flexibleSpace,
+        bottom: bottom,
+        scrolledUnderElevation: scrolledUnderElevation,
+        shadowColor: shadowColor,
+        surfaceTintColor:
+            backgroundColor ?? Theme.of(context).appBarTheme.backgroundColor,
+        backgroundColor: backgroundColor ?? extension.primaryDark,
+        foregroundColor: foregroundColor ?? Colors.white,
+        iconTheme: iconTheme,
+        actionsIconTheme: actionsIconTheme,
+        primary: primary,
+        centerTitle: centerTitle,
+        excludeHeaderSemantics: excludeHeaderSemantics,
+        titleSpacing: titleSpacing,
+        shape: shape,
+        toolbarOpacity: toolbarOpacity,
+        bottomOpacity: bottomOpacity,
+        toolbarHeight: toolbarHeight,
+        leadingWidth: leadingWidth,
+        toolbarTextStyle: toolbarTextStyle,
+        titleTextStyle: titleTextStyle,
+        systemOverlayStyle: systemOverlayStyle,
+      ),
+    );
+  }
 }
 
 class _PreferredAppBarSize extends Size {
@@ -282,14 +313,14 @@ class _AppBarTitle extends StatelessWidget {
               (titleTextStyle ??
                       AppBarTheme.of(context).titleTextStyle ??
                       theme.appBarTheme.titleTextStyle?.copyWith(
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                       ) ??
                       theme.textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                       ) ??
                       const TextStyle(
                         fontSize: 20.0,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                       ))
                   .copyWith(color: color),
           child: title,
@@ -309,4 +340,25 @@ class _AppBarTitle extends StatelessWidget {
       ],
     );
   }
+}
+
+class SmoothEmptyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const SmoothEmptyAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final SmoothColorsThemeExtension extension = context
+        .extension<SmoothColorsThemeExtension>();
+
+    return SizedBox.expand(
+      child: ColoredBox(
+        color: context.lightTheme()
+            ? extension.primaryBlack
+            : extension.primaryUltraBlack,
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => Size.zero;
 }

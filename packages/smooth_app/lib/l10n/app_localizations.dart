@@ -347,6 +347,12 @@ abstract class AppLocalizations {
     Locale('zu'),
   ];
 
+  /// No description provided for @app_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Food Facts'**
+  String get app_name;
+
   /// Separator just before a colon (':'). Probably only populated in French and empty in other languages.
   ///
   /// In en, this message translates to:
@@ -929,12 +935,6 @@ abstract class AppLocalizations {
   /// **'terms of use and contribution'**
   String get sign_up_page_terms_text;
 
-  /// Please insert the right url here. Go to the Open Food Facts homepage, switch to your country and then on the bottom left footer is Terms of use from which the url should be taken
-  ///
-  /// In en, this message translates to:
-  /// **'https://world-en.openfoodfacts.org/terms-of-use'**
-  String get sign_up_page_agree_url;
-
   /// Please insert the right url from the website here.
   ///
   /// In en, this message translates to:
@@ -1162,12 +1162,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Donate to Open Food Facts'**
   String get contribute_donate_header;
-
-  /// No description provided for @contribute_enroll_alpha.
-  ///
-  /// In en, this message translates to:
-  /// **'Enroll in internal alpha version'**
-  String get contribute_enroll_alpha;
 
   /// No description provided for @contribute_enroll_alpha_warning.
   ///
@@ -1418,7 +1412,7 @@ abstract class AppLocalizations {
   /// BottomNavigationBarLabel: For the profile and personal preferences page
   ///
   /// In en, this message translates to:
-  /// **'Profile'**
+  /// **'Community'**
   String get profile_navbar_label;
 
   /// BottomNavigationBarLabel: For the scanning of products
@@ -2098,6 +2092,12 @@ abstract class AppLocalizations {
   /// **'Select a category'**
   String get score_add_missing_product_category;
 
+  /// No description provided for @score_add_missing_precise_product_category.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a more precise category'**
+  String get score_add_missing_precise_product_category;
+
   /// No description provided for @score_add_missing_product_countries.
   ///
   /// In en, this message translates to:
@@ -2583,6 +2583,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No product properties found. Properties can be used to describe products in more details, in a flexible way.'**
   String get no_product_tags_found_message;
+
+  /// No description provided for @product_tags_empty.
+  ///
+  /// In en, this message translates to:
+  /// **'No properties'**
+  String get product_tags_empty;
+
+  /// No description provided for @product_tags_explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'By adding properties (key/value) to a product, you help enrich it.'**
+  String get product_tags_explanation;
 
   /// No description provided for @add_tag.
   ///
@@ -3201,7 +3213,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Delete my account'**
-  String get account_deletion_subject;
+  String get account_delete_title;
 
   /// User account (if connected)
   ///
@@ -4343,6 +4355,12 @@ abstract class AppLocalizations {
   /// **'DEV Mode'**
   String get dev_preferences_screen_title;
 
+  /// User dev preferences - Subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Access experimental features and development tools'**
+  String get dev_preferences_screen_subtitle;
+
   /// User dev preferences - Reset onboarding - Title
   ///
   /// In en, this message translates to:
@@ -4589,6 +4607,12 @@ abstract class AppLocalizations {
   /// **'Go to Prices app'**
   String get prices_app_button;
 
+  /// No description provided for @prices_website_button.
+  ///
+  /// In en, this message translates to:
+  /// **'Open on the Open Prices website'**
+  String get prices_website_button;
+
   /// No description provided for @prices_bulk_proof_upload_select.
   ///
   /// In en, this message translates to:
@@ -4805,6 +4829,18 @@ abstract class AppLocalizations {
   /// **'Add a\nnew price'**
   String get prices_list_add_new_price;
 
+  /// No description provided for @prices_list_empty_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No price yet!'**
+  String get prices_list_empty_title;
+
+  /// No description provided for @prices_list_empty_subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to add one:\nBy scanning a **receipt** or a **price tag**!'**
+  String get prices_list_empty_subtitle;
+
   /// No description provided for @prices_entry_shop_not_found.
   ///
   /// In en, this message translates to:
@@ -4900,11 +4936,35 @@ abstract class AppLocalizations {
   /// **'Latest {pageSize} proofs (total: {total})'**
   String prices_proofs_list_length_many_pages(int pageSize, int total);
 
+  /// No description provided for @prices_users_empty_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No contributor yet!'**
+  String get prices_users_empty_title;
+
+  /// No description provided for @prices_users_empty_explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to add a price!'**
+  String get prices_users_empty_explanation;
+
   /// Number of users for one-page result
   ///
   /// In en, this message translates to:
   /// **'Top {pageSize} contributors (total: {total})'**
   String prices_users_list_length_many_pages(int pageSize, int total);
+
+  /// No description provided for @prices_locations_empty_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No shop yet!'**
+  String get prices_locations_empty_title;
+
+  /// No description provided for @prices_locations_empty_explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to add a price!'**
+  String get prices_locations_empty_explanation;
 
   /// Number of locations for one-page result
   ///
@@ -5032,11 +5092,29 @@ abstract class AppLocalizations {
   /// **'Proof'**
   String get prices_proof_subtitle;
 
+  /// No description provided for @prices_proof_empty_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No proof yet!'**
+  String get prices_proof_empty_title;
+
+  /// No description provided for @prices_proof_empty_explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Start by adding a photo of a **receipt** or a **price tag**!'**
+  String get prices_proof_empty_explanation;
+
   /// No description provided for @prices_proof_find.
   ///
   /// In en, this message translates to:
   /// **'Select a proof'**
   String get prices_proof_find;
+
+  /// No description provided for @prices_proof_change.
+  ///
+  /// In en, this message translates to:
+  /// **'Change proof'**
+  String get prices_proof_change;
 
   /// No description provided for @prices_proof_receipt.
   ///
@@ -5167,23 +5245,11 @@ abstract class AppLocalizations {
   /// **'User Interface'**
   String get dev_mode_section_ui;
 
-  /// No description provided for @dev_mode_section_data.
-  ///
-  /// In en, this message translates to:
-  /// **'Data'**
-  String get dev_mode_section_data;
-
   /// No description provided for @dev_mode_section_experimental_features.
   ///
   /// In en, this message translates to:
   /// **'Experimental features'**
   String get dev_mode_section_experimental_features;
-
-  /// Title for switch toggle to show or hide folksonomy, product tags on product details page
-  ///
-  /// In en, this message translates to:
-  /// **'Exclude Folksonomy'**
-  String get dev_preferences_show_folksonomy_title;
 
   /// User dev preferences - Disable Green Score - Title
   ///
@@ -5202,6 +5268,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'(Ingredients and packaging)'**
   String get dev_mode_spellchecker_for_ocr_subtitle;
+
+  /// User dev preferences - Reset app language - Title
+  ///
+  /// In en, this message translates to:
+  /// **'Reset app language'**
+  String get dev_mode_reset_app_language_title;
+
+  /// User dev preferences - Add cards - Title
+  ///
+  /// In en, this message translates to:
+  /// **'Add cards'**
+  String get dev_mode_add_demo_cards_language_title;
+
+  /// User dev preferences - Switch server environment (Open Prices) - Title
+  ///
+  /// In en, this message translates to:
+  /// **'Switch between prices.openfoodfacts.org (PROD) and test env'**
+  String get dev_mode_openprices_switch_env_title;
 
   /// A tooltip to explain the Pen button near a search term -> it allows to reuse the item
   ///
@@ -5272,6 +5356,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'My proof'**
   String get user_search_proof_title;
+
+  /// Proof viewer: page title (when not the user proof)
+  ///
+  /// In en, this message translates to:
+  /// **'Proof from \"{user}\"'**
+  String search_proof_title(String user);
 
   /// User prices (everybody except me): list tile title
   ///
@@ -6925,59 +7015,59 @@ abstract class AppLocalizations {
   /// **'Nutri-Score is not applicable (New calculation)'**
   String get nutriscore_not_applicable_new_formula;
 
-  /// No description provided for @environmental_score_generic.
+  /// No description provided for @environmental_score_generic_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score'**
-  String get environmental_score_generic;
+  /// **'Green-Score'**
+  String get environmental_score_generic_new;
 
-  /// No description provided for @environmental_score_a.
+  /// No description provided for @environmental_score_a_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score A'**
-  String get environmental_score_a;
+  /// **'Green-Score A'**
+  String get environmental_score_a_new;
 
-  /// No description provided for @environmental_score_b.
+  /// No description provided for @environmental_score_b_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score B'**
-  String get environmental_score_b;
+  /// **'Green-Score B'**
+  String get environmental_score_b_new;
 
-  /// No description provided for @environmental_score_c.
+  /// No description provided for @environmental_score_c_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score C'**
-  String get environmental_score_c;
+  /// **'Green-Score C'**
+  String get environmental_score_c_new;
 
-  /// No description provided for @environmental_score_d.
+  /// No description provided for @environmental_score_d_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score D'**
-  String get environmental_score_d;
+  /// **'Green-Score D'**
+  String get environmental_score_d_new;
 
-  /// No description provided for @environmental_score_e.
+  /// No description provided for @environmental_score_e_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score E'**
-  String get environmental_score_e;
+  /// **'Green-Score E'**
+  String get environmental_score_e_new;
 
-  /// No description provided for @environmental_score_unknown.
+  /// No description provided for @environmental_score_unknown_new.
   ///
   /// In en, this message translates to:
-  /// **'Unknown Green Score'**
-  String get environmental_score_unknown;
+  /// **'Unknown Green-Score'**
+  String get environmental_score_unknown_new;
 
-  /// No description provided for @environmental_score_not_applicable.
+  /// No description provided for @environmental_score_not_applicable_new.
   ///
   /// In en, this message translates to:
-  /// **'Green Score is not applicable'**
-  String get environmental_score_not_applicable;
+  /// **'Green-Score is not applicable'**
+  String get environmental_score_not_applicable_new;
 
-  /// No description provided for @nova_group_generic.
+  /// No description provided for @nova_group_generic_new.
   ///
   /// In en, this message translates to:
-  /// **'Ultra-processing - NOVA groups'**
-  String get nova_group_generic;
+  /// **'Ultra-processed foods - NOVA groups'**
+  String get nova_group_generic_new;
 
   /// No description provided for @nova_group_1.
   ///
@@ -7147,12 +7237,6 @@ abstract class AppLocalizations {
   /// **'Share'**
   String get guide_share_label;
 
-  /// Please NEVER touch this value and let the OFF team change it!
-  ///
-  /// In en, this message translates to:
-  /// **'true'**
-  String get guide_nutriscore_v2_enabled;
-
   /// The title of the guide (please don't forget the use of non-breaking spaces)
   ///
   /// In en, this message translates to:
@@ -7315,17 +7399,461 @@ abstract class AppLocalizations {
   /// **'For manufacturers, the display of the Nutri-Score **remains optional**.'**
   String get guide_nutriscore_v2_unchanged_paragraph2;
 
-  /// No description provided for @guide_nutriscore_v2_share_link.
+  /// The title of the guide (please don't forget the use of non-breaking spaces)
   ///
   /// In en, this message translates to:
-  /// **'https://world.openfoodfacts.org/nutriscore-v2'**
-  String get guide_nutriscore_v2_share_link;
+  /// **'Green-Score'**
+  String get guide_greenscore_title;
 
-  /// Please let empty for now (maybe use in the future)
+  /// No description provided for @guide_greenscore_what_is_greenscore_title.
   ///
   /// In en, this message translates to:
-  /// **''**
-  String get guide_nutriscore_v2_share_message;
+  /// **'What is the Green Score?'**
+  String get guide_greenscore_what_is_greenscore_title;
+
+  /// Text between asterisks (eg: **My Text**) means text in bold. Please try to keep it.
+  ///
+  /// In en, this message translates to:
+  /// **'The Green-Score is a logo that aims to inform you about the **environmental impact of food**.'**
+  String get guide_greenscore_what_is_greenscore_paragraph1;
+
+  /// Text between asterisks (eg: **My Text**) means text in bold. Please try to keep it.
+  ///
+  /// In en, this message translates to:
+  /// **'The color code varies from dark green (**A+**) for the **least impactful** products to dark red (**F**) for the **most impactful** products.'**
+  String get guide_greenscore_what_is_greenscore_paragraph2;
+
+  /// No description provided for @guide_greenscore_logos_caption.
+  ///
+  /// In en, this message translates to:
+  /// **'The Green-Score logos'**
+  String get guide_greenscore_logos_caption;
+
+  /// No description provided for @guide_greenscore_lca_title.
+  ///
+  /// In en, this message translates to:
+  /// **'The core: Life cycle assessment (LCA)'**
+  String get guide_greenscore_lca_title;
+
+  /// No description provided for @guide_greenscore_lca_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'A scientific evaluation of food categories'**
+  String get guide_greenscore_lca_arg1_title;
+
+  /// No description provided for @guide_greenscore_lca_arg1_text1.
+  ///
+  /// In en, this message translates to:
+  /// **'For each product category, a **benchmark** score is established using data from the Agribalyse environmental database (designed by ADEME and INRAE).'**
+  String get guide_greenscore_lca_arg1_text1;
+
+  /// No description provided for @guide_greenscore_lca_arg1_text2.
+  ///
+  /// In en, this message translates to:
+  /// **'**Life cycle analysis** is a standardized assessment method for carrying out a multi-stage and multi-criteria environmental assessment.'**
+  String get guide_greenscore_lca_arg1_text2;
+
+  /// No description provided for @guide_greenscore_lca_arg1_text3.
+  ///
+  /// In en, this message translates to:
+  /// **'**It measures:**'**
+  String get guide_greenscore_lca_arg1_text3;
+
+  /// No description provided for @guide_greenscore_lca_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'6 production steps'**
+  String get guide_greenscore_lca_arg2_title;
+
+  /// No description provided for @guide_greenscore_lca_arg2_agriculture.
+  ///
+  /// In en, this message translates to:
+  /// **'Agriculture'**
+  String get guide_greenscore_lca_arg2_agriculture;
+
+  /// No description provided for @guide_greenscore_lca_arg2_processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get guide_greenscore_lca_arg2_processing;
+
+  /// No description provided for @guide_greenscore_lca_arg2_packaging.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaging'**
+  String get guide_greenscore_lca_arg2_packaging;
+
+  /// No description provided for @guide_greenscore_lca_arg2_transportation.
+  ///
+  /// In en, this message translates to:
+  /// **'Transportation'**
+  String get guide_greenscore_lca_arg2_transportation;
+
+  /// No description provided for @guide_greenscore_lca_arg2_distribution.
+  ///
+  /// In en, this message translates to:
+  /// **'Distribution'**
+  String get guide_greenscore_lca_arg2_distribution;
+
+  /// No description provided for @guide_greenscore_lca_arg2_consumption.
+  ///
+  /// In en, this message translates to:
+  /// **'Consumption'**
+  String get guide_greenscore_lca_arg2_consumption;
+
+  /// No description provided for @guide_greenscore_lca_arg3_title.
+  ///
+  /// In en, this message translates to:
+  /// **'14 environmental impact indicators'**
+  String get guide_greenscore_lca_arg3_title;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text1.
+  ///
+  /// In en, this message translates to:
+  /// **'Climate change/carbon footprint'**
+  String get guide_greenscore_lca_arg3_text1;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text2.
+  ///
+  /// In en, this message translates to:
+  /// **'Ozone layer depletion'**
+  String get guide_greenscore_lca_arg3_text2;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text3.
+  ///
+  /// In en, this message translates to:
+  /// **'Ionizing radiation'**
+  String get guide_greenscore_lca_arg3_text3;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text4.
+  ///
+  /// In en, this message translates to:
+  /// **'Land'**
+  String get guide_greenscore_lca_arg3_text4;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text5.
+  ///
+  /// In en, this message translates to:
+  /// **'Water & energy use'**
+  String get guide_greenscore_lca_arg3_text5;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text6.
+  ///
+  /// In en, this message translates to:
+  /// **'Pollution of air'**
+  String get guide_greenscore_lca_arg3_text6;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text7.
+  ///
+  /// In en, this message translates to:
+  /// **'Marine & fresh water (particles, acidification, eutrophication)'**
+  String get guide_greenscore_lca_arg3_text7;
+
+  /// No description provided for @guide_greenscore_lca_arg3_text8.
+  ///
+  /// In en, this message translates to:
+  /// **'Depletion of resources.'**
+  String get guide_greenscore_lca_arg3_text8;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Bonuses & penalties'**
+  String get guide_greenscore_bonuses_penalties_title;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_intro.
+  ///
+  /// In en, this message translates to:
+  /// **'To reward better products within a category, we then apply bonuses & penalties based on several criterion:'**
+  String get guide_greenscore_bonuses_penalties_intro;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Mode of production'**
+  String get guide_greenscore_bonuses_penalties_arg1_title;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg1_text.
+  ///
+  /// In en, this message translates to:
+  /// **'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).'**
+  String get guide_greenscore_bonuses_penalties_arg1_text;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Origin of ingredients'**
+  String get guide_greenscore_bonuses_penalties_arg2_title;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg2_text.
+  ///
+  /// In en, this message translates to:
+  /// **'A bonus is awarded based on the origin of the ingredients. This bonus takes into account the impact on transportation and also the environmental policy of each producer\'s country.'**
+  String get guide_greenscore_bonuses_penalties_arg2_text;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg3_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Endangered species'**
+  String get guide_greenscore_bonuses_penalties_arg3_title;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg3_text.
+  ///
+  /// In en, this message translates to:
+  /// **'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.'**
+  String get guide_greenscore_bonuses_penalties_arg3_text;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg4_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaging'**
+  String get guide_greenscore_bonuses_penalties_arg4_title;
+
+  /// No description provided for @guide_greenscore_bonuses_penalties_arg4_text.
+  ///
+  /// In en, this message translates to:
+  /// **'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.'**
+  String get guide_greenscore_bonuses_penalties_arg4_text;
+
+  /// No description provided for @guide_greenscore_transparency_title.
+  ///
+  /// In en, this message translates to:
+  /// **'An increased need for transparency to better measure and reduce environmental impacts'**
+  String get guide_greenscore_transparency_title;
+
+  /// No description provided for @guide_greenscore_transparency_intro1.
+  ///
+  /// In en, this message translates to:
+  /// **'To accurately calculate the Green-Score, it is necessary to have information which is not necessarily specified on the packaging (such as the origin and the exact percentage of each ingredient) or which is rarely available in usable form (such as a list of all the components of the packaging with the precise types of plastics used).'**
+  String get guide_greenscore_transparency_intro1;
+
+  /// No description provided for @guide_greenscore_transparency_intro2.
+  ///
+  /// In en, this message translates to:
+  /// **'Average values are used when this information is not yet available, but we are now calling on everyone to help us collect this information which will be very useful for the Green-Score but also for many other uses.'**
+  String get guide_greenscore_transparency_intro2;
+
+  /// No description provided for @guide_greenscore_transparency_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'How citizens can help'**
+  String get guide_greenscore_transparency_arg1_title;
+
+  /// No description provided for @guide_greenscore_transparency_arg1_text.
+  ///
+  /// In en, this message translates to:
+  /// **'All citizens can help us gather and structure the information that is present on products or that can be deduced from them, such as information on packaging: Mission Emballages: a large-scale collaborative inventory of packaging for all food products (in French)'**
+  String get guide_greenscore_transparency_arg1_text;
+
+  /// No description provided for @guide_greenscore_transparency_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'How manufacturers can help'**
+  String get guide_greenscore_transparency_arg2_title;
+
+  /// No description provided for @guide_greenscore_transparency_arg2_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturers can send us their information directly through our free platform for producers.'**
+  String get guide_greenscore_transparency_arg2_text;
+
+  /// No description provided for @guide_greenscore_better_product_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Which product is better for the planet?'**
+  String get guide_greenscore_better_product_title;
+
+  /// No description provided for @guide_greenscore_better_product_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'It can be hard to tell'**
+  String get guide_greenscore_better_product_arg1_title;
+
+  /// No description provided for @guide_greenscore_better_product_arg1_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Choosing sustainable food is one of the most powerful things we can do for the climate, as **our global food system is responsible for over a quarter of all greenhouse gas emissions**.\n(Source: Poore & Nemecek, Science, 2018).'**
+  String get guide_greenscore_better_product_arg1_text;
+
+  /// No description provided for @guide_greenscore_better_product_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'You have the power!'**
+  String get guide_greenscore_better_product_arg2_title;
+
+  /// No description provided for @guide_greenscore_better_product_arg2_text.
+  ///
+  /// In en, this message translates to:
+  /// **'The good news is that this gives us a powerful way to create change.\n**Each of us eats around 1,000 meals every year**. That’s 1,000 opportunities to **choose a better future for the planet**!'**
+  String get guide_greenscore_better_product_arg2_text;
+
+  /// No description provided for @guide_greenscore_better_product_arg3_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Helps to be responsible and decide'**
+  String get guide_greenscore_better_product_arg3_title;
+
+  /// No description provided for @guide_greenscore_better_product_arg3_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Choosing sustainable food can feel complex. Labels are confusing and information is often missing. The Green-Score was created to make it simple, giving you a **clear**, **science-based**, and **transparent** environmental rating for food products, right where you need it: while you shop.'**
+  String get guide_greenscore_better_product_arg3_text;
+
+  /// No description provided for @guide_greenscore_better_product_arg4_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Transparency'**
+  String get guide_greenscore_better_product_arg4_title;
+
+  /// No description provided for @guide_greenscore_better_product_arg4_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlike proprietary labels, the Green-Score calculation is **completely open** and can be **verified by anyone**.'**
+  String get guide_greenscore_better_product_arg4_text;
+
+  /// The title of the guide (please don't forget the use of non-breaking spaces)
+  ///
+  /// In en, this message translates to:
+  /// **'Ultra-processed foods'**
+  String get guide_nova_title;
+
+  /// No description provided for @guide_nova_what_is_nova_title.
+  ///
+  /// In en, this message translates to:
+  /// **'What is ultra-processing?'**
+  String get guide_nova_what_is_nova_title;
+
+  /// Text between asterisks (eg: **My Text**) means text in bold. Please try to keep it.
+  ///
+  /// In en, this message translates to:
+  /// **'The NOVA groups inform you about the level of food processing.'**
+  String get guide_nova_what_is_nova_paragraph1;
+
+  /// Text between asterisks (eg: **My Text**) means text in bold. Please try to keep it.
+  ///
+  /// In en, this message translates to:
+  /// **'The NOVA classification allows for the categorization of foods into **4 groups** based on their **degree of industrial processing** (minimally processed or unprocessed foods, culinary ingredients, processed foods, ultra-processed foods).'**
+  String get guide_nova_what_is_nova_paragraph2;
+
+  /// No description provided for @guide_nova_logos_caption.
+  ///
+  /// In en, this message translates to:
+  /// **'The NOVA logos'**
+  String get guide_nova_logos_caption;
+
+  /// No description provided for @guide_nova_groups_title.
+  ///
+  /// In en, this message translates to:
+  /// **'The 4 NOVA groups'**
+  String get guide_nova_groups_title;
+
+  /// No description provided for @guide_nova_groups_intro.
+  ///
+  /// In en, this message translates to:
+  /// **'There are 4 NOVA groups, the problematic one being Group 4 - Ultra-processed foods.'**
+  String get guide_nova_groups_intro;
+
+  /// No description provided for @guide_nova_groups_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimally processed or unprocessed foods'**
+  String get guide_nova_groups_arg1_title;
+
+  /// No description provided for @guide_nova_groups_arg1_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Unprocessed (or natural) foods are the edible parts of plants (seeds, fruits, leaves, stems, roots) or animals (muscle, offal, eggs, milk), as well as fungi, algae, and water, after being separated from nature.'**
+  String get guide_nova_groups_arg1_text;
+
+  /// No description provided for @guide_nova_groups_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Processed culinary ingredients'**
+  String get guide_nova_groups_arg2_title;
+
+  /// No description provided for @guide_nova_groups_arg2_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Processed culinary ingredients, such as oils, butter, sugar, and salt, are substances derived from Group 1 foods or from nature through processes that include pressing, refining, grinding, milling, and drying.'**
+  String get guide_nova_groups_arg2_text;
+
+  /// No description provided for @guide_nova_groups_arg3_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Processed foods'**
+  String get guide_nova_groups_arg3_title;
+
+  /// No description provided for @guide_nova_groups_arg3_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Processed foods, such as bottled vegetables, canned fish, fruits in syrup, cheeses, and freshly made breads, are primarily made by adding salt, oil, sugar, or other substances from Group 2 to Group 1 foods. Processes include various preservation or cooking methods, and in the case of breads and cheese, non-alcoholic fermentation. Most processed foods have two or three ingredients and are recognizable as modified versions of Group 1 foods. They can be eaten on their own or, more commonly, in combination with other foods.'**
+  String get guide_nova_groups_arg3_text;
+
+  /// No description provided for @guide_nova_groups_arg4_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Ultra-processed foods'**
+  String get guide_nova_groups_arg4_title;
+
+  /// No description provided for @guide_nova_groups_arg4_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Ultra-processed foods, such as soft drinks, sweet or savory packaged snacks, reconstituted meat products, and pre-prepared frozen dishes, are not merely modified foods but formulations made mostly or entirely from substances derived from foods and additives, with little to no intact Group 1 food. Ingredients in these formulations usually include those also found in processed foods, such as sugars, oils, fats, or salt. However, ultra-processed products also contain other sources of energy and nutrients not typically used in culinary preparations. Some of these are directly extracted from foods, such as casein, lactose, whey, and gluten.'**
+  String get guide_nova_groups_arg4_text;
+
+  /// No description provided for @guide_nova_explanations_title.
+  ///
+  /// In en, this message translates to:
+  /// **'The problems with ultra-processing'**
+  String get guide_nova_explanations_title;
+
+  /// No description provided for @guide_nova_explanations_arg1_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Extreme processing of food ingredients'**
+  String get guide_nova_explanations_arg1_title;
+
+  /// No description provided for @guide_nova_explanations_arg1_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Many are derived from further processing of food constituents, such as hydrogenated or interesterified oils, hydrolyzed proteins, soy protein isolate, maltodextrin, invert sugar, and high-fructose corn syrup.'**
+  String get guide_nova_explanations_arg1_text;
+
+  /// No description provided for @guide_nova_explanations_arg2_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Additives that go beyond pure food safety'**
+  String get guide_nova_explanations_arg2_title;
+
+  /// No description provided for @guide_nova_explanations_arg2_text.
+  ///
+  /// In en, this message translates to:
+  /// **'Additives in ultra-processed foods include some that are also used in processed foods, such as preservatives, antioxidants, and stabilizers. Classes of additives found only in ultra-processed products include those used to imitate or enhance the sensory qualities of foods or to disguise unpalatable aspects of the final product. These additives include dyes and other colors, color stabilizers; flavors, flavor enhancers, non-sugar sweeteners; and processing aids such as carbonating, firming, bulking and anti-bulking agents, de-foaming, anti-caking and glazing agents, emulsifiers, sequestrants, and humectants.'**
+  String get guide_nova_explanations_arg2_text;
+
+  /// No description provided for @guide_nova_explanations_arg3_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing you can’t do at home'**
+  String get guide_nova_explanations_arg3_title;
+
+  /// No description provided for @guide_nova_explanations_arg3_text.
+  ///
+  /// In en, this message translates to:
+  /// **'A multitude of sequences of processes is used to combine the usually many ingredients and to create the final product (hence \'ultra-processed\'). The processes include several with no domestic equivalents, such as hydrogenation and hydrolysation, extrusion and moulding, and pre-processing for frying.'**
+  String get guide_nova_explanations_arg3_text;
+
+  /// No description provided for @guide_nova_explanations_arg4_title.
+  ///
+  /// In en, this message translates to:
+  /// **'The predatory and financial aspects of ultra-processing'**
+  String get guide_nova_explanations_arg4_title;
+
+  /// No description provided for @guide_nova_explanations_arg4_text.
+  ///
+  /// In en, this message translates to:
+  /// **'The overall purpose of ultra-processing is to create branded, convenient (durable, ready to consume), attractive (hyper-palatable) and highly profitable (low-cost ingredients) food products designed to displace all other food groups. Ultra-processed food products are usually packaged attractively and marketed intensively.'**
+  String get guide_nova_explanations_arg4_text;
 
   /// Badge to indicate that the product is in preview mode (Be careful with this translation)
   ///
@@ -7873,6 +8401,18 @@ abstract class AppLocalizations {
   /// **'Folksonomy'**
   String get product_page_tab_folksonomy;
 
+  /// No description provided for @prices_products_empty_title.
+  ///
+  /// In en, this message translates to:
+  /// **'No price available'**
+  String get prices_products_empty_title;
+
+  /// No description provided for @prices_products_empty_explanation.
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to contribute!'**
+  String get prices_products_empty_explanation;
+
   /// Number of products for one-page result
   ///
   /// In en, this message translates to:
@@ -7939,11 +8479,17 @@ abstract class AppLocalizations {
   /// **'Extract now'**
   String get nutrition_facts_extract_button_text;
 
-  /// Message to indicate that the extraction of nutrients from a picture was succesful
+  /// Message to indicate that the extraction of nutrients from a picture is in progress
   ///
   /// In en, this message translates to:
-  /// **'Extraction succesful'**
-  String get nutrition_facts_extract_succesful;
+  /// **'Extraction in progress…'**
+  String get nutrition_facts_extract_in_progress;
+
+  /// Message to indicate that the extraction of nutrients from a picture was successful
+  ///
+  /// In en, this message translates to:
+  /// **'Extraction successful'**
+  String get nutrition_facts_extract_successful;
 
   /// Message to indicate that the extraction of nutrients from a picture failed
   ///
@@ -8197,6 +8743,834 @@ abstract class AppLocalizations {
   /// **'Proof'**
   String get product_edit_robotoff_proof;
 
+  /// Title for the general preferences card
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get preferences_card_general;
+
+  /// Title for the prices preferences title
+  ///
+  /// In en, this message translates to:
+  /// **'Prices'**
+  String get preferences_prices_title;
+
+  /// Subtitle for the prices preferences title
+  ///
+  /// In en, this message translates to:
+  /// **'Manage your prices preferences'**
+  String get preferences_prices_subtitle;
+
+  /// Title for the project preferences card
+  ///
+  /// In en, this message translates to:
+  /// **'The Open Food Facts project'**
+  String get preferences_card_project;
+
+  /// Title for the contribution preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Contribute'**
+  String get preferences_contribute_title;
+
+  /// Title for my contributions preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'My contributions'**
+  String get preferences_my_contributions_title;
+
+  /// Title for my stats preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'My statistics'**
+  String get preferences_my_stats_title;
+
+  /// Subtitle for the contribution preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Translate, improve our tools…'**
+  String get preferences_contribute_subtitle;
+
+  /// Title for the contribution preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Connect'**
+  String get preferences_connect_title;
+
+  /// Subtitle for the contribution preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Reach out, or Follow us on social media'**
+  String get preferences_connect_subtitle;
+
+  /// Title for the support preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Make a donation'**
+  String get preferences_support_title;
+
+  /// Subtitle for the support preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Help us inform millions of consumers around the world'**
+  String get preferences_support_subtitle;
+
+  /// Title for the help and support preferences card
+  ///
+  /// In en, this message translates to:
+  /// **'Help & Support'**
+  String get preferences_card_help;
+
+  /// Title for the faq preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'FAQ'**
+  String get preferences_faq_title;
+
+  /// Subtitle for the faq preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get answers to your questions'**
+  String get preferences_faq_subtitle;
+
+  /// Text to show when the user is logged out
+  ///
+  /// In en, this message translates to:
+  /// **'Logged out'**
+  String get logged_out;
+
+  /// Message to show in the preferences app bar when the user is logged in
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for being one of our members!'**
+  String get preferences_app_bar_message;
+
+  /// Preferences app bar products modified card
+  ///
+  /// In en, this message translates to:
+  /// **'Products modified'**
+  String get preferences_app_bar_products_modified;
+
+  /// Preferences app bar prices added card
+  ///
+  /// In en, this message translates to:
+  /// **'Prices added'**
+  String get preferences_app_bar_prices_added;
+
+  /// Preferences app bar see all stats button
+  ///
+  /// In en, this message translates to:
+  /// **'See all stats'**
+  String get preferences_app_bar_see_all_stats;
+
+  /// External search preference tile title
+  ///
+  /// In en, this message translates to:
+  /// **'Search {provider} for \"{keyword}\"'**
+  String external_search_tile_title(String provider, String keyword);
+
+  /// Preferences app bar search bar hint
+  ///
+  /// In en, this message translates to:
+  /// **'Search for a setting (e.g. Nutri-Score)'**
+  String get preferences_app_bar_search_hint;
+
+  /// Preferences dev mode tile for showing emoji
+  ///
+  /// In en, this message translates to:
+  /// **'Accessibility: Show emoji'**
+  String get preferences_accessibility_show_emoji;
+
+  /// Preferences dev mode tile for removing colors
+  ///
+  /// In en, this message translates to:
+  /// **'Accessibility: Remove colors'**
+  String get preferences_accessibility_remove_colors;
+
+  /// Title for the app settings products card
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get preferences_app_settings_products;
+
+  /// Title for the app settings products card
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get preferences_card_about;
+
+  /// Title for the preferences legal information card
+  ///
+  /// In en, this message translates to:
+  /// **'Legal information'**
+  String get preferences_legal_information_title;
+
+  /// Subtitle for the preferences legal information card
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of use, privacy policy, and more'**
+  String get preferences_legal_information_subtitle;
+
+  /// Title for the terms of use tile
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of use'**
+  String get preferences_terms_of_use;
+
+  /// Title for the preferences legal mentions card
+  ///
+  /// In en, this message translates to:
+  /// **'Legal mentions'**
+  String get preferences_legal_mentions;
+
+  /// This is the same text as the Discover banner on the website. Please keep the ** syntax to make the text bold.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Food Facts is a food products database **made by everyone, for everyone**.\nYou can use it to make better food choices, and as it is **open data**, anyone can **re-use it for any purpose**.'**
+  String get preferences_legal_header;
+
+  /// Title for the preferences privacy policy tile
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy policy'**
+  String get preferences_privacy_policy;
+
+  /// Title for the preferences licenses tile
+  ///
+  /// In en, this message translates to:
+  /// **'Licenses'**
+  String get preferences_licenses;
+
+  /// Title for the preferences about app card
+  ///
+  /// In en, this message translates to:
+  /// **'About the app'**
+  String get preferences_about_app_title;
+
+  /// Subtitle for the preferences about app card
+  ///
+  /// In en, this message translates to:
+  /// **'Technical information, developer information, and more'**
+  String get preferences_about_app_subtitle;
+
+  /// Title for the preferences information card
+  ///
+  /// In en, this message translates to:
+  /// **'Information'**
+  String get preferences_card_information;
+
+  /// Title for the preferences version number tile
+  ///
+  /// In en, this message translates to:
+  /// **'Version number'**
+  String get preferences_version_number_title;
+
+  /// Title for the preferences scanner tile
+  ///
+  /// In en, this message translates to:
+  /// **'Scanner'**
+  String get preferences_scanner_title;
+
+  /// Title for the preferences app store tile
+  ///
+  /// In en, this message translates to:
+  /// **'App store'**
+  String get preferences_app_store;
+
+  /// Title for the preferences app system settings tile
+  ///
+  /// In en, this message translates to:
+  /// **'System settings'**
+  String get preferences_app_system_settings;
+
+  /// Title for the preferences source code tile
+  ///
+  /// In en, this message translates to:
+  /// **'Access the source code'**
+  String get preferences_source_code;
+
+  /// Subtitle for the preferences source code tile
+  ///
+  /// In en, this message translates to:
+  /// **'And start making an impact for millions'**
+  String get preferences_source_code_subtitle;
+
+  /// Title for the preferences add prices contribution tile
+  ///
+  /// In en, this message translates to:
+  /// **'Add prices'**
+  String get preferences_add_prices;
+
+  /// Title for the preferences complete products contribution tile
+  ///
+  /// In en, this message translates to:
+  /// **'Complete products'**
+  String get preferences_complete_products;
+
+  /// Title for the preferences tips header
+  ///
+  /// In en, this message translates to:
+  /// **'Tips'**
+  String get preferences_tips;
+
+  /// Title for the tips discover nutriscore header
+  ///
+  /// In en, this message translates to:
+  /// **'Discover the new Nutri-Score'**
+  String get tips_discover_nutriscore;
+
+  /// Subtitle for preferences tiles leading to the Open Food Facts website
+  ///
+  /// In en, this message translates to:
+  /// **'On the Open Food Facts website'**
+  String get preferences_on_off_website_subtitle;
+
+  /// Title for the preferences manage account tile
+  ///
+  /// In en, this message translates to:
+  /// **'Manage my account'**
+  String get preferences_manage_account_title;
+
+  /// Tooltip for a button that lets the user manage his account
+  ///
+  /// In en, this message translates to:
+  /// **'Manage your account'**
+  String get preferences_manage_account_tooltip;
+
+  /// Title for the preferences change password tile
+  ///
+  /// In en, this message translates to:
+  /// **'Change my password'**
+  String get preferences_change_password_title;
+
+  /// Title for the preferences danger zone tile
+  ///
+  /// In en, this message translates to:
+  /// **'Danger zone'**
+  String get preferences_danger_zone;
+
+  /// Subtitle for the preferences account deletion tile
+  ///
+  /// In en, this message translates to:
+  /// **'All your contributions will be lost'**
+  String get preferences_account_deletion_subtitle;
+
+  /// Title of the contributions preferences tile
+  ///
+  /// In en, this message translates to:
+  /// **'Contributions'**
+  String get preferences_contributions_title;
+
+  /// Title for the dev mode app settings card
+  ///
+  /// In en, this message translates to:
+  /// **'App settings'**
+  String get preferences_dev_mode_app_settings_title;
+
+  /// Subtitle for the offline data tile in dev mode
+  ///
+  /// In en, this message translates to:
+  /// **'Very experimental way to scan products offline'**
+  String get preferences_dev_mode_offline_data_subtitle;
+
+  /// Title for refreshing all products from server
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh all products from the server'**
+  String get preferences_dev_mode_refresh_products_title;
+
+  /// Subtitle warning for refreshing all products
+  ///
+  /// In en, this message translates to:
+  /// **'Please avoid doing that unless absolutely necessary'**
+  String get preferences_dev_mode_refresh_products_subtitle;
+
+  /// Title for the demo mode card in dev mode
+  ///
+  /// In en, this message translates to:
+  /// **'Demo mode'**
+  String get preferences_dev_mode_demo_mode_title;
+
+  /// Title for adding cards to scanner in demo mode
+  ///
+  /// In en, this message translates to:
+  /// **'Add cards to scanner'**
+  String get preferences_dev_mode_add_cards_title;
+
+  /// Subtitle for adding cards to scanner in demo mode
+  ///
+  /// In en, this message translates to:
+  /// **'Adds 3 sample products to the scanner'**
+  String get preferences_dev_mode_add_cards_subtitle;
+
+  /// Title for folksonomy host setting
+  ///
+  /// In en, this message translates to:
+  /// **'Folksonomy host'**
+  String get preferences_dev_mode_folksonomy_host_title;
+
+  /// Subtitle for folksonomy host setting
+  ///
+  /// In en, this message translates to:
+  /// **'Host: {host}'**
+  String preferences_dev_mode_folksonomy_host_subtitle(String host);
+
+  /// Title for accessibility experiments card
+  ///
+  /// In en, this message translates to:
+  /// **'Accessibility experiments'**
+  String get preferences_dev_mode_accessibility_experiments_title;
+
+  /// Title for multi-products selection feature
+  ///
+  /// In en, this message translates to:
+  /// **'Multi-products selection for prices'**
+  String get preferences_dev_mode_multi_products_selection_title;
+
+  /// Title for user ordered knowledge panels feature
+  ///
+  /// In en, this message translates to:
+  /// **'User ordered knowledge panels'**
+  String get preferences_dev_mode_user_ordered_kp_title;
+
+  /// Title for temporary location search access
+  ///
+  /// In en, this message translates to:
+  /// **'Temporary access to location search'**
+  String get preferences_dev_mode_location_search_title;
+
+  /// Title for side by side comparison feature
+  ///
+  /// In en, this message translates to:
+  /// **'Side by side comparison for 2 or 3 products'**
+  String get preferences_dev_mode_comparison_title;
+
+  /// Title for product list import feature
+  ///
+  /// In en, this message translates to:
+  /// **'Product list import'**
+  String get preferences_dev_mode_product_list_import_title;
+
+  /// Title for scores and methodologies card in FAQ
+  ///
+  /// In en, this message translates to:
+  /// **'Scores & methodologies'**
+  String get preferences_faq_scores_methodologies_title;
+
+  /// Subtitle for Nutri-Score in FAQ
+  ///
+  /// In en, this message translates to:
+  /// **'Discover how the Nutri-Score is computed'**
+  String get preferences_faq_nutriscore_subtitle;
+
+  /// Subtitle for Nutri-Score V2 in FAQ
+  ///
+  /// In en, this message translates to:
+  /// **'Discover the main changes to the methodology'**
+  String get preferences_faq_nutriscore_v2_subtitle;
+
+  /// Title for discover the project card in FAQ
+  ///
+  /// In en, this message translates to:
+  /// **'Discover the project'**
+  String get preferences_faq_discover_project_title;
+
+  /// Title for discover Open Food Facts tile
+  ///
+  /// In en, this message translates to:
+  /// **'Discover Open Food Facts'**
+  String get preferences_faq_discover_off_title;
+
+  /// Title for FAQ tile
+  ///
+  /// In en, this message translates to:
+  /// **'FAQ - Frequently Asked Questions'**
+  String get preferences_faq_faq_title;
+
+  /// Title for Open Food Facts NGO card
+  ///
+  /// In en, this message translates to:
+  /// **'The Open Food Facts NGO'**
+  String get preferences_faq_off_ngo_title;
+
+  /// Title for information card in about app
+  ///
+  /// In en, this message translates to:
+  /// **'Information'**
+  String get preferences_about_information_title;
+
+  /// Title for community updates card
+  ///
+  /// In en, this message translates to:
+  /// **'Get community updates'**
+  String get preferences_connect_community_updates_title;
+
+  /// Subtitle for newsletter tile
+  ///
+  /// In en, this message translates to:
+  /// **'Stay in the loop with app and community news'**
+  String get preferences_connect_newsletter_subtitle;
+
+  /// Title for community calendar tile
+  ///
+  /// In en, this message translates to:
+  /// **'Subscribe to our community calendar'**
+  String get preferences_connect_community_calendar_title;
+
+  /// Subtitle for community calendar tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get involved by attending one of our virtual events'**
+  String get preferences_connect_community_calendar_subtitle;
+
+  /// Title for blog tile
+  ///
+  /// In en, this message translates to:
+  /// **'The Open Food Facts blog'**
+  String get preferences_connect_blog_title;
+
+  /// Subtitle for blog tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get the latest news, as they happen'**
+  String get preferences_connect_blog_subtitle;
+
+  /// Title for community help card
+  ///
+  /// In en, this message translates to:
+  /// **'Get help from the community'**
+  String get preferences_connect_community_help_title;
+
+  /// Title for improve app card
+  ///
+  /// In en, this message translates to:
+  /// **'Help us improve the app'**
+  String get preferences_connect_improve_app_title;
+
+  /// Title for debug information tile
+  ///
+  /// In en, this message translates to:
+  /// **'Send us debug information'**
+  String get preferences_connect_debug_info_title;
+
+  /// Subtitle for debug information tile
+  ///
+  /// In en, this message translates to:
+  /// **'Send us an email with detailed debugging information'**
+  String get preferences_connect_debug_info_subtitle;
+
+  /// Title for feedback tile
+  ///
+  /// In en, this message translates to:
+  /// **'Send us feedback about the app'**
+  String get preferences_connect_feedback_title;
+
+  /// Subtitle for feedback tile
+  ///
+  /// In en, this message translates to:
+  /// **'Help shape the future of the app'**
+  String get preferences_connect_feedback_subtitle;
+
+  /// Title for survey tile
+  ///
+  /// In en, this message translates to:
+  /// **'Take the app survey'**
+  String get preferences_connect_survey_title;
+
+  /// Subtitle for survey tile
+  ///
+  /// In en, this message translates to:
+  /// **'Help us understand what we should build next'**
+  String get preferences_connect_survey_subtitle;
+
+  /// Title for professionals card
+  ///
+  /// In en, this message translates to:
+  /// **'Professionals'**
+  String get preferences_connect_professionals_title;
+
+  /// Subtitle for professional contact tile
+  ///
+  /// In en, this message translates to:
+  /// **'Totally free, ensures accurate data for 500 apps & millions of consumers. Self-service, compatible with your PIM or spreadsheets (XLSX)'**
+  String get preferences_connect_pro_subtitle;
+
+  /// Subtitle for professional email tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get in touch to get started'**
+  String get preferences_connect_pro_email_subtitle;
+
+  /// Title for press card
+  ///
+  /// In en, this message translates to:
+  /// **'Press'**
+  String get preferences_connect_press_title;
+
+  /// Subtitle for press page tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get all the material you need for your report'**
+  String get preferences_connect_press_page_subtitle;
+
+  /// Subtitle for press email tile
+  ///
+  /// In en, this message translates to:
+  /// **'Get in touch for press inquiries or to let us know about your report'**
+  String get preferences_connect_press_email_subtitle;
+
+  /// Title for active volunteer card
+  ///
+  /// In en, this message translates to:
+  /// **'Become an active volunteer'**
+  String get preferences_contribute_active_volunteer_title;
+
+  /// Subtitle for skill pool tile
+  ///
+  /// In en, this message translates to:
+  /// **'Development, Communication, Design… any kind of volunteering or expertise is welcomed!'**
+  String get preferences_contribute_skill_pool_subtitle;
+
+  /// Subtitle for how to contribute tile
+  ///
+  /// In en, this message translates to:
+  /// **'Discover some of the many ways you can contribute'**
+  String get preferences_contribute_how_to_subtitle;
+
+  /// Title for mobile app development card
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile app development'**
+  String get preferences_contribute_mobile_dev_title;
+
+  /// Subtitle for software development tile
+  ///
+  /// In en, this message translates to:
+  /// **'Learn how to contribute to software development'**
+  String get preferences_contribute_sw_dev_subtitle;
+
+  /// Subtitle for alpha enrollment tile
+  ///
+  /// In en, this message translates to:
+  /// **'Daily unstable builds, brand new features'**
+  String get preferences_contribute_alpha_subtitle;
+
+  /// Title for local community card
+  ///
+  /// In en, this message translates to:
+  /// **'Grow your local community'**
+  String get preferences_contribute_local_community_title;
+
+  /// Subtitle for translate tile
+  ///
+  /// In en, this message translates to:
+  /// **'Help with software, contents, ingredient analysis translations'**
+  String get preferences_contribute_translate_subtitle;
+
+  /// Subtitle for share tile
+  ///
+  /// In en, this message translates to:
+  /// **'We have prepared a little template to help you :-)'**
+  String get preferences_contribute_share_subtitle;
+
+  /// Subtitle for improve country tile
+  ///
+  /// In en, this message translates to:
+  /// **'Simple steps to grow food transparency in your country'**
+  String get preferences_contribute_country_subtitle;
+
+  /// Title for data quality card
+  ///
+  /// In en, this message translates to:
+  /// **'Data quality'**
+  String get preferences_contribute_data_quality_title;
+
+  /// Title for data quality team tile
+  ///
+  /// In en, this message translates to:
+  /// **'Join the data quality team'**
+  String get preferences_contribute_data_quality_team_title;
+
+  /// Subtitle for data quality team tile
+  ///
+  /// In en, this message translates to:
+  /// **'Join our effort to ensure the database is complete and accurate'**
+  String get preferences_contribute_data_quality_team_subtitle;
+
+  /// Title for new products added tile
+  ///
+  /// In en, this message translates to:
+  /// **'Added products'**
+  String get preferences_contributions_products_added_title;
+
+  /// Subtitle for new products added subtile
+  ///
+  /// In en, this message translates to:
+  /// **'New products I added to Open Food Facts'**
+  String get preferences_contributions_new_products_subtitle;
+
+  /// Title for products to be completed tile
+  ///
+  /// In en, this message translates to:
+  /// **'Products I need to complete'**
+  String get preferences_contributions_to_be_completed_title;
+
+  /// Title for all incomplete products tile
+  ///
+  /// In en, this message translates to:
+  /// **'All incomplete products'**
+  String get preferences_contributions_all_incomplete_title;
+
+  /// Title for a container linking to user prices
+  ///
+  /// In en, this message translates to:
+  /// **'Prices'**
+  String get preferences_my_contributions_prices_title;
+
+  /// Title for opening prices stats
+  ///
+  /// In en, this message translates to:
+  /// **'My prices'**
+  String get preferences_my_contributions_my_prices_title;
+
+  /// Subtitle for opening prices stats
+  ///
+  /// In en, this message translates to:
+  /// **'My prices, my proofs…'**
+  String get preferences_my_contributions_my_prices_subtitle;
+
+  /// Subtitle for all incomplete products tile
+  ///
+  /// In en, this message translates to:
+  /// **'Products you can help complete'**
+  String get preferences_contributions_all_incomplete_subtitle;
+
+  /// Subtitle for categorize products tile
+  ///
+  /// In en, this message translates to:
+  /// **'Help compute the Nutri-Score & Green-Score in your country'**
+  String get preferences_contributions_categorize_subtitle;
+
+  /// Subtitle for user prices tile
+  ///
+  /// In en, this message translates to:
+  /// **'Prices I contributed'**
+  String get preferences_prices_user_prices_subtitle;
+
+  /// Subtitle for proofs tile
+  ///
+  /// In en, this message translates to:
+  /// **'Price tags and receipts'**
+  String get preferences_prices_proofs_subtitle;
+
+  /// Subtitle for add receipt tile
+  ///
+  /// In en, this message translates to:
+  /// **'Take photos of your receipts and scan associated barcodes'**
+  String get preferences_prices_add_receipt_subtitle;
+
+  /// Subtitle for add price tags tile
+  ///
+  /// In en, this message translates to:
+  /// **'Take photos of prices in a shop'**
+  String get preferences_prices_add_price_tags_subtitle;
+
+  /// Title for newest prices tile
+  ///
+  /// In en, this message translates to:
+  /// **'Newest prices'**
+  String get preferences_prices_newest_title;
+
+  /// Subtitle for newest prices tile
+  ///
+  /// In en, this message translates to:
+  /// **'Latest prices added by the Open Prices community'**
+  String get preferences_prices_newest_subtitle;
+
+  /// Title for top contributors tile
+  ///
+  /// In en, this message translates to:
+  /// **'Contributors with the most prices'**
+  String get preferences_prices_top_contributors_title;
+
+  /// Title for price metrics tile
+  ///
+  /// In en, this message translates to:
+  /// **'Open Price metrics'**
+  String get preferences_prices_metrics_title;
+
+  /// Subtitle for price metrics tile
+  ///
+  /// In en, this message translates to:
+  /// **'Follow the evolution of the project'**
+  String get preferences_prices_metrics_subtitle;
+
+  /// Title for ways to contribute card
+  ///
+  /// In en, this message translates to:
+  /// **'Ways to contribute'**
+  String get preferences_prices_ways_contribute_title;
+
+  /// Subtitle for validation assistant tile
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm prices added by yourself or others, with the help of AI'**
+  String get preferences_prices_validation_assistant_subtitle;
+
+  /// Subtitle for multiple proof addition tile
+  ///
+  /// In en, this message translates to:
+  /// **'Quickly add many receipts or photos of shelves from your camera roll'**
+  String get preferences_prices_multiple_proof_subtitle;
+
+  /// Title for monthly challenges tile
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly challenges'**
+  String get preferences_prices_challenges_title;
+
+  /// Subtitle for monthly challenges tile
+  ///
+  /// In en, this message translates to:
+  /// **'Participate in monthly thematic quests to collect prices'**
+  String get preferences_prices_challenges_subtitle;
+
+  /// Title for loyalty data card
+  ///
+  /// In en, this message translates to:
+  /// **'Reclaim your loyalty data'**
+  String get preferences_prices_loyalty_data_title;
+
+  /// Subtitle for GDPR tile
+  ///
+  /// In en, this message translates to:
+  /// **'Learn how to request your data'**
+  String get preferences_prices_gdpr_subtitle;
+
+  /// Title for the customize app card on preferences page
+  ///
+  /// In en, this message translates to:
+  /// **'Customize the app'**
+  String get preferences_page_customize_app_title;
+
+  /// Title for the contribute to project navigation tile
+  ///
+  /// In en, this message translates to:
+  /// **'Contribute to the project'**
+  String get preferences_page_contribute_project_title;
+
+  /// Subtitle for the contribute to project navigation tile
+  ///
+  /// In en, this message translates to:
+  /// **'Simple ways to help Open Food Facts'**
+  String get preferences_page_contribute_project_subtitle;
+
+  /// Subtitle for the FAQ navigation tile on preferences page
+  ///
+  /// In en, this message translates to:
+  /// **'Score methodologies, help, and more about the project'**
+  String get preferences_page_faq_subtitle;
+
   /// Tooltip for the button to accept the suggestion of the Robotoff question
   ///
   /// In en, this message translates to:
@@ -8268,6 +9642,162 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Authentication failed, unable to fetch proofs'**
   String get prices_proof_error;
+
+  /// Number of proofs
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} proofs'**
+  String proofs_count_with_total(int count, int total);
+
+  /// Number of proofs (when we don't know the total)
+  ///
+  /// In en, this message translates to:
+  /// **'{count} proofs'**
+  String proof_count(int count);
+
+  /// Number of contributors
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} contributors'**
+  String contributors_count_with_total(int count, int total);
+
+  /// Number of contributors (when we don't know the total)
+  ///
+  /// In en, this message translates to:
+  /// **'{count} contributors'**
+  String contributors_count(int count);
+
+  /// Number of locations
+  ///
+  /// In en, this message translates to:
+  /// **'{count} of {total} locations'**
+  String prices_locations_count_with_total(int count, int total);
+
+  /// Number of locations (when we don't know the total)
+  ///
+  /// In en, this message translates to:
+  /// **'{count} locations'**
+  String prices_locations_count(int count);
+
+  /// Message to restart the app to apply changes, used in the preferences screen
+  ///
+  /// In en, this message translates to:
+  /// **'Please restart the app to apply the changes.'**
+  String get restart_to_apply_message;
+
+  /// Title for the graphical interface preferences card in app settings
+  ///
+  /// In en, this message translates to:
+  /// **'Graphical interface'**
+  String get preferences_app_settings_graphical_interface_title;
+
+  /// Title for the media preferences card in app settings
+  ///
+  /// In en, this message translates to:
+  /// **'Media'**
+  String get preferences_app_settings_media_title;
+
+  /// Title for the development preferences card in about app section
+  ///
+  /// In en, this message translates to:
+  /// **'Development'**
+  String get preferences_about_app_development_title;
+
+  /// Title for the Open Food Facts Labs navigation tile in preferences page
+  ///
+  /// In en, this message translates to:
+  /// **'Open Food Facts Labs'**
+  String get preferences_page_open_food_facts_labs_title;
+
+  /// Title for the account preferences root
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get preferences_root_account_title;
+
+  /// Button label + pop up window title: Shows information about helping by translating
+  ///
+  /// In en, this message translates to:
+  /// **'Bring Open Food Facts to your language'**
+  String get preferences_contribute_translate_header;
+
+  /// No description provided for @preferences_contribute_enroll_alpha.
+  ///
+  /// In en, this message translates to:
+  /// **'Enroll in the alpha version of the app'**
+  String get preferences_contribute_enroll_alpha;
+
+  /// Title for the contributions and product data preferences card in dev mode
+  ///
+  /// In en, this message translates to:
+  /// **'Contributions & Product data'**
+  String get preferences_dev_mode_section_data;
+
+  /// Title for switch toggle to show or hide folksonomy, product tags on product details page
+  ///
+  /// In en, this message translates to:
+  /// **'Do not show Folksonomy'**
+  String get preferences_dev_preferences_show_folksonomy_title;
+
+  /// Title for the account preferences root
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get preferences_account_title;
+
+  /// Tooltip to show the timestamp on which price was added
+  ///
+  /// In en, this message translates to:
+  /// **'Added on {created}'**
+  String prices_adding_timestamp_tooltip(String created);
+
+  /// No description provided for @location_map_details_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Location details'**
+  String get location_map_details_title;
+
+  /// No description provided for @location_map_details_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get location_map_details_name;
+
+  /// No description provided for @location_map_details_street.
+  ///
+  /// In en, this message translates to:
+  /// **'Street'**
+  String get location_map_details_street;
+
+  /// No description provided for @location_map_details_city.
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get location_map_details_city;
+
+  /// No description provided for @location_map_details_postcode.
+  ///
+  /// In en, this message translates to:
+  /// **'Postcode'**
+  String get location_map_details_postcode;
+
+  /// No description provided for @location_map_details_country.
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get location_map_details_country;
+
+  /// No description provided for @location_map_details_coordinates.
+  ///
+  /// In en, this message translates to:
+  /// **'Coordinates'**
+  String get location_map_details_coordinates;
+
+  /// No description provided for @location_map_details_osm_id.
+  ///
+  /// In en, this message translates to:
+  /// **'OSM ID'**
+  String get location_map_details_osm_id;
 }
 
 class _AppLocalizationsDelegate

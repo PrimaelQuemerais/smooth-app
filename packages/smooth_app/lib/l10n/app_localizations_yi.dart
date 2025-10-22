@@ -9,6 +9,9 @@ class AppLocalizationsYi extends AppLocalizations {
   AppLocalizationsYi([String locale = 'yi']) : super(locale);
 
   @override
+  String get app_name => 'עפֿענען פֿאַקטן וועגן עסן';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsYi extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'אויסקלייבן אַ מער פּינקטלעכע קאַטעגאָריע';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsYi extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'קיין אייגנשאַפטן נישט';
+
+  @override
+  String get product_tags_explanation =>
+      'דורך צולייגן אייגנשאפטן (שליסל/ווערט) צו א פראדוקט, העלפט איר עס פאררייכערן.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'אויסמעקן מיין חשבון';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'צוטריט צו עקספּערימענטאַלע פֿעיִטשערז און אַנטוויקלונג מכשירים';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'עפֿנט אויף דער וועבזײַט פֿון Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2655,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prices_list_add_new_price => 'לייג צו א\nנייעם פרייז';
 
   @override
+  String get prices_list_empty_title => 'קיין פרייז נאכנישט!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'זייט דער ערשטער צו לייגן איינס צו:\nדורך סקענען א **קװיטונג** אדער א **פרייז־טעקע**!';
+
+  @override
   String get prices_entry_shop_not_found => 'אומבאַקאַנטער קראָם';
 
   @override
@@ -2649,7 +2671,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'זען אַלע פּרייזן פֿאַר דעם פּראָדוקט';
 
   @override
   String get prices_entry_menu_open_proof => 'זען באַווייַז';
@@ -2727,9 +2749,23 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'קיין ביישטייערער נאכנישט!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'זייט דער ערשטער צו לייגן צו א פרייז!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'קיין קראָם נאָך נישט!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'זייט דער ערשטער צו לייגן צו א פרייז!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2870,17 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'קיין באַווייַז נאָך נישט!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'הייבט אן דורך צולייגן א בילד פון א **קװיטונג** אדער א **פרייז־טעקע**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2913,13 +2959,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2971,17 @@ class AppLocalizationsYi extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'צוריקשטעלן די שפּראַך פון דער אַפּ';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'לייג צו קארטלעך';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'טוישן צווישן prices.openfoodfacts.org (PROD) און טעסט סביבה';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3025,11 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4031,33 @@ class AppLocalizationsYi extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'גרין-סקאָר א';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'גרין-סקאָר ב';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'גרין-סקאָר C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'גרין-סקאָר ד';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'גרין-סקאָר E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'אומבאַקאַנט גרין-סקאָר';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'גרין-סקאָר איז נישט אָנווענדלעך';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'אולטרא-פארארבעטע עסנווארג - NOVA גרופעס';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4154,6 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4261,281 @@ class AppLocalizationsYi extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'וואָס איז דער גרין סקאָר?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'דער גרין-סקאָר איז אַ לאָגאָ וואָס צילט צו אינפאָרמירן אייך וועגן דעם **אומגעבונגס-איינפלוס פון עסן**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'דער קאָליר קאָד ווערייִרט פֿון טונקל גרין (**A+**) פֿאַר די **מינדסטער אימפּאַקטפולע** פּראָדוקטן ביז טונקל רויט (**F**) פֿאַר די **מערסט אימפּאַקטפולע** פּראָדוקטן.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'די גרין-סקאָר לאָגאָס';
+
+  @override
+  String get guide_greenscore_lca_title => 'דער קערן: לעבן ציקל אפשאצונג (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'א וויסנשאפטלעכע אפשאצונג פון עסן קאטעגאריעס';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'פֿאַר יעדער פּראָדוקט קאַטעגאָריע, ווערט אַ **בענטשמאַרק** כעזשבן באַשטימט ניצנדיק דאַטן פֿון דער אַגריבאַלייז ענווייראָנמענטאַל דאַטאַבאַזע (דיזיינד דורך ADEME און INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**לעבנס-ציקל אנאליז** איז א סטאנדארדיזירטע אפשאצונג מעטאד פארן דורכפירן א מערפאכיגע און מערפאכיגע קריטעריע סביבה אפשאצונג.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => 'עס מעסט:';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 פּראָדוקציע טריט';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 אינדיקאַטאָרן פֿאַר דער השפּעה פֿון דער סביבה';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'קלימאַט ענדערונג/קאַרבאָן פֿוסדרוק';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'אָזאָן שיכט אויסשעפּונג';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'יאָניזירנדיקע ראַדיאַציע';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'לאַנד';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'וואַסער און ענערגיע נוצן';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'לופט פארפּעסטיקונג';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'מאַרינע און פרישע וואַסער (פּאַרטיקלען, פֿאַרזויערונג, עוטראָפיקאַציע)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'אויסשעפּונג פון רעסורסן.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'באָנוסעס און שטראָפֿן';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'כּדי צו באַלוינען בעסערע פּראָדוקטן אין אַ קאַטעגאָריע, לייגן מיר דאַן צו באָנוסעס און שטראָפֿן באַזירט אויף עטלעכע קריטעריעס:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'א באָנוס ווערט געגעבן באַזירט אויף דעם אָפּשטאַם פון די ינגרידיאַנץ. דער באָנוס נעמט אין באַטראַכט די השפּעה אויף טראַנספּאָרטאַציע און אויך די ענווייראָנמענטאַלע פּאָליטיק פון יעדן פּראָדוצירער\'ס לאַנד.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'כדי גענוי אויסצורעכענען דעם גרין-סקאָר, איז נויטיק צו האבן אינפארמאציע וואס איז נישט דוקא ספעציפיצירט אויף דער פארפאקונג (ווי דער מקור און דער גענויער פראצענט פון יעדן אינגרעדיענט) אדער וואס איז זעלטן פאראן אין א נוצבארער פארעם (ווי א ליסטע פון אלע קאמפאנענטן פון דער פארפאקונג מיט די גענויע סארטן פלאסטיק וואס ווערן גענוצט).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'דורכשניטלעכע ווערטן ווערן גענוצט ווען די אינפארמאציע איז נאך נישט פאראן, אבער מיר רופן יעצט יעדן צו העלפן אונז זאמלען די אינפארמאציע וואס וועט זיין זייער נוצלעך פארן גרין-סקור אבער אויך פאר אסאך אנדערע נוצן.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'ווי בירגער קענען העלפֿן';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'אַלע בירגער קענען אונדז העלפֿן זאַמלען און סטרוקטורירן די אינפֿאָרמאַציע וואָס איז פֿאַראַן אויף פּראָדוקטן אָדער וואָס קען מען פֿון זיי אַרויסנעמען, ווי למשל אינפֿאָרמאַציע אויף פֿאַרפּאַקונג: מיסיע עמבאַלאַדזשעס: אַ גרויס-מאָסשטאַביגער קאָלאַבאָראַטיווער אינווענטאַר פֿון פֿאַרפּאַקונג פֿאַר אַלע עסן פּראָדוקטן (אין פֿראַנצייזיש)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'ווי פאַבריקאַנטן קענען העלפֿן';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'פאַבריקאַנטן קענען אונדז שיקן זייער אינפֿאָרמאַציע גלייך דורך אונדזער פריי פּלאַטפאָרמע פֿאַר פּראָדוצירער.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'וועלכע פּראָדוקט איז בעסער פֿאַרן פּלאַנעט?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'עס קען זיין שווער צו זאָגן';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'אויסקלויבן נאכhalטיגע עסן איז איינע פון די שטארקסטע זאכן וואס מיר קענען טון פארן קלימאט, ווייל **אונדזער גלאבאלע עסן סיסטעם איז פאראנטווארטלעך פאר איבער א פערטל פון אלע גרין־הויז גאזן אויסשטויסן**.\n(מקור: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'דו האסט די מאַכט!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'די גוטע נייעס איז אז דאס גיט אונז א שטארקן וועג צו שאפן ענדערונגען.\n**יעדער פון אונז עסט ארום 1,000 מאלצייטן יעדעס יאר**. דאס איז 1,000 געלעגנהייטן צו **קלייבן א בעסערע צוקונפט פארן פלאנעט**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'העלפט צו זיין פאַראַנטוואָרטלעך און באַשליסן';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'אויסקלויבן נאכhalטיגע עסן קען פילן קאמפליצירט. עטיקעטן זענען פארwirrend און אינפארמאציע פעלט אפט. דער גרין-סקאָר איז באשאפן געווארן צו מאכן עס פשוט, געבענדיג אייך א **קלארע**, **וויסנשאפט-באזירטע**, און **טראַנספּאַרענטע** ענווייראָמענטאַלע שאַץ פאר עסן פּראָדוקטן, פּונקט וואו איר דאַרפט עס: בשעת איר קויפט איין.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'טראַנספּאַרענץ';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'אנדערש ווי אייגענע לייבלס, איז די גרין-סקאָר קאַלקולאַציע **גאָר אָפן** און קען ווערן **וועריפֿיצירט דורך ווער עס יז**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'וואָס איז אולטראַ-פּראַסעסינג?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'די NOVA גרופּעס אינפאָרמירן אייך וועגן דעם מדרגה פון עסן פאַראַרבעטונג.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'די NOVA קלאַסיפֿיקאַציע ערלויבט די קאַטעגאָריזאַציע פֿון עסנוואַרג אין **4 גרופּעס** באַזירט אויף זייער **גראַד פֿון אינדוסטריעלער פּראָצעסירונג** (מינימאַל פּראָצעסירטע אָדער נישט פּראָצעסירטע עסנוואַרג, קולינאַרישע אינגרעדיענטן, פּראָצעסירטע עסנוואַרג, אולטראַ-פּראָצעסירטע עסנוואַרג).';
+
+  @override
+  String get guide_nova_logos_caption => 'די NOVA לאָגאָס';
+
+  @override
+  String get guide_nova_groups_title => 'די 4 NOVA גרופּעס';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'עס זענען דא 4 NOVA גרופּעס, די פּראָבלעמאַטישע איז גרופּע 4 - אולטראַ-פּראַסעסט פודז.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'מינימאַל פּראַסעסט אָדער נישט פּראַסעסט פודז';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'נישט-פארארבעטע (אדער נאטירלעכע) עסנווארג זענען די עסבארע טיילן פון פלאנצן (זאמען, פרוכטן, בלעטער, שטאמען, ווארצלען) אדער בעלי חיים (מוסקלען, אפפאל, אייער, מילך), ווי אויך פונגי, אַלדזשי, און וואסער, נאכדעם וואס זיי ווערן אפגעטיילט פון דער נאטור.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'פּראָצעסירטע קולינאַרישע אינגרעדיענטן, ווי אָילס, פּוטער, צוקער און זאַלץ, זענען סובסטאַנצן וואָס שטאַמען פֿון גרופּע 1 עסנוואַרג אָדער פֿון דער נאַטור דורך פּראָצעסן וואָס אַרייַננעמען דריקן, ראַפֿינירן, מאָלן, פֿילן און טריקענען.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'פּראָצעסירטע עסנוואַרג, ווי למשל פלעשל גרינסן, קאָנסערווירטע פֿיש, פֿרוכטן אין סירופּ, קעז, און פֿריש געמאַכטע ברויטן, ווערן הויפּטזעכלעך געמאַכט דורך צולייגן זאַלץ, אויל, צוקער, אָדער אַנדערע סובסטאַנצן פֿון גרופּע 2 צו גרופּע 1 עסנוואַרג. פּראָצעסן אַרייַננעמען פֿאַרשידענע קאָנסערוואַציע אָדער קאָכן מעטאָדן, און אין פֿאַל פֿון ברויטן און קעז, נישט-אַלקאָהאָלישע פֿערמענטאַציע. רובֿ פּראָצעסירטע עסנוואַרג האָבן צוויי אָדער דריי ינגרידיאַנץ און זענען דערקענט ווי מאָדיפֿיצירטע ווערסיעס פֿון גרופּע 1 עסנוואַרג. זיי קענען געגעסן ווערן אַליין אָדער, מער געוויינטלעך, אין קאָמבינאַציע מיט אַנדערע עסנוואַרג.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'אולטרא-פארארבעטע עסנווארג, ווי ווייכע געטראנקען, זיסע אדער געזאלצענע פארפאקטע נאש, רעקאנסטיטואירטע פלייש פראדוקטן, און פאר-צוגעגרייטע פארפרוירענע געריכטן, זענען נישט נאר מאדיפיצירטע עסנווארג נאר פארמולאציעס געמאכט מערסטנס אדער אינגאנצן פון סובסטאנצן וואס שטאמען פון עסנווארג און צוגאבן, מיט ווייניג ביז קיין גאנצע גרופע 1 עסנווארג. די אינהאלטן אין די פארמולאציעס שליסן געווענליך איין די וואס געפינען זיך אויך אין פארארבעטע עסנווארג, ווי צוקער, אויל, פעטן, אדער זאלץ. אבער, אולטרא-פארארבעטע פראדוקטן אנטהאלטן אויך אנדערע קוועלער פון ענערגיע און נוטריענטן וואס ווערן נישט געווענליך גענוצט אין קולינארישע צוגרייטונגען. עטלעכע פון זיי ווערן גלייך עקסטראקטירט פון עסנווארג, ווי קאסעין, לאקטאז, וויי, און גלוטען.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'די פראבלעמען מיט אולטרא-פראסעסינג';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'עקסטרעמע פּראַסעסינג פון עסנוואַרג ינגרידיאַנץ';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'פילע שטאַמען פֿון ווײַטערדיקער פֿאַראַרבעטונג פֿון עסן־באַשטאַנדן, ווי הידראָגענירטע אָדער אינטערעסטעריפֿיצירטע אָילס, הידראָליזירטע פּראָטעאינען, סוי־פּראָטעין־איזאָלאַט, מאַלטאָדעקסטרין, ינווערט־צוקער, און הויך־פֿרוקטאָזע־קאָרן־סירופ.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'אַדיטיוון וואָס גייען ווייטער ווי ריין עסן זיכערקייט';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'צוגאבן אין אולטרא-פראצעסירטע עסנווארג שליסן איין עטליכע וואס ווערן אויך גענוצט אין פראצעסירטע עסנווארג, ווי למשל קאנסערוואנטן, אנטיאקסידאנטן, און סטאביליזירער. קלאסן פון צוגאבן וואס מען געפינט נאר אין אולטרא-פראצעסירטע פראדוקטן שליסן איין די וואס ווערן גענוצט צו נאכמאכן אדער פארבעסערן די סענסארישע אייגנשאפטן פון עסנווארג אדער צו באהאלטן נישט-געשמאקע אספעקטן פון דעם ענדגילטיגן פראדוקט. די צוגאבן שליסן איין פארבן און אנדערע פארבן, קאליר סטאביליזירער; פלייווערס, טעם פארשטארקערס, נישט-צוקער זיסשטאפן; און פראצעסירונג הילף-מיטלען ווי קארבאנירן, פארשטארקן, פארגרעסערן און אנטי-פארגרעסערן אגענטן, דע-שוים, אנטי-קלאפן און גלייזינג אגענטן, עמולסיפיערס, סעקוועסטראנטן, און הוימעקטאנטן.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'באַאַרבעטונג וואָס איר קענט נישט טאָן אין שטוב';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'א סך סיקווענצן פון פּראָצעסן ווערט גענוצט צו קאָמבינירן די געוויינטלעך פילע אינגרעדיענטן און צו שאַפֿן דעם לעצטן פּראָדוקט (דעריבער \'אולטראַ-פּראָצעסירט\'). די פּראָצעסן אַרייַננעמען עטלעכע אָן קיין היגע עקוויוואַלענטן, אַזאַ ווי הידראָגענאַציע און הידראָליזאַציע, יקסטרוזשאַן און פורעם, און פאַר-פּראָצעסירונג פֿאַר פּרעגלען.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'די ראָב־ און פינאַנציעלע אַספּעקטן פון אולטראַ־פּראַסעסינג';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'דער הויפּט ציל פון אולטראַ-פּראַסעסינג איז צו שאַפֿן בראַנדיד, באַקוועם (דויערהאפט, גרייט צו קאָנסומירן), אַטראַקטיוו (היפּער-פּאַסיקע) און העכסט פּראָפיטאַבלע (נידעריק-קאָסט ינגרידיאַנץ) עסנוואַרג פּראָדוקטן דיזיינד צו פאַרבייַטן אַלע אנדערע עסנוואַרג גרופּעס. אולטראַ-פּראַסעסט עסנוואַרג פּראָדוקטן זענען געוויינטלעך פּאַקידזשד אַטראַקטיוולי און פֿאַרקויפֿט אינטענסיוו.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4848,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'קיין פרייז נישט פֿאַראַן';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'זייט דער ערשטער צו ביישטייערן!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4893,11 @@ class AppLocalizationsYi extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress =>
+      'עקסטראַקציע אין פּראָגרעס…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'עקסטראַקציע געראָטן';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5028,505 @@ class AppLocalizationsYi extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'פאַרוואַלטן אייערע פּרייז פּרעפֿערענצן';
+
+  @override
+  String get preferences_card_project => 'דאס אָפֿענע עסן פֿאַקטן פּראָיעקט';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'מײַנע סטאַטיסטיק';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'איבערזעצן, פֿאַרבעסערן אונדזערע מכשירים…';
+
+  @override
+  String get preferences_connect_title => 'פֿאַרבינדן';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'קאָנטאַקט אונדז, אָדער פֿאָלגט אונדז אויף סאָציאַלע מידיאַ';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'העלפט אונדז אינפאָרמירן מיליאָנען קאָנסומערס אַרום דער וועלט';
+
+  @override
+  String get preferences_card_help => 'הילף און שטיצע';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'באַקומען ענטפֿערס צו אייערע פֿראַגעס';
+
+  @override
+  String get logged_out => 'אויסגעלאָגט';
+
+  @override
+  String get preferences_app_bar_message =>
+      'א דאנק אייך פארן זיין איינער פון אונדזערע מיטגלידער!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'זען אַלע סטאַטיסטיק';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'זוכן $provider פֿאַר \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'זוכן אַ סעטינג (למשל נוטרי-סקאָר)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'צוטריטלעכקייט: ווייזן עמאָדזשי';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'צוטריטלעכקייט: אַראָפּנעמען פארבן';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'לעגאַלע אינפֿאָרמאַציע';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'באַניץ־באַדינגונגען, פּריוואַטקייט־פּאָליטיק, און מער';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'אָפן פוד פאַקס איז אַ דאַטאַבאַזע פֿאַר עסן פּראָדוקטן **געמאַכט דורך אַלעמען, פֿאַר אַלעמען**.\nאיר קענט עס נוצן צו מאַכן בעסערע עסן ברירות, און וויבאַלד עס איז **אָפן דאַטן**, קען יעדער עס **ווידער נוצן פֿאַר יעדן צוועק**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'ליצענצן';
+
+  @override
+  String get preferences_about_app_title => 'וועגן דער אַפּ';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'טעכנישע אינפֿאָרמאַציע, דעוועלאָפּער אינפֿאָרמאַציע, און מער';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'ווערסיע נומער';
+
+  @override
+  String get preferences_scanner_title => 'סקאַנער';
+
+  @override
+  String get preferences_app_store => 'אַפּ סטאָר';
+
+  @override
+  String get preferences_app_system_settings => 'סיסטעם סעטטינגס';
+
+  @override
+  String get preferences_source_code => 'צוטריט דעם קוואל קאוד';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'און אָנהייבן מאַכן אַן השפּעה פֿאַר מיליאָנען';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'עצות';
+
+  @override
+  String get tips_discover_nutriscore => 'אַנטדעקן דעם נײַעם נוטרי-סקאָר';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'אויף דער וועבזייטל פון Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'פאַרוואַלטן מיין חשבון';
+
+  @override
+  String get preferences_manage_account_tooltip => 'פאַרוואַלטן דיין חשבון';
+
+  @override
+  String get preferences_change_password_title => 'טוישן מיין פּאַראָל';
+
+  @override
+  String get preferences_danger_zone => 'געפאַר זאָנע';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'אַלע אייערע ביישטייערונגען וועלן פאַרלוירן גיין';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'אַפּ סעטטינגס';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'זייער עקספּערימענטאַל וועג צו סקענען פּראָדוקטן אָפפליין';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'דערפרישן אַלע פּראָדוקטן פֿון סערווער';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'ביטע פֿאַרמײַדט דאָס צו טאָן סײַדן עס איז אַבסאָלוט נייטיק';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'דעמאָ מאָדע';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'לייג צו קארטלעך צום סקענער';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'לייגט צו 3 מוסטער פּראָדוקטן צום סקאַנער';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'פאָלקאָנאָמיע באַלעבאָס';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'באַלעבאָס: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'צוטריטלעכקייט עקספּערימענטן';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'אויסוואל פון פארשידענע פראדוקטן פאר פרייזן';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'באַניצער באַשטעלט וויסן פּאַנאַלז';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'צייטווייליקער צוטריט צו לאקאציע זוכן';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'זייַט ביי זייַט פאַרגלייַך פֿאַר 2 אָדער 3 פּראָדוקטן';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'פּראָדוקט ליסטע אימפארט';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'סקאָרס און מעטאָדאָלאָגיעס';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'אַנטדעקן ווי דער נוטרי-סקאָר ווערט אויסגערעכנט';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'אַנטדעקן די הויפּט ענדערונגען אין דער מעטאָדאָלאָגיע';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'אַנטדעקן אָפֿענע פֿוטער פֿאַקטן';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'אָפֿט געשטעלטע פֿראַגעס - אָפֿט געשטעלטע פֿראַגעס';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'די אָפֿענע פֿוד פֿאַקטן נישט-רעגירונגס אָרגאַניזאַציע';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'באַקומען קהילה דערהייַנטיקונגען';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'בלייבט אין דער לופּ מיט אַפּ און קהילה נייעס';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'נעמט זיך אנטייל דורך באטייליקן זיך אין איינעם פון אונדזערע ווירטועלע געשעענישן';
+
+  @override
+  String get preferences_connect_blog_title => 'דער אפענער עסן פאקטן בלאג';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'באַקומט די לעצטע נייעס, ווי זיי פּאַסירן';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'באַקומען הילף פֿון דער קהילה';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'העלפט אונדז פֿאַרבעסערן די אַפּ';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'שיקט אונדז דיבאַג אינפֿאָרמאַציע';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'שיקט אונדז אַן אימעיל מיט דעטאַלירטע דיבאַגינג אינפֿאָרמאַציע';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'שיקט אונדז באַמערקונגען וועגן דער אַפּ';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'העלפט אויספארמען די צוקונפט פון דער אפליקאציע';
+
+  @override
+  String get preferences_connect_survey_title => 'נעמט די אַפּ אַנקעטע';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'העלפט אונדז פֿאַרשטיין וואָס מיר זאָלן בויען ווייטער';
+
+  @override
+  String get preferences_connect_professionals_title => 'פּראָפעסיאָנאַלן';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'גאָר פריי, גאַראַנטירט פּינקטלעכע דאַטן פֿאַר 500 אַפּפּס און מיליאָנען קאָנסומערס. זעלבסט-סערוויס, קאָמפּאַטיבל מיט דיין PIM אָדער ספּרעדשיטס (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'קומט אין קאָנטאַקט צו אָנהייבן';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'באַקומען אַלע מאַטעריאַל וואָס איר דאַרפֿן פֿאַר דיין באַריכט';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'קומט אין קאָנטאַקט פֿאַר פּרעסע פֿראַגעס אָדער צו לאָזן אונדז וויסן וועגן דיין באַריכט';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'ווערט אַן אַקטיווער וואָלאָנטיר';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'אַנטוויקלונג, קאָמוניקאַציע, דיזיין… יעדע סאָרט פון וואַלאַנטירינג אָדער עקספּערטיז איז באַגריסן!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'אַנטדעקן עטלעכע פון די פילע וועגן ווי איר קענט ביישטייערן';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'מאָביל אַפּ אַנטוויקלונג';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'לערנט זיך ווי אזוי צו ביישטייערן צו ווייכווארג אנטוויקלונג';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'טעגלעכע נישט-סטאַבילע בויען, גאָר נייע פֿעיִקייטן';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'וואַקסן אייער לאָקאַלע קהילה';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'הילף מיט ווייכווארג, אינהאַלט, איבערזעצונגען פון אינגרעדיענטן אנאליז';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'מיר האָבן צוגעגרייט אַ קליין מוסטער צו העלפֿן אײַך :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'פּשוטע טריט צו וואַקסן עסן טראַנספּעראַנסי אין דיין לאַנד';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'שליסט זיך אן אין דער דאַטן קוואַליטעט מאַנשאַפֿט';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'קומט מיט אין אונדזער מי צו זיכער מאַכן אַז די דאַטאַבייס איז גאַנץ און פּינקטלעך';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'צוגעלייגטע פּראָדוקטן';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'נייע פּראָדוקטן וואָס איך האָב צוגעגעבן צו Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'פּראָדוקטן וואָס איך דאַרף צו פֿאַרענדיקן';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'אַלע אומפארענדיקטע פּראָדוקטן';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'מיינע פרייזן, מיינע באווייזן…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'פּראָדוקטן וואָס איר קענט העלפֿן פֿאַרענדיקן';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'העלפט אויסרעכענען דעם נוטרי-סקאָר און גרין-סקאָר אין אייער לאַנד';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'פרייזן וואָס איך האָב בייגעטראָגן';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'פרייז טאַגעס און קוויטלעך';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'נעמט בילדער פון אייערע קוויטלעך און סקענט פארבונדענע באַרקאָדס';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'נעמט בילדער פון פרייזן אין א געשעפט';
+
+  @override
+  String get preferences_prices_newest_title => 'נייעסטע פרייזן';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'לעצטע פרייזן צוגעגעבן דורך די אפענע פרייזן קהילה';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'ביישטייערער מיט די מערסטע פרייזן';
+
+  @override
+  String get preferences_prices_metrics_title => 'עפֿענען פּרייַז מעטריקס';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'פֿאָלגט די עוואָלוציע פֿון דעם פּראָיעקט';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'וועגן צו ביישטייערן';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'באַשטעטיקן פרייזן צוגעגעבן דורך זיך אָדער אַנדערע, מיט דער הילף פון קינסטלעכער אינטעליגענץ';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'לייג שנעל צו פילע קוויטלעך אדער בילדער פון שעלוועס פון דיין קאַמעראַ ראָל';
+
+  @override
+  String get preferences_prices_challenges_title => 'מאָנטליכע טשאַלאַנדזשיז';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'באַטייליקן זיך אין מאָנטלעכע טעמאַטישע קוועסץ צו זאַמלען פּרייזן';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'באַקומען צוריק אייערע לויאַליטי דאַטן';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'לערנט זיך ווי אזוי צו בעטן אייערע דאטן';
+
+  @override
+  String get preferences_page_customize_app_title => 'פּערסאָנאַליזירן די אַפּ';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'ביישטייערן צום פּראָיעקט';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'פּשוטע וועגן צו העלפֿן עפֿענען פֿוד פֿאַקטן';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'סקאָר מעטאָדאָלאָגיעס, הילף, און מער וועגן דעם פּראָיעקט';
+
+  @override
   String get product_edit_robotoff_positive_button => 'אָננעמען דעם פֿאָרשלאָג';
 
   @override
@@ -4736,4 +5570,103 @@ class AppLocalizationsYi extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'אויטענטיפֿיקאַציע דורכגעפֿאַלן, נישט געקענט ברענגען באַווײַזן';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count פון $total באַווײַזן';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count פון $total ביישטייערער';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count פון $total לאקאציעס';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count לאָקאַציעס';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'ביטע ריסטאַרט די אַפּ צו צולייגן די ענדערונגען.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'גראַפֿישע צובינד';
+
+  @override
+  String get preferences_app_settings_media_title => 'מעדיע';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'עפֿענע עסן פאַקטן לאַבאָראַטאָריעס';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'ברענגט אפענע עסן פאקטן צו אייער שפראך';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'רעגיסטרירט זיך אין דער אלפא ווערסיע פון דער אפליקאציע';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'ביישטייערונגען און פּראָדוקט דאַטן';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'ווײַזט נישט פֿאָלקסאָנאָמיע';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'צוגעגעבן אויף $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

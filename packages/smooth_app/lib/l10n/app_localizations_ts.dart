@@ -9,6 +9,9 @@ class AppLocalizationsTs extends AppLocalizations {
   AppLocalizationsTs([String locale = 'ts']) : super(locale);
 
   @override
+  String get app_name => 'Tinhla ta Swakudya leti Pfulekeke';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsTs extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsTs extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Hlawula xiyenge lexi kongomeke swinene';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsTs extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Ku hava switandi';
+
+  @override
+  String get product_tags_explanation =>
+      'Hiku engetela swihlawulekisi (key/value) eka xiendliwa, u pfuneta ku xi fuwisa.';
 
   @override
   String get add_tag => 'Add property';
@@ -1687,7 +1694,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Susa akhawunti ya mina';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Fikelela swihlawulekisi swa swikambelo na switirhisiwa swa nhluvukiso';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,9 @@ class AppLocalizationsTs extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Vula eka webusayiti ya Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsTs extends AppLocalizations {
   String get prices_list_add_new_price => 'Engetela\nnxavo lowuntshwa';
 
   @override
+  String get prices_list_empty_title => 'A ku na nxavo ku fikela sweswi!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Vana wo sungula ku engetela yin\'we:\nHi ku skena **risiti** kumbe **xiphemu xa nxavo**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Vhengele leri nga tiviwiki';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Languta minxavo hinkwayo ya xitirhisiwa lexi';
 
   @override
   String get prices_entry_menu_open_proof => 'Languta vumbhoni';
@@ -2730,9 +2751,24 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title =>
+      'Ku hava muhoxa xandla ku fikela sweswi!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Vana wo sungula ku engetela nxavo!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ku hava xitolo ku fikela sweswi!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Vana wo sungula ku engetela nxavo!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2873,17 @@ class AppLocalizationsTs extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Ku hava vumbhoni ku fikela sweswi!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Sungula hi ku engetela xifaniso xa **risiti** kumbe **xiphemu xa nxavo**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2916,13 +2962,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2934,6 +2974,16 @@ class AppLocalizationsTs extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Seta ririmi ra app nakambe';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Engetelani makhadi';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Cinca exikarhi ka prices.openfoodfacts.org (PROD) na test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2977,6 +3027,11 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3978,32 +4033,32 @@ class AppLocalizationsTs extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Rihlaza-Xikoro A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Rihlaza-Xikoro B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Xikoro xa Rihlaza C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Rihlaza-Xikoro D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Rihlaza-Xikoro E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Green-Score leyi nga tiviwiki';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new => 'Green-Score a yi tirhi';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Swakudya leswi lulamisiweke hi ndlela ya ultra-processed - mintlawa ya NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4100,9 +4155,6 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4210,11 +4262,281 @@ class AppLocalizationsTs extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Xana Xikoro xa Rihlaza i yini?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score i logo leyi kongomisaka eka ku ku tivisa hi **vuyelo bya mbango bya swakudya**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Khodi ya mihlovo yi hambana kusuka eka rihlaza ro dzwihala (**A+**) eka switirhisiwa leswi **swi nga khumbiki ngopfu** kuya eka swotshuka swa ntima (**F**) eka switirhisiwa leswi **swi nga na nkucetelo swinene**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Tilogo ta Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Nkoka: Nkambisiso wa xirhendzevutani xa vutomi (LCA) .';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Ku kamberiwa ka sayense ka swiyenge swa swakudya';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Eka xiyenge xin’wana na xin’wana xa swikumiwa, xikoro xa **benchmark** xi simekiwile hi ku tirhisa datha ku suka eka database ya mbango ya Agribalyse (leyi endliweke hi ADEME na INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Nxopaxopo wa xirhendzevutani xa vutomi** i ndlela yo kambela leyi ringaniseriweke yo endla nkambisiso wa mbango wa switeji swo tala na swipimelo swo tala.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Yi pima:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 wa magoza ya vuhumelerisi';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 wa swikombiso swa ku khumbeka ka mbango';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Ku cinca ka maxelo/ku humelela ka khaboni';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Ku hela ka leyara ya ozone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 =>
+      'Radiation leyi endlaka leswaku ku va ni ion';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Phatsama';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Ku tirhisiwa ka mati & eneji';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ku thyakisa moya';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Mati ya lwandle & yo tenga (swiphemuphemu, acidification, eutrophication) .';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Ku hela ka switirhisiwa.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Tibonasi & swigwevo';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Ku hakela switirhisiwa swo antswa endzeni ka xiyenge, hi tlhela hi tirhisa tibhonasi & swigwevo leswi simekiweke eka swipimelo swo hlayanyana:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Bonasi yi nyikiwa kuya hi masungulo ya switirhisiwa. Bonasi leyi yi tekela enhlokweni nkucetelo eka vutleketli xikan’we na pholisi ya mbango ya tiko rin’wana na rin’wana ra muhumelerisi.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Ku hlayela kahle Green-Score, swa laveka kuva na mahungu lawa yanga boxiwangiki eka ku pakiwa (kufana na masungulo na tiphesente leti kongomeke ta xiaki xin’wana na xin’wana) kumbe lawa yanga tala ku kumeka hi xivumbeko lexi tirhisiwaka (kufana na nxaxamelo wa swiphemu hinkwaswo swa xipaci na tinxaka leti kongomeke ta tipulasitiki leti tirhisiweke).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Mimpimo ya le xikarhi ya tirhisiwa loko mahungu lawa ya nga si kumeka, kambe sweswi hi kombela un’wana na un’wana ku hi pfuna ku hlengeleta mahungu lawa lawa ya nga ta pfuna swinene eka Green-Score kambe na le ka matirhiselo man’wana yo tala.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Ndlela leyi vaaki va nga pfunaka ha yona';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Vaaki hinkwavo va nga hi pfuna ku hlengeleta na ku hlela mahungu lama nga kona eka swikumiwa kumbe leswi nga humesiwaka eka swona, ku fana na mahungu ya ku paka: Mission Emballages: nxaxamelo lowukulu wa ntirhisano wa ku pakiwa ka swikumiwa hinkwaswo swa swakudya (hi Xifurwa) .';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Ndlela leyi vaendli va swilo va nga pfunaka ha yona';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Vaendli va nga hi rhumela vuxokoxoko bya vona hi ku kongoma hi ku tirhisa pulatifomo ya hina ya mahala eka vahumelerisi.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Hi xihi xitirhisiwa lexi antswaka eka pulanete?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Swi nga tika ku swi vula';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Ku hlawula swakudya leswi nga ta tshama nkarhi wo leha i xin’wana xa swilo swa matimba swinene leswi hi nga swi endlaka eka maxelo, tanihileswi **sisiteme ya hina ya swakudya ya misava hinkwayo yi nga na vutihlamuleri byo tlula kotara ya ku humesiwa hinkwako ka tigasi ta greenhouse**.\n(Xihlovo: Poore & Nemecek, Sayense, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'U ni matimba!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Mahungu lamanene hileswaku leswi swi hi nyika ndlela ya matimba yo tumbuluxa ku cinca.\n**Un\'wana na un\'wana wa hina u dya kwalomu ka 1,000 wa swakudya lembe na lembe**. Sweswo i 1,000 wa minkarhi yo **hlawula vumundzuku byo antswa eka pulanete**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Swi pfuna ku va ni vutihlamuleri ni ku endla xiboho';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Ku hlawula swakudya leswi nga heriki swi nga titwa swi rharhanganile. Tilebhele ta pfilunganya naswona rungula ri tala ku kayivela. Green-Score yi tumbuluxiwile ku endla leswaku yi olova, yi ku nyika **leyi nga erivaleni**, **leyi sekeriweke eka sayense**, na **yo va erivaleni** ya mbango eka switirhisiwa swa swakudya, laha u swi lavaka kona: loko u ri karhi u xava.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Ku va erivaleni';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ku hambana na malebvu ya vulawuri, xibalo xa Green-Score xi **vulekile hi ku helela** naswona xi nga **tiyisisiwa hi mani na mani**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Xana ultra-processing i yini?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Mintlawa ya NOVA yiku tivisa hi mpimo wa ku lulamisiwa ka swakudya.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Ku hlawuriwa ka NOVA ku pfumelela ku hambanyisa swakudya hi swiyenge eka **4 wa mintlawa** kuya hi **digri ya swona ya ku lulamisiwa ka ti indasitiri** (swakudya leswinga lulamisiwa ngopfu kumbe leswinga lulamisiwangiki, switirhisiwa swa culinary, swakudya leswi lulamisiweke, swakudya leswinga lulamisiwa swinene).';
+
+  @override
+  String get guide_nova_logos_caption => 'Tilogo ta NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Mintlawa ya 4 ya NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Kuna 4 wa mintlawa ya NOVA, leyi nga na xiphiqo i Group 4 - Ultra-processed foods.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Swakudya leswinga lulamisiwangiki ngopfu kumbe leswinga lulamisiwangiki';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Swakudya leswinga lulamisiwangiki (kumbe swa ntumbuluko) i swiphemu leswi dyiwaka swa swimilani (mbewu, mihandzu, matluka, swirhabyani, timintsu) kumbe swifuwo (misiha, offal, matandza, masi), xikan’we na fungi, algae, na mati, endzhaku ko hambanisiwa na ntumbuluko.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Switirhisiwa swa culinary leswi lulamisiweke, swofana na mafurha, botere, chukele, na munyu, i swilo leswi humaka eka swakudya swa Group 1 kumbe kusuka eka ntumbuluko hiku tirhisa maendlelo lawa ya katsaka ku kandziyela, ku basisa, ku sila, ku sila na ku omisa.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Swakudya leswi swekiweke, swo tanihi miroho leyi nga emabodlheleni, tinhlampfi leti nga emathinini, mihandzu leyi nga eka sirapu, tichizi ni swinkwa leswi ha ku endliwaka, ngopfu-ngopfu swi endliwa hi ku chela munyu, mafurha, chukela kumbe swilo swin’wana leswi humaka eka swakudya swa Ntlawa wa 2 ku ya eka Ntlawa wa 1. Maendlelo ya katsa maendlelo yohambana hambana yo hlayisa kumbe ku sweka, naswona eka swinkwa na chizi, ku virisa lokunga riki na byala. Swakudya swotala leswi lulamisiweke swina switirhisiwa swimbirhi kumbe swinharhu naswona switiveka tani hi ti version leti cinciweke ta swakudya swa Group 1. Tinga dyiwa hi toxe kumbe, hi xitalo, ti hlanganisiwa na swakudya swin’wana.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Swakudya leswi lulamisiweke hi ndlela ya ultra-processed, swofana na swakunwa swo kufumela, swakudya swo olova leswi pakiweke leswi nandzihaka kumbe swo nandziha, switirhisiwa swa nyama leswi vumbiweke nakambe, na swakudya leswi lulamisiweke ka ha ri emahlweni leswi titimelaka, ahi swakudya leswi cinciweke ntsena kambe swivumbeko leswi endliweke ngopfu kumbe hinkwaswo kusuka eka swilo leswi humaka eka swakudya na swiengeteri, laha kungana swakudya swintsongo kumbe leswinga onhakiki swa Ntlawa wa 1. Swilo leswi nga eka swivumbeko leswi hi ntolovelo swi katsa leswi tlhelaka swi kumeka eka swakudya leswi swekiweke, swo tanihi chukele, mafurha, mafurha kumbe munyu. Hambiswiritano, switirhisiwa leswi endliweke hi ultra-processed switlhela swiva na swihlovo swin’wana swa matimba na swakudya leswinga tirhisiwiki hi ntolovelo eka malunghiselelo ya swakudya. Swin’wana swa swona swi humesiwa hi ku kongoma eka swakudya, swo tanihi casein, lactose, whey na gluten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Swiphiqo swa ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ku lulamisiwa lokukulu ka swiaki swa swakudya';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Votala va huma eka ku lulamisiwa kun’wana ka swiaki swa swakudya, swofana na mafurha lawa yanga hydrogenated kumbe interesterified, ti proteins letinga hydrolyzed, soy protein isolate, maltodextrin, invert sugar, na high-fructose corn syrup.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Swiengeteri leswi tlulaka vuhlayiseki bya swakudya leswi tengeke';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Swiengeteri eka swakudya leswi endliweke hi ultra-processed swikatsa swin’wana leswi tlhelaka switirhisiwa eka swakudya leswi lulamisiweke, kufana na swilo swo hlayisa, ti antioxidants, na ti stabilizers. Titlilasi ta swiengeteri leswi kumekaka ntsena eka switirhisiwa leswi lulamisiweke swinene swikatsa leswi tirhisiwaka ku tekelela kumbe ku ndlandlamuxa timfanelo ta switwi swa swakudya kumbe ku fihla swiphemu leswinga nandzihiki swa xitirhisiwa xohetelela. Swiengeteri leswi swikatsa tidayi na mihlovo yin’wana, switiyisisi swa mihlovo; swin’wana leswi nandzihaka, swilo swo antswisa nantswo, swilo swo nandzihisa leswi nga riki swa chukele; na swipfuno swo lulamisa swofana na carbonating, firming, bulking na anti-bulking agents, de-foaming, anti-caking na glazing agents, emulsifiers, sequestrants, na humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Processing a wu nge swi koti ku yi endla ekaya';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Nhlayo yotala ya ntlhandlamano wa maendlelo ya tirhisiwa ku hlanganisa swiaki leswi hi ntolovelo switala ku endla xiendliwa xohetelela (hikokwalaho ‘ultra-processed’). Maendlelo ya katsa yotala lawa yangariki na swilo leswi ringanaka swale kaya, kufana na hydrogenation na hydrolysation, extrusion na moulding, na pre-processing kuva yi gayeriwa.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Swiyenge swa vudlakuta na swa timali swa ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Xikongomelo hinkwaxo xa ultra-processing iku tumbuluxa switirhisiwa swa swakudya leswinga na branded, leswi olovaka (leswi tiyeke, leswi lulameleke ku dyiwa), leswi kokaka rinoko (hyper-palatable) na leswi vuyerisaka swinene (swiaki swa ntsengo wale hansi) leswi endleriweke ku susa mintlawa yin’wana hinkwayo ya swakudya. Switirhisiwa swa swakudya leswi endliweke hi ultra-processed hi ntolovelo swi pakiwa hi ndlela yo koka rinoko naswona swi xavisiwa ngopfu.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4527,6 +4849,13 @@ class AppLocalizationsTs extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ku hava nxavo lowu kumekaka';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Vana wo sungula ku hoxa xandla!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4565,7 +4894,12 @@ class AppLocalizationsTs extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress =>
+      'Ku humesiwa ka swilo ku le ku endliweni…';
+
+  @override
+  String get nutrition_facts_extract_successful =>
+      'Ku humesiwa ka swilo swi humelerile';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4696,6 +5030,513 @@ class AppLocalizationsTs extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Lawula swihlawulekisi swa wena swa minxavo';
+
+  @override
+  String get preferences_card_project =>
+      'Phurojeke ya Tinhla ta Swakudya leti Pfulekeke';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Tinhlayo ta mina';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Hundzuluxa, antswisa switirhisiwa swa hina…';
+
+  @override
+  String get preferences_connect_title => 'Hlanganisa';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Fikelela, kumbe u hi Landzelela eka social media';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Hi pfuneni ku tivisa timiliyoni ta vatirhisi emisaveni hinkwayo';
+
+  @override
+  String get preferences_card_help => 'Mpfuneto & Nseketelo';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Kuma tinhlamulo ta swivutiso swa wena';
+
+  @override
+  String get logged_out => 'U humile ehandle';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Ndza khensa ku va u ri un\'wana wa swirho swa hina!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Vona ti stats hinkwato';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Ku lavisisa $provider eka \"$keyword\".';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Ku lavisisa xiyimiso (xikombiso Nutri-Score) .';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Ku fikelela: Kombisa emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Ku fikelela: Susa mihlovo';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Rungula ra nawu';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Mimpimanyeto ya ku tirhisa, pholisi ya vuhlayiseki bya vuxokoxoko, na swin’wana';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts i database ya switirhisiwa swa swakudya **leyi endliweke hi un’wana na un’wana, eka un’wana na un’wana**.\nU nga yi tirhisa ku endla swihlawulekisi swo antswa swa swakudya, naswona tani hi leswi yi nga **open data**, un\'wana na un\'wana a nga **yi tirhisa nakambe eka xikongomelo xin\'wana na xin\'wana**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Tilayisense';
+
+  @override
+  String get preferences_about_app_title => 'Malunghana na app';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Vuxokoxoko bya xithekiniki, vuxokoxoko bya vatumbuluxi, na swin’wana';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Nomboro ya vuhundzuluxeri';
+
+  @override
+  String get preferences_scanner_title => 'Xikeni xa xikeni';
+
+  @override
+  String get preferences_app_store => 'Vhengele ra ti-app';
+
+  @override
+  String get preferences_app_system_settings => 'Switirhisiwa swa sisiteme';
+
+  @override
+  String get preferences_source_code => 'Fikelela khodi ya xihlovo';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Naswona sungula ku endla nkucetelo eka timiliyoni';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Makumu';
+
+  @override
+  String get tips_discover_nutriscore => 'Kuma Nutri-Score leyintshwa';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Eka webusayiti ya Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Lawula akhawunti ya mina';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Lawula akhawunti ya wena';
+
+  @override
+  String get preferences_change_password_title => 'Cinca password ya mina';
+
+  @override
+  String get preferences_danger_zone => 'Ndhawu ya khombo';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Minyikelo ya n’wina hinkwayo yi ta lahleka';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Switirhisiwa swa app';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Ndlela yo ringeta swinene yo skena switirhisiwa offline';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Pfuxeta swikumiwa hinkwaswo ku suka eka sevha';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Hi kombela mi papalata ku endla sweswo handle ka loko swi laveka hi ku helela';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mode ya demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Engetela makhadi eka xikeni';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Ku engetela 3 wa switirhisiwa swa xikombiso eka xikeni';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Mufambisi wa Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Muhaxi: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Swikambelo swa ku fikelela';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Ku hlawuriwa ka switirhisiwa swo tala eka minxavo';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Tiphaneli ta vutivi leti odaweke hi mutirhisi';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Ku fikelela swa xinkarhana eka ku lavisisa ndhawu';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Ku pimanisiwa ka tlhelo na tlhelo eka 2 kumbe 3 wa switirhisiwa';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Ku nghenisa nxaxamelo wa swikumiwa';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Swikoweto & maendlelo';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Kuma ndlela leyi Nutri-Score yi hlayiwaka ha yona';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Kuma ku cinca lokukulu eka maendlelo';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Kuma Tinhla Ta Swakudya Leti Pfulekeke';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'FAQ - Swivutiso leswi talaka ku vutisiwa';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'NGO ya Tinhla ta Swakudya leti Pfulekeke';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Kuma swintshuxo swa vaaki';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Tshama u ri eka loop na app na mahungu ya vaaki';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Nghenela hi ku va kona eka xin’wana xa swiendlakalo swa hina swa xiviri';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Blog ya Tinhla ta Swakudya leti Pfulekeke';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Kuma mahungu ya sweswinyana, tani hi leswi ma humelelaka';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Kuma mpfuno eka vaaki';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Hi pfuneni ku antswisa app';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Hi rhumeleni vuxokoxoko bya debug';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Hi rhumeleni email leyi nga na vuxokoxoko bya vuxokoxoko bya ku lulamisa swihoxo';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Hi rhumeleni vuxokoxoko mayelana na app';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Pfuna ku vumba vumundzuku bya app';
+
+  @override
+  String get preferences_connect_survey_title => 'Teka ndzavisiso wa app';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Hi pfune ku twisisa leswi hi faneleke hi swi aka endzhaku ka sweswo';
+
+  @override
+  String get preferences_connect_professionals_title =>
+      'Vatirhi va xiphurofexinali';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Hi ku helela mahala, yi tiyisisa data leyi kongomeke ya 500 wa ti-app & timiliyoni ta vatirhisi. Ku ti tirhela, ku fambisana na PIM kumbe swiphephana swa wena (XLSX) .';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Tihlanganise ku sungula';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Kuma rungula hinkwaro leri u ri lavaka eka xiviko xa wena';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Tihlanganisi ku kuma swivutiso swa vateki va mahungu kumbe ku hi tivisa hi xiviko xa wena';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Vana mutirhi wa ku tirhandzela la gingiritekaka';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Nhluvukiso, Vuhlanganisi, Dizayini… muxaka wihi na wihi wa ku tirhandzela kumbe vutshila bya amukeleka!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Kuma tin’wana ta tindlela to tala leti u nga hoxaka xandla ha tona';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Nhluvukiso wa ti-app ta tiselfoni';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Dyondza ndlela yo hoxa xandla eka nhluvukiso wa software';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Siku na siku ku aka loku nga tshamisekangiki, swivumbeko leswintshwa swa xiviri';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Kurisa muganga wa ka n’wina';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Pfuna hi software, leswi nga endzeni, vuhundzuluxi bya nxopaxopo wa swiaki';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Hi lunghiselele template nyana ku ku pfuna :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Magoza yo olova yo kurisa ku va swakudya swi va erivaleni etikweni ra wena';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Hlanganyela ntlawa wa khwalithi ya data';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Hlanganyela eka matshalatshala ya hina yo tiyisisa leswaku database yi helerile naswona yi lulamile';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Switirhisiwa leswi engeteriweke';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Switirhisiwa leswintshwa ndzi swi engetele eka Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Swikumiwa leswi ndzi faneleke ku swi hetisa';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Switirhisiwa hinkwaswo leswi nga helelangiki';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Minxavo ya mina, vumbhoni bya mina…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Swikumiwa leswi u nga pfunaka ku swi hetisisa';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Pfuna ku hlayela Nutri-Score & Green-Score etikweni ra wena';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Minxavo leyi ndzi hoxeke xandla';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Swikoweto swa nxavo na tirhisithi';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Teka swifaniso swa tirhisithi ta wena naswona u skena tibarkhodi leti fambisanaka na tona';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Teka swifaniso swa minxavo exitolo';
+
+  @override
+  String get preferences_prices_newest_title => 'Minxavo leyintshwa swinene';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Minxavo ya sweswinyana leyi engeteriweke hi vaaki va Minxavo leyi Pfulekeke';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Vahoxa xandla lava nga na minxavo yo tala';
+
+  @override
+  String get preferences_prices_metrics_title => 'Vula timetriki ta Ntsengo';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Landzelela ku hundzuka ka phurojeke';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Tindlela to hoxa xandla';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Tiyisisa minxavo leyi engeteriweke hi wena kumbe van’wana, hi ku pfuniwa hi AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Hi ku hatlisa engetela tirhisithi to tala kumbe swifaniso swa tishelofu ku suka eka roll ya wena ya khamera';
+
+  @override
+  String get preferences_prices_challenges_title =>
+      'Mintlhontlho ya n’hweti na n’hweti';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Hlanganyela eka ti thematic quests ta n’hweti na n’hweti ku hlengeleta minxavo';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Vuyisa data ya wena ya vutshembeki';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Dyondza ndlela yo kombela data ya wena';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'Endla app leyi hi ku ya hi ku navela ka wena';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Hoxa xandla eka ntirho lowu';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Tindlela to olova to pfuna ku Pfula Tinhla ta Swakudya';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Ku nyika swikoweto maendlelo, mpfuneto, na swin’wana mayelana na phurojeke';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Amukela xiringanyeto';
 
   @override
@@ -4740,4 +5581,103 @@ class AppLocalizationsTs extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Ku tiyisisiwa ku tsandzekile, ku tsandzeka ku teka vumbhoni';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ya $total vumbhoni';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ya $total va hoxa xandla';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ya $total tindhawu';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count tindhawu';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Hi kombela u sungula app nakambe ku tirhisa ku cinca.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Xihlanganisi xa swifaniso';
+
+  @override
+  String get preferences_app_settings_media_title => 'Vuhangalasi bya mahungu';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Vula Tilab ta Tinhla ta Swakudya';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Tisa Tinhla ta Swakudya leti Pfulekeke eka ririmi ra wena';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Tsarisa eka vuhundzuluxeri bya alpha bya app';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Minyikelo & Data ya Swikumiwa';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'U nga kombisi Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ku engeteriwile hi $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

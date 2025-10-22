@@ -9,6 +9,9 @@ class AppLocalizationsKa extends AppLocalizations {
   AppLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
+  String get app_name => 'ღია საკვების ფაქტები';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsKa extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsKa extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'სკანირება';
@@ -978,6 +974,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'აირჩიეთ უფრო ზუსტი კატეგორია';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsKa extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'თვისებები არ არის';
+
+  @override
+  String get product_tags_explanation =>
+      'პროდუქტზე თვისებების (გასაღები/მნიშვნელობა) დამატებით, თქვენ ხელს უწყობთ მის გამდიდრებას.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'ჩემი ანგარიშის წაშლა';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'ექსპერიმენტულ ფუნქციებსა და განვითარების ინსტრუმენტებზე წვდომა';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'გახსენით Open Prices ვებსაიტზე';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsKa extends AppLocalizations {
   String get prices_list_add_new_price => 'დაამატეთ\nახალი ფასი';
 
   @override
+  String get prices_list_empty_title => 'ფასი ჯერ არ არის!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'დაამატე პირველი:\n**ჩეკის** ან **ფასის** სკანირებით!';
+
+  @override
   String get prices_entry_shop_not_found => 'უცნობი მაღაზია';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'იხილეთ ამ პროდუქტის ყველა ფასი';
 
   @override
   String get prices_entry_menu_open_proof => 'მტკიცებულების ნახვა';
@@ -2728,9 +2749,23 @@ class AppLocalizationsKa extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'კონტრიბუტორი ჯერ არ არის!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'იყავით პირველი, ვინც დაამატებს ფასს!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'მაღაზია ჯერ არ არის!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'იყავით პირველი, ვინც დაამატებს ფასს!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2870,17 @@ class AppLocalizationsKa extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'ჯერ არანაირი მტკიცებულება!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'დაიწყეთ **ჩეკის** ან **ფასის** ფოტოს დამატებით!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2959,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'მონაცემები';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2971,16 @@ class AppLocalizationsKa extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'აპლიკაციის ენის გადაყენება';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'ბარათების დამატება';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'გადართვა prices.openfoodfacts.org (PROD)-სა და სატესტო გარემოს შორის';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3024,11 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4030,33 @@ class AppLocalizationsKa extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'მწვანე ქულა A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'მწვანე ქულა B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'მწვანე ქულა C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'მწვანე ქულა D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'მწვანე ქულა E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'უცნობი მწვანე ქულა';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'მწვანე ქულა არ გამოიყენება';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'ულტრა-დამუშავებული საკვები - NOVA ჯგუფები';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4153,6 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4260,280 @@ class AppLocalizationsKa extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'რა არის მწვანე ქულა?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'მწვანე ქულა არის ლოგო, რომლის მიზანია გაცნობოთ **საკვების გარემოზე ზემოქმედების** შესახებ.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'ფერის კოდი მერყეობს მუქი მწვანედან (**A+**) **ყველაზე ნაკლებად შთამბეჭდავი** პროდუქტებისთვის მუქი წითელიდან (**F**) **ყველაზე შთამბეჭდავი** პროდუქტებისთვის.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score-ის ლოგოები';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'ძირითადი: სასიცოცხლო ციკლის შეფასება (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'საკვების კატეგორიების სამეცნიერო შეფასება';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'თითოეული პროდუქტის კატეგორიისთვის, **საორიენტაციო** ქულა დგინდება Agribalyse-ის გარემოსდაცვითი მონაცემთა ბაზიდან (შემუშავებულია ADEME-სა და INRAE-ს მიერ) მიღებული მონაცემების გამოყენებით.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**სასიცოცხლო ციკლის ანალიზი** არის სტანდარტიზებული შეფასების მეთოდი მრავალსაფეხურიანი და მრავალკრიტერიუმიანი გარემოსდაცვითი შეფასების ჩასატარებლად.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**ზომავს:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 წარმოების ეტაპი';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      'გარემოზე ზემოქმედების 14 ინდიკატორი';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'კლიმატის ცვლილება/ნახშირბადის კვალი';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'ოზონის შრის გათხელება';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'იონიზირებული გამოსხივება';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'მიწა';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'წყლისა და ენერგიის გამოყენება';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'ჰაერის დაბინძურება';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'ზღვის და მტკნარი წყალი (ნაწილაკები, მჟავიანობა, ევტროფიკაცია)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'რესურსების გამოფიტვა.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'ბონუსები და ჯარიმები';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'კატეგორიაში უკეთესი პროდუქტების დასაჯილდოებლად, ჩვენ ვიყენებთ ბონუსებსა და ჯარიმებს რამდენიმე კრიტერიუმის საფუძველზე:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'ბონუსი გაიცემა ინგრედიენტების წარმოშობის მიხედვით. ეს ბონუსი ითვალისწინებს ტრანსპორტირებაზე ზემოქმედებას და ასევე თითოეული მწარმოებლის ქვეყნის გარემოსდაცვით პოლიტიკას.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      '„მწვანე ქულის“ ზუსტად გამოსათვლელად აუცილებელია ისეთი ინფორმაციის ქონა, რომელიც შეფუთვაზე აუცილებლად არ არის მითითებული (მაგალითად, წარმომავლობა და თითოეული ინგრედიენტის ზუსტი პროცენტული მაჩვენებელი) ან რომელიც იშვიათად არის ხელმისაწვდომი გამოსაყენებელი ფორმით (მაგალითად, შეფუთვის ყველა კომპონენტის სია გამოყენებული პლასტმასის ზუსტი ტიპებით).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'საშუალო მნიშვნელობები გამოიყენება მაშინ, როდესაც ეს ინფორმაცია ჯერ არ არის ხელმისაწვდომი, თუმცა ახლა ყველას მოვუწოდებთ, დაგვეხმარონ ამ ინფორმაციის შეგროვებაში, რაც ძალიან სასარგებლო იქნება როგორც მწვანე ქულისთვის, ასევე მრავალი სხვა გამოყენებისთვის.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'როგორ შეუძლიათ მოქალაქეებს დახმარება';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'ყველა მოქალაქეს შეუძლია დაგვეხმაროს პროდუქტებზე არსებული ან მათგან გამოტანილი ინფორმაციის შეგროვებასა და სტრუქტურირებაში, მაგალითად, შეფუთვაზე არსებული ინფორმაციის: Mission Emballages: ყველა საკვები პროდუქტის შეფუთვის მასშტაბური კოლაბორაციული ინვენტარი (ფრანგულად)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'როგორ შეუძლიათ მწარმოებლებს დახმარება';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'მწარმოებლებს შეუძლიათ გამოგვიგზავნონ თავიანთი ინფორმაცია პირდაპირ ჩვენი უფასო პლატფორმის საშუალებით, რომელიც მწარმოებლებისთვისაა განკუთვნილი.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'რომელი პროდუქტია უკეთესი პლანეტისთვის?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'შეიძლება ძნელი სათქმელია';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'მდგრადი საკვების არჩევა ერთ-ერთი ყველაზე ძლიერი რამაა, რისი გაკეთებაც კლიმატისთვის შეგვიძლია, რადგან **ჩვენი გლობალური კვების სისტემა პასუხისმგებელია სათბურის გაზების ყველა გამონაბოლქვის მეოთხედზე**.\n(წყარო: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'შენ გაქვს ძალა!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'კარგი ამბავი ის არის, რომ ეს ცვლილებების განხორციელების ძლიერ გზას გვაძლევს.\n**თითოეული ჩვენგანი ყოველწლიურად დაახლოებით 1000 კვებას მიირთმევს**. ეს 1000 შესაძლებლობაა **პლანეტისთვის უკეთესი მომავლის ასარჩევად**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'ეხმარება პასუხისმგებლობის აღებასა და გადაწყვეტილების მიღებაში';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'მდგრადი საკვების არჩევა შეიძლება რთულად მოგეჩვენოთ. ეტიკეტები დამაბნეველია და ინფორმაცია ხშირად აკლია. Green-Score შეიქმნა მისი გასამარტივებლად, რაც გთავაზობთ **მკაფიო**, **მეცნიერებაზე დაფუძნებულ** და **გამჭვირვალე** გარემოსდაცვით რეიტინგს საკვები პროდუქტებისთვის, ზუსტად იქ, სადაც გჭირდებათ: შოპინგის დროს.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'გამჭვირვალობა';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'საკუთრების ეტიკეტებისგან განსხვავებით, მწვანე ქულის გამოთვლა **სრულიად ღიაა** და მისი **გადამოწმება ნებისმიერს** შეუძლია.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'რა არის ულტრა-დამუშავება?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA ჯგუფები გაცნობებენ საკვების გადამუშავების დონის შესახებ.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA კლასიფიკაცია საშუალებას იძლევა, საკვები პროდუქტები დაიყოს **4 ჯგუფად** მათი **სამრეწველო დამუშავების ხარისხის** მიხედვით (მინიმალურად დამუშავებული ან დაუმუშავებელი საკვები, კულინარიული ინგრედიენტები, დამუშავებული საკვები, ულტრადამუშავებული საკვები).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA-ს ლოგოები';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA ჯგუფი';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'არსებობს 4 NOVA ჯგუფი, რომელთაგან ყველაზე პრობლემურია მე-4 ჯგუფი - ულტრადამუშავებული საკვები.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'მინიმალურად დამუშავებული ან დაუმუშავებელი საკვები';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'დაუმუშავებელი (ანუ ნატურალური) საკვები არის მცენარეების (თესლი, ნაყოფი, ფოთლები, ღეროები, ფესვები) ან ცხოველების (კუნთები, სუბპროდუქტები, კვერცხი, რძე), ასევე სოკოები, წყალმცენარეები და წყალი, ბუნებისგან გამოყოფის შემდეგ.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'დამუშავებული კულინარიული ინგრედიენტები, როგორიცაა ზეთები, კარაქი, შაქარი და მარილი, არის ნივთიერებები, რომლებიც მიიღება პირველი ჯგუფის საკვები პროდუქტებიდან ან ბუნებიდან ისეთი პროცესების მეშვეობით, როგორიცაა დაპრესილი, რაფინირებული, დაფქული, დაფქული და გაშრობა.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'გადამუშავებული საკვები, როგორიცაა ბოთლში დაკონსერვებული ბოსტნეული, დაკონსერვებული თევზი, ხილი სიროფში, ყველი და ახლად გამომცხვარი პური, ძირითადად მზადდება მე-2 ჯგუფის პროდუქტებში მარილის, ზეთის, შაქრის ან სხვა ნივთიერებების დამატებით. პროცესები მოიცავს სხვადასხვა შენახვის ან მომზადების მეთოდს, ხოლო პურისა და ყველის შემთხვევაში, უალკოჰოლო დუღილს. გადამუშავებული საკვების უმეტესობა შეიცავს ორ ან სამ ინგრედიენტს და ამოსაცნობია, როგორც პირველი ჯგუფის პროდუქტების მოდიფიცირებული ვერსიები. მათი მირთმევა შესაძლებელია დამოუკიდებლად ან, უფრო ხშირად, სხვა საკვებთან ერთად.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'ულტრა-დამუშავებული საკვები, როგორიცაა გამაგრილებელი სასმელები, ტკბილი ან მარილიანი შეფუთული საჭმელები, აღდგენილი ხორცპროდუქტები და წინასწარ მომზადებული გაყინული კერძები, არ არის მხოლოდ მოდიფიცირებული საკვები, არამედ ფორმულირებები, რომლებიც ძირითადად ან მთლიანად მზადდება საკვებიდან და დანამატებიდან მიღებული ნივთიერებებისგან, თითქმის არ შეიცავს ან საერთოდ არ შეიცავს პირველი ჯგუფის საკვებს. ამ ფორმულირებების ინგრედიენტები, როგორც წესი, მოიცავს დამუშავებულ საკვებში არსებულ ინგრედიენტებს, როგორიცაა შაქარი, ზეთები, ცხიმები ან მარილი. თუმცა, ულტრა-დამუშავებული პროდუქტები ასევე შეიცავს ენერგიისა და საკვები ნივთიერებების სხვა წყაროებს, რომლებიც ჩვეულებრივ არ გამოიყენება კულინარიულ პრეპარატებში. ზოგიერთი მათგანი პირდაპირ მიიღება საკვებიდან, როგორიცაა კაზეინი, ლაქტოზა, შრატი და გლუტენი.';
+
+  @override
+  String get guide_nova_explanations_title => 'ულტრა-დამუშავების პრობლემები';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'საკვები ინგრედიენტების ექსტრემალური დამუშავება';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'ბევრი მათგანი მიიღება საკვები კომპონენტების შემდგომი დამუშავებით, როგორიცაა ჰიდროგენიზებული ან ინტერესტერიფიცირებული ზეთები, ჰიდროლიზებული ცილები, სოიოს ცილის იზოლატი, მალტოდექსტრინი, ინვერტული შაქარი და მაღალი ფრუქტოზის შემცველი სიმინდის სიროფი.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'დანამატები, რომლებიც წმინდა საკვების უვნებლობას სცილდება';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'ულტრა-დამუშავებულ საკვებში არსებული დანამატები მოიცავს ისეთ დანამატებს, რომლებიც ასევე გამოიყენება დამუშავებულ საკვებში, როგორიცაა კონსერვანტები, ანტიოქსიდანტები და სტაბილიზატორები. მხოლოდ ულტრა-დამუშავებულ პროდუქტებში არსებული დანამატების კლასები მოიცავს ისეთ დანამატებს, რომლებიც გამოიყენება საკვების სენსორული თვისებების იმიტაციის ან გაძლიერების ან საბოლოო პროდუქტის არასასიამოვნო ასპექტების დასაფარად. ეს დანამატები მოიცავს საღებავებს და სხვა საღებავებს, ფერის სტაბილიზატორებს; არომატიზატორებს, გემოს გამაძლიერებლებს, უშაქრო დამატკბობლებს; და გადამუშავების დამხმარე საშუალებებს, როგორიცაა კარბონატული, გამამკვრივებელი, შემავსებელი და შემავსებლის საწინააღმდეგო აგენტები, ქაფის საწინააღმდეგო, შეწებების საწინააღმდეგო და გლაზურის აგენტები, ემულგატორები, სეკვესტრანტები და დამატენიანებელი საშუალებები.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'დამუშავება, რომლის გაკეთებაც სახლში არ შეგიძლიათ';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'როგორც წესი, მრავალი ინგრედიენტის შესაერთებლად და საბოლოო პროდუქტის (აქედან გამომდინარე, „ულტრა-დამუშავებული“) შესაქმნელად გამოიყენება პროცესების მრავალი თანმიმდევრობა. პროცესები მოიცავს რამდენიმეს, რომლებსაც ადგილობრივი ეკვივალენტები არ აქვთ, როგორიცაა ჰიდროგენიზაცია და ჰიდროლიზება, ექსტრუზია და ჩამოსხმა, ასევე წინასწარი დამუშავება შესაწვავად.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'ულტრა-დამუშავების მტაცებლური და ფინანსური ასპექტები';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'ულტრა-დამუშავების საერთო მიზანია ბრენდირებული, მოსახერხებელი (ხანგრძლივი, მოხმარებისთვის მზა), მიმზიდველი (ჰიპერ-გემრიელი) და მაღალმომგებიანი (დაბალი ღირებულების ინგრედიენტები) საკვები პროდუქტების შექმნა, რომლებიც შექმნილია ყველა სხვა საკვები ჯგუფის ჩასანაცვლებლად. ულტრა-დამუშავებული საკვები პროდუქტები, როგორც წესი, მიმზიდველად არის შეფუთული და ინტენსიურად იყიდება ბაზარზე.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4846,13 @@ class AppLocalizationsKa extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'ფასი ხელმისაწვდომი არ არის';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'იყავი პირველი, ვინც შეიტანს წვლილს!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4891,11 @@ class AppLocalizationsKa extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'ექსტრაქცია მიმდინარეობს…';
+
+  @override
+  String get nutrition_facts_extract_successful =>
+      'ექსტრაქცია წარმატებით დასრულდა';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5026,507 @@ class AppLocalizationsKa extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'მართეთ თქვენი ფასების პარამეტრები';
+
+  @override
+  String get preferences_card_project => 'ღია საკვების ფაქტების პროექტი';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'ჩემი სტატისტიკა';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'თარგმნეთ, გააუმჯობესეთ ჩვენი ხელსაწყოები…';
+
+  @override
+  String get preferences_connect_title => 'დაკავშირება';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'დაგვიკავშირდით, ან გამოგვყევით სოციალურ მედიაში';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'დაგვეხმარეთ მსოფლიოს მილიონობით მომხმარებლის ინფორმირებაში';
+
+  @override
+  String get preferences_card_help => 'დახმარება და მხარდაჭერა';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'მიიღეთ პასუხები თქვენს კითხვებზე';
+
+  @override
+  String get logged_out => 'გამოსული';
+
+  @override
+  String get preferences_app_bar_message => 'გმადლობთ, რომ ჩვენი წევრი ხართ!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'ყველა სტატისტიკის ნახვა';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'მოძებნეთ $provider \"$keyword\"-სთვის';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'პარამეტრის ძიება (მაგ. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'ხელმისაწვდომობა: emoji-ს ჩვენება';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'ხელმისაწვდომობა: ფერების წაშლა';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'იურიდიული ინფორმაცია';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'გამოყენების პირობები, კონფიდენციალურობის პოლიტიკა და სხვა';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts არის საკვები პროდუქტების მონაცემთა ბაზა, **შექმნილი ყველასთვის და ყველასთვის**.\nმისი გამოყენება შეგიძლიათ საკვების უკეთესი არჩევანის გასაკეთებლად და რადგან ეს **ღია მონაცემებია**, ნებისმიერს შეუძლია **მისი ხელახლა გამოყენება ნებისმიერი მიზნით**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'ლიცენზიები';
+
+  @override
+  String get preferences_about_app_title => 'აპლიკაციის შესახებ';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'ტექნიკური ინფორმაცია, დეველოპერის ინფორმაცია და სხვა';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'ვერსიის ნომერი';
+
+  @override
+  String get preferences_scanner_title => 'სკანერი';
+
+  @override
+  String get preferences_app_store => 'აპლიკაციების მაღაზია';
+
+  @override
+  String get preferences_app_system_settings => 'სისტემის პარამეტრები';
+
+  @override
+  String get preferences_source_code => 'წყაროს კოდზე წვდომა';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'და დაიწყეთ მილიონობით ადამიანზე გავლენის მოხდენა';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'რჩევები';
+
+  @override
+  String get tips_discover_nutriscore => 'აღმოაჩინეთ ახალი Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'ღია საკვების ფაქტების ვებსაიტზე';
+
+  @override
+  String get preferences_manage_account_title => 'ჩემი ანგარიშის მართვა';
+
+  @override
+  String get preferences_manage_account_tooltip => 'თქვენი ანგარიშის მართვა';
+
+  @override
+  String get preferences_change_password_title => 'პაროლის შეცვლა';
+
+  @override
+  String get preferences_danger_zone => 'საფრთხის ზონა';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'თქვენი ყველა წვლილი დაიკარგება';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'აპლიკაციის პარამეტრები';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'ძალიან ექსპერიმენტული გზა პროდუქტების ოფლაინ სკანირებისთვის';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'სერვერიდან ყველა პროდუქტის განახლება';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'გთხოვთ, თავი შეიკავოთ ამის გაკეთებისგან, თუ აბსოლუტურად აუცილებელი არ არის';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'დემო რეჟიმი';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'ბარათების დამატება სკანერში';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'სკანერს 3 ნიმუშის პროდუქტს უმატებს';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'ფოლკსონომიის მასპინძელი';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'მასპინძელი: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'ხელმისაწვდომობის ექსპერიმენტები';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'ფასების მიხედვით მრავალი პროდუქტის არჩევანი';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'მომხმარებლის მიერ დალაგებული ცოდნის პანელები';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'მდებარეობის ძიებაზე დროებითი წვდომა';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 ან 3 პროდუქტის ერთმანეთის გვერდიგვერდ შედარება';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'პროდუქტების სიის იმპორტი';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'ქულები და მეთოდოლოგიები';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'გაიგეთ, როგორ გამოითვლება Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'მეთოდოლოგიაში ძირითადი ცვლილებების გაცნობა';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'აღმოაჩინეთ ღია კვების ფაქტები';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'ხშირად დასმული კითხვები - ხშირად დასმული კითხვები';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'არასამთავრობო ორგანიზაცია „ღია საკვების ფაქტები“';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'მიიღეთ საზოგადოების განახლებები';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'იყავით ინფორმირებული აპლიკაციისა და საზოგადოების სიახლეების შესახებ';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'ჩაერთეთ ჩვენს ერთ-ერთ ვირტუალურ ღონისძიებაში';
+
+  @override
+  String get preferences_connect_blog_title => 'ღია კვების ფაქტების ბლოგი';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'მიიღეთ უახლესი ამბები, როგორც კი ისინი მოხდება';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'მიიღეთ დახმარება საზოგადოებისგან';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'დაგვეხმარეთ აპლიკაციის გაუმჯობესებაში';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'გამოგვიგზავნეთ გამართვის ინფორმაცია';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'გამოგვიგზავნეთ ელ.წერილი დეტალური გამართვის ინფორმაციით';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'გამოგვიგზავნეთ გამოხმაურება აპლიკაციის შესახებ';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'დაგვეხმარეთ აპლიკაციის მომავლის ჩამოყალიბებაში';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'მიიღეთ მონაწილეობა აპლიკაციის გამოკითხვაში';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'დაგვეხმარეთ გავიგოთ, რა უნდა შევქმნათ შემდეგ';
+
+  @override
+  String get preferences_connect_professionals_title => 'პროფესიონალები';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'სრულიად უფასო, უზრუნველყოფს ზუსტ მონაცემებს 500 აპლიკაციისა და მილიონობით მომხმარებლისთვის. თვითმომსახურება, თავსებადია თქვენს PIM-თან ან ცხრილებთან (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'დასაწყებად დაგვიკავშირდით';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'მიიღეთ ყველა საჭირო მასალა თქვენი ანგარიშისთვის';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'დაგვიკავშირდით პრესასთან დაკავშირებული შეკითხვებისთვის ან თქვენი ანგარიშის შესახებ ინფორმაციის მისაღებად';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'გახდი აქტიური მოხალისე';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'განვითარება, კომუნიკაცია, დიზაინი… ნებისმიერი სახის მოხალისეობა ან ექსპერტიზა მისასალმებელია!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'აღმოაჩინეთ რამდენიმე გზა, რომლითაც შეგიძლიათ წვლილი შეიტანოთ';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'მობილური აპლიკაციის შემუშავება';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'ისწავლეთ, როგორ შეიტანოთ წვლილი პროგრამული უზრუნველყოფის შემუშავებაში';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'ყოველდღიური არასტაბილური აწყობები, სრულიად ახალი ფუნქციები';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'გაზარდეთ თქვენი ადგილობრივი საზოგადოება';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'დახმარება პროგრამულ უზრუნველყოფასთან, შინაარსთან, ინგრედიენტების ანალიზთან დაკავშირებულ თარგმანებთან დაკავშირებით';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'ჩვენ მოვამზადეთ პატარა შაბლონი, რომელიც დაგეხმარებათ :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'მარტივი ნაბიჯები თქვენს ქვეყანაში საკვების გამჭვირვალობის გასაზრდელად';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'შემოუერთდით მონაცემთა ხარისხის გუნდს';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'შემოგვიერთდით, რათა უზრუნველყოთ მონაცემთა ბაზის სისრულე და სიზუსტე';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'დამატებული პროდუქტები';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'ახალი პროდუქტები, რომლებიც დავამატე Open Food Facts-ში';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'პროდუქტები, რომლებიც უნდა დავასრულო';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'ყველა არასრული პროდუქტი';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'ჩემი ფასები, ჩემი მტკიცებულებები…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'პროდუქტები, რომელთა დასრულებაშიც დახმარება შეგიძლიათ';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'დაგვეხმარეთ თქვენს ქვეყანაში Nutri-Score-ისა და Green-Score-ის გამოთვლაში';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'ჩემს მიერ შეტანილი ფასები';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'ფასების ეტიკეტები და ქვითრები';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'გადაუღეთ ფოტოები თქვენს ქვითრებს და დაასკანირეთ მასთან დაკავშირებული შტრიხკოდები';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'მაღაზიაში ფასების ფოტოების გადაღება';
+
+  @override
+  String get preferences_prices_newest_title => 'უახლესი ფასები';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'ღია ფასების საზოგადოების მიერ დამატებული უახლესი ფასები';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'კონტრიბუტორები ყველაზე მეტი ფასით';
+
+  @override
+  String get preferences_prices_metrics_title => 'ღია ფასის მეტრიკა';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'მიჰყევით პროექტის ევოლუციას';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'წვლილის შეტანის გზები';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'დაადასტურეთ თქვენს მიერ ან სხვების მიერ დამატებული ფასები, ხელოვნური ინტელექტის დახმარებით';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'სწრაფად დაამატეთ თქვენი კამერის ალბომიდან თაროების მრავალი ქვითარი ან ფოტო';
+
+  @override
+  String get preferences_prices_challenges_title => 'ყოველთვიური გამოწვევები';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'მიიღეთ მონაწილეობა ყოველთვიურ თემატურ ქვესტებში ფასების შესაგროვებლად';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'დაიბრუნეთ თქვენი ლოიალობის მონაცემები';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'შეიტყვეთ, თუ როგორ მოითხოვოთ თქვენი მონაცემები';
+
+  @override
+  String get preferences_page_customize_app_title => 'აპლიკაციის პერსონალიზება';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'წვლილი შეიტანეთ პროექტში';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'მარტივი გზები, რათა დავეხმაროთ Open Food Facts-ს';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'ქულების მეთოდოლოგიები, დახმარება და სხვა პროექტის შესახებ';
+
+  @override
   String get product_edit_robotoff_positive_button => 'შეთავაზების მიღება';
 
   @override
@@ -4738,4 +5571,103 @@ class AppLocalizationsKa extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'ავთენტიფიკაცია ვერ მოხერხდა, მტკიცებულებების მოძიება ვერ მოხერხდა';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count $total მტკიცებულებებიდან';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count $total კონტრიბუტორიდან';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count $total მდებარეობიდან';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count მდებარეობა';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'ცვლილებების ასამოქმედებლად, გთხოვთ, გადატვირთოთ აპლიკაცია.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'გრაფიკული ინტერფეისი';
+
+  @override
+  String get preferences_app_settings_media_title => 'მედია';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'ღია საკვების ფაქტების ლაბორატორიები';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'თქვენს ენაზე გადმოიტანეთ ღია საკვების ფაქტები';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'დარეგისტრირდით აპლიკაციის ალფა ვერსიაში';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'წვლილი და პროდუქტის მონაცემები';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'არ აჩვენო ფოლკსონომია';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'დამატებულია $created-ში';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

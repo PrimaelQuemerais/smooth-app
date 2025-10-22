@@ -9,6 +9,9 @@ class AppLocalizationsIs extends AppLocalizations {
   AppLocalizationsIs([String locale = 'is']) : super(locale);
 
   @override
+  String get app_name => 'Opna matarstaðreyndir';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsIs extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Veldu nákvæmari flokk';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsIs extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Engar eignir';
+
+  @override
+  String get product_tags_explanation =>
+      'Með því að bæta eiginleikum (lykil/gildi) við vöru hjálpar þú til við að auðga hana.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Eyða reikningnum mínum';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Aðgangur að tilraunaeiginleikum og þróunartólum';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Opið á vefsíðu Opna verðlagningar';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get prices_list_add_new_price => 'Bæta við nýju verði\n';
 
   @override
+  String get prices_list_empty_title => 'Ekkert verð ennþá!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Vertu fyrstur til að bæta við einum:\nMeð því að skanna **kvittun** eða **verðmiða**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Óþekkt verslun';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Skoða öll verð fyrir þessa vöru';
 
   @override
   String get prices_entry_menu_open_proof => 'Sjá sönnun';
@@ -2728,9 +2749,23 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Enginn þátttakandi ennþá!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Vertu fyrstur til að bæta við verði!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Engin búð ennþá!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Vertu fyrstur til að bæta við verði!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2870,17 @@ class AppLocalizationsIs extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Engin sönnun ennþá!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Byrjaðu á að bæta við mynd af **kvittun** eða **verðmiða**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2959,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2971,16 @@ class AppLocalizationsIs extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Endurstilla forritstungumál';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Bæta við kortum';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Skipta á milli prices.openfoodfacts.org (PROD) og prófunarumhverfis';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3024,11 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4030,31 @@ class AppLocalizationsIs extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Grænt stig A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Grænt stig B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Grænt stig C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Grænt stig D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Grænt stig E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Óþekkt grænt stig';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new => 'Grænt stig gildir ekki';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Ofurunninn matur - NOVA hópar';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4151,6 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4258,278 @@ class AppLocalizationsIs extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Hvað er Græna stigagjöfin?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Græna stigið er lógó sem miðar að því að upplýsa þig um **umhverfisáhrif matvæla**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Litakóðinn er breytilegur frá dökkgrænum (**A+**) fyrir vörurnar sem hafa **minnst áhrif** til dökkrauðum (**F**) fyrir vörurnar sem hafa **mest áhrif**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score lógóin';
+
+  @override
+  String get guide_greenscore_lca_title => 'Kjarninn: Lífsferilsmat (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Vísindalegt mat á matvælaflokkum';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Fyrir hvern vöruflokk er ákveðið viðmiðunarstig með því að nota gögn úr umhverfisgagnagrunninum Agribalyse (hannaður af ADEME og INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Lífsferilsgreining** er stöðluð matsaðferð til að framkvæma fjölþrepa og fjölþátta umhverfismat.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Það mælir:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 framleiðsluskref';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 vísbendingar um umhverfisáhrif';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Loftslagsbreytingar/kolefnisspor';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Þynning ósonlagsins';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Jónandi geislun';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Land';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Vatns- og orkunotkun';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Loftmengun';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Sjávar- og ferskvatn (agnir, súrnun, ofauðgun)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Tæming auðlinda.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bónusar og refsingar';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Til að verðlauna betri vörur innan tiltekins flokks, beitum við síðan bónusum og refsingum byggðum á nokkrum viðmiðum:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Bónus er veittur út frá uppruna innihaldsefnanna. Þessi bónus tekur mið af áhrifum á flutninga og einnig umhverfisstefnu lands hvers framleiðanda.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Til að reikna út Græna stigið nákvæmlega er nauðsynlegt að hafa upplýsingar sem eru ekki endilega tilgreindar á umbúðunum (eins og uppruni og nákvæmt hlutfall hvers innihaldsefnis) eða sem eru sjaldan tiltækar í nothæfu formi (eins og listi yfir alla íhluti umbúðanna ásamt nákvæmum tegundum plasts sem notaðar eru).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Meðalgildi eru notuð þegar þessar upplýsingar eru ekki enn tiltækar, en við köllum nú á alla til að hjálpa okkur að safna þessum upplýsingum sem verða mjög gagnlegar fyrir Green-Score en einnig til margra annarra nota.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Hvernig borgarar geta hjálpað';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Allir borgarar geta hjálpað okkur að safna og skipuleggja upplýsingar sem eru að finna á vörum eða sem hægt er að álykta út frá þeim, svo sem upplýsingar á umbúðum: Mission Emballages: stórfelld sameiginleg skrá yfir umbúðir fyrir allar matvæli (á frönsku).';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Hvernig framleiðendur geta hjálpað';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Framleiðendur geta sent okkur upplýsingar sínar beint í gegnum ókeypis vettvang okkar fyrir framleiðendur.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Hvaða vara er betri fyrir plánetuna?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Það getur verið erfitt að segja til um það';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Að velja sjálfbæran mat er eitt það öflugasta sem við getum gert fyrir loftslagið, þar sem **matvælakerfi okkar á heimsvísu ber ábyrgð á meira en fjórðungi allrar losunar gróðurhúsalofttegunda**.\n(Heimild: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Þú hefur völdin!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Góðu fréttirnar eru þær að þetta gefur okkur öfluga leið til að skapa breytingar.\n**Hvert og eitt okkar borðar um 1.000 máltíðir á hverju ári**. Það eru 1.000 tækifæri til að **velja betri framtíð fyrir plánetuna**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Hjálpar til við að taka ábyrgð og taka ákvarðanir';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Það getur virst flókið að velja sjálfbæran mat. Merkingar eru ruglingslegar og upplýsingar vantar oft. Græna einkunnin var búin til til að einfalda þetta og gefa þér **skýra**, **vísindalega** og **gagnsæja** umhverfismat fyrir matvæli, nákvæmlega þar sem þú þarft á því að halda: þegar þú verslar.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Gagnsæi';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ólíkt einkaleyfisvernduðum merkjum er útreikningur Græna stigsins **algjörlega opinn** og hver sem er getur **staðfest hann**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Hvað er ofurvinnsla?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA hóparnir upplýsa þig um stig matvælavinnslu.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA flokkunin gerir kleift að flokka matvæli í **fjóra hópa** byggt á **gráðu iðnaðarvinnslu** (lágt unnar eða óunnar matvörur, hráefni í matargerð, unnar matvörur, ofurunnar matvörur).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA lógóin';
+
+  @override
+  String get guide_nova_groups_title => 'Fjórir NOVA hóparnir';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Það eru fjórir NOVA hópar, og sá vandasamasti er hópur 4 - Ofurunnin matvæli.';
+
+  @override
+  String get guide_nova_groups_arg1_title => 'Lítið unnar eða óunnar matvörur';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Óunnin (eða náttúruleg) matvæli eru ætir hlutar plantna (fræja, ávaxta, laufblaða, stilka, rætur) eða dýra (vöðva, innmat, eggja, mjólkur), sem og sveppir, þörungar og vatn, eftir að hafa verið aðskilin frá náttúrunni.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Unnar hráefnisuppsetningar, svo sem olíur, smjör, sykur og salt, eru efni sem eru fengin úr matvælum í 1. flokki eða úr náttúrunni með ferlum eins og pressun, hreinsun, kvörnun, fræsingu og þurrkun.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Unninn matur, svo sem grænmeti á flöskum, niðursoðinn fiskur, ávextir í sírópi, ostar og nýbakað brauð, er aðallega framleiddur með því að bæta salti, olíu, sykri eða öðrum efnum úr 2. flokki við matvæli í 1. flokki. Ferlarnir fela í sér ýmsar varðveislu- eða eldunaraðferðir, og í tilviki brauðs og osta, óáfenga gerjun. Flest unnin matvæli innihalda tvö eða þrjú innihaldsefni og eru auðþekkjanleg sem breyttar útgáfur af matvælum í 1. flokki. Þau má borða eitt og sér eða, algengara, í samsetningu við önnur matvæli.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ofurunnar matvörur, svo sem gosdrykkir, sætar eða bragðmiklar pakkaðar snarlvörur, endurunnar kjötvörur og tilbúnir frosnir réttir, eru ekki bara breyttar matvörur heldur blöndur sem eru að mestu eða öllu leyti gerðar úr efnum sem eru unnin úr matvælum og aukefnum, með litlum sem engum óskemmdum matvælum úr flokki 1. Innihaldsefni í þessum blöndum innihalda venjulega þau sem einnig finnast í unnum matvælum, svo sem sykur, olíur, fita eða salt. Hins vegar innihalda ofurunnar vörur einnig aðrar orkugjafar og næringarefni sem venjulega eru ekki notuð í matreiðslu. Sum þessara eru unnin beint úr matvælum, svo sem kasein, laktósa, mysu og glúten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Vandamálin með ofurvinnslu';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Öfgafull vinnsla á innihaldsefnum matvæla';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Margar þeirra eru fengnar úr frekari vinnslu á innihaldsefnum matvæla, svo sem hertum eða interesteruðum olíum, vatnsrofnum próteinum, sojapróteineinangrun, maltódextrín, invertsykri og maíssírópi með háu frúktósainnihaldi.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Aukefni sem fara lengra en hreint matvælaöryggi';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Aukefni í öfgafullum matvælum eru meðal annars þau sem einnig eru notuð í unnum matvælum, svo sem rotvarnarefni, andoxunarefni og bindiefni. Meðal aukefna sem finnast eingöngu í öfgafullum vörum eru þau sem notuð eru til að líkja eftir eða auka skynjunareiginleika matvæla eða til að dylja óþægilega þætti fullunninnar vöru. Þessi aukefni eru meðal annars litarefni og aðrir litir, litabindandi efni; bragðefni, bragðbætandi efni, sætuefni án sykurs; og hjálparefni eins og kolsýrandi efni, stinnandi efni, fyllingarefni og efni til að draga úr fyllingu, froðumyndandi efni, kekkjavarnarefni og gljáefni, ýruefni, bindiefni og rakabindandi efni.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Vinnsla sem þú getur ekki gert heima';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Fjölmargar ferlar eru notaðir til að sameina venjulega mörg innihaldsefni og búa til lokaafurðina (þess vegna „öfgafullunnið“). Ferlarnir fela í sér nokkrar sem ekki eiga sér innlenda sambærilegar, svo sem vetnun og vatnsrof, útpressun og mótun, og forvinnsla fyrir steikingu.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Rándýr og fjárhagslegir þættir ofurvinnslu';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Megintilgangur öfgavinnslu er að skapa vörumerkjaðar, þægilegar (endingargóðar, tilbúnar til neyslu), aðlaðandi (ofurbragðgóðar) og mjög arðbærar (ódýr hráefni) matvörur sem eru hannaðar til að koma í stað allra annarra matvælaflokka. Ofurunnar matvörur eru yfirleitt pakkaðar á aðlaðandi hátt og markaðssettar á öflugan hátt.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4842,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ekkert verð tiltækt';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Vertu fyrstur til að leggja þitt af mörkum!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4887,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Útdráttur í gangi…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Útdráttur tókst';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5021,500 @@ class AppLocalizationsIs extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Stjórnaðu verðstillingum þínum';
+
+  @override
+  String get preferences_card_project => 'Verkefnið Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Tölfræði mín';
+
+  @override
+  String get preferences_contribute_subtitle => 'Þýða, bæta verkfæri okkar…';
+
+  @override
+  String get preferences_connect_title => 'Tengjast';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Hafðu samband, eða fylgdu okkur á samfélagsmiðlum';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Hjálpaðu okkur að upplýsa milljónir neytenda um allan heim';
+
+  @override
+  String get preferences_card_help => 'Hjálp og stuðningur';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Fáðu svör við spurningum þínum';
+
+  @override
+  String get logged_out => 'Útskráður';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Takk fyrir að vera einn af meðlimum okkar!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Sjá alla tölfræði';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Leitaðu $provider að \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Leita að stillingu (t.d. næringarstig)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Aðgengi: Sýna emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Aðgengi: Fjarlægja liti';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'Um forritið';
+
+  @override
+  String get preferences_legal_information_title => 'Löglegar upplýsingar';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Notkunarskilmálar, persónuverndarstefna og fleira';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts er gagnagrunnur um matvæli **sem allir búa til, fyrir alla**.\nÞú getur notað hann til að taka betri ákvarðanir um mat og þar sem hann er **opin gögn** getur hver sem er **endurnýtt hann í hvaða tilgangi sem er**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Leyfi';
+
+  @override
+  String get preferences_about_app_title => 'Um appið';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Tæknilegar upplýsingar, upplýsingar um forritara og fleira';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Útgáfunúmer';
+
+  @override
+  String get preferences_scanner_title => 'Skanni';
+
+  @override
+  String get preferences_app_store => 'App-verslun';
+
+  @override
+  String get preferences_app_system_settings => 'Kerfisstillingar';
+
+  @override
+  String get preferences_source_code => 'Aðgangur að frumkóðanum';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Og byrjaðu að hafa áhrif fyrir milljónir';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Ráðleggingar';
+
+  @override
+  String get tips_discover_nutriscore => 'Uppgötvaðu nýja Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle => 'Á vefsíðu Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Stjórna reikningnum mínum';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'Stjórnaðu reikningnum þínum';
+
+  @override
+  String get preferences_change_password_title => 'Breyta lykilorðinu mínu';
+
+  @override
+  String get preferences_danger_zone => 'Hættusvæði';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Öll framlög þín munu glatast';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Stillingar forritsins';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Mjög tilraunakennd leið til að skanna vörur án nettengingar';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Endurnýja allar vörur af netþjóninum';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Vinsamlegast forðist að gera það nema það sé algerlega nauðsynlegt';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Sýningarstilling';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Bæta kortum við skanna';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Bætir 3 sýnishornsvörum við skannann';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Þjóðsonomy gestgjafi';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Gestgjafi: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Tilraunir um aðgengi';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Fjölbreytt úrval af vörum fyrir verð';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Notandi pantaði þekkingarspjöld';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Tímabundinn aðgangur að staðsetningarleit';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Samanburður á tveimur eða þremur vörum';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Innflutningur vörulista';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Einkunnir og aðferðafræði';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Kynntu þér hvernig Nutri-Score er reiknað út';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Kynntu þér helstu breytingarnar á aðferðafræðinni';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Uppgötvaðu staðreyndir um matvæli í opnum mæli';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Algengar spurningar - Algengar spurningar';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Frjáls félagasamtökin Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Fáðu uppfærslur frá samfélaginu';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Vertu upplýstur með fréttum úr appinu og samfélaginu';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Taktu þátt með því að mæta á einn af sýndarviðburðum okkar';
+
+  @override
+  String get preferences_connect_blog_title => 'Bloggið Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Fáðu nýjustu fréttirnar um leið og þær gerast';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Fáðu hjálp frá samfélaginu';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Hjálpaðu okkur að bæta appið';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Sendu okkur villuleitarupplýsingar';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Sendið okkur tölvupóst með ítarlegum upplýsingum um villuleit';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Sendu okkur ábendingar um appið';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Hjálpaðu til við að móta framtíð appsins';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Taktu þátt í könnuninni um appið';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Hjálpaðu okkur að skilja hvað við ættum að byggja næst';
+
+  @override
+  String get preferences_connect_professionals_title => 'Fagfólk';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Algjörlega ókeypis, tryggir nákvæm gögn fyrir 500 forrit og milljónir neytenda. Sjálfsafgreiðsla, samhæft við PIM eða töflureikna (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Hafðu samband til að byrja';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Fáðu allt efni sem þú þarft fyrir skýrsluna þína';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Hafðu samband ef þú hefur fyrirspurnir frá fjölmiðlum eða vilt láta okkur vita af skýrslunni þinni';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Vertu virkur sjálfboðaliði';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Þróun, samskipti, hönnun… hvers kyns sjálfboðaliðastarf eða sérfræðiþekking er vel þegin!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Uppgötvaðu nokkrar af þeim fjölmörgu leiðum sem þú getur lagt þitt af mörkum';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'Þróun farsímaforrita';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Lærðu hvernig þú getur lagt þitt af mörkum til hugbúnaðarþróunar';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Daglegar óstöðugar byggingar, glænýir eiginleikar';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Ræktaðu samfélag þitt';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Aðstoð við þýðingar á hugbúnaði, innihaldi og innihaldsgreiningum';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Við höfum útbúið lítið sniðmát til að hjálpa þér :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Einföld skref til að auka gagnsæi í matvælum í þínu landi';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Vertu með í gagnagæðateyminu';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Taktu þátt í átaki okkar til að tryggja að gagnagrunnurinn sé tæmandi og nákvæmur';
+
+  @override
+  String get preferences_contributions_products_added_title => 'Bættar vörur';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nýjar vörur sem ég bætti við Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Vörur sem ég þarf að klára';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Allar ófullgerðar vörur';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Verð mín, sannanir mínar…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Vörur sem þú getur hjálpað til við að klára';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Hjálpaðu til við að reikna út næringargildið og græna gildið í þínu landi';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Verð sem ég lagði til';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Verðmiðar og kvittanir';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Taktu myndir af kvittunum þínum og skannaðu tengda strikamerki';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Taktu myndir af verði í búð';
+
+  @override
+  String get preferences_prices_newest_title => 'Nýjustu verð';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Nýjustu verðin sem Open Prices samfélagið hefur bætt við';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Þátttakendur með hæstu verðin';
+
+  @override
+  String get preferences_prices_metrics_title => 'Mælingar á opnu verði';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Fylgstu með þróun verkefnisins';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Leiðir til að leggja sitt af mörkum';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Staðfestu verð sem þú eða aðrir hafa bætt við með hjálp gervigreindar';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Bættu fljótt við mörgum kvittunum eða myndum af hillum úr myndavélarrúlunni þinni';
+
+  @override
+  String get preferences_prices_challenges_title => 'Mánaðarlegar áskoranir';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Taktu þátt í mánaðarlegum þemaverkefnum til að safna verðum';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Endurheimtu hollustugögnin þín';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Lærðu hvernig á að óska eftir gögnum þínum';
+
+  @override
+  String get preferences_page_customize_app_title => 'Sérsníddu appið';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Leggja sitt af mörkum til verkefnisins';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Einfaldar leiðir til að hjálpa Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Einkunnagjöf, hjálp og fleira um verkefnið';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Samþykkja tillögu';
 
   @override
@@ -4738,4 +5559,102 @@ class AppLocalizationsIs extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Auðkenning mistókst, ekki tókst að sækja sönnunargögn';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count af $total sönnunum';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count af $total framlagsaðilum';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count af $total staðsetningum';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count locations';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Endurræstu forritið til að virkja breytingarnar.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Grafískt viðmót';
+
+  @override
+  String get preferences_app_settings_media_title => 'Fjölmiðlar';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Opna rannsóknarstofur um matvælaupplýsingar';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Færðu Open Food Facts yfir á þitt tungumál';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Skráðu þig í alfaútgáfu appsins';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Framlög og vörugögn';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Ekki sýna þjóðfræði';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Bætt við $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

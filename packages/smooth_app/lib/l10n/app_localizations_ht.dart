@@ -9,6 +9,9 @@ class AppLocalizationsHt extends AppLocalizations {
   AppLocalizationsHt([String locale = 'ht']) : super(locale);
 
   @override
+  String get app_name => 'Enfòmasyon sou Manje Ouvè';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsHt extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsHt extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Chwazi yon kategori ki pi presi';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsHt extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Pa gen pwopriyete';
+
+  @override
+  String get product_tags_explanation =>
+      'Lè ou ajoute pwopriyete (kle/valè) nan yon pwodwi, ou ede anrichi li.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Efase kont mwen an';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Jwenn aksè a karakteristik eksperimantal ak zouti devlopman';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsHt extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Louvri sou sitwèb Open Prices la';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsHt extends AppLocalizations {
   String get prices_list_add_new_price => 'Ajoute yon nouvo pri\n';
 
   @override
+  String get prices_list_empty_title => 'Pa gen pri ankò!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Se pou ou premye moun ki ajoute youn:\nLè w eskane yon **resi** oubyen yon **etikèt pri**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Magazen enkoni';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Gade tout pri pou pwodui sa a';
 
   @override
   String get prices_entry_menu_open_proof => 'Gade prèv la';
@@ -2727,9 +2748,23 @@ class AppLocalizationsHt extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Pa gen kontribitè ankò!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Se pou ou premye moun ki ajoute yon pri!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Pa gen magazen ankò!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Se pou ou premye moun ki ajoute yon pri!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2869,17 @@ class AppLocalizationsHt extends AppLocalizations {
   String get prices_proof_subtitle => 'Prèv';
 
   @override
+  String get prices_proof_empty_title => 'Pa gen prèv ankò!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Kòmanse pa ajoute yon foto yon **resi** oubyen yon **etikèt pri**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Resi';
@@ -2913,13 +2958,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2970,17 @@ class AppLocalizationsHt extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Reyajiste lang aplikasyon an';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ajoute kat';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Chanje ant prices.openfoodfacts.org (PROD) ak anviwònman tès la';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3024,11 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4030,31 @@ class AppLocalizationsHt extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Nòt Vèt Enkoni';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new => 'Green-Score pa aplikab';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Manje ultra-trete - gwoup NOVA yo';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4151,6 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4258,279 @@ class AppLocalizationsHt extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Ki sa Nòt Vèt la ye?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score a se yon logo ki gen pou objektif enfòme w sou **enpak manje genyen sou anviwònman an**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Kòd koulè a varye soti nan vèt fonse (**A+**) pou pwodwi ki **mwens gen enpak** yo rive nan wouj fonse (**F**) pou pwodwi ki **gen plis enpak** yo.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logo Green-Score yo';
+
+  @override
+  String get guide_greenscore_lca_title => 'Nwayo a: Evalyasyon sik lavi (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Yon evalyasyon syantifik sou kategori manje yo';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Pou chak kategori pwodwi, yo etabli yon nòt **referans** lè l sèvi avèk done ki soti nan baz done anviwònman Agribalyse la (ADEME ak INRAE te fè l).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analiz sik lavi** se yon metòd evalyasyon estanda pou fè yon evalyasyon anviwònman an plizyè etap ak plizyè kritè.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => 'Li mezire:';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 etap pwodiksyon';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 endikatè enpak anviwònman an';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Chanjman klimatik/anprent kabòn';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Rediksyon kouch ozòn';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radyasyon iyonizan';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tè';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Itilizasyon dlo ak enèji';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Polisyon lè a';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Dlo maren ak dlo dous (patikil, asidifikasyon, eutrofizasyon)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Epuizman resous yo.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonis ak penalite';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Pou rekonpanse pi bon pwodwi nan yon kategori, nou aplike bonis ak penalite ki baze sou plizyè kritè:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Orijin egredyan yo';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Yo bay yon bonis selon orijin engredyan yo. Bonis sa a pran an kont enpak sou transpò ak politik anviwònman chak peyi pwodiktè.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Pou kalkile Green-Score la avèk presizyon, li nesesè pou gen enfòmasyon ki pa nesesèman espesifye sou anbalaj la (tankou orijin nan ak pousantaj egzak chak engredyan) oubyen ki raman disponib nan yon fòm itilizab (tankou yon lis tout konpozan anbalaj la ak kalite plastik egzak yo itilize yo).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Yo itilize valè mwayèn lè enfòmasyon sa a poko disponib, men kounye a n ap mande tout moun pou ede nou kolekte enfòmasyon sa a ki pral trè itil pou Green-Score la men tou pou anpil lòt itilizasyon.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Kijan sitwayen yo ka ede';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Tout sitwayen ka ede nou rasanble epi estriktire enfòmasyon ki prezan sou pwodwi yo oubyen ki ka dedwi de yo, tankou enfòmasyon sou anbalaj: Misyon Emballages: yon gwo envantè kolaboratif sou anbalaj pou tout pwodwi alimantè (an franse)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Kijan manifaktirè yo ka ede';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Manifaktirè yo ka voye enfòmasyon yo ban nou dirèkteman atravè platfòm gratis nou an pou pwodiktè yo.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ki pwodwi ki pi bon pou planèt la?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Li ka difisil pou di';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Chwazi manje dirab se youn nan bagay ki pi puisan nou ka fè pou klima a, paske **sistèm alimantè mondyal nou an responsab pou plis pase yon ka nan tout emisyon gaz ki lakòz efè tèmik**.\n(Sous: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Ou gen pouvwa a!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Bon nouvèl la se sa ban nou yon mwayen pwisan pou kreye chanjman.\n**Chak nan nou manje anviwon 1,000 repa chak ane**. Sa fè 1,000 opòtinite pou **chwazi yon pi bon avni pou planèt la**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Ede pou pran responsablite epi deside';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Chwazi manje dirab ka sanble konplike. Etikèt yo konfizyon epi souvan enfòmasyon yo manke. Yo te kreye Green-Score la pou senplifye bagay yo, pou ba ou yon evalyasyon anviwònman **klè**, **ki baze sou syans**, epi **transparan** pou pwodwi alimantè yo, egzakteman kote ou bezwen li: pandan w ap fè acha.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Transparans';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Kontrèman ak etikèt propriétaires yo, kalkil Green-Score la **konplètman ouvè** epi nenpòt moun ka **verifye li**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Kisa ultra-pwosesis ye?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Gwoup NOVA yo enfòme w sou nivo pwosesis manje a.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Klasifikasyon NOVA a pèmèt klasifikasyon manje yo an **4 gwoup** ki baze sou **degre pwosesis endistriyèl** yo (manje ki trete minimòm oswa ki pa trete, engredyan pou kulinè, manje trete, manje ultra-trete).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logo NOVA yo';
+
+  @override
+  String get guide_nova_groups_title => '4 gwoup NOVA yo';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Gen 4 gwoup NOVA, gwoup ki gen pwoblèm nan se Gwoup 4 - Manje ultra-trete.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Manje ki trete yon ti kras oswa ki pa trete';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Manje ki pa trete (oswa natirèl) se pati manjab plant yo (grenn, fwi, fèy, tij, rasin) oswa bèt yo (misk, trip, ze, lèt), ansanm ak chanpiyon, alg ak dlo, apre yo fin separe yo ak lanati.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Engredyan kulinè trete, tankou lwil, bè, sik, ak sèl, se sibstans ki sòti nan manje Gwoup 1 oswa nan lanati atravè pwosesis ki gen ladan peze, rafine, moulen, moulen, ak siye.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Manje trete yo, tankou legim nan boutèy, pwason nan bwat, fwi nan siwo, fwomaj, ak pen ki fèk fèt, yo fèt prensipalman lè yo ajoute sèl, lwil, sik, oswa lòt sibstans ki soti nan Gwoup 2 nan manje Gwoup 1 yo. Pwosesis yo gen ladan yo divès metòd prezèvasyon oswa kwit manje, epi nan ka pen ak fwomaj, fèmantasyon san alkòl. Pifò manje trete yo gen de oswa twa engredyan epi yo rekonèt kòm vèsyon modifye nan manje Gwoup 1 yo. Yo ka manje poukont yo oswa, pi souvan, an konbinezon ak lòt manje.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Manje ultra-trete yo, tankou bwason gazez, ti goute dous oswa sale ki nan pake, pwodui vyann rekonstitye, ak plat konjele ki prepare davans, se pa sèlman manje modifye men fòmilasyon ki fèt sitou oswa antyèman ak sibstans ki sòti nan manje ak aditif, ak ti kras oswa pa gen manje Gwoup 1 entak. Engredyan nan fòmilasyon sa yo anjeneral gen ladan yo sa yo jwenn tou nan manje trete yo, tankou sik, lwil, grès, oswa sèl. Sepandan, pwodui ultra-trete yo genyen tou lòt sous enèji ak eleman nitritif yo pa tipikman itilize nan preparasyon kilinè. Gen kèk nan sa yo ki ekstrè dirèkteman nan manje, tankou kazein, laktoz, laktoseròm, ak gluten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Pwoblèm ak ultra-pwosesis';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Pwosesis ekstrèm engredyan manje yo';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Anpil ladan yo sòti nan plis pwosesis konstitiyan manje yo, tankou lwil idwojèn oswa enterèsterifye, pwoteyin idrolize, pwoteyin soya izole, maltodekstrin, sik envèse, ak siwo mayi ki gen anpil fruktoz.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Aditif ki ale pi lwen pase sekirite alimantè sèlman';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Aditif nan manje ultra-trete yo gen ladan yo kèk ki itilize tou nan manje trete, tankou préservatif, antioksidan, ak estabilizatè. Klas aditif yo jwenn sèlman nan pwodwi ultra-trete yo gen ladan yo sa yo itilize pou imite oswa amelyore kalite sansoryèl manje yo oswa pou kache aspè dezagreyab nan pwodwi final la. Aditif sa yo gen ladan yo koloran ak lòt koulè, estabilizatè koulè; gou, amelyoratè gou, edulkoran ki pa sik; ak èd pwosesis tankou ajan kabonisatè, rafermisan, ajan ankonbran ak anti-ankonbran, ajan de-mous, ajan anti-aglomerasyon ak ajan glase, emulsifyan, sekwestran, ak idratan.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Pwosesis ou pa ka fè lakay ou';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Yo itilize yon pakèt sekans pwosesis pou konbine engredyan yo ki anjeneral anpil epi pou kreye pwodwi final la (kidonk yo rele l \'ultra-trete\'). Pwosesis yo gen ladan plizyè ki pa gen ekivalan domestik, tankou idrojenasyon ak idrolizasyon, èkstruzyon ak bòdi, ak pre-tretman pou fri.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Aspè predatè ak finansye ultra-pwosesis la';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Objektif jeneral ultra-pwosesis la se kreye pwodui alimantè ki gen mak, pratik (dirab, pare pou konsome), atiran (ipè-gou) epi trè pwofitab (engredyan ki pa koute chè), ki fèt pou ranplase tout lòt gwoup alimantè yo. Pwodui alimantè ultra-pwosesis yo anjeneral anbale yon fason atiran epi yo vann yo yon fason entansif.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4843,13 @@ class AppLocalizationsHt extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Pa gen pri disponib';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Se pou ou premye moun ki kontribye!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4888,10 @@ class AppLocalizationsHt extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Ekstraksyon an ap fèt…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Ekstraksyon reyisi';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5022,499 @@ class AppLocalizationsHt extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Prèv';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Pri';
+
+  @override
+  String get preferences_prices_subtitle => 'Jere preferans pri ou yo';
+
+  @override
+  String get preferences_card_project => 'Pwojè Open Food Facts la';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Estatistik mwen yo';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Tradui, amelyore zouti nou yo…';
+
+  @override
+  String get preferences_connect_title => 'Konekte';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Kontakte nou, oubyen swiv nou sou rezo sosyal yo';
+
+  @override
+  String get preferences_support_title => 'Fè yon don';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Ede nou enfòme plizyè milyon konsomatè atravè lemond';
+
+  @override
+  String get preferences_card_help => 'Èd ak Sipò';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Jwenn repons pou kesyon ou yo';
+
+  @override
+  String get logged_out => 'Dekonekte';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Mèsi paske ou se youn nan manm nou yo!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Gade tout estatistik yo';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Chèche $provider pou \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Chèche yon paramèt (pa egzanp Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Aksè: Montre emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors => 'Aksè: Retire koulè yo';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Enfòmasyon legal';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Kondisyon itilizasyon, règleman sou enfòmasyon prive, ak plis ankò';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts se yon baz done pwodui alimantè **fèt pa tout moun, pou tout moun**.\nOu ka itilize li pou fè pi bon chwa alimantè, epi kòm li se **done ouvè**, nenpòt moun ka **reitilize li pou nenpòt ki rezon**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Lisans';
+
+  @override
+  String get preferences_about_app_title => 'Konsènan aplikasyon an';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Enfòmasyon teknik, enfòmasyon sou devlopè, ak plis ankò';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Nimewo vèsyon';
+
+  @override
+  String get preferences_scanner_title => 'Eskanè';
+
+  @override
+  String get preferences_app_store => 'Magazen aplikasyon';
+
+  @override
+  String get preferences_app_system_settings => 'Anviwònman sistèm';
+
+  @override
+  String get preferences_source_code => 'Aksè kòd sous la';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Epi kòmanse fè yon enpak pou plizyè milyon moun';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Konsèy';
+
+  @override
+  String get tips_discover_nutriscore => 'Dekouvri nouvo Nutri-Score la';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Sou sitwèb Open Food Facts la';
+
+  @override
+  String get preferences_manage_account_title => 'Jere kont mwen an';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Jere kont ou';
+
+  @override
+  String get preferences_change_password_title => 'Chanje modpas mwen an';
+
+  @override
+  String get preferences_danger_zone => 'Zòn danje';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Tout kontribisyon ou yo ap pèdi';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Anviwònman aplikasyon an';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Yon fason trè eksperimantal pou eskane pwodwi offline';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Rafrechi tout pwodwi yo nan sèvè a';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Tanpri evite fè sa sof si sa nesesè nèt.';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mòd Demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Ajoute kat nan eskanè a';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Ajoute 3 pwodwi echantiyon nan eskanè a';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'Otès folksonomi';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Otès: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Eksperyans aksesibilite';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Seleksyon plizyè pwodwi pou pri';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panèl konesans ki te klase pa itilizatè yo';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Aksè tanporè pou rechèch kote';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Konparezon kòt a kòt pou 2 ou 3 pwodwi';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Enpòtasyon lis pwodwi';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Nòt ak metodoloji';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Dekouvri kijan yo kalkile Nutri-Score la';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Dekouvri prensipal chanjman nan metodoloji a';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Dekouvri pwojè a';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Dekouvri Enfòmasyon sou Manje Ouvè';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Kesyon yo poze souvan';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'ONG Open Food Facts la';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Jwenn dènye nouvèl kominote a';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Rete okouran ak nouvèl aplikasyon an ak kominote a';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Patisipe nan youn nan evènman vityèl nou yo';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Blog Enfòmasyon Ouvè sou Manje a';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Jwenn dènye nouvèl yo, jan yo rive';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Jwenn èd nan men kominote a';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Ede nou amelyore aplikasyon an';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Voye nou enfòmasyon debogaj';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Voye yon imèl ban nou ak enfòmasyon detaye sou debogaj la';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Voye nou fidbak sou aplikasyon an';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Ede fòme lavni aplikasyon an';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Pran sondaj sou aplikasyon an';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Ede nou konprann sa nou ta dwe bati apre sa';
+
+  @override
+  String get preferences_connect_professionals_title => 'Pwofesyonèl yo';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Totalman gratis, asire done egzak pou 500 aplikasyon ak plizyè milyon konsomatè. Oto-sèvis, konpatib ak PIM ou oswa fichye kalkil ou (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Kontakte nou pou kòmanse';
+
+  @override
+  String get preferences_connect_press_title => 'Laprès';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Jwenn tout materyèl ou bezwen pou rapò ou a';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Kontakte nou pou kesyon laprès oswa pou fè nou konnen sou rapò w la.';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Vin yon volontè aktif';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Devlopman, Kominikasyon, Konsepsyon… nenpòt kalite volontarya oswa ekspètiz se byenveni!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Dekouvri kèk nan plizyè fason ou ka kontribye';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Devlopman aplikasyon mobil';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Aprann kijan pou kontribye nan devlopman lojisyèl';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Konstriksyon enstab chak jou, karakteristik tou nèf';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Devlope kominote lokal ou a';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Èd ak lojisyèl, kontni, tradiksyon analiz engredyan';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Nou prepare yon ti modèl pou ede w :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Etap senp pou ogmante transparans alimantè nan peyi ou';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Antre nan ekip kalite done yo';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Patisipe nan efò nou pou asire baz done a konplè epi egzak.';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Pwodwi ajoute yo';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Nouvo pwodwi mwen te ajoute nan Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Pwodwi mwen bezwen fini';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Tout pwodwi enkonplè yo';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Pri';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'Pri mwen yo';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Pri mwen yo, prèv mwen yo…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Pwodwi ou ka ede konplete';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ede kalkile Nutri-Score ak Green-Score nan peyi ou a';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Pri mwen te kontribye yo';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Etikèt pri ak resi';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Pran foto resi ou yo epi eskane kòd bar ki asosye yo';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Pran foto pri yo nan yon magazen';
+
+  @override
+  String get preferences_prices_newest_title => 'Nouvo pri yo';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Dènye pri yo ajoute pa kominote Open Prices la';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Kontribitè ki gen plis pri yo';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metrik Pri Ouvèti';
+
+  @override
+  String get preferences_prices_metrics_subtitle => 'Swiv evolisyon pwojè a';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Fason pou kontribye';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Konfime pri ou menm oswa lòt moun te ajoute yo, avèk èd IA a';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Ajoute rapidman plizyè resi oswa foto etajè ki soti nan kamera ou.';
+
+  @override
+  String get preferences_prices_challenges_title => 'Defi chak mwa yo';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Patisipe nan demand tematik chak mwa pou kolekte pri yo';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Reprann done fidelite ou yo';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Aprann kijan pou mande done ou yo';
+
+  @override
+  String get preferences_page_customize_app_title => 'Pèsonalize aplikasyon an';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Kontribye nan pwojè a';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Fason senp pou ede Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodoloji pou bay nòt, èd, ak plis ankò sou pwojè a';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Aksepte sijesyon an';
 
   @override
@@ -4736,4 +5558,102 @@ class AppLocalizationsHt extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Otantifikasyon an echwe, pa posib pou jwenn prèv yo.';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count nan $total prèv';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count prèv';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count nan $total kontribitè yo';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count kontribitè';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count nan $total kote yo ye a';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count kote yo ye';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Tanpri rekòmanse aplikasyon an pou aplike chanjman yo.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Entèfas grafik';
+
+  @override
+  String get preferences_app_settings_media_title => 'Medya';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratwa Enfòmasyon sou Manje Ouvè yo';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Pote Enfòmasyon Ouvè sou Manje nan lang ou';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Enskri nan vèsyon alfa aplikasyon an';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Kontribisyon ak done pwodwi';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Pa montre Folksonomi';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ajoute sou $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

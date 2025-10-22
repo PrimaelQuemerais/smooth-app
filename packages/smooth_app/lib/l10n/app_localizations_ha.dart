@@ -9,6 +9,9 @@ class AppLocalizationsHa extends AppLocalizations {
   AppLocalizationsHa([String locale = 'ha']) : super(locale);
 
   @override
+  String get app_name => 'Bude Bayanan Abinci';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsHa extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsHa extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Duba';
@@ -978,6 +974,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Zaɓi wani madaidaicin nau\'i';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsHa extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Babu kadarori';
+
+  @override
+  String get product_tags_explanation =>
+      'Ta ƙara kaddarorin (maɓalli/daraja) zuwa samfur, kuna taimakawa haɓaka shi.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Share asusuna';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Samun damar abubuwan gwaji da kayan aikin haɓakawa';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'Bude akan gidan yanar gizon Buɗe Farashi';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2656,13 @@ class AppLocalizationsHa extends AppLocalizations {
   String get prices_list_add_new_price => 'Ƙara\nsabon farashi';
 
   @override
+  String get prices_list_empty_title => 'Babu farashi tukuna!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Kasance farkon wanda zai kara daya:\nTa hanyar duban **rasit** ko **tambarin farashi**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Shagon da ba a sani ba';
 
   @override
@@ -2650,7 +2672,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Duba duk farashin wannan samfurin';
 
   @override
   String get prices_entry_menu_open_proof => 'Duba hujja';
@@ -2729,9 +2751,23 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Babu mai ba da gudummawa tukuna!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Kasance farkon don ƙara farashi!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Babu shago tukuna!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Kasance farkon don ƙara farashi!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2836,7 +2872,17 @@ class AppLocalizationsHa extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Babu hujja tukuna!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Fara da ƙara hoton **rasit** ko *tambarin farashi**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2915,13 +2961,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2933,6 +2973,16 @@ class AppLocalizationsHa extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Sake saita yaren app';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ƙara katunan';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Canja tsakanin prices.openfoodfacts.org (PROD) da gwajin env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2976,6 +3026,11 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3977,32 +4032,33 @@ class AppLocalizationsHa extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Green-Score Ba a sani ba';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score bai dace ba';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Abincin da aka sarrafa sosai - ƙungiyoyin NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4099,9 +4155,6 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4209,11 +4262,278 @@ class AppLocalizationsHa extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'Menene Green Score?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score tambari ce da ke nufin sanar da ku game da ** tasirin abinci na muhalli **.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Lambar launi ta bambanta daga kore mai duhu (**A+**) don samfuran ** mafi ƙarancin tasiri ** zuwa ja ja (**F**) don samfuran ** mafi tasiri **.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Alamomin Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Mahimmanci: Kiwon Lafiyar Rayuwa (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Ƙimar kimiyya na nau\'ikan abinci';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Ga kowane nau\'in samfur, an kafa makin ** alamar ** ta amfani da bayanai daga bayanan muhalli na Agribalyse (wanda ADEME da INRAE suka tsara).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Binciken zagayowar rayuwa** shine daidaitaccen hanyar kima don aiwatar da kima mai matakai da ma\'auni da yawa.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Yana aunawa:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 matakan samarwa';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 alamomin tasirin muhalli';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Canjin yanayi / sawun carbon';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Ozone Layer raguwa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ionizing radiation';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Ƙasa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Amfani da ruwa & makamashi';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Gurbacewar iska';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Marine & ruwa mai dadi (barbashi, acidification, eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Rage albarkatu.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonuses & Hukunci';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Don ba da lada mafi kyawun samfura a cikin nau\'i, sannan mu yi amfani da kari & azabtarwa bisa la\'akari da yawa:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ana ba da kyauta bisa tushen abubuwan sinadaran. Wannan kari yana la\'akari da tasirin sufuri da kuma manufofin muhalli na kowace ƙasa mai samarwa.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Don ƙididdige Green-Score daidai, yana da mahimmanci a sami bayanan da ba lallai ba ne a kayyade kan marufi (kamar asalin da ainihin adadin kowane sashi) ko wanda ba kasafai ake samun su ta sigar da za a iya amfani da su ba (kamar jerin duk abubuwan da ke cikin marufi tare da takamaiman nau\'ikan robobi da aka yi amfani da su).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Ana amfani da matsakaicin ƙima lokacin da wannan bayanin bai kasance ba tukuna, amma yanzu muna kira ga kowa da kowa ya taimaka mana wajen tattara wannan bayanin wanda zai yi amfani sosai ga Green-Score amma har ma da sauran amfani.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Yadda \'yan ƙasa za su iya taimakawa';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Duk \'yan ƙasa za su iya taimaka mana mu tattara da tsara bayanan da ke kan samfuran ko waɗanda za a iya fitar da su daga gare su, kamar bayanai kan marufi: Ofishin Jakadancin: babban marufi na haɗin gwiwa na marufi don duk samfuran abinci (a cikin Faransanci)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Yadda masana\'anta zasu iya taimakawa';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Masu kera za su iya aiko mana da bayanansu kai tsaye ta dandalin mu na kyauta don masu samarwa.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Wane samfur ne mafi kyau ga duniya?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Yana iya zama da wuya a faɗi';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Zaɓin abinci mai ɗorewa yana ɗaya daga cikin abubuwan da za mu iya yi don yanayin yanayi, kamar yadda ** tsarin abincin mu na duniya yana da alhakin sama da kashi ɗaya bisa huɗu na duk hayaƙin gurɓataccen iska **.\n(Madogararsa: Poore & Nemecek, Kimiyya, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Kuna da iko!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Labari mai dadi shine wannan yana ba mu hanya mai ƙarfi don ƙirƙirar canji.\n**Kowanenmu yana cin abinci kusan 1,000 duk shekara**. Wannan shine damar 1,000 don ** zaɓi mafi kyawun makoma ga duniyar duniyar ***!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Taimaka don zama alhakin da yanke shawara';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Zaɓin abinci mai ɗorewa yana iya jin rikitarwa. Alamun suna da ruɗani kuma yawancin bayanai suna ɓacewa. An ƙirƙiri Green-Score don sauƙaƙe shi, yana ba ku ** bayyananne ***, ** tushen kimiyya ***, da ** madaidaicin ƙimar muhalli don samfuran abinci, daidai inda kuke buƙata: yayin siyayya.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Bayyana gaskiya';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ba kamar alamun mallakar mallaka ba, lissafin Green-Score ** gaba ɗaya buɗe yake ** kuma kowa zai iya tabbatar da shi **.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Menene ultra-processing?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Ƙungiyoyin NOVA suna sanar da ku game da matakin sarrafa abinci.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Rarraba NOVA yana ba da damar rarraba abinci zuwa ƙungiyoyin 4 ** dangane da ** digiri na sarrafa masana\'antu ** (mafi ƙarancin sarrafawa ko abincin da ba a sarrafa su ba, kayan dafa abinci, abinci mai sarrafa, abinci mai sarrafa gaske).';
+
+  @override
+  String get guide_nova_logos_caption => 'Tambarin NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Kungiyoyin NOVA guda 4';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Akwai ƙungiyoyin NOVA guda 4, matsala ɗaya ita ce Rukuni na 4 - Abincin da aka sarrafa sosai.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Mafi ƙarancin sarrafawa ko abincin da ba a sarrafa shi ba';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Abincin da ba a sarrafa shi ba (ko na halitta) su ne sassan tsire-tsire ( iri, \'ya\'yan itace, ganye, mai tushe, tushen) ko dabbobi (tsokoki, ƙwai, qwai, madara), da fungi, algae, da ruwa, bayan an raba su da yanayi.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Abubuwan da aka sarrafa na dafuwa, kamar mai, man shanu, sukari, da gishiri, abubuwa ne waɗanda aka samo daga abinci na rukuni na 1 ko kuma daga yanayi ta hanyoyin da suka haɗa da latsawa, tacewa, niƙa, niƙa, da bushewa.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Abincin da aka sarrafa, kamar kayan lambu na kwalba, kifin gwangwani, \'ya\'yan itace a cikin syrup, cuku, da kuma sabbin burodi, ana yin su da farko ta hanyar ƙara gishiri, mai, sukari, ko wasu abubuwa daga rukuni na 2 zuwa abinci na rukuni na 1. Tsari sun haɗa da tsare-tsare daban-daban ko hanyoyin dafa abinci, kuma a cikin yanayin biredi da cuku, fermentation maras giya. Yawancin abincin da aka sarrafa suna da sinadirai biyu ko uku kuma ana iya gane su azaman gyare-gyaren nau\'ikan abinci na rukuni na 1. Ana iya cinye su da kansu ko kuma, yawanci, tare da sauran abinci.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Abincin da aka sarrafa sosai, irin su abubuwan sha mai laushi, kayan ciye-ciye masu daɗi ko kayan ciye-ciye, kayan nama da aka sake ginawa, da daskararrun jita-jita da aka riga aka shirya, ba abinci ne kawai aka gyara ba amma tsarin da aka yi galibi ko gabaɗaya daga abubuwan da aka samo daga abinci da ƙari, ba tare da ƙarancin abinci na rukuni na 1 ba. Sinadaran da ke cikin waɗannan sifofin yawanci sun haɗa da waɗanda kuma ake samu a cikin abinci da aka sarrafa, kamar sukari, mai, mai, ko gishiri. Koyaya, samfuran da aka sarrafa su ma sun ƙunshi wasu hanyoyin samar da kuzari da abubuwan gina jiki waɗanda ba a saba amfani da su ba a cikin shirye-shiryen dafa abinci. Wasu daga cikin waɗannan ana fitar dasu kai tsaye daga abinci, kamar casein, lactose, whey, da gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Matsaloli tare da ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Tsananin sarrafa kayan abinci';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Yawancin ana samun su daga ƙarin sarrafa abubuwan abinci, irin su hydrogenated ko mai ban sha\'awa, sunadaran hydrolyzed, ware furotin soya, maltodextrin, invert sugar, da babban fructose masara syrup.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Additives da suka wuce tsaftataccen amincin abinci';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Abubuwan da ake ƙarawa a cikin abincin da aka sarrafa su sun haɗa da wasu waɗanda kuma ake amfani da su a cikin abincin da aka sarrafa, kamar su abubuwan kiyayewa, antioxidants, da stabilizers. Azuzuwan abubuwan ƙari da aka samu kawai a cikin samfuran da aka sarrafa su sun haɗa da waɗanda aka yi amfani da su don yin koyi ko haɓaka halayen abinci ko kuma canza ɓangarori marasa kyau na samfurin ƙarshe. Wadannan additives sun haɗa da dyes da sauran launuka, masu daidaita launi; abubuwan dandano, masu haɓaka dandano, masu zaƙi waɗanda ba masu sukari ba; da kayan aikin sarrafawa kamar carbonating, firming, bulking da anti-bulking agents, de-foaming, anti-caking da glazing jamiái, emulsifiers, sequestrants, da humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Sarrafa ba za ku iya yi a gida ba';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Ana amfani da ɗimbin jerin matakai don haɗa yawancin sinadirai masu yawa da ƙirƙirar samfur na ƙarshe (saboda haka \'masu sarrafa sosai\'). Hanyoyin sun haɗa da da yawa ba tare da daidaitattun gida ba, irin su hydrogenation da hydrolysation, extrusion da gyare-gyare, da pre-processing don soya.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Abubuwan da ba a iya gani ba da kudi na ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Babban manufar aiwatar da matsananciyar aiki shine ƙirƙirar alama, dacewa (mai ɗorewa, shirye don cinyewa), kyakkyawa (mai daɗi mai daɗi) da riba mai fa\'ida (kayan abinci masu ƙarancin farashi) samfuran abinci waɗanda aka tsara don korar duk sauran rukunin abinci. Kayan abinci da aka sarrafa sosai yawanci ana tattara su cikin kayatarwa kuma ana sayar da su sosai.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4526,6 +4846,13 @@ class AppLocalizationsHa extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Babu farashi akwai';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Kasance farkon wanda zai ba da gudummawa!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4564,7 +4891,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Ana ci gaba da hakowa…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'An yi nasarar cirewa';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4695,6 +5025,496 @@ class AppLocalizationsHa extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Sarrafa zaɓin farashin ku';
+
+  @override
+  String get preferences_card_project => 'Aikin Buɗaɗɗen Bayanan Abinci';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Ƙididdiga na';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Fassara, inganta kayan aikin mu…';
+
+  @override
+  String get preferences_connect_title => 'Haɗa';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Ku biyo mu, ko Ku biyo mu a social media';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Taimaka mana sanar da miliyoyin masu amfani a duk duniya';
+
+  @override
+  String get preferences_card_help => 'Taimako & Taimako';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Samu amsoshin tambayoyinku';
+
+  @override
+  String get logged_out => 'An fita';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Na gode don kasancewa ɗaya daga cikin membobinmu!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Duba duk kididdiga';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Nemo $provider don \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Nemo saitin (misali Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Dama: Nuna emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Samun damar: Cire launuka';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Bayanin doka';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Sharuɗɗan amfani, manufofin keɓantawa, da ƙari';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Bude Facts Abinci shine bayanan samfuran abinci ** wanda kowa yayi, ga kowa da kowa**.\nKuna iya amfani da shi don yin zaɓin abinci mafi kyau, kuma kamar yadda yake **buɗaɗɗen bayanai**, kowa zai iya **sake amfani da shi don kowane dalili**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Lasisi';
+
+  @override
+  String get preferences_about_app_title => 'Game da app';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Bayanin fasaha, bayanin haɓakawa, da ƙari';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Lambar sigar';
+
+  @override
+  String get preferences_scanner_title => 'Scanner';
+
+  @override
+  String get preferences_app_store => 'App Store';
+
+  @override
+  String get preferences_app_system_settings => 'Saitunan tsarin';
+
+  @override
+  String get preferences_source_code => 'Shiga lambar tushe';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Kuma fara yin tasiri ga miliyoyin';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Tips';
+
+  @override
+  String get tips_discover_nutriscore => 'Gano sabon Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'A kan Buɗaɗɗen Bayanan Bayanan Abinci';
+
+  @override
+  String get preferences_manage_account_title => 'Sarrafa asusuna';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Sarrafa asusun ku';
+
+  @override
+  String get preferences_change_password_title => 'Canja kalmar sirri ta';
+
+  @override
+  String get preferences_danger_zone => 'Yankin haɗari';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Duk gudummawar ku za a rasa';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Saitunan app';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Hanyar gwaji sosai don bincika samfuran layi';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Sake sabunta duk samfuran daga uwar garken';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Da fatan za a guji yin hakan sai dai idan ya zama dole';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Yanayin demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ƙara katunan zuwa na\'urar daukar hotan takardu';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Yana ƙara samfuran samfuri 3 zuwa na\'urar daukar hotan takardu';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Mai masaukin baki na Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Mai watsa shiri: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Gwajin samun dama';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Zaɓin samfura da yawa don farashi';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Fanonin ilimin da aka ba da umarnin mai amfani';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Samun dama ga binciken wuri na ɗan lokaci';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Kwatancen gefe da gefe don samfuran 2 ko 3';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'shigo da lissafin samfur';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Maki & hanyoyin';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Gano yadda ake lissafin Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Gano manyan canje-canje ga hanya';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Gano Buɗe Bayanan Abinci';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Tambayoyin da ake yawan yi';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Budaddiyar Facts Food Facts NGO';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Samo sabuntawar al\'umma';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Ci gaba da kasancewa tare da app da labaran al\'umma';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Shiga ta hanyar halartar ɗaya daga cikin abubuwan da suka faru na kama-da-wane';
+
+  @override
+  String get preferences_connect_blog_title => 'Budaddiyar Bayanan Abinci';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Samu sabbin labarai, kamar yadda suke faruwa';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Nemo taimako daga al\'umma';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Taimaka mana inganta app';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Aiko mana da bayanin kuskure';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Aiko mana da imel tare da cikakkun bayanan gyara kuskure';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Aiko mana da ra\'ayi game da app';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Taimaka tsara makomar app ɗin';
+
+  @override
+  String get preferences_connect_survey_title => 'Ɗauki binciken app';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Taimaka mana fahimtar abin da ya kamata mu gina na gaba';
+
+  @override
+  String get preferences_connect_professionals_title => 'Masu sana\'a';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Gabaɗaya kyauta, yana tabbatar da ingantattun bayanai don ƙa\'idodi 500 & miliyoyin masu amfani. Sabis na kai, mai dacewa da PIM ko maƙunsar bayanai (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle => 'Tuntuɓi don farawa';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Sami duk abubuwan da kuke buƙata don rahoton ku';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Tuntuɓi don tambayoyin manema labarai ko don sanar da mu game da rahoton ku';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Zama mai aikin sa kai';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Ci gaba, Sadarwa, Zane… kowane irin aikin sa kai ko gwaninta ana maraba da shi!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Gano wasu hanyoyi da yawa da zaku iya ba da gudummawa';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Ci gaban aikace-aikacen wayar hannu';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Koyi yadda ake ba da gudummawa ga haɓaka software';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Gina marasa kwanciyar hankali na yau da kullun, sabbin abubuwa';
+
+  @override
+  String get preferences_contribute_local_community_title => 'Haɓaka yankin ku';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Taimako tare da software, abun ciki, fassarorin bincike na kayan masarufi';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Mun shirya ƙaramin samfuri don taimaka muku :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Sauƙaƙan matakai don haɓaka gaskiyar abinci a ƙasarku';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Shiga ƙungiyar ingancin bayanai';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Haɗa ƙoƙarinmu don tabbatar da cikakkun bayanai kuma cikakke ne';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Abubuwan da aka ƙara';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Sabbin samfura na ƙara zuwa Buɗe Bayanan Abinci';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Kayayyakin da nake buƙatar kammalawa';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Duk samfuran da basu cika ba';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Farashina, hujjojina…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Samfuran da zaku iya taimakawa cikawa';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Taimaka lissafin Nutri-Score & Green-Score a cikin ƙasar ku';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Farashin da na bayar';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Alamomin farashin da rasit';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Ɗauki hotunan rasit ɗin ku kuma bincika lambobin barde masu alaƙa';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Ɗauki hotuna na farashi a cikin shago';
+
+  @override
+  String get preferences_prices_newest_title => 'Sabbin farashin';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Sabbin farashin da jama\'ar Buɗaɗɗen Farashin suka ƙara';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Masu ba da gudummawa tare da mafi yawan farashi';
+
+  @override
+  String get preferences_prices_metrics_title => 'Buɗe ma\'aunin farashi';
+
+  @override
+  String get preferences_prices_metrics_subtitle => 'Bi juyin halittar aikin';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Hanyoyin ba da gudummawa';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Tabbatar da farashin da kanku ko wasu suka ƙara, tare da taimakon AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Da sauri ƙara rasitoci da yawa ko hotuna na shelves daga nadi na kamara';
+
+  @override
+  String get preferences_prices_challenges_title => 'Kalubalen wata-wata';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Shiga cikin tambayoyin jigo na kowane wata don karɓar farashi';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Maida bayanan amincin ku';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Koyi yadda ake neman bayanan ku';
+
+  @override
+  String get preferences_page_customize_app_title => 'Keɓance ƙa\'idar';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Ba da gudummawa ga aikin';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Hanyoyi masu sauƙi don taimakawa Buɗe Bayanan Abinci';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Maki hanyoyin, taimako, da ƙari game da aikin';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Karɓi shawara';
 
   @override
@@ -4737,4 +5557,102 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get prices_proof_error => 'Tabbatarwa ya gaza, ya kasa debo hujjoji';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count na $total hujjoji';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count na $total masu ba da gudummawa';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count na $total wurare';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count wurare';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Da fatan za a sake kunna app don amfani da canje-canje.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Zane-zane dubawa';
+
+  @override
+  String get preferences_app_settings_media_title => 'Mai jarida';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Bude Bayanan Bayanan Abinci';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Kawo Budaddiyar Bayanan Abinci zuwa harshenka';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Yi rijista a cikin nau\'in alpha na app';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Gudunmawa & Bayanan Samfura';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Kar a nuna Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'An ƙara akan $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

@@ -9,6 +9,9 @@ class AppLocalizationsTi extends AppLocalizations {
   AppLocalizationsTi([String locale = 'ti']) : super(locale);
 
   @override
+  String get app_name => 'ክፉት ሓቅታት መግቢ';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsTi extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsTi extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'ቅረጽ';
@@ -978,6 +974,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'ዝያዳ ልክዕ ዝኾነ ምድብ ምረጽ';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsTi extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'ንብረት የለን';
+
+  @override
+  String get product_tags_explanation =>
+      'ኣብ ሓደ ፍርያት ባህርያት (ቁልፊ/ዋጋ) ብምውሳኽ፡ ንኽትህብትሞ ትሕግዝ።';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'ኣካውንተይ ደምስስዎ።';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'ናይ ፈተነ ባህርያትን ናይ ምዕባለ መሳርሒታትን ምርካብ';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'ኣብ መርበብ ሓበሬታ ክፉት ዋጋታት ክፈት';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prices_list_add_new_price => '\nሓድሽ ዋጋ ወስኹሉ።';
 
   @override
+  String get prices_list_empty_title => 'ገና ዋጋ የለን!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'ሓደ ክትውስኽ ቀዳማይ ኩን:\n**ቅብሊት** ወይ **ዋጋ* ብምስካን!';
+
+  @override
   String get prices_entry_shop_not_found => 'ዘይፍለጥ ድኳን';
 
   @override
@@ -2648,8 +2669,7 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
-  String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+  String get prices_entry_menu_open_product_prices => 'ኩሉ ዋጋታት ናይዚ ፍርያት ርአ';
 
   @override
   String get prices_entry_menu_open_proof => 'መርትዖ ርአ';
@@ -2727,9 +2747,21 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'ክሳብ ሕጂ ኣበርካቲ የለን!';
+
+  @override
+  String get prices_users_empty_explanation => 'ዋጋ ክትውስኽ ቀዳማይ ኩን!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'ገና ድኳን የለን!';
+
+  @override
+  String get prices_locations_empty_explanation => 'ዋጋ ክትውስኽ ቀዳማይ ኩን!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2866,17 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'ዛጊት መርትዖ የለን!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'ስእሊ ናይ **ቅብሊት** ወይ **ዋጋ ምልክት** ብምውሳኽ ጀምር!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2913,13 +2955,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2967,16 @@ class AppLocalizationsTi extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'ቋንቋ ኣፕ ዳግማይ ምትካል';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'ካርድታት ምውሳኽ';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'ኣብ መንጎ prices.openfoodfacts.org (PROD)ን test envን ምቕያር';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3020,11 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4026,31 @@ class AppLocalizationsTi extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'ቀጠልያ-ነጥቢ ሀ';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'ቀጠልያ-ነጥቢ ለ';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'ቀጠልያ-ነጥቢ ሐ';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'ቀጠልያ-ነጥቢ መ';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'ቀጠልያ-ነጥቢ E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'ዘይፍለጥ ቀጠልያ-ነጥቢ';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new => 'ግሪን-ስኮር ተግባራዊ ኣይኮነን።';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'ኣዝዩ ዝተመስርሑ መግብታት - ጉጅለታት ኖቫ';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4147,6 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4254,270 @@ class AppLocalizationsTi extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'ሓምላይ ነጥቢ እንታይ እዩ?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'ግሪን-ስኮር ብዛዕባ **ኣከባብያዊ ጽልዋ መግቢ** ንምሕባር ዝዓለመ ኣርማ እዩ።';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'እቲ ሕብሪ ኮድ ካብ ጸሊም ቀጠልያ (**A+**) ን**ዝወሓደ ጽልዋ ዘለዎም** ፍርያት ክሳብ ጸሊም ቀይሕ (**F**) ን**ዝወሓደ ጽልዋ ዘለዎም** ፍርያት ይፈላለ።';
+
+  @override
+  String get guide_greenscore_logos_caption => 'እቶም ቀጠልያ-ነጥቢ ኣርማታት';
+
+  @override
+  String get guide_greenscore_lca_title => 'እቲ ሕመረት፡ ገምጋም ዑደት ህይወት (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title => 'ሳይንሳዊ ገምጋም ምድባት መግቢ';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'ንነፍሲ ወከፍ ምድብ ፍርያት ካብ ኣግሪባላይዝ ከባብያዊ ዳታቤዝ (ብADEMEን INRAEን ዝተነድፈ) ዳታ ተጠቒምካ **መዐቀኒ** ነጥቢ ይቐውም።';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**ትንተና ዑደት ህይወት** ብዙሕ ደረጃታትን ብዙሕ መዐቀኒታትን ዘለዎ ከባብያዊ ገምጋም ንምክያድ ዝሕግዝ ደረጃ ዝሓለወ ኣገባብ ገምጋም እዩ።';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**ይዕቅን:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 ደረጃታት ምፍራይ';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 መርኣዪታት ጽልዋ ከባቢ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'ለውጢ ክሊማ/ኣሰር ካርቦን።';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'ምውዳቕ ንጣብ ኦዞን።';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'ኣዮናይዝድ ጨረርታ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'መሬት';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'ኣጠቓቕማ ማይ & ጸዓት';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'ብከላ ኣየር';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'ናይ ባሕሪ & ፍሩይ ማይ (ንጥረ ነገራት፣ ኣሲድ ምግባር፣ ዩትሮፊኬሽን)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'ምውዳቕ ሃፍቲ።';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'ቦነስ & መቕጻዕቲ';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'ኣብ ውሽጢ ሓደ ምድብ ዝሓሸ ፍርያት ንምሽላም፡ ድሕሪኡ ኣብ ሓያሎ መዐቀኒታት ተመርኲስና ቦነስ & መቕጻዕቲ ንጥቀም፤';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'ቦነስ ኣብ መበቆል ናይቶም ቀመማት ተመርኲሱ ይወሃብ። እዚ ቦነስ ኣብ መጓዓዝያን ከምኡ’ውን ፖሊሲ ከባቢ ነፍሲ ወከፍ ኣፍራዪ ሃገርን ኣብ ግምት ዘእተወ እዩ።';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'ንሓምላይ-ነጥቢ ብትኽክል ንምሕሳብ፡ ኣብቲ መዐሸጊ ናይ ግድን ዘይተገልጸ (ከም መበቆልን ልክዕ ሚእታዊትን ነፍሲ ወከፍ ቀመም) ወይ ድማ ሳሕቲ ኣብ ጥቕሚ ዝውዕል መልክዕ ዝርከብ (ከም ዝርዝር ናይ ኩሎም ኣካላት ናይቲ መዐሸጊ ምስ ልክዕ ዓይነታት ዝተጠቕሙ ፕላስቲክ) ሓበሬታ ክህልወካ የድሊ።';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'እዚ ሓበሬታ ገና ኣብ ዘይተረኽበሉ እዋን ማእከላይ ክብርታት ይጥቀሙ፣ ሕጂ ግን ኩሉ ሰብ ነዚ ሓበሬታ ንምእካብ ክሕግዘና ንጽውዕ ኣለና እዚ ድማ ንGreen-Score ግን ከኣ ንብዙሕ ካልእ ኣጠቓቕማታት ኣዝዩ ጠቓሚ ክኸውን እዩ።';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title => 'ዜጋታት ብኸመይ ክሕግዙ ይኽእሉ';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'ኩሎም ዜጋታት ኣብ ፍርያት ዝርከብ ወይ ካብኡ ክውሰድ ዝኽእል ሓበሬታ ንምእካብን ንምውዳብን ክሕግዙና ይኽእሉ እዮም፣ ከም ሓበሬታ ብዛዕባ መዐሸጊ: Mission Emballages: ሰፊሕ ናይ ምትሕብባር ዝርዝር መዐሸጊ ንኹሎም ፍርያት መግቢ (ብፈረንሳ)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title => 'ኣፍረይቲ ብኸመይ ክሕግዙ ይኽእሉ';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'ኣፍረይቲ ብቐጥታ ብመንገዲ እቲ ንኣፍረይቲ ዝኸውን ነጻ መድረኽና ሓበሬታኦም ክሰዱልና ይኽእሉ።';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'ኣየናይ ፍርያት እዩ ንፕላኔትና ዝሓሸ?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'ክትነግሮ ከቢድ ክኸውን ይኽእል እዩ።';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'ዘላቒ መግቢ ምምራጽ ሓደ ካብቲ ንክሊማ ክንገብሮ እንኽእል ሓያል ነገራት እዩ፣ ምኽንያቱ **ዓለማዊ ስርዓተ መግቢና ንልዕሊ ርብዒ ካብ ኩሉ ልቀት ጋዝ ምድረበዳ ተሓታቲ እዩ**።\n(ፍልፍል፡ ፑረ & ነመቸክ፡ ሳይንስ፡ 2018)።';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'ሓይሊ ኣለካ!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'እቲ ጽቡቕ ነገር እዚ ለውጢ ንምፍጣር ሓያል መንገዲ ዝህበና ምዃኑ እዩ።\n**ነፍሲ ወከፍና ኣብ ዓመት ከባቢ 1000 መግቢ ንበልዕ**። እዚ ማለት **ንፕላኔትና ዝሓሸ መጻኢ ንምምራጽ** 1000 ዕድላት እዩ!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'ሓላፍነት ክትወስድን ክትውስንን ይሕግዝ';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'ዘላቒ መግቢ ምምራጽ ዝተሓላለኸ ኮይኑ ክስምዓካ ይኽእል። መለለዪታት ምድንጋር ዝፈጥር ኮይኑ መብዛሕትኡ ግዜ ሓበሬታ ይጎድል። እቲ ሓምላይ-ነጥቢ ቀሊል ንኽኸውን ዝተፈጥረ ኮይኑ፡ ንፍርያት መግቢ **ንጹር**፡ **ኣብ ሳይንስ ዝተመርኮሰ**፡ ከምኡ\'ውን **ግሉጽ** ከባብያዊ ደረጃ ይህበካ፡ ልክዕ ኣብቲ ዘድልየካ ቦታ: ኣብ እትዕድገሉ እዋን።';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'ግልፅነት';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'ዘይከም ዋንነት ዘለዎም ምልክታት፡ ስሌት ቀጠልያ-ነጥቢ **ምሉእ ብምሉእ ክፉት** ኮይኑ **ብዝኾነ ሰብ** ክረጋገጽ ይኽእል።';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'ኣልትራ-ፕሮሰሲንግ እንታይ እዩ?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'እተን ጉጅለታት ኖቫ ብዛዕባ ደረጃ መስርሕ መግቢ ይሕብራኻ።';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'ምደባ NOVA ንመግብታት ብመሰረት **ደረጃ ኢንዱስትርያዊ መስርሖም** (ብውሑድ ዝተመስርሑ ወይ ዘይተመስርሑ መግብታት፣ ቀመማት ምግቢ፣ ዝተመስርሑ መግብታት፣ ኣዝዮም ዝተመስርሑ መግብታት) መሰረት ብምግባር ኣብ **4 ጉጅለታት** ክምደቡ የኽእል።';
+
+  @override
+  String get guide_nova_logos_caption => 'እቶም ናይ ኖቫ ኣርማታት';
+
+  @override
+  String get guide_nova_groups_title => 'እተን 4 ጉጅለታት ኖቫ';
+
+  @override
+  String get guide_nova_groups_intro =>
+      '4 ጉጅለታት ኖቫ ኣለዋ፡ እቲ ጸገም ዘለዎ ጉጅለ 4 - Ultra-processed foods እዩ።';
+
+  @override
+  String get guide_nova_groups_arg1_title => 'ብውሑድ ደረጃ ዝተመስርሑ ወይ ዘይተመስርሑ መግብታት';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'ዘይተመስርሑ (ወይ ተፈጥሮኣዊ) መግብታት፡ ካብ ተፈጥሮ ምስ ተፈልዩ፡ ዝብላዕ ክፋላት ተኽሊ (ዘርኢ፡ ፍረታት፡ ቆጽሊ፡ ጕንዲ፡ ሱር) ወይ እንስሳታት (ጭዋዳ፡ ስጋ፡ እንቋቑሖ፡ ጸባ)፡ ከምኡ’ውን ፋንጋስ፡ ኣልጌን ማይን እዮም።';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'ከም ዘይቲ፡ ሓርጭ፡ ሽኮርን ጨውን ዝኣመሰሉ ዝተመስርሑ ቀመማት ምግቢ፡ ካብ ጉጅለ 1 መግብታት ወይ ካብ ተፈጥሮ ብመገዲ ምጽቃጥ፡ ምጽራይ፡ ምፍሓር፡ ምፍሓርን ምንቃጽን ዘጠቓልል መስርሕ ዝመጹ ንጥረ ነገራት እዮም።';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'ዝተመስርሑ መግብታት፡ ከም ጥርሙዝ ኣሕምልቲ፡ ቆርቆሮ ዓሳ፡ ፍረታት ኣብ ሽሮፕ፡ በርበረን ሓድሽ ዝተሰርሑ ባኒን፡ ብቐንዱ ካብ ጉጅለ 2 ናብ ጉጅለ 1 መግብታት ጨው፡ ዘይቲ፡ ሽኮር ወይ ካልእ ንጥረ ነገራት ብምውሳኽ ይስራሕ። መስርሓት ዝተፈላለየ ኣገባብ ምዕቃብ ወይ ምብሳል ዘጠቓልል ኮይኑ፡ ኣብ ጉዳይ ባኒን በርበረን ድማ ኣልኮላዊ መስተ ዘይብሉ ምብላዕ ዘጠቓልል እዩ። መብዛሕትኦም ዝተመስርሑ መግብታት ክልተ ወይ ሰለስተ ቀመማት ዘለዎም ኮይኖም ከም ዝተመሓየሹ ስሪት ናይ ጉጅለ 1 መግብታት ይፍለጡ። ባዕሎም ወይ ድማ ብብዝሒ ምስ ካልኦት መግብታት ተደሚሮም ክምገቡ ይኽእሉ።';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'ኣዝዮም ዝተመስርሑ መግብታት፡ ከም ልስሉስ መስተታት፡ ምቁር ወይ ምቁር ዝተዓሸገ ምቁር መግቢ፡ ዳግማይ ዝተሃንጸ ፍርያት ስጋ፡ ከምኡ’ውን ቅድሚኡ ዝተዳለወ ፍሪዝ ምግቢ፡ ዝተቐየሩ መግብታት ጥራይ ዘይኮኑስ፡ መብዛሕትኡ ወይ ምሉእ ብምሉእ ካብ መግብታትን ተወሰኽቲ ነገራትን ዝመጹ ንጥረ ነገራት ዝተሰርሑ ቅመማት እዮም፡ ውሑድ ወይ ድማ ዋላ ሓንቲ ዘይተበላሸወ መግቢ ጉጅለ 1። ኣብዞም ቅመማት ዝርከቡ ቀመማት መብዛሕትኡ ግዜ ኣብ ዝተመስርሑ መግብታት እውን ዝርከቡ ከም ሽኮር፡ ዘይቲ፡ ስብሒ ወይ ጨው ዘጠቓልሉ እዮም። ይኹን እምበር፡ ኣዝዮም ዝተመስርሑ ፍርያት፡ ካልኦት ምንጪታት ጸዓትን መኣዛታትን እውን ኣለዎም፡ እዚ ድማ ብተለምዶ ኣብ ምድላዋት ምግቢ ዘይጥቀሙሉ እዮም። ገለ ካብዚኦም ብቐጥታ ካብ ከም ካዚን፣ ላክቶስ፣ ጸባ ጡብን ግሉተንን ዝኣመሰሉ መግብታት ዝወጽእ እዩ።';
+
+  @override
+  String get guide_nova_explanations_title => 'ኣብ ኣልትራ-ፕሮሰሲንግ ዘሎ ጸገማት';
+
+  @override
+  String get guide_nova_explanations_arg1_title => 'ልዕሊ ዓቐን መስርሕ ቀመማት መግቢ';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'ብዙሓት ካብ ተወሳኺ መስርሕ ናይ መግቢ ኣካላት ዝመጹ እዮም፣ ከም ሃይድሮጅን ዘለዎ ወይ ኢንተረስተሪፋይድ ዘይቲ፣ ሃይድሮላይዝድ ፕሮቲናት፣ ሶያ ፕሮቲን ተነጺሉ፣ ማልቶዴክስትሪን፣ ኢንቨርት ሽኮርን ልዑል ፍሩክቶስ ዘለዎ ሽሮፕ ቆሎን።';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'ካብ ጽሩይ ድሕነት መግቢ ንላዕሊ ዝኾኑ ተወሰኽቲ ነገራት';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'ኣብ ኣዝዮም ዝተመስርሑ መግብታት ዝርከቡ ተወሰኽቲ ገለ ኣብ ዝተመስርሑ መግብታት እውን ዝጥቀሙ ከም መዕቆቢ፣ ጸረ-ኦክስጅንን ረጋጊእን ዝኣመሰሉ ይርከብዎም። ኣብ ኣዝዮም ዝተመስርሑ ፍርያት ጥራይ ዝርከቡ መደባት ተወሰኽቲ፡ ንህዋሳዊ ባህርያት መግብታት ንምምሳል ወይ ንምዕባይ ወይ ድማ ነቲ ዘይጥዑም መዳያት ናይቲ ናይ መወዳእታ ፍርያት ንምሽፋን ዝጥቀሙሉ እዮም። እዞም ተወሰኽቲ ነገራት ቀለምን ካልኦት ሕብርታትን፣ ሕብሪ ዘረጋግኡ፤ መኣዛታት፣ መኣዛታት ዘደንፍዑ፣ ሽኮር ዘይኮኑ መመቐሪታት፤ ከምኡ’ውን ናይ መስርሕ ሓገዝቲ ከም ካርቦኒቲንግ፣ ፊርሚንግ፣ ቡልኪንግን ጸረ-ቡልኪንግን ኣጀንት፣ ዲ-ፎሚንግ፣ ጸረ-ኬኪንግን ግላዚንግን ኤጀንት፣ ኢሙልሳይፈርስ፣ ሴክዌስትራንትስን ሁሜክታንትን ዝኣመሰሉ።';
+
+  @override
+  String get guide_nova_explanations_arg3_title => 'ኣብ ገዛኻ ክትገብሮ ዘይትኽእል መስርሕ';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'መብዛሕትኡ ግዜ ብዙሓት ቀመማት ንምውህሃድን ነቲ ናይ መወዳእታ ፍርያት ንምፍጣርን (ስለዚ ‘ኣልትራ-ፕሮሰስድ’) ብዙሕ ቅደም ተኸተል መስርሓት ይጥቀሙ። እቶም መስርሓት ናይ ውሽጢ ዓዲ መመዘኒ ዘይብሎም ሓያሎ ዘጠቓልሉ ኮይኖም፡ ከም ሃይድሮጅኔሽንን ሃይድሮላይዜሽንን፡ ኤክስትሩዥንን ሞልዲንግን፡ ከምኡ’ውን ቅድመ-መስርሕ ንመጥበሲ ዝኣመሰሉ እዮም።';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'እቲ ሃዳናይን ፋይናንሳውን መዳያት ኣልትራ-ፕሮሰሲንግ';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'ሓፈሻዊ ዕላማ ኣልትራ-ፕሮሰሲንግ ንኹሎም ካልኦት ጉጅለታት መግቢ ንምፍንቓል ዝተዳለዉ ምልክት ዘለዎም፣ ምቹኣት (ነባሪ፣ ንሃልኪ ድሉዋት)፣ ሰሓብቲ (ልዕሊ ዓቐን ጣዕሚ ዘለዎም)ን ልዑል መኽሰብ ዘለዎምን (ትሑት ዋጋ ዘለዎም ቀመማት) ፍርያት መግቢ ምፍጣር እዩ። መብዛሕትኡ ግዜ ኣዝዮም ዝተመስርሑ ፍርያት መግቢ ብሰሓቢ መንገዲ ይዕሸጉን ብጽዑቕ ዕዳጋ ይቐርቡን።';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4830,12 @@ class AppLocalizationsTi extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'ዋጋ የለን';
+
+  @override
+  String get prices_products_empty_explanation => 'ቀዳማይ ኣበርክቶ ግበሩ!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4874,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'ምውጻእ ኣብ ምክያድ…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'ምውጻእ ዕዉት እዩ።';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5008,472 @@ class AppLocalizationsTi extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'ናይ ዋጋታት ምርጫታትካ ኣመሓድር';
+
+  @override
+  String get preferences_card_project => 'ፕሮጀክት ክፉት ሓቅታት መግቢ';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'ስታቲስቲክስ ናተይ';
+
+  @override
+  String get preferences_contribute_subtitle => 'ተርጉም፣ መሳርሒታትና ኣመሓይሽ…';
+
+  @override
+  String get preferences_connect_title => 'ምርኻብ';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'ኢድካ ዘርጊሕካ፡ ወይ ኣብ ማሕበራዊ መራኸቢታት ተኸታተሉና።';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'ኣብ መላእ ዓለም ንዝርከቡ ሚልዮናት ተጠቀምቲ ክንሕብር ሓግዙና።';
+
+  @override
+  String get preferences_card_help => 'ሓገዝ & ደገፍ';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'ንሕቶታትኩም መልሲ ረኸቡ።';
+
+  @override
+  String get logged_out => 'ወጺኡ';
+
+  @override
+  String get preferences_app_bar_message => 'ሓደ ካብ ኣባላትና ብምዃንኩም የቐንየልና!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'ኩሉ ስታቲስቲክስ ርአ';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '$provider ን \"$keyword\" ድለዩ።';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint => 'ንሓደ ቅጥዒ ድለዩ (ንኣብነት ኒውትሪ-ስኮር)';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'ተበጻሕነት: ኢሞጂ ኣርእዩ';
+
+  @override
+  String get preferences_accessibility_remove_colors => 'ተበጻሕነት፦ ሕብርታት ኣወግድ';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'ሕጋዊ ሓበሬታ';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'ውዕል ኣጠቓቕማ፡ ፖሊሲ ውልቃዊ ሓበሬታን ካልእን';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts **ብኹሉ ሰብ፣ ንኹሉ** ዝተሰርሐ ዳታቤዝ ፍርያት መግቢ እዩ።\nዝሓሸ ምርጫታት መግቢ ንምግባር ክትጥቀመሉ ትኽእል ኢኻ፣ **ክፉት ዳታ** ስለዝኾነ ድማ ዝኾነ ሰብ **ንዝኾነ ዕላማ ዳግማይ ክጥቀመሉ ይኽእል እዩ**።';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'ፍቓድ ምሃብ';
+
+  @override
+  String get preferences_about_app_title => 'ብዛዕባ እቲ ኣፕ';
+
+  @override
+  String get preferences_about_app_subtitle => 'ቴክኒካዊ ሓበሬታ፡ ሓበሬታ ዲቨሎፐርን ካልእን';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'ቁጽሪ ስሪት።';
+
+  @override
+  String get preferences_scanner_title => 'ስካነር';
+
+  @override
+  String get preferences_app_store => 'ኣፕ ስቶር';
+
+  @override
+  String get preferences_app_system_settings => 'ናይ ስርዓት ቅጥዕታት';
+
+  @override
+  String get preferences_source_code => 'ነቲ ምንጪ ኮድ ምብጻሕ';
+
+  @override
+  String get preferences_source_code_subtitle => 'ንሚልዮናት ድማ ጽልዋ ክትገብር ጀምር';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'መቑሽሽ';
+
+  @override
+  String get tips_discover_nutriscore => 'ሓድሽ ኒውትሪ-ስኮር ርኸብዎ።';
+
+  @override
+  String get preferences_on_off_website_subtitle => 'ኣብ መርበብ ሓበሬታ ክፉት ሓቅታት መግቢ';
+
+  @override
+  String get preferences_manage_account_title => 'ኣካውንተይ ኣመሓድር';
+
+  @override
+  String get preferences_manage_account_tooltip => 'ኣካውንትካ ኣመሓድር';
+
+  @override
+  String get preferences_change_password_title => 'ፓስዎርድይ ቀይር';
+
+  @override
+  String get preferences_danger_zone => 'ሓደጋ ዞባ';
+
+  @override
+  String get preferences_account_deletion_subtitle => 'ኩሉ ኣበርክቶኹም ክጠፍእ እዩ።';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'ናይ ኣፕ ቅጥዕታት';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'ብጣዕሚ ፈተነ ዝገብር መንገዲ ፍርያት ካብ መስመር ወጻኢ ስካን ንምግባር';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'ኩሉ ፍርያት ካብቲ ሰርቨር ምሕዳስ';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'በጃኹም ፍጹም ኣድላዪ እንተዘይኮይኑ ካብ ምግባር ተቖጠቡ።';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'ዲሞ ሞድ';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'ካርድታት ናብ ስካነር ምውሳኽ';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      '3 ናሙና ፍርያት ኣብቲ ስካነር ይውስኽ';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'ፎልክሶኖሚ ኣአንጋዲ';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'ኣአንጋዲ፡ $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'ናይ ተበጻሕነት ፈተነታት';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'ንዋጋታት ዝኸውን ምርጫ ብዙሕ ፍርያት';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'ተጠቃሚ ዝኣዘዘ ናይ ፍልጠት ፓነላት';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'ግዝያዊ ምብጻሕ ናብ ምድላይ ቦታ';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'ን2 ወይ 3 ፍርያት ጎኒ ንጎኒ ምውድዳር';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title => 'ዝርዝር ፍርያት ምእታው';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'ነጥብታትን ኣገባባትን';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'ኒውትሪ-ስኮር ብኸመይ ከም ዝስላዕ ርኸቡ።';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'ቀንዲ ለውጥታት ናይቲ ኣገባብ ርኸቡ።';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title => 'ክፉት ሓቅታት መግቢ ርኸቡ።';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - ብተደጋጋሚ ዝሕተቱ ሕቶታት';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'እቲ ክፉት ሓቅታት መግቢ ዘይመንግስታዊ ትካል';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'ናይ ማሕበረሰብ ሓድሽ ሓበሬታ ረኸቡ።';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'ምስ ኣፕን ማሕበረሰባዊ ዜናታትን ኣብ ሉፕ ጽናሕ';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'ኣብ ሓደ ካብቲ ቨርቹዋል መደባትና ብምስታፍ ተሳተፉ';
+
+  @override
+  String get preferences_connect_blog_title => 'ብሎግ ክፉት ሓቅታት መግቢ';
+
+  @override
+  String get preferences_connect_blog_subtitle => 'እዋናዊ ዜናታት ርኸቡ፣ ከምቲ ዘጋጥም';
+
+  @override
+  String get preferences_connect_community_help_title => 'ካብ ሕብረተሰብ ሓገዝ ውሰድ';
+
+  @override
+  String get preferences_connect_improve_app_title => 'ነቲ ኣፕ ንምምሕያሽ ሓግዙና።';
+
+  @override
+  String get preferences_connect_debug_info_title => 'ናይ ዲባግ ሓበሬታ ስደዱልና';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'ዝርዝር ሓበሬታ ምእራም ዘለዎ ኢመይል ስደዱልና';
+
+  @override
+  String get preferences_connect_feedback_title => 'ብዛዕባ እቲ ኣፕ ርእይቶ ስደዱልና';
+
+  @override
+  String get preferences_connect_feedback_subtitle => 'መጻኢ ናይቲ ኣፕ ንምቕራጽ ሓግዙ';
+
+  @override
+  String get preferences_connect_survey_title => 'ነቲ ናይ ኣፕ ዳህሳስ ውሰድዎ።';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'ቀጺልና እንታይ ክንሃንጽ ከም ዘለና ንምርዳእ ሓግዙና።';
+
+  @override
+  String get preferences_connect_professionals_title => 'ሰብ ሞያ';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'ፍጹም ነጻ፣ ን500 ኣፕስ & ሚልዮናት ተጠቀምቲ ቅኑዕ ዳታ የረጋግጽ። ርእሰ-ኣገልግሎት፣ ምስ ፒኣይኤም ወይ ስፕረድሺትካ (XLSX) ዝሰማማዕ';
+
+  @override
+  String get preferences_connect_pro_email_subtitle => 'ንኽትጅምሩ ርኸቡ።';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'ንጸብጻብካ ዘድልየካ ኩሉ ንዋት ውሰድ';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'ንናይ ፕረስ ሕቶታት ወይ ብዛዕባ ጸብጻብኩም ንኽትሕብሩና ርኸቡ።';
+
+  @override
+  String get preferences_contribute_active_volunteer_title => 'ንጡፍ ወለንተኛ ኩን።';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'ልምዓት፣ ርክብ፣ ዲዛይን… ዝኾነ ዓይነት ወለንታዊ ስራሕ ወይ ክእለት ምቕባል ይግበረልኩም!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'ገለ ካብቲ ብዙሕ ኣበርክቶ ክትገብር እትኽእል መገድታት ርኸብ';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'ምምዕባል ሞባይል ኣፕ';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'ኣብ ምምዕባል ሶፍትዌር ከመይ ጌርካ ኣበርክቶ ከም እትገብር ተማሃር';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'መዓልታዊ ዘይርጉእ ህንጻታት፡ ፍጹም ሓድሽ ባህርያት';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'ኣብ ከባቢኻ ዝርከብ ማሕበረሰብ ኣዕብዮ';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'ኣብ ሶፍትዌር፣ ትሕዝቶ፣ ትርጉማት ትንተና ቀመማት ሓገዝ';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'ንዓኹም ክትሕግዘኩም ንእሽቶ ቴምፕሌት ኣዳሊና ኣለና :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'ኣብ ሃገርካ ግሉጽነት መግቢ ንምዕባይ ቀለልቲ ስጉምትታት';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'ኣብቲ ናይ ዳታ ጽሬት ጉጅለ ተጸንበሩ';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'እቲ ዳታቤዝ ምሉእን ቅኑዕን ምዃኑ ንምርግጋጽ ኣብ እንገብሮ ጻዕሪ ተጸንበሩ';
+
+  @override
+  String get preferences_contributions_products_added_title => 'ተወሳኺ ፍርያት';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'ኣብ Open Food Facts ዝወሰኽክዎም ሓደስቲ ፍርያት';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'ክውድኦም ዘለኒ ፍርያት';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'ኩሎም ዘይተማልኡ ፍርያት';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'ዋጋታተይ፡ መርትዖታተይ…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'ንኽትውድኡ ክትሕግዙ እትኽእሉ ፍርያት';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'ኣብ ሃገርኩም ንዘሎ Nutri-Score & Green-Score ንምሕሳብ ሓግዙ';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'ኣነ ዘበርከትክዎም ዋጋታት';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'ዋጋ ምልክትን ቅብሊታትን';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'ቅብሊታትካ ስእሊ ውሰድ እሞ ምስኡ ዝተኣሳሰሩ ባርኮድ ስካን ግበር';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'ኣብ ሓደ ድኳን ዋጋታት ስእሊ ውሰድ';
+
+  @override
+  String get preferences_prices_newest_title => 'ሓድሽ ዋጋታት';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'ብማሕበረሰብ ክፉት ዋጋታት ዝተወሰኹ ናይ መወዳእታ ዋጋታት';
+
+  @override
+  String get preferences_prices_top_contributors_title => 'ዝበዝሐ ዋጋ ዘለዎም ኣበርከትቲ';
+
+  @override
+  String get preferences_prices_metrics_title => 'ክፉት ዋጋ መለክዒታት';
+
+  @override
+  String get preferences_prices_metrics_subtitle => 'ምዕባለ ናይቲ ፕሮጀክት ተኸታተሉ።';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'ኣበርክቶ እትገብረሉ መገድታት';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'ብገዛእ ርእስኻ ወይ ብኻልኦት ዝተወሰኹ ዋጋታት ኣረጋግጽ፣ ብሓገዝ AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'ቀልጢፍካ ካብ ካሜራ ሮልካ ብዙሕ ቅብሊታት ወይ ስእሊ መደርደሪታት ወስኸሉ።';
+
+  @override
+  String get preferences_prices_challenges_title => 'ወርሓዊ ብድሆታት';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'ዋጋታት ንምእካብ ኣብ ወርሓዊ ቴማዊ ጕዕዞታት ተሳተፍ';
+
+  @override
+  String get preferences_prices_loyalty_data_title => 'ናይ ተኣማንነት ዳታኻ ምምላስ';
+
+  @override
+  String get preferences_prices_gdpr_subtitle => 'ዳታኻ ከመይ ጌርካ ከም እትሓትት ተማሃር';
+
+  @override
+  String get preferences_page_customize_app_title => 'ነቲ ኣፕ ብዝጥዕመካ ኣመዓራርዮ';
+
+  @override
+  String get preferences_page_contribute_project_title => 'ኣብቲ ፕሮጀክት ኣበርክቶ ግበሩ';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'ቀለልቲ መገድታት ንኽፉት ሓቅታት መግቢ ንምሕጋዝ';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'ብዛዕባ እቲ ፕሮጀክት ኣገባባት፡ ሓገዝን ካልእን ነጥቢ ምሃብ';
+
+  @override
   String get product_edit_robotoff_positive_button => 'ሓሳብ ተቐበል';
 
   @override
@@ -4735,4 +5516,101 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get prices_proof_error => 'ምርግጋጽ ምርግጋጽ ፈሺሉ፣ መርትዖታት ከምጽእ ኣይከኣለን';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ናይ $total መርትዖታት';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ናይ $total ኣበርከትቲ';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ናይ $total ቦታታት';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count ቦታታት';
+  }
+
+  @override
+  String get restart_to_apply_message => 'በጃኹም ነቲ ኣፕ ዳግማይ ጀምርዎ ነቲ ለውጢ ንምትግባር።';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'ግራፊካዊ መተሓላለፊ';
+
+  @override
+  String get preferences_app_settings_media_title => 'ሚድያ';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'ክፉት ናይ መግቢ ሓቅታት ቤተ ፈተነታት';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'ክፉት ሓቅታት መግቢ ናብ ቋንቋኹም ኣምጽኡ';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'ኣብቲ ኣልፋ ቨርዥን ናይቲ ኣፕ ተመዝገቡ።';
+
+  @override
+  String get preferences_dev_mode_section_data => 'ኣበርክቶታትን ዳታ ፍርያትን';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'ፎልክሶኖሚ ኣይትርእዩ';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'ኣብ $createdተወሰኸ';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

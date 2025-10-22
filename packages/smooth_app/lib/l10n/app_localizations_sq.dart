@@ -9,6 +9,9 @@ class AppLocalizationsSq extends AppLocalizations {
   AppLocalizationsSq([String locale = 'sq']) : super(locale);
 
   @override
+  String get app_name => 'Fakte të Hapura Ushqimore';
+
+  @override
   String get sep => '';
 
   @override
@@ -327,10 +330,6 @@ class AppLocalizationsSq extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -456,9 +455,6 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -605,7 +601,7 @@ class AppLocalizationsSq extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profili';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -990,6 +986,10 @@ class AppLocalizationsSq extends AppLocalizations {
       'Shto kategorine e munguar te produktit.';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Zgjidhni një kategori më të saktë';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1272,6 +1272,13 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Pa prona';
+
+  @override
+  String get product_tags_explanation =>
+      'Duke shtuar veti (çelës/vlerë) në një produkt, ju ndihmoni në pasurimin e tij.';
 
   @override
   String get add_tag => 'Add property';
@@ -1698,7 +1705,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Fshi llogarinë time';
 
   @override
   String get user_profile => 'Account';
@@ -2368,6 +2375,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Qasuni në veçoritë eksperimentale dhe mjetet e zhvillimit';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2514,6 +2525,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'Hapur në faqen e internetit të Çmimeve të Hapura';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2652,6 +2667,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get prices_list_add_new_price => 'Shtoni një çmim të ri prej\n';
 
   @override
+  String get prices_list_empty_title => 'Ende pa çmim!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Bëhu i pari që shton një:\nDuke skanuar një **faturë** ose një **etiketë çmimi**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Dyqan i panjohur';
 
   @override
@@ -2661,7 +2683,7 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Shikoni të gjitha çmimet për këtë produkt';
 
   @override
   String get prices_entry_menu_open_proof => 'Shiko provën';
@@ -2741,9 +2763,22 @@ class AppLocalizationsSq extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Asnjë kontribues ende!';
+
+  @override
+  String get prices_users_empty_explanation => 'Bëhu i pari që shton një çmim!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ende pa dyqan!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Bëhu i pari që shton një çmim!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2848,7 +2883,17 @@ class AppLocalizationsSq extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Asnjë provë ende!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Filloni duke shtuar një foto të një **fature** ose një **etikete çmimi**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2927,13 +2972,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2945,6 +2984,17 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Rivendos gjuhën e aplikacionit';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Shto karta';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Kaloni midis prices.openfoodfacts.org (PROD) dhe mjedisit të testimit';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2988,6 +3038,11 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3989,32 +4044,34 @@ class AppLocalizationsSq extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Rezultati i Gjelbër A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Rezultati i Gjelbër B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Rezultati i Gjelbër C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Rezultati i Gjelbër D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Rezultati i Gjelbër E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new =>
+      'Rezultati i panjohur i gjelbër';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Rezultati i Gjelbër nuk zbatohet';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ushqime ultra të përpunuara - grupet NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4111,9 +4168,6 @@ class AppLocalizationsSq extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4221,11 +4275,282 @@ class AppLocalizationsSq extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Cili është Rezultati i Gjelbër?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score është një logo që synon t\'ju informojë rreth **ndikimit mjedisor të ushqimit**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Kodi i ngjyrës varion nga jeshile e errët (**A+**) për produktet **më pak ndikuese** deri në të kuqe të errët (**F**) për produktet **më shumë ndikuese**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Logot e Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Thelbi: Vlerësimi i ciklit jetësor (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Një vlerësim shkencor i kategorive ushqimore';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Për secilën kategori produkti, përcaktohet një **pikë referimi** duke përdorur të dhëna nga baza e të dhënave mjedisore Agribalyse (e projektuar nga ADEME dhe INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Analiza e ciklit jetësor** është një metodë standarde vlerësimi për kryerjen e një vlerësimi mjedisor shumëfazor dhe shumëkriterësh.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Mat:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 hapa prodhimi';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 tregues të ndikimit në mjedis';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Ndryshimi i klimës/gjurma e karbonit';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Hollimi i shtresës së ozonit';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Rrezatimi jonizues';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tokë';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'Përdorimi i ujit dhe energjisë';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ndotja e ajrit';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Ujë detar dhe i ëmbël (grimca, acidifikim, eutrofikim)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Shterimi i burimeve.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonuse dhe penalitete';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Për të shpërblyer produktet më të mira brenda një kategorie, ne aplikojmë bonuse dhe penalitete bazuar në disa kritere:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Një bonus jepet në bazë të origjinës së përbërësve. Ky bonus merr në konsideratë ndikimin në transport dhe gjithashtu politikën mjedisore të vendit të secilit prodhues.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Për të llogaritur me saktësi Green-Score, është e nevojshme të keni informacion që nuk specifikohet domosdoshmërisht në paketim (siç është origjina dhe përqindja e saktë e secilit përbërës) ose që rrallë është i disponueshëm në formë të përdorshme (siç është një listë e të gjithë përbërësve të paketimit me llojet e sakta të plastikës së përdorur).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Vlerat mesatare përdoren kur ky informacion nuk është ende i disponueshëm, por tani po u bëjmë thirrje të gjithëve që të na ndihmojnë të mbledhim këtë informacion i cili do të jetë shumë i dobishëm për Green-Score, por edhe për shumë përdorime të tjera.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Si mund të ndihmojnë qytetarët';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Të gjithë qytetarët mund të na ndihmojnë të mbledhim dhe strukturojmë informacionin që është i pranishëm në produkte ose që mund të nxirret prej tyre, siç është informacioni mbi paketimin: Mission Emballages: një inventar bashkëpunues në shkallë të gjerë i paketimit për të gjitha produktet ushqimore (në frëngjisht)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Si mund të ndihmojnë prodhuesit';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Prodhuesit mund të na dërgojnë informacionin e tyre direkt përmes platformës sonë falas për prodhuesit.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Cili produkt është më i mirë për planetin?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Mund të jetë e vështirë të thuhet';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Zgjedhja e ushqimit të qëndrueshëm është një nga gjërat më të fuqishme që mund të bëjmë për klimën, pasi **sistemi ynë global ushqimor është përgjegjës për më shumë se një të katërtën e të gjitha emetimeve të gazrave serrë**.\n(Burimi: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Ti ke fuqinë!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Lajmi i mirë është se kjo na jep një mënyrë të fuqishme për të krijuar ndryshim.\n**Secili prej nesh ha rreth 1,000 vakte çdo vit**. Këto janë 1,000 mundësi për të **zgjedhur një të ardhme më të mirë për planetin**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Ndihmon të jesh përgjegjës dhe të vendosësh';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Zgjedhja e ushqimit të qëndrueshëm mund të duket komplekse. Etiketat janë konfuze dhe informacioni shpesh mungon. Rezultati i Gjelbër u krijua për ta bërë të thjeshtë, duke ju dhënë një vlerësim mjedisor të **qartë**, të **bazuar në shkencë** dhe **transparent** për produktet ushqimore, pikërisht aty ku ju nevojitet: ndërsa blini.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Transparenca';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ndryshe nga etiketat pronësore, llogaritja e Green-Score është **plotësisht e hapur** dhe mund të **verifikohet nga kushdo**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Çfarë është ultra-përpunimi?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Grupet NOVA ju informojnë rreth nivelit të përpunimit të ushqimit.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Klasifikimi NOVA lejon kategorizimin e ushqimeve në **4 grupe** bazuar në **shkallën e përpunimit industrial** (ushqime minimalisht të përpunuara ose të papërpunuara, përbërës kulinarë, ushqime të përpunuara, ushqime ultra të përpunuara).';
+
+  @override
+  String get guide_nova_logos_caption => 'Logot e NOVA-s';
+
+  @override
+  String get guide_nova_groups_title => '4 grupet NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Ekzistojnë 4 grupe NOVA, ku problematiku është Grupi 4 - Ushqime ultra të përpunuara.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Ushqime të përpunuara minimalisht ose të papërpunuara';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ushqimet e papërpunuara (ose natyrale) janë pjesët e ngrënshme të bimëve (fara, fruta, gjethe, kërcell, rrënjë) ose kafshëve (muskuj, të brendshme, vezë, qumësht), si dhe kërpudhat, algat dhe uji, pasi janë ndarë nga natyra.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Përbërësit e përpunuar të kuzhinës, siç janë vajrat, gjalpi, sheqeri dhe kripa, janë substanca që rrjedhin nga ushqimet e Grupit 1 ose nga natyra përmes proceseve që përfshijnë presimin, rafinimin, bluarjen, bluarjen dhe tharjen.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ushqimet e përpunuara, të tilla si perimet e ambalazhuara, peshku i konservuar, frutat në shurup, djathërat dhe bukët e sapobëra, bëhen kryesisht duke shtuar kripë, vaj, sheqer ose substanca të tjera nga ushqimet e Grupit 2 në ato të Grupit 1. Proceset përfshijnë metoda të ndryshme ruajtjeje ose gatimi, dhe në rastin e bukës dhe djathit, fermentim joalkoolik. Shumica e ushqimeve të përpunuara kanë dy ose tre përbërës dhe njihen si versione të modifikuara të ushqimeve të Grupit 1. Ato mund të hahen vetëm ose, më shpesh, në kombinim me ushqime të tjera.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ushqimet ultra të përpunuara, siç janë pijet joalkoolike, ushqimet e ëmbla ose të kripura të paketuara, produktet e mishit të rikonstituar dhe gatimet e ngrira të parapërgatitura, nuk janë thjesht ushqime të modifikuara, por formulime të bëra kryesisht ose tërësisht nga substanca të nxjerra nga ushqimet dhe aditivë, me pak ose aspak ushqim të paprekur të Grupit 1. Përbërësit në këto formulime zakonisht përfshijnë ato që gjenden edhe në ushqimet e përpunuara, siç janë sheqernat, vajrat, yndyrnat ose kripa. Megjithatë, produktet ultra të përpunuara përmbajnë edhe burime të tjera energjie dhe lëndësh ushqyese që nuk përdoren zakonisht në përgatitjet kulinare. Disa prej tyre nxirren direkt nga ushqimet, siç janë kazeina, laktoza, hirra dhe gluteni.';
+
+  @override
+  String get guide_nova_explanations_title => 'Problemet me ultra-përpunimin';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Përpunim ekstrem i përbërësve të ushqimit';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Shumë prej tyre rrjedhin nga përpunimi i mëtejshëm i përbërësve të ushqimit, siç janë vajrat e hidrogjenizuara ose të interesterifikuara, proteinat e hidrolizuara, izolati i proteinës së sojës, maltodekstrina, sheqeri invert dhe shurupi i misrit me përmbajtje të lartë fruktoze.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Aditivë që shkojnë përtej sigurisë së pastër ushqimore';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Shtesat në ushqimet ultra të përpunuara përfshijnë disa që përdoren edhe në ushqimet e përpunuara, siç janë konservuesit, antioksidantët dhe stabilizuesit. Klasat e shtesave që gjenden vetëm në produktet ultra të përpunuara përfshijnë ato që përdoren për të imituar ose përmirësuar cilësitë shqisore të ushqimeve ose për të maskuar aspektet e pakëndshme të produktit përfundimtar. Këto shtesa përfshijnë ngjyrues dhe ngjyra të tjera, stabilizues ngjyrash; aroma, përmirësues shijesh, ëmbëlsues jo-sheqer; dhe ndihmës përpunimi siç janë agjentët karbonizues, forcimi, mbushës dhe anti-mbushës, agjentët kundër shkumëzimit, anti-grumbullimit dhe lustrimit, emulsifikuesit, sekuestruesit dhe humektantët.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Përpunim që nuk mund të bëhet në shtëpi';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Një mori sekuencash procesesh përdoren për të kombinuar zakonisht shumë përbërës dhe për të krijuar produktin përfundimtar (pra \'ultra të përpunuar\'). Proceset përfshijnë disa pa ekuivalentë vendas, siç janë hidrogjenizimi dhe hidroliza, nxjerrja dhe formëzimi, dhe parapërpunimi për skuqje.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Aspektet grabitqare dhe financiare të ultra-përpunimit';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Qëllimi i përgjithshëm i ultra-përpunimit është të krijojë produkte ushqimore të markës, të përshtatshme (të qëndrueshme, të gatshme për t’u konsumuar), tërheqëse (hiper-të shijshme) dhe shumë fitimprurëse (me përbërës me kosto të ulët), të dizajnuara për të zëvendësuar të gjitha grupet e tjera ushqimore. Produktet ushqimore të ultra-përpunuara zakonisht paketohen në mënyrë tërheqëse dhe tregtohen intensivisht.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4538,6 +4863,12 @@ class AppLocalizationsSq extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Nuk ka çmim të disponueshëm';
+
+  @override
+  String get prices_products_empty_explanation => 'Bëhu i pari që kontribuon!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4576,7 +4907,10 @@ class AppLocalizationsSq extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Nxjerrja në vazhdim…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Nxjerrja u krye me sukses';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4707,6 +5041,507 @@ class AppLocalizationsSq extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Menaxhoni preferencat tuaja të çmimeve';
+
+  @override
+  String get preferences_card_project => 'Projekti i Fakte të Hapura Ushqimore';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Statistikat e mia';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Përkthejeni, përmirësoni mjetet tona…';
+
+  @override
+  String get preferences_connect_title => 'Lidhu';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Na kontaktoni, ose na ndiqni në rrjetet sociale';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Na ndihmoni të informojmë miliona konsumatorë në të gjithë botën';
+
+  @override
+  String get preferences_card_help => 'Ndihmë dhe Mbështetje';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Merrni përgjigje për pyetjet tuaja';
+
+  @override
+  String get logged_out => 'Dola nga llogaria';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Faleminderit që jeni një nga anëtarët tanë!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Shiko të gjitha statistikat';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Kërko $provider për \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Kërko për një cilësim (p.sh. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Aksesueshmëria: Shfaq emoji-t';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Aksesueshmëria: Hiq ngjyrat';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Informacion ligjor';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Kushtet e përdorimit, politika e privatësisë dhe më shumë';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts është një bazë të dhënash për produktet ushqimore **e krijuar nga të gjithë, për të gjithë**.\nMund ta përdorni për të bërë zgjedhje më të mira ushqimore, dhe meqenëse është **e dhënë e hapur**, kushdo mund ta **ripërdorë atë për çdo qëllim**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licencat';
+
+  @override
+  String get preferences_about_app_title => 'Rreth aplikacionit';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Informacion teknik, informacion për zhvilluesit dhe më shumë';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Numri i versionit';
+
+  @override
+  String get preferences_scanner_title => 'Skaner';
+
+  @override
+  String get preferences_app_store => 'Dyqani i aplikacioneve';
+
+  @override
+  String get preferences_app_system_settings => 'Cilësimet e sistemit';
+
+  @override
+  String get preferences_source_code => 'Qasuni në kodin burimor';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Dhe filloni të keni një ndikim për miliona njerëz';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Këshilla';
+
+  @override
+  String get tips_discover_nutriscore => 'Zbuloni Nutri-Score-in e ri';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Në faqen e internetit Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Menaxho llogarinë time';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Menaxho llogarinë tënde';
+
+  @override
+  String get preferences_change_password_title => 'Ndrysho fjalëkalimin tim';
+
+  @override
+  String get preferences_danger_zone => 'Zona e rrezikut';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Të gjitha kontributet tuaja do të humbasin';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Cilësimet e aplikacionit';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Mënyrë shumë eksperimentale për të skanuar produktet jashtë linje';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Rifresko të gjitha produktet nga serveri';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Ju lutem shmangni këtë nëse nuk është absolutisht e nevojshme';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modaliteti Demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Shto karta në skaner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Shton 3 produkte mostër në skaner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Mikpritës i Folksonomisë';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Pritësi: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Eksperimentet e aksesueshmërisë';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Përzgjedhje e shumë produkteve për çmimet';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panelet e njohurive të renditura nga përdoruesi';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Qasje e përkohshme në kërkimin e vendndodhjes';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Krahasim krah për krah për 2 ose 3 produkte';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importimi i listës së produkteve';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Rezultatet dhe metodologjitë';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Zbuloni se si llogaritet Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Zbuloni ndryshimet kryesore në metodologji';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Zbuloni Fakte të Hapura për Ushqimin';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Pyetje të Shpeshta';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'OJQ-ja The Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Merrni përditësime nga komuniteti';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Qëndroni të informuar me lajmet e aplikacionit dhe komunitetit';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Angazhohuni duke marrë pjesë në një nga eventet tona virtuale';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Blogu i Fakte të Hapura Ushqimore';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Merrni lajmet më të fundit, teksa ato ndodhin';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Merrni ndihmë nga komuniteti';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Na ndihmoni të përmirësojmë aplikacionin';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Na dërgoni informacion mbi debugging-un';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Na dërgoni një email me informacion të detajuar për debugging-un';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Na dërgoni reagime rreth aplikacionit';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Ndihmoni në formësimin e së ardhmes së aplikacionit';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Merrni pjesë në anketën e aplikacionit';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Na ndihmoni të kuptojmë se çfarë duhet të ndërtojmë më pas';
+
+  @override
+  String get preferences_connect_professionals_title => 'Profesionistët';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Plotësisht falas, siguron të dhëna të sakta për 500 aplikacione dhe miliona konsumatorë. Vetëshërbim, i pajtueshëm me PIM ose spreadsheet-et tuaja (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Na kontaktoni për të filluar';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Merrni të gjithë materialin që ju nevojitet për raportin tuaj';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Na kontaktoni për pyetje nga shtypi ose për të na njoftuar rreth raportit tuaj';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Bëhuni një vullnetar aktiv';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Zhvillim, Komunikim, Dizajn… çdo lloj vullnetarizmi ose ekspertize është i mirëpritur!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Zbuloni disa nga shumë mënyrat se si mund të kontribuoni';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Zhvillimi i aplikacioneve mobile';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Mësoni si të kontribuoni në zhvillimin e softuerëve';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Ndërtime të përditshme të paqëndrueshme, veçori krejt të reja';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Rritni komunitetin tuaj lokal';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Ndihmë me programe kompjuterike, përmbajtje, përkthime të analizës së përbërësve';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Ne kemi përgatitur një model të vogël për t\'ju ndihmuar :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Hapa të thjeshtë për të rritur transparencën ushqimore në vendin tuaj';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Bashkohuni me ekipin e cilësisë së të dhënave';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Bashkohuni me përpjekjet tona për të siguruar që baza e të dhënave të jetë e plotë dhe e saktë';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Produkte të shtuara';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Produkte të reja që shtova te Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produktet që duhet të përfundoj';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Të gjitha produktet e papërfunduara';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Çmimet e mia, provat e mia…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produkte që mund të ndihmoni në përfundimin e tyre';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ndihmoni në llogaritjen e Nutri-Score dhe Green-Score në vendin tuaj';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Çmimet që kam kontribuar';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Etiketat e çmimeve dhe faturat';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Bëni fotografi të faturave tuaja dhe skanoni barkodet përkatëse';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Bëni fotografi të çmimeve në një dyqan';
+
+  @override
+  String get preferences_prices_newest_title => 'Çmimet më të reja';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Çmimet më të fundit të shtuara nga komuniteti i Çmimeve të Hapura';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Kontribuesit me çmimet më të larta';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metrikat e Çmimit të Hapur';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Ndiqni evolucionin e projektit';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Mënyrat për të kontribuar';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Konfirmoni çmimet e shtuara nga ju ose të tjerët, me ndihmën e IA-së';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Shtoni shpejt shumë fatura ose foto të rafteve nga filmi juaj i kamerës';
+
+  @override
+  String get preferences_prices_challenges_title => 'Sfidat mujore';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Merrni pjesë në misione tematike mujore për të mbledhur çmime';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Rimerrni të dhënat tuaja të besnikërisë';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Mësoni si të kërkoni të dhënat tuaja';
+
+  @override
+  String get preferences_page_customize_app_title => 'Personalizo aplikacionin';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Kontribuoni në projekt';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Mënyra të thjeshta për të ndihmuar në Hapjen e Fakte Ushqimore';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodologjitë e pikëzimit, ndihmë dhe më shumë rreth projektit';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Prano sugjerimin';
 
   @override
@@ -4751,4 +5586,103 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Autentifikimi dështoi, provat nuk mund të merren';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count nga $total prova';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count nga $total kontribues';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count nga $total vendndodhje';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count vendndodhje';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Ju lutemi rinisni aplikacionin për të zbatuar ndryshimet.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Ndërfaqe grafike';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratorët e Fakteve Ushqimore të Hapura';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Sillni Fakte Ushqimore të Hapura në gjuhën tuaj';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Regjistrohuni në versionin alfa të aplikacionit';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Kontributet dhe të dhënat e produktit';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Mos e shfaq Folksonominë';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Shtuar më $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

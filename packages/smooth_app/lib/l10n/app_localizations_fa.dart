@@ -9,6 +9,9 @@ class AppLocalizationsFa extends AppLocalizations {
   AppLocalizationsFa([String locale = 'fa']) : super(locale);
 
   @override
+  String get app_name => 'حقایق غذایی را باز کنید';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsFa extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsFa extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'یک دسته بندی دقیق تر انتخاب کنید';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'بدون ملک';
+
+  @override
+  String get product_tags_explanation =>
+      'با اضافه کردن ویژگی‌ها (کلید/مقدار) به یک محصول، به غنی‌سازی آن کمک می‌کنید.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'حساب کاربری من را حذف کنید';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'دسترسی به ویژگی‌های آزمایشی و ابزارهای توسعه';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'در وب‌سایت Open Prices باز کنید';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsFa extends AppLocalizations {
   String get prices_list_add_new_price => 'قیمت جدید\nاضافه کنید';
 
   @override
+  String get prices_list_empty_title => 'هنوز قیمتی اعلام نشده!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'اولین نفری باشید که یکی اضافه می‌کند:\nبا اسکن **رسید** یا **برچسب قیمت**!';
+
+  @override
   String get prices_entry_shop_not_found => 'فروشگاه ناشناس';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'مشاهده تمام قیمت‌های این محصول';
 
   @override
   String get prices_entry_menu_open_proof => 'اثبات را مشاهده کنید';
@@ -2727,9 +2748,23 @@ class AppLocalizationsFa extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'هنوز مشارکت‌کننده‌ای وجود ندارد!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'اولین نفری باشید که قیمت اضافه می‌کند!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'هنوز مغازه‌ای باز نشده!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'اولین نفری باشید که قیمت اضافه می‌کند!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2869,17 @@ class AppLocalizationsFa extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'هنوز مدرکی ارائه نشده!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'با اضافه کردن عکسی از **رسید** یا **برچسب قیمت** شروع کنید!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2913,13 +2958,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2970,16 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'تنظیم مجدد زبان برنامه';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'اضافه کردن کارت‌ها';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'بین prices.openfoodfacts.org (PROD) و test env جابجا شوید';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3023,11 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4029,32 @@ class AppLocalizationsFa extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'امتیاز سبز A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'گرین-امتیاز B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'گرین-اسکور C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'گرین-اسکورت D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'گرین-اسکور E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'امتیاز سبز ناشناخته';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'امتیاز سبز قابل اجرا نیست';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'غذاهای فوق فرآوری شده - گروه‌های NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4151,6 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get guide_share_label => 'اشتراک';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4258,274 @@ class AppLocalizationsFa extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title => 'امتیاز سبز چیست؟';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'امتیاز سبز لوگویی است که هدف آن آگاه‌سازی شما در مورد **تأثیر زیست‌محیطی غذا** است.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'کد رنگ از سبز تیره (**A+**) برای محصولات **کم‌تأثیرترین** تا قرمز تیره (**F**) برای محصولات **تأثیرگذارترین** متغیر است.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'لوگوهای گرین اسکور';
+
+  @override
+  String get guide_greenscore_lca_title => 'هسته: ارزیابی چرخه حیات (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'ارزیابی علمی دسته بندی مواد غذایی';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'برای هر دسته محصول، یک امتیاز **معیار** با استفاده از داده‌های پایگاه داده زیست‌محیطی Agribalyse (طراحی شده توسط ADEME و INRAE) تعیین می‌شود.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**تحلیل چرخه حیات** یک روش ارزیابی استاندارد برای انجام ارزیابی زیست‌محیطی چند مرحله‌ای و چند معیاره است.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**اندازه‌گیری می‌کند:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '۶ مرحله تولید';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '۱۴ شاخص تأثیر زیست‌محیطی';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'تغییرات اقلیمی/ردپای کربن';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'تخریب لایه اوزون';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'تابش یونیزه کننده';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'زمین';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'مصرف آب و انرژی';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'آلودگی هوا';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'آب‌های دریایی و شیرین (ذرات، اسیدی شدن، اوتریفیکاسیون)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'کاهش منابع.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'پاداش‌ها و جریمه‌ها';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'برای پاداش دادن به محصولات بهتر در یک دسته، ما بر اساس چندین معیار، پاداش‌ها و جریمه‌هایی را اعمال می‌کنیم:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'بر اساس منشأ مواد تشکیل‌دهنده، پاداشی اعطا می‌شود. این پاداش، تأثیر بر حمل‌ونقل و همچنین سیاست زیست‌محیطی هر کشور تولیدکننده را در نظر می‌گیرد.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'برای محاسبه دقیق امتیاز سبز، لازم است اطلاعاتی داشته باشیم که لزوماً روی بسته‌بندی مشخص نشده‌اند (مانند مبدا و درصد دقیق هر ماده) یا به ندرت به شکل قابل استفاده در دسترس هستند (مانند فهرستی از تمام اجزای بسته‌بندی با انواع دقیق پلاستیک‌های استفاده شده).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'مقادیر میانگین زمانی استفاده می‌شوند که این اطلاعات هنوز در دسترس نباشند، اما اکنون از همه می‌خواهیم که در جمع‌آوری این اطلاعات که برای امتیاز سبز و همچنین برای بسیاری از کاربردهای دیگر بسیار مفید خواهد بود، به ما کمک کنند.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'چگونه شهروندان می‌توانند کمک کنند';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'همه شهروندان می‌توانند به ما در جمع‌آوری و ساختاردهی اطلاعاتی که روی محصولات وجود دارد یا می‌توان از آنها استنباط کرد، مانند اطلاعات روی بسته‌بندی، کمک کنند: Mission Emballages: یک فهرست مشارکتی در مقیاس بزرگ از بسته‌بندی برای همه محصولات غذایی (به زبان فرانسه)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'چگونه تولیدکنندگان می‌توانند کمک کنند';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'تولیدکنندگان می‌توانند اطلاعات خود را مستقیماً از طریق پلتفرم رایگان ما برای تولیدکنندگان برای ما ارسال کنند.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'کدام محصول برای کره زمین بهتر است؟';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title => 'تشخیصش سخته';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'انتخاب غذای پایدار یکی از قدرتمندترین کارهایی است که می‌توانیم برای آب و هوا انجام دهیم، زیرا **سیستم غذایی جهانی ما مسئول بیش از یک چهارم کل انتشار گازهای گلخانه‌ای است**.\n(منبع: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'تو اختیار داری!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'خبر خوب این است که این به ما یک راه قدرتمند برای ایجاد تغییر می‌دهد.\n**هر یک از ما سالانه حدود ۱۰۰۰ وعده غذایی مصرف می‌کنیم**. این یعنی ۱۰۰۰ فرصت برای **انتخاب آینده‌ای بهتر برای سیاره زمین**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'به مسئولیت پذیری و تصمیم گیری کمک می کند';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'انتخاب غذای پایدار می‌تواند پیچیده به نظر برسد. برچسب‌ها گیج‌کننده هستند و اغلب اطلاعات کافی وجود ندارد. امتیاز سبز (Green-Score) برای ساده‌سازی این کار ایجاد شده است و به شما یک رتبه‌بندی زیست‌محیطی **شفاف**، **مبتنی بر علم** و **روشن** برای محصولات غذایی، درست در زمانی که به آن نیاز دارید، می‌دهد: هنگام خرید.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'شفافیت';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'برخلاف برچسب‌های اختصاصی، محاسبه امتیاز سبز **کاملاً باز** است و هر کسی می‌تواند آن را **تأیید** کند.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'پردازش فوق العاده چیست؟';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'گروه‌های NOVA شما را در مورد سطح فرآوری مواد غذایی مطلع می‌کنند.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'طبقه‌بندی NOVA امکان دسته‌بندی غذاها را به **۴ گروه** بر اساس **میزان فرآوری صنعتی** آنها فراهم می‌کند (غذاهای با حداقل فرآوری یا فرآوری نشده، مواد اولیه آشپزی، غذاهای فرآوری شده، غذاهای فوق فرآوری شده).';
+
+  @override
+  String get guide_nova_logos_caption => 'لوگوهای NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'چهار گروه NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'چهار گروه NOVA وجود دارد که گروه مشکل‌ساز، گروه ۴ - غذاهای فوق فرآوری‌شده - است.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'غذاهای کم فرآوری شده یا بدون فرآوری';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'غذاهای فرآوری نشده (یا طبیعی) به بخش‌های خوراکی گیاهان (دانه‌ها، میوه‌ها، برگ‌ها، ساقه‌ها، ریشه‌ها) یا حیوانات (ماهیچه، امعاء و احشاء، تخم‌مرغ، شیر) و همچنین قارچ‌ها، جلبک‌ها و آب، پس از جدا شدن از طبیعت گفته می‌شود.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'مواد اولیه فرآوری‌شده آشپزی، مانند روغن‌ها، کره، شکر و نمک، موادی هستند که از غذاهای گروه ۱ یا از طبیعت از طریق فرآیندهایی شامل پرس کردن، تصفیه، آسیاب کردن، آسیاب کردن و خشک کردن به دست می‌آیند.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'غذاهای فرآوری‌شده، مانند سبزیجات بطری‌شده، ماهی کنسروشده، میوه‌های شربت‌دار، پنیرها و نان‌های تازه، در درجه اول با اضافه کردن نمک، روغن، شکر یا سایر مواد از غذاهای گروه ۲ به غذاهای گروه ۱ تهیه می‌شوند. این فرآیندها شامل روش‌های مختلف نگهداری یا پخت و پز و در مورد نان و پنیر، تخمیر غیرالکلی است. اکثر غذاهای فرآوری‌شده دارای دو یا سه ماده تشکیل‌دهنده هستند و به عنوان نسخه‌های اصلاح‌شده غذاهای گروه ۱ قابل تشخیص هستند. آن‌ها را می‌توان به تنهایی یا معمولاً در ترکیب با سایر غذاها مصرف کرد.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'غذاهای فوق فرآوری شده، مانند نوشابه‌ها، تنقلات بسته‌بندی شده شیرین یا خوش طعم، فرآورده‌های گوشتی بازسازی شده و غذاهای منجمد از پیش آماده شده، صرفاً غذاهای اصلاح شده نیستند، بلکه فرمولاسیون‌هایی هستند که عمدتاً یا کاملاً از مواد مشتق شده از غذاها و افزودنی‌ها ساخته شده‌اند و غذای گروه ۱ دست نخورده در آنها وجود ندارد یا مقدار کمی از آنها در این فرمولاسیون‌ها یافت می‌شود. مواد تشکیل دهنده این فرمولاسیون‌ها معمولاً شامل موادی است که در غذاهای فرآوری شده نیز یافت می‌شوند، مانند قندها، روغن‌ها، چربی‌ها یا نمک. با این حال، محصولات فوق فرآوری شده همچنین حاوی منابع دیگری از انرژی و مواد مغذی هستند که معمولاً در آماده‌سازی‌های آشپزی استفاده نمی‌شوند. برخی از این منابع مستقیماً از غذاها استخراج می‌شوند، مانند کازئین، لاکتوز، آب پنیر و گلوتن.';
+
+  @override
+  String get guide_nova_explanations_title => 'مشکلات پردازش فوق العاده';
+
+  @override
+  String get guide_nova_explanations_arg1_title => 'فرآوری شدید مواد غذایی';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'بسیاری از آنها از فرآوری بیشتر اجزای غذایی مانند روغن‌های هیدروژنه یا اینتراستریفی شده، پروتئین‌های هیدرولیز شده، ایزوله پروتئین سویا، مالتودکسترین، قند اینورت و شربت ذرت با فروکتوز بالا به دست می‌آیند.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'افزودنی‌هایی که فراتر از ایمنی مواد غذایی عمل می‌کنند';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'افزودنی‌های موجود در غذاهای فوق فرآوری‌شده شامل برخی از افزودنی‌هایی هستند که در غذاهای فرآوری‌شده نیز استفاده می‌شوند، مانند مواد نگهدارنده، آنتی‌اکسیدان‌ها و تثبیت‌کننده‌ها. دسته‌هایی از افزودنی‌ها که فقط در محصولات فوق فرآوری‌شده یافت می‌شوند، شامل مواردی هستند که برای تقلید یا افزایش کیفیت حسی غذاها یا برای پنهان کردن جنبه‌های نامطلوب محصول نهایی استفاده می‌شوند. این افزودنی‌ها شامل رنگ‌ها و سایر رنگ‌ها، تثبیت‌کننده‌های رنگ؛ طعم‌دهنده‌ها، تقویت‌کننده‌های طعم، شیرین‌کننده‌های غیرقندی؛ و کمک‌فرآوری‌هایی مانند عوامل گازدارکننده، سفت‌کننده، حجیم‌کننده و ضدحجم‌کننده، عوامل ضدکف، ضدکلوخه شدن و لعاب‌دارکننده، امولسیفایرها، ترکیبات جداکننده رطوبت و مواد مرطوب‌کننده هستند.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'پردازش‌هایی که نمی‌توانید در خانه انجام دهید';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'برای ترکیب معمولاً بسیاری از مواد اولیه و ایجاد محصول نهایی (از این رو «فوق فرآوری شده») از توالی‌های متعددی از فرآیندها استفاده می‌شود. این فرآیندها شامل چندین فرآیند بدون معادل داخلی مانند هیدروژناسیون و هیدرولیز، اکستروژن و قالب‌گیری و پیش‌پردازش برای سرخ کردن هستند.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'جنبه‌های غارتگرانه و مالی پردازش فوق‌العاده';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'هدف کلی فرافرآوری، ایجاد محصولات غذایی برنددار، مناسب (بادوام، آماده مصرف)، جذاب (بسیار خوش‌طعم) و بسیار سودآور (با مواد اولیه کم‌هزینه) است که برای جایگزینی سایر گروه‌های غذایی طراحی شده‌اند. محصولات غذایی فرافرآوری شده معمولاً به صورت جذاب بسته‌بندی و به صورت فشرده به بازار عرضه می‌شوند.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4838,13 @@ class AppLocalizationsFa extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'قیمتی موجود نیست';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'اولین نفری باشید که مشارکت می‌کند!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4883,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'استخراج در حال انجام است…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'استخراج موفقیت‌آمیز بود';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5017,499 @@ class AppLocalizationsFa extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'تنظیمات قیمت خود را مدیریت کنید';
+
+  @override
+  String get preferences_card_project => 'پروژه حقایق غذایی آزاد';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'آمار من';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'ترجمه کنید، ابزارهای ما را بهبود بخشید…';
+
+  @override
+  String get preferences_connect_title => 'اتصال';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'با ما تماس بگیرید، یا ما را در شبکه‌های اجتماعی دنبال کنید';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'به ما در اطلاع رسانی به میلیون ها مصرف کننده در سراسر جهان کمک کنید';
+
+  @override
+  String get preferences_card_help => 'کمک و پشتیبانی';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'پاسخ سوالات خود را دریافت کنید';
+
+  @override
+  String get logged_out => 'خارج از سیستم';
+
+  @override
+  String get preferences_app_bar_message =>
+      'از اینکه یکی از اعضای ما هستید متشکریم!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'مشاهده همه آمارها';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'جستجوی $provider برای \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'جستجوی یک تنظیم (مثلاً Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'قابلیت دسترسی: نمایش ایموجی';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'دسترسی‌پذیری: حذف رنگ‌ها';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'درباره ما';
+
+  @override
+  String get preferences_legal_information_title => 'اطلاعات حقوقی';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'شرایط استفاده، سیاست حفظ حریم خصوصی و موارد دیگر';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'اطلاعات عمومی غذا یک پایگاه داده محصولات غذایی است **که توسط همه و برای همه ساخته شده است**.\nشما می‌توانید از آن برای انتخاب‌های غذایی بهتر استفاده کنید و از آنجایی که **داده‌های باز** است، هر کسی می‌تواند **از آن برای هر هدفی دوباره استفاده کند**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'مجوزها';
+
+  @override
+  String get preferences_about_app_title => 'درباره برنامه';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'اطلاعات فنی، اطلاعات توسعه‌دهنده و موارد دیگر';
+
+  @override
+  String get preferences_card_information => 'اطلاعات';
+
+  @override
+  String get preferences_version_number_title => 'شماره نسخه';
+
+  @override
+  String get preferences_scanner_title => 'اسکنر';
+
+  @override
+  String get preferences_app_store => 'فروشگاه اپلیکیشن';
+
+  @override
+  String get preferences_app_system_settings => 'تنظیمات سیستم';
+
+  @override
+  String get preferences_source_code => 'دسترسی به کد منبع';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'و شروع به تأثیرگذاری بر میلیون‌ها نفر کنید';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'نکات';
+
+  @override
+  String get tips_discover_nutriscore => 'با نوتری-اسکور جدید آشنا شوید';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'در وب‌سایت حقایق غذایی آزاد';
+
+  @override
+  String get preferences_manage_account_title => 'مدیریت حساب من';
+
+  @override
+  String get preferences_manage_account_tooltip => 'مدیریت حساب کاربری شما';
+
+  @override
+  String get preferences_change_password_title => 'رمز عبورم را عوض کن';
+
+  @override
+  String get preferences_danger_zone => 'منطقه خطر';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'تمام کمک‌های شما از بین خواهد رفت';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'تنظیمات برنامه';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'روشی بسیار تجربی برای اسکن آفلاین محصولات';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'تمام محصولات را از سرور رفرش کنید';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'لطفا از انجام این کار خودداری کنید مگر اینکه کاملاً ضروری باشد';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'حالت نمایشی';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'اضافه کردن کارت به اسکنر';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      '۳ نمونه محصول را به اسکنر اضافه می‌کند';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'میزبان فولکسونومی';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'میزبان: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'آزمایش‌های دسترسی‌پذیری';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'انتخاب چند محصول برای قیمت‌ها';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'پنل‌های دانش سفارش داده شده توسط کاربر';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'دسترسی موقت به جستجوی مکان';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'مقایسه کنار هم برای ۲ یا ۳ محصول';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'وارد کردن لیست محصولات';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'نمرات و روش‌ها';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'نحوه محاسبه امتیاز تغذیه‌ای (Nutri-Score) را کشف کنید';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'تغییرات اصلی در روش‌شناسی را کشف کنید';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'حقایق غذایی آزاد را کشف کنید';
+
+  @override
+  String get preferences_faq_faq_title => 'سوالات متداول - سوالات متداول';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'سازمان مردم نهاد حقایق غذایی آزاد';
+
+  @override
+  String get preferences_about_information_title => 'اطلاعات';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'دریافت به‌روزرسانی‌های انجمن';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'از آخرین اخبار برنامه و انجمن مطلع شوید';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'با شرکت در یکی از رویدادهای مجازی ما، مشارکت کنید';
+
+  @override
+  String get preferences_connect_blog_title => 'وبلاگ حقایق غذای آزاد';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'آخرین اخبار را همزمان با وقوع دریافت کنید';
+
+  @override
+  String get preferences_connect_community_help_title => 'از جامعه کمک بگیرید';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'به ما در بهبود برنامه کمک کنید';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'اطلاعات اشکال‌زدایی را برای ما ارسال کنید';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'برای ما ایمیلی حاوی اطلاعات دقیق اشکال‌زدایی ارسال کنید';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'نظرات خود را در مورد برنامه برای ما ارسال کنید';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'به شکل دادن به آینده‌ی اپلیکیشن کمک کنید';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'در نظرسنجی اپلیکیشن شرکت کنید';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'به ما کمک کنید تا بفهمیم در مرحله بعد چه چیزی باید بسازیم';
+
+  @override
+  String get preferences_connect_professionals_title => 'متخصصان';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'کاملاً رایگان، داده‌های دقیق را برای ۵۰۰ برنامه و میلیون‌ها مصرف‌کننده تضمین می‌کند. سلف سرویس، سازگار با PIM یا صفحات گسترده شما (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'برای شروع همکاری تماس بگیرید';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'تمام مطالب مورد نیاز برای گزارش خود را تهیه کنید';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'برای سوالات مطبوعاتی یا اطلاع رسانی در مورد گزارش خود با ما تماس بگیرید';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'داوطلب فعال شوید';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'توسعه، ارتباطات، طراحی… از هر نوع داوطلبی یا تخصص استقبال می‌شود!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'برخی از راه‌های زیادی که می‌توانید مشارکت کنید را کشف کنید';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'توسعه اپلیکیشن موبایل';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'آشنایی با نحوه مشارکت در توسعه نرم‌افزار';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'بیلدهای ناپایدار روزانه، ویژگی‌های کاملاً جدید';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'جامعه محلی خود را رشد دهید';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'کمک در ترجمه نرم‌افزار، محتوا، تجزیه و تحلیل مواد تشکیل‌دهنده';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'ما یک الگوی کوچک برای کمک به شما آماده کرده‌ایم :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'گام‌های ساده برای افزایش شفافیت مواد غذایی در کشور شما';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'به تیم کیفیت داده بپیوندید';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'به تلاش ما برای اطمینان از کامل و دقیق بودن پایگاه داده بپیوندید';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'محصولات اضافه شده';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'محصولات جدیدی که به Open Food Facts اضافه کردم';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'محصولاتی که باید تکمیل کنم';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'تمام محصولات ناقص';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'قیمت‌های من، مدارک من…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'محصولاتی که می‌توانید در تکمیل آنها کمک کنید';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'به محاسبه امتیاز تغذیه‌ای و امتیاز سبز در کشور خود کمک کنید';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'قیمت‌هایی که من ارائه دادم';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'برچسب‌های قیمت و رسیدها';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'از رسیدهای خود عکس بگیرید و بارکدهای مربوطه را اسکن کنید';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'از قیمت‌ها در مغازه عکس بگیرید';
+
+  @override
+  String get preferences_prices_newest_title => 'جدیدترین قیمت‌ها';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'آخرین قیمت‌های اضافه شده توسط انجمن قیمت‌های باز';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'مشارکت‌کنندگان با بیشترین قیمت';
+
+  @override
+  String get preferences_prices_metrics_title => 'معیارهای قیمت باز شدن';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'روند پیشرفت پروژه را دنبال کنید';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'راه‌های مشارکت';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'با کمک هوش مصنوعی، قیمت‌های اضافه شده توسط خودتان یا دیگران را تأیید کنید';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'به سرعت رسیدها یا عکس‌های قفسه‌ها را از گالری دوربین خود اضافه کنید';
+
+  @override
+  String get preferences_prices_challenges_title => 'چالش‌های ماهانه';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'در ماموریت‌های موضوعی ماهانه برای جمع‌آوری قیمت‌ها شرکت کنید';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'داده‌های وفاداری خود را بازیابی کنید';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'یاد بگیرید چگونه داده‌های خود را درخواست کنید';
+
+  @override
+  String get preferences_page_customize_app_title => 'سفارشی کردن برنامه';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'در پروژه مشارکت کنید';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'راه‌های ساده برای کمک به Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'روش‌های امتیازدهی، کمک و اطلاعات بیشتر در مورد پروژه';
+
+  @override
   String get product_edit_robotoff_positive_button => 'پیشنهاد را بپذیرید';
 
   @override
@@ -4736,4 +5553,102 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'احراز هویت ناموفق بود، نتوانست مدارک را دریافت کند';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count از $total اثبات‌ها';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count از $total مشارکت‌کنندگان';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count از $total مکان';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return 'مکان‌های $count';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'لطفا برای اعمال تغییرات، برنامه را مجدداً راه اندازی کنید.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'رابط گرافیکی';
+
+  @override
+  String get preferences_app_settings_media_title => 'رسانه';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'آزمایشگاه‌های حقایق غذایی آزاد';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'حقایق غذایی آزاد را به زبان خود بیاورید';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'ثبت نام در نسخه آلفای برنامه';
+
+  @override
+  String get preferences_dev_mode_section_data => 'مشارکت‌ها و داده‌های محصول';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'نمایش ندادن فولکسونومی';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'اضافه شده در $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

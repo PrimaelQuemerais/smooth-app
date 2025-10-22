@@ -21,7 +21,10 @@ class UserPreferencesListItemDivider extends StatelessWidget {
       padding: margin ?? const EdgeInsets.symmetric(horizontal: LARGE_SPACE),
       child: CustomPaint(
         size: const Size(double.infinity, 1.0),
-        painter: DashedLinePainter(color: Theme.of(context).dividerColor),
+        painter: DashedBorderPainter(
+          sides: <Side>{Side.top},
+          color: Theme.of(context).dividerColor,
+        ),
       ),
     );
   }
@@ -65,9 +68,9 @@ class UserPreferencesSwitchWidget extends StatelessWidget {
 class UserPreferencesItemSwitch implements UserPreferencesItem {
   const UserPreferencesItemSwitch({
     required this.title,
-    this.subtitle,
     required this.value,
     required this.onChanged,
+    this.subtitle,
   });
 
   final String title;

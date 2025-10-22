@@ -9,6 +9,9 @@ class AppLocalizationsQu extends AppLocalizations {
   AppLocalizationsQu([String locale = 'qu']) : super(locale);
 
   @override
+  String get app_name => 'Kichasqa Mikhuy Chiqap Willakuykuna';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsQu extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Aswan chiqan categoría nisqa akllay';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsQu extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Mana propiedades nisqayuq';
+
+  @override
+  String get product_tags_explanation =>
+      'Huk ruruman propiedades (llave/valor) yapaspa, qhapaqyachiypaq yanapanki.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Cuentayta chinkachiy';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Experimental ruwaykunaman chaymanta wiñachiy yanapakuykunaman yaykuy';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Kichasqa Precios nisqa web nisqapi';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prices_list_add_new_price => '\nmusuq chanin yapay';
 
   @override
+  String get prices_list_empty_title => 'Manaraqmi ima preciopas kanchu!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Ñawpaq kaq hukta yapay:\nHuk **recibo** utaq **precio etiqueta** escaneaspa!';
+
+  @override
   String get prices_entry_shop_not_found => 'Mana riqsisqa tienda';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Kay rurupa llapa chaninkunata qhaway';
 
   @override
   String get prices_entry_menu_open_proof => 'Pruebata qhaway';
@@ -2730,9 +2751,23 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Manaraqmi yanapakuqchu!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      '¡Ñawpaq kaq kay huk preciota yapanaykipaq!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Manaraq tienda!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      '¡Ñawpaq kaq kay huk preciota yapanaykipaq!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2872,17 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => '¡Manaraqmi pruebapas kanchu!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '¡Qallariy huk **recibo** utaq **precio etiqueta** fotota yapaspa!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2916,13 +2961,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2934,6 +2973,17 @@ class AppLocalizationsQu extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'App simita musuqmanta churay';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Tarjetakunata yapay';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Prices.openfoodfacts.org (PROD) kaqmanta chaymanta prueba env kaqmanta tikray';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2977,6 +3027,11 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3978,32 +4033,34 @@ class AppLocalizationsQu extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Verde-Puntuación A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Verde-Puntuación B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Verde-Puntuación C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Verde-Puntuación D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Verde-Puntuación E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new =>
+      'Mana riqsisqa Verde-Puntuación';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score nisqa mana ruwanapaqchu';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ultra-procesado mikhuykuna - NOVA qutukuna';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4100,9 +4157,6 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4210,11 +4264,286 @@ class AppLocalizationsQu extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      '¿Imataq Verde Puntuacion?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score nisqaqa huk logotipo nisqa, chaymi **mikhuypa pachamamapi imayna kasqanmanta** willayta munan.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Llimpi codigoqa hukniraymi yana verde (**A+**) **aswan pisi impactoyuq** rurukunapaq yana puka (**F**) **aswan impactoyuq** rurukunapaq.';
+
+  @override
+  String get guide_greenscore_logos_caption =>
+      'Chay Verde-Puntuación nisqa logotipokuna';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Ukhun: Kawsay muyu chaninchay (LCA) .';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Mikhuy categoría nisqakunamanta cientifico chaninchay';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Sapa ruru categoría nisqapaqmi, **benchmark** nisqa yupayta churakun Agribalyse pachamamamanta willakuypa willakuyninkunawan (ADEMEwan INRAEwan ruwasqa).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Análisis de ciclo de vida** nisqa chaninchanapaq ruwaymi, achka etapayuq, achka criterioyuq pachamama chaninchay ruwanapaq.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Tupun:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 ruruchina ruwaykuna';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 pachamamapi llakichishka rikuchikkuna';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Pacha tikray/carbono nisqapa puriynin';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Ozono nisqa qata pisiyaynin';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radiación ionizante nisqa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Allpa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Yaku & kallpa llamk’achiyta';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Wayra qhillichay';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Mama qucha & misk\'i yaku (partículas, acidificación, eutroficación) .';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Recursokuna pisiyay.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonos & penaltis nisqakuna';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Aswan allin rurukuna huk categoría ukhupi premianapaq, chaymanta bonificacionkuna & multakuna achka criterio kaqpi ruwasqayku:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Chay ingredientekuna maymanta hamusqanman hinan huk bonificacionta qonku. Kay bonificación nisqapiqa qhawarikunmi chay impacto nisqa transporte nisqapi hinallataq sapa ruruchiqpa suyunpa política ambiental nisqatapas.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Green-Score nisqa allinta yupanapaqqa, willakuyniyuqmi kanan, chaykunaqa manam necesariamentechu embalaje nisqapi nisqa kachkan (ahinataq maymanta hamusqanmanta hinaspa sapa ingredientepa pachakmanta chiqap kasqanmanta) utaq pisillapim tarikun forma utilizable nisqapi (ahinataq huk lista llapa componentekuna embalaje nisqamanta chay clase preciso plásticos nisqawan).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Chawpi chanikuna llamk\'achisqa kanku mayk\'aq kay willay manaraq kanchu, ichaqa kunan llapa runata waqyachkayku kay willayta huñuypi yanapawanaykupaq mayqinchus ancha allin kanqa Verde-Puntuación kaqpaq ichaqa achka wak llamk\'anakunapaqpas.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Imaynatataq llaqtamasikuna yanapankuman';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Llapa llaqta runakunam yanapawasunman huñunapaq hinaspa estructuranapaq willakuykunata, chaykunam kachkan rurukunapi utaq chaymanta hurqusqa kanman, ahinataq willakuykunata envasesmanta: Misión Emballages: hatun inventario colaborativo envases nisqamanta llapan mikhuy rurukunapaq (francés simipi)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Imaynatataq fabricaqkuna yanapankuman';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Ruwaqkuna willakuyninkuta chiqamanta apachimuwankuman mana qullqiyuq plataformaykuwan ruruchiqkunapaq.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      '¿Mayqin rurutaq aswan allin kay pachapaq?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Sasachá kanman willayqa';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Sustentable mikhuy akllayqa hukninmi aswan atiyniyoq ruway atisqanchis pachapaq, imaynan **tiqsimuyuntinpi mikhuy sistemanchisqa tawamanta hukninmi llapa gases de efecto invernadero nisqakunaq lloqsimusqanmanta**.\n(Pukyu: Poore & Nemecek, Ciencia, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      '¡Qanqa atiyniyoqmi kanki!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Allin willakuyqa kaymi quwanchik huk atiyniyuq ñanta tikrayta paqarichinapaq.\n**Sapa watanmi 1.000 mikhunata hina mikhunchis**. Chayqa 1.000 oportunidadkuna **akllanapaq aswan allin hamuq pachata kay planetapaq**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Yanapakunmi responsable kanapaq hinaspa tanteanapaq';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Sustentable mikhuy akllayqa sasachakuymi sientekunman. Etiquetakunaqa pantasqam, willakuykunapas achka kutipim faltan. Verde-Puntuación nisqa ruwasqa karqan mana sasa kananpaq, **sut’i**, **ciencia nisqapi ruwasqa**, hinallataq **chuya** pachamamamanta chaninchayta qusunki mikhuy rurukunapaq, maypichus necesitasqaykipipuni: rantikuchkaptiyki.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title =>
+      'Transparencia nisqa';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Mana propiedad etiquetakuna hinachu, Verde-Puntuación yupayqa **tukuy kichasqa** chaymanta **pillapas chiqaqchasqa kayta atin**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      '¿Imataq ultra-procesamiento nisqa?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA qutukuna willasunkiku ima nivel de procesamiento de alimentos nisqamanta.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA nisqapa clasificacionninqa saqillanmi mikuykunata **4 huñuman** categorizayta, **grado de procesamiento industrial** nisqaman hina (minimamente procesado utaq mana procesado nisqa mikhuykuna, ingredientes culinarios, procesados nisqa mikhuykuna, ultra-procesado nisqa mikhuykuna).';
+
+  @override
+  String get guide_nova_logos_caption => 'Chay NOVA nisqa logotipokuna';
+
+  @override
+  String get guide_nova_groups_title => 'Chay 4 NOVA qutukuna';
+
+  @override
+  String get guide_nova_groups_intro =>
+      '4 NOVA qutukuna kan, chay sasachakuyniyuqqa 4 kaq qutu - Ultra-procesado mikhuykuna.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Pisillata ruwasqa utaq mana ruwasqa mikhuykuna';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Mana rurasqa (icha natural) mikhuykunaqa yurakunap (muhukuna, rurukuna, raphikuna, saphikuna, saphikuna) icha uywakunap (aycha, despojo, runtu, leche), hinallataq hongokuna, algakuna, yakupas, pachamamamanta t\'aqasqa kaptin, mikhuypaq rakinkunam.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ingredientes culinarios procesados, ahinataq aceites, mantequilla, azúcar, kachi ima, 1 kaq qutu mikhuykunamanta icha naturalezamanta lluqsisqa sustancias kanku, procesos nisqawan, chaykunapiqa ñit’iy, ch’uyanchasqa, molienda, molienda, ch’akichiy ima.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Procesado mikhuykuna, ahinataq botellapi verdurakuna, lata challwakuna, jarabepi rurukuna, quesokuna, chayraq ruwasqa t’antakuna ima, ñawpaqtaqa kachita, aceiteta, azúcarta utaq huk sustanciakunata yapaspa ruwanku, 2 kaq qutumanta 1 kaq qutu mikhuykunaman. Procesokunaqa imaymana waqaychay utaq wayk’uy ruwaykunan, t’antakuna, queso nisqakunapipas mana alcohólico nisqawan fermentación nisqa. Yaqa llapan ruwasqa mikhuykunaqa iskay utaq kimsa ingredienteyuqmi, chaymi riqsisqa kanku 1 kaq Grupo mikhuykunamanta versiones modificadas nisqa hina. Sapallanmanta utaq aswanta huk mikhuykunawan kuska mikhuyta atikunman.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ultra-procesado mikhuykuna, ahinataq refrescokuna, misk’i utaq sabroso t’antakuna envasados, aychamanta ruwasqakuna musuqmanta ruwasqa, chaymanta ñawpaqmanta wakichisqa congelado mikhuykuna, mana mikhuykuna tikrasqallachu kanku aswanpis formulaciones ruwasqakuna aswanta utaq tukuyninpi sustanciasmanta ruwasqa mikhuykunamanta chanta aditivosmanta, pisilla utaq mana ima intacto Grupo 1 mikhuywan. Kay formulaciones kaqpi ingredientes kaqkunaqa aswanta kanku kay procesado mikhuykunapi tarikuq, kayhina azúcares, aceites, wirakuna utaq kachi. Ichaqa, ultra-procesado nisqa rurukunapipas kanmi huk fuentes de energía nisqakuna hinallataq nutrientes nisqakuna mana típicamente utilizasqachu preparaciones culinarias nisqapi. Wakin chaykunamantaqa chiqanmanta hurqusqa kanku mikhuykunamanta, ahinataq caseína, lactosa, suero, gluten ima.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ultra-procesamiento nisqawan sasachakuykuna';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Mikhuy imakuna ruwanapaq ancha procesamiento';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Achkataqmi mikhuypa constituyenkunata astawan procesamientomanta hurqusqa, ahinataq aceites hidrogenados utaq intereserificados, proteínas hidrolizadas, proteínas de soja aislada, maltodextrina, azúcar invertido, jarabe de sara alta fructosa nisqa.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Ch’uya mikhuymanta aswan karuman riq yapaykuna';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ultra-procesado mikhuykunapi yapaykuna wakinmi, chaykunataq procesado mikhuykunapipas llamk’achinku, ahinataq conservantes, antioxidantes, estabilizadores ima. Clases de aditivos nisqakuna, ultra-procesados nisqa rurukunallapi tarikuq, mikhuykunapa cualidades sensoriales nisqakunata qatipanapaq utaq aswan allin kananpaq utaq tukupay rurumanta mana sumaq aspectokunata disfrazanapaq. Kay yapaykunaka kanmi tintes shinallatak shuktak llimpikuna, llimpikunata takyachinakuna; saborkuna, sabor kallpachaqkuna, mana asukar misk’ichiqkuna; hinallataq procesamiento yanapakuykuna carbonatación, firme, bulking y antibulking agentes, desespumante, anti-tortel y acristalamiento, emulsionantes, secuestrantes, humectantes ima.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Wasipi mana ruwayta atisqayki procesamiento';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Askha secuenciakuna ruwaykunata llamk\'achinku chay aswanta achka ingredientekunata huñunapaq chaymanta qhipa ruruta ruwanapaq (chaymanta ‘ultra-procesado’). Chay ruwaykunaqa kanmi achka mana wasipi equivalenteyuq, ahinataq hidrogenación y hidrolización, extrusión y moldeo, hinallataq pre-procesamiento fría nisqapaq.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ultra-procesamiento nisqapa aspectos predatorios y financieros nisqa';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ultra-procesamiento nisqapa tukuy ima munayninqa, markayuq, allin (unaypaq, mikuypaq listo), munay (hiper-palatable) hinaspa ancha gananciayuq (ingredientekuna pisi qullqiyuq) mikhuy rurukuna ruwaymi, llapan huk mikhuy huñukunata qarqunapaq ruwasqa. Ultra-procesado nisqa mikhuy rurukunaqa sumaqllatam paqueteasqa kanku, hinaspapas anchatam qhatunku.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4527,6 +4856,12 @@ class AppLocalizationsQu extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Mana ima preciopas kanchu';
+
+  @override
+  String get prices_products_empty_explanation => '¡Ñawpaq kaq yanapakuy!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4565,7 +4900,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extracción ruwakuchkan…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Extracción exitosa';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4696,6 +5034,508 @@ class AppLocalizationsQu extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Preciokuna munasqaykikunata kamachiy';
+
+  @override
+  String get preferences_card_project =>
+      'Chay proyecto de Hechos de Alimentos Abiertos nisqa';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Estadísticas nisqaykuna';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Tikray, allinchay yanapakuyniyku…';
+
+  @override
+  String get preferences_connect_title => 'Tinkichiy';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Chayay, utaq Qatiwayku redes sociales nisqapi';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Yanapawayku willanaykupaq millonnintin rantiqkunaman pachantinpi';
+
+  @override
+  String get preferences_card_help => 'Yanapakuy & Yanapakuy';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Tapukusqaykiman kutichiykunata tariy';
+
+  @override
+  String get logged_out => 'Lloqsisqa';
+
+  @override
+  String get preferences_app_bar_message =>
+      '¡Gracias huknin miembroyku kasqaykimanta!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Tukuy estadísticas nisqakunata qhaway';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '$provider nisqapi \"$keyword\" nisqapi maskay.';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Huk churayta maskay (kayhina Nutri-Score) .';
+
+  @override
+  String get preferences_accessibility_show_emoji => 'Yaykuna: Emoji rikuchiy';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Yaykuna: Colorkunata hurquy';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Kamachiymanta willakuy';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Términos de uso, política de privacidad chaymanta aswan';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Kichasqa Mikhuy Chiqap willakuykunaqa mikhuy rurukunap willay tantana wasim **llapa runap rurasqan, llapa runapaq**.\nAswan allin mikhuy akllanapaq llamk\'achiy atikunki, chaymanta **kichasqa willay** kasqanrayku, pipas **imapaqpas wakmanta llamk\'achiyta atin**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licenciakuna';
+
+  @override
+  String get preferences_about_app_title => 'App nisqamanta';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Técnico willakuy, paqarichiqkuna willakuy, chaymanta aswan';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Versión yupay';
+
+  @override
+  String get preferences_scanner_title => 'Escáner nisqa';
+
+  @override
+  String get preferences_app_store => 'App tienda';
+
+  @override
+  String get preferences_app_system_settings => 'Sistema nisqa churanakuna';
+
+  @override
+  String get preferences_source_code => 'Pukyu codigoman yaykuy';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Hinaspa millonnintin runakunapaq impactota ruwayta qallariy';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Yanapaykuna';
+
+  @override
+  String get tips_discover_nutriscore => 'Musuq Nutri-Score nisqamanta yachay';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Kichasqa Mikhuy Chiqap web nisqapi';
+
+  @override
+  String get preferences_manage_account_title => 'Cuentayta kamachiy';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Cuentaykita kamachiy';
+
+  @override
+  String get preferences_change_password_title => 'Contraseñayta tikray';
+
+  @override
+  String get preferences_danger_zone => 'Zona de peligro';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Llapan qullqi qusqaykikunam chinkanqa';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'App nisqapaq churanakuna';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Ancha experimental ñan mana internetpi rurukuna escaneanapaq';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Llapan rurukunata sirwiqmanta musuqyachiy';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Ama hina kaspa, ama chayta ruwaychu mana ancha necesario kaqtinqa';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modo demostración nisqa';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Tarjetakunata escáner nisqaman yapay';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      '3 muestra rurukunata escáner nisqaman yapan';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Folksonomía nisqa anfitrión';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Anfitrión: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Chayayta atiy experimentokuna';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Chaninkunapaq achka rurukuna akllay';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Usuario kamachisqa yachay paneles';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Maypi tarikusqan maskayman huk ratullapaq yaykuy';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 utaq 3 rurukunapaq kuska kuska tupachiy';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Rurukuna lista apamuy';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Puntuacionkuna & metodologíakuna';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Imayna Nutri-Score nisqa yupasqa kasqanmanta yachay';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Metodología nisqapi hatun tikrakuykuna tariy';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Kichasqa Mikhuy Chiqap Kaqkunata tariy';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Sapa kuti tapusqa tapukuykuna';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Kichasqa Mikhuymanta Chiqap ONG nisqa';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Ayllumanta musuqyachiykunata chaskiy';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'App chaymanta ayllu willakuykunawan llallinakuypi qhipakuy';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Huknin virtual ruwayniykuman rispa involucrakuy';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Kichasqa Mikhuy Chiqap blog nisqa';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Qhipa willakuykunata tariy, imaynachus pasasqanman hina';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Ayllumanta yanapayta maskay';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Yanapawayku app allinchayta';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Pantasqa allichay willayta apachimuwayku';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Huk correo electrónicota apachimuwayku, pantasqa allichaymanta sut\'i willakuywan';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Appmanta yuyaykunata apachimuwayku';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Yanapakuy hamuq pacha apppa ruwananpaq';
+
+  @override
+  String get preferences_connect_survey_title => 'App nisqa encuestata ruway';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Yanapawayku entiendenaykupaq imakunatan qhepaman hatarichinanchista';
+
+  @override
+  String get preferences_connect_professionals_title => 'Profesionalkuna';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Totalmente gratis, 500 apps & millones consumidores kaqpaq chiqan datokuna qhawan. Kikinmanta yanapakuy, PIM utaq hoja de cálculo (XLSX) kaqwan tupaq .';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Qallarinaykipaq rimanakuy';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Informeykipaq llapa necesitasqayki materialta hap’iy';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Prensa tapuykunata ruwanaykipaq utaq willakuyniykimanta willawanaykipaq rimanakuy';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Voluntario activo kay';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Desarrollo, Comunicación, Diseño… ima clase voluntario utaq yachaypas allin chaskisqam!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Achka imaymana yanapakuykunamanta wakinta tariy';
+
+  @override
+  String get preferences_contribute_mobile_dev_title => 'Movil app wiñachiy';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Yachay imayna yanapayta software ruwaypi';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Sapa punchaw mana takyasqa ruwaykuna, musuq ruwaykuna';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Llaqtaykipi llaqtata wiñachiy';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Yanapakuy software kaqwan, contenido kaqwan, ingrediente análisis tikraykunawan';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Prepararqayku huk plantillachata yanapanaykipaq :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Llaqtaykipi mikhuy sut’i kayninta wiñachinapaq sasan ruwaykuna';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Datos calidad equipoman yaykuy';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Willakuyniyku hunt\'asqa chaymanta chiqan kananpaq kallpachakusqaykuman hukllaway';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Yapachisqa rurukuna';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Musuq rurukuna Open Food Facts nisqaman yapasqay';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Rurukuna hunt’anay tiyan';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Tukuy mana hunt’asqa rurukuna';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Preciosniy, pruebaykuna…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Rurukuna hunt’achiyta yanapawaq';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Yanapakuy Nutri-Score & Green-Score nisqa yupayta suyuykipi';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Precios nisqakunatam yanaparqani';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Precio etiquetakuna hinaspa recibokuna';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Reciboykikunamanta fotokunata hurquy hinaspa chaywan tupaq código de barras nisqakunata escaneay';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Huk tiendapi preciokunaq fotonkunata horqoy';
+
+  @override
+  String get preferences_prices_newest_title => 'Aswan musuq chaninkuna';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Kichasqa Chanikuna ayllumanta yapasqa qhipa chaninkuna';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Aswan chaninniyuq yanapakuqkuna';
+
+  @override
+  String get preferences_prices_metrics_title => 'Kichasqa Precio mitricakuna';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Chay proyectopa evolucionninta qatipay';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Imayna yanapanapaq';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Kikiyki utaq hukkuna yapasqa chaninkunata takyachiy, AI yanapakuywan';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Utqaylla yapay achka recibokunata utaq estanterías fotokunata cámara rolloykimanta';
+
+  @override
+  String get preferences_prices_challenges_title => 'Sapa killa sasachakuykuna';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Sapa killa tematico maskaykunapi participay, chaninkunata huñunapaq';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Lealtad nisqaykimanta datokunata kutichipuy';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Yachay imaynatas datosniyki mañakuyta';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'Aplicacionta personalizay';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Chay proyectoman yanapay';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Kichasqa Mikhuy Chiqap yanapakuykunata yanapanapaq sasan ñankuna';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Puntuación metodologías, yanapakuy, chaymanta aswan proyectomanta';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Yuyaychayta chaskiy';
 
   @override
@@ -4741,4 +5581,104 @@ class AppLocalizationsQu extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Chiqaqchayqa manam atirqanchu, pruebakunata mana apamuyta atispa';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count de $total pruebakuna';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count $total yanapakuqkunamanta';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count $total kitikunamanta';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count tarikuykuna';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Ama hina kaspa, appta wakmanta qallariy tikraykunata ruwanaykipaq.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfaz gráfica nisqa';
+
+  @override
+  String get preferences_app_settings_media_title =>
+      'Medios de comunicación nisqakuna';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Mikhuymanta Chiqap Laboratorios kichasqa';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Kichasqa Mikhuy Chiqap willakuykunata simiykiman apamuy';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'App nisqapa alfa nisqa versión nisqapi qillqakuy';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Yanapakuykuna & Rurumanta willakuy';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Ama Folksonomía nisqataqa rikuchiychu';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '${created}p\'unchawpi yapasqa';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

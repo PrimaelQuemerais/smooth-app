@@ -1,5 +1,6 @@
+import 'dart:math';
+
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:matomo_tracker/matomo_tracker.dart';
@@ -33,9 +34,6 @@ import 'package:smooth_app/pages/scan/carousel/scan_carousel_manager.dart';
 import 'package:smooth_app/query/product_query.dart';
 import 'package:smooth_app/query/search_products_manager.dart';
 import 'package:smooth_app/resources/app_icons.dart' as icons;
-import 'package:smooth_app/themes/smooth_theme.dart';
-import 'package:smooth_app/themes/smooth_theme_colors.dart';
-import 'package:smooth_app/themes/theme_provider.dart';
 import 'package:smooth_app/widgets/smooth_app_bar.dart';
 import 'package:smooth_app/widgets/smooth_expandable_floating_action_button.dart';
 import 'package:smooth_app/widgets/smooth_menu_button.dart';
@@ -139,32 +137,9 @@ class _ProductListPageState extends State<ProductListPage>
     final bool enableRename = productList.listType == ProductListType.USER;
 
     return SmoothScaffold(
-      floatingActionButton: products.isEmpty
-          ? FloatingActionButton.extended(
-              icon: const Icon(CupertinoIcons.barcode),
-              label: Text(appLocalizations.product_list_empty_title),
-              onPressed: () =>
-                  ExternalScanCarouselManager.read(context).showSearchCard(),
-            )
-          : _selectionMode
-          ? null
-          : SmoothExpandableFloatingActionButton(
-              scrollController: _scrollController,
-              onPressed: () => setState(() => _selectionMode = true),
-              label: Text(
-                appLocalizations.user_lists_action_multi_select,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15.0,
-                ),
-              ),
-              icon: const Icon(Icons.checklist),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-            ),
       appBar: SmoothAppBar(
         centerTitle: false,
+        animateActionMode: true,
         actions: <Widget>[
           SmoothPopupMenuButton<ProductListPopupItem>(
             onSelected: (final ProductListPopupItem action) async {
@@ -191,15 +166,7 @@ class _ProductListPageState extends State<ProductListPage>
           onTap: () => _onChangeList(appLocalizations, daoProductList),
           enabled: widget.allowToSwitchBetweenLists,
         ),
-        backgroundColor: _selectionMode
-            ? context.lightTheme()
-                  ? context
-                        .extension<SmoothColorsThemeExtension>()
-                        .primaryMedium
-                  : context
-                        .extension<SmoothColorsThemeExtension>()
-                        .primarySemiDark
-            : null,
+
         titleSpacing: 0.0,
         actionMode: _selectionMode,
         onLeaveActionMode: () {
@@ -303,6 +270,36 @@ class _ProductListPageState extends State<ProductListPage>
                   separatorBuilder: (BuildContext context, _) =>
                       const Divider(),
                 ),
+              ),
+            ),
+      floatingActionButton: products.isEmpty
+          ? FloatingActionButton.extended(
+              icon: const icons.Barcode.withCorners(),
+              label: Text(
+                appLocalizations.product_list_empty_title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                ),
+              ),
+              onPressed: () =>
+                  ExternalScanCarouselManager.read(context).showSearchCard(),
+            )
+          : _selectionMode
+          ? null
+          : SmoothExpandableFloatingActionButton(
+              scrollController: _scrollController,
+              onPressed: () => setState(() => _selectionMode = true),
+              label: Text(
+                appLocalizations.user_lists_action_multi_select,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0,
+                ),
+              ),
+              icon: const icons.CheckList.twoLines(size: 19.0),
+              shape: const RoundedRectangleBorder(
+                borderRadius: HEADER_BORDER_RADIUS,
               ),
             ),
     );
@@ -473,6 +470,7 @@ class _ProductListPageState extends State<ProductListPage>
     final List<String> barcodes,
     final LocalDatabase localDatabase,
   ) async {
+    const int pageSize = 20;
     bool fresh = true;
     try {
       final OpenFoodFactsLanguage language = ProductQuery.getLanguage();
@@ -481,22 +479,24 @@ class _ProductListPageState extends State<ProductListPage>
       ).getProductTypes(barcodes);
       for (final MapEntry<ProductType, List<String>> entry
           in productTypes.entries) {
-        final SearchResult searchResult =
-            await SearchProductsManager.searchProducts(
-              ProductQuery.getReadUser(),
-              ProductRefresher().getBarcodeListQueryConfiguration(
-                entry.value,
-                language,
-              ),
-              uriHelper: ProductQuery.getUriProductHelper(
-                productType: entry.key,
-              ),
-              type: SearchProductsType.live,
-            );
-        final List<Product>? freshProducts = searchResult.products;
-        if (freshProducts == null) {
-          fresh = false;
-        } else {
+        final int length = entry.value.length;
+        for (int i = 0; i < length; i += pageSize) {
+          final List<String> page = entry.value.sublist(
+            i,
+            min(length, i + pageSize),
+          );
+          final SearchResult
+          searchResult = await SearchProductsManager.searchProducts(
+            ProductQuery.getReadUser(),
+            ProductRefresher().getBarcodeListQueryConfiguration(page, language),
+            uriHelper: ProductQuery.getUriProductHelper(productType: entry.key),
+            type: SearchProductsType.live,
+          );
+          final List<Product>? freshProducts = searchResult.products;
+          if (freshProducts == null) {
+            fresh = false;
+            break;
+          }
           await DaoProduct(
             localDatabase,
           ).putAll(freshProducts, language, productType: entry.key);
@@ -526,7 +526,10 @@ class _ProductListPageState extends State<ProductListPage>
             prefix: const SmoothModalSheetHeaderPrefixIndicator(),
             suffix: SmoothModalSheetHeaderButton(
               label: appLocalizations.product_list_create,
-              prefix: const Icon(Icons.add_circle_outline_sharp),
+              prefix: const Padding(
+                padding: EdgeInsetsDirectional.only(top: 1.5),
+                child: icons.Add(),
+              ),
               tooltip: appLocalizations.product_list_create_tooltip,
               onTap: () async => ProductListUserDialogHelper(
                 daoProductList,
@@ -534,7 +537,7 @@ class _ProductListPageState extends State<ProductListPage>
             ),
           ),
           bodyBuilder: (BuildContext context) =>
-              AllProductListModal(currentList: productList),
+              AllProductsListModal(currentList: productList),
           initHeight: _computeModalInitHeight(context),
         );
 
@@ -577,9 +580,7 @@ class _ProductListAppBarTitle extends StatelessWidget {
       child: SizedBox(
         height: kToolbarHeight,
         child: InkWell(
-          borderRadius: context.read<ThemeProvider>().isAmoledTheme
-              ? ANGULAR_BORDER_RADIUS
-              : null,
+          borderRadius: ANGULAR_BORDER_RADIUS,
           onTap: enabled ? onTap : null,
           child: Padding(
             padding: const EdgeInsetsDirectional.symmetric(
@@ -603,7 +604,7 @@ class _ProductListAppBarTitle extends StatelessWidget {
                       icons.AppIconTheme(
                         semanticLabel: appLocalizations.action_change_list,
                         size: 15.0,
-                        child: const icons.Chevron.down(),
+                        child: const icons.Collapse(),
                       ),
                     ],
                   ],

@@ -9,6 +9,9 @@ class AppLocalizationsHy extends AppLocalizations {
   AppLocalizationsHy([String locale = 'hy']) : super(locale);
 
   @override
+  String get app_name => 'Բաց սննդի փաստեր';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsHy extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsHy extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Ընտրեք ավելի ճշգրիտ կատեգորիա';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Հատկություններ չկան';
+
+  @override
+  String get product_tags_explanation =>
+      'Արտադրանքին հատկություններ (բանալի/արժեք) ավելացնելով՝ դուք նպաստում եք դրա հարստացմանը։';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Ջնջել իմ հաշիվը';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Մուտք գործեք փորձարարական գործառույթների և մշակման գործիքների';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Բաց է Open Prices կայքում';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2655,13 @@ class AppLocalizationsHy extends AppLocalizations {
   String get prices_list_add_new_price => 'Ավելացնել\nնոր գին';
 
   @override
+  String get prices_list_empty_title => 'Գին դեռ չկա!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Առաջինը ավելացրեք մեկը՝\nՍկանավորելով **քվիտանցը** կամ **գնի պիտակը**:';
+
+  @override
   String get prices_entry_shop_not_found => 'Անհայտ խանութ';
 
   @override
@@ -2650,7 +2671,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Դիտել այս ապրանքի բոլոր գները';
 
   @override
   String get prices_entry_menu_open_proof => 'Դիտել ապացույցը';
@@ -2728,9 +2749,21 @@ class AppLocalizationsHy extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Դեռևս մասնակից չկա։';
+
+  @override
+  String get prices_users_empty_explanation => 'Առաջինը ավելացրեք գին։';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Դեռ խանութ չկա!';
+
+  @override
+  String get prices_locations_empty_explanation => 'Առաջինը ավելացրեք գին։';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2835,7 +2868,17 @@ class AppLocalizationsHy extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Դեռևս ապացույց չկա!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Սկսեք **քվիտանցի** կամ **գնի պիտակի** լուսանկարը ավելացնելով։';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2914,13 +2957,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2932,6 +2969,17 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Վերագործարկեք հավելվածի լեզուն';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ավելացնել քարտեր';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Անցում prices.openfoodfacts.org (PROD) և փորձարկման միջավայրի միջև';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2975,6 +3023,11 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3976,32 +4029,32 @@ class AppLocalizationsHy extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Կանաչ միավոր A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Կանաչ միավոր B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Կանաչ միավոր C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Կանաչ միավոր D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Կանաչ միավոր E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Անհայտ կանաչ միավոր';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Կանաչ միավորը կիրառելի չէ';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Գերմշակված սնունդ - NOVA խմբեր';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4098,9 +4151,6 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Կիսվել';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4208,11 +4258,281 @@ class AppLocalizationsHy extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Ի՞նչ է կանաչ միավորը։';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Կանաչ միավորը լոգո է, որի նպատակն է ձեզ տեղեկացնել **սննդի շրջակա միջավայրի վրա ազդեցության** մասին։';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Գունային կոդը տատանվում է մուգ կանաչից (**A+**)՝ **ամենաքիչ ազդեցություն ունեցող** ապրանքների համար, մինչև մուգ կարմիր (**F**)՝ **ամենաազդեցիկ** ապրանքների համար։';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score-ի լոգոները';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Հիմնականը՝ կյանքի ցիկլի գնահատում (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Սննդի կատեգորիաների գիտական գնահատում';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Յուրաքանչյուր ապրանքային կատեգորիայի համար սահմանվում է **չափանիշային** գնահատական՝ օգտագործելով Agribalyse բնապահպանական տվյալների բազայի տվյալները (մշակված ADEME-ի և INRAE-ի կողմից):';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Կյանքի ցիկլի վերլուծությունը** ստանդարտացված գնահատման մեթոդ է բազմափուլ և բազմաչափանիշ շրջակա միջավայրի գնահատում իրականացնելու համար։';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Չափում է՝**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 արտադրական քայլ';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 շրջակա միջավայրի վրա ազդեցության ցուցանիշներ';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Կլիմայի փոփոխություն/ածխածնային հետք';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Օզոնային շերտի քայքայում';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Իոնացնող ճառագայթում';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Հող';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Ջրի և էներգիայի օգտագործում';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Օդի աղտոտվածություն';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Ծովային և քաղցրահամ ջրեր (մասնիկներ, թթվայնացում, էվտրոֆիկացիա)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Ռեսուրսների սպառում։';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Բոնուսներ և տուգանքներ';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Կատեգորիայի շրջանակներում ավելի լավ ապրանքները խրախուսելու համար մենք կիրառում ենք բոնուսներ և տույժեր՝ հիմնվելով մի քանի չափանիշների վրա.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Բոնուսը շնորհվում է բաղադրիչների ծագման հիման վրա: Այս բոնուսը հաշվի է առնում տրանսպորտի վրա ազդեցությունը, ինչպես նաև յուրաքանչյուր արտադրողի երկրի բնապահպանական քաղաքականությունը:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Կանաչ միավորը ճշգրիտ հաշվարկելու համար անհրաժեշտ է ունենալ այնպիսի տեղեկատվություն, որը պարտադիր չէ, որ նշված լինի փաթեթավորման վրա (օրինակ՝ ծագումը և յուրաքանչյուր բաղադրիչի ճշգրիտ տոկոսը) կամ որը հազվադեպ է հասանելի օգտագործելի տեսքով (օրինակ՝ փաթեթավորման բոլոր բաղադրիչների ցանկը՝ օգտագործված պլաստմասսայի ճշգրիտ տեսակներով):';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Միջին արժեքներն օգտագործվում են, երբ այս տեղեկատվությունը դեռևս հասանելի չէ, բայց մենք հիմա կոչ ենք անում բոլորին օգնել մեզ հավաքել այս տեղեկատվությունը, որը շատ օգտակար կլինի ոչ միայն «Կանաչ միավորի» համար, այլև շատ այլ նպատակներով։';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Ինչպես կարող են օգնել քաղաքացիները';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Բոլոր քաղաքացիները կարող են օգնել մեզ հավաքել և կառուցել ապրանքների վրա առկա կամ դրանցից եզրակացվող տեղեկատվությունը, օրինակ՝ փաթեթավորման վերաբերյալ տեղեկատվությունը. Mission Emballages՝ բոլոր սննդամթերքի փաթեթավորման լայնածավալ համագործակցային գույքագրում (ֆրանսերեն):';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Ինչպես կարող են արտադրողները օգնել';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Արտադրողները կարող են մեզ ուղարկել իրենց տեղեկատվությունը անմիջապես մեր արտադրողների համար նախատեսված անվճար հարթակի միջոցով։';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ո՞ր ապրանքն է ավելի լավ մոլորակի համար։';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title => 'Դժվար է ասել';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Կայուն սննդի ընտրությունը կլիմայի համար մեր կատարած ամենահզոր քայլերից մեկն է, քանի որ **մեր գլոբալ պարենային համակարգը պատասխանատու է ջերմոցային գազերի բոլոր արտանետումների մեկ քառորդից ավելիի համար**:\n(Աղբյուր՝ Poore & Nemecek, Science, 2018):';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Դու ունես ուժը։';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Լավ լուրն այն է, որ սա մեզ հնարավորություն է տալիս փոփոխություններ կատարելու հզոր միջոց։\n**Մեզանից յուրաքանչյուրը տարեկան մոտ 1000 անգամ սնունդ է ուտում**։ Դա 1000 հնարավորություն է **մոլորակի համար ավելի լավ ապագա ընտրելու**։';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Օգնում է պատասխանատու լինել և որոշումներ կայացնել';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Կայուն սննդի ընտրությունը կարող է բարդ թվալ: Պիտակները շփոթեցնող են, և տեղեկատվությունը հաճախ բացակայում է: Կանաչ գնահատականը ստեղծվել է այն պարզեցնելու համար՝ ձեզ տրամադրելով **հստակ**, **գիտության վրա հիմնված** և **թափանցիկ** շրջակա միջավայրի վարկանիշ սննդամթերքի համար, հենց այնտեղ, որտեղ ձեզ անհրաժեշտ է՝ գնումներ կատարելիս:';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Թափանցիկություն';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ի տարբերություն սեփական պիտակների, Green-Score հաշվարկը **լիովին բաց** է և կարող է **ստուգվել ցանկացած անձի կողմից**:';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Ի՞նչ է ուլտրամշակումը։';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA խմբերը ձեզ տեղեկացնում են սննդի վերամշակման մակարդակի մասին։';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA դասակարգումը թույլ է տալիս սննդամթերքը դասակարգել **4 խմբի**՝ հիմնվելով դրանց **արդյունաբերական վերամշակման աստիճանի** վրա (նվազագույնս մշակված կամ չմշակված սննդամթերք, խոհարարական բաղադրիչներ, վերամշակված սննդամթերք, գերմշակված սննդամթերք):';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA-ի լոգոները';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA խմբերը';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Կան 4 NOVA խմբեր, որոնցից խնդրահարույցը 4-րդ խումբն է՝ ուլտրամշակված սնունդը։';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Նվազագույնս մշակված կամ չմշակված սնունդ';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Չմշակված (կամ բնական) սննդամթերքը բույսերի (սերմեր, պտուղներ, տերևներ, ցողուններ, արմատներ) կամ կենդանիների (մկաններ, ենթամթերքներ, ձվեր, կաթ), ինչպես նաև սնկերի, ջրիմուռների և ջրի ուտելի մասերն են՝ բնությունից անջատվելուց հետո։';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Վերամշակված խոհարարական բաղադրիչները, ինչպիսիք են յուղերը, կարագը, շաքարավազը և աղը, նյութեր են, որոնք ստացվում են 1-ին խմբի սննդամթերքներից կամ բնությունից՝ այնպիսի գործընթացների միջոցով, ինչպիսիք են սեղմումը, զտումը, մանրացումը, աղացումը և չորացումը:';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Վերամշակված սննդամթերքները, ինչպիսիք են շշալցված բանջարեղենը, պահածոյացված ձուկը, օշարակի մեջ մրգերը, պանիրները և թարմ պատրաստված հացերը, հիմնականում պատրաստվում են 2-րդ խմբի սննդամթերքներին աղ, յուղ, շաքար կամ այլ նյութեր ավելացնելով: Գործընթացները ներառում են տարբեր պահպանման կամ պատրաստման մեթոդներ, իսկ հացերի և պանրի դեպքում՝ ոչ ալկոհոլային խմորում: Վերամշակված սննդամթերքների մեծ մասը պարունակում է երկու կամ երեք բաղադրիչ և ճանաչելի է որպես 1-ին խմբի սննդամթերքի մոդիֆիկացված տարբերակներ: Դրանք կարող են ուտել առանձին կամ, ավելի հաճախ, այլ սննդամթերքների հետ համատեղ:';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Գերմշակված սննդամթերքները, ինչպիսիք են գազավորված ըմպելիքները, քաղցր կամ համեմված փաթեթավորված խորտիկները, վերականգնված մսամթերքը և նախապես պատրաստված սառեցված ուտեստները, ոչ միայն մոդիֆիկացված սննդամթերք են, այլև հիմնականում կամ ամբողջությամբ պատրաստված սննդամթերքից և հավելումներից ստացված նյութերից և հավելումներից ստացված բանաձևեր՝ գրեթե առանց ամբողջական 1-ին խմբի սննդամթերքի: Այս բանաձևերի բաղադրիչները սովորաբար ներառում են նաև վերամշակված սննդամթերքներում հանդիպող բաղադրիչներ, ինչպիսիք են շաքարավազը, յուղերը, ճարպերը կամ աղը: Այնուամենայնիվ, գերմշակված սննդամթերքը պարունակում է նաև էներգիայի և սննդանյութերի այլ աղբյուրներ, որոնք սովորաբար չեն օգտագործվում խոհարարական պատրաստուկներում: Դրանցից մի քանիսը ուղղակիորեն արդյունահանվում են սննդամթերքից, ինչպիսիք են կազեինը, լակտոզան, շիճուկը և գլյուտենը:';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ուլտրա-մշակման հետ կապված խնդիրներ';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Սննդային բաղադրիչների ծայրահեղ մշակում';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Շատերը ստացվում են սննդի բաղադրիչների հետագա մշակումից, ինչպիսիք են հիդրոգենացված կամ միջէսթերիֆիկացված յուղերը, հիդրոլիզացված սպիտակուցները, սոյայի սպիտակուցի իզոլյատը, մալտոդեքստրինը, ինվերտ շաքարը և բարձր ֆրուկտոզային եգիպտացորենի օշարակը։';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Հավելանյութեր, որոնք գերազանցում են մաքուր սննդի անվտանգությունը';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Գերմշակված սննդամթերքներում առկա հավելանյութերի շարքում են նաև վերամշակված սննդամթերքներում օգտագործվող որոշ հավելանյութեր, ինչպիսիք են կոնսերվանտները, հակաօքսիդանտները և կայունացուցիչները: Միայն գերմշակված արտադրանքում հանդիպող հավելանյութերի դասերն են այն հավելանյութերը, որոնք օգտագործվում են սննդամթերքի զգայական հատկությունները ընդօրինակելու կամ բարելավելու կամ վերջնական արտադրանքի անհամ կողմերը քողարկելու համար: Այս հավելանյութերի շարքում են ներկանյութերը և այլ գույները, գույնի կայունացուցիչները, համեմունքները, համի ուժեղացուցիչները, շաքար չպարունակող քաղցրացուցիչները, ինչպես նաև մշակման օժանդակ նյութերը, ինչպիսիք են գազավորված, ամրացնող, ծավալը մեծացնող և ծավալը մեծացնող նյութերը, փրփրացող, հակամակարդիչ և փայլեցնող նյութերը, էմուլգատորները, կլանիչները և խոնավեցնող նյութերը:';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Մշակում, որը դուք չեք կարող անել տանը';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Սովորաբար բազմաթիվ բաղադրիչները համատեղելու և վերջնական արտադրանքը (հետևաբար՝ «գերմշակված») ստեղծելու համար օգտագործվում են գործընթացների բազմաթիվ հաջորդականություններ: Գործընթացները ներառում են մի քանիսը, որոնք տեղական համարժեքներ չունեն, ինչպիսիք են հիդրոգենացումը և հիդրոլիզացումը, էքստրուզիան և ձուլումը, ինչպես նաև տապակման համար նախնական մշակումը:';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ուլտրա-մշակման գիշատիչ և ֆինանսական կողմերը';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Գերմշակման ընդհանուր նպատակն է ստեղծել ապրանքանիշային, հարմար (ամուր, սպառման համար պատրաստ), գրավիչ (գերհամեղ) և բարձր եկամտաբեր (ցածր գնով բաղադրիչներ) սննդամթերք, որոնք նախատեսված են մյուս բոլոր սննդային խմբերը դուրս մղելու համար: Գերմշակված սննդամթերքը սովորաբար գրավիչ փաթեթավորվում է և ինտենսիվորեն շուկայավարվում:';
 
   @override
   String get preview_badge => 'Preview';
@@ -4525,6 +4845,13 @@ class AppLocalizationsHy extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Գին հասանելի չէ';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Առաջինը եղեք, ով ներդրում կունենա։';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4563,7 +4890,11 @@ class AppLocalizationsHy extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress =>
+      'Արդյունահանումն ընթացքի մեջ է…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Արդյունահանումը հաջողվեց';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4694,6 +5025,502 @@ class AppLocalizationsHy extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Կառավարեք ձեր գների նախընտրությունները';
+
+  @override
+  String get preferences_card_project => '«Բաց սննդի փաստեր» նախագիծը';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Իմ վիճակագրությունը';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Թարգմանե՛ք, բարելավե՛ք մեր գործիքները…';
+
+  @override
+  String get preferences_connect_title => 'Միանալ';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Կապվեք մեզ հետ, կամ հետևեք մեզ սոցիալական ցանցերում';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Օգնեք մեզ տեղեկացնել աշխարհի միլիոնավոր սպառողների';
+
+  @override
+  String get preferences_card_help => 'Օգնություն և աջակցություն';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Ստացեք ձեր հարցերի պատասխանները';
+
+  @override
+  String get logged_out => 'Ելք կատարեց';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Շնորհակալություն մեր անդամներից մեկը լինելու համար։';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Դիտել բոլոր վիճակագրությունները';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Որոնել $provider -ով «$keyword»';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Որոնել կարգավորում (օրինակ՝ Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Հասանելիություն. Ցուցադրել զմայլիկները';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Հասանելիություն. Հեռացնել գույները';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'Մեր մասին';
+
+  @override
+  String get preferences_legal_information_title => 'Իրավական տեղեկատվություն';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Օգտագործման պայմաններ, գաղտնիության քաղաքականություն և այլն';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Բաց սննդի փաստերը սննդամթերքի տվյալների շտեմարան է, **ստեղծված բոլորի կողմից, բոլորի համար**:\nԴուք կարող եք օգտագործել այն՝ սննդի ավելի լավ ընտրություն կատարելու համար, և քանի որ դա **բաց տվյալ** է, յուրաքանչյուրը կարող է **վերաօգտագործել այն ցանկացած նպատակով**:';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Լիցենզիաներ';
+
+  @override
+  String get preferences_about_app_title => 'Հավելվածի մասին';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Տեխնիկական տեղեկություններ, մշակողի տեղեկություններ և այլն';
+
+  @override
+  String get preferences_card_information => 'Տեղեկատվություն';
+
+  @override
+  String get preferences_version_number_title => 'Տարբերակի համարը';
+
+  @override
+  String get preferences_scanner_title => 'Սկաներ';
+
+  @override
+  String get preferences_app_store => 'Հավելվածների խանութ';
+
+  @override
+  String get preferences_app_system_settings => 'Համակարգի կարգավորումներ';
+
+  @override
+  String get preferences_source_code => 'Մուտք գործեք ելակետային կոդին';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Եվ սկսեք ազդեցություն թողնել միլիոնավոր մարդկանց վրա';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Խորհուրդներ';
+
+  @override
+  String get tips_discover_nutriscore => 'Բացահայտեք նոր Nutri-Score-ը';
+
+  @override
+  String get preferences_on_off_website_subtitle => 'Բաց սննդի փաստերի կայքում';
+
+  @override
+  String get preferences_manage_account_title => 'Կառավարել իմ հաշիվը';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Կառավարեք ձեր հաշիվը';
+
+  @override
+  String get preferences_change_password_title => 'Փոխել իմ գաղտնաբառը';
+
+  @override
+  String get preferences_danger_zone => 'Վտանգավոր գոտի';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Ձեր բոլոր ներդրումները կկորչեն';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Հավելվածի կարգավորումներ';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Շատ փորձարարական եղանակ՝ ապրանքները անցանց սկանավորելու համար';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Թարմացնել սերվերի բոլոր ապրանքները';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Խնդրում եմ խուսափեք դա անելուց, եթե դա բացարձակ անհրաժեշտ չէ';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Դեմո ռեժիմ';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ավելացրեք քարտեր սկաների վրա';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Սկաներին ավելացնում է 3 նմուշային արտադրանք';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Ֆոլքսոնոմիայի հաղորդավար';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Հոսթ՝ $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Հասանելիության փորձեր';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Բազմաթիվ ապրանքների ընտրություն գների համար';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Օգտատիրոջ կողմից դասավորված գիտելիքների վահանակներ';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Ժամանակավոր մուտք տեղանքի որոնմանը';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 կամ 3 ապրանքների կողք կողքի համեմատություն';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Ապրանքների ցանկի ներմուծում';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Գնահատականներ և մեթոդաբանություններ';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Բացահայտեք, թե ինչպես է հաշվարկվում Nutri-Score-ը';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Բացահայտեք մեթոդաբանության հիմնական փոփոխությունները';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Բացահայտեք բաց սննդի մասին փաստեր';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Հաճախակի տրվող հարցեր - Հաճախակի տրվող հարցեր';
+
+  @override
+  String get preferences_faq_off_ngo_title => '«Բաց սննդի փաստեր» ՀԿ';
+
+  @override
+  String get preferences_about_information_title => 'Տեղեկատվություն';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Ստացեք համայնքի թարմացումներ';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Մնացեք տեղեկացված հավելվածի և համայնքի նորությունների մասին';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Մասնակցեք մեր վիրտուալ միջոցառումներից մեկին';
+
+  @override
+  String get preferences_connect_blog_title => 'Բաց սննդի փաստերի բլոգ';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Ստացեք վերջին նորությունները, հենց որ դրանք տեղի են ունենում';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Ստացեք օգնություն համայնքից';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Օգնեք մեզ բարելավել հավելվածը';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Ուղարկեք մեզ վրիպազերծման մասին տեղեկություններ';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Ուղարկեք մեզ էլ. նամակ՝ մանրամասն վրիպազերծման տեղեկատվությամբ';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Ուղարկեք մեզ ձեր կարծիքը հավելվածի մասին';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Օգնեք ձևավորել հավելվածի ապագան';
+
+  @override
+  String get preferences_connect_survey_title => 'Մասնակցեք հավելվածի հարցմանը';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Օգնեք մեզ հասկանալ, թե ինչ պետք է կառուցենք հաջորդը';
+
+  @override
+  String get preferences_connect_professionals_title => 'Մասնագետներ';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Ամբողջովին անվճար, ապահովում է ճշգրիտ տվյալներ 500 հավելվածների և միլիոնավոր սպառողների համար: Ինքնասպասարկում, համատեղելի է ձեր PIM-ի կամ աղյուսակների (XLSX) հետ:';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Կապվեք մեզ հետ սկսելու համար';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Ստացեք ձեր զեկույցի համար անհրաժեշտ բոլոր նյութերը';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Կապվեք մեզ հետ մամուլի հարցումների կամ ձեր զեկույցի մասին տեղեկացնելու համար';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Դարձեք ակտիվ կամավոր';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Զարգացում, հաղորդակցություն, դիզայն… ցանկացած տեսակի կամավորական աշխատանք կամ փորձագիտական աշխատանք ողջունելի է։';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Բացահայտեք բազմաթիվ եղանակներից մի քանիսը, որոնցով կարող եք ներդրում ունենալ';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Բջջային հավելվածի մշակում';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Սովորեք, թե ինչպես ներդրում ունենալ ծրագրային ապահովման մշակման գործում';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Ամենօրյա անկայուն կառուցվածքներ, նոր հնարավորություններ';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Զարգացրեք ձեր տեղական համայնքը';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Օգնություն ծրագրային ապահովման, բովանդակության, բաղադրիչների վերլուծության թարգմանությունների հետ կապված';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Մենք պատրաստել ենք մի փոքրիկ ձևանմուշ՝ ձեզ օգնելու համար :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Պարզ քայլեր՝ ձեր երկրում սննդի թափանցիկությունը բարձրացնելու համար';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Միացե՛ք տվյալների որակի թիմին';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Միացե՛ք մեր ջանքերին՝ ապահովելու համար տվյալների բազայի ամբողջականությունն ու ճշգրտությունը';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Ավելացված ապրանքներ';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Բաց սննդի փաստերին ավելացված նոր ապրանքներ';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Արտադրանքներ, որոնք ես պետք է ավարտեմ';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Բոլոր անավարտ ապրանքները';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Իմ գները, իմ ապացույցները…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Արտադրանքներ, որոնք կարող եք օգնել ավարտին հասցնել';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Օգնեք հաշվարկել Nutri-Score-ը և Green-Score-ը ձեր երկրում';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Իմ ներդրած գները';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Գնի պիտակներ և կտրոններ';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Լուսանկարեք ձեր կտրոնները և սկանավորեք դրանց հետ կապված շտրիխ կոդերը';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Լուսանկարեք խանութում գները';
+
+  @override
+  String get preferences_prices_newest_title => 'Ամենաթարմ գները';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Բաց գների համայնքի կողմից ավելացված վերջին գները';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Ամենաշատ գներով մասնակիցները';
+
+  @override
+  String get preferences_prices_metrics_title => 'Բաց գնի չափանիշներ';
+
+  @override
+  String get preferences_prices_metrics_subtitle => 'Հետևեք նախագծի զարգացմանը';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Նպաստելու եղանակներ';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Հաստատեք ձեր կամ ուրիշների կողմից ավելացված գները՝ արհեստական բանականության օգնությամբ';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Արագ ավելացրեք բազմաթիվ կտրոններ կամ դարակների լուսանկարներ ձեր տեսախցիկի ժապավենից';
+
+  @override
+  String get preferences_prices_challenges_title => 'Ամսական մարտահրավերներ';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Մասնակցեք ամսական թեմատիկ որոնումներին՝ գներ հավաքելու համար';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Վերականգնեք ձեր հավատարմության տվյալները';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Իմացեք, թե ինչպես պահանջել ձեր տվյալները';
+
+  @override
+  String get preferences_page_customize_app_title => 'Անհատականացրեք հավելվածը';
+
+  @override
+  String get preferences_page_contribute_project_title => 'Նպաստեք նախագծին';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Պարզ եղանակներ՝ օգնելու Բաց Սննդի Փաստերին';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Գնահատման մեթոդաբանություններ, օգնություն և ավելին նախագծի մասին';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Ընդունել առաջարկը';
 
   @override
@@ -4738,4 +5565,103 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Նույնականացումը ձախողվեց, ապացույցները հնարավոր չէ ստանալ';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count $total ապացույցներից';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count $total մասնակիցներից';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count $total տեղանքներից';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count վայրեր';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Խնդրում ենք վերագործարկել հավելվածը՝ փոփոխությունները կիրառելու համար։';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Գրաֆիկական ինտերֆեյս';
+
+  @override
+  String get preferences_app_settings_media_title => 'Մեդիա';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Բաց սննդի փաստերի լաբորատորիաներ';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Բաց սննդի փաստերը բերեք ձեր լեզվով';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Գրանցվեք հավելվածի ալֆա տարբերակում';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Ներդրումներ և ապրանքի տվյալներ';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Չցուցադրել Ֆոլքսոնոմիա';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ավելացված է $created-ին';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

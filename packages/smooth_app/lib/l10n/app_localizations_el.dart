@@ -9,6 +9,9 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
+  String get app_name => 'Ανοιχτά στοιχεία για τα τρόφιμα';
+
+  @override
   String get sep => '';
 
   @override
@@ -328,10 +331,6 @@ class AppLocalizationsEl extends AppLocalizations {
   String get sign_up_page_terms_text => 'τους όρους χρήσης και συνεισφοράς';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://gr.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -459,10 +458,6 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Δωρεά στο Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha =>
-      'Εγγραφείτε στην εσωτερική έκδοση alpha';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -609,7 +604,7 @@ class AppLocalizationsEl extends AppLocalizations {
       'Επαναφορτώθηκε με τις νέες σας προτιμήσεις';
 
   @override
-  String get profile_navbar_label => 'Προφίλ';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Σάρωση';
@@ -1011,6 +1006,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get score_add_missing_product_category => 'Προσθήκη κατηγορίας';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Επιλέξτε μια πιο ακριβή κατηγορία';
+
+  @override
   String get score_add_missing_product_countries =>
       'Προσθήκη χωρών προϊόντος που λείπουν';
 
@@ -1301,6 +1300,13 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'Δεν βρέθηκαν ιδιότητες προϊόντος. Οι ιδιότητες μπορούν να χρησιμοποιηθούν για την περιγραφή των προϊόντων με περισσότερες λεπτομέρειες, με ευέλικτο τρόπο.';
+
+  @override
+  String get product_tags_empty => 'Δεν υπάρχουν ακίνητα';
+
+  @override
+  String get product_tags_explanation =>
+      'Προσθέτοντας ιδιότητες (κλειδί/τιμή) σε ένα προϊόν, βοηθάτε στον εμπλουτισμό του.';
 
   @override
   String get add_tag => 'Προσθήκη ιδιότητας';
@@ -1730,7 +1736,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get account_delete => 'Διαγραφή λογαριασμού';
 
   @override
-  String get account_deletion_subject => 'Διαγραφή του λογαριασμού μου';
+  String get account_delete_title => 'Διαγραφή του λογαριασμού μου';
 
   @override
   String get user_profile => 'Λογαριασμός';
@@ -2416,6 +2422,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get dev_preferences_screen_title => 'Λειτουργία DEV';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Πρόσβαση σε πειραματικές λειτουργίες και εργαλεία ανάπτυξης';
+
+  @override
   String get dev_preferences_reset_onboarding_title =>
       'Επανεκκινήστε την εμπειρία εισόδου';
 
@@ -2565,6 +2575,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get prices_app_button => 'Μεταβείτε στην εφαρμογή Τιμές';
 
   @override
+  String get prices_website_button => 'Ανοιχτό στον ιστότοπο Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Προσθήκη ετικετών τιμών απευθείας από τη συλλογή';
 
@@ -2704,6 +2717,13 @@ class AppLocalizationsEl extends AppLocalizations {
   String get prices_list_add_new_price => 'Προσθήκη νέας τιμής\n';
 
   @override
+  String get prices_list_empty_title => 'Δεν υπάρχει ακόμη τιμή!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Γίνετε ο πρώτος που θα προσθέσει ένα:\nΣαρώνοντας μια **απόδειξη** ή μια **τιμή**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Άγνωστο κατάστημα';
 
   @override
@@ -2713,7 +2733,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Δείτε όλες τις τιμές για αυτό το προϊόν';
 
   @override
   String get prices_entry_menu_open_proof => 'Δείτε την απόδειξη';
@@ -2793,9 +2813,23 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Δεν υπάρχει ακόμη συνεργάτης!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Γίνετε ο πρώτος που θα προσθέσει μια τιμή!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Κορυφαίοι $pageSize συνεισφέροντες (σύνολο: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Δεν υπάρχει ακόμα κατάστημα!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Γίνετε ο πρώτος που θα προσθέσει μια τιμή!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2901,7 +2935,17 @@ class AppLocalizationsEl extends AppLocalizations {
   String get prices_proof_subtitle => 'Επαλήθευση';
 
   @override
+  String get prices_proof_empty_title => 'Δεν υπάρχει ακόμη απόδειξη!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Ξεκινήστε προσθέτοντας μια φωτογραφία μιας **απόδειξης** ή μιας **ετικέτας τιμής**!';
+
+  @override
   String get prices_proof_find => 'Επιλέξτε μια απόδειξη';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Απόδειξη';
@@ -2979,14 +3023,8 @@ class AppLocalizationsEl extends AppLocalizations {
   String get dev_mode_section_ui => 'Διεπαφή Χρήστη';
 
   @override
-  String get dev_mode_section_data => 'Δεδομένα';
-
-  @override
   String get dev_mode_section_experimental_features =>
       'Πειραματικές δυνατότητες';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Εξαίρεση του Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title =>
@@ -2999,6 +3037,16 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Συστατικά και συσκευασία)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Επαναφορά γλώσσας εφαρμογής';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Προσθήκη καρτών';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Εναλλαγή μεταξύ prices.openfoodfacts.org (PROD) και περιβάλλοντος δοκιμής';
 
   @override
   String get search_history_item_edit_tooltip =>
@@ -3044,6 +3092,11 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'Η απόδειξή μου';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -4066,32 +4119,33 @@ class AppLocalizationsEl extends AppLocalizations {
       'Το Nutri-Score δεν είναι εφαρμόσιμο (Νέος υπολογισμός)';
 
   @override
-  String get environmental_score_generic => 'Green-Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green-Score A';
+  String get environmental_score_a_new => 'Πράσινη βαθμολογία Α';
 
   @override
-  String get environmental_score_b => 'Green-Score B';
+  String get environmental_score_b_new => 'Πράσινο-Βαθμολογία Β';
 
   @override
-  String get environmental_score_c => 'Green-Score C';
+  String get environmental_score_c_new => 'Πράσινη βαθμολογία C';
 
   @override
-  String get environmental_score_d => 'Green-Score D';
+  String get environmental_score_d_new => 'Πράσινο-Βαθμολογία D';
 
   @override
-  String get environmental_score_e => 'Green-Score E';
+  String get environmental_score_e_new => 'Πράσινο-Σκορ E';
 
   @override
-  String get environmental_score_unknown => 'Άγνωστο Green-Score';
+  String get environmental_score_unknown_new => 'Άγνωστο Πράσινο Σκορ';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Το Green-Score δεν είναι εφαρμόσιμο';
+  String get environmental_score_not_applicable_new =>
+      'Το Green-Score δεν ισχύει';
 
   @override
-  String get nova_group_generic => 'Υπερεπεξεργασία - ομάδες NOVA';
+  String get nova_group_generic_new =>
+      'Υπερεπεξεργασμένα τρόφιμα - ομάδες NOVA';
 
   @override
   String get nova_group_1 => 'Ομάδα 1 NOVA';
@@ -4190,9 +4244,6 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Κοινοποίηση';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4300,11 +4351,284 @@ class AppLocalizationsEl extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://gr.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Τι είναι η Πράσινη Βαθμολογία;';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Το Green-Score είναι ένα λογότυπο που στοχεύει να σας ενημερώσει σχετικά με τις **περιβαλλοντικές επιπτώσεις των τροφίμων**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Ο χρωματικός κώδικας ποικίλλει από σκούρο πράσινο (**A+**) για τα **λιγότερο εντυπωσιακά** προϊόντα έως σκούρο κόκκινο (**F**) για τα **περισσότερο εντυπωσιακά** προϊόντα.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Τα λογότυπα του Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Ο πυρήνας: Αξιολόγηση κύκλου ζωής (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Μια επιστημονική αξιολόγηση των κατηγοριών τροφίμων';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Για κάθε κατηγορία προϊόντος, καθορίζεται μια **βαθμολογία αναφοράς** χρησιμοποιώντας δεδομένα από την περιβαλλοντική βάση δεδομένων Agribalyse (σχεδιασμένη από την ADEME και την INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      'Η **ανάλυση κύκλου ζωής** είναι μια τυποποιημένη μέθοδος αξιολόγησης για τη διεξαγωγή πολυσταδιακής και πολυκριτηριακής περιβαλλοντικής αξιολόγησης.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Μετράει:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 βήματα παραγωγής';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Γεωργία';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Επεξεργασία';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Συσκευασία';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Μεταφορά';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Διανομή';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Κατανάλωση';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 δείκτες περιβαλλοντικών επιπτώσεων';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Κλιματική αλλαγή/αποτύπωμα άνθρακα';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 =>
+      'Καταστροφή της στιβάδας του όζοντος';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ιονίζουσα ακτινοβολία';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Γη';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Χρήση νερού και ενέργειας';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ρύπανση του αέρα';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Θαλάσσιο και γλυκό νερό (σωματίδια, οξίνιση, ευτροφισμός)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Εξάντληση πόρων.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Μπόνους και κυρώσεις';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Για να ανταμείψουμε καλύτερα προϊόντα σε μια κατηγορία, εφαρμόζουμε μπόνους και κυρώσεις με βάση διάφορα κριτήρια:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Τρόπος παραγωγής';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'Ένα μπόνους απονέμεται σε προϊόντα που έχουν επίσημη ετικέτα, ετικέτα ή πιστοποίηση που εγγυάται περιβαλλοντικά οφέλη (βιολογικά, δίκαιου εμπορίου, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Προέλευση των συστατικών';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Απονέμεται ένα μπόνους με βάση την προέλευση των συστατικών. Αυτό το μπόνους λαμβάνει υπόψη τον αντίκτυπο στις μεταφορές, καθώς και την περιβαλλοντική πολιτική της χώρας κάθε παραγωγού.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Είδη υπό εξαφάνιση';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'Επιβάλλεται ποινή σε προϊόντα που περιέχουν συστατικά που έχουν σημαντικές αρνητικές επιπτώσεις στη βιοποικιλότητα και στα οικοσυστήματα, όπως το φοινικέλαιο, η παραγωγή του οποίου ευθύνεται για τη μαζική αποψίλωση των δασών.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Συσκευασία';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'Υπολογίζεται ποινή για να ληφθεί υπόψη η κυκλικότητα της συσκευασίας (χρήση ανακυκλωμένης πρώτης ύλης και δυνατότητα ανακύκλωσης) και η υπερβολική συσκευασία.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'Αυξημένη ανάγκη για διαφάνεια για την καλύτερη μέτρηση και τη μείωση των περιβαλλοντικών επιπτώσεων';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Για τον ακριβή υπολογισμό του Green-Score, είναι απαραίτητο να υπάρχουν πληροφορίες που δεν αναφέρονται απαραίτητα στη συσκευασία (όπως η προέλευση και το ακριβές ποσοστό κάθε συστατικού) ή που σπάνια είναι διαθέσιμες σε χρησιμοποιήσιμη μορφή (όπως μια λίστα με όλα τα συστατικά της συσκευασίας με τους ακριβείς τύπους πλαστικών που χρησιμοποιούνται).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Οι μέσες τιμές χρησιμοποιούνται όταν αυτές οι πληροφορίες δεν είναι ακόμη διαθέσιμες, αλλά τώρα καλούμε όλους να μας βοηθήσουν να συλλέξουμε αυτές τις πληροφορίες, οι οποίες θα είναι πολύ χρήσιμες για το Green-Score αλλά και για πολλές άλλες χρήσεις.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Πώς μπορούν να βοηθήσουν οι πολίτες';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Όλοι οι πολίτες μπορούν να μας βοηθήσουν να συλλέξουμε και να δομήσουμε τις πληροφορίες που υπάρχουν στα προϊόντα ή που μπορούν να εξαχθούν από αυτά, όπως πληροφορίες σχετικά με τις συσκευασίες: Mission Emballages: μια μεγάλης κλίμακας συνεργατική απογραφή συσκευασιών για όλα τα τρόφιμα (στα γαλλικά)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Πώς μπορούν να βοηθήσουν οι κατασκευαστές';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Οι κατασκευαστές μπορούν να μας στείλουν τις πληροφορίες τους απευθείας μέσω της δωρεάν πλατφόρμας μας για παραγωγούς.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ποιο προϊόν είναι καλύτερο για τον πλανήτη;';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Μπορεί να είναι δύσκολο να το καταλάβεις';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Η επιλογή βιώσιμων τροφίμων είναι ένα από τα πιο ισχυρά πράγματα που μπορούμε να κάνουμε για το κλίμα, καθώς **το παγκόσμιο σύστημα τροφίμων μας ευθύνεται για πάνω από το ένα τέταρτο όλων των εκπομπών αερίων του θερμοκηπίου**.\n(Πηγή: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title =>
+      'Εσύ έχεις τη δύναμη!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Τα καλά νέα είναι ότι αυτό μας δίνει έναν ισχυρό τρόπο να δημιουργήσουμε αλλαγή.\n**Ο καθένας μας τρώει περίπου 1.000 γεύματα κάθε χρόνο**. Αυτές είναι 1.000 ευκαιρίες να **επιλέξουμε ένα καλύτερο μέλλον για τον πλανήτη**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Βοηθά να είναι κανείς υπεύθυνος και να αποφασίζει';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Η επιλογή βιώσιμων τροφίμων μπορεί να φαίνεται περίπλοκη. Οι ετικέτες είναι περίπλοκες και οι πληροφορίες συχνά λείπουν. Το Green-Score δημιουργήθηκε για να την κάνει απλή, παρέχοντάς σας μια **σαφή**, **επιστημονικά βασισμένη** και **διαφανή** περιβαλλοντική αξιολόγηση για τα τρόφιμα, ακριβώς εκεί που τη χρειάζεστε: ενώ ψωνίζετε.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Διαφάνεια';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Σε αντίθεση με τις ιδιόκτητες ετικέτες, ο υπολογισμός του Green-Score είναι **εντελώς ανοιχτός** και μπορεί να **επαληθευτεί από οποιονδήποτε**.';
+
+  @override
+  String get guide_nova_title => 'Υπερεπεξεργασμένα τρόφιμα';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Τι είναι η υπερεπεξεργασία;';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Οι ομάδες NOVA σας ενημερώνουν για το επίπεδο επεξεργασίας τροφίμων.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Η ταξινόμηση NOVA επιτρέπει την κατηγοριοποίηση των τροφίμων σε **4 ομάδες** με βάση τον **βαθμό βιομηχανικής επεξεργασίας** (ελάχιστα επεξεργασμένα ή μη επεξεργασμένα τρόφιμα, μαγειρικά συστατικά, επεξεργασμένα τρόφιμα, υπερεπεξεργασμένα τρόφιμα).';
+
+  @override
+  String get guide_nova_logos_caption => 'Τα λογότυπα της NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Οι 4 ομάδες NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Υπάρχουν 4 ομάδες NOVA, με την προβληματική να είναι η Ομάδα 4 - Υπερεπεξεργασμένα τρόφιμα.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Ελάχιστα επεξεργασμένα ή μη επεξεργασμένα τρόφιμα';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Τα μη επεξεργασμένα (ή φυσικά) τρόφιμα είναι τα βρώσιμα μέρη των φυτών (σπόροι, καρποί, φύλλα, μίσχοι, ρίζες) ή των ζώων (μύες, εντόσθια, αυγά, γάλα), καθώς και μύκητες, φύκια και νερό, αφού διαχωριστούν από τη φύση.';
+
+  @override
+  String get guide_nova_groups_arg2_title =>
+      'Επεξεργασμένα μαγειρικά συστατικά';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Τα επεξεργασμένα μαγειρικά συστατικά, όπως τα έλαια, το βούτυρο, η ζάχαρη και το αλάτι, είναι ουσίες που προέρχονται από τρόφιμα της Ομάδας 1 ή από τη φύση μέσω διαδικασιών που περιλαμβάνουν συμπίεση, ραφινάρισμα, άλεση, άλεση και ξήρανση.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Επεξεργασμένα τρόφιμα';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Τα επεξεργασμένα τρόφιμα, όπως τα εμφιαλωμένα λαχανικά, τα κονσερβοποιημένα ψάρια, τα φρούτα σε σιρόπι, τα τυριά και τα φρεσκοψημένα ψωμιά, παρασκευάζονται κυρίως με την προσθήκη αλατιού, λαδιού, ζάχαρης ή άλλων ουσιών από τα τρόφιμα της Ομάδας 2 στα τρόφιμα της Ομάδας 1. Οι διαδικασίες περιλαμβάνουν διάφορες μεθόδους συντήρησης ή μαγειρέματος και, στην περίπτωση των ψωμιών και των τυριών, μη αλκοολική ζύμωση. Τα περισσότερα επεξεργασμένα τρόφιμα έχουν δύο ή τρία συστατικά και είναι αναγνωρίσιμα ως τροποποιημένες εκδοχές των τροφίμων της Ομάδας 1. Μπορούν να καταναλωθούν μόνα τους ή, πιο συχνά, σε συνδυασμό με άλλα τρόφιμα.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Υπερεπεξεργασμένα τρόφιμα';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Τα υπερεπεξεργασμένα τρόφιμα, όπως τα αναψυκτικά, τα γλυκά ή αλμυρά συσκευασμένα σνακ, τα ανασυσταμένα προϊόντα κρέατος και τα προπαρασκευασμένα κατεψυγμένα πιάτα, δεν είναι απλώς τροποποιημένα τρόφιμα, αλλά σκευάσματα που παρασκευάζονται κυρίως ή εξ ολοκλήρου από ουσίες που προέρχονται από τρόφιμα και πρόσθετα, με ελάχιστα έως καθόλου άθικτα τρόφιμα Ομάδας 1. Τα συστατικά σε αυτά τα σκευάσματα συνήθως περιλαμβάνουν εκείνα που βρίσκονται επίσης σε επεξεργασμένα τρόφιμα, όπως σάκχαρα, έλαια, λίπη ή αλάτι. Ωστόσο, τα υπερεπεξεργασμένα προϊόντα περιέχουν επίσης άλλες πηγές ενέργειας και θρεπτικών συστατικών που δεν χρησιμοποιούνται συνήθως σε μαγειρικά παρασκευάσματα. Μερικά από αυτά εξάγονται απευθείας από τρόφιμα, όπως καζεΐνη, λακτόζη, ορός γάλακτος και γλουτένη.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Τα προβλήματα με την υπερεπεξεργασία';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ακραία επεξεργασία συστατικών τροφίμων';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Πολλά προέρχονται από περαιτέρω επεξεργασία συστατικών τροφίμων, όπως υδρογονωμένα ή διεστεροποιημένα έλαια, υδρολυμένες πρωτεΐνες, απομονωμένη πρωτεΐνη σόγιας, μαλτοδεξτρίνη, ιμβερτοσάκχαρο και σιρόπι καλαμποκιού υψηλής περιεκτικότητας σε φρουκτόζη.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Πρόσθετα που ξεπερνούν την απλή ασφάλεια των τροφίμων';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Τα πρόσθετα στα υπερεπεξεργασμένα τρόφιμα περιλαμβάνουν ορισμένα που χρησιμοποιούνται επίσης σε επεξεργασμένα τρόφιμα, όπως συντηρητικά, αντιοξειδωτικά και σταθεροποιητές. Κατηγορίες προσθέτων που βρίσκονται μόνο σε υπερεπεξεργασμένα προϊόντα περιλαμβάνουν εκείνα που χρησιμοποιούνται για να μιμηθούν ή να ενισχύσουν τις οργανοληπτικές ιδιότητες των τροφίμων ή για να συγκαλύψουν δυσάρεστες πτυχές του τελικού προϊόντος. Αυτά τα πρόσθετα περιλαμβάνουν χρωστικές και άλλα χρώματα, σταθεροποιητές χρώματος, αρώματα, ενισχυτικά γεύσης, γλυκαντικά χωρίς ζάχαρη και βοηθητικά επεξεργασίας όπως παράγοντες ενανθράκωσης, σύσφιξης, διόγκωσης και αντιδιογκωτικοί παράγοντες, παράγοντες αποαφρισμού, αντισυσσωματικούς και γυαλιστικούς παράγοντες, γαλακτωματοποιητές, απομονωτικά και υγραντικά.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Επεξεργασία που δεν μπορείτε να κάνετε στο σπίτι';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Χρησιμοποιείται μια πληθώρα αλληλουχιών διεργασιών για τον συνδυασμό των συνήθως πολλών συστατικών και τη δημιουργία του τελικού προϊόντος (εξ ου και «υπερεπεξεργασμένο»). Οι διεργασίες περιλαμβάνουν αρκετές χωρίς εγχώρια ισοδύναμα, όπως υδρογόνωση και υδρόλυση, εξώθηση και χύτευση, και προεπεξεργασία για τηγάνισμα.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Οι επιθετικές και οικονομικές πτυχές της υπερεπεξεργασίας';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ο γενικός σκοπός της υπερεπεξεργασίας είναι η δημιουργία επώνυμων, βολικών (ανθεκτικών, έτοιμων προς κατανάλωση), ελκυστικών (υπερεύγευστων) και εξαιρετικά κερδοφόρων (χαμηλού κόστους συστατικά) τροφίμων, σχεδιασμένων να εκτοπίσουν όλες τις άλλες ομάδες τροφίμων. Τα υπερεπεξεργασμένα τρόφιμα συνήθως συσκευάζονται ελκυστικά και διατίθενται στην αγορά εντατικά.';
 
   @override
   String get preview_badge => 'Προεπισκόπηση';
@@ -4626,6 +4950,13 @@ class AppLocalizationsEl extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Δεν υπάρχει διαθέσιμη τιμή';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Γίνετε ο πρώτος που θα συνεισφέρει!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Κορυφαία $pageSize προϊόντα (σύνολο: $total)';
   }
@@ -4664,7 +4995,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Εξαγωγή τώρα';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Επιτυχής εξαγωγή';
+  String get nutrition_facts_extract_in_progress => 'Εξαγωγή σε εξέλιξη…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Η εξαγωγή ήταν επιτυχής';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4795,6 +5129,507 @@ class AppLocalizationsEl extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Επαλήθευση';
 
   @override
+  String get preferences_card_general => 'Γενικά';
+
+  @override
+  String get preferences_prices_title => 'Τιμές';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Διαχειριστείτε τις προτιμήσεις τιμών σας';
+
+  @override
+  String get preferences_card_project => 'Το έργο Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Συμβάλλετε';
+
+  @override
+  String get preferences_my_contributions_title => 'Οι Συνεισφορές μου';
+
+  @override
+  String get preferences_my_stats_title => 'Τα στατιστικά μου';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Μεταφράστε, βελτιώστε τα εργαλεία μας…';
+
+  @override
+  String get preferences_connect_title => 'Συνδέω';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Επικοινωνήστε μαζί μας ή ακολουθήστε μας στα μέσα κοινωνικής δικτύωσης';
+
+  @override
+  String get preferences_support_title => 'Κάντε μια δωρεά';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Βοηθήστε μας να ενημερώσουμε εκατομμύρια καταναλωτές σε όλο τον κόσμο';
+
+  @override
+  String get preferences_card_help => 'Βοήθεια και Υποστήριξη';
+
+  @override
+  String get preferences_faq_title => 'Συχνές ερωτήσεις';
+
+  @override
+  String get preferences_faq_subtitle => 'Λάβετε απαντήσεις στις ερωτήσεις σας';
+
+  @override
+  String get logged_out => 'Αποσυνδέθηκα';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Σας ευχαριστούμε που είστε ένα από τα μέλη μας!';
+
+  @override
+  String get preferences_app_bar_products_modified =>
+      'Προϊόντα που επεξεργάστηκαν';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Δείτε όλα τα στατιστικά στοιχεία';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Αναζήτηση $provider για \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Αναζήτηση ρύθμισης (π.χ. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Προσβασιμότητα: Εμφάνιση emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Προσβασιμότητα: Αφαίρεση χρωμάτων';
+
+  @override
+  String get preferences_app_settings_products => 'Προϊόντα';
+
+  @override
+  String get preferences_card_about => 'Σχετικά';
+
+  @override
+  String get preferences_legal_information_title => 'Νομικές πληροφορίες';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Όροι χρήσης, πολιτική απορρήτου και άλλα';
+
+  @override
+  String get preferences_terms_of_use => 'Όροι χρήσης';
+
+  @override
+  String get preferences_legal_mentions => 'Νομικές αναφορές';
+
+  @override
+  String get preferences_legal_header =>
+      'Το Open Food Facts είναι μια βάση δεδομένων τροφίμων **που δημιουργήθηκε από όλους, για όλους**.\nΜπορείτε να τη χρησιμοποιήσετε για να κάνετε καλύτερες επιλογές τροφίμων και, καθώς πρόκειται για **ανοιχτά δεδομένα**, ο καθένας μπορεί να την **επαναχρησιμοποιήσει για οποιονδήποτε σκοπό**.';
+
+  @override
+  String get preferences_privacy_policy => 'Πολιτική απορρήτου';
+
+  @override
+  String get preferences_licenses => 'Άδειες';
+
+  @override
+  String get preferences_about_app_title => 'Σχετικά με την εφαρμογή';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Τεχνικές πληροφορίες, πληροφορίες για προγραμματιστές και άλλα';
+
+  @override
+  String get preferences_card_information => 'Πληροφορίες';
+
+  @override
+  String get preferences_version_number_title => 'Αριθμός έκδοσης';
+
+  @override
+  String get preferences_scanner_title => 'Ερευνητής';
+
+  @override
+  String get preferences_app_store => 'Κατάστημα εφαρμογών';
+
+  @override
+  String get preferences_app_system_settings => 'Ρυθμίσεις συστήματος';
+
+  @override
+  String get preferences_source_code => 'Πρόσβαση στον πηγαίο κώδικα';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Και αρχίστε να έχετε αντίκτυπο σε εκατομμύρια ανθρώπους';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Ολοκληρωμένα προϊόντα';
+
+  @override
+  String get preferences_tips => 'Συμβουλές';
+
+  @override
+  String get tips_discover_nutriscore => 'Ανακαλύψτε το νέο Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Στον ιστότοπο Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title =>
+      'Διαχείριση του λογαριασμού μου';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'Διαχείριση του λογαριασμού σας';
+
+  @override
+  String get preferences_change_password_title => 'Αλλαγή κωδικού πρόσβασης';
+
+  @override
+  String get preferences_danger_zone => 'Ζώνη κινδύνου';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Όλες οι συνεισφορές σας θα χαθούν';
+
+  @override
+  String get preferences_contributions_title => 'Συνεισφορές';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Ρυθμίσεις εφαρμογής';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Πολύ πειραματικός τρόπος σάρωσης προϊόντων εκτός σύνδεσης';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Ανανέωση όλων των προϊόντων από τον διακομιστή';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Παρακαλώ αποφύγετε να το κάνετε αυτό εκτός αν είναι απολύτως απαραίτητο';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Λειτουργία επίδειξης';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Προσθήκη καρτών στον σαρωτή';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Προσθέτει 3 δείγματα προϊόντων στον σαρωτή';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Παρουσιαστής Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Κεντρικός υπολογιστής: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Πειράματα προσβασιμότητας';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Επιλογή πολλαπλών προϊόντων για τιμές';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Πίνακες γνώσεων με ταξινόμηση χρήστη';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Προσωρινή πρόσβαση στην αναζήτηση τοποθεσίας';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Σύγκριση μεταξύ 2 ή 3 προϊόντων';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Εισαγωγή λίστας προϊόντων';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Βαθμολογίες & μεθοδολογίες';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Ανακαλύψτε πώς υπολογίζεται το Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Ανακαλύψτε τις κύριες αλλαγές στη μεθοδολογία';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Ανακαλύψτε το έργο';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Ανακαλύψτε Ανοιχτά Γεγονότα για τα Τρόφιμα';
+
+  @override
+  String get preferences_faq_faq_title => 'Συχνές ερωτήσεις - Συχνές ερωτήσεις';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Η ΜΚΟ Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Πληροφορίες';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Λάβετε ενημερώσεις κοινότητας';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Μείνετε ενημερωμένοι για τα νέα της εφαρμογής και της κοινότητας';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Εγγραφείτε στο ημερολόγιο της κοινότητάς μας';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Συμμετέχετε συμμετέχοντας σε μία από τις εικονικές μας εκδηλώσεις';
+
+  @override
+  String get preferences_connect_blog_title => 'Το ιστολόγιο Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Λάβετε τα τελευταία νέα, τη στιγμή που συμβαίνουν';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Λάβετε βοήθεια από την κοινότητα';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Βοηθήστε μας να βελτιώσουμε την εφαρμογή';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Στείλτε μας πληροφορίες εντοπισμού σφαλμάτων';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Στείλτε μας ένα email με λεπτομερείς πληροφορίες για τον εντοπισμό σφαλμάτων';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Στείλτε μας σχόλια σχετικά με την εφαρμογή';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Βοηθήστε στη διαμόρφωση του μέλλοντος της εφαρμογής';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Συμμετέχετε στην έρευνα της εφαρμογής';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Βοηθήστε μας να καταλάβουμε τι πρέπει να κατασκευάσουμε στη συνέχεια';
+
+  @override
+  String get preferences_connect_professionals_title => 'Επαγγελματίες';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Εντελώς δωρεάν, εξασφαλίζει ακριβή δεδομένα για 500 εφαρμογές και εκατομμύρια καταναλωτές. Αυτοεξυπηρέτηση, συμβατό με το PIM ή τα υπολογιστικά φύλλα σας (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Επικοινωνήστε μαζί μας για να ξεκινήσετε';
+
+  @override
+  String get preferences_connect_press_title => 'Τύπος';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Αποκτήστε όλο το υλικό που χρειάζεστε για την αναφορά σας';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Επικοινωνήστε μαζί μας για ερωτήσεις τύπου ή για να μας ενημερώσετε για την έκθεσή σας';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Γίνε ενεργός εθελοντής';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Ανάπτυξη, Επικοινωνία, Σχεδιασμός… Κάθε είδους εθελοντισμός ή εμπειρογνωμοσύνη είναι ευπρόσδεκτη!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Ανακαλύψτε μερικούς από τους πολλούς τρόπους με τους οποίους μπορείτε να συνεισφέρετε';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Ανάπτυξη εφαρμογών για κινητά';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Μάθετε πώς να συμβάλλετε στην ανάπτυξη λογισμικού';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Καθημερινές ασταθείς κατασκευές, ολοκαίνουργια χαρακτηριστικά';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Αναπτύξτε την τοπική σας κοινότητα';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Βοήθεια με μεταφράσεις λογισμικού, περιεχομένου, ανάλυσης συστατικών';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Έχουμε ετοιμάσει ένα μικρό πρότυπο για να σας βοηθήσουμε :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Απλά βήματα για την αύξηση της διαφάνειας των τροφίμων στη χώρα σας';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Ποιότητα δεδομένων';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Γίνετε μέλος της ομάδας ποιότητας δεδομένων';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Συμμετέχετε στην προσπάθειά μας να διασφαλίσουμε ότι η βάση δεδομένων είναι πλήρης και ακριβής';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Προστέθηκαν προϊόντα';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Νέα προϊόντα που πρόσθεσα στο Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Προϊόντα που πρέπει να ολοκληρώσω';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Όλα τα ημιτελή προϊόντα';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Τιμές';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'Οι τιμές μου';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Οι τιμές μου, οι αποδείξεις μου…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Προϊόντα που μπορείτε να βοηθήσετε στην ολοκλήρωση';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Βοηθήστε στον υπολογισμό του Nutri-Score και του Green-Score στη χώρα σας';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Τιμές που συνεισφέρω';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Τιμές και αποδείξεις';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Τραβήξτε φωτογραφίες των αποδείξεών σας και σαρώστε τους σχετικούς γραμμωτούς κώδικες';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Βγάλτε φωτογραφίες των τιμών σε ένα κατάστημα';
+
+  @override
+  String get preferences_prices_newest_title => 'Νεότερες τιμές';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Οι πιο πρόσφατες τιμές που προστέθηκαν από την κοινότητα Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Συνεργάτες με τις περισσότερες τιμές';
+
+  @override
+  String get preferences_prices_metrics_title => 'Μετρήσεις τιμής ανοίγματος';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Παρακολουθήστε την εξέλιξη του έργου';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Τρόποι συνεισφοράς';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Επιβεβαιώστε τιμές που προστέθηκαν από εσάς ή άλλους, με τη βοήθεια της Τεχνητής Νοημοσύνης';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Προσθέστε γρήγορα πολλές αποδείξεις ή φωτογραφίες από ράφια από το ρολό της κάμεράς σας';
+
+  @override
+  String get preferences_prices_challenges_title => 'Μηνιαίες προκλήσεις';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Συμμετέχετε σε μηνιαίες θεματικές αποστολές για τη συλλογή τιμών';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Ανακτήστε τα δεδομένα πιστότητας';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Μάθετε πώς να ζητήσετε τα δεδομένα σας';
+
+  @override
+  String get preferences_page_customize_app_title => 'Προσαρμόστε την εφαρμογή';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Συνεισφέρετε στο έργο';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Απλοί τρόποι για να βοηθήσετε το Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Μεθοδολογίες βαθμολόγησης, βοήθεια και πολλά άλλα σχετικά με το έργο';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Αποδοχή πρότασης';
 
   @override
@@ -4839,4 +5674,103 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Η πιστοποίηση απέτυχε, δεν είναι δυνατή η ανάκτηση αποδείξεων';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count από $total αποδείξεις';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count από $total συνεισφέροντες';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count από $total τοποθεσίες';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count τοποθεσίες';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Επανεκκινήστε την εφαρμογή για να εφαρμοστούν οι αλλαγές.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Γραφική διεπαφή';
+
+  @override
+  String get preferences_app_settings_media_title => 'Μέσα ενημέρωσης';
+
+  @override
+  String get preferences_about_app_development_title => 'Ανάπτυξη';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Ανοιχτά Εργαστήρια Γεγονότων για τα Τρόφιμα';
+
+  @override
+  String get preferences_root_account_title => 'Λογαριασμός';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Φέρτε τα Ανοιχτά Γεγονότα για τα Τρόφιμα στη γλώσσα σας';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Εγγραφείτε στην έκδοση alpha της εφαρμογής';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Συνεισφορές και δεδομένα προϊόντων';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Να μην εμφανίζεται η Λαϊκή Προσωπικότητα';
+
+  @override
+  String get preferences_account_title => 'Λογαριασμός';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Προστέθηκε στις $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

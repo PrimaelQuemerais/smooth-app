@@ -9,6 +9,9 @@ class AppLocalizationsKk extends AppLocalizations {
   AppLocalizationsKk([String locale = 'kk']) : super(locale);
 
   @override
+  String get app_name => 'Азық-түлік фактілерін ашыңыз';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsKk extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Нақтырақ санатты таңдаңыз';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Мүлік жоқ';
+
+  @override
+  String get product_tags_explanation =>
+      'Өнімге сипаттарды (кілт/мән) қосу арқылы сіз оны байытуға көмектесесіз.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Менің тіркелгімді жою';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Эксперименттік мүмкіндіктерге және әзірлеу құралдарына қол жеткізіңіз';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Open Prices веб-сайтында ашыңыз';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2654,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prices_list_add_new_price => '\nжаңа баға қосыңыз';
 
   @override
+  String get prices_list_empty_title => 'Бағасы әлі жоқ!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Бірінші болып қосылыңыз:\n**түбіртек** немесе **баға белгісін** сканерлеу арқылы!';
+
+  @override
   String get prices_entry_shop_not_found => 'Белгісіз дүкен';
 
   @override
@@ -2649,7 +2670,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Осы өнімнің барлық бағаларын қараңыз';
 
   @override
   String get prices_entry_menu_open_proof => 'Дәлелдеуді көру';
@@ -2729,9 +2750,22 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Әзірге үлес қосушы жоқ!';
+
+  @override
+  String get prices_users_empty_explanation => 'Бағаны бірінші болып қосыңыз!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Әлі дүкен жоқ!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Бағаны бірінші болып қосыңыз!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2836,7 +2870,17 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Әлі дәлел жоқ!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      '**Түбіртек** немесе **баға белгісі** фотосуретін қосудан бастаңыз!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2915,13 +2959,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Деректер';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2933,6 +2971,17 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Қолданба тілін қалпына келтіріңіз';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Карталарды қосыңыз';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Price.openfoodfacts.org (PROD) және сынақ ортасы арасында ауысыңыз';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2976,6 +3025,11 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3977,32 +4031,33 @@ class AppLocalizationsKk extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Жасыл ұпай А';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Жасыл ұпай В';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Жасыл ұпай C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Жасыл ұпай D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Жасыл ұпай Е';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Белгісіз жасыл ұпай';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Жасыл ұпай қолданылмайды';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ультра өңделген тағамдар - NOVA топтары';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4099,9 +4154,6 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Бөлісу';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4209,11 +4261,281 @@ class AppLocalizationsKk extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Жасыл ұпай дегеніміз не?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score - бұл **тағамның қоршаған ортаға әсері** туралы хабарлауға бағытталған логотип.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Түс коды **ең аз әсер ететін** өнімдер үшін қою жасылдан (**A+**) **ең әсерлі** өнімдер үшін қою қызылға (**F**) дейін өзгереді.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score логотиптері';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Негізгі: Өмірлік циклді бағалау (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Азық-түлік категорияларына ғылыми баға беру';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Әрбір өнім санаты үшін Agribalyse экологиялық дерекқорының деректері (ADEME және INRAE әзірлеген) арқылы **бенчмарк** ұпайы белгіленеді.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Өмірлік циклді талдау** – көп сатылы және көп критериалды экологиялық бағалауды жүргізуге арналған стандартталған бағалау әдісі.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Өлшемдері:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 өндірістік қадам';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Қаптама';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 қоршаған ортаға әсер ету көрсеткіштері';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Климаттың өзгеруі/көміртек ізі';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Озон қабатының бұзылуы';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Иондаушы сәулелену';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Жер';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Су және энергияны пайдалану';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ауаның ластануы';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Теңіз және тұщы су (бөлшектер, қышқылдану, эвтрофикация)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Ресурстардың сарқылуы.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Бонустар мен айыппұлдар';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Санаттағы жақсырақ өнімдерді марапаттау үшін біз бірнеше критерийге негізделген бонустар мен айыппұлдарды қолданамыз:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ингредиенттердің шығу тегі негізінде бонус беріледі. Бұл бонус тасымалдауға әсер етуді, сондай-ақ әрбір өндіруші елінің экологиялық саясатын ескереді.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Қаптама';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Жасыл баллды дәл есептеу үшін қаптамада міндетті түрде көрсетілмеген (мысалы, әрбір ингредиенттің шығу тегі және нақты пайызы) немесе қолдануға жарамды түрінде сирек болатын ақпарат (мысалы, қолданылатын пластмассалардың нақты түрлерімен қаптаманың барлық компоненттерінің тізімі) болуы қажет.';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Орташа мәндер бұл ақпарат әлі қол жетімді болмаған кезде пайдаланылады, бірақ біз қазір барлығын осы ақпаратты жинауға көмектесуге шақырамыз, бұл Жасыл ұпай үшін өте пайдалы болады, сонымен қатар басқа да көптеген пайдаланулар үшін.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Қалай азаматтар көмектесе алады';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Барлық азаматтар бізге өнімдерде бар немесе олардан шығарылатын ақпаратты жинауға және құрылымдауға көмектесе алады, мысалы, орау туралы ақпарат: Mission Emballages: барлық азық-түлік өнімдеріне арналған орауыштардың кең ауқымды бірлескен түгендеуі (француз тілінде)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Өндірушілер қалай көмектесе алады';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Өндірушілер бізге өз ақпаратын өндірушілерге арналған тегін платформамыз арқылы тікелей жібере алады.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Қай өнім планета үшін жақсы?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Мұны айту қиын болуы мүмкін';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Тұрақты тағамды таңдау - климат үшін жасай алатын ең күшті нәрселердің бірі, өйткені **біздің жаһандық азық-түлік жүйеміз парниктік газдар шығарындыларының төрттен бірінен астамына жауап береді**.\n(Дереккөз: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Сізде күш бар!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Жақсы жаңалық, бұл бізге өзгерістер жасаудың күшті жолын береді.\n**Әрқайсымыз жыл сайын шамамен 1000 рет тамақтанамыз**. Бұл **ғаламшардың жақсы болашағын таңдауға** 1000 мүмкіндік!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Жауапкершілік пен шешім қабылдауға көмектеседі';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Тұрақты тағамды таңдау күрделі болуы мүмкін. Белгілер шатастырады және ақпарат жиі жоқ. Green-Score оны қарапайым ету үшін жасалды, ол сізге азық-түлік өнімдерінің **айқын**, **ғылымға негізделген** және **мөлдір** экологиялық рейтингін дәл қажет жерде: дүкенде жүргенде береді.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Мөлдірлік';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Меншікті белгілерден айырмашылығы, Green-Score есебі **толығымен ашық** болып табылады және оны **кез келген адам тексере алады**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Ультра өңдеу дегеніміз не?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA топтары тағамды өңдеу деңгейі туралы хабарлайды.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA классификациясы азық-түліктерді **өнеркәсіптік өңдеу дәрежесі** (аз өңделген немесе өңделмеген тағамдар, аспаздық ингредиенттер, өңделген тағамдар, ультра өңделген тағамдар) негізінде **4 топқа** санаттауға мүмкіндік береді.';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA логотиптері';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA тобы';
+
+  @override
+  String get guide_nova_groups_intro =>
+      '4 NOVA тобы бар, олардың проблемалық тобы 4-топ - Ультра өңделген тағамдар.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Аз өңделген немесе өңделмеген тағамдар';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Өңделмеген (немесе табиғи) азық-түліктер өсімдіктердің (тұқымдар, жемістер, жапырақтар, сабақтар, тамырлар) немесе жануарлардың (бұлшық ет, ішімдік, жұмыртқа, сүт), сондай-ақ саңырауқұлақтардың, балдырлардың және судың табиғаттан бөлінгеннен кейін жеуге жарамды бөліктері болып табылады.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Майлар, сары май, қант және тұз сияқты өңделген аспаздық ингредиенттер 1-топтағы азық-түліктерден немесе престеу, тазарту, ұнтақтау, ұнтақтау және кептіруді қамтитын процестер арқылы табиғаттан алынатын заттар болып табылады.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Бөтелкедегі көкөністер, балық консервілері, сироптағы жемістер, ірімшіктер және жаңа піскен нандар сияқты өңделген тағамдар негізінен 2-топтағы 1-топтағы тағамдарға тұз, май, қант немесе басқа заттарды қосу арқылы жасалады. Процестер әртүрлі консервілеу немесе пісіру әдістерін, ал нан мен ірімшік жағдайында алкогольсіз ашытуды қамтиды. Өңделген тағамдардың көпшілігінде екі немесе үш ингредиент бар және олар 1-топ өнімдерінің өзгертілген нұсқалары ретінде танылады. Оларды өз бетінше жеуге болады, әдетте, басқа тағамдармен бірге жеуге болады.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Алкогольсіз сусындар, тәтті немесе дәмді оралған тағамдар, қалпына келтірілген ет өнімдері және алдын ала дайындалған мұздатылған тағамдар сияқты ультра өңделген тағамдар тек модификацияланған тағамдар емес, негізінен немесе толығымен азық-түліктер мен қоспалардан алынатын заттардан жасалған, 1-топқа жататын азық-түліктер аз немесе мүлдем бұзылмаған. Бұл құрамдағы ингредиенттер әдетте қант, май, май немесе тұз сияқты өңделген тағамдарда кездесетіндерді қамтиды. Дегенмен, ультра өңделген өнімдерде әдетте аспаздық препараттарда қолданылмайтын басқа қуат көздері мен қоректік заттар да бар. Олардың кейбіреулері казеин, лактоза, сарысу және глютен сияқты тағамдардан тікелей алынады.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Ультра өңдеумен байланысты мәселелер';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Тағамдық ингредиенттерді экстремалды өңдеу';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Көбісі гидрленген немесе интертерирленген майлар, гидролизденген белоктар, соя протеинінің изоляты, мальтодекстрин, инвертті қант және жоғары фруктоза жүгері шәрбаты сияқты тағамдық құрамдастарды одан әрі өңдеуден алынған.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Таза азық-түлік қауіпсіздігінен асып түсетін қоспалар';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ультра өңделген тағамдардағы қоспаларға консерванттар, антиоксиданттар және тұрақтандырғыштар сияқты өңделген тағамдарда қолданылатын кейбір қоспалар жатады. Тек ультра өңделген өнімдерде кездесетін қоспалар кластарына тағамның сенсорлық қасиеттеріне еліктеу немесе жақсарту немесе соңғы өнімнің жағымсыз жақтарын жасыру үшін қолданылатындар жатады. Бұл қоспаларға бояғыштар мен басқа түстер, түс тұрақтандырғыштары жатады; дәмдеуіштер, дәм күшейткіштер, қантсыз тәттілендіргіштер; және өңдеуге көмекші құралдар, мысалы, көміртекті, қатайтатын, көлемді және көлемді түсіруге қарсы агенттер, көбіктендіргіш, қатып қалуға және жылтыратуға қарсы агенттер, эмульгаторлар, секвестрлер және ылғалдандырғыштар.';
+
+  @override
+  String get guide_nova_explanations_arg3_title => 'Үйде өңдеу мүмкін емес';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Әдетте көптеген ингредиенттерді біріктіру және түпкілікті өнімді (демек, «ультра өңделген») жасау үшін көптеген процестер тізбегі қолданылады. Процестер гидрлеу және гидролиздеу, экструзия және қалыптау және қуыру үшін алдын ала өңдеу сияқты отандық баламасы жоқ бірнеше процестерді қамтиды.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ультра өңдеудің жыртқыш және қаржылық аспектілері';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ультра өңдеудің жалпы мақсаты барлық басқа азық-түлік топтарын ығыстыруға арналған брендті, ыңғайлы (тозуға төзімді, тұтынуға дайын), тартымды (гипер-дәмді) және жоғары табысты (құны төмен ингредиенттер) азық-түлік өнімдерін жасау болып табылады. Ультра өңделген тамақ өнімдері әдетте тартымды түрде оралып, қарқынды түрде сатылады.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4526,6 +4848,12 @@ class AppLocalizationsKk extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Бағасы жоқ';
+
+  @override
+  String get prices_products_empty_explanation => 'Бірінші болып үлес қосыңыз!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4564,7 +4892,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Өндіру орындалуда…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Шығару сәтті';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4695,6 +5026,503 @@ class AppLocalizationsKk extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Баға таңдауларыңызды басқарыңыз';
+
+  @override
+  String get preferences_card_project => '«Ашық азық-түлік фактілері» жобасы';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Менің статистикам';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Аударыңыз, құралдарымызды жақсартыңыз…';
+
+  @override
+  String get preferences_connect_title => 'Қосылу';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Бізбен байланысыңыз немесе әлеуметтік желілерде жазылыңыз';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Дүние жүзіндегі миллиондаған тұтынушыларды хабардар етуге көмектесіңіз';
+
+  @override
+  String get preferences_card_help => 'Анықтама және қолдау';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Сұрақтарыңызға жауап алыңыз';
+
+  @override
+  String get logged_out => 'Жүйеден шықтыңыз';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Біздің мүшелердің бірі болғаныңыз үшін рахмет!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Барлық статистиканы қараңыз';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return '$provider үшін \"$keyword\" іздеу';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Параметрді іздеу (мысалы, Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Арнайы мүмкіндіктер: эмодзилерді көрсету';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Қол жетімділік: түстерді алып тастаңыз';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'Осы туралы';
+
+  @override
+  String get preferences_legal_information_title => 'Құқықтық ақпарат';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Пайдалану шарттары, құпиялылық саясаты және т.б';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts – бұл **әркім жасаған, барлығы үшін** азық-түлік өнімдерінің дерекқоры.\nСіз оны тағамды жақсырақ таңдау үшін пайдалана аласыз және ол **ашық деректер** болғандықтан, кез келген адам оны кез келген мақсатта **қайта пайдалана алады**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Лицензиялар';
+
+  @override
+  String get preferences_about_app_title => 'Қолданба туралы';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Техникалық ақпарат, әзірлеуші туралы ақпарат және т.б';
+
+  @override
+  String get preferences_card_information => 'Ақпарат';
+
+  @override
+  String get preferences_version_number_title => 'Нұсқа нөмірі';
+
+  @override
+  String get preferences_scanner_title => 'Сканер';
+
+  @override
+  String get preferences_app_store => 'Қолданбалар дүкені';
+
+  @override
+  String get preferences_app_system_settings => 'Жүйе параметрлері';
+
+  @override
+  String get preferences_source_code => 'Бастапқы кодқа қол жеткізіңіз';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Және миллиондаған адамдарға әсер ете бастаңыз';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Кеңестер';
+
+  @override
+  String get tips_discover_nutriscore => 'Жаңа Nutri-Score нұсқасын ашыңыз';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Open Food Facts веб-сайтында';
+
+  @override
+  String get preferences_manage_account_title => 'Менің тіркелгімді басқару';
+
+  @override
+  String get preferences_manage_account_tooltip =>
+      'Есептік жазбаңызды басқарыңыз';
+
+  @override
+  String get preferences_change_password_title => 'Құпия сөзімді өзгертіңіз';
+
+  @override
+  String get preferences_danger_zone => 'Қауіпті аймақ';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Барлық үлестеріңіз жоғалады';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Қолданба параметрлері';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Өнімдерді желіден тыс сканерлеудің өте эксперименталды әдісі';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Серверден барлық өнімдерді жаңартыңыз';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Аса қажет болмаса, мұны істеуден аулақ болыңыз';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Демо режимі';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Сканерге карталарды қосыңыз';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Сканерге 3 үлгі өнім қосады';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Фольксономия жүргізушісі';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Жүргізуші: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Қолжетімділік эксперименттері';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Бағалар бойынша көп өнімдерді таңдау';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Пайдаланушы тапсырыс берген білім панельдері';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Орынды іздеуге уақытша қол жеткізу';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      '2 немесе 3 өнімді қатар салыстыру';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Өнімдер тізімін импорттау';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Ұпайлар мен әдістемелер';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Nutri-Score қалай есептелетінін табыңыз';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Әдістемедегі негізгі өзгерістерді табыңыз';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Ашық азық-түлік фактілерін ашыңыз';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Жиі қойылатын сұрақтар - Жиі қойылатын сұрақтар';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      '«Ашық азық-түлік фактілері» үкіметтік емес ұйымы';
+
+  @override
+  String get preferences_about_information_title => 'Ақпарат';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Қауымдастық жаңартуларын алыңыз';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Қолданба мен қауымдастық жаңалықтарынан хабардар болыңыз';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Виртуалды іс-шараларымыздың біріне қатысу арқылы қатысыңыз';
+
+  @override
+  String get preferences_connect_blog_title => 'Open Food Facts блогы';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Соңғы жаңалықтарды олар болған кезде алыңыз';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Қоғамнан көмек алыңыз';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Қолданбаны жақсартуға көмектесіңіз';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Бізге жөндеу туралы ақпаратты жіберіңіз';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Бізге толық жөндеу ақпараты бар электрондық поштаны жіберіңіз';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Қолданба туралы бізге пікір жіберіңіз';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Қолданбаның болашағын қалыптастыруға көмектесіңіз';
+
+  @override
+  String get preferences_connect_survey_title => 'Қолданба сауалнамасын алыңыз';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Бұдан әрі не салу керектігін түсінуге көмектесіңіз';
+
+  @override
+  String get preferences_connect_professionals_title => 'Кәсіби мамандар';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Толығымен тегін, 500 қолданба мен миллиондаған тұтынушылар үшін нақты деректерді қамтамасыз етеді. Өзіне-өзі қызмет көрсету, PIM немесе электрондық кестелермен үйлесімді (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Бастау үшін хабарласыңыз';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Есепке қажетті барлық материалдарды алыңыз';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Баспасөз сұраулары үшін немесе есеп туралы бізге хабарлау үшін хабарласыңыз';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Белсенді волонтер болыңыз';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Әзірлеу, коммуникация, дизайн… кез келген еріктілік немесе тәжірибе құпталады!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Сіз үлес қоса алатын көптеген жолдардың кейбірін табыңыз';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Мобильді қосымшаны әзірлеу';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Бағдарламалық жасақтаманы әзірлеуге қалай үлес қосу керектігін біліңіз';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Күнделікті тұрақсыз құрылыстар, жаңа мүмкіндіктер';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Жергілікті қауымдастықты өсіріңіз';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Бағдарламалық құралға, мазмұнға, ингредиенттерді талдау аудармаларына көмек';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Біз сізге көмектесу үшін шағын үлгі дайындадық :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Еліңізде азық-түліктің ашықтығын арттыруға арналған қарапайым қадамдар';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Деректер сапасы командасына қосылыңыз';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Дерекқордың толық және дәл болуын қамтамасыз ету үшін біздің күш-жігерімізге қосылыңыз';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Қосылған өнімдер';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Мен Open Food Facts-ке қосқан жаңа өнімдер';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Мен аяқтауым керек өнімдер';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Барлық толық емес өнімдер';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Менің бағаларым, менің дәлелдерім…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Аяқтауға көмектесетін өнімдер';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Еліңіздегі Nutri-Score және Green-Score көрсеткіштерін есептеуге көмектесіңіз';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Мен қосқан бағалар';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Баға белгілері мен чектер';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Түбіртектеріңізді суретке түсіріңіз және байланысты штрих-кодтарды сканерлеңіз';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Дүкендегі бағаларды суретке түсіріңіз';
+
+  @override
+  String get preferences_prices_newest_title => 'Ең жаңа бағалар';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Open Prices қауымдастығы қосқан соңғы бағалар';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Ең көп бағасы бар үлескерлер';
+
+  @override
+  String get preferences_prices_metrics_title => 'Баға көрсеткіштерін ашу';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Жобаның дамуын қадағалаңыз';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Үлес қосу жолдары';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'AI көмегімен өзіңіз немесе басқалар қосқан бағаларды растаңыз';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Камера орамынан көптеген түбіртектерді немесе сөрелердің фотосуреттерін жылдам қосыңыз';
+
+  @override
+  String get preferences_prices_challenges_title => 'Ай сайынғы қиындықтар';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Бағаларды жинау үшін ай сайынғы тақырыптық квесттерге қатысыңыз';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Адалдық деректеріңізді қалпына келтіріңіз';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Деректеріңізді сұрау жолын үйреніңіз';
+
+  @override
+  String get preferences_page_customize_app_title => 'Қолданбаны теңшеңіз';
+
+  @override
+  String get preferences_page_contribute_project_title => 'Жобаға үлес қосыңыз';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Open Food Facts бағдарламасына көмектесудің қарапайым жолдары';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Жоба туралы бағалау әдістемелері, анықтама және т.б';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Ұсынысты қабылдаңыз';
 
   @override
@@ -4739,4 +5567,102 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Аутентификация орындалмады, дәлелдерді алу мүмкін болмады';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$total дәлелдердің $count';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$total салымшылардың $count';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$total орынның $count';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count орындар';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Өзгерістерді қолдану үшін қолданбаны қайта іске қосыңыз.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Графикалық интерфейс';
+
+  @override
+  String get preferences_app_settings_media_title => 'БАҚ';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Азық-түлік фактілері зертханасын ашыңыз';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Ашық тағам фактілерін тіліңізге жеткізіңіз';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Қолданбаның альфа нұсқасына тіркеліңіз';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Үлестер және өнім деректері';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Фольксономияны көрсетпеңіз';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return '$createdкүні қосылды';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

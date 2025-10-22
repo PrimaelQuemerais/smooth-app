@@ -9,6 +9,9 @@ class AppLocalizationsOc extends AppLocalizations {
   AppLocalizationsOc([String locale = 'oc']) : super(locale);
 
   @override
+  String get app_name => 'Faches alimentaris dobèrts';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsOc extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsOc extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Seleccionatz una categoria mai precisa';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsOc extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Pas de proprietats';
+
+  @override
+  String get product_tags_explanation =>
+      'En apondent de proprietats (clau/valor) a un produch, ajudatz a l\'enriquir.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Suprimir mon compte';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Accedir a las foncionalitats experimentalas e a las aisinas de desvolopament';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsOc extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Dobrir sul sit web dels Prètzs Dubèrts';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2642,6 +2656,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get prices_list_add_new_price => 'Ajustar un prètz novèl\n';
 
   @override
+  String get prices_list_empty_title => 'Pas encara de prètz!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Siáu lo primièr a n\'apondre un :\nEn escanejant un **rebut** o un **etiqueta de prètz** !';
+
+  @override
   String get prices_entry_shop_not_found => 'Botiga desconeguda';
 
   @override
@@ -2651,7 +2672,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Veire totes los prètzs d\'aqueste produch';
 
   @override
   String get prices_entry_menu_open_proof => 'Veire la pròva';
@@ -2731,9 +2752,23 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Pas de contributor encara!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Siáu lo primièr a apondre un prètz!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Pas de botiga encara!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Siáu lo primièr a apondre un prètz!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2838,7 +2873,17 @@ class AppLocalizationsOc extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Pas de pròva encara!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Començatz per apondre una fòto d\'un **rebut** o d\'una **etiqueta de prètz**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2917,13 +2962,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Donadas';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2935,6 +2974,17 @@ class AppLocalizationsOc extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Reïnicializar lo lengatge de l\'aplicacion';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Ajustar de cartas';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Cambiar entre prices.openfoodfacts.org (PROD) e test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2978,6 +3028,11 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3979,32 +4034,33 @@ class AppLocalizationsOc extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Verd-Scor A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Verd-Escore B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'C de puntuacion verda';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Verd-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Verd-Escore E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Escòre verd desconegut';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'La puntuacion verda es pas aplicabla';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Aliments ultratransformats - grops NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4101,9 +4157,6 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Partejar';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4211,11 +4264,284 @@ class AppLocalizationsOc extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Qu es la Puntuacion Verda?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Lo Verd-Score es un lògo que vòl vos informar de l\' **impacte environamental de la noiridura**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Lo còde de color varia del verd escur (**A+**) pels produches **mens impactants** al roge escur (**F**) pels produches **mai impactants**.';
+
+  @override
+  String get guide_greenscore_logos_caption =>
+      'Los lògos de la puntuacion verda';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Lo còr: Avaloracion del cicle de vida (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Una avaloracion scientifica de las categorias alimentàrias';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Per cada categoria de produch, una nòta de **referéncia** es establida en utilizant de donadas de la basa de donadas environamentala Agribalyse (concebuda per ADEME e INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**L\'analisi del cicle de vida** es un metòde d\'avaloracion estandardizat per realizar una avaloracion environamentala multiestadi e multicritèris.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Mesura:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 etapas de produccion';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 indicadors d\'impacte environamental';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Cambiament climatic/emprenta de carbòni';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Esgotament de la capa d\'ozòn';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radiacion ionizanta';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Tèrra';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'L\'usatge de l\'aiga e de l\'energia';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Pollucion de l\'aire';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Aiga marina e doça (particulas, acidificacion, eutroficacion)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Esgotament de las ressorsas.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonificacions e penalitats';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Per recompensar de melhors produches dins una categoria, aplicam alara de bonus e de penalitats en foncion de divèrses critèris:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Un bonus es balhat en foncion de l\'origina dels ingredients. Aquel bonus pren en compte l\'impacte sul transpòrt e tanben la politica environamentala del país de cada productor.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Per calcular amb precision lo Green-Score, es necessari d\'aver d\'informacions qu\'es pas necessàriament especificadas sus l\'embalatge (coma l\'origina e lo percentatge exacte de cada ingredient) o qu\'es rarament disponibla jos forma utilizabla (coma una lista de totes los compausants de l\'embalatge amb los tipes precises de plastics utilizats).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Las valors mejanas son utilizadas quand aquesta informacion es pas encara disponibla, mas demandam ara a totes de nos ajudar a collectar aquesta informacion que serà fòrça utila pel Green-Score mas tanben per fòrça autres usatges.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Cossí los ciutadans pòdon ajudar';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Toti es ciutadans mos pòden ajudar a amassar e estructurar era informacion qu’ei presenta sus es productes o que se pòt dedusir d’eri, coma era informacion sus er embalatge: Mission Emballages: un inventari collaboratiu a grana escala d’embalatge entà toti es productes alimentaris (en francés)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Cossí los fabricants pòdon ajudar';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Los fabricants nos pòdon mandar lors informacions dirèctament a travèrs nòstra plataforma gratuita pels productors.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Quin produch es melhor per la planeta?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Pòt èsser malaisit de dire';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Causir de noiridura sostenibla es una de las causas mai poderosas que podèm far pel clima, doncas que **nòstre sistèma alimentari global es responsable de mai d\'un quart de totas las emissions de gases d\'efièch de sèrra**.\n(Font: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Avètz lo poder!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'La bona novèla es qu\'aquò nos dona un biais poderós de crear de cambiament.\n**Cadun de nosautres manja aperaquí 1000 repais cada an**. Aquò\'s 1000 escasenças per **causir un futur melhor per la planeta**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Ajuda a èsser responsable e a decidir';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Causir de noiridura sostenibla pòt semblar complèxe. Las etiquetas son confusas e l\'informacion manca sovent. Lo Green-Score foguèt creat per o far simple, vos donant una nòta environamentala **clara**, **basada sus la sciéncia**, e **transparenta** pels produches alimentaris, just ont ne cal: del temps que crompatz.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Transparéncia';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'A la diferéncia de las etiquetas proprietàrias, lo calcul Green-Score es **completament dobèrt** e pòt èsser **verificat per qual que siá**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Qu\'es l\'ultratractament?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Los grops NOVA vos informan sul nivèl de transformacion alimentària.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'La classificacion NOVA permet la categorizacion dels aliments en **4 grops** en foncion de lor **grad de transformacion industriala** (aliments minimalament transformats o non transformats, ingredients culinaris, aliments transformats, aliments ultratransformats).';
+
+  @override
+  String get guide_nova_logos_caption => 'Los lògos de NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Los 4 grops NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'I a 4 grops NOVA, lo problematic essent lo Grop 4 - Aliments ultratransformats.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Aliments minimalament transformats o non transformats';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Los aliments non transformats (o naturals) son las partidas comestiblas de las plantas (granas, fruches, fuèlhas, tijas, raices) o d\'animals (muscles, viandas, uòus, lach), e tanben de fongs, d\'algas, e d\'aiga, après èsser estats separats de la natura.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Los ingredients culinaris transformats, coma los òlis, lo burre, lo sucre e la sal, son de substàncias derivadas dels aliments del grop 1 o de la natura a travèrs de processus qu\'incluson la pression, lo rafinament, la mòla, lo fresatge e lo secatge.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Los aliments transformats, coma los legums en botelha, los peisses en conserva, los fruches en sirop, los formatges, e los pans recentament faches, son subretot fabricats en apondent de sal, d\'òli, de sucre, o d\'autras substàncias dels aliments del grop 2 al grop 1. Los procèsses incluson divèrses metòdes de conservacion o de coccion, e dins lo cas dels pans e del formatge, la fermentacion non alcolica. La màger part dels aliments transformats an dos o tres ingredients e son reconeissables coma de versions modificadas dels aliments del grop 1. Pòdon èsser manjats per eles meteisses o, mai sovent, en combinason amb d\'autres aliments.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Los aliments ultratransformats, coma las bevendas gasosas, los aperitius embalats doç o salats, los produches carnièrs reconstituits, e los plats congelats prepreparats, son pas merament d\'aliments modificats mas de formulacions fachas subretot o entièrament de substàncias derivadas d\'aliments e d\'additius, amb pauc o pas cap d\'aliments intactes del grop 1. Los ingredients dins aquelas formulacions incluson generalament los que se tròban tanben dins los aliments transformats, coma los sucres, los òlis, las graissas o la sal. Pasmens, los produches ultra-transformats contenon tanben d\'autras fonts d\'energia e de nutriments pas tipicament utilizats dins las preparacions culinàrias. Qualques unes d\'aqueles son dirèctament extraches d\'aliments, coma la caseïna, la lactòsa, lo sèrum de sèrum e lo gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Los problèmas amb l\'ultratractament';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Transformacion extrèma dels ingredients alimentaris';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Fòrça son derivats d\'un transformacion ulteriora dels constituents alimentaris, coma d\'òlis idrogenats o interesterificats, de proteïnas idrolizadas, d\'isolat de proteïna de sòja, de maltodextrina, de sucre invertit, e de sirop de milh ric en fructosa.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Additius que van al delà de la seguretat alimentària pura';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Los additius dins los aliments ultratransformats incluson qualques unes que son tanben utilizats dins los aliments transformats, coma de conservants, d\'antioxidants e d\'estabilizators. Las classas d\'additius trobats sonque dins los produches ultra-transformats incluson aqueles utilizats per imitar o melhorar las qualitats sensorialas dels aliments o per desguisar d\'aspèctes desagradius del produch final. Aquestes additius incluson de colorants e d\'autras colors, d\'estabilizators de color; sabors, potenciadors de sabor, edulcorants non sucrats; e d\'ajudas de transformacion coma los agents de carbonatacion, de fermatge, d\'envolopament e anti-envolopament, d\'agents de desescuma, d\'aglomeracion e de vitratge, d\'emulsionants, de sequestrants e d\'umiditats.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Lo tractament que podètz pas far a l\'ostal';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Una multitud de sequéncias de processus es utilizada per combinar los ingredients generalament nombroses e per crear lo produch final (d\'aquí \'ultra-transformat\'). Los processus incluson divèrses sens equivalents domestics, coma l\'idrogenacion e l\'idrolisacion, l\'extrusion e lo moldatge, e lo pretractament per la fregidura.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Los aspèctes predators e financièrs de l\'ultratractament';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'L\'objectiu global de l\'ultra-transformacion es de crear de produches alimentaris de marca, convenents (durables, prèstes a consomar), atractius (iper-saborós) e fòrça rentables (ingredients de bas còst) concebuts per desplaçar totes los autres grops alimentaris. Los produches alimentaris ultratransformats son generalament embalats de manièra atractiva e comercializats intensivament.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4528,6 +4854,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Pas de prètz disponible';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Siáu lo primièr a contribuir!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4566,7 +4899,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Extraccion en cors…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'L\'extraccion capitada';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4697,6 +5033,511 @@ class AppLocalizationsOc extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Gestionatz vòstras preferéncias de prètz';
+
+  @override
+  String get preferences_card_project => 'Lo projècte Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribuir';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Mas estatisticas';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Traduire, melhorar nòstras aisinas…';
+
+  @override
+  String get preferences_connect_title => 'Connectar';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Contactatz-nos, o Seguissètz-nos sus las rets socialas';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Ajudatz-nos a informar de milions de consomators dins lo mond entièr';
+
+  @override
+  String get preferences_card_help => 'Ajuda e Supòrt';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Obtenètz de responsas a vòstras questions';
+
+  @override
+  String get logged_out => 'Desconnectat';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Mercés d\'èsser un de nòstres membres!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Veire totas las estatisticas';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Cercar $provider per \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Cercar un paramètre (per exemple Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Accessibilitat: Afichar l\'emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Accessibilitat: Suprimir las colors';
+
+  @override
+  String get preferences_app_settings_products => 'Produits';
+
+  @override
+  String get preferences_card_about => 'A prepaus';
+
+  @override
+  String get preferences_legal_information_title => 'Informacion legala';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Condicions d\'utilizacion, politica de confidencialitat, e mai';
+
+  @override
+  String get preferences_terms_of_use => 'Condicions d\'utilizacion';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts es una basa de donadas de produchs alimentaris **facha per totes, per totes**.\nLo podètz utilizar per far de melhoras causidas alimentàrias, e coma es **donadas dobèrtas**, qual que siá pòt **lo tornar utilizar per quina tòca que siá**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licéncias';
+
+  @override
+  String get preferences_about_app_title => 'A prepaus de l\'aplicacion';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Informacion tecnica, informacion sul desvolopaire, e mai';
+
+  @override
+  String get preferences_card_information => 'Informacions';
+
+  @override
+  String get preferences_version_number_title => 'Numèro de version';
+
+  @override
+  String get preferences_scanner_title => 'Escanèr';
+
+  @override
+  String get preferences_app_store => 'Botiga d\'aplicacions';
+
+  @override
+  String get preferences_app_system_settings => 'Paramètres del sistèma';
+
+  @override
+  String get preferences_source_code => 'Accedir al còde font';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'E començatz de far un impacte per de milions';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Estrenas';
+
+  @override
+  String get tips_discover_nutriscore => 'Descobrissètz lo novèl Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Sul sit web Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Gerir mon compte';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Gerir vòstre compte';
+
+  @override
+  String get preferences_change_password_title => 'Cambiar mon senhal';
+
+  @override
+  String get preferences_danger_zone => 'Zòna de perilh';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Totas vòstras contribucions seràn perdudas';
+
+  @override
+  String get preferences_contributions_title => 'Contribucions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Paramètres de l\'aplicacion';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Un biais fòrça experimental d\'escanejar los produches fòra linha';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Actualizar totes los produches dempuèi lo servidor';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Mercés d\'evitar de far aquò levat se es absoludament necessari';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mòde demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Ajustar de cartas a l\'escanèr';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Apond 3 produchs de mòstra a l\'escanèr';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Anfitrion de folksonomia';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Òste: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Experiéncias d\'accessibilitat';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Seleccion multiproduch pels prètzs';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panèls de coneissença comandats per l\'utilizaire';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Accès temporari a la recèrca d\'emplaçament';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Comparason costat a costat per 2 o 3 produches';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importacion de la lista de produchs';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Escòrs e metodologias';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Descobrissètz cossí se calcula lo Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Descobrissètz los cambiaments principals de la metodologia';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Descobrissètz los faches de l\'alimentacion dobèrta';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Preguntas frequentas';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'L\'ONG Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Informacions';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Obtenètz de mesas a jorn de la comunautat';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Mantenètz-vos al corrent de las novèlas de l\'aplicacion e de la comunautat';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Participatz-vos en assistissent a un de nòstres eveniments virtuals';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Lo blòg dels faches de l\'alimentacion dobèrta';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Obtenètz las darrièras novèlas, a mesura que se passan';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Obtenètz d\'ajuda de la comunautat';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Ajudatz-nos a melhorar l\'aplicacion';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Mandatz-nos d\'informacions de desbugatge';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Mandatz-nos un corrièl amb d\'informacions de depuracion detalhadas';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Mandatz-nos de comentaris sus l\'aplicacion';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Ajudar a plasmar l\'avenir de l\'aplicacion';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Prenètz l\'enquèsta de l\'aplicacion';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Ajudatz-nos a comprene çò que deuriam bastir en seguida';
+
+  @override
+  String get preferences_connect_professionals_title => 'Professionals';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Totalament gratuit, assegura de donadas precisas per 500 aplicacions e de milions de consomators. Autoservici, compatible amb vòstre PIM o fuèlhs de calcul (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Contactatz-nos per començar';
+
+  @override
+  String get preferences_connect_press_title => 'Quichar';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Obtenètz tot lo material que necessitatz per vòstre rapòrt';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Contactatz-nos per de questions de premsa o per nos far saber vòstre rapòrt';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Venètz un volontari actiu';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Desvolopament, Comunicacion, Dessenh… tot tipe de volontariat o d\'expertisa es planvengut!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Descobrissètz qualques unas de las nombrosas manièras que podètz contribuir';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Desvolopament d\'aplicacions mobilas';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Aprene cossí contribuir al desvolopament de logicials';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Construccions instablas quotidianas, foncionalitats tot novèlas';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Far créisser vòstra comunautat locala';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Ajuda amb de logicials, de contenguts, de traduccions d\'analisi d\'ingredients';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Avèm preparat un pichon modèl per vos ajudar :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Etapas simplas per far créisser la transparéncia alimentària dins vòstre país';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Inscrivètz-vos a l\'equipa de qualitat de donadas';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Inscrivètz-vos a nòstre esfòrç per s\'assegurar que la basa de donadas es completa e precisa';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Produches aponduts';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'De produches novèls qu\'ai aponduts a Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Produchs que me cal completar';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Totes los produches incomplets';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Mis precios, mis pruebas…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Produches que podètz ajudar a completar';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Ajudatz a calcular lo Nutri-Score e lo Green-Score dins vòstre país';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prètz qu\'ai contribuit';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Etiquetas de prètz e rebuts';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Prenètz de fòtos de vòstres rebuts e escanejatz los còdis de barras associats';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Prenètz de fòtos dels prètzs dins una botiga';
+
+  @override
+  String get preferences_prices_newest_title => 'Los prètzs mai novèls';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Darrièrs prètzs aponduts per la comunautat Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Los contributors amb lo mai de prètz';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metrics de prètz dobèrt';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Seguissètz l\'evolucion del projècte';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'De biaisses de contribuir';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Confirmatz los prètzs aponduts per vos meteis o per d\'autres, amb l\'ajuda de l\'IA';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Apondètz rapidament fòrça rebuts o fòtos d\'estatjants de vòstre ròtle de camèra';
+
+  @override
+  String get preferences_prices_challenges_title => 'Desfís mensuals';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Participatz a de missions tematicas mensualas per collectar los prètzs';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Recuperatz vòstras donadas de fidelitat';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Aprenètz cossí demandar vòstras donadas';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'Personalizar l\'aplicacion';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Contribuir al projècte';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'De biaisses simples d\'ajudar a dobrir los faches alimentaris';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodologias de puntuacion, ajuda, e mai sul projècte';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Acceptar la suggestion';
 
   @override
@@ -4741,4 +5582,103 @@ class AppLocalizationsOc extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'L\'autentificacion a fracassat, impossible de recuperar las pròvas';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count de $total pròvas';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count de $total contributors';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count de $total localizacions';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count emplaçaments';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Reaviatz l\'aplicacion per aplicar las modificacions.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfàcia grafica';
+
+  @override
+  String get preferences_app_settings_media_title => 'Mèdias';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratòris de faches alimentaris dobèrts';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Portatz de faches alimentaris dobèrts a vòstra lenga';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Inscrivètz-vos a la version alfa de l\'aplicacion';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Contribucions e donadas de produch';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Mostrar pas Folksonomia';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Ajustat sus $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

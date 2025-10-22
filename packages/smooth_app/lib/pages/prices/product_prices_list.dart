@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:matomo_tracker/matomo_tracker.dart';
 import 'package:openfoodfacts/openfoodfacts.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +27,7 @@ import 'package:smooth_app/resources/app_icons.dart' as icons;
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
 import 'package:smooth_app/themes/theme_provider.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 /// List of the latest prices for a given model.
 class ProductPricesList extends StatefulWidget {
@@ -61,8 +63,8 @@ class _ProductPricesListState extends State<ProductPricesList>
 /// A manager for handling price data with infinite scrolling
 class _InfiniteScrollPriceManager extends InfiniteScrollManager<Price> {
   _InfiniteScrollPriceManager({
-    GetPricesResult? pricesResult,
     required this.model,
+    GetPricesResult? pricesResult,
   }) : super(
          initialItems: pricesResult?.items,
          totalItems: pricesResult?.total,
@@ -167,8 +169,8 @@ class _InfiniteScrollPriceManager extends InfiniteScrollManager<Price> {
       ],
       prefixIcons: <Widget>[
         if (hasCountButton) const icons.PriceTag(),
-        if (hasProof) const Icon(Icons.document_scanner_rounded),
-        const Icon(Icons.account_circle_rounded),
+        if (hasProof) const icons.PriceReceipt(),
+        const icons.Profile(),
         const icons.Shop(),
       ],
       values: <ProductPriceAction>[
@@ -220,6 +222,19 @@ class _InfiniteScrollPriceManager extends InfiniteScrollManager<Price> {
         );
     }
   }
+
+  @override
+  Widget get emptyListIcon => const SvgPicture(
+    AssetBytesLoader('assets/icons/price_receipt_empty.svg.vec'),
+  );
+
+  @override
+  String emptyListTitle(AppLocalizations appLocalizations) =>
+      appLocalizations.prices_list_empty_title;
+
+  @override
+  String emptyListExplanation(AppLocalizations appLocalizations) =>
+      appLocalizations.prices_list_empty_subtitle;
 }
 
 enum ProductPriceAction {

@@ -19,11 +19,11 @@ import 'package:smooth_app/widgets/smooth_tabbar.dart';
 
 class EditLanguageTabBar extends StatefulWidget {
   const EditLanguageTabBar({
-    super.key,
     required this.productEquality,
     required this.productLanguages,
     required this.onTabChanged,
     required this.forceUserLanguage,
+    super.key,
     this.defaultLanguageMissingState = OpenFoodFactsLanguageState.warning,
     this.mainLanguageMissingState = OpenFoodFactsLanguageState.warning,
     this.userLanguageMissingState,
@@ -35,11 +35,11 @@ class EditLanguageTabBar extends StatefulWidget {
   });
 
   const EditLanguageTabBar.noIndicator({
-    super.key,
     required this.productEquality,
     required this.productLanguages,
     required this.onTabChanged,
     required this.forceUserLanguage,
+    super.key,
     this.padding = const EdgeInsetsDirectional.only(start: 55.0),
   }) : defaultLanguageMissingState = OpenFoodFactsLanguageState.normal,
        mainLanguageMissingState = OpenFoodFactsLanguageState.normal,
@@ -133,6 +133,10 @@ class _EditLanguageTabBarState extends State<EditLanguageTabBar>
                       );
                     }
 
+                    final SmoothColorsThemeExtension theme = context
+                        .extension<SmoothColorsThemeExtension>();
+                    final bool lightTheme = context.lightTheme();
+
                     /// We need a Stack to have to tab bar shadow below the button
                     return Stack(
                       children: <Widget>[
@@ -175,6 +179,9 @@ class _EditLanguageTabBarState extends State<EditLanguageTabBar>
                             padding: widget.padding.add(
                               const EdgeInsetsDirectional.only(end: 20.0),
                             ),
+                            overflowMainColor: lightTheme
+                                ? theme.primaryLight
+                                : theme.primaryDark,
                           ),
                         ),
                         const PositionedDirectional(
@@ -249,23 +256,25 @@ class _EditLanguageTabBarAddLanguageButton extends StatelessWidget {
             borderRadius: borderRadius,
             border: Border(
               bottom: BorderSide(
-                color: lightTheme ? theme.primarySemiDark : theme.primaryDark,
+                color: lightTheme ? theme.primaryLight : theme.primaryDark,
                 width: lightTheme ? 1.5 : 2.0,
               ),
             ),
-            color: lightTheme ? theme.primaryBlack : theme.primaryNormal,
+            color: lightTheme ? theme.primaryLight : theme.primaryNormal,
           ),
           child: Material(
             type: MaterialType.transparency,
             child: InkWell(
               borderRadius: borderRadius,
               onTap: () => _addLanguage(context),
-              child: const Padding(
-                padding: EdgeInsetsDirectional.only(
+              child: Padding(
+                padding: const EdgeInsetsDirectional.only(
                   start: LARGE_SPACE,
                   end: MEDIUM_SPACE,
                 ),
-                child: icons.Add(color: Colors.white),
+                child: icons.Add(
+                  color: lightTheme ? Colors.black : Colors.white,
+                ),
               ),
             ),
           ),

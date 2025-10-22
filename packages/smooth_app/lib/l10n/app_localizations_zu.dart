@@ -9,6 +9,9 @@ class AppLocalizationsZu extends AppLocalizations {
   AppLocalizationsZu([String locale = 'zu']) : super(locale);
 
   @override
+  String get app_name => 'Vula Amaqiniso Okudla';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsZu extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -596,7 +592,7 @@ class AppLocalizationsZu extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Skena';
@@ -977,6 +973,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Khetha isigaba esinembe kakhudlwana';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1259,6 +1259,13 @@ class AppLocalizationsZu extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Azikho izakhiwo';
+
+  @override
+  String get product_tags_explanation =>
+      'Ngokungeza izakhiwo (ukhiye/inani) emkhiqizweni, usiza ukuwucebisa.';
 
   @override
   String get add_tag => 'Add property';
@@ -1685,7 +1692,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Susa i-akhawunti yami';
 
   @override
   String get user_profile => 'Account';
@@ -2355,6 +2362,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Finyelela izici zokuhlola namathuluzi okuthuthukisa';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2501,6 +2512,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Vula kuwebhusayithi ye-Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2639,6 +2653,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get prices_list_add_new_price => 'Engeza intengo engu-\nentsha';
 
   @override
+  String get prices_list_empty_title => 'Ayikho intengo okwamanje!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Iba ngowokuqala ukungeza eyodwa:\nNgokuskena **isiliphu** noma **intengo**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Isitolo esingaziwa';
 
   @override
@@ -2648,7 +2669,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Buka zonke izintengo zalo mkhiqizo';
 
   @override
   String get prices_entry_menu_open_proof => 'Buka ubufakazi';
@@ -2727,9 +2748,23 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Akekho umnikeli okwamanje!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Iba ngowokuqala ukungeza intengo!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Asikho isitolo okwamanje!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Iba ngowokuqala ukungeza intengo!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2834,7 +2869,17 @@ class AppLocalizationsZu extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Abukho ubufakazi okwamanje!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Qala ngokungeza isithombe **residi** noma **intengo**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2913,13 +2958,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2931,6 +2970,17 @@ class AppLocalizationsZu extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Setha kabusha ulimi lohlelo lokusebenza';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Engeza amakhadi';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Shintsha phakathi kwe-prices.openfoodfacts.org (PROD) kanye ne-test env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2974,6 +3024,11 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3975,32 +4030,33 @@ class AppLocalizationsZu extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'IGreen-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'IGreen-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'IGreen-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'IGreen-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'IGreen-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'I-Green-Score engaziwa';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'IGreen-Score ayisebenzi';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Ukudla okucutshungulwe kakhulu - amaqembu e-NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4097,9 +4153,6 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4207,11 +4260,283 @@ class AppLocalizationsZu extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Siyini i-Green Score?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'I-Green-Score ilogo ehlose ukukwazisa mayelana **nomthelela wokudla kwemvelo**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Ikhodi yombala iyahlukahluka ukusuka kokuluhlaza okumnyama (**A+**) emikhiqizweni **enomthelela omncane** ukuya kokubomvu okumnyama (**F**) kumikhiqizo **enomthelela omkhulu**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'I-Green-Score logos';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Umongo: Ukuhlolwa komjikelezo wempilo (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Ukuhlolwa kwesayensi kwezigaba zokudla';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Esigabeni ngasinye somkhiqizo, umphumela othi **benchmark** usungulwa kusetshenziswa idatha evela kusizindalwazi sezemvelo se-Agribalyse (eklanywe i-ADEME ne-INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Ukuhlaziywa komjikelezo wempilo** kuyindlela yokuhlola emisiwe yokwenza ukuhlolwa kwemvelo okunezigaba eziningi kanye nemibandela eminingi.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Iyakala:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 izinyathelo zokukhiqiza';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 izinkomba zomthelela kwezemvelo';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Ukushintsha kwesimo sezulu/i-carbon footprint';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 =>
+      'Ukuncipha kwesendlalelo se-ozone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Imisebe ye-ionizing';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Umhlaba';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 =>
+      'Ukusetshenziswa kwamanzi namandla';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ukungcoliswa komoya';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Amanzi olwandle nahlanzekile (izinhlayiya, i-acidification, i-eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Ukuqedwa kwezinsiza.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Amabhonasi nezijeziso';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Ukuze siklomelise imikhiqizo engcono phakathi kwesigaba, sibe sesisebenzisa amabhonasi nezinhlawulo ngokusekelwe kumbandela othile:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ibhonasi inikezwa ngokusekelwe kumsuka wezithako. Le bhonasi ibheka umthelela kwezokuthutha kanye nenqubomgomo yezemvelo yezwe ngalinye lomkhiqizi.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Ukuze ubale kahle i-Green-Score, kuyadingeka ukuthi ube nolwazi olungacaciswanga ngempela emaphaketheni (njengomsuka kanye nephesenti eliqondile lesithako ngasinye) noma olungatholakali ngendlela esebenzisekayo (njengohlu lwazo zonke izingxenye zephakeji ezinezinhlobo eziqondile zamapulasitiki asetshenzisiwe).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Amanani amaphakathi asetshenziswa uma lolu lwazi lungakatholakali, kodwa manje sicela wonke umuntu ukuthi asisize siqoqe lolu lwazi oluzoba usizo kakhulu ku-Green-Score kodwa nakwezinye izinto eziningi.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Izakhamizi zingasiza kanjani';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Zonke izakhamizi zingasisiza ukuthi siqoqe futhi sihlele imininingwane ekhona emikhiqizweni noma engathathwa kuyo, njengolwazi lokupakishwa: I-Mission Emballages: uhlu olubanzi lokuhlanganisa lokupakishwa kwayo yonke imikhiqizo yokudla (ngesiFulentshi)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Abakhiqizi bangasiza kanjani';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Abakhiqizi bangasithumela imininingwane yabo ngokuqondile ngenkundla yethu yamahhala yabakhiqizi.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Imuphi umkhiqizo ongcono emhlabeni?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Kungaba nzima ukusho';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Ukukhetha ukudla okusimeme kungenye yezinto ezinamandla kakhulu esingazenza esimeni sezulu, njengoba **uhlelo lwethu lokudla emhlabeni wonke lunesibopho sokukhipha isisi esingcolisa umoya** ngaphezu kwekota.\n(Umthombo: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Unamandla!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Izindaba ezinhle ukuthi lokhu kusinika indlela enamandla yokudala ushintsho.\n**Ngamunye wethu udla cishe ukudla okuyinkulungwane njalo ngonyaka**. Lokho kungamathuba angu-1,000 **okukhetha ikusasa elingcono leplanethi**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Kuyasiza ukuba nomthwalo wemfanelo nokunquma';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Ukukhetha ukudla okuzinzile kungazwakala kuyinkimbinkimbi. Amalebula ayadida futhi ulwazi ngokuvamile alukho. I-Green-Score yadalelwa ukwenza kube lula, ikunikeza **okucacile**, **okusekelwe kusayensi**, kanye **okungafihli** kwezemvelo isilinganiso semikhiqizo yokudla, khona kanye lapho ukudinga khona: ngenkathi uthenga.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Ukungafihli';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Ngokungafani namalebula obunikazi, ukubala kwe-Green-Score **kuvulwe ngokuphelele** futhi **kungaqinisekiswa yinoma ubani**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Yini i-ultra-processing?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Amaqembu e-NOVA akwazisa ngezinga lokucubungula ukudla.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Ukuhlukaniswa kwe-NOVA kuvumela ukuhlukaniswa kokudla kube **amaqembu angu-4** ngokusekelwe kokuthi **izinga labo lokucutshungulwa kwezimboni** (ukudla okugayiwe kancane noma okungacutshunguliwe, izithako zokupheka, ukudla okugayiwe, ukudla okugayiwe kakhulu).';
+
+  @override
+  String get guide_nova_logos_caption => 'Ama-logo we-NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Amaqembu angu-4 we-NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Kunamaqembu angu-4 e-NOVA, eliyinkinga i-Group 4 - ukudla okucutshungulwe kakhulu.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Ukudla okugayiwe kancane noma okungacutshunguliwe';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ukudla okungacutshungulwayo (noma okungokwemvelo) yizingxenye ezidliwayo zezitshalo (imbewu, izithelo, amaqabunga, iziqu, izimpande) noma izilwane (imisipha, i-offal, amaqanda, ubisi), kanye nesikhunta, ulwelwe, namanzi, ngemva kokuhlukaniswa nemvelo.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Izithako zokupheka ezicutshungulwayo, ezifana namafutha, ibhotela, ushukela, nosawoti, yizinto ezitholakala ekudleni kweQembu 1 noma emvelweni ngezinqubo ezihlanganisa ukucindezela, ukucwenga, ukugaya, ukugaya, nokomisa.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ukudla okugayiwe, okufana nemifino esemabhodleleni, inhlanzi ekheniwe, izithelo kusiraphu, ushizi, nezinkwa ezisanda kwenziwa, ngokuyinhloko kwenziwa ngokufaka usawoti, uwoyela, ushukela, noma ezinye izinto ezivela kuQembu 2 kuya ekudleni kweQembu 1. Izinqubo zihlanganisa izindlela ezihlukahlukene zokulondoloza noma zokupheka, futhi endabeni yezinkwa noshizi, ukuvutshelwa okungenalo utshwala. Ukudla okuningi okugayiwe kunezithako ezimbili noma ezintathu futhi kubonakala njengezinguqulo eziguquliwe zokudla kweQembu 1. Zingadliwa zodwa noma, ngokuvamile, zihlanganiswe nokunye ukudla.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ukudla okugayiwe kakhulu, okufana neziphuzo ezibandayo, ukudla okulula okupakishwe okumnandi noma okumnandi, imikhiqizo yenyama ehlanganiswe kabusha, nezitsha eziqandisiwe ezilungiselelwe kusengaphambili, akukhona nje ukudla okushintshiwe kodwa okwenziwa kakhulu noma ngokuphelele ngezinto ezithathwe ekudleni nasezithasiselweni, nokudla okungaphelele kweQembu 1. Izithako kulokhu kwakheka ngokuvamile zihlanganisa lezo ezitholakala nasekudleni okugayiwe, njengoshukela, amafutha, amafutha, noma usawoti. Kodwa-ke, imikhiqizo ecutshungulwe kakhulu iqukethe eminye imithombo yamandla nemisoco engavamile ukusetshenziselwa ukupheka. Ezinye zazo zikhishwa ngokuqondile ekudleni, njenge-casein, i-lactose, i-whey, ne-gluten.';
+
+  @override
+  String get guide_nova_explanations_title => 'Izinkinga nge-ultra-processing';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ukucubungula ngokwedlulele kwezithako zokudla';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Eziningi zitholakala ekuqhubekiseni phambili ukucubungula kwezakhi zokudla, njengamafutha e-hydrogenated noma anentshisekelo, amaprotheni e-hydrolyzed, i-soy protein isolate, i-maltodextrin, i-invert sugar, nesiraphu yommbila we-fructose ephezulu.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Izithasiselo ezedlula ukuphepha kokudla okumsulwa';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Izithasiselo zokudla okugayiwe kakhulu zihlanganisa okunye okubuye kusetshenziswe ekudleni okugayiwe, njengama-preservatives, ama-antioxidant, nama-stabilizers. Izigaba zezithasiselo ezitholakala kuphela emikhiqizweni esetshenzwe kakhulu zifaka lezo ezisetshenziselwa ukulingisa noma ukuthuthukisa izinzwa zokudla noma ukufihla izici ezingathandeki zomkhiqizo wokugcina. Lezi zithako zihlanganisa odayi neminye imibala, iziqinisi zombala; ama-flavour, ama-flavour enhancers, ama-sweeteners angenawo ushukela; kanye nezinsiza zokucubungula ezifana ne-carbonating, ukuqinisa, i-bulking kanye ne-anti-bulking ejenti, ukususa amagwebu, ama-anti-caking kanye nama-glazing, ama-emulsifiers, ama-sequestrants, nama-humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Ukucubungula awukwazi ukukwenza ekhaya';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Inqwaba yokulandelana kwezinqubo isetshenziswa ukuhlanganisa izithako ngokuvamile eziningi nokudala umkhiqizo wokugcina (okungakho \'kucutshungulwa kakhulu\'). Izinqubo zihlanganisa eziningana ezingenakho okulingana kwasekhaya, njenge-hydrogenation kanye ne-hydrolysation, i-extrusion kanye nokubunjwa, kanye nokucutshungulwa kwangaphambili kokuthosa.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Izici eziyingozi nezezezimali zokucubungula okuphezulu';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Inhloso iyonke yokucubungula okuphezulu ukudala imikhiqizo yokudla ebhalwe uphawu, elula (ehlala isikhathi eside, elungele ukusetshenziswa), ekhangayo (e-hyper-flatable) futhi enenzuzo enkulu (izithako ezingabizi kakhulu) eklanyelwe ukususa wonke amanye amaqembu okudla. Imikhiqizo yokudla okucutshungulwe kakhulu ivamise ukupakishwa ngendlela ekhangayo futhi imakethwe kakhulu.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4524,6 +4849,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ayikho intengo etholakalayo';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Iba ngowokuqala ukufaka isandla!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4562,7 +4894,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Ukukhishwa kuyaqhubeka…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Ukukhipha kuphumelele';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4693,6 +5028,504 @@ class AppLocalizationsZu extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Phatha izintandokazi zakho zezintengo';
+
+  @override
+  String get preferences_card_project => 'Iphrojekthi ye-Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Izibalo zami';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Humusha, thuthukisa amathuluzi ethu…';
+
+  @override
+  String get preferences_connect_title => 'Xhuma';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Xhumana nathi, noma usilandele ezinkundleni zokuxhumana';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Sisize sazise izigidi zabathengi emhlabeni jikelele';
+
+  @override
+  String get preferences_card_help => 'Usizo Nosekelo';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Thola izimpendulo zemibuzo yakho';
+
+  @override
+  String get logged_out => 'Uphumile';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Siyabonga ngokuba ngomunye wamalungu ethu!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Bona zonke izibalo';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Sesha okuthi $provider ukuze uthole \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Sesha isilungiselelo (isb. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Ukufinyeleleka: Bonisa i-emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Ukufinyeleleka: Susa imibala';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Ulwazi lwezomthetho';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Imigomo yokusebenzisa, inqubomgomo yobumfihlo, nokuningi';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'I-Open Food Facts iyisizindalwazi semikhiqizo yokudla **eyenziwe yiwo wonke umuntu, yawo wonke umuntu**.\nUngayisebenzisa ukuze wenze ukukhetha okungcono kakhulu kokudla, futhi njengoba kuyi-**idatha evuliwe**, noma ubani angakwazi **ukuphinda ayisebenzisele noma iyiphi injongo**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Amalayisense';
+
+  @override
+  String get preferences_about_app_title => 'Mayelana nohlelo lokusebenza';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Ulwazi lobuchwepheshe, ulwazi lonjiniyela, nokuningi';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Inombolo yenguqulo';
+
+  @override
+  String get preferences_scanner_title => 'Iskena';
+
+  @override
+  String get preferences_app_store => 'Isitolo sohlelo lokusebenza';
+
+  @override
+  String get preferences_app_system_settings => 'Izilungiselelo zesistimu';
+
+  @override
+  String get preferences_source_code => 'Finyelela ikhodi yomthombo';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Futhi uqale ukwenza umthelela ezigidini';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Amathiphu';
+
+  @override
+  String get tips_discover_nutriscore => 'Zitholele i-Nutri-Score entsha';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Kuwebhusayithi ye-Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Phatha i-akhawunti yami';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Phatha i-akhawunti yakho';
+
+  @override
+  String get preferences_change_password_title => 'Shintsha iphasiwedi yami';
+
+  @override
+  String get preferences_danger_zone => 'Indawo eyingozi';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Yonke iminikelo yakho izolahleka';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Izilungiselelo zohlelo lokusebenza';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Indlela yokuhlola kakhulu yokuskena imikhiqizo ungaxhunyiwe ku-inthanethi';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Vuselela yonke imikhiqizo evela kuseva';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Sicela ukugweme ukwenza lokho ngaphandle uma kunesidingo';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Imodi yedemo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Engeza amakhadi kusikena';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Yengeza imikhiqizo eyisampula emi-3 kusikena';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Umphathi we-Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Umsingathi: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Ukuhlolwa kokufinyeleleka';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Ukukhethwa kwemikhiqizo eminingi ngezintengo';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Amaphaneli olwazi a-ode umsebenzisi';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Ukufinyelela kwesikhashana kusesho lwendawo';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Ukuqhathanisa ngakunye kwemikhiqizo emi-2 noma emi-3';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Ukungenisa kohlu lomkhiqizo';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Izikolo nezindlela';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Thola ukuthi i-Nutri-Score yenziwa kanjani ikhompuyutha';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Thola izinguquko eziyinhloko endleleni yokusebenza';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title => 'Zitholele Open Food Facts';
+
+  @override
+  String get preferences_faq_faq_title => 'I-FAQ - Imibuzo Evame Ukubuzwa';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'I-Open Food Facts NGO';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Thola izibuyekezo zomphakathi';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Hlala unolwazi ngohlelo lokusebenza nezindaba zomphakathi';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Zibandakanye ngokuhambela omunye wemicimbi yethu ebonakalayo';
+
+  @override
+  String get preferences_connect_blog_title => 'Ibhulogi ye-Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Thola izindaba zakamuva, njengoba zenzeka';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Thola usizo emphakathini';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Sisize sithuthukise uhlelo lokusebenza';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Sithumelele ulwazi lokususa iphutha';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Sithumele i-imeyili enemininingwane enemininingwane yokulungisa iphutha';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Sithumele impendulo mayelana nohlelo lokusebenza';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Siza ekulolongeni ikusasa lohlelo lokusebenza';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Thatha inhlolovo yohlelo lokusebenza';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Sisize siqonde okufanele sakhe ngokulandelayo';
+
+  @override
+  String get preferences_connect_professionals_title => 'Ochwepheshe';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Kumahhala ngokuphelele, kuqinisekisa idatha enembile yezinhlelo zokusebenza ezingu-500 nezigidi zabathengi. Ukuzisiza wena, okuhambisana ne-PIM yakho noma amaspredishithi (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Xhumana naye ukuze uqalise';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Thola konke okubalulekile okudingayo embikweni wakho';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Thintana ukuze uthole imibuzo yabezindaba noma usazise ngombiko wakho';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Iba ivolontiya elisebenzayo';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Ukuthuthukiswa, Ukuxhumana, Idizayini… noma yiluphi uhlobo lokuvolontiya noma ubuchwepheshe bamukelekile!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Thola ezinye zezindlela eziningi onganikela ngazo';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Ukuthuthukiswa kohlelo lokusebenza lweselula';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Funda ukuthi unganikela kanjani ekuthuthukisweni kwesoftware';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Izakhiwo zansuku zonke ezingazinzile, izici ezintsha sha';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Khulisa umphakathi wangakini';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Usizo ngesofthiwe, okuqukethwe, ukuhumusha kokuhlaziywa kwezithako';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Silungiselele isifanekiso esincane sokukusiza :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Izinyathelo ezilula zokukhulisa ukubonakala kokudla ezweni lakini';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Joyina ithimba lekhwalithi yedatha';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Joyina umzamo wethu wokuqinisekisa ukuthi isizindalwazi siphelele futhi sinembile';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Imikhiqizo engeziwe';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Imikhiqizo emisha engiyingeze ku-Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Imikhiqizo engidinga ukuyiqeda';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Yonke imikhiqizo engaphelele';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Izintengo zami, ubufakazi bami…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Imikhiqizo ongasiza ukuyiqeda';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Siza ukubala i-Nutri-Score & Green-Score ezweni lakini';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Amanani enginikele ngawo';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Amathegi amanani namarisidi';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Thatha izithombe zamaresidi akho futhi uskene amabhakhodi ahlobene';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Thatha izithombe zamanani esitolo';
+
+  @override
+  String get preferences_prices_newest_title => 'Izintengo ezintsha';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Izintengo zakamuva ezingezwe ngumphakathi we-Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Abanikeli abanamanani amaningi';
+
+  @override
+  String get preferences_prices_metrics_title => 'Vula amamethrikhi Entengo';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Landela ukuvela kwephrojekthi';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Izindlela zokunikela';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Qinisekisa izintengo ezingezwe nguwe noma abanye, ngosizo lwe-AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Engeza ngokushesha amarisidi amaningi noma izithombe zamashalofu kusukela kuroli yekhamera yakho';
+
+  @override
+  String get preferences_prices_challenges_title => 'Izinselele zanyanga zonke';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Bamba iqhaza kuzimfuno zetimu yanyanga zonke ukuze uqoqe izintengo';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Thola futhi idatha yakho yokwethembeka';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Funda indlela yokucela idatha yakho';
+
+  @override
+  String get preferences_page_customize_app_title =>
+      'Enza ngendlela oyifisayo uhlelo lokusebenza';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Faka isandla kuphrojekthi';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Izindlela ezilula zokusiza Ukuvula Amaqiniso Okudla';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Izindlela zokuthola amaphuzu, usizo, nokuningi mayelana nephrojekthi';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Yamukela isiphakamiso';
 
   @override
@@ -4737,4 +5570,103 @@ class AppLocalizationsZu extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Ukuqinisekisa kuhlulekile, ayikwazanga ukulanda ubufakazi';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count of $total ubufakazi';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count kwabanikeli abangu- $total';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count kwezindawo ezingu- $total';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count izindawo';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Sicela uqale kabusha uhlelo lokusebenza ukuze usebenzise izinguquko.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Isixhumi esibonakalayo esibonakalayo';
+
+  @override
+  String get preferences_app_settings_media_title => 'Imidiya';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Vula Amaqiniso Okudla Amalebhu';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Letha Amaqiniso Okudla Okuvulekile olimini lwakho';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Bhalisa kunguqulo ye-alpha yohlelo lokusebenza';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Idatha yeminikelo nemikhiqizo';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Ungabonisi i-Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Kwengezwe kokuthi $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

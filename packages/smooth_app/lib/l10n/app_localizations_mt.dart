@@ -9,6 +9,9 @@ class AppLocalizationsMt extends AppLocalizations {
   AppLocalizationsMt([String locale = 'mt']) : super(locale);
 
   @override
+  String get app_name => 'Fatti dwar l-Ikel Miftuħ';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsMt extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsMt extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Agħżel kategorija aktar preċiża';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'L-ebda proprjetajiet';
+
+  @override
+  String get product_tags_explanation =>
+      'Billi żżid proprjetajiet (ċavetta/valur) ma\' prodott, tgħin biex jarrikkixxih.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Ħassar il-kont tiegħi';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Aċċessa karatteristiċi sperimentali u għodod ta\' żvilupp';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'Iftaħ fuq il-websajt tal-Prezzijiet Miftuħa';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2641,6 +2656,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get prices_list_add_new_price => 'Żid prezz ġdid\n';
 
   @override
+  String get prices_list_empty_title => 'Għad m\'hemm l-ebda prezz!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Kun l-ewwel li żżid waħda:\nBilli tiskennja **riċevuta** jew **tikketta tal-prezz**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Ħanut mhux magħruf';
 
   @override
@@ -2650,7 +2672,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Ara l-prezzijiet kollha għal dan il-prodott';
 
   @override
   String get prices_entry_menu_open_proof => 'Ara l-prova';
@@ -2729,9 +2751,21 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Għad m\'hemm l-ebda kontributur!';
+
+  @override
+  String get prices_users_empty_explanation => 'Kun l-ewwel li żżid prezz!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Għad m\'hemm l-ebda ħanut!';
+
+  @override
+  String get prices_locations_empty_explanation => 'Kun l-ewwel li żżid prezz!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2836,7 +2870,17 @@ class AppLocalizationsMt extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Għad m\'hemm l-ebda prova!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Ibda billi żżid ritratt ta\' **riċevuta** jew **tikketta tal-prezz**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2915,13 +2959,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2933,6 +2971,16 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Irrisettja l-lingwa tal-app';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Żid karti';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Ibdel bejn prices.openfoodfacts.org (PROD) u l-ambjent tat-test';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2976,6 +3024,11 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3977,32 +4030,32 @@ class AppLocalizationsMt extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Punteġġ Aħdar A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score Ċ';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Punteġġ Aħdar E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new => 'Punteġġ Aħdar Mhux Magħruf';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Il-Green-Score mhux applikabbli';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Ikel ultra-proċessat - gruppi NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4099,9 +4152,6 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4209,11 +4259,280 @@ class AppLocalizationsMt extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'X\'inhu l-Punteġġ Aħdar?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Il-Green-Score huwa logo li għandu l-għan li jinfurmak dwar l-**impatt ambjentali tal-ikel**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Il-kodiċi tal-kulur ivarja minn aħdar skur (**A+**) għall-prodotti **bl-inqas impatt** għal aħmar skur (**F**) għall-prodotti **bl-aktar impatt**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Il-logos tal-Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Il-qalba: Valutazzjoni taċ-ċiklu tal-ħajja (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Evalwazzjoni xjentifika tal-kategoriji tal-ikel';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Għal kull kategorija ta\' prodott, jiġi stabbilit punteġġ **ta\' riferiment** bl-użu tad-dejta mid-database ambjentali Agribalyse (iddisinjata mill-ADEME u l-INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      'L-**Analiżi taċ-ċiklu tal-ħajja** hija metodu ta\' valutazzjoni standardizzat għat-twettiq ta\' valutazzjoni ambjentali b\'ħafna stadji u b\'ħafna kriterji.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Ikejjel:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 passi ta\' produzzjoni';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14-il indikatur tal-impatt ambjentali';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Tibdil fil-klima/impronta tal-karbonju';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Tnaqqis tas-saff tal-ożonu';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radjazzjoni jonizzanti';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Art';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Użu tal-ilma u l-enerġija';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Tniġġis tal-arja';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Ilma baħar u ħelu (partiċelli, aċidifikazzjoni, ewtrofikazzjoni)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Tnaqqis tar-riżorsi.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonuses u penali';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Biex nippremjaw prodotti aħjar f\'kategorija, imbagħad napplikaw bonusijiet u penalitajiet ibbażati fuq diversi kriterji:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Jingħata bonus ibbażat fuq l-oriġini tal-ingredjenti. Dan il-bonus iqis l-impatt fuq it-trasport u wkoll il-politika ambjentali tal-pajjiż ta\' kull produttur.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Biex jiġi kkalkulat b\'mod preċiż il-Green-Score, huwa neċessarju li jkun hemm informazzjoni li mhix neċessarjament speċifikata fuq l-imballaġġ (bħall-oriġini u l-perċentwal eżatt ta\' kull ingredjent) jew li rarament tkun disponibbli f\'forma utilizzabbli (bħal lista tal-komponenti kollha tal-imballaġġ bit-tipi preċiżi ta\' plastik użati).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Il-valuri medji jintużaw meta din l-informazzjoni tkun għadha mhix disponibbli, iżda issa qed nappellaw lil kulħadd biex jgħinna niġbru din l-informazzjoni li se tkun utli ħafna għall-Green-Score iżda wkoll għal ħafna użi oħra.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Kif iċ-ċittadini jistgħu jgħinu';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Iċ-ċittadini kollha jistgħu jgħinuna niġbru u nistrutturaw l-informazzjoni li hija preżenti fuq il-prodotti jew li tista\' tiġi dedotta minnhom, bħal informazzjoni dwar l-imballaġġ: Mission Emballages: inventarju kollaborattiv fuq skala kbira tal-imballaġġ għall-prodotti tal-ikel kollha (bil-Franċiż)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Kif il-manifatturi jistgħu jgħinu';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Il-manifatturi jistgħu jibagħtulna l-informazzjoni tagħhom direttament permezz tal-pjattaforma bla ħlas tagħna għall-produtturi.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Liema prodott huwa aħjar għall-pjaneta?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Jista’ jkun diffiċli li tgħid';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'L-għażla ta\' ikel sostenibbli hija waħda mill-aktar affarijiet qawwija li nistgħu nagħmlu għall-klima, peress li **is-sistema globali tal-ikel tagħna hija responsabbli għal aktar minn kwart tal-emissjonijiet kollha ta\' gassijiet serra**.\n(Sors: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Għandek il-poter!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'L-aħbar it-tajba hija li dan jagħtina mod qawwi biex noħolqu l-bidla.\n**Kull wieħed u waħda minna jiekol madwar 1,000 ikla kull sena**. Dawn huma 1,000 opportunità biex **nagħżlu futur aħjar għall-pjaneta**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Jgħin biex tkun responsabbli u tiddeċiedi';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'L-għażla ta\' ikel sostenibbli tista\' tħossha kumplessa. It-tikketti huma konfużi u l-informazzjoni spiss tkun nieqsa. Il-Green-Score inħoloq biex jagħmilha sempliċi, u jagħtik klassifikazzjoni ambjentali **ċara**, **ibbażata fuq ix-xjenza**, u **trasparenti** għall-prodotti tal-ikel, eżatt fejn teħtieġha: waqt li tixtri.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Trasparenza';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'B\'differenza mit-tikketti proprjetarji, il-kalkolu tal-Green-Score huwa **kompletament miftuħ** u jista\' jiġi **verifikat minn kulħadd**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'X\'inhu l-ultra-proċessar?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Il-gruppi NOVA jinfurmawk dwar il-livell tal-ipproċessar tal-ikel.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Il-klassifikazzjoni NOVA tippermetti l-kategorizzazzjoni tal-ikel f\'**4 gruppi** ibbażati fuq il-**grad ta\' pproċessar industrijali** tagħhom (ikel ipproċessat minimament jew mhux ipproċessat, ingredjenti kulinari, ikel ipproċessat, ikel ultra-proċessat).';
+
+  @override
+  String get guide_nova_logos_caption => 'Il-logos tan-NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'L-4 gruppi NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Hemm 4 gruppi NOVA, li l-aktar wieħed problematiku huwa l-Grupp 4 - Ikel ultra-proċessat.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Ikel ipproċessat minimament jew mhux ipproċessat';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ikel mhux ipproċessat (jew naturali) huma l-partijiet li jittieklu tal-pjanti (żerriegħa, frott, weraq, zkuk, għeruq) jew tal-annimali (muskoli, ġewwieni, bajd, ħalib), kif ukoll fungi, alka, u ilma, wara li jiġu separati min-natura.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ingredjenti kulinari pproċessati, bħal żjut, butir, zokkor, u melħ, huma sustanzi derivati minn ikel tal-Grupp 1 jew min-natura permezz ta\' proċessi li jinkludu l-ippressar, ir-raffinar, it-tħin, it-tħin, u t-tnixxif.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ikel ipproċessat, bħal ħaxix fil-fliexken, ħut fil-laned, frott fil-ġulepp, ġobon, u ħobż magħmul frisk, isir primarjament billi jiżdied melħ, żejt, zokkor, jew sustanzi oħra mill-Grupp 2 għall-ikel tal-Grupp 1. Il-proċessi jinkludu diversi metodi ta’ preservazzjoni jew tisjir, u fil-każ tal-ħobż u l-ġobon, fermentazzjoni mhux alkoħolika. Il-biċċa l-kbira tal-ikel ipproċessat għandu żewġ jew tliet ingredjenti u huwa rikonoxxibbli bħala verżjonijiet modifikati tal-ikel tal-Grupp 1. Jistgħu jittieklu waħedhom jew, aktar komunement, flimkien ma’ ikel ieħor.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ikel ultra-proċessat, bħal soft drinks, snacks ippakkjati ħelwin jew mielħa, prodotti tal-laħam rikostitwiti, u platti ffriżati ppreparati minn qabel, mhumiex sempliċement ikel modifikat iżda formulazzjonijiet magħmula l-aktar jew kompletament minn sustanzi derivati minn ikel u addittivi, bi ftit jew xejn ikel intatt tal-Grupp 1. L-ingredjenti f\'dawn il-formulazzjonijiet ġeneralment jinkludu dawk li jinstabu wkoll f\'ikel ipproċessat, bħal zokkor, żjut, xaħmijiet, jew melħ. Madankollu, prodotti ultra-proċessati fihom ukoll sorsi oħra ta\' enerġija u nutrijenti li tipikament ma jintużawx fi preparazzjonijiet kulinari. Xi wħud minn dawn huma estratti direttament mill-ikel, bħal kaseina, lattożju, xorrox, u glutina.';
+
+  @override
+  String get guide_nova_explanations_title => 'Il-problemi bl-ultra-proċessar';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Ipproċessar estrem ta\' ingredjenti tal-ikel';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Ħafna huma derivati minn aktar ipproċessar ta\' kostitwenti tal-ikel, bħal żjut idroġenati jew interesterifikati, proteini idrolizzati, iżolat tal-proteina tas-sojja, maltodextrin, zokkor invertit, u ġulepp tal-qamħirrun b\'fruttożju għoli.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Addittivi li jmorru lil hinn mis-sikurezza pura tal-ikel';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'L-addittivi fl-ikel ultra-proċessat jinkludu wħud li jintużaw ukoll fl-ikel ipproċessat, bħal preservattivi, antiossidanti, u stabilizzaturi. Klassijiet ta\' addittivi li jinstabu biss fi prodotti ultra-proċessati jinkludu dawk użati biex jimitaw jew itejbu l-kwalitajiet sensorji tal-ikel jew biex jaħbu aspetti mhux tajbin għall-palat tal-prodott finali. Dawn l-addittivi jinkludu żebgħa u kuluri oħra, stabilizzaturi tal-kulur; togħmiet, sustanzi li jtejbu t-togħma, sustanzi li jagħtu l-ħlewwa mhux zokkor; u għajnuniet għall-ipproċessar bħal aġenti karbonanti, li jsaħħu, li jżidu l-volum u kontra l-volum, aġenti li jneħħu r-ragħwa, li jtagħqdu u li jleqqu, emulsifikanti, sekwestranti, u umettanti.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Ipproċessar li ma tistax tagħmel id-dar';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Jintużaw għadd kbir ta’ sekwenzi ta’ proċessi biex jingħaqdu l-ingredjenti li ġeneralment ikunu numerużi u biex jinħoloq il-prodott finali (għalhekk \'ultra-proċessat\'). Il-proċessi jinkludu diversi mingħajr ekwivalenti domestiċi, bħall-idroġenazzjoni u l-idroliżi, l-estrużjoni u l-iffurmar, u l-ipproċessar minn qabel għall-qali.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'L-aspetti predatorji u finanzjarji tal-ultra-ipproċessar';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'L-iskop ġenerali tal-ultra-proċessar huwa li jinħolqu prodotti tal-ikel tad-ditta, konvenjenti (durabbli, lesti biex jiġu kkunsmati), attraenti (iper-palatabbli) u profittabbli ħafna (ingredjenti bi prezz baxx) iddisinjati biex jieħdu post il-gruppi tal-ikel l-oħra kollha. Prodotti tal-ikel ultra-proċessati ġeneralment ikunu ppakkjati b\'mod attraenti u kkummerċjalizzati b\'mod intensiv.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4526,6 +4845,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'L-ebda prezz disponibbli';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Kun l-ewwel wieħed li tikkontribwixxi!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4564,7 +4890,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Estrazzjoni għaddejja…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Estrazzjoni b\'suċċess';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4695,6 +5024,506 @@ class AppLocalizationsMt extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Immaniġġja l-preferenzi tal-prezzijiet tiegħek';
+
+  @override
+  String get preferences_card_project => 'Il-proġett Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'L-istatistika tiegħi';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Ittraduċi, ittejjeb l-għodod tagħna…';
+
+  @override
+  String get preferences_connect_title => 'Qabbad';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Ikkuntattjana, jew segwina fuq il-midja soċjali';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Għinna ninfurmaw lil miljuni ta’ konsumaturi madwar id-dinja';
+
+  @override
+  String get preferences_card_help => 'Għajnuna u Appoġġ';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle =>
+      'Ikseb tweġibiet għall-mistoqsijiet tiegħek';
+
+  @override
+  String get logged_out => 'Illoggjat/a';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Grazzi talli int wieħed mill-membri tagħna!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Ara l-istatistika kollha';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Fittex $provider għal \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Fittex għal setting (eż. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Aċċessibbiltà: Uri l-emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Aċċessibbiltà: Neħħi l-kuluri';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Informazzjoni legali';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Termini ta\' użu, politika ta\' privatezza, u aktar';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts hija database ta\' prodotti tal-ikel **magħmula minn kulħadd, għal kulħadd**.\nTista\' tużaha biex tagħmel għażliet aħjar tal-ikel, u peress li hija **dejta miftuħa**, kulħadd jista\' **jerġa\' jużaha għal kwalunkwe skop**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Liċenzji';
+
+  @override
+  String get preferences_about_app_title => 'Dwar l-app';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Informazzjoni teknika, informazzjoni għall-iżviluppaturi, u aktar';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Numru tal-verżjoni';
+
+  @override
+  String get preferences_scanner_title => 'Skaner';
+
+  @override
+  String get preferences_app_store => 'Ħanut tal-app';
+
+  @override
+  String get preferences_app_system_settings => 'Is-settings tas-sistema';
+
+  @override
+  String get preferences_source_code => 'Aċċessa l-kodiċi tas-sors';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'U ibda tagħmel impatt għal miljuni';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Pariri';
+
+  @override
+  String get tips_discover_nutriscore => 'Skopri n-Nutri-Score l-ġdid';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Fuq is-sit elettroniku Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Immaniġġja l-kont tiegħi';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Immaniġġja l-kont tiegħek';
+
+  @override
+  String get preferences_change_password_title => 'Ibdel il-password tiegħi';
+
+  @override
+  String get preferences_danger_zone => 'Żona ta\' periklu';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Il-kontribuzzjonijiet kollha tiegħek se jintilfu';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Is-settings tal-app';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Mod sperimentali ħafna biex tiskennja prodotti offline';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Aġġorna l-prodotti kollha mis-server';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Jekk jogħġbok evita li tagħmel dan sakemm ma jkunx assolutament neċessarju.';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modalità Demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title => 'Żid karti mal-iskaner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Iżżid 3 prodotti kampjun mal-iskaner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Ospitanti tal-folksonomija';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Ospitanti: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Esperimenti dwar l-aċċessibbiltà';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Għażla ta\' prodotti multipli għall-prezzijiet';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Panels tal-għarfien ordnati mill-utent';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Aċċess temporanju għat-tfittxija tal-post';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Paragun ħdejn xulxin għal 2 jew 3 prodotti';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Importazzjoni tal-lista tal-prodotti';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Punteġġi u metodoloġiji';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Skopri kif jiġi kkalkulat in-Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Skopri l-bidliet ewlenin fil-metodoloġija';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Skopri Fatti dwar l-Ikel Miftuħ';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'Mistoqsijiet Frekwenti - Mistoqsijiet Frekwenti';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'L-NGO Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Ikseb aġġornamenti tal-komunità';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Ibqa\' aġġornat bl-aħbarijiet tal-app u tal-komunità';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Involvi ruħek billi tattendi wieħed mill-avvenimenti virtwali tagħna';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Il-blogg tal-Fatti dwar l-Ikel Miftuħ';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Ikseb l-aħħar aħbarijiet, hekk kif jiġru';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Ikseb l-għajnuna mill-komunità';
+
+  @override
+  String get preferences_connect_improve_app_title => 'Għinna ntejbu l-app';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Ibgħatilna informazzjoni dwar id-debug';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Ibgħatilna email b\'informazzjoni dettaljata dwar id-debugging';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Ibgħatilna feedback dwar l-app';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Għin biex tifforma l-futur tal-app';
+
+  @override
+  String get preferences_connect_survey_title => 'Ħu l-istħarriġ tal-app';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Għinna nifhmu x\'għandna nibnu wara';
+
+  @override
+  String get preferences_connect_professionals_title => 'Professjonisti';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Totalment bla ħlas, jiżgura dejta preċiża għal 500 app u miljuni ta\' konsumaturi. Self-service, kompatibbli mal-PIM jew spreadsheets tiegħek (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Ikkuntattjana biex tibda';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Ikseb il-materjal kollu li għandek bżonn għar-rapport tiegħek';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Ikkuntattjana għal mistoqsijiet tal-istampa jew biex tgħarrafna dwar ir-rapport tiegħek';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Issir voluntier attiv';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Żvilupp, Komunikazzjoni, Disinn… kwalunkwe tip ta\' volontarjat jew kompetenza hija milqugħa!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Skopri wħud mill-ħafna modi kif tista\' tikkontribwixxi';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Żvilupp ta\' applikazzjonijiet mobbli';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Tgħallem kif tikkontribwixxi għall-iżvilupp tas-softwer';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Bini instabbli ta\' kuljum, karatteristiċi ġodda fjamanti';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Kabbar il-komunità lokali tiegħek';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Għajnuna bis-softwer, il-kontenut, it-traduzzjonijiet tal-analiżi tal-ingredjenti';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Ħejjejna mudell żgħir biex jgħinek :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Passi sempliċi biex iżżid it-trasparenza tal-ikel f\'pajjiżek';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Ingħaqad mat-tim tal-kwalità tad-dejta';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Ingħaqad mal-isforz tagħna biex niżguraw li d-database tkun kompluta u preċiża';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Prodotti miżjuda';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Prodotti ġodda li żidt ma\' Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Prodotti li għandi bżonn inlesti';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Il-prodotti kollha mhux kompluti';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Il-prezzijiet tiegħi, il-provi tiegħi…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Prodotti li tista\' tgħin biex jitlestew';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Għin fil-kalkolu tan-Nutri-Score u l-Green-Score f\'pajjiżek';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prezzijiet li kkontribwejt';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Tikketti tal-prezzijiet u rċevuti';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Ħu ritratti tar-riċevuti tiegħek u skennja l-barcodes assoċjati';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Ħu ritratti tal-prezzijiet f\'ħanut';
+
+  @override
+  String get preferences_prices_newest_title => 'L-aktar prezzijiet ġodda';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'L-aħħar prezzijiet miżjuda mill-komunità Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Kontributuri bl-aktar prezzijiet';
+
+  @override
+  String get preferences_prices_metrics_title => 'Metriki tal-Prezz Miftuħ';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Segwi l-evoluzzjoni tal-proġett';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Modi kif tikkontribwixxi';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Ikkonferma l-prezzijiet miżjuda minnek innifsek jew minn oħrajn, bl-għajnuna tal-AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Żid malajr ħafna riċevuti jew ritratti ta\' xkafef mir-roll tal-kamera tiegħek';
+
+  @override
+  String get preferences_prices_challenges_title => 'Sfidi ta\' kull xahar';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Ipparteċipa f\'missjonijiet tematiċi ta\' kull xahar biex tiġbor prezzijiet';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Irbaħ lura d-dejta tal-lealtà tiegħek';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Tgħallem kif titlob id-dejta tiegħek';
+
+  @override
+  String get preferences_page_customize_app_title => 'Ippersonalizza l-app';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Ikkontribwixxi għall-proġett';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Modi sempliċi biex tgħin Open Food Facts';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodoloġiji tal-punteġġ, għajnuna, u aktar dwar il-proġett';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Aċċetta s-suġġeriment';
 
   @override
@@ -4739,4 +5568,103 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'L-awtentikazzjoni falliet, ma setgħux jinġabru provi';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ta\' $total provi';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count minn $total kontributuri';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count minn $total postijiet';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count postijiet';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Jekk jogħġbok erġa\' ibda l-app biex tapplika l-bidliet.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfaċċja grafika';
+
+  @override
+  String get preferences_app_settings_media_title => 'Midja';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratorji Miftuħa tal-Fatti dwar l-Ikel';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Ġib il-Fatti Miftuħa dwar l-Ikel fil-lingwa tiegħek';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Irreġistra fil-verżjoni alfa tal-app';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Kontribuzzjonijiet u Dejta tal-Prodott';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Turix Folksonomija';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Miżjud fuq $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

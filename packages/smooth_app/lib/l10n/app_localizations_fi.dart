@@ -9,6 +9,9 @@ class AppLocalizationsFi extends AppLocalizations {
   AppLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
+  String get app_name => 'Avoimet ruokatiedot';
+
+  @override
   String get sep => '';
 
   @override
@@ -326,10 +329,6 @@ class AppLocalizationsFi extends AppLocalizations {
   String get sign_up_page_terms_text => 'käyttö- ja osallistumisehdot';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-fi.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org';
 
   @override
@@ -455,9 +454,6 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Lahjoita Open Food Factsille';
-
-  @override
-  String get contribute_enroll_alpha => 'Rekisteröidy sisäiseen alfaversioon';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -600,7 +596,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get reloaded_with_new_preferences => 'Ladattu uusin asetuksin';
 
   @override
-  String get profile_navbar_label => 'Profiili';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Lue';
@@ -981,6 +977,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get score_add_missing_product_category => 'Lisää puuttuva tuoteluokka';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Valitse tarkempi kategoria';
+
+  @override
   String get score_add_missing_product_countries => 'Lisää valmistusmaa';
 
   @override
@@ -1262,6 +1262,13 @@ class AppLocalizationsFi extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'Tuotteen ominaisuuksia ei löytynyt. Ominaisuuksien avulla voidaan kuvata tuotteita tarkemmin, joustavasti. Lisää napauttamalla.';
+
+  @override
+  String get product_tags_empty => 'Ei ominaisuuksia';
+
+  @override
+  String get product_tags_explanation =>
+      'Lisäämällä tuotteeseen ominaisuuksia (avain/arvo) autat rikastamaan sitä.';
 
   @override
   String get add_tag => 'Lisää omaisuus';
@@ -1687,7 +1694,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get account_delete => 'Poista tunnus';
 
   @override
-  String get account_deletion_subject => 'Poista tunnus';
+  String get account_delete_title => 'Poista tilini';
 
   @override
   String get user_profile => 'Tili';
@@ -2357,6 +2364,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dev_preferences_screen_title => 'Kehittäjätila';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Käytä kokeellisia ominaisuuksia ja kehitystyökaluja';
+
+  @override
   String get dev_preferences_reset_onboarding_title =>
       'Käynnistä perehdytys uudelleen';
 
@@ -2504,6 +2515,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get prices_app_button => 'Siirry Hinnat-sovellukseen';
 
   @override
+  String get prices_website_button => 'Avaa Open Prices -verkkosivustolla';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2643,6 +2657,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get prices_list_add_new_price => 'Lisää\nuusi hinta';
 
   @override
+  String get prices_list_empty_title => 'Ei vielä hintaa!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Lisää ensimmäinen:\nSkannaamalla **kuitin** tai **hintalapun**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Tuntematon kauppa';
 
   @override
@@ -2652,7 +2673,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Näytä kaikki tämän tuotteen hinnat';
 
   @override
   String get prices_entry_menu_open_proof => 'Näytä todiste';
@@ -2730,9 +2751,23 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Ei vielä osallistujaa!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Ole ensimmäinen, joka lisää hinnan!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Parhaat $pageSize avustajat (yhteensä: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ei vielä kauppaa!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Ole ensimmäinen, joka lisää hinnan!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2872,17 @@ class AppLocalizationsFi extends AppLocalizations {
   String get prices_proof_subtitle => 'Todiste';
 
   @override
+  String get prices_proof_empty_title => 'Ei vielä todisteita!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Aloita lisäämällä kuva **kuitista** tai **hintalapusta**!';
+
+  @override
   String get prices_proof_find => 'Valitse todiste';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Kuitti';
@@ -2916,14 +2961,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dev_mode_section_ui => 'Käyttöliittymä';
 
   @override
-  String get dev_mode_section_data => 'Tiedot';
-
-  @override
   String get dev_mode_section_experimental_features =>
       'Kokeelliset ominaisuudet';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Piilota folksonomia';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Piilota Green-Score';
@@ -2934,6 +2973,16 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle => '(Ainesosat ja pakkaus)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Palauta sovelluksen kieli';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Lisää kortteja';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Vaihda prices.openfoodfacts.org (PROD) -sivuston ja testiympäristön välillä';
 
   @override
   String get search_history_item_edit_tooltip =>
@@ -2978,6 +3027,11 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'Minun todisteeni';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3974,31 +4028,33 @@ class AppLocalizationsFi extends AppLocalizations {
       'Nutri-Score ei ole sovellettavissa (Uusi laskukaava)';
 
   @override
-  String get environmental_score_generic => 'Green-Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green-Score A';
+  String get environmental_score_a_new => 'Vihreä pistemäärä A';
 
   @override
-  String get environmental_score_b => 'Green-Score B';
+  String get environmental_score_b_new => 'Vihreä pistemäärä B';
 
   @override
-  String get environmental_score_c => 'Green-Score C';
+  String get environmental_score_c_new => 'Vihreän pistemäärän C';
 
   @override
-  String get environmental_score_d => 'Green-Score D';
+  String get environmental_score_d_new => 'Vihreä pistemäärä D';
 
   @override
-  String get environmental_score_e => 'Green-Score E';
+  String get environmental_score_e_new => 'Vihreä pistemäärä E';
 
   @override
-  String get environmental_score_unknown => 'Tuntematon Green-Score';
+  String get environmental_score_unknown_new => 'Tuntematon vihreä pisteytys';
 
   @override
-  String get environmental_score_not_applicable => 'Green-Score ei sovellu';
+  String get environmental_score_not_applicable_new =>
+      'Green-Score ei ole sovellettavissa';
 
   @override
-  String get nova_group_generic => 'Ultraprosessointi - NOVA-ryhmät';
+  String get nova_group_generic_new =>
+      'Erittäin prosessoidut elintarvikkeet - NOVA-ryhmät';
 
   @override
   String get nova_group_1 => 'NOVA Ryhmä 1';
@@ -4096,9 +4152,6 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Jaa';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title => 'Nutri-Score kehittyy: selityksiä!';
@@ -4204,11 +4257,279 @@ class AppLocalizationsFi extends AppLocalizations {
       'Valmistajille Nutri-Score-näyttö **pysyy valinnaisena**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world-fi.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Mikä on vihreä pisteytys?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score on logo, jonka tarkoituksena on tiedottaa sinulle **ruoan ympäristövaikutuksista**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Värikoodi vaihtelee tummanvihreästä (**A+**) **vähiten vaikuttaville** tuotteille tummanpunaiseen (**F**) **vaikuttavimmille** tuotteille.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Green-Score-logot';
+
+  @override
+  String get guide_greenscore_lca_title => 'Ydin: Elinkaariarviointi (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Elintarvikekategorioiden tieteellinen arviointi';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Kullekin tuotekategorialle määritetään **vertailuarvo** Agribalyse-ympäristötietokannan (ADEME:n ja INRAE:n suunnittelema) tietojen perusteella.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Elinkaarianalyysi** on standardoitu arviointimenetelmä monivaiheisen ja monikriteerisen ympäristöarvioinnin suorittamiseksi.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Se mittaa:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 tuotantovaihetta';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Maatalous';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Jalostus';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Pakkaus';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Kuljetus';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Jakelu';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Kulutus';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 ympäristövaikutusindikaattoria';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Ilmastonmuutos/hiilijalanjälki';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Otsonikerroksen oheneminen';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Ionisoiva säteily';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Maa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Veden ja energian kulutus';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Ilman saastuminen';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Meri- ja makea vesi (hiukkaset, happamoituminen, rehevöityminen)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Resurssien ehtyminen.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Bonukset ja rangaistukset';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Palkitsemaan parempia tuotteita tietyssä kategoriassa käytämme bonuksia ja rangaistuksia useiden kriteerien perusteella:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title => 'Tuotantotapa';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'Bonus myönnetään tuotteille, joilla on virallinen merkki, merkki tai ympäristöhyödyt takaava sertifikaatti (luomu, reilu kauppa, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Ainesosien alkuperä';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Bonus myönnetään ainesosien alkuperän perusteella. Tämä bonus ottaa huomioon kuljetukseen kohdistuvat vaikutukset sekä kunkin tuottajamaan ympäristöpolitiikan.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Uhanalaiset lajit';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'Rangaistus tuomitaan tuotteille, jotka sisältävät ainesosia, joilla on merkittäviä kielteisiä vaikutuksia luonnon monimuotoisuuteen ja ekosysteemeihin, kuten palmuöljy, jonka tuotanto on vastuussa massiivisesta metsäkadosta.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Pakkaus';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'Pakkauksen (kierrätetyn raaka-aineen käyttö ja kierrätettävyys) ja ylipakkauksen kiertokulun huomioon ottamiseksi lasketaan rangaistus.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'Lisääntynyt avoimuuden tarve parantamaan ympäristövaikutusten mittaamista ja vähentämistä';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Green-Score-pistemäärän tarkka laskeminen edellyttää tietoja, joita ei välttämättä ole eritelty pakkauksessa (kuten alkuperä ja kunkin ainesosan tarkka prosenttiosuus) tai joita on harvoin saatavilla käyttökelpoisessa muodossa (kuten luettelo kaikista pakkauksen osista ja käytetyistä muovityypeistä).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Keskiarvoja käytetään, kun tätä tietoa ei ole vielä saatavilla, mutta nyt pyydämme kaikkia auttamaan meitä keräämään tätä tietoa, joka on erittäin hyödyllistä Green-Scoren lisäksi myös monissa muissa tarkoituksissa.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Miten kansalaiset voivat auttaa';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Kaikki kansalaiset voivat auttaa meitä keräämään ja jäsentämään tuotteissa olevia tai niistä johdettavia tietoja, kuten pakkaustietoja: Mission Emballages: laaja yhteistyöhön perustuva pakkauskartoitus kaikille elintarvikkeille (ranskaksi)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Miten valmistajat voivat auttaa';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Valmistajat voivat lähettää meille tietonsa suoraan ilmaisen tuottaja-alustamme kautta.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Kumpi tuote on parempi planeetalle?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Voi olla vaikea sanoa';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Kestävän ruoan valitseminen on yksi tehokkaimmista asioista, joita voimme tehdä ilmaston hyväksi, sillä **maailmanlaajuinen ruokajärjestelmämme on vastuussa yli neljänneksestä kaikista kasvihuonekaasupäästöistä**.\n(Lähde: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Sinulla on valta!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Hyvä uutinen on, että tämä antaa meille tehokkaan tavan luoda muutosta.\n**Jokainen meistä syö noin 1 000 ateriaa vuodessa**. Se on 1 000 mahdollisuutta **valita parempi tulevaisuus planeetalle**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Auttaa olemaan vastuullinen ja tekemään päätöksiä';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Kestävän ruoan valitseminen voi tuntua monimutkaiselta. Etiketit ovat hämmentäviä ja tiedot usein puuttuvat. Green-Score luotiin yksinkertaistamaan valintaa, antaen sinulle **selkeän**, **tieteeseen perustuvan** ja **läpinäkyvän** ympäristöluokituksen elintarvikkeille juuri siellä missä sitä tarvitset: ostoksilla ollessasi.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Läpinäkyvyys';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Toisin kuin omat merkinnät, Green-Score-laskenta on **täysin avoin** ja **kuka tahansa voi tarkistaa sen**.';
+
+  @override
+  String get guide_nova_title => 'Ultrajalostetut ruoat';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'Mitä on ultraprosessointi?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'NOVA-ryhmät kertovat sinulle elintarvikkeiden jalostuksen tasosta.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'NOVA-luokituksen avulla elintarvikkeet voidaan luokitella **neljään ryhmään** niiden **teollisen prosessoinnin asteen** perusteella (minimaalisesti prosessoidut tai prosessoimattomat elintarvikkeet, ruoanlaittoainesosat, prosessoidut elintarvikkeet, erittäin prosessoidut elintarvikkeet).';
+
+  @override
+  String get guide_nova_logos_caption => 'NOVA-logot';
+
+  @override
+  String get guide_nova_groups_title => '4 NOVA-ryhmää';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'NOVA-ryhmiä on neljä, joista ongelmallisin on ryhmä 4 – erittäin prosessoidut elintarvikkeet.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Minimaalisesti prosessoidut tai prosessoimattomat elintarvikkeet';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Käsittelemättömät (tai luonnolliset) elintarvikkeet ovat kasvien (siemenet, hedelmät, lehdet, varret, juuret) tai eläinten (lihakset, sisäelimet, munat, maito) sekä sienten, levien ja veden syötäviä osia sen jälkeen, kun ne on erotettu luonnosta.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Jalostetut ruoanvalmistusaineet';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Jalostetut ruoanlaittoainesosat, kuten öljyt, voi, sokeri ja suola, ovat aineita, jotka on saatu ryhmän 1 elintarvikkeista tai luonnosta puristamalla, puhdistamalla, jauhamalla, jauhamalla ja kuivaamalla.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Jalostetut ruoat';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Jalostetut elintarvikkeet, kuten pullotetut vihannekset, säilykekala, sokeriliemeen säilötyt hedelmät, juustot ja vastaleivotut leivät, valmistetaan pääasiassa lisäämällä suolaa, öljyä, sokeria tai muita aineita ryhmän 2 elintarvikkeista ryhmän 1 elintarvikkeisiin. Prosesseihin kuuluvat erilaiset säilöntä- tai kypsennysmenetelmät ja leipien ja juustojen tapauksessa alkoholiton käyminen. Useimmissa jalostetuissa elintarvikkeissa on kaksi tai kolme ainesosaa, ja ne voidaan tunnistaa ryhmän 1 elintarvikkeiden muunnelluiksi versioiksi. Niitä voidaan syödä sellaisenaan tai yleisemmin yhdessä muiden elintarvikkeiden kanssa.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultrajalostetut ruoat';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Erittäin prosessoidut elintarvikkeet, kuten virvoitusjuomat, makeat tai suolaiset pakatut välipalat, uudelleenkäsitellyt lihatuotteet ja valmiiksi valmistetut pakasteruoat, eivät ole pelkästään muunneltuja elintarvikkeita, vaan koostumuksia, jotka on valmistettu enimmäkseen tai kokonaan elintarvikkeista ja lisäaineista peräisin olevista aineista, joissa on vain vähän tai ei lainkaan ehjiä ryhmän 1 elintarvikkeita. Näiden koostumusten ainesosat sisältävät yleensä ainesosia, joita löytyy myös prosessoiduista elintarvikkeista, kuten sokereita, öljyjä, rasvoja tai suolaa. Erittäin prosessoidut tuotteet sisältävät kuitenkin myös muita energian ja ravintoaineiden lähteitä, joita ei tyypillisesti käytetä ruoanlaitossa. Jotkut näistä uutetaan suoraan elintarvikkeista, kuten kaseiini, laktoosi, hera ja gluteeni.';
+
+  @override
+  String get guide_nova_explanations_title => 'Ultraprosessoinnin ongelmat';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Elintarvikkeiden ainesosien äärimmäinen käsittely';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Monet ovat peräisin elintarvikkeiden ainesosien jatkojalostuksesta, kuten hydratut tai vaihtoesteröidyt öljyt, hydrolysoidut proteiinit, soijaproteiini-isolaatit, maltodekstriini, inverttisokeri ja runsasfruktoosinen maissisiirappi.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Lisäaineet, jotka ylittävät pelkän elintarviketurvallisuuden rajat';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Erittäin jalostettujen elintarvikkeiden lisäaineisiin kuuluu joitakin sellaisia, joita käytetään myös jalostetuissa elintarvikkeissa, kuten säilöntäaineita, antioksidantteja ja stabilointiaineita. Vain erittäin jalostetuissa tuotteissa esiintyviin lisäaineisiin kuuluvat sellaiset, joita käytetään jäljittelemään tai parantamaan elintarvikkeiden aistinvaraisia ominaisuuksia tai peittämään lopputuotteen epämiellyttäviä puolia. Näitä lisäaineita ovat väriaineet ja muut väriaineet, värinvakauttajat, aromit, arominvahventeet, sokerittomat makeutusaineet; ja valmistuksen apuaineet, kuten hiilihapotus-, kiinteyttämis-, täyte- ja paakkuuntumisenestoaineet, vaahdonestoaineet, paakkuuntumisenestoaineet ja kiillotusaineet, emulgointiaineet, kompleksointiaineet ja kosteudensäilyttäjät.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Käsittelyä, jota ei voi tehdä kotona';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Useita prosessisarjoja käytetään yhdistämään tavallisesti monia ainesosia ja luomaan lopputuote (tästä syystä \'ultraprosessoitu\'). Prosesseihin kuuluu useita, joille ei ole kotimaisia vastineita, kuten hydraus ja hydrolysointi, ekstruusio ja muovaus sekä esikäsittely paistamista varten.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ultraprosessoinnin saalistushinnoittelu ja taloudelliset näkökohdat';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ultraprosessoinnin yleisenä tarkoituksena on luoda brändättyjä, käteviä (kestäviä, valmiita kuluttamaan), houkuttelevia (hypermaukkaita) ja erittäin kannattavia (edullisia ainesosia) elintarvikkeita, joiden on tarkoitus syrjäyttää kaikki muut elintarvikeryhmät. Ultraprosessoidut elintarvikkeet pakataan yleensä houkuttelevasti ja niitä markkinoidaan intensiivisesti.';
 
   @override
   String get preview_badge => 'Esikatselu';
@@ -4521,6 +4842,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ei hintaa saatavilla';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Ole ensimmäinen osallistuja!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4559,7 +4887,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Uutto käynnissä…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Uutto onnistui';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4690,6 +5021,499 @@ class AppLocalizationsFi extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Todiste';
 
   @override
+  String get preferences_card_general => 'Yleiset';
+
+  @override
+  String get preferences_prices_title => 'Hinnat';
+
+  @override
+  String get preferences_prices_subtitle => 'Hallinnoi hinta-asetuksiasi';
+
+  @override
+  String get preferences_card_project => 'Avoimet ruokatiedot -projekti';
+
+  @override
+  String get preferences_contribute_title => 'Osallistu';
+
+  @override
+  String get preferences_my_contributions_title => 'Osallistumiseni';
+
+  @override
+  String get preferences_my_stats_title => 'Tilastoni';
+
+  @override
+  String get preferences_contribute_subtitle => 'Käännä, paranna työkalujamme…';
+
+  @override
+  String get preferences_connect_title => 'Yhdistä';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Ota yhteyttä tai seuraa meitä sosiaalisessa mediassa';
+
+  @override
+  String get preferences_support_title => 'Tee lahjoitus';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Auta meitä tiedottamaan miljoonille kuluttajille ympäri maailmaa';
+
+  @override
+  String get preferences_card_help => 'Ohje ja tuki';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Hanki vastauksia kysymyksiisi';
+
+  @override
+  String get logged_out => 'Kirjauduttu ulos';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Kiitos, että olet yksi jäsenistämme!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Tuotteita muokattu';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Katso kaikki tilastot';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Hae $provider hakusanalla \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Hae asetusta (esim. Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Esteettömyys: Näytä emojit';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Esteettömyys: Poista värit';
+
+  @override
+  String get preferences_app_settings_products => 'Tuotteet';
+
+  @override
+  String get preferences_card_about => 'Tietoja';
+
+  @override
+  String get preferences_legal_information_title => 'Lakitiedot';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Käyttöehdot, tietosuojakäytäntö ja muuta';
+
+  @override
+  String get preferences_terms_of_use => 'Käyttöehdot';
+
+  @override
+  String get preferences_legal_mentions => 'Oikeudelliset huomautukset';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts on elintarviketuotetietokanta, **jonka kaikki ovat tehneet kaikille**.\nVoit käyttää sitä parempien ruokavalintojen tekemiseen, ja koska se on **avointa dataa**, kuka tahansa voi **käyttää sitä uudelleen mihin tahansa tarkoitukseen**.';
+
+  @override
+  String get preferences_privacy_policy => 'Tietosuojakäytäntö';
+
+  @override
+  String get preferences_licenses => 'Lisenssit';
+
+  @override
+  String get preferences_about_app_title => 'Tietoja sovelluksesta';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Teknisiä tietoja, kehittäjätietoja ja muuta';
+
+  @override
+  String get preferences_card_information => 'Tietoja';
+
+  @override
+  String get preferences_version_number_title => 'Versionumero';
+
+  @override
+  String get preferences_scanner_title => 'Skanneri';
+
+  @override
+  String get preferences_app_store => 'Sovelluskauppa';
+
+  @override
+  String get preferences_app_system_settings => 'Järjestelmäasetukset';
+
+  @override
+  String get preferences_source_code => 'Käytä lähdekoodia';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Ja ala vaikuttaa miljoonien ihmisten elämään';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Kerro koko maailmalle';
+
+  @override
+  String get preferences_tips => 'Vinkkejä';
+
+  @override
+  String get tips_discover_nutriscore => 'Tutustu uuteen Nutri-Scoreen';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Open Food Facts -verkkosivustolla';
+
+  @override
+  String get preferences_manage_account_title => 'Hallinnoi tiliäni';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Hallinnoi tiliäsi';
+
+  @override
+  String get preferences_change_password_title => 'Vaihda salasanani';
+
+  @override
+  String get preferences_danger_zone => 'Vaara-alue';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Kaikki panoksesi menetetään';
+
+  @override
+  String get preferences_contributions_title => 'Osallistumiset';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Sovellusasetukset';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Hyvin kokeellinen tapa skannata tuotteita offline-tilassa';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Päivitä kaikki tuotteet palvelimelta';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Vältä tekemästä sitä, ellei se ole ehdottoman välttämätöntä';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Demotila';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Lisää kortteja skanneriin';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Lisää skanneriin 3 näytetuotetta';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'Folksonomy-isäntä';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Isäntä: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Esteettömyyskokeilut';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Useiden tuotteiden valikoima hintojen mukaan';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Käyttäjän järjestämät tietopaneelit';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Tilapäinen pääsy sijaintihakuun';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Kahden tai kolmen tuotteen rinnakkaisvertailu';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Tuotelistan tuonti';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Pisteet ja menetelmät';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Tutustu Nutri-Scoren laskemiseen';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Tutustu metodologian tärkeimpiin muutoksiin';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Tutustu hankkeeseen';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Tutustu avoimiin ruokatietoihin';
+
+  @override
+  String get preferences_faq_faq_title => 'Usein kysytyt kysymykset';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'Open Food Facts -kansalaisjärjestö';
+
+  @override
+  String get preferences_about_information_title => 'Tietoja';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Hanki yhteisön päivityksiä';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Pysy ajan tasalla sovelluksen ja yhteisön uutisten avulla';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Osallistu johonkin virtuaalitapahtumiimme';
+
+  @override
+  String get preferences_connect_blog_title => 'Open Food Facts -blogi';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Saat uusimmat uutiset heti niiden tapahtuessa';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Hanki apua yhteisöltä';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Auta meitä parantamaan sovellusta';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Lähetä meille virheenkorjaustiedot';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Lähetä meille sähköpostia, jossa on yksityiskohtaiset virheenkorjaustiedot';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Lähetä meille palautetta sovelluksesta';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Auta muokkaamaan sovelluksen tulevaisuutta';
+
+  @override
+  String get preferences_connect_survey_title => 'Osallistu sovelluskyselyyn';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Auta meitä ymmärtämään, mitä meidän pitäisi rakentaa seuraavaksi';
+
+  @override
+  String get preferences_connect_professionals_title => 'ammattilaiset';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Täysin ilmainen, varmistaa tarkat tiedot 500 sovelluksesta ja miljoonilta kuluttajilta. Itsepalvelu, yhteensopiva PIM- tai laskentataulukoiden (XLSX) kanssa.';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Ota yhteyttä aloittaaksesi';
+
+  @override
+  String get preferences_connect_press_title => 'Lehdistö';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Hanki kaikki tarvitsemasi materiaali raporttiasi varten';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Ota yhteyttä lehdistötiedusteluja varten tai kertoaksesi meille raportistasi';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Ryhdy aktiiviseksi vapaaehtoiseksi';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Kehitys, viestintä, suunnittelu… Kaikenlainen vapaaehtoistyö tai asiantuntemus on tervetullutta!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Tutustu moniin tapoihin, joilla voit osallistua';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Mobiilisovellusten kehitys';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Opi osallistumaan ohjelmistokehitykseen';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Päivittäiset epävakaat koontiversiot, upouudet ominaisuudet';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Kasvata paikallisyhteisöäsi';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Apua ohjelmistojen, sisällön ja ainesosa-analyysien käännösten kanssa';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Olemme laatineet pienen mallin avuksesi :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Yksinkertaisia toimenpiteitä ruoan läpinäkyvyyden lisäämiseksi maassasi';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Liity datan laatutiimiin';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Liity mukaan varmistamaan tietokannan täydellisyys ja tarkkuus';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Lisätyt tuotteet';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Uusia tuotteita, jotka lisäsin Open Food Factsiin';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Tuotteet, jotka minun on saatava valmiiksi';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Kaikki keskeneräiset tuotteet';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Hinnat';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'Minun hinnat';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Hintani, todisteeni…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Tuotteet, joiden valmistumisessa voit auttaa';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Auta laskemaan Nutri-Score- ja Green-Score-pisteet maassasi';
+
+  @override
+  String get preferences_prices_user_prices_subtitle => 'Hinnat, jotka annan';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Hintalaput ja kuitit';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Ota kuvia kuiteistasi ja skannaa niihin liittyvät viivakoodit';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Ota kuvia hinnoista kaupassa';
+
+  @override
+  String get preferences_prices_newest_title => 'Uusimmat hinnat';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Open Prices -yhteisön lisäämät uusimmat hinnat';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Eniten hintoja saaneet avustajat';
+
+  @override
+  String get preferences_prices_metrics_title => 'Avaa hintamittarit';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Seuraa projektin etenemistä';
+
+  @override
+  String get preferences_prices_ways_contribute_title => 'Tapoja osallistua';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Vahvista itse tai muiden lisäämät hinnat tekoälyn avulla';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Lisää nopeasti useita kuitteja tai hyllykuvia kamerarullasta';
+
+  @override
+  String get preferences_prices_challenges_title => 'Kuukausittaiset haasteet';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Osallistu kuukausittaisiin teematehtäviin kerätäksesi hintoja';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Palauta kanta-asiakastietosi';
+
+  @override
+  String get preferences_prices_gdpr_subtitle => 'Opi pyytämään tietojasi';
+
+  @override
+  String get preferences_page_customize_app_title => 'Mukauta sovellusta';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Osallistu projektiin';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Yksinkertaisia tapoja auttaa Open Food Factsissa';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Pisteytysmenetelmät, ohjeet ja muuta projektista';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Hyväksy ehdotus';
 
   @override
@@ -4734,4 +5558,102 @@ class AppLocalizationsFi extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Todennus epäonnistui, todisteiden nouto epäonnistui';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count / $total todistusta';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count todisteita';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count / $total osallistujaa';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count avustajia';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count / $total sijainnista';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count sijaintia';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Käynnistä sovellus uudelleen, jotta muutokset tulevat voimaan.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Graafinen käyttöliittymä';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Kehitys';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Avoimet ruokatietolaboratoriot';
+
+  @override
+  String get preferences_root_account_title => 'Tili';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Tuo avoimet ruokatiedot omalle kielellesi';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Rekisteröidy sovelluksen alfa-versioon';
+
+  @override
+  String get preferences_dev_mode_section_data => 'Lisäykset ja tuotetiedot';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Älä näytä Folksonomiaa';
+
+  @override
+  String get preferences_account_title => 'Tili';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Lisätty $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

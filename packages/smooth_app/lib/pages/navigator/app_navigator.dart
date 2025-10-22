@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:openfoodfacts/openfoodfacts.dart';
@@ -8,7 +7,9 @@ import 'package:provider/provider.dart';
 import 'package:smooth_app/data_models/news_feed/newsfeed_provider.dart';
 import 'package:smooth_app/data_models/preferences/user_preferences.dart';
 import 'package:smooth_app/data_models/product_preferences.dart';
+import 'package:smooth_app/generic_lib/widgets/smooth_back_button.dart';
 import 'package:smooth_app/helpers/analytics_helper.dart';
+import 'package:smooth_app/pages/guides/guide/guide_green_score.dart';
 import 'package:smooth_app/pages/guides/guide/guide_nutriscore_v2.dart';
 import 'package:smooth_app/pages/navigator/error_page.dart';
 import 'package:smooth_app/pages/navigator/external_page.dart';
@@ -42,9 +43,9 @@ import 'package:smooth_app/widgets/text/text_extensions.dart';
 /// /!\ [GoRouter] doesn't support [maybePop] or returning a result from a push.
 class AppNavigator extends InheritedWidget {
   AppNavigator({
+    required super.child,
     super.key,
     List<NavigatorObserver>? observers,
-    required super.child,
   }) : _router = _SmoothGoRouter(observers: observers);
 
   // GoRouter is never accessible directly
@@ -153,7 +154,7 @@ class _SmoothGoRouter {
                   withHeroAnimation:
                       state.uri.queryParameters['heroAnimation'] != 'false',
                   heroTag: state.uri.queryParameters['heroTag'],
-                  backButton: ProductPageBackButton.byName(
+                  backButton: BackButtonType.byName(
                     state.uri.queryParameters['backButtonType'],
                   ),
                 );
@@ -212,18 +213,12 @@ class _SmoothGoRouter {
             ),
             GoRoute(
               path: '${_InternalAppRoutes.PREFERENCES_PAGE}/:preferenceType',
-              builder: (BuildContext context, GoRouterState state) {
-                final String? type = state.pathParameters['preferenceType'];
-
-                final PreferencePageType? pageType = PreferencePageType.values
-                    .firstWhereOrNull((PreferencePageType e) => e.name == type);
-
-                if (pageType == null) {
-                  throw Exception('Unsupported preference page type: $type');
-                }
-
-                return UserPreferencesPage(type: pageType);
-              },
+              builder: (BuildContext context, GoRouterState state) =>
+                  UserPreferencesPage(
+                    type: PreferencePageType.fromTag(
+                      state.pathParameters['preferenceType'],
+                    ),
+                  ),
             ),
             GoRoute(
               path: _InternalAppRoutes.SEARCH_PAGE,
@@ -239,13 +234,25 @@ class _SmoothGoRouter {
               path: _InternalAppRoutes._GUIDES,
               routes: <GoRoute>[
                 GoRoute(
-                  path: _InternalAppRoutes.GUIDE_NUTRISCORE_V2_PAGE,
+                  path: _InternalAppRoutes.GUIDE_GREEN_SCORE_PAGE,
                   builder: (_, _) => const GuideNutriscoreV2(),
+                ),
+                GoRoute(
+                  path: _InternalAppRoutes.GUIDE_NOVA_PAGE,
+                  builder: (_, _) => const GuideGreenScore(),
+                ),
+                GoRoute(
+                  path: _InternalAppRoutes.GUIDE_NUTRISCORE_V2_PAGE,
+                  builder: (_, _) => const GuideGreenScore(),
                 ),
               ],
               redirect: (_, GoRouterState state) {
                 if (state.uri.pathSegments.last !=
-                    _InternalAppRoutes.GUIDE_NUTRISCORE_V2_PAGE) {
+                        _InternalAppRoutes.GUIDE_NUTRISCORE_V2_PAGE ||
+                    state.uri.pathSegments.last !=
+                        _InternalAppRoutes.GUIDE_NOVA_PAGE ||
+                    state.uri.pathSegments.last !=
+                        _InternalAppRoutes.GUIDE_GREEN_SCORE_PAGE) {
                   return AppRoutes.EXTERNAL(state.path ?? '');
                 } else {
                   return null;
@@ -325,6 +332,10 @@ class _SmoothGoRouter {
             }
           } else if (path == _ExternalRoutes.MOBILE_APP_DOWNLOAD) {
             return AppRoutes.HOME();
+          } else if (path == _ExternalRoutes.GUIDE_GREEN_SCORE) {
+            return AppRoutes.GUIDE_GREEN_SCORE;
+          } else if (path == _ExternalRoutes.GUIDE_NOVA_SCORE) {
+            return AppRoutes.GUIDE_NOVA;
           } else if (path == _ExternalRoutes.GUIDE_NUTRISCORE_V2) {
             return AppRoutes.GUIDE_NUTRISCORE_V2;
           } else if (path == _ExternalRoutes.SIGNUP) {
@@ -438,12 +449,16 @@ class _InternalAppRoutes {
   static const String SIGNUP_PAGE = '_signup';
 
   static const String _GUIDES = '_guides';
+  static const String GUIDE_GREEN_SCORE_PAGE = '_green-score';
+  static const String GUIDE_NOVA_PAGE = '_nova-score';
   static const String GUIDE_NUTRISCORE_V2_PAGE = '_nutriscore-v2';
 }
 
 class _ExternalRoutes {
   static const String MOBILE_APP_DOWNLOAD = '/open-food-facts-mobile-app';
   static const String PRODUCT_EDITION = '/cgi/product.pl';
+  static const String GUIDE_GREEN_SCORE = '/green-score';
+  static const String GUIDE_NOVA_SCORE = '/nova';
   static const String GUIDE_NUTRISCORE_V2 = '/nutriscore-v2';
   static const String SIGNUP = '/signup';
 }
@@ -463,7 +478,7 @@ class AppRoutes {
     String barcode, {
     bool useHeroAnimation = true,
     String? heroTag = '',
-    ProductPageBackButton? backButtonType,
+    BackButtonType? backButtonType,
     ProductPageTransition? transition = ProductPageTransition.standard,
   }) =>
       '/${_InternalAppRoutes.PRODUCT_DETAILS_PAGE}/$barcode'
@@ -486,12 +501,20 @@ class AppRoutes {
 
   // App preferences
   static String PREFERENCES(PreferencePageType type) =>
-      '/${_InternalAppRoutes.PREFERENCES_PAGE}/${type.name}';
+      '/${_InternalAppRoutes.PREFERENCES_PAGE}/${type.tag}';
 
   // Search view
   static String get SEARCH => '/${_InternalAppRoutes.SEARCH_PAGE}';
 
-  // Guide for NutriScore (TODO: If we have more guides, we should use a more generic algorithm)
+  // Guide for Green-Score
+  static String get GUIDE_GREEN_SCORE =>
+      '/${_InternalAppRoutes._GUIDES}/${_InternalAppRoutes.GUIDE_GREEN_SCORE_PAGE}';
+
+  // Guide for Nova
+  static String get GUIDE_NOVA =>
+      '/${_InternalAppRoutes._GUIDES}/${_InternalAppRoutes.GUIDE_NOVA_PAGE}';
+
+  // Guide for NutriScore
   static String get GUIDE_NUTRISCORE_V2 =>
       '/${_InternalAppRoutes._GUIDES}/${_InternalAppRoutes.GUIDE_NUTRISCORE_V2_PAGE}';
 

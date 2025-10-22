@@ -9,6 +9,9 @@ class AppLocalizationsCo extends AppLocalizations {
   AppLocalizationsCo([String locale = 'co']) : super(locale);
 
   @override
+  String get app_name => 'Fatti nantu à l\'alimentazione aperta';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsCo extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsCo extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Sceglite una categuria più precisa';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Nisuna pruprietà';
+
+  @override
+  String get product_tags_explanation =>
+      'Aghjunghjendu pruprietà (chjave/valore) à un pruduttu, aiutate à arricchillu.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Sguassà u mo contu';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Accede à e funzioni sperimentali è à l\'arnesi di sviluppu';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,9 @@ class AppLocalizationsCo extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Apertu nant\'à u situ web Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2642,6 +2656,13 @@ class AppLocalizationsCo extends AppLocalizations {
   String get prices_list_add_new_price => 'Aghjunghje un novu prezzu\n';
 
   @override
+  String get prices_list_empty_title => 'Ancora nisun prezzu!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Siate u primu à aghjunghjene unu:\nScannendu una **ricevuta** o un **prezzu**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Negoziu scunnisciutu';
 
   @override
@@ -2651,7 +2672,7 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Vede tutti i prezzi per questu pruduttu';
 
   @override
   String get prices_entry_menu_open_proof => 'Vede a prova';
@@ -2730,9 +2751,23 @@ class AppLocalizationsCo extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Nisun cuntributore ancu!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Siate u primu à aghjunghje un prezzu!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ancora nisuna buttega!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Siate u primu à aghjunghje un prezzu!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2837,7 +2872,17 @@ class AppLocalizationsCo extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Nisuna prova ancu!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Cuminciate aghjunghjendu una foto di una **ricevuta** o di un **prezzu**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2916,13 +2961,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2934,6 +2973,17 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Resettate a lingua di l\'app';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Aghjunghje carte';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Cambià trà prices.openfoodfacts.org (PROD) è l\'ambiente di prova';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2977,6 +3027,11 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3978,32 +4033,34 @@ class AppLocalizationsCo extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Green-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Green-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Green-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Green-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Green-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new =>
+      'Puntuazione Verde Scunnisciuta';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'U puntu verde ùn hè micca applicabile';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Alimenti ultra-trasfurmati - gruppi NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4100,9 +4157,6 @@ class AppLocalizationsCo extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4210,11 +4264,283 @@ class AppLocalizationsCo extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Chì ghjè u Puntu Verde?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'U Green-Score hè un logu chì hà per scopu d\'informà vi nantu à l\'impattu ambientale di l\'alimentu.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'U codice di culore varieghja da u verde scuru (**A+**) per i prudutti **menu impattanti** à u rossu scuru (**F**) per i prudutti **più impattanti**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'I loghi di Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'U core: Valutazione di u ciclu di vita (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Una valutazione scientifica di e categurie alimentarie';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Per ogni categuria di prudutti, un puntuatu di **riferimentu** hè stabilitu aduprendu i dati di a basa di dati ambientale Agribalyse (cuncipita da ADEME è INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      'L\'analisi di u ciclu di vita hè un metudu di valutazione standardizatu per realizà una valutazione ambientale multi-stadio è multi-criteriu.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Misura:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 tappe di pruduzzione';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      '14 indicatori d\'impattu ambientale';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Cambiamentu climaticu / impronta di carbone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 =>
+      'Deplezione di u stratu d\'ozonu';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Radiazioni ionizzanti';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Terra';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Cunsumu d\'acqua è d\'energia';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Inquinamentu di l\'aria';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Acqua marina è dolce (particelle, acidificazione, eutrofizazione)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Esaurimentu di e risorse.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title => 'Bonus è penalità';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Per ricumpensà i prudutti megliu in una categuria, applichemu bonus è penalità basati annantu à parechji criteri:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Un bonus hè attribuitu secondu l\'origine di l\'ingredienti. Stu bonus tene contu di l\'impattu nant\'à u trasportu è ancu di a pulitica ambientale di u paese di ogni pruduttore.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Per calculà currettamente u Green-Score, hè necessariu avè infurmazioni chì ùn sò micca necessariamente specificate nantu à l\'imballu (cum\'è l\'origine è a percentuale esatta di ogni ingrediente) o chì sò raramente dispunibili in forma utilizabile (cum\'è una lista di tutti i cumpunenti di l\'imballu cù i tipi precisi di plastiche aduprate).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'I valori medi sò aduprati quandu sta infurmazione ùn hè ancu dispunibile, ma avà facemu un appellu à tutti per aiutà ci à raccoglie sta infurmazione chì serà assai utile per u Green-Score ma ancu per parechji altri usi.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Cumu i citadini ponu aiutà';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Tutti i citadini ci ponu aiutà à raccoglie è strutturà l\'infurmazioni prisenti nantu à i prudutti o chì si ponu deduce da elli, cum\'è l\'infurmazioni nantu à l\'imballaggi: Mission Emballages: un inventariu collaborativu à grande scala di l\'imballaggi per tutti i prudutti alimentari (in francese)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Cumu i pruduttori ponu aiutà';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'I pruduttori ponu mandà ci e so informazioni direttamente per mezu di a nostra piattaforma gratuita per i pruduttori.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Chì pruduttu hè megliu per u pianeta?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Pò esse difficiule à dì';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Sceglie un alimentu sustenibile hè una di e cose più putenti chì pudemu fà per u clima, postu chì **u nostru sistema alimentariu mundiale hè rispunsevule di più di un quartu di tutte l\'emissioni di gas serra**.\n(Fonte: Poore & Nemecek, Science, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Avete u putere!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'A bona nutizia hè chì questu ci dà un modu putente per creà u cambiamentu.\n**Ognunu di noi manghja circa 1.000 pasti ogni annu**. Sò 1.000 opportunità per **sceglie un avvene megliu per u pianeta**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Aiuta à esse rispunsevule è à decide';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Sceglie un alimentu sustenibile pò sembrà cumplessu. L\'etichette sò cunfuse è l\'infurmazioni sò spessu mancanti. U Green-Score hè statu creatu per simplificà e cose, dendu vi una valutazione ambientale **chjara**, **basata nantu à a scienza** è **trasparente** per i prudutti alimentari, ghjustu induve ne avete bisognu: mentre fate a spesa.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Trasparenza';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'À u cuntrariu di l\'etichette pruprietarie, u calculu di u Green-Score hè **cumpletamente apertu** è pò esse **verificatu da qualchissia**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      'Chì ghjè l\'ultra-processamentu?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'I gruppi NOVA vi informanu nantu à u livellu di trasfurmazione alimentaria.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'A classificazione NOVA permette a categurizazione di l\'alimenti in **4 gruppi** secondu u so **gradu di trasfurmazione industriale** (alimenti minimamente trasfurmati o micca trasfurmati, ingredienti culinarii, alimenti trasfurmati, alimenti ultra-trasfurmati).';
+
+  @override
+  String get guide_nova_logos_caption => 'I loghi di NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'I 4 gruppi NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Ci sò 4 gruppi NOVA, quellu problematicu essendu u Gruppu 4 - Alimenti ultra-trasfurmati.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Alimenti minimamente trasfurmati o micca trasfurmati';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'L\'alimenti micca trasfurmati (o naturali) sò e parti comestibili di e piante (semi, frutti, foglie, steli, radiche) o di l\'animali (musculi, frattaglie, ova, latte), è ancu i funghi, l\'alghe è l\'acqua, dopu esse stati separati da a natura.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'L\'ingredienti culinarii trasfurmati, cum\'è l\'olii, u burru, u zuccheru è u sale, sò sustanze derivate da alimenti di u Gruppu 1 o da a natura per mezu di prucessi chì includenu a pressatura, a raffinazione, a macinazione, a fresatura è l\'asciugatura.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'L\'alimenti trasfurmati, cum\'è i ligumi in buttiglia, u pesciu in scatula, a frutta in sciroppu, i casgi è i pani appena fatti, sò principalmente fatti aghjunghjendu sale, oliu, zuccheru o altre sustanze da l\'alimenti di u Gruppu 2 à l\'alimenti di u Gruppu 1. I prucessi includenu diversi metudi di cunservazione o di cottura, è in u casu di pani è casgi, a fermentazione senza alcolu. A maiò parte di l\'alimenti trasfurmati anu dui o trè ingredienti è sò ricunnisciuti cum\'è versioni mudificate di l\'alimenti di u Gruppu 1. Puderanu esse manghjati da soli o, più cumunimenti, in cumbinazione cù altri alimenti.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'L\'alimenti ultra-trasfurmati, cum\'è e bibite analcoliche, i spuntini imballati dolci o salati, i prudutti di carne ricostituiti è i piatti surgelati pre-preparati, ùn sò micca solu alimenti mudificati, ma formulazioni fatte principalmente o interamente da sustanzi derivati da alimenti è additivi, cù pocu o micca alimentu di u Gruppu 1 intattu. L\'ingredienti in queste formulazioni includenu di solitu quelli chì si trovanu ancu in l\'alimenti trasfurmati, cum\'è zuccheri, olii, grassi o sale. Tuttavia, i prudutti ultra-trasfurmati cuntenenu ancu altre fonti d\'energia è nutrienti chì ùn sò micca tipicamente aduprate in e preparazioni culinarie. Alcuni di questi sò estratti direttamente da l\'alimenti, cum\'è a caseina, u lattosiu, u sieru di latte è u glutine.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'I prublemi cù l\'ultra-processamentu';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Trasfurmazione estrema di ingredienti alimentari';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Molti sò derivati da l\'ulteriore trasfurmazione di i custituenti alimentari, cum\'è l\'olii idrogenati o interesterificati, e proteine idrolizzate, l\'isolatu di proteine di soia, a maltodestrina, u zuccheru invertitu è u sciroppu di mais à altu cuntenutu di fruttosio.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Additivi chì vanu oltre a pura sicurezza alimentaria';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'L\'additivi in l\'alimenti ultra-trasfurmati includenu alcuni chì sò ancu usati in l\'alimenti trasfurmati, cum\'è cunservanti, antioxidanti è stabilizzanti. E classi di additivi truvati solu in i prudutti ultra-trasfurmati includenu quelli usati per imità o migliurà e qualità sensoriali di l\'alimenti o per dissimulà aspetti sgradevoli di u pruduttu finale. Quessi additivi includenu coloranti è altri culori, stabilizzanti di culore; aromi, esaltatori di sapidità, edulcoranti senza zuccheru; è aiuti di trasfurmazione cum\'è agenti carbonanti, rassodanti, volumizzanti è anti-volume, agenti antischiuma, antiagglomeranti è glassanti, emulsionanti, sequestranti è umettanti.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Prucessu chì ùn pudete micca fà in casa';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Una mansa di sequenze di prucessi hè aduprata per cumminà l\'ingredienti, di solitu numerosi, è per creà u pruduttu finale (dunque \"ultra-trasfurmatu\"). I prucessi includenu parechji senza equivalenti domestichi, cum\'è l\'idrogenazione è l\'idrolisazione, l\'estrusione è u stampaggio, è a pre-trasfurmazione per a frittura.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'L\'aspetti predatori è finanziarii di l\'ultra-processamentu';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'U scopu generale di l\'ultra-trasfurmazione hè di creà prudutti alimentari di marca, pratichi (durevuli, pronti à cunsumà), attraenti (iper-appetibili) è assai redditizi (ingredienti à bassu costu) cuncepiti per rimpiazzà tutti l\'altri gruppi alimentari. I prudutti alimentari ultra-trasfurmati sò generalmente imballati in modu attraente è cummercializati intensivamente.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4527,6 +4853,13 @@ class AppLocalizationsCo extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Nisun prezzu dispunibule';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Siate u primu à cuntribuisce!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4565,7 +4898,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Estrazione in corsu…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Estrazione riesciuta';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4696,6 +5032,507 @@ class AppLocalizationsCo extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Gestite e vostre preferenze di prezzi';
+
+  @override
+  String get preferences_card_project => 'U prugettu Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'E mo statistiche';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Traduce, migliurà i nostri strumenti…';
+
+  @override
+  String get preferences_connect_title => 'Cunnette';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Cuntattateci, o seguiteci nantu à e rete suciale';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Aiutateci à informà milioni di cunsumatori in u mondu sanu';
+
+  @override
+  String get preferences_card_help => 'Aiutu è Supportu';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Uttene risposte à e vostre dumande';
+
+  @override
+  String get logged_out => 'Disconnessu';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Grazie per esse unu di i nostri membri!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Vede tutte e statistiche';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Cerca $provider per \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Cerca un paràmetru (per esempiu Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Accessibilità: Mostra l\'emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Accessibilità: Eliminate i culori';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Infurmazioni ghjuridiche';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Cundizioni d\'usu, pulitica di privacy, è più';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts hè una basa di dati di prudutti alimentari **fatta da tutti, per tutti**.\nPudete aduprà per fà scelte alimentari megliu, è postu chì sò **dati aperti**, chiunque pò **riutilizalli per qualsiasi scopu**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Licenze';
+
+  @override
+  String get preferences_about_app_title => 'À propositu di l\'app';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Infurmazioni tecniche, infurmazioni per i sviluppatori è assai di più';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Numeru di versione';
+
+  @override
+  String get preferences_scanner_title => 'Scanner';
+
+  @override
+  String get preferences_app_store => 'App store';
+
+  @override
+  String get preferences_app_system_settings => 'Impostazioni di u sistema';
+
+  @override
+  String get preferences_source_code => 'Accede à u codice surghjente';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'È cuminciate à fà un impattu per milioni';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Cunsiglii';
+
+  @override
+  String get tips_discover_nutriscore => 'Scuprite u novu Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Nant\'à u situ web Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Gestisce u mo contu';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Gestisce u vostru contu';
+
+  @override
+  String get preferences_change_password_title => 'Cambià a mo password';
+
+  @override
+  String get preferences_danger_zone => 'Zona di periculu';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Tutti i vostri cuntributi saranu persi';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title =>
+      'Impostazioni di l\'app';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Un modu assai sperimentale per scansà i prudutti fora di linea';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Aggiorna tutti i prudutti da u servitore';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Per piacè evitate di fà què, salvu chì sia assolutamente necessariu';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Modu di dimustrazione';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Aghjunghje carte à u scanner';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Aghjusta 3 prudutti di mostra à u scanner';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Ospite di folcsonomia';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Ospite: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Esperimenti d\'accessibilità';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Selezzione di parechji prudutti per i prezzi';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Pannelli di cunniscenza urdinati da l\'utilizatori';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Accessu tempurale à a ricerca di locu';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Cunfrontu fiancu à fiancu per 2 o 3 prudutti';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Impurtazione di a lista di prudutti';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Puntuazioni è metodologie';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Scuprite cumu si calcula u Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Scuprite i principali cambiamenti à a metodologia';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Scuprite i fatti nantu à l\'alimentazione aperta';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Dumande Frequenti';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'L\'ONG Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Ricevi aggiornamenti di a cumunità';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'State infurmati nantu à e nutizie di l\'app è di a cumunità';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Implicatevi assistendu à unu di i nostri eventi virtuali';
+
+  @override
+  String get preferences_connect_blog_title => 'U bloggu Open Food Facts';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Ricevi l\'ultime nutizie, appena accadunu';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Uttene aiutu da a cumunità';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Aiutateci à migliurà l\'app';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Mandateci l\'infurmazioni di debug';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Mandateci un email cù infurmazioni dettagliate di debugging';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Mandateci feedback nantu à l\'app';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Aiutate à furmà u futuru di l\'app';
+
+  @override
+  String get preferences_connect_survey_title => 'Fate l\'inchiesta di l\'app';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Aiutaci à capisce ciò chì duvemu custruisce dopu';
+
+  @override
+  String get preferences_connect_professionals_title => 'Prufessiunali';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Tutalmente gratuitu, garantisce dati precisi per 500 app è milioni di cunsumatori. Self-service, cumpatibile cù u vostru PIM o fogli di calculu (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Cuntattateci per cumincià';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Uttene tuttu u materiale chì avete bisognu per u vostru rapportu';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Cuntattateci per dumande di stampa o per fà ci sapè di u vostru rapportu';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Diventate un vuluntariu attivu';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Sviluppu, Comunicazione, Design… ogni tipu di vuluntariatu o di cumpetenza hè benvenuta!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Scuprite alcuni di i numerosi modi in cui pudete cuntribuisce';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Sviluppu di applicazioni mobili';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Amparate cumu cuntribuisce à u sviluppu di software';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Custruzzioni instabili ogni ghjornu, funziunalità nove di zecca';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Cresce a vostra cumunità lucale';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Aiutu cù u software, i cuntenuti, e traduzioni di l\'analisi di l\'ingredienti';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Avemu preparatu un picculu mudellu per aiutà vi :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Passi simplici per cresce a trasparenza alimentaria in u vostru paese';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Unisciti à a squadra di qualità di i dati';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Unisciti à u nostru sforzu per assicurà chì a basa di dati sia cumpleta è precisa';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Prodotti aghjunti';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Novi prudutti chì aghju aghjuntu à Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Prodotti chì aghju bisognu di compie';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Tutti i prudutti incompleti';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'I mo prezzi, e mo prove…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Prodotti chì pudete aiutà à compie';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Aiutate à calculà u Nutri-Score è u Green-Score in u vostru paese';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Prezzi chì aghju cuntribuitu';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Etichette di prezzu è ricevute';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Pigliate foto di e vostre ricevute è scansionate i codici à barre associati';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Pigliate ritratti di i prezzi in un magazinu';
+
+  @override
+  String get preferences_prices_newest_title => 'Prezzi più recenti';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Ultimi prezzi aghjunti da a cumunità Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'I cuntributori cù u più grande numeru di prezzi';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'Metriche di u prezzu d\'apertura';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Segui l\'evoluzione di u prugettu';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Modi per cuntribuisce';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Cunfirmate i prezzi aghjunti da voi stessu o da altri, cù l\'aiutu di l\'IA';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Aghjunghjite rapidamente parechje ricevute o foto di scaffali da u vostru rullu fotograficu';
+
+  @override
+  String get preferences_prices_challenges_title => 'Sfide mensili';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Participà à missioni tematiche mensili per raccoglie prezzi';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Ripigliate i vostri dati di fideltà';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Amparate cumu dumandà i vostri dati';
+
+  @override
+  String get preferences_page_customize_app_title => 'Persunalizà l\'app';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Cuntribuisce à u prugettu';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Modi simplici per aiutà à apre i fatti alimentari';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Metodologie di puntuazione, aiutu è più nantu à u prugettu';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Accetta a suggerimentu';
 
   @override
@@ -4740,4 +5577,103 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'L\'autentificazione hà fiascatu, ùn hè micca pussibule di ottene prove';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count di $total prove';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count di $total cuntributori';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count di $total lochi';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count lochi';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Per piacè riavviate l\'applicazione per applicà i cambiamenti.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Interfaccia grafica';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Laboratorii Aperti di Fatti Alimentari';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Purtate Open Food Facts in a vostra lingua';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Iscriviti à a versione alfa di l\'app';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Cuntribuzioni è dati di u produttu';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Ùn mustrà micca a folcsonomia';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Aggiuntu à $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

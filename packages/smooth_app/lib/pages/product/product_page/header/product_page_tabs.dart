@@ -8,7 +8,6 @@ import 'package:smooth_app/helpers/score_card_helper.dart';
 import 'package:smooth_app/knowledge_panel/knowledge_panels_builder.dart';
 import 'package:smooth_app/l10n/app_localizations.dart';
 import 'package:smooth_app/pages/folksonomy/folksonomy_card.dart';
-import 'package:smooth_app/pages/preferences/user_preferences_dev_mode.dart';
 import 'package:smooth_app/pages/prices/prices_card.dart';
 import 'package:smooth_app/pages/product/website_card.dart';
 import 'package:smooth_app/themes/theme_provider.dart';
@@ -33,12 +32,14 @@ class ProductPageTab {
     required this.labelBuilder,
     required this.builder,
     this.prefix,
+    this.suffix,
   });
 
   final String id;
   final String Function(BuildContext) labelBuilder;
   final Widget Function(BuildContext, Product) builder;
   final Widget? prefix;
+  final Widget? suffix;
 }
 
 class ProductPageTabBar extends StatelessWidget {
@@ -49,6 +50,8 @@ class ProductPageTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool lightTheme = context.lightTheme();
+
     return SliverPersistentHeader(
       delegate: _TabBarDelegate(
         PreferredSize(
@@ -66,10 +69,14 @@ class ProductPageTabBar extends StatelessWidget {
             leadingItems: tabs
                 .map((ProductPageTab tab) => tab.prefix)
                 .toList(growable: false),
+            trailingItems: tabs
+                .map((ProductPageTab tab) => tab.suffix)
+                .toList(growable: false),
             onTabChanged: (_) {},
-            overflowMainColor: context.lightTheme()
+            overflowMainColor: lightTheme
                 ? Theme.of(context).tabBarTheme.unselectedLabelColor
                 : Theme.of(context).scaffoldBackgroundColor,
+            unselectedTabColor: lightTheme ? Colors.black87 : Colors.white70,
           ),
         ),
       ),
@@ -114,7 +121,7 @@ class ProductPageTabBar extends StatelessWidget {
           prefix: _extractPrefix(product, knowledgePanelTitle),
           builder: (_, _) => ListView.builder(
             padding: EdgeInsetsDirectional.zero,
-            itemCount: children.length - 1,
+            itemCount: children.length,
             itemBuilder: (BuildContext context, int index) => children[index],
           ),
         ),
@@ -181,25 +188,21 @@ class ProductPageTabBar extends StatelessWidget {
           padding: EdgeInsetsDirectional.zero,
           children: <Widget>[PricesCard(product)],
         ),
+        suffix: PricesCounter(product: product),
       ),
     );
 
-    if (context.read<UserPreferences>().getFlag(
-          UserPreferencesDevMode.userPreferencesFlagHideFolksonomy,
-        ) ==
-        false) {
-      tabs.add(
-        ProductPageTab(
-          id: ProductPageHarcodedTabs.FOLKSONOMY.key,
-          labelBuilder: (BuildContext context) =>
-              AppLocalizations.of(context).product_page_tab_folksonomy,
-          builder: (_, Product product) => ListView(
-            padding: EdgeInsetsDirectional.zero,
-            children: <Widget>[FolksonomyCard(product)],
-          ),
+    tabs.add(
+      ProductPageTab(
+        id: ProductPageHarcodedTabs.FOLKSONOMY.key,
+        labelBuilder: (BuildContext context) =>
+            AppLocalizations.of(context).product_page_tab_folksonomy,
+        builder: (_, Product product) => ListView(
+          padding: EdgeInsetsDirectional.zero,
+          children: <Widget>[FolksonomyCard(product)],
         ),
-      );
-    }
+      ),
+    );
 
     return tabs;
   }

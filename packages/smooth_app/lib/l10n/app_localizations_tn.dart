@@ -9,6 +9,9 @@ class AppLocalizationsTn extends AppLocalizations {
   AppLocalizationsTn([String locale = 'tn']) : super(locale);
 
   @override
+  String get app_name => 'Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsTn extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsTn extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Tlhopha setlhopha se se tlhomameng thata';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsTn extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Ga go na dithoto';
+
+  @override
+  String get product_tags_explanation =>
+      'Ka go tsenya dipharologantsho (senotlolo/boleng) mo setlhagisweng, o thusa go se humisa.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsTn extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Phimola akhaonto ya me';
 
   @override
   String get user_profile => 'Account';
@@ -2356,6 +2363,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Phitlhelelo ya dikarolo tsa tekelelo le didirisiwa tsa tlhabololo';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2502,6 +2513,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button =>
+      'Bula mo webosaeteng ya Ditlhwatlhwa tse di Buletsweng';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2640,6 +2655,13 @@ class AppLocalizationsTn extends AppLocalizations {
   String get prices_list_add_new_price => 'Tsenya tlhwatlhwa e ntšha ya\n';
 
   @override
+  String get prices_list_empty_title => 'Ga go ise go nne le tlhwatlhwa!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Nna wa ntlha go tsenya e le nngwe:\nKa go sekaseka **rasiti** kgotsa **theke ya tlhwatlhwa**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Lebenkele le le sa itsiweng';
 
   @override
@@ -2649,7 +2671,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Leba ditlhwatlhwa tsotlhe tsa sedirisiwa seno';
 
   @override
   String get prices_entry_menu_open_proof => 'Leba bosupi';
@@ -2730,9 +2752,23 @@ class AppLocalizationsTn extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Ga go ise go nne le seabe!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Nna wa ntlha go tsenya tlhwatlhwa!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Ga go ise go nne le lebenkele!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Nna wa ntlha go tsenya tlhwatlhwa!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2838,7 +2874,17 @@ class AppLocalizationsTn extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Ga go ise go nne le bosupi!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Simolola ka go tsenya senepe sa **rasiti** kgotsa **theke ya tlhwatlhwa**!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2917,13 +2963,7 @@ class AppLocalizationsTn extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2935,6 +2975,16 @@ class AppLocalizationsTn extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title => 'Seta gape puo ya tiriswa';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Tsenya dikarata';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Fetola fa gare ga ditlhwatlhwa.dintlha tsa dijo.org (PROD) le tikologo ya teko';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2978,6 +3028,11 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3979,32 +4034,34 @@ class AppLocalizationsTn extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Maduo a Botala A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Maduo a Botala B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Maduo a Botala C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Maduo a Botala D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Maduo a Botala E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new =>
+      'Maduo a a Tala a a sa Itsiweng';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Maduo a Botala ga a dire';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new =>
+      'Dijo tse di fetotsweng thata - ditlhopha tsa NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4101,9 +4158,6 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4211,11 +4265,284 @@ class AppLocalizationsTn extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'Maduo a Botala ke eng?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Green-Score ke letshwao le le ikaeletseng go go itsise ka **diphelelo tsa dijo mo tikologong**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'Khoutu ya mmala e farologana go tswa go botala jo bontsho (**A+**) jwa ditlhagiswa tse di **senang tshusumetso e ntsi** go ya go bohibidu jo bontsho (**F**) jwa ditlhagiswa tse di nang le tshusumetso e ntsi**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Matshwao a Maduo a Botala';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Moko: Tshekatsheko ya modikologo wa botshelo (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'Tshekatsheko ya saense ya ditlhopha tsa dijo';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Mo setlhopheng sengwe le sengwe sa setlhagiswa, go tlhomiwa maduo a **benchmark** go dirisiwa tshedimosetso go tswa mo polokelotshedimosetsong ya tikologo ya Agribalyse (e e tlhamilweng ke ADEME le INRAE).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Tshekatsheko ya modikologo wa botshelo** ke mokgwa wa tlhatlhobo o o tlhomamisitsweng wa go dira tlhatlhobo ya tikologo ya dikgato tse dintsi le ya dikelo tse dintsi.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**E lekanya:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => 'Dikgato di le 6 tsa tlhagiso';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title =>
+      'ditshupo di le 14 tsa ditlamorago tsa tikologo';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 =>
+      'Phetogo ya tlelaemete/motlhala wa khabone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 => 'Go nyelela ga llaga ya ozone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Marang a a ionisang';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Lefatshe';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Tiriso ya metsi le maatla';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Kgotlelego ya mowa';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Metsi a lewatle le a a phepa (dikarolwana, go nna asiti, go nna eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Go fela ga ditsompelo.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Dibonase le dikotlhao';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Go duela dikumo tse di botoka mo setlhopheng, re bo re dirisa dibonase le dikotlhao go ikaegilwe ka ditlhokego di le mmalwa:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Bonase e abelwa go ikaegilwe ka tshimologo ya metswako. Bonase ena e nahana ka tshusumetso ho dipalangwang mme hape le pholisi ya tikoloho ya naha e nngwe le e nngwe ya mohlahisi.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Go bala ka nepo Green-Score, go botlhokwa go nna le tshedimosetso e e sa tlhalosiwang mo sephuthelwaneng (jaaka tshimologo le phesente e e tlhomameng ya motswako mongwe le mongwe) kgotsa e e sa bonweng ka sewelo ka sebopego se se ka dirisiwang (jaaka lenaane la dikarolo tsotlhe tsa polasetiki tse di nang le mofuta o o tlhomameng wa tiriso).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Dipalopalo tsa palogare di dirisiwa fa tshedimosetso eno e ise e nne teng, mme jaanong re kopa mongwe le mongwe go re thusa go kokoanya tshedimosetso eno e e tla nnang mosola thata mo Green-Score mme gape le mo ditirisong tse dingwe tse dintsi.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Ka fa baagi ba ka thusang ka teng';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Baagi botlhe ba ka re thusa go kokoanya le go rulaganya tshedimosetso e e leng teng mo ditlhagisweng kgotsa e e ka tswang mo go tsone, jaaka tshedimosetso ka ga go phuthela: Mission Emballages: lenaane le legolo la tirisanommogo la go phuthela dikumo tsotlhe tsa dijo (ka Sefora)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Kafa batlhagisi ba ka thusang ka gone';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Bahlahisi ba ka re romela tlhahisoleseding ya bona ka kotloloho ka sethala sa rona sa mahala sa bahlahisi.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ke setlhagiswa sefe se se botoka mo polaneteng?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'Go ka nna thata go lemoga';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Go tlhopha dijo tse di tswelelang ke nngwe ya dilo tse di maatla thata tse re ka di direlang tlelaemete, ka **thulaganyo ya rona ya dijo ya lefatshe e na le maikarabelo a go feta kotara ya mesi yotlhe ya sethopo**.\n(Motswedi: Bahumanegi le Nemecek, Saense, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'O na le maatla!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Dikgang tse di molemo ke gore seno se re naya tsela e e maatla ya go tlhama phetogo.\n**Mongwe le mongwe wa rona o ja dijo di ka nna 1,000 ngwaga le ngwaga**. Ke ditshono di le 1 000 tsa go **tlhopha isagwe e e botoka ya polanete**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Go thusa go nna le maikarabelo le go tsaya tshwetso';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Go tlhopha dijo tse di tswelelang go ka utlwala go raraane. Dileibole di a tlhakatlhakanya mme gantsi tshedimosetso ga e yo. Green-Score e tlhamilwe go dira gore e nne bonolo, e go neye tekanyetso ya tikologo e e **tlhapileng**, **e e theilweng mo saenseng**, le **e e bonaletsang** ya dikumo tsa dijo, gone fa o e tlhokang teng: fa o ntse o reka.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title =>
+      'Go dira dilo mo pontsheng';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Go farologana le dileibole tsa mong, palo ya Green-Score e **bulegile gotlhelele** mme e ka **tlhomamisiwa ke mongwe le mongwe**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title =>
+      'Go dira dilo ka tsela e e feteletseng ke eng?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Ditlhopha tsa NOVA di go itsise ka ga maemo a go dira dijo.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Tlhaoloso ya NOVA e letla go aroganngwa ga dijo ka **ditlhopha di le 4** go ikaegilwe ka **selekanyo sa tshebetso ya tsona ya madirelo** (dijo tse di dirilweng go le gonnye kgotsa tse di sa dirwang, metswako ya go apaya, dijo tse di dirilweng, dijo tse di dirilweng thata).';
+
+  @override
+  String get guide_nova_logos_caption => 'Matshwao a NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Ditlhopha di le 4 tsa NOVA';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'Go na le ditlhopha di le 4 tsa NOVA, e e nang le mathata ke Setlhopha sa 4 - Dijo tse di fetotsweng thata.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'Dijo tse di fetotsweng go le gonnye kgotsa tse di sa fetolwang';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Dijo tse di sa fetolwang (kgotsa tsa tlholego) ke dikarolo tse di jewang tsa dimela (dipeo, maungo, matlhare, dikutu, medi) kgotsa diphologolo (mesifa, di-offal, mae, mashi), mmogo le fungi, algae, le metsi, morago ga go kgaoganngwa le tlhago.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Metswako e e fetotsweng ya go apaya, e e jaaka dioli, botoro, sukiri le letswai, ke dilo tse di tswang mo dijong tsa Setlhopha sa 1 kgotsa mo tlhagong ka dithulaganyo tse di akaretsang go gatelela, go ntlafatsa, go sila, go sila le go omisa.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Dijo tse di fetotsweng, tse di jaaka merogo e e mo mabotlolong, tlhapi e e mo makotikoting, maungo a a mo sirapong, ditšhisi le marotho a a sa tswang go dirwa, di dirwa thata ka go tsenya letswai, oli, sukiri kgotsa dilo tse dingwe go tswa mo dijong tsa Setlhopha sa 2 go ya go tsa Setlhopha sa 1. Dithulaganyo di akaretsa mekgwa e e farologaneng ya go boloka kgotsa go apaya, mme mo ntlheng ya marotho le tšhisi, go bedisa go go senang bojalwa. Bontsi jwa dijo tse di fetotsweng di na le metswako e mebedi kgotsa e meraro mme di lemotshega jaaka mefuta e e fetotsweng ya dijo tsa Setlhopha sa 1. Di ka jewa di le tsosi kgotsa, ka tlwaelo, di kopantswe le dijo tse dingwe.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Dijo tse di fetotsweng thata, jaaka dinotsididi, dijo tse di botshe tse di phuthetsweng tse di botshe kgotsa tse di monate, dikumo tsa nama tse di bopilweng sešwa, le dijo tse di gatseditsweng tse di apeilweng pele ga nako, ga se fela dijo tse di fetotsweng mme ke ditlhamo tse di dirilweng bontsi kgotsa gotlhelele go tswa mo dilong tse di tswang mo dijong le ditlaleletsi, tse di nang le dijo tse dinnye kgotsa tse di sa senyegang Group1 . Metswako e e mo ditlhamong tseno gantsi e akaretsa e gape e fitlhelwang mo dijong tse di fetotsweng, tse di jaaka sukiri, dioli, mafura kgotsa letswai. Le fa go ntse jalo, ditlhagiswa tse di dirilweng ka tsela e e feteletseng gape di na le metswedi e mengwe ya maatla le dikotla tse di sa dirisiweng thata mo dithulaganyong tsa go apaya. Dingwe tsa tsone di tsewa ka tlhamalalo mo dijong tse di jaaka casein, lactose, whey le gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Mathata a go dira tiro ka tsela e e tseneletseng';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Go fetola metswako ya dijo ka tsela e e feteletseng';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'Bontsi bo tswa mo go diriseng go ya pele ga dikarolo tsa dijo, tse di jaaka dioli tse di nang le haeterojene kgotsa tse di nang le kgatlhego, diporoteine tse di nang le haeterojene, poroteine ya soya e e kgaogantsweng, maltodextrin, sukiri e e fetotsweng le sirapo ya mmidi e e nang le fructose e ntsi.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Ditlaleletsi tse di fetang pabalesego e e phepa ya dijo';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ditlaleletsi tse di mo dijong tse di fetotsweng thata di akaretsa dingwe tse gape di dirisiwang mo dijong tse di fetotsweng, tse di jaaka dilo tse di bolokang dijo, di-antioxidant le di-stabilizer. Ditlhopha tsa ditlaleletsi tse di fitlhelwang fela mo ditlhagisweng tse di dirilweng thata di akaretsa tse di dirisiwang go etsisa kgotsa go tokafatsa dinonofo tsa maikutlo tsa dijo kgotsa go fitlha dikarolo tse di sa monate tsa setlhagiswa sa bofelo. Tsena additives kenyeletsa mebala le mebala e meng, mebala stabilizers; ditatso, dilo tse di tokafatsang tatso, dilo tse di senang sukiri; le dithusi tsa go dira jaaka diokobatsi tse di tsenyang khabone, tse di tiisa, tse di oketsang le tse di lwantshang go oketsa, go ntsha bubble, diokobatsi tse di lwantshang go tlhotlhorega le go tlhoma galase, di-emulsifier, di-sequestrant, le di-humectant.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Go dira tiro e o ka se kgoneng go e dira kwa gae';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'Bontsi jwa tatelano ya dithulaganyo bo dirisiwa go kopanya metswako e gantsi e leng mentsi le go tlhama setlhagiswa sa bofelo (ka jalo \'ultra-processed\'). Dithulaganyo di akaretsa di le mmalwa tse di senang dilekanyo tsa selegae, jaaka hydrogenation le hydrolysis, go ntsha le go bopa, le go dira pele ga go gadika.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Dintlha tsa go ja ditshedi tse dingwe le tsa madi tsa go dira dilo ka tsela e e feteletseng';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Maikaelelo a kakaretso a ultra-processing ke go tlhama ditlhagiswa tsa dijo tse di nang le letshwaokgwebo, tse di siameng (tse di tshwarelelang, tse di siametseng go jewa), tse di kgatlhang (tse di monate thata) le tse di nang le dipoelo tse di kwa godimo (metswako e e tlhwatlhwatlase) tse di diretsweng go emisetsa ditlhopha tse dingwe tsotlhe tsa dijo. Dikumo tsa dijo tse di dirilweng ka tsela e e feteletseng gantsi di phuthelwa ka tsela e e kgatlhang mme di bapadiwa thata.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4528,6 +4855,13 @@ class AppLocalizationsTn extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Ga go na tlhwatlhwa';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Nna wa ntlha go ntsha moneelo!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4566,7 +4900,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress => 'Go ntsha go tsweletse…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'Go ntsha go atlegile';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4697,6 +5034,510 @@ class AppLocalizationsTn extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle =>
+      'Laola ditlhwatlhwa tse o di ratang';
+
+  @override
+  String get preferences_card_project =>
+      'Porojeke ya Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Dipalopalo tsa me';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Ranola, tokafatsa didirisiwa tsa rona…';
+
+  @override
+  String get preferences_connect_title => 'Kopanya';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Re fitlhelele, kgotsa Re latele mo metsweding ya dikgang';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Re thuse go itsise dimilionemilione tsa bareki lefatshe ka bophara';
+
+  @override
+  String get preferences_card_help => 'Thuso le Kemonokeng';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Bona dikarabo tsa dipotso tsa gago';
+
+  @override
+  String get logged_out => 'O dule';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Re lebogela go nna mongwe wa maloko a rona!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats => 'Bona dipalopalo tsotlhe';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Batla $provider \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Batla thulaganyo (sekao: Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Phitlhelelo: Bontsha emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors =>
+      'Phitlhelelo: Tlosa mebala';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Tshedimosetso ya semolao';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Melawana ya tiriso, pholisi ya polokodiphiri, le tse dingwe';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Open Food Facts ke polokelotshedimosetso ya dikumo tsa dijo **e e dirilweng ke mongwe le mongwe, ya mongwe le mongwe**.\nO ka e dirisa go dira ditlhopho tse di botoka tsa dijo, mme ka e le **data e e bulegileng**, mongwe le mongwe a ka **e dirisa gape ka boikaelelo bongwe le bongwe**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Dilaesense';
+
+  @override
+  String get preferences_about_app_title => 'Ka ga tiriswa';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Tshedimosetso ya setegeniki, tshedimosetso ya motlhabolodi, le tse dingwe';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Nomoro ya mofuta';
+
+  @override
+  String get preferences_scanner_title => 'Sekenara';
+
+  @override
+  String get preferences_app_store => 'Lebenkele la ditiriso';
+
+  @override
+  String get preferences_app_system_settings => 'Diseting tsa tsamaiso';
+
+  @override
+  String get preferences_source_code => 'Phitlhelela khoutu ya motswedi';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'Mme o simolole go ama dimilione';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Maele';
+
+  @override
+  String get tips_discover_nutriscore => 'Ribolola Maduo a maša a Nutri-Score';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'Mo webosaeteng ya Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_manage_account_title => 'Laola akhaonto ya me';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Laola akhaonto ya gago';
+
+  @override
+  String get preferences_change_password_title =>
+      'Fetola nomoro ya me ya sephiri';
+
+  @override
+  String get preferences_danger_zone => 'Lefelo la kotsi';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Dikabelo tsotlhe tsa gago di tla latlhega';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Diseting tsa tiriswa';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'Tsela ya go dira diteko thata ya go sekaseka dikumo kwa ntle ga inthanete';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Ntšhwafatsa dikumo tsotlhe go tswa mo sefareng';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Tsweetswee tila go dira jalo ntle le fa go tlhokega thata';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Mokgwa wa pontsho';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Tsenya dikarata mo sekenareng';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'E tsenya dikumo tsa disampole di le 3 mo sekenareng';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title => 'Moamogedi wa setso';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Moamogedi: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Ditekelelo tsa phitlhelelo';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'Tlhopho ya dikumo tse dintsi tsa ditlhwatlhwa';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'Diphanele tsa kitso tse di otarilweng ke modirisi';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Phitlhelelo ya nakwana ya patlo ya lefelo';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Papiso e e bapileng ya dikumo di le 2 kgotsa di le 3';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Thomeloteng ya lenaane la dikumo';
+
+  @override
+  String get preferences_faq_scores_methodologies_title => 'Maduo le mekgwa';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Bona gore Maduo a Nutri a balelwa jang';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Lemoga diphetogo tse dikgolo mo mokgweng wa go dira';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Ribolola Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_faq_faq_title =>
+      'FAQ - Dipotso tse di Bodiwang Kgapetsakgapetsa';
+
+  @override
+  String get preferences_faq_off_ngo_title =>
+      'NGO ya Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Bona dintšhwafatso tsa baagi';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Nna o itse dikgang tsa app le tsa baagi';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Nna le seabe ka go tsenela nngwe ya ditiragalo tsa rona tsa thekenoloji';
+
+  @override
+  String get preferences_connect_blog_title =>
+      'Blogo ya Dintlha tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Bona dikgang tsa bosheng, jaaka di diragala';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Bona thuso mo baaging';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Re thuse go tokafatsa app';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Re romelele tshedimosetso ya go baakanya diphoso';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Re romelele imeile e e nang le tshedimosetso e e feletseng ya go baakanya diphoso';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Re romele pegelo ka tiriswa eno';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Thusa go bopa isagwe ya tiriswa eno';
+
+  @override
+  String get preferences_connect_survey_title => 'Tsaya patlisiso ya tiriswa';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Re thuse go tlhaloganya gore re tshwanetse go aga eng morago ga moo';
+
+  @override
+  String get preferences_connect_professionals_title => 'Baporofešenale';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'Gotlhelele mahala, e netefatsa tshedimosetso e e nepagetseng ya ditiriso di le 500 le dimilionemilione tsa bareki. Go itirela, go tsamaisana le PIM ya gago kgotsa diseporeteshiti (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Ikgolaganye le rona go simolola';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Bona tshedimosetso yotlhe e o e tlhokang mo pegelong ya gago';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Ikgolaganye le rona go bona dipotso tsa bobegadikgang kgotsa go re itsise ka pego ya gago';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Nna moithaopi yo o matlhagatlhaga';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Tlhabololo, Puisano, Moakanyetso… mofuta mongwe le mongwe wa boithaopo kgotsa boitseanape bo amogetswe!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Bona dingwe tsa ditsela tse dintsi tse o ka thusang ka tsone';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Go tlhama app ya selulafouno';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Ithute go nna le seabe mo go tlhameng serweboleta';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Dikago tse di sa tlhomamang tsa letsatsi le letsatsi, dikarolo tse disha';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Godisa baagi ba selegae sa gago';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Thuso ka serweboleta, diteng, dithanolo tsa tshekatsheko ya metswako';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Re baakantse thempoleite e nnye go go thusa :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Dikgato tse di bonolo tsa go godisa go nna mo pepeneneng ga dijo mo nageng ya gaeno';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Nna le setlhopha sa boleng jwa tshedimosetso';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Tsenela maiteko a rona a go tlhomamisa gore polokelotshedimosetso e feletse e bile e nepagetse';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Dikumo tse di tsentsweng';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Dikumo tse disha tse ke di tsentseng mo Dintlhang tsa Dijo tse di Buletsweng';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Dikumo tse ke tlhokang go di feleletsa';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Dikumo tsotlhe tse di sa felelang';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Ditlhwatlhwa tsa me, bosupi jwa me…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Dikumo tse o ka thusang go di feleletsa';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Thusa go balelela Maduo a Dikotla le Maduo a Botala mo nageng ya gaeno';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Ditlhwatlhwa tse ke di tsentseng';
+
+  @override
+  String get preferences_prices_proofs_subtitle =>
+      'Ditheke tsa ditlhwatlhwa le dirasiti';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Tsaya dinepe tsa dirasiti tsa gago o bo o sekaseka dikhoutu tsa dibara tse di amanang le tsone';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Tsaya dinepe tsa ditlhwatlhwa mo lebentleleng';
+
+  @override
+  String get preferences_prices_newest_title => 'Ditlhwatlhwa tse disha';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Ditlhwatlhwa tsa bosheng tse di tsentsweng ke baagi ba Ditlhwatlhwa tse di Buletsweng';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Batho ba ba nang le ditlhwatlhwa tse di kwa godimo';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'Dimeteriki tsa Ditlhwatlhwa tse di bulegileng';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Latela tlhabologo ya porojeke';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Ditsela tsa go tsenya letsogo';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Tlhomamisa ditlhwatlhwa tse di tsentsweng ke wena kgotsa ke ba bangwe, ka thuso ya AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Tsenya ka bonako dirasiti tse dintsi kgotsa dinepe tsa dishelofo go tswa mo rolong ya khamera ya gago';
+
+  @override
+  String get preferences_prices_challenges_title =>
+      'Dikgwetlho tsa kgwedi le kgwedi';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Tsaya karolo mo dipatlisisong tsa kgwedi le kgwedi tsa go kokoanya ditlhwatlhwa';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Batla gape tshedimosetso ya gago ya boikanyegi';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Ithute go kopa tshedimosetso ya gago';
+
+  @override
+  String get preferences_page_customize_app_title => 'Itebagantse le tiriso';
+
+  @override
+  String get preferences_page_contribute_project_title =>
+      'Nna le seabe mo porojekeng';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Ditsela tse di bonolo tsa go thusa go Bula Dintlha tsa Dijo';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Mekgwa ya go bona maduo, thuso, le tse dingwe ka porojeke';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Amogela kakantsho';
 
   @override
@@ -4742,4 +5583,103 @@ class AppLocalizationsTn extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'Netefatso e paletswe, ga e kgone go tsaya bosupi';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count ya $total bosupi';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count ya $total batsayakarolo';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count ya $total mafelo';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count mafelo';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Tsweetswee simolola tiriswa gape go dirisa diphetogo.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Segokaganyi sa kerafo';
+
+  @override
+  String get preferences_app_settings_media_title => 'Bobegakgang';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Bula Dilaboratori tsa Dintlha tsa Dijo';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Tlisa Dintlha tsa Dijo tse di Bulegileng mo puong ya gago';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Ikwadise mo mofuteng wa alpha wa app';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Dikabelo le Tshedimosetso ya Kumo';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'O se ke wa bontsha Setso';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'E tsentswe ka $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

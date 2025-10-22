@@ -34,7 +34,6 @@ class PricesPage extends StatelessWidget {
 
     return SmoothScaffold2(
       backgroundColor: lightTheme ? extension.primaryLight : null,
-      brightness: Brightness.light,
       topBar: SmoothTopBar2(
         leadingAction: SmoothLeadingAction.back,
         backgroundColor: lightTheme
@@ -48,7 +47,7 @@ class PricesPage extends StatelessWidget {
       ),
       injectPaddingInBody: model.displayEachProduct,
       belowTopBar: !model.displayEachProduct,
-      padding: EdgeInsets.zero,
+      padding: EdgeInsetsDirectional.zero,
       floatingBottomBar: ConsumerFilter<UserPreferences>(
         buildWhen:
             (UserPreferences? previousValue, UserPreferences currentValue) =>

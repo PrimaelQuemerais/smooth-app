@@ -9,6 +9,9 @@ class AppLocalizationsMi extends AppLocalizations {
   AppLocalizationsMi([String locale = 'mi']) : super(locale);
 
   @override
+  String get app_name => 'Nga Tikanga Kai Tuwhera';
+
+  @override
   String get sep => '';
 
   @override
@@ -321,10 +324,6 @@ class AppLocalizationsMi extends AppLocalizations {
   String get sign_up_page_terms_text => 'terms of use and contribution';
 
   @override
-  String get sign_up_page_agree_url =>
-      'https://world-en.openfoodfacts.org/terms-of-use';
-
-  @override
   String get donate_url => 'https://donate.openfoodfacts.org/';
 
   @override
@@ -450,9 +449,6 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get contribute_donate_header => 'Donate to Open Food Facts';
-
-  @override
-  String get contribute_enroll_alpha => 'Enroll in internal alpha version';
 
   @override
   String get contribute_enroll_alpha_warning =>
@@ -597,7 +593,7 @@ class AppLocalizationsMi extends AppLocalizations {
       'Reloaded with your new preferences';
 
   @override
-  String get profile_navbar_label => 'Profile';
+  String get profile_navbar_label => 'Community';
 
   @override
   String get scan_navbar_label => 'Scan';
@@ -978,6 +974,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get score_add_missing_product_category => 'Select a category';
 
   @override
+  String get score_add_missing_precise_product_category =>
+      'Tīpakohia he kāwai tino tika';
+
+  @override
   String get score_add_missing_product_countries =>
       'Add missing product countries';
 
@@ -1260,6 +1260,13 @@ class AppLocalizationsMi extends AppLocalizations {
   @override
   String get no_product_tags_found_message =>
       'No product properties found. Properties can be used to describe products in more details, in a flexible way. Tap to add.';
+
+  @override
+  String get product_tags_empty => 'Karekau he taonga';
+
+  @override
+  String get product_tags_explanation =>
+      'Ma te taapiri i nga taonga (matua/uara) ki tetahi hua, ka awhina koe ki te whakarangatira.';
 
   @override
   String get add_tag => 'Add property';
@@ -1686,7 +1693,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get account_delete => 'Delete account';
 
   @override
-  String get account_deletion_subject => 'Delete my account';
+  String get account_delete_title => 'Mukua taku kaute';
 
   @override
   String get user_profile => 'Account';
@@ -2357,6 +2364,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get dev_preferences_screen_title => 'DEV Mode';
 
   @override
+  String get dev_preferences_screen_subtitle =>
+      'Whakauruhia nga waahanga whakamatautau me nga taputapu whanaketanga';
+
+  @override
   String get dev_preferences_reset_onboarding_title => 'Restart onboarding';
 
   @override
@@ -2503,6 +2514,9 @@ class AppLocalizationsMi extends AppLocalizations {
   String get prices_app_button => 'Go to Prices app';
 
   @override
+  String get prices_website_button => 'Tuwhera ki te paetukutuku Open Prices';
+
+  @override
   String get prices_bulk_proof_upload_select =>
       'Add price tags directly from gallery';
 
@@ -2643,6 +2657,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get prices_list_add_new_price => 'Tāpirihia he\nutu hou';
 
   @override
+  String get prices_list_empty_title => 'Kaore ano he utu!';
+
+  @override
+  String get prices_list_empty_subtitle =>
+      'Ko koe te tuatahi ki te taapiri i tetahi:\nMa te karapa i te **rihiti** ranei **tohu utu**!';
+
+  @override
   String get prices_entry_shop_not_found => 'Toa kore mohiotia';
 
   @override
@@ -2652,7 +2673,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get prices_entry_menu_open_product_prices =>
-      'View all prices for this product';
+      'Tirohia nga utu katoa mo tenei hua';
 
   @override
   String get prices_entry_menu_open_proof => 'Tirohia nga tohu';
@@ -2732,9 +2753,23 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
+  String get prices_users_empty_title => 'Kaore ano he kaikoha!';
+
+  @override
+  String get prices_users_empty_explanation =>
+      'Ko koe te tuatahi ki te taapiri utu!';
+
+  @override
   String prices_users_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize contributors (total: $total)';
   }
+
+  @override
+  String get prices_locations_empty_title => 'Kaore ano he toa!';
+
+  @override
+  String get prices_locations_empty_explanation =>
+      'Ko koe te tuatahi ki te taapiri utu!';
 
   @override
   String prices_locations_list_length_many_pages(int pageSize, int total) {
@@ -2839,7 +2874,17 @@ class AppLocalizationsMi extends AppLocalizations {
   String get prices_proof_subtitle => 'Proof';
 
   @override
+  String get prices_proof_empty_title => 'Kaore ano he tohu!';
+
+  @override
+  String get prices_proof_empty_explanation =>
+      'Tīmatahia ma te taapiri i tetahi whakaahua o te **rihiti** he **tohu utu** ranei!';
+
+  @override
   String get prices_proof_find => 'Select a proof';
+
+  @override
+  String get prices_proof_change => 'Change proof';
 
   @override
   String get prices_proof_receipt => 'Receipt';
@@ -2918,13 +2963,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get dev_mode_section_ui => 'User Interface';
 
   @override
-  String get dev_mode_section_data => 'Data';
-
-  @override
   String get dev_mode_section_experimental_features => 'Experimental features';
-
-  @override
-  String get dev_preferences_show_folksonomy_title => 'Exclude Folksonomy';
 
   @override
   String get dev_mode_hide_environmental_score_title => 'Exclude Green Score';
@@ -2936,6 +2975,17 @@ class AppLocalizationsMi extends AppLocalizations {
   @override
   String get dev_mode_spellchecker_for_ocr_subtitle =>
       '(Ingredients and packaging)';
+
+  @override
+  String get dev_mode_reset_app_language_title =>
+      'Tautuhi ano i te reo taupānga';
+
+  @override
+  String get dev_mode_add_demo_cards_language_title => 'Tāpiri kāri';
+
+  @override
+  String get dev_mode_openprices_switch_env_title =>
+      'Hurihia i waenga prices.openfoodfacts.org (PROD) me te whakamatautau env';
 
   @override
   String get search_history_item_edit_tooltip => 'Reuse and edit this search';
@@ -2979,6 +3029,11 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get user_search_proof_title => 'My proof';
+
+  @override
+  String search_proof_title(String user) {
+    return 'Proof from \"$user\"';
+  }
 
   @override
   String user_any_search_prices_title(String user) {
@@ -3980,32 +4035,33 @@ class AppLocalizationsMi extends AppLocalizations {
       'Nutri-Score is not applicable (New calculation)';
 
   @override
-  String get environmental_score_generic => 'Green Score';
+  String get environmental_score_generic_new => 'Green-Score';
 
   @override
-  String get environmental_score_a => 'Green Score A';
+  String get environmental_score_a_new => 'Kakariki-Score A';
 
   @override
-  String get environmental_score_b => 'Green Score B';
+  String get environmental_score_b_new => 'Kakariki-Score B';
 
   @override
-  String get environmental_score_c => 'Green Score C';
+  String get environmental_score_c_new => 'Kakariki-Score C';
 
   @override
-  String get environmental_score_d => 'Green Score D';
+  String get environmental_score_d_new => 'Kakariki-Score D';
 
   @override
-  String get environmental_score_e => 'Green Score E';
+  String get environmental_score_e_new => 'Kakariki-Score E';
 
   @override
-  String get environmental_score_unknown => 'Unknown Green Score';
+  String get environmental_score_unknown_new =>
+      'Kaka-kaaka-Kakariki Kaore e mohiotia';
 
   @override
-  String get environmental_score_not_applicable =>
-      'Green Score is not applicable';
+  String get environmental_score_not_applicable_new =>
+      'Karekau te Kakariki-Score e tika ana';
 
   @override
-  String get nova_group_generic => 'Ultra-processing - NOVA groups';
+  String get nova_group_generic_new => 'Nga kai tino tukatuka - nga roopu NOVA';
 
   @override
   String get nova_group_1 => 'NOVA Group 1';
@@ -4102,9 +4158,6 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get guide_share_label => 'Share';
-
-  @override
-  String get guide_nutriscore_v2_enabled => 'true';
 
   @override
   String get guide_nutriscore_v2_title =>
@@ -4212,11 +4265,281 @@ class AppLocalizationsMi extends AppLocalizations {
       'For manufacturers, the display of the Nutri-Score **remains optional**.';
 
   @override
-  String get guide_nutriscore_v2_share_link =>
-      'https://world.openfoodfacts.org/nutriscore-v2';
+  String get guide_greenscore_title => 'Green-Score';
 
   @override
-  String get guide_nutriscore_v2_share_message => '';
+  String get guide_greenscore_what_is_greenscore_title =>
+      'He aha te Score Green?';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph1 =>
+      'Ko te Green-Score he moko e whai ana ki te whakamohio ki a koe mo te **paanga ki te taiao o te kai**.';
+
+  @override
+  String get guide_greenscore_what_is_greenscore_paragraph2 =>
+      'He rereke te waehere tae mai i te kaakaariki pouri (**A+**) mo nga hua ** iti rawa te paheketanga** ki te whero pouri (**F**) mo nga hua **tino whai paanga**.';
+
+  @override
+  String get guide_greenscore_logos_caption => 'Ko nga tohu moko Green-Score';
+
+  @override
+  String get guide_greenscore_lca_title =>
+      'Ko te kaupapa: Aromatawai huringa ora (LCA)';
+
+  @override
+  String get guide_greenscore_lca_arg1_title =>
+      'He aro mātai pūtaiao o ngā kāwai kai';
+
+  @override
+  String get guide_greenscore_lca_arg1_text1 =>
+      'Mo ia waahanga hua, ka whakatauhia he tohu **tohu** ma te whakamahi i nga raraunga mai i te paataka taiao a Agribalyse (na ADEME me INRAE i hoahoa).';
+
+  @override
+  String get guide_greenscore_lca_arg1_text2 =>
+      '**Ko te tātaritanga o te huringa ora** he tikanga aromatawai paerewa mo te whakahaere i nga waahanga maha me nga paearu maha o te aromatawai taiao.';
+
+  @override
+  String get guide_greenscore_lca_arg1_text3 => '**Ka ine:**';
+
+  @override
+  String get guide_greenscore_lca_arg2_title => '6 nga waahanga whakaputa';
+
+  @override
+  String get guide_greenscore_lca_arg2_agriculture => 'Agriculture';
+
+  @override
+  String get guide_greenscore_lca_arg2_processing => 'Processing';
+
+  @override
+  String get guide_greenscore_lca_arg2_packaging => 'Packaging';
+
+  @override
+  String get guide_greenscore_lca_arg2_transportation => 'Transportation';
+
+  @override
+  String get guide_greenscore_lca_arg2_distribution => 'Distribution';
+
+  @override
+  String get guide_greenscore_lca_arg2_consumption => 'Consumption';
+
+  @override
+  String get guide_greenscore_lca_arg3_title => '14 nga tohu paanga taiao';
+
+  @override
+  String get guide_greenscore_lca_arg3_text1 => 'Huringa huarere/ tapuwae waro';
+
+  @override
+  String get guide_greenscore_lca_arg3_text2 =>
+      'Te paheketanga o te papa ozone';
+
+  @override
+  String get guide_greenscore_lca_arg3_text3 => 'Irirangi katote';
+
+  @override
+  String get guide_greenscore_lca_arg3_text4 => 'Whenua';
+
+  @override
+  String get guide_greenscore_lca_arg3_text5 => 'Te wai me te whakamahi kaha';
+
+  @override
+  String get guide_greenscore_lca_arg3_text6 => 'Te parahanga o te hau';
+
+  @override
+  String get guide_greenscore_lca_arg3_text7 =>
+      'Te wai moana me te wai māori (matūriki, waikawa, eutrophication)';
+
+  @override
+  String get guide_greenscore_lca_arg3_text8 => 'Te whakaheke i nga rauemi.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_title =>
+      'Nga putea me nga whiu';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_intro =>
+      'Ki te utu i nga hua pai ake i roto i tetahi waahanga, ka tukuna e matou nga putea me nga whiu i runga i te maha o nga tohu:';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_title =>
+      'Mode of production';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg1_text =>
+      'A bonus is awarded to products that have an official label, a label or a certification that guarantees environmental benefits (organic, fair trade, HVE, Label Rouge, Bleu Blanc Cœur, MSC/ASC).';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_title =>
+      'Origin of ingredients';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg2_text =>
+      'Ka whakawhiwhia he bonus i runga i te takenga mai o nga kai. Ka whai whakaaro tenei bonus ki te paanga ki te kawe waka me te kaupapa here taiao o ia whenua kaihanga.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_title =>
+      'Endangered species';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg3_text =>
+      'A penalty is given to products that contain ingredients that have significant negative impacts on biodiversity and ecosystems, such as palm oil, the production of which is responsible for massive deforestation.';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_title => 'Packaging';
+
+  @override
+  String get guide_greenscore_bonuses_penalties_arg4_text =>
+      'A penalty is calculated to take into account the circularity of packaging (use of recycled raw material and recyclability) and overpacking.';
+
+  @override
+  String get guide_greenscore_transparency_title =>
+      'An increased need for transparency to better measure and reduce environmental impacts';
+
+  @override
+  String get guide_greenscore_transparency_intro1 =>
+      'Kia tika ai te tatau i te Tohu-Kakariki, me whai korero kaore i te tino tohuhia ki runga i te kete (penei i te takenga mai me te paheketanga tika o ia whakauru) he iti nei ranei te waatea i roto i te ahua ka taea te whakamahi (penei i te raarangi o nga waahanga katoa o te kete me nga momo kirihou e whakamahia ana).';
+
+  @override
+  String get guide_greenscore_transparency_intro2 =>
+      'Ka whakamahia nga uara toharite ina kare ano enei korero i te watea, engari kei te karanga matou ki nga tangata katoa ki te awhina i a matou ki te kohikohi i enei korero ka tino whai hua mo te Green-Score engari mo etahi atu whakamahinga.';
+
+  @override
+  String get guide_greenscore_transparency_arg1_title =>
+      'Me pehea e taea ai e te tangata whenua te awhina';
+
+  @override
+  String get guide_greenscore_transparency_arg1_text =>
+      'Ka taea e nga tangata whenua katoa te awhina i a tatou ki te kohikohi me te hanga i nga korero kei runga i nga hua, ka taea ranei te tango mai i a raatau, penei i nga korero mo te kohinga: Mission Emballages: he pukapuka mahi tahi nui mo te kohinga mo nga hua kai katoa (i te reo Wīwī)';
+
+  @override
+  String get guide_greenscore_transparency_arg2_title =>
+      'Me pehea e taea ai e nga kaihanga te awhina';
+
+  @override
+  String get guide_greenscore_transparency_arg2_text =>
+      'Ka taea e nga Kaihanga te tuku mai i a raatau korero ki a maatau na roto i ta maatau papaahi koreutu mo nga kaihanga.';
+
+  @override
+  String get guide_greenscore_better_product_title =>
+      'Ko tehea hua te pai ake mo te ao?';
+
+  @override
+  String get guide_greenscore_better_product_arg1_title =>
+      'He uaua ki te korero';
+
+  @override
+  String get guide_greenscore_better_product_arg1_text =>
+      'Ko te kowhiri i te kai toiwhiua tetahi o nga mea tino kaha ka taea e tatou mo te ahuarangi, na te mea **kei a maatau punaha kai o te ao te kawenga mo te neke atu i te hauwha o nga tuku hau kati kati**.\n(Source: Poore & Nemecek, Pūtaiao, 2018).';
+
+  @override
+  String get guide_greenscore_better_product_arg2_title => 'Kei a koe te mana!';
+
+  @override
+  String get guide_greenscore_better_product_arg2_text =>
+      'Ko te rongo pai ko tenei ka homai he huarahi kaha ki te hanga huringa.\n**Ka kai tatou tata ki te 1,000 kai ia tau**. Koina te 1,000 whai waahi ki te **whiriwhiri i tetahi waahi pai ake mo te ao**!';
+
+  @override
+  String get guide_greenscore_better_product_arg3_title =>
+      'Ka awhina i te kawenga me te whakatau';
+
+  @override
+  String get guide_greenscore_better_product_arg3_text =>
+      'Ko te kowhiri i te kai toiwhiua he uaua. Kei te rangirua nga tapanga, ka ngaro nga korero. I hangaia te Green-Score kia ngawari ake, ka hoatu he tohu mo te taiao **marama**, **maataiiao**, me te **marama** mo nga hua kai, kei hea e hiahia ana koe: i a koe e hokohoko ana.';
+
+  @override
+  String get guide_greenscore_better_product_arg4_title => 'Puataata';
+
+  @override
+  String get guide_greenscore_better_product_arg4_text =>
+      'Kare i rite ki nga tapanga rangatira, ko te tatauranga Kakariki-Score he **tuwhera rawa** ka taea **manatokohia e tetahi**.';
+
+  @override
+  String get guide_nova_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_what_is_nova_title => 'He aha te ultra-tukatuka?';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph1 =>
+      'Ko nga roopu NOVA e korero ana ki a koe mo te taumata o te tukatuka kai.';
+
+  @override
+  String get guide_nova_what_is_nova_paragraph2 =>
+      'Ko te whakarōpūtanga NOVA ka taea te whakarōpū i nga kai ki roto i nga **4 roopu** i runga i to ratou **tohu o te tukatuka ahumahi** (te iti rawa o te tukatuka, o te kai karekau ranei, nga kai tunu kai, nga kai tukatuka, nga kai tino tukatuka).';
+
+  @override
+  String get guide_nova_logos_caption => 'Ko nga waitohu NOVA';
+
+  @override
+  String get guide_nova_groups_title => 'Ko nga roopu NOVA e wha';
+
+  @override
+  String get guide_nova_groups_intro =>
+      'E 4 nga roopu NOVA, ko te raruraru ko te Rōpū 4 - Nga kai kua tukatukahia.';
+
+  @override
+  String get guide_nova_groups_arg1_title =>
+      'He iti rawa nga kai kua tukatukahia, kaore ano kia tukatukahia';
+
+  @override
+  String get guide_nova_groups_arg1_text =>
+      'Ko nga kai kaore i tukatukahia (maori ranei) ko nga waahanga kai o te tipu (nga kakano, hua, rau, kakau, pakiaka) kararehe ranei (he uaua, whea, hua, miraka), tae atu ki te harore, te pukohu me te wai, i muri i te wehenga mai i te taiao.';
+
+  @override
+  String get guide_nova_groups_arg2_title => 'Processed culinary ingredients';
+
+  @override
+  String get guide_nova_groups_arg2_text =>
+      'Ko nga kai kai tukatuka, penei i te hinu, te pata, te huka, me te tote, he matū i ahu mai i nga kai a te Rōpū 1, mai i te taiao ranei na roto i nga tikanga penei i te pehi, te para, te huri, te mira, me te whakamaroke.';
+
+  @override
+  String get guide_nova_groups_arg3_title => 'Processed foods';
+
+  @override
+  String get guide_nova_groups_arg3_text =>
+      'Ko nga kai tukatuka, penei i nga huawhenua pounamu, nga ika kēne, nga hua o te tirikara, nga tiihi, me nga parāoa hou, ka mahia ma te taapiri i te tote, te hinu, te huka, me etahi atu matū mai i te Rōpū 2 ki te Rōpū 1 kai. Kei roto i nga mahinga nga momo tikanga tiaki, tunu kai ranei, a, mo te taro me te tiihi, ko te FERMENTATION kore-waipiro. Ko te nuinga o nga kai tukatuka e rua, e toru ranei nga kai, ka mohiohia he putanga whakarereke o nga kai Rōpū 1. Ka taea te kai i a raatau ake, i te nuinga ake, me te whakakotahi me etahi atu kai.';
+
+  @override
+  String get guide_nova_groups_arg4_title => 'Ultra-processed foods';
+
+  @override
+  String get guide_nova_groups_arg4_text =>
+      'Ko nga kai kua oti te tukatuka, penei i nga inu ngawari, nga paramanawa reka me nga paramanawa kua oti te takai, nga hua mīti kua oti te hanga, me nga rīhi tio kua oti te taka, ehara i te kai whakarerekē noa engari ko te hanga i te nuinga, i te katoa ranei mai i nga matū i ahu mai i nga kai me nga taapiri, he iti noa te kai o te Rōpū 1. Ko nga mea whakauru kei roto i enei hanganga ko te nuinga o nga mea ka kitea i roto i nga kai tukatuka, penei i te huka, te hinu, te ngako, te tote ranei. Heoi ano, kei roto ano i nga hua tino-tukatuka etahi atu puna o te kaha me nga matūkai kaore i te whakamahia i roto i nga mahi tunu kai. Ko etahi o enei ka tangohia tika mai i nga kai, penei i te casein, lactose, whey, me te gluten.';
+
+  @override
+  String get guide_nova_explanations_title =>
+      'Nga raruraru ki te tukatuka ultra';
+
+  @override
+  String get guide_nova_explanations_arg1_title =>
+      'Te tino tukatuka o nga kai kai';
+
+  @override
+  String get guide_nova_explanations_arg1_text =>
+      'He maha nga mea i ahu mai i te tukatuka ano o nga mea kai, penei i te hinu hauwai, i nga hinu whakahiahia ranei, nga pūmua hauwai, te wehea o te pūmua soy, te maltodextrin, te huka huri, me te tirikara witi-fructose teitei.';
+
+  @override
+  String get guide_nova_explanations_arg2_title =>
+      'Ko nga taapiri kei tua atu i te haumaru kai parakore';
+
+  @override
+  String get guide_nova_explanations_arg2_text =>
+      'Ko nga taapiri kei roto i nga kai tino tukatuka ko etahi e whakamahia ana i roto i nga kai tukatuka, penei i te whakamarumaru, te antioxidants, me te whakapumau. Ko nga karaehe o nga taapiri ka kitea anake i roto i nga hua tino tukatuka ko era e whakamahia ana hei tauira, hei whakarei ake ranei i nga ahuatanga o nga kai, hei huna ranei i nga ahuatanga o te hua whakamutunga. Ko enei taapiri ko nga tae me etahi atu tae, he whakapumau tae; nga mea kakara, te whakanui i te reka, te kai reka kore-huka; me nga awhina tukatuka penei i te warowai, te whakau, te pupuhi me te aukati i te pupuhi, te whakakore i te hukahuka, te aukati i te keke me te karaehe, te whakaemulsifiers, te whakahiato, me te humectants.';
+
+  @override
+  String get guide_nova_explanations_arg3_title =>
+      'Kare e taea e koe te mahi i te kainga';
+
+  @override
+  String get guide_nova_explanations_arg3_text =>
+      'He maha nga raupapa o nga tukanga e whakamahia ana ki te whakakotahi i nga kai maha me te hanga i te hua whakamutunga (no reira \'tukatuka-nui\'). Kei roto i nga tukanga he maha nga mea karekau he orite o te kainga, penei i te hauwai me te hauwai, te tangohanga me te whakarewa, me te tukatuka i mua mo te parai.';
+
+  @override
+  String get guide_nova_explanations_arg4_title =>
+      'Ko nga ahuatanga kino me te putea o te tukatuka ultra';
+
+  @override
+  String get guide_nova_explanations_arg4_text =>
+      'Ko te kaupapa katoa o te tukatuka ultra ko te hanga parani, watea (te roa, kua rite ki te kai), ataahua (he tino reka) me te tino whai hua (nga kai iti-utu) i hangaia hei whakakore i nga roopu kai katoa. Ko nga hua kai kua oti te tukatuka i te nuinga o te waa he tino ataahua, ka kaha te maakete.';
 
   @override
   String get preview_badge => 'Preview';
@@ -4529,6 +4852,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get product_page_tab_folksonomy => 'Folksonomy';
 
   @override
+  String get prices_products_empty_title => 'Kaore he utu e waatea ana';
+
+  @override
+  String get prices_products_empty_explanation =>
+      'Ko koe te tuatahi ki te koha!';
+
+  @override
   String prices_products_list_length_many_pages(int pageSize, int total) {
     return 'Top $pageSize products (total: $total)';
   }
@@ -4567,7 +4897,11 @@ class AppLocalizationsMi extends AppLocalizations {
   String get nutrition_facts_extract_button_text => 'Extract now';
 
   @override
-  String get nutrition_facts_extract_succesful => 'Extraction succesful';
+  String get nutrition_facts_extract_in_progress =>
+      'Kei te haere tonu te tangohanga…';
+
+  @override
+  String get nutrition_facts_extract_successful => 'I angitu te tangohanga';
 
   @override
   String get nutrition_facts_extract_failed =>
@@ -4698,6 +5032,504 @@ class AppLocalizationsMi extends AppLocalizations {
   String get product_edit_robotoff_proof => 'Proof';
 
   @override
+  String get preferences_card_general => 'General';
+
+  @override
+  String get preferences_prices_title => 'Prices';
+
+  @override
+  String get preferences_prices_subtitle => 'Whakahaerehia o hiahia utu';
+
+  @override
+  String get preferences_card_project => 'Ko te kaupapa Open Food Facts';
+
+  @override
+  String get preferences_contribute_title => 'Contribute';
+
+  @override
+  String get preferences_my_contributions_title => 'My contributions';
+
+  @override
+  String get preferences_my_stats_title => 'Ko aku tatauranga';
+
+  @override
+  String get preferences_contribute_subtitle =>
+      'Whakamaoritia, whakapai ake i a maatau taputapu…';
+
+  @override
+  String get preferences_connect_title => 'Tūhono';
+
+  @override
+  String get preferences_connect_subtitle =>
+      'Totoro atu, whai mai ranei i a maatau i runga i nga paapori pāpori';
+
+  @override
+  String get preferences_support_title => 'Make a donation';
+
+  @override
+  String get preferences_support_subtitle =>
+      'Awhina mai ki te whakamohio i nga miriona kaihoko huri noa i te ao';
+
+  @override
+  String get preferences_card_help => 'Āwhina & Tautoko';
+
+  @override
+  String get preferences_faq_title => 'FAQ';
+
+  @override
+  String get preferences_faq_subtitle => 'Tikina nga whakautu ki o patai';
+
+  @override
+  String get logged_out => 'Kua takiuru ki waho';
+
+  @override
+  String get preferences_app_bar_message =>
+      'Mauruuru koe mo te noho ko tetahi o o maatau mema!';
+
+  @override
+  String get preferences_app_bar_products_modified => 'Products modified';
+
+  @override
+  String get preferences_app_bar_prices_added => 'Prices added';
+
+  @override
+  String get preferences_app_bar_see_all_stats =>
+      'Tirohia nga tatauranga katoa';
+
+  @override
+  String external_search_tile_title(String provider, String keyword) {
+    return 'Rapua $provider mo \"$keyword\"';
+  }
+
+  @override
+  String get preferences_app_bar_search_hint =>
+      'Rapua he tautuhinga (hei tauira Nutri-Score)';
+
+  @override
+  String get preferences_accessibility_show_emoji =>
+      'Te urunga: Whakaatuhia te emoji';
+
+  @override
+  String get preferences_accessibility_remove_colors => 'Te urunga: Tango tae';
+
+  @override
+  String get preferences_app_settings_products => 'Products';
+
+  @override
+  String get preferences_card_about => 'About';
+
+  @override
+  String get preferences_legal_information_title => 'Nga korero ture';
+
+  @override
+  String get preferences_legal_information_subtitle =>
+      'Nga tikanga whakamahi, kaupapa here tūmataiti, me etahi atu';
+
+  @override
+  String get preferences_terms_of_use => 'Terms of use';
+
+  @override
+  String get preferences_legal_mentions => 'Legal mentions';
+
+  @override
+  String get preferences_legal_header =>
+      'Ko Open Food Facts he papaa raraunga hua kai **i hangaia e te katoa, ma te katoa**.\nKa taea e koe te whakamahi hei whiriwhiri kai pai ake, a, i te mea he **tuwhera raraunga**, ka taea e te tangata **whakamahi ano mo tetahi kaupapa**.';
+
+  @override
+  String get preferences_privacy_policy => 'Privacy policy';
+
+  @override
+  String get preferences_licenses => 'Raihana';
+
+  @override
+  String get preferences_about_app_title => 'Mō te taupānga';
+
+  @override
+  String get preferences_about_app_subtitle =>
+      'Nga korero hangarau, nga korero kaiwhakawhanake, me etahi atu';
+
+  @override
+  String get preferences_card_information => 'Information';
+
+  @override
+  String get preferences_version_number_title => 'Tau putanga';
+
+  @override
+  String get preferences_scanner_title => 'Matawai';
+
+  @override
+  String get preferences_app_store => 'Toa taupānga';
+
+  @override
+  String get preferences_app_system_settings => 'Tautuhinga punaha';
+
+  @override
+  String get preferences_source_code => 'Uru ki te waehere puna';
+
+  @override
+  String get preferences_source_code_subtitle =>
+      'A ka timata ki te whai paanga mo nga miriona';
+
+  @override
+  String get preferences_add_prices => 'Add prices';
+
+  @override
+  String get preferences_complete_products => 'Complete products';
+
+  @override
+  String get preferences_tips => 'Tohutohu';
+
+  @override
+  String get tips_discover_nutriscore => 'Tirohia te Nutri-Score hou';
+
+  @override
+  String get preferences_on_off_website_subtitle =>
+      'I runga i te paetukutuku Open Food Facts';
+
+  @override
+  String get preferences_manage_account_title => 'Whakahaerehia taku kaute';
+
+  @override
+  String get preferences_manage_account_tooltip => 'Whakahaerehia to putea';
+
+  @override
+  String get preferences_change_password_title => 'Hurihia taku kupuhipa';
+
+  @override
+  String get preferences_danger_zone => 'Rohe mōrearea';
+
+  @override
+  String get preferences_account_deletion_subtitle =>
+      'Ka ngaro katoa o koutou takoha';
+
+  @override
+  String get preferences_contributions_title => 'Contributions';
+
+  @override
+  String get preferences_dev_mode_app_settings_title => 'Tautuhinga taupānga';
+
+  @override
+  String get preferences_dev_mode_offline_data_subtitle =>
+      'He huarahi tino whakamatautau ki te matawai i nga hua tuimotu';
+
+  @override
+  String get preferences_dev_mode_refresh_products_title =>
+      'Tāmatahia ngā hua katoa mai i te tūmau';
+
+  @override
+  String get preferences_dev_mode_refresh_products_subtitle =>
+      'Tena koa karohia te mahi ki te kore e tino tika';
+
+  @override
+  String get preferences_dev_mode_demo_mode_title => 'Aratau Demo';
+
+  @override
+  String get preferences_dev_mode_add_cards_title =>
+      'Tāpiri kāri ki te matawai';
+
+  @override
+  String get preferences_dev_mode_add_cards_subtitle =>
+      'Ka taapirihia nga hua tauira e 3 ki te matawai';
+
+  @override
+  String get preferences_dev_mode_folksonomy_host_title =>
+      'Kaihautu Folksonomy';
+
+  @override
+  String preferences_dev_mode_folksonomy_host_subtitle(String host) {
+    return 'Kaihautū: $host';
+  }
+
+  @override
+  String get preferences_dev_mode_accessibility_experiments_title =>
+      'Nga whakamatautau urunga';
+
+  @override
+  String get preferences_dev_mode_multi_products_selection_title =>
+      'He maha nga whiringa hua mo nga utu';
+
+  @override
+  String get preferences_dev_mode_user_ordered_kp_title =>
+      'I whakahauhia e te kaiwhakamahi nga panui matauranga';
+
+  @override
+  String get preferences_dev_mode_location_search_title =>
+      'Te urunga rangitahi ki te rapu waahi';
+
+  @override
+  String get preferences_dev_mode_comparison_title =>
+      'Whakataurite taha taha mo nga hua 2, 3 ranei';
+
+  @override
+  String get preferences_dev_mode_product_list_import_title =>
+      'Kawemai rarangi hua';
+
+  @override
+  String get preferences_faq_scores_methodologies_title =>
+      'Nga kaute me nga tikanga';
+
+  @override
+  String get preferences_faq_nutriscore_subtitle =>
+      'Tirohia me pehea te tatau i te Nutri-Score';
+
+  @override
+  String get preferences_faq_nutriscore_v2_subtitle =>
+      'Tirohia nga huringa matua ki te tikanga';
+
+  @override
+  String get preferences_faq_discover_project_title => 'Discover the project';
+
+  @override
+  String get preferences_faq_discover_off_title =>
+      'Tirohia nga Meka Kai Tuwhera';
+
+  @override
+  String get preferences_faq_faq_title => 'FAQ - Uiuinga Uiuinga';
+
+  @override
+  String get preferences_faq_off_ngo_title => 'Ko te NGO Open Food Facts';
+
+  @override
+  String get preferences_about_information_title => 'Information';
+
+  @override
+  String get preferences_connect_community_updates_title =>
+      'Tikina nga whakahou hapori';
+
+  @override
+  String get preferences_connect_newsletter_subtitle =>
+      'Noho i roto i te hononga ki te taupānga me te rongo hapori';
+
+  @override
+  String get preferences_connect_community_calendar_title =>
+      'Subscribe to our community calendar';
+
+  @override
+  String get preferences_connect_community_calendar_subtitle =>
+      'Whakauru ma te haere ki tetahi o a maatau huihuinga mariko';
+
+  @override
+  String get preferences_connect_blog_title => 'The Open Food Facts blog';
+
+  @override
+  String get preferences_connect_blog_subtitle =>
+      'Tikina nga korero hou, i te wa e tupu ana';
+
+  @override
+  String get preferences_connect_community_help_title =>
+      'Tikina he awhina mai i te hapori';
+
+  @override
+  String get preferences_connect_improve_app_title =>
+      'Awhina mai ki te whakapai ake i te taupānga';
+
+  @override
+  String get preferences_connect_debug_info_title =>
+      'Tukuna mai nga korero patuiro';
+
+  @override
+  String get preferences_connect_debug_info_subtitle =>
+      'Tukuna mai he imeera me nga korero mo te patuiro';
+
+  @override
+  String get preferences_connect_feedback_title =>
+      'Tukuna mai he urupare mo te taupānga';
+
+  @override
+  String get preferences_connect_feedback_subtitle =>
+      'Awhina ki te hanga i te heke mai o te taupānga';
+
+  @override
+  String get preferences_connect_survey_title =>
+      'Tangohia te rangahau taupānga';
+
+  @override
+  String get preferences_connect_survey_subtitle =>
+      'Awhina mai ki a maatau ki te mohio ki nga mea hei hanga i muri mai';
+
+  @override
+  String get preferences_connect_professionals_title => 'Ngaio';
+
+  @override
+  String get preferences_connect_pro_subtitle =>
+      'He tino kore utu, ka whakarite i nga raraunga tika mo te 500 taupānga me te miriona o nga kaihoko. Mahi-whaiaro, he hototahi ki o PIM, ripanga ranei (XLSX)';
+
+  @override
+  String get preferences_connect_pro_email_subtitle =>
+      'Whakapa atu ki te timata';
+
+  @override
+  String get preferences_connect_press_title => 'Press';
+
+  @override
+  String get preferences_connect_press_page_subtitle =>
+      'Tikina nga rauemi katoa e hiahia ana koe mo to ripoata';
+
+  @override
+  String get preferences_connect_press_email_subtitle =>
+      'Whakapa atu ki nga patai a te perehi, ki te whakamohio mai ranei mo to ripoata';
+
+  @override
+  String get preferences_contribute_active_volunteer_title =>
+      'Hoko he tūao mātātoa';
+
+  @override
+  String get preferences_contribute_skill_pool_subtitle =>
+      'Whanaketanga, Whakawhitiwhitinga, Hoahoa… he momo mahi tuuao, tohungatanga ranei ka mihia!';
+
+  @override
+  String get preferences_contribute_how_to_subtitle =>
+      'Tirohia etahi o nga huarahi maha ka taea e koe te koha';
+
+  @override
+  String get preferences_contribute_mobile_dev_title =>
+      'Te whanaketanga taupānga pūkoro';
+
+  @override
+  String get preferences_contribute_sw_dev_subtitle =>
+      'Akohia me pehea te koha ki te whanaketanga rorohiko';
+
+  @override
+  String get preferences_contribute_alpha_subtitle =>
+      'Nga hanga koretake o ia ra, nga ahuatanga hou';
+
+  @override
+  String get preferences_contribute_local_community_title =>
+      'Whakanuia to hapori rohe';
+
+  @override
+  String get preferences_contribute_translate_subtitle =>
+      'Awhina i te rorohiko, i nga ihirangi, i nga whakamaoritanga tātaritanga whakauru';
+
+  @override
+  String get preferences_contribute_share_subtitle =>
+      'Kua whakaritea e matou he tauira iti hei awhina i a koe :-)';
+
+  @override
+  String get preferences_contribute_country_subtitle =>
+      'Ko nga huarahi ngawari ki te whakatipu kai i to whenua';
+
+  @override
+  String get preferences_contribute_data_quality_title => 'Data quality';
+
+  @override
+  String get preferences_contribute_data_quality_team_title =>
+      'Hono atu ki te roopu kounga raraunga';
+
+  @override
+  String get preferences_contribute_data_quality_team_subtitle =>
+      'Whakauru mai ki ta maatau mahi ki te whakarite kia oti, kia tika hoki te paataka raraunga';
+
+  @override
+  String get preferences_contributions_products_added_title =>
+      'Nga hua taapiri';
+
+  @override
+  String get preferences_contributions_new_products_subtitle =>
+      'Ko nga hua hou i tapirihia e au ki te Open Food Facts';
+
+  @override
+  String get preferences_contributions_to_be_completed_title =>
+      'Nga hua me whakaoti e au';
+
+  @override
+  String get preferences_contributions_all_incomplete_title =>
+      'Katoa nga hua kaore i oti';
+
+  @override
+  String get preferences_my_contributions_prices_title => 'Prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_title => 'My prices';
+
+  @override
+  String get preferences_my_contributions_my_prices_subtitle =>
+      'Aku utu, aku tohu…';
+
+  @override
+  String get preferences_contributions_all_incomplete_subtitle =>
+      'Nga hua ka taea e koe te awhina ki te whakaoti';
+
+  @override
+  String get preferences_contributions_categorize_subtitle =>
+      'Awhina ki te tatau i te Nutri-Score & Green-Score i to whenua';
+
+  @override
+  String get preferences_prices_user_prices_subtitle =>
+      'Nga utu i hoatu e ahau';
+
+  @override
+  String get preferences_prices_proofs_subtitle => 'Nga tohu utu me nga riki';
+
+  @override
+  String get preferences_prices_add_receipt_subtitle =>
+      'Tangohia nga whakaahua o o rihīti me te matawai i nga tohu paarua e pa ana';
+
+  @override
+  String get preferences_prices_add_price_tags_subtitle =>
+      'Tangohia nga whakaahua o nga utu i roto i te toa';
+
+  @override
+  String get preferences_prices_newest_title => 'Nga utu hou';
+
+  @override
+  String get preferences_prices_newest_subtitle =>
+      'Ko nga utu hou kua taapirihia e te hapori Open Prices';
+
+  @override
+  String get preferences_prices_top_contributors_title =>
+      'Ko nga kaikoha me te nuinga o nga utu';
+
+  @override
+  String get preferences_prices_metrics_title =>
+      'Whakatuwherahia nga inenga Utu';
+
+  @override
+  String get preferences_prices_metrics_subtitle =>
+      'Whaia te whanaketanga o te kaupapa';
+
+  @override
+  String get preferences_prices_ways_contribute_title =>
+      'Nga huarahi ki te koha';
+
+  @override
+  String get preferences_prices_validation_assistant_subtitle =>
+      'Whakapumauhia nga utu kua taapirihia e koe, e etahi atu ranei, me te awhina a AI';
+
+  @override
+  String get preferences_prices_multiple_proof_subtitle =>
+      'Hohoro te taapiri i nga rihīti maha, i nga whakaahua ranei o nga whata mai i to pukapuka kamera';
+
+  @override
+  String get preferences_prices_challenges_title => 'Nga wero o ia marama';
+
+  @override
+  String get preferences_prices_challenges_subtitle =>
+      'Me whai waahi ki nga rapu kaupapa mo ia marama ki te kohi utu';
+
+  @override
+  String get preferences_prices_loyalty_data_title =>
+      'Hokihia to raraunga pono';
+
+  @override
+  String get preferences_prices_gdpr_subtitle =>
+      'Akohia me pehea te tono i o raraunga';
+
+  @override
+  String get preferences_page_customize_app_title => 'Whakaritehia te taupānga';
+
+  @override
+  String get preferences_page_contribute_project_title => 'Toha ki te kaupapa';
+
+  @override
+  String get preferences_page_contribute_project_subtitle =>
+      'Nga huarahi ngawari hei awhina i nga Meka Kai Tuwhera';
+
+  @override
+  String get preferences_page_faq_subtitle =>
+      'Nga tikanga kaute, awhina, me etahi atu mo te kaupapa';
+
+  @override
   String get product_edit_robotoff_positive_button => 'Whakaaetia te whakaaro';
 
   @override
@@ -4742,4 +5574,103 @@ class AppLocalizationsMi extends AppLocalizations {
   @override
   String get prices_proof_error =>
       'I rahua te motuhēhēnga, kāore i taea te tiki tohu';
+
+  @override
+  String proofs_count_with_total(int count, int total) {
+    return '$count o $total tohu';
+  }
+
+  @override
+  String proof_count(int count) {
+    return '$count proofs';
+  }
+
+  @override
+  String contributors_count_with_total(int count, int total) {
+    return '$count o $total kaituku';
+  }
+
+  @override
+  String contributors_count(int count) {
+    return '$count contributors';
+  }
+
+  @override
+  String prices_locations_count_with_total(int count, int total) {
+    return '$count o $total wāhi';
+  }
+
+  @override
+  String prices_locations_count(int count) {
+    return '$count wāhi';
+  }
+
+  @override
+  String get restart_to_apply_message =>
+      'Tīmataria anō te taupānga hei whakamahi i ngā huringa.';
+
+  @override
+  String get preferences_app_settings_graphical_interface_title =>
+      'Atanga whakairoiro';
+
+  @override
+  String get preferences_app_settings_media_title => 'Media';
+
+  @override
+  String get preferences_about_app_development_title => 'Development';
+
+  @override
+  String get preferences_page_open_food_facts_labs_title =>
+      'Whakatuwherahia nga Waahanga Meka Kai';
+
+  @override
+  String get preferences_root_account_title => 'Account';
+
+  @override
+  String get preferences_contribute_translate_header =>
+      'Kawea mai nga Meka Kai Tuwhera ki to reo';
+
+  @override
+  String get preferences_contribute_enroll_alpha =>
+      'Whakauruhia ki te putanga alpha o te taupānga';
+
+  @override
+  String get preferences_dev_mode_section_data =>
+      'Nga takoha me nga raraunga hua';
+
+  @override
+  String get preferences_dev_preferences_show_folksonomy_title =>
+      'Kaua e whakaatu Folksonomy';
+
+  @override
+  String get preferences_account_title => 'Account';
+
+  @override
+  String prices_adding_timestamp_tooltip(String created) {
+    return 'Kua taapiri atu ki $created';
+  }
+
+  @override
+  String get location_map_details_title => 'Location details';
+
+  @override
+  String get location_map_details_name => 'Name';
+
+  @override
+  String get location_map_details_street => 'Street';
+
+  @override
+  String get location_map_details_city => 'City';
+
+  @override
+  String get location_map_details_postcode => 'Postcode';
+
+  @override
+  String get location_map_details_country => 'Country';
+
+  @override
+  String get location_map_details_coordinates => 'Coordinates';
+
+  @override
+  String get location_map_details_osm_id => 'OSM ID';
 }

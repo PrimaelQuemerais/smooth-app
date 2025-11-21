@@ -27,8 +27,9 @@ enum UserSearchType {
     final int pageSize,
     final int pageNumber,
     final OpenFoodFactsLanguage language,
-    final List<ProductField> fields,
-  ) => ProductSearchQueryConfiguration(
+    final List<ProductField> fields, {
+    final bool activateKnowledgePanelsSimplified = true,
+  }) => ProductSearchQueryConfiguration(
     parametersList: <Parameter>[
       TagFilter.fromType(tagFilterType: type, tagName: userId),
       PageSize(size: pageSize),
@@ -41,6 +42,7 @@ enum UserSearchType {
     language: language,
     fields: fields,
     version: ProductQuery.productQueryVersion,
+    activateKnowledgePanelsSimplified: activateKnowledgePanelsSimplified,
   );
 }
 

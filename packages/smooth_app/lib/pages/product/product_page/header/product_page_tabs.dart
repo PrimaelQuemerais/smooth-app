@@ -13,7 +13,6 @@ import 'package:smooth_app/pages/prices/get_prices_model.dart';
 import 'package:smooth_app/pages/prices/price_meta_product.dart';
 import 'package:smooth_app/pages/prices/prices_card.dart';
 import 'package:smooth_app/pages/prices/product_price_refresher.dart';
-import 'package:smooth_app/pages/product/website_card.dart';
 import 'package:smooth_app/query/product_query.dart';
 import 'package:smooth_app/themes/smooth_theme.dart';
 import 'package:smooth_app/themes/smooth_theme_colors.dart';
@@ -100,43 +99,85 @@ class ProductPageTabsGenerator {
 
     final List<KnowledgePanelElement> roots =
         KnowledgePanelsBuilder.getRootPanelElements(product);
+
     for (final KnowledgePanelElement root in roots) {
       final String? id = root.panelElement?.panelId;
+
       if (id == null) {
         continue;
       }
 
-      List<Widget> children = KnowledgePanelsBuilder.getChildren(
-        context,
-        panelElement: root,
-        product: product,
-        onboardingMode: false,
-      );
-
-      if (children.isEmpty) {
-        continue;
-      }
-
-      final KnowledgePanelTitle knowledgePanelTitle =
-          children.first as KnowledgePanelTitle;
-
-      children = children.sublist(1);
-
-      tabs.add(
-        ProductPageTab(
-          id: id,
-          labelBuilder: (_) => knowledgePanelTitle.title,
-          prefix: _extractPrefix(product, knowledgePanelTitle),
-          builder: (_, _) => ListView.builder(
-            padding: EdgeInsetsDirectional.zero,
-            itemCount: children.length,
-            itemBuilder: (BuildContext context, int index) => children[index],
+      if (id == 'prices_card') {
+        tabs.add(
+          ProductPageTab(
+            id: ProductPageHarcodedTabs.PRICES.key,
+            labelBuilder: (BuildContext context) =>
+                AppLocalizations.of(context).product_page_tab_prices,
+            builder: (_, Product product) => ListView(
+              padding: EdgeInsetsDirectional.zero,
+              children: <Widget>[PricesCard(product)],
+            ),
+            suffix: FutureBuilder<int?>(
+              future: _getPricesTotal(product, context),
+              builder: (BuildContext context, AsyncSnapshot<int?> snapshot) {
+                if (!snapshot.hasData || snapshot.data == null) {
+                  return EMPTY_WIDGET;
+                }
+                return _ProductPageTabBadge(snapshot.data!);
+              },
+            ),
           ),
-        ),
-      );
-    }
+        );
+      } else if (id == 'folksonomy_card') {
+        tabs.add(
+          ProductPageTab(
+            id: ProductPageHarcodedTabs.FOLKSONOMY.key,
+            labelBuilder: (BuildContext context) =>
+                AppLocalizations.of(context).product_page_tab_folksonomy,
+            builder: (_, Product product) => FolksonomyCard(product),
+            suffix: FutureBuilder<int?>(
+              future: _getFolksonomyTotal(product),
+              builder: (BuildContext context, AsyncSnapshot<int?> snapshot) {
+                if (!snapshot.hasData || snapshot.data == null) {
+                  return EMPTY_WIDGET;
+                }
+                return _ProductPageTabBadge(snapshot.data!);
+              },
+            ),
+          ),
+        );
+      } else {
+        List<Widget> children = KnowledgePanelsBuilder.getChildren(
+          context,
+          panelElement: root,
+          product: product,
+          onboardingMode: false,
+          simplified: true,
+        );
 
-    _addHardCodedTabs(context, product, tabs);
+        if (children.isEmpty) {
+          continue;
+        }
+
+        final KnowledgePanelTitle knowledgePanelTitle =
+            children.first as KnowledgePanelTitle;
+
+        children = children.sublist(1);
+
+        tabs.add(
+          ProductPageTab(
+            id: id,
+            labelBuilder: (_) => knowledgePanelTitle.title,
+            prefix: _extractPrefix(product, knowledgePanelTitle),
+            builder: (_, _) => ListView.builder(
+              padding: EdgeInsetsDirectional.zero,
+              itemCount: children.length,
+              itemBuilder: (BuildContext context, int index) => children[index],
+            ),
+          ),
+        );
+      }
+    }
 
     final List<String> order = context.read<UserPreferences>().productPageTabs;
 
@@ -153,80 +194,6 @@ class ProductPageTabsGenerator {
         return indexA - indexB;
       });
     }
-
-    return tabs;
-  }
-
-  List<ProductPageTab> _addHardCodedTabs(
-    BuildContext context,
-    Product product,
-    List<ProductPageTab> tabs,
-  ) {
-    /* until we have something interesting to put there
-    tabs.insert(
-      0,
-      ProductPageTab(
-        id: ProductPageHarcodedTabs.FOR_ME.key,
-        labelBuilder: (BuildContext context) =>
-            AppLocalizations.of(context).product_page_tab_for_me,
-        builder: (BuildContext context, _) => ListView(
-          padding: EdgeInsetsDirectional.zero,
-          children: const <Widget>[],
-        ),
-      ),
-    );
-    */
-    if (product.website?.trim().isNotEmpty == true) {
-      tabs.add(
-        ProductPageTab(
-          id: ProductPageHarcodedTabs.WEBSITE.key,
-          labelBuilder: (BuildContext context) =>
-              AppLocalizations.of(context).product_page_tab_website,
-          builder: (_, Product product) => ListView(
-            padding: EdgeInsetsDirectional.zero,
-            children: <Widget>[WebsiteCard(product.website!)],
-          ),
-        ),
-      );
-    }
-    tabs.add(
-      ProductPageTab(
-        id: ProductPageHarcodedTabs.PRICES.key,
-        labelBuilder: (BuildContext context) =>
-            AppLocalizations.of(context).product_page_tab_prices,
-        builder: (_, Product product) => ListView(
-          padding: EdgeInsetsDirectional.zero,
-          children: <Widget>[PricesCard(product)],
-        ),
-        suffix: FutureBuilder<int?>(
-          future: _getPricesTotal(product, context),
-          builder: (BuildContext context, AsyncSnapshot<int?> snapshot) {
-            if (!snapshot.hasData || snapshot.data == null) {
-              return EMPTY_WIDGET;
-            }
-            return _ProductPageTabBadge(snapshot.data!);
-          },
-        ),
-      ),
-    );
-
-    tabs.add(
-      ProductPageTab(
-        id: ProductPageHarcodedTabs.FOLKSONOMY.key,
-        labelBuilder: (BuildContext context) =>
-            AppLocalizations.of(context).product_page_tab_folksonomy,
-        builder: (_, Product product) => FolksonomyCard(product),
-        suffix: FutureBuilder<int?>(
-          future: _getFolksonomyTotal(product),
-          builder: (BuildContext context, AsyncSnapshot<int?> snapshot) {
-            if (!snapshot.hasData || snapshot.data == null) {
-              return EMPTY_WIDGET;
-            }
-            return _ProductPageTabBadge(snapshot.data!);
-          },
-        ),
-      ),
-    );
 
     return tabs;
   }

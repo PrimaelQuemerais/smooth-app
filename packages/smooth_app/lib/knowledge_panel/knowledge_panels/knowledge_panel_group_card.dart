@@ -85,15 +85,10 @@ class KnowledgePanelGroupCard extends StatelessWidget {
               ),
             ),
           for (final String panelId in groupElement.panelIds)
-            Padding(
-              padding: const EdgeInsetsDirectional.symmetric(
-                horizontal: VERY_SMALL_SPACE,
-              ),
-              child: KnowledgePanelCard(
-                panelId: panelId,
-                product: product,
-                isClickable: isClickable,
-              ),
+            KnowledgePanelCard(
+              panelId: panelId,
+              product: product,
+              isClickable: isClickable,
             ),
         ],
       ),

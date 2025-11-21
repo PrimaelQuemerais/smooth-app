@@ -64,21 +64,22 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; fetchProductTags() async {
-  try {
+  if (_tags.isEmpty) {
     value = const FolksonomyStateLoading();
+  }
 
-    final Map&lt;String, ProductTag&gt; tags =
-        await FolksonomyAPIClient.getProductTags(
-          barcode: barcode,
-          uriHelper: ProductQuery.uriFolksonomyHelper,
-        );
+  unawaited(_refreshDisplayableTags());
 
-    _tags.clear();
-    _tags.addAll(tags.values);
-
-    value = FolksonomyStateLoaded(tags: _tags);
+  try {
+    await BackgroundTaskFolksonomy.serverRefresh(
+      barcode,
+      _daoFolksonomy,
+      _localDatabase,
+    );
   } catch (e) {
-    value = FolksonomyStateError(error: e);
+    if (_tags.isEmpty) {
+      value = FolksonomyStateError(error: e);
+    }
   }
 }</code></pre>
 </section>
@@ -120,7 +121,6 @@
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/deleteTag.html">deleteTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/editTag.html">editTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/fetchProductTags.html">fetchProductTags</a></li>
-    <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/markAsConsumed.html">markAsConsumed</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
 

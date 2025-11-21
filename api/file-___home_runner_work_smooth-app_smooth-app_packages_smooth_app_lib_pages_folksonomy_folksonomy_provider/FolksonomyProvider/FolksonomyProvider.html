@@ -49,7 +49,8 @@
 </h1></div>
 
     <section class="multi-line-signature">
-      <span class="name ">FolksonomyProvider</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="-param-barcode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">barcode</span></span></li>
+      <span class="name ">FolksonomyProvider</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="-param-barcode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">barcode</span>, </span></li>
+<li><span class="parameter" id="-param-_localDatabase"><span class="type-annotation">dynamic</span> <span class="parameter-name">_localDatabase</span></span></li>
 </ol>)
     </section>
 
@@ -59,8 +60,11 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">FolksonomyProvider(this.barcode) : super(const FolksonomyStateLoading()) {
-  fetchProductTags();
+  <pre class="language-dart"><code class="language-dart">FolksonomyProvider(this.barcode, this._localDatabase)
+  : _daoFolksonomy = DaoFolksonomy(_localDatabase),
+    _daoTransientFolksonomy = DaoTransientFolksonomy(_localDatabase),
+    super(const FolksonomyStateLoading()) {
+  unawaited(fetchProductTags());
 }</code></pre>
 </section>
 
@@ -101,7 +105,6 @@
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/deleteTag.html">deleteTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/editTag.html">editTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/fetchProductTags.html">fetchProductTags</a></li>
-    <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/markAsConsumed.html">markAsConsumed</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
 

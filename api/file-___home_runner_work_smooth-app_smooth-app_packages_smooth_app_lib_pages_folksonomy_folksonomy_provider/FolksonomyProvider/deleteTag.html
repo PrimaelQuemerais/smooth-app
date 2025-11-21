@@ -52,8 +52,7 @@
       
 
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
-<span class="name ">deleteTag</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteTag-param-context"><span class="type-annotation">dynamic</span> <span class="parameter-name">context</span>, </span></li>
-<li><span class="parameter" id="deleteTag-param-key"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span></span></li>
+<span class="name ">deleteTag</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteTag-param-key"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span></span></li>
 </ol>)
 
       
@@ -65,34 +64,24 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; deleteTag(BuildContext context, String key) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; deleteTag(String key) async {
   try {
-    final String? bearerToken = await _getBearerToken(context);
-    if (bearerToken == null) {
-      return;
-    }
-
-    final ProductTag? tag = _getTag(key);
-    if (tag == null) {
-      throw Exception(&#39;Tag not found&#39;);
-    }
-
-    await FolksonomyAPIClient.deleteProductTag(
+    final ProductTag tagToDelete = ProductTag(
       barcode: barcode,
       key: key,
-      version: tag.version,
-      bearerToken: bearerToken,
-      uriHelper: ProductQuery.uriFolksonomyHelper,
+      value: &#39;&#39;,
+      owner: &#39;&#39;,
+      version: _getCurrentTagVersion(key),
+      editor: &#39;&#39;,
+      lastEdit: DateTime.now(),
+      comment: &#39;&#39;,
     );
 
-    final int position = _getPosition(key);
-    _tags.removeAt(position);
-
-    value = FolksonomyStateRemovedItem(
-      tags: _tags,
-      removedPosition: position,
-      item: tag,
+    await _addOperation(
+      barcode,
+      FolksonomyOperation(type: FolksonomyAction.remove, tag: tagToDelete),
     );
+    unawaited(_refreshDisplayableTags());
   } catch (e) {
     value = FolksonomyStateError(
       error: e,
@@ -140,7 +129,6 @@
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/deleteTag.html">deleteTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/editTag.html">editTag</a></li>
     <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/fetchProductTags.html">fetchProductTags</a></li>
-    <li><a href="../../file-___home_runner_work_smooth-app_smooth-app_packages_smooth_app_lib_pages_folksonomy_folksonomy_provider/FolksonomyProvider/markAsConsumed.html">markAsConsumed</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
 

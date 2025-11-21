@@ -79,7 +79,13 @@ Widget build(BuildContext context) {
             title: SearchAppBarTitle(title: name, editableAppBarTitle: false),
             actions: actions,
           )
-        : null,
+        : PreferredSize(
+            preferredSize: Size(
+              double.infinity,
+              MediaQuery.viewInsetsOf(context).top,
+            ),
+            child: const SmoothEmptyAppBar(),
+          ),
     body: Center(child: emptiness),
   );
 }</code></pre>

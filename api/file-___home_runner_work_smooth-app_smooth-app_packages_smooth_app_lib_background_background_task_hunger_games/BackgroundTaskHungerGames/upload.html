@@ -82,6 +82,8 @@ Future&lt;void&gt; upload(final LocalDatabase localDatabase) async {
     insightId.isEmpty ? null : insightId,
     annotation,
     deviceId: OpenFoodAPIConfiguration.uuid,
+    user: ProductQuery.getReadUser(),
+    uriHelper: ProductQuery.uriRobotoffHelper,
   );
 }</code></pre>
 </section>
